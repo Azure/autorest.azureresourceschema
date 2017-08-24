@@ -16,40 +16,11 @@ regenExpected = (opts,done) ->
     args = [
       "--#{opts.language}",
       "--output-folder=#{outputDir}/#{key}",
-      "--license-header=#{if !!opts.header then opts.header else 'MICROSOFT_MIT_NO_VERSION'}",
-      "--enable-xml"
+      "--license-header=#{if !!opts.header then opts.header else 'MICROSOFT_MIT_NO_VERSION'}"
     ]
 
     for swaggerFile in swaggerFiles
       args.push("--input-file=#{if !!opts.inputBaseDir then "#{opts.inputBaseDir}/#{swaggerFile}" else swaggerFile}")
-
-    if (opts.addCredentials)
-      args.push("--#{opts.language}.add-credentials=true")
-
-    if (opts.azureArm)
-      args.push("--#{opts.language}.azure-arm=true")
-
-    if (opts.fluent)
-      args.push("--#{opts.language}.fluent=true")
-    
-    if (opts.syncMethods)
-      args.push("--#{opts.language}.sync-methods=#{opts.syncMethods}")
-    
-    if (opts.flatteningThreshold)
-      args.push("--#{opts.language}.payload-flattening-threshold=#{opts.flatteningThreshold}")
-
-    if (!!opts.nsPrefix)
-      if (optsMappingsValue instanceof Array && optsMappingsValue[1] != undefined)
-        args.push("--#{opts.language}.namespace=#{optsMappingsValue[1]}")
-      else
-        args.push("--#{opts.language}.namespace=#{[opts.nsPrefix, key.replace(/\/|\./, '')].join('.')}")
-
-    if (opts['override-info.version'])
-      args.push("--override-info.version=#{opts['override-info.version']}")
-    if (opts['override-info.title'])
-      args.push("--override-info.title=#{opts['override-info.title']}")
-    if (opts['override-info.description'])
-      args.push("--override-info.description=#{opts['override-info.description']}")
 
     autorest args,() =>
       instances--
