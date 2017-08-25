@@ -12,3 +12,43 @@ provided by the bot. You will only need to do this once across all repos using o
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
+# AutoRest extension configuration
+
+``` yaml
+use-extension:
+  "@microsoft.azure/autorest.modeler": "1.9.2" # keep in sync with package.json's dev dependency in order to have meaningful tests
+
+pipeline:
+  azureresourceschema/modeler:
+    input: swagger-document/identity
+    output-artifact: code-model-v1
+    scope: azureresourceschema
+  azureresourceschema/commonmarker:
+    input: modeler
+    output-artifact: code-model-v1
+  azureresourceschema/cm/transform:
+    input: commonmarker
+    output-artifact: code-model-v1
+  azureresourceschema/cm/emitter:
+    input: transform
+    scope: scope-cm/emitter
+  azureresourceschema/generate:
+    plugin: azureresourceschema
+    input: cm/transform
+    output-artifact: source-file-azureresourceschema
+  azureresourceschema/transform:
+    input: generate
+    output-artifact: source-file-azureresourceschema
+    scope: scope-transform-string
+  azureresourceschema/emitter:
+    input: transform
+    scope: scope-azureresourceschema/emitter
+
+scope-azureresourceschema/emitter:
+  input-artifact: source-file-azureresourceschema
+  output-uri-expr: $key
+
+output-artifact:
+- source-file-azureresourceschema
+```
