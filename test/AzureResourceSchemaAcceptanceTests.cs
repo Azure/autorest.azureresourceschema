@@ -291,9 +291,10 @@ namespace AutoRest.AzureResourceSchema.Tests
 
         private static void RunSwaggerTest(string resourceType, string apiVersion, string swaggerFileName)
         {
+            var codeBaseDir = Core.Utilities.Extensions.CodeBaseDirectory(typeof(AzureResourceSchemaAcceptanceTests));
             SwaggerSpecHelper.RunTests(
-                Path.Combine(Core.Utilities.Extensions.CodeBaseDirectory, "Resource", "Swagger", resourceType, apiVersion, swaggerFileName),
-                Path.Combine(Core.Utilities.Extensions.CodeBaseDirectory, "Resource", "Expected", resourceType, apiVersion));
+                Path.Combine(codeBaseDir, "Resource", "Swagger", resourceType, apiVersion, swaggerFileName),
+                Path.Combine(codeBaseDir, "Resource", "Expected", resourceType, apiVersion));
         }
     }
 }
