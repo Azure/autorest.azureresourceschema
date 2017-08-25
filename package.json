@@ -6,6 +6,7 @@
     "start": "dotnet src/bin/netcoreapp2.0/autorest.azureresourceschema.dll --server",
     "test": "gulp test",
     "build": "gulp build",
+    "prepare": "gulp build",
     "clean": "gulp clean",
     "nuke": "git clean -xdf"
   },
@@ -26,6 +27,7 @@
   },
   "homepage": "https://github.com/Azure/autorest.azureresourceschema/blob/master/README.md",
   "devDependencies": {
+    "@microsoft.azure/autorest.modeler": "1.9.2",
     "coffee-script": "^1.11.1",
     "dotnet-sdk-2.0.0": "^1.1.1",
     "gulp": "^3.9.1",
