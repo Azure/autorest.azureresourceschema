@@ -30,7 +30,7 @@ namespace AutoRest.AzureResourceSchema
         public static int Main(string[] args )
         {
             if(args != null && args.Length > 0 && args[0] == "--server") {
-                var connection = new Connection(Console.Out, Console.OpenStandardInput());
+                var connection = new Connection(Console.OpenStandardOutput(), Console.OpenStandardInput());
                 connection.Dispatch<IEnumerable<string>>("GetPluginNames", async () => new []{ "azureresourceschema" });
                 connection.Dispatch<string, string, bool>("Process", (plugin, sessionId) => new Program(connection, plugin, sessionId).Process());
                 connection.DispatchNotification("Shutdown", connection.Stop);
