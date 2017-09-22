@@ -3,6 +3,7 @@
   "version": "1.9.6",
   "description": "The Azure Resource Schema extension for classic generators in AutoRest.",
   "scripts": {
+    "autorest": "autorest",
     "start": "dotnet src/bin/netcoreapp2.0/autorest.azureresourceschema.dll --server",
     "test": "gulp testci",
     "testci": "gulp testci",
