@@ -1,14 +1,15 @@
 {
   "name": "@microsoft.azure/autorest.azureresourceschema",
-  "version": "1.9.6",
+  "version": "2.0.0",
   "description": "The Azure Resource Schema extension for classic generators in AutoRest.",
   "scripts": {
     "autorest": "autorest",
     "start": "dotnet src/bin/netcoreapp2.0/autorest.azureresourceschema.dll --server",
-    "test": "gulp testci",
+    "test": "gulp test",
     "testci": "gulp testci",
     "build": "gulp build",
     "prepare": "gulp build",
+    "publish-preview": "gulp publish-preview",
     "regenerate": "gulp regenerate",
     "clean": "gulp clean",
     "nuke": "git clean -xdf"
@@ -30,8 +31,8 @@
   },
   "homepage": "https://github.com/Azure/autorest.azureresourceschema/blob/master/README.md",
   "devDependencies": {
-    "@microsoft.azure/autorest.modeler": "1.9.6",
-    "autorest": "^1.9.1",
+    "@microsoft.azure/autorest.modeler": "~2.0.0",
+    "autorest": "^2.0.0",
     "coffee-script": "^1.11.1",
     "dotnet-sdk-2.0.0": "^1.1.1",
     "gulp": "^3.9.1",
