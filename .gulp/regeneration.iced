@@ -15,7 +15,7 @@ regenExpected = (opts,done) ->
     swaggerFiles = (if optsMappingsValue instanceof Array then optsMappingsValue[0] else optsMappingsValue).split(";")
     args = [
       "--#{opts.language}",
-      "--clear-output-folder",
+      # "--clear-output-folder", # run multiple times on same folders (API version nests)
       "--output-folder=#{outputDir}/#{key}",
       "--license-header=#{if !!opts.header then opts.header else 'MICROSOFT_MIT_NO_VERSION'}"
     ]
