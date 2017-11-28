@@ -567,7 +567,9 @@
         "type": {
           "type": "string",
           "description": "The type of the entity described in swagger. Always 'object'.",
-          "default": "object"
+          "enum": [
+            "object"
+          ]
         },
         "properties": {
           "type": "object",
@@ -597,7 +599,9 @@
         "type": {
           "type": "string",
           "description": "The type of the entity described in swagger.",
-          "default": "object"
+          "enum": [
+            "object"
+          ]
         },
         "format": {
           "type": "string",
@@ -688,16 +692,14 @@
             "type": "array",
             "items": {
               "type": "array",
-              "items": {
-              }
+              "items": {}
             }
           }
         },
         "globalParameters": {
           "type": "object",
           "description": "Sample input data for the web service's global parameters",
-          "additionalProperties": {
-          }
+          "additionalProperties": {}
         }
       }
     },
