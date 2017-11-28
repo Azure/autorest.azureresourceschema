@@ -103,6 +103,11 @@ namespace AutoRest.AzureResourceSchema
         public double? MaxLength { get; set; }
 
         /// <summary>
+        /// The maximum length that a string or an array matching this schema can have.
+        /// </summary>
+        public string Default { get; set; }
+
+        /// <summary>
         /// The schema that matches additional properties that have not been specified in the
         /// Properties dictionary.
         /// </summary>
@@ -387,6 +392,7 @@ namespace AutoRest.AzureResourceSchema
             result.Minimum = Minimum;
             result.Maximum = Maximum;
             result.Pattern = Pattern;
+            result.Default = Default;
             result.enumList = Clone(Enum);
             result.properties = Clone(Properties);
             result.requiredList = Clone(Required);

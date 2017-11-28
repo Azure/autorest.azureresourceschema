@@ -21,24 +21,6 @@ namespace AutoRest.AzureResourceSchema.Tests
             Assert.Equal(".json", CreatePlugin().CodeGenerator.ImplementationFileExtension);
         }
 
-        [Fact]
-        public void UsageInstructionsWithNoOutputFileSetting()
-        {
-            PluginArs plugin = CreatePlugin();
-            Assert.Equal("Your Azure Resource Schema(s) can be found in " + new Settings().OutputDirectory, plugin.CodeGenerator.UsageInstructions);
-        }
-
-        [Fact]
-        public void UsageInstructionsWithOutputFileSetting()
-        {
-            using (NewContext) {
-                Settings settings = new Settings() { OutputFileName = "spam.json" };
-                PluginArs plugin = CreatePlugin();
-                Assert.Equal("Your Azure Resource Schema(s) can be found in " + settings.OutputDirectory, plugin.CodeGenerator.UsageInstructions);
-            }
-        }
-
-
         private static PluginArs CreatePlugin()
         {
             return new PluginArs();

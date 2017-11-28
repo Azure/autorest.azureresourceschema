@@ -508,7 +508,7 @@ namespace AutoRest.AzureResourceSchema
 
                 if (property.DefaultValue != null)
                 {
-                    result.AddEnum(property.DefaultValue);
+                    result.Default = property.DefaultValue;
                 }
 
                 if (property.Constraints.Count > 0)

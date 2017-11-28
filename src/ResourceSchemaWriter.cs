@@ -154,6 +154,19 @@ namespace AutoRest.AzureResourceSchema
             }
         }
 
+        private static object ConvertDefaultValue(string defaultValue, string type)
+        {
+            switch (type)
+            {
+                case "boolean":
+                    return bool.Parse(defaultValue.ToLowerInvariant());
+                case "number":
+                    return double.Parse(defaultValue.ToLowerInvariant());
+                default:
+                    return defaultValue;
+            }
+        }
+
         private static void WriteDefinition(JsonWriter writer, JsonSchema definition)
         {
             if (definition == null)
@@ -171,6 +184,10 @@ namespace AutoRest.AzureResourceSchema
                 WriteProperty(writer, "pattern", definition.Pattern);
                 WriteProperty(writer, "minLength", definition.MinLength);
                 WriteProperty(writer, "maxLength", definition.MaxLength);
+                if (definition.Default != null)
+                {
+                    WritePropertyRaw(writer, "default", ConvertDefaultValue(definition.Default, definition.JsonType));
+                }
                 WriteStringArray(writer, "enum", definition.Enum);
                 WriteDefinitionArray(writer, "oneOf", definition.OneOf);
                 WriteDefinitionArray(writer, "anyOf", definition.AnyOf);
@@ -232,6 +249,21 @@ namespace AutoRest.AzureResourceSchema
                 writer.WritePropertyName(propertyName);
                 writer.WriteValue(propertyValue);
             }
+        }
+
+        public static void WritePropertyRaw(JsonWriter writer, string propertyName, object propertyValue)
+        {
+            if (writer == null)
+            {
+                throw new ArgumentNullException("writer");
+            }
+            if (string.IsNullOrWhiteSpace(propertyName))
+            {
+                throw new ArgumentException("propertyName cannot be null or whitespace", "propertyName");
+            }
+
+            writer.WritePropertyName(propertyName);
+            writer.WriteValue(propertyValue);
         }
 
         public static void WriteProperty(JsonWriter writer, string propertyName, double? propertyValue)
