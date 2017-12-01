@@ -372,13 +372,15 @@ namespace AutoRest.AzureResourceSchema
                                 });
 
                                 const string discriminatorValueExtensionName = "x-ms-discriminator-value";
-                                if (subType.Extensions.ContainsKey(discriminatorValueExtensionName))
+                                if (subType.Extensions.TryGetValue(discriminatorValueExtensionName, out object val) &&
+                                    val is string discriminatorValue &&
+                                    !string.IsNullOrWhiteSpace(discriminatorValue))
                                 {
-                                    string discriminatorValue = subType.Extensions[discriminatorValueExtensionName] as string;
-                                    if (!string.IsNullOrWhiteSpace(discriminatorValue))
-                                    {
-                                        discriminatorDefinition.AddEnum(discriminatorValue);
-                                    }
+                                    discriminatorDefinition.AddEnum(discriminatorValue);
+                                }
+                                else
+                                {
+                                    discriminatorDefinition.AddEnum(subType.SerializedName);
                                 }
                             }
                         }
