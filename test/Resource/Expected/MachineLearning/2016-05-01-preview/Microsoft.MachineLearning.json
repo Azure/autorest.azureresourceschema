@@ -336,19 +336,23 @@
     },
     "Graph": {
       "type": "object",
-      "properties": {
-        "package": {
-          "oneOf": [
-            {
-              "$ref": "#/definitions/GraphPackage"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+      "allOf": [
+        {
+          "properties": {
+            "package": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/GraphPackage"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                }
+              ],
+              "description": "The definition of the graph package making up this web service."
             }
-          ],
-          "description": "The definition of the graph package making up this web service."
+          }
         }
-      },
+      ],
       "description": "Properties specific to a Graph based web service."
     },
     "GraphEdge": {
