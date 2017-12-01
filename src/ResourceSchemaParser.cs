@@ -116,7 +116,7 @@ namespace AutoRest.AzureResourceSchema
                         {
                             foreach (Property property in body.ComposedProperties)
                             {
-                                if (!resourceDefinition.Properties.Keys.Contains(property.SerializedName))
+                                if (property.SerializedName != null && !resourceDefinition.Properties.Keys.Contains(property.SerializedName))
                                 {
                                     JsonSchema propertyDefinition = ParseType(property, property.ModelType, resourceSchema.Definitions, serviceClient.ModelTypes);
                                     if (propertyDefinition != null)
@@ -336,7 +336,7 @@ namespace AutoRest.AzureResourceSchema
 
                 JsonSchema baseTypeDefinition;
 
-                string discriminatorPropertyName = compositeType.PolymorphicDiscriminator;
+                string discriminatorPropertyName = compositeType.BasePolymorphicDiscriminator;
                 if (string.IsNullOrWhiteSpace(discriminatorPropertyName))
                 {
                     baseTypeDefinition = definition;
@@ -372,13 +372,15 @@ namespace AutoRest.AzureResourceSchema
                                 });
 
                                 const string discriminatorValueExtensionName = "x-ms-discriminator-value";
-                                if (subType.ComposedExtensions.ContainsKey(discriminatorValueExtensionName))
+                                if (subType.Extensions.TryGetValue(discriminatorValueExtensionName, out object val) &&
+                                    val is string discriminatorValue &&
+                                    !string.IsNullOrWhiteSpace(discriminatorValue))
                                 {
-                                    string discriminatorValue = subType.ComposedExtensions[discriminatorValueExtensionName] as string;
-                                    if (!string.IsNullOrWhiteSpace(discriminatorValue))
-                                    {
-                                        discriminatorDefinition.AddEnum(discriminatorValue);
-                                    }
+                                    discriminatorDefinition.AddEnum(discriminatorValue);
+                                }
+                                else
+                                {
+                                    discriminatorDefinition.AddEnum(subType.SerializedName);
                                 }
                             }
                         }
