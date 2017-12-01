@@ -116,7 +116,7 @@ namespace AutoRest.AzureResourceSchema
                         {
                             foreach (Property property in body.ComposedProperties)
                             {
-                                if (!resourceDefinition.Properties.Keys.Contains(property.SerializedName))
+                                if (property.SerializedName != null && !resourceDefinition.Properties.Keys.Contains(property.SerializedName))
                                 {
                                     JsonSchema propertyDefinition = ParseType(property, property.ModelType, resourceSchema.Definitions, serviceClient.ModelTypes);
                                     if (propertyDefinition != null)
