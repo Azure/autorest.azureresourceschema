@@ -336,7 +336,7 @@ namespace AutoRest.AzureResourceSchema
 
                 JsonSchema baseTypeDefinition;
 
-                string discriminatorPropertyName = compositeType.PolymorphicDiscriminator;
+                string discriminatorPropertyName = compositeType.BasePolymorphicDiscriminator;
                 if (string.IsNullOrWhiteSpace(discriminatorPropertyName))
                 {
                     baseTypeDefinition = definition;
@@ -372,9 +372,9 @@ namespace AutoRest.AzureResourceSchema
                                 });
 
                                 const string discriminatorValueExtensionName = "x-ms-discriminator-value";
-                                if (subType.ComposedExtensions.ContainsKey(discriminatorValueExtensionName))
+                                if (subType.Extensions.ContainsKey(discriminatorValueExtensionName))
                                 {
-                                    string discriminatorValue = subType.ComposedExtensions[discriminatorValueExtensionName] as string;
+                                    string discriminatorValue = subType.Extensions[discriminatorValueExtensionName] as string;
                                     if (!string.IsNullOrWhiteSpace(discriminatorValue))
                                     {
                                         discriminatorDefinition.AddEnum(discriminatorValue);
