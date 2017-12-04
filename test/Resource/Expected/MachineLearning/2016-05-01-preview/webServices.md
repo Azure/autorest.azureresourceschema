@@ -12,7 +12,7 @@ To create a Microsoft.MachineLearning/webServices resource, add the following JS
   "location": "string",
   "tags": {},
   "properties": {
-    "packageType": "Graph",
+    "packageType": "string",
     "title": "string",
     "description": "string",
     "keys": {
@@ -79,7 +79,7 @@ The following tables describe the values you need to set in the schema.
 ### WebServiceProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  packageType | enum | No | Graph |
+|  packageType | enum | No | WebServiceProperties or Graph |
 |  title | string | No | The title of the Azure ML web service. |
 |  description | string | No | The description of the Azure ML web service. |
 |  keys | object | No | The set of access keys for the web service. If not specified at creation time (PUT), they will be generated automatically by the resource provider. - [WebServiceKeys object](#WebServiceKeys) |
