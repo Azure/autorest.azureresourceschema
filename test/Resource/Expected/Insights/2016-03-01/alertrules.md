@@ -57,12 +57,12 @@ The following tables describe the values you need to set in the schema.
 ### RuleCondition object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  odata.type | enum | No | Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition, Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition, Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition |
+|  odata.type | enum | No | RuleCondition, Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition, Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition, Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition |
 
 
 <a id="RuleAction" />
 ### RuleAction object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  odata.type | enum | No | Microsoft.Azure.Management.Insights.Models.RuleEmailAction or Microsoft.Azure.Management.Insights.Models.RuleWebhookAction |
+|  odata.type | enum | No | RuleAction, Microsoft.Azure.Management.Insights.Models.RuleEmailAction, Microsoft.Azure.Management.Insights.Models.RuleWebhookAction |
 

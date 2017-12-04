@@ -348,8 +348,10 @@ namespace AutoRest.AzureResourceSchema
 
                     JsonSchema derivedTypeDefinitionRefs = new JsonSchema();
 
-                    CompositeType[] subTypes = modelTypes.Where(modelType => modelType.BaseModelType == compositeType).ToArray();
-                    if (subTypes != null && subTypes.Length > 0)
+                    Func<CompositeType, bool> isSubType = null;
+                    isSubType = type => type == compositeType || (type.BaseModelType is CompositeType baseType && isSubType(baseType));
+                    CompositeType[] subTypes = modelTypes.Where(isSubType).ToArray();
+                    if (subTypes.Length > 1)
                     {
                         JsonSchema discriminatorDefinition = new JsonSchema()
                         {
@@ -360,16 +362,19 @@ namespace AutoRest.AzureResourceSchema
                         {
                             if (subType != null)
                             {
-                                // Sub-types are never referenced directly in the Swagger
-                                // discriminator scenario, so they wouldn't be added to the
-                                // produced resource schema. By calling ParseCompositeType() on the
-                                // sub-type we add the sub-type to the resource schema.
-                                ParseCompositeType(null, subType, false, definitions, modelTypes);
-
-                                derivedTypeDefinitionRefs.AddAnyOf(new JsonSchema()
+                                if (subType.BaseModelType == compositeType)
                                 {
-                                    Ref = "#/definitions/" + subType.SerializedName,
-                                });
+                                    // Sub-types are never referenced directly in the Swagger
+                                    // discriminator scenario, so they wouldn't be added to the
+                                    // produced resource schema. By calling ParseCompositeType() on the
+                                    // sub-type we add the sub-type to the resource schema.
+                                    ParseCompositeType(null, subType, false, definitions, modelTypes);
+
+                                    derivedTypeDefinitionRefs.AddAnyOf(new JsonSchema()
+                                    {
+                                        Ref = "#/definitions/" + subType.SerializedName,
+                                    });
+                                }
 
                                 const string discriminatorValueExtensionName = "x-ms-discriminator-value";
                                 if (subType.Extensions.TryGetValue(discriminatorValueExtensionName, out object val) &&

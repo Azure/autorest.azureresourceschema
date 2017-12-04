@@ -452,6 +452,7 @@
                 {
                   "type": "string",
                   "enum": [
+                    "RuleAction",
                     "Microsoft.Azure.Management.Insights.Models.RuleEmailAction",
                     "Microsoft.Azure.Management.Insights.Models.RuleWebhookAction"
                   ]
@@ -486,6 +487,7 @@
                 {
                   "type": "string",
                   "enum": [
+                    "RuleCondition",
                     "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition",
                     "Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition",
                     "Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition"
@@ -524,6 +526,7 @@
                 {
                   "type": "string",
                   "enum": [
+                    "RuleDataSource",
                     "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource",
                     "Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource"
                   ]
