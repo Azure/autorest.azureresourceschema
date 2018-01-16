@@ -251,7 +251,8 @@
           }
         },
         {
-          "anyOf": [
+          "oneOf": [
+            {},
             {
               "$ref": "#/definitions/RuleEmailAction"
             },
@@ -287,7 +288,8 @@
           }
         },
         {
-          "anyOf": [
+          "oneOf": [
+            {},
             {
               "$ref": "#/definitions/ThresholdRuleCondition"
             },
@@ -325,7 +327,8 @@
           }
         },
         {
-          "anyOf": [
+          "oneOf": [
+            {},
             {
               "$ref": "#/definitions/RuleMetricDataSource"
             },

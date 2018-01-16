@@ -898,7 +898,8 @@
           }
         },
         {
-          "anyOf": [
+          "oneOf": [
+            {},
             {
               "$ref": "#/definitions/WebServicePropertiesForGraph"
             }
