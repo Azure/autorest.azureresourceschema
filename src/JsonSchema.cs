@@ -14,12 +14,6 @@ namespace AutoRest.AzureResourceSchema
     public class JsonSchema
     {
         private string resourceType;
-        private IList<string> enumList;
-        private IDictionary<string, JsonSchema> properties;
-        private IList<string> requiredList;
-        private IList<JsonSchema> oneOfList;
-        private IList<JsonSchema> anyOfList;
-        private IList<JsonSchema> allOfList;
 
         /// <summary>
         /// A reference to the location in the parent schema where this schema's definition can be
@@ -67,12 +61,12 @@ namespace AutoRest.AzureResourceSchema
                     // update the value of the type enum.  we have to be careful though that we don't
                     // stomp over some other enum that happens to have the name "type".  this code path
                     // is typically hit when building a child resource definition from a cloned parent.
-                    if (Properties["type"].enumList.Count > 1)
+                    if (Properties["type"].Enum.Count > 1)
                         throw new InvalidOperationException("Attempt to update 'type' enum that contains more than one member (possible collision).");
-                    if (!Properties["type"].enumList[0].EndsWith(value))
-                        throw new InvalidOperationException($"The updated type value '{value}' is not a child of type value '{Properties["type"].enumList[0]}'");
+                    if (!Properties["type"].Enum[0].EndsWith(value))
+                        throw new InvalidOperationException($"The updated type value '{value}' is not a child of type value '{Properties["type"].Enum[0]}'");
 
-                    Properties["type"].enumList[0] = value;
+                    Properties["type"].Enum[0] = value;
                 }
             }
         }
@@ -117,50 +111,32 @@ namespace AutoRest.AzureResourceSchema
         /// An enumeration of values that will match this JSON schema. Any value not in this
         /// enumeration will not match this schema.
         /// </summary>
-        public IList<string> Enum
-        {
-            get { return enumList; }
-        }
+        public IList<string> Enum { get; private set;} 
 
         /// <summary>
         /// The list of oneOf options that exist for this JSON schema.
         /// </summary>
-        public IList<JsonSchema> OneOf
-        {
-            get { return oneOfList; }
-        }
+        public IList<JsonSchema> OneOf { get; private set;} 
 
         /// <summary>
         /// The list of anyOf options that exist for this JSON schema.
         /// </summary>
-        public IList<JsonSchema> AnyOf
-        {
-            get { return anyOfList; }
-        }
+        public IList<JsonSchema> AnyOf { get; private set;} 
 
         /// <summary>
         /// The list of allOf options that exist for this JSON schema.
         /// </summary>
-        public IList<JsonSchema> AllOf
-        {
-            get { return allOfList; }
-        }
+        public IList<JsonSchema> AllOf { get; private set;} 
 
         /// <summary>
         /// The schemas that describe the properties of a matching JSON value.
         /// </summary>
-        public IDictionary<string,JsonSchema> Properties
-        {
-            get { return properties; }
-        }
+        public IDictionary<string,JsonSchema> Properties { get; private set;} 
 
         /// <summary>
         /// The names of the properties that are required for a matching JSON value.
         /// </summary>
-        public IList<string> Required
-        {
-            get { return requiredList; }
-        }
+        public IList<string> Required { get; private set;} 
 
         public bool IsEmpty()
         {
@@ -170,12 +146,12 @@ namespace AutoRest.AzureResourceSchema
                    Minimum == null &&
                    Maximum == null &&
                    Pattern == null &&
-                   IsEmpty(enumList) &&
-                   IsEmpty(properties) &&
-                   IsEmpty(requiredList) &&
-                   IsEmpty(oneOfList) &&
-                   IsEmpty(anyOfList) &&
-                   IsEmpty(allOfList);
+                   IsEmpty(Enum) &&
+                   IsEmpty(Properties) &&
+                   IsEmpty(Required) &&
+                   IsEmpty(OneOf) &&
+                   IsEmpty(AnyOf) &&
+                   IsEmpty(AllOf);
         }
 
         private static bool IsEmpty<T>(IEnumerable<T> values)
@@ -192,26 +168,26 @@ namespace AutoRest.AzureResourceSchema
         /// <returns></returns>
         public JsonSchema AddEnum(string enumValue, params string[] extraEnumValues)
         {
-            if (enumList == null)
+            if (Enum == null)
             {
-                enumList = new List<string>();
+                Enum = new List<string>();
             }
 
-            if (enumList.Contains(enumValue))
+            if (Enum.Contains(enumValue))
             {
                 throw new ArgumentException("enumValue (" + enumValue + ") already exists in the list of allowed values.", "enumValue");
             }
-            enumList.Add(enumValue);
+            Enum.Add(enumValue);
 
             if (extraEnumValues != null && extraEnumValues.Length > 0)
             {
                 foreach (string extraEnumValue in extraEnumValues)
                 {
-                    if (enumList.Contains(extraEnumValue))
+                    if (Enum.Contains(extraEnumValue))
                     {
                         throw new ArgumentException("extraEnumValue (" + extraEnumValue + ") already exists in the list of allowed values.", "extraEnumValues");
                     }
-                    enumList.Add(extraEnumValue);
+                    Enum.Add(extraEnumValue);
                 }
             }
 
@@ -224,21 +200,9 @@ namespace AutoRest.AzureResourceSchema
         /// </summary>
         /// <param name="propertyName">The name of the property to add.</param>
         /// <param name="propertyDefinition">The JsonSchema definition of the property to add.</param>
-        /// <returns></returns>
-        public JsonSchema AddProperty(string propertyName, JsonSchema propertyDefinition)
-        {
-            return AddProperty(propertyName, propertyDefinition, false);
-        }
-
-        /// <summary>
-        /// Add a new property to this JsonSchema, and then return this JsonSchema so that
-        /// additional changes can be chained together.
-        /// </summary>
-        /// <param name="propertyName">The name of the property to add.</param>
-        /// <param name="propertyDefinition">The JsonSchema definition of the property to add.</param>
         /// <param name="isRequired">Whether this property is required or not.</param>
         /// <returns></returns>
-        public JsonSchema AddProperty(string propertyName, JsonSchema propertyDefinition, bool isRequired)
+        public JsonSchema AddProperty(string propertyName, JsonSchema propertyDefinition, bool isRequired = false)
         {
             if (string.IsNullOrWhiteSpace(propertyName))
             {
@@ -249,17 +213,17 @@ namespace AutoRest.AzureResourceSchema
                 throw new ArgumentNullException("propertyDefinition");
             }
             
-            if (properties == null)
+            if (Properties == null)
             {
-                properties = new Dictionary<string, JsonSchema>();
+                Properties = new Dictionary<string, JsonSchema>();
             }
 
-            if (properties.ContainsKey(propertyName))
+            if (Properties.ContainsKey(propertyName))
             {
                 throw new ArgumentException("A property with the name \"" + propertyName + "\" already exists in this JSONSchema", "propertyName");
             }
 
-            properties[propertyName] = propertyDefinition;
+            Properties[propertyName] = propertyDefinition;
 
             if (isRequired)
             {
@@ -281,16 +245,16 @@ namespace AutoRest.AzureResourceSchema
                 throw new ArgumentException("No property exists with the provided requiredPropertyName (" + requiredPropertyName + ")", nameof(requiredPropertyName));
             }
 
-            if (requiredList == null)
+            if (Required == null)
             {
-                requiredList = new List<string>();
+                Required = new List<string>();
             }
 
-            if (requiredList.Contains(requiredPropertyName))
+            if (Required.Contains(requiredPropertyName))
             {
                 throw new ArgumentException("'" + requiredPropertyName + "' is already a required property.", "requiredPropertyName");
             }
-            requiredList.Add(requiredPropertyName);
+            Required.Add(requiredPropertyName);
 
             if (extraRequiredPropertyNames != null)
             {
@@ -300,11 +264,11 @@ namespace AutoRest.AzureResourceSchema
                     {
                         throw new ArgumentException("No property exists with the provided extraRequiredPropertyName (" + extraRequiredPropertyName + ")", "extraRequiredPropertyNames");
                     }
-                    if (requiredList.Contains(extraRequiredPropertyName))
+                    if (Required.Contains(extraRequiredPropertyName))
                     {
                         throw new ArgumentException("'" + extraRequiredPropertyName + "' is already a required property.", "extraRequiredPropertyNames");
                     }
-                    requiredList.Add(extraRequiredPropertyName);
+                    Required.Add(extraRequiredPropertyName);
                 }
             }
 
@@ -323,12 +287,12 @@ namespace AutoRest.AzureResourceSchema
                 throw new ArgumentNullException(nameof(anyOfOption));
             }
 
-            if (anyOfList == null)
+            if (AnyOf == null)
             {
-                anyOfList = new List<JsonSchema>();
+                AnyOf = new List<JsonSchema>();
             }
 
-            anyOfList.Add(anyOfOption);
+            AnyOf.Add(anyOfOption);
 
             return this;
         }
@@ -345,12 +309,12 @@ namespace AutoRest.AzureResourceSchema
                 throw new ArgumentNullException(nameof(oneOfOption));
             }
 
-            if (oneOfList == null)
+            if (OneOf == null)
             {
-                oneOfList = new List<JsonSchema>();
+                OneOf = new List<JsonSchema>();
             }
 
-            oneOfList.Add(oneOfOption);
+            OneOf.Add(oneOfOption);
 
             return this;
         }
@@ -367,12 +331,12 @@ namespace AutoRest.AzureResourceSchema
                 throw new ArgumentNullException(nameof(allOfOption));
             }
 
-            if (allOfList == null)
+            if (AllOf == null)
             {
-                allOfList = new List<JsonSchema>();
+                AllOf = new List<JsonSchema>();
             }
 
-            allOfList.Add(allOfOption);
+            AllOf.Add(allOfOption);
 
             return this;
         }
@@ -393,12 +357,12 @@ namespace AutoRest.AzureResourceSchema
             result.Maximum = Maximum;
             result.Pattern = Pattern;
             result.Default = Default;
-            result.enumList = Clone(Enum);
-            result.properties = Clone(Properties);
-            result.requiredList = Clone(Required);
-            result.oneOfList = Clone(OneOf);
-            result.anyOfList = Clone(AnyOf);
-            result.allOfList = Clone(AllOf);
+            result.Enum = Clone(Enum);
+            result.Properties = Clone(Properties);
+            result.Required = Clone(Required);
+            result.OneOf = Clone(OneOf);
+            result.AnyOf = Clone(AnyOf);
+            result.AllOf = Clone(AllOf);
             return result;
         }
 

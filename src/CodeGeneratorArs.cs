@@ -24,19 +24,22 @@ namespace AutoRest.AzureResourceSchema
 
         public override async Task Generate(CodeModel serviceClient)
         {
-            var apiVersions = serviceClient.Methods.Select(method => method.Parameters.FirstOrDefault(p => p.SerializedName == "api-version")?.DefaultValue.Value ).ConcatSingleItem(serviceClient.ApiVersion).Where(each => each!=null).Distinct().ToArray();
+            var apiVersions = serviceClient.Methods
+                .Select(method => method.Parameters.FirstOrDefault(p => p.SerializedName == "api-version")?.DefaultValue.Value)
+                .Concat(new [] { serviceClient.ApiVersion })
+                .Where(each => each != null)
+                .Distinct().ToArray();
 
             foreach(var version in apiVersions)
             { 
-                IDictionary<string, ResourceSchema> resourceSchemas = ResourceSchemaParser.Parse(serviceClient, version);
+                var resourceSchemas = ResourceSchemaParser.Parse(serviceClient, version);
 
                 foreach (string resourceProvider in resourceSchemas.Keys)
                 {
-                    StringWriter stringWriter = new StringWriter();
+                    var stringWriter = new StringWriter();
                     ResourceSchemaWriter.Write(stringWriter, resourceSchemas[resourceProvider]);
                     await Write(stringWriter.ToString(), Path.Combine(version, resourceProvider + ".json"), true);
 
-                    stringWriter = new StringWriter();
                     var md = ResourceMarkdownGenerator.Generate(resourceSchemas[resourceProvider]);
 
                     foreach (var m in md)

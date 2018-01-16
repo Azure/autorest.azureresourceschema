@@ -13,9 +13,6 @@ namespace AutoRest.AzureResourceSchema
     /// </summary>
     public class ResourceSchema
     {
-        private IDictionary<string, JsonSchema> resourceDefinitions = new Dictionary<string,JsonSchema>();
-        private IDictionary<string, JsonSchema> definitions = new Dictionary<string, JsonSchema>();
-
         /// <summary>
         /// The id metadata that uniquely identifies this schema. Usually this will be the URL to
         /// the permanent location of this schema in schema.management.azure.com/schemas/.
@@ -41,19 +38,13 @@ namespace AutoRest.AzureResourceSchema
         /// <summary>
         /// The named JSON schemas that define the resources of this resource schema.
         /// </summary>
-        public IDictionary<string, JsonSchema> ResourceDefinitions
-        {
-            get { return resourceDefinitions; }
-        }
+        public IDictionary<string, JsonSchema> ResourceDefinitions { get; private set; }
 
         /// <summary>
         /// The named reusable JSON schemas that the resource definitions reference. These
         /// definitions can also reference each other or themselves.
         /// </summary>
-        public IDictionary<string,JsonSchema> Definitions
-        {
-            get { return definitions; }
-        }
+        public IDictionary<string,JsonSchema> Definitions { get; private set; }
 
         /// <summary>
         /// Search this ResourceSchema for a resource definition that has the provided type.
@@ -69,9 +60,9 @@ namespace AutoRest.AzureResourceSchema
 
             JsonSchema result = null;
 
-            if (resourceDefinitions != null && resourceDefinitions.Count > 0)
+            if (ResourceDefinitions != null && ResourceDefinitions.Count > 0)
             {
-                foreach(JsonSchema resourceDefinition in resourceDefinitions.Values)
+                foreach(JsonSchema resourceDefinition in ResourceDefinitions.Values)
                 {
                     if (resourceDefinition.ResourceType == resourceType)
                     {
@@ -100,12 +91,12 @@ namespace AutoRest.AzureResourceSchema
                 throw new ArgumentNullException("resourceDefinition");
             }
 
-            if (resourceDefinitions.ContainsKey(resourceName))
+            if (ResourceDefinitions.ContainsKey(resourceName))
             {
                 throw new ArgumentException("A resource definition for \"" + resourceName + "\" already exists in this resource schema.", "resourceName");
             }
 
-            resourceDefinitions.Add(resourceName, resourceDefinition);
+            ResourceDefinitions.Add(resourceName, resourceDefinition);
 
             return this;
         }
@@ -126,12 +117,12 @@ namespace AutoRest.AzureResourceSchema
                 throw new ArgumentNullException("definition");
             }
 
-            if (definitions.ContainsKey(definitionName))
+            if (Definitions.ContainsKey(definitionName))
             {
                 throw new ArgumentException("A definition for \"" + definitionName + "\" already exists in this resource schema.", "definitionName");
             }
 
-            definitions.Add(definitionName, definition);
+            Definitions.Add(definitionName, definition);
 
             return this;
         }
