@@ -39,11 +39,11 @@ The following tables describe the values you need to set in the schema.
 |  kind | string | No | Kind of resource |
 |  location | string | Yes | Resource Location |
 |  tags | object | No | Resource tags |
-|  properties | object | Yes | [RelayServiceConnectionEntity_properties object](#RelayServiceConnectionEntity_properties) |
+|  properties | object | Yes | [RelayServiceConnectionEntityProperties object](#RelayServiceConnectionEntityProperties) |
 
 
-<a id="RelayServiceConnectionEntity_properties" />
-### RelayServiceConnectionEntity_properties object
+<a id="RelayServiceConnectionEntityProperties" />
+### RelayServiceConnectionEntityProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  entityName | string | No |  |

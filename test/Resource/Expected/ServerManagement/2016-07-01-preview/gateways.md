@@ -29,11 +29,11 @@ The following tables describe the values you need to set in the schema.
 |  apiVersion | enum | Yes | 2016-07-01-preview |
 |  location | string | No | location of the resource |
 |  tags | object | No | resource tags |
-|  properties | object | Yes | collection of properties - [GatewayParameters_properties object](#GatewayParameters_properties) |
+|  properties | object | Yes | collection of properties - [GatewayParametersProperties object](#GatewayParametersProperties) |
 
 
-<a id="GatewayParameters_properties" />
-### GatewayParameters_properties object
+<a id="GatewayParametersProperties" />
+### GatewayParametersProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  upgradeMode | enum | No | The upgradeMode property gives the flexibility to gateway to auto upgrade itself. If properties value not specified, then we assume upgradeMode = Automatic. - Manual or Automatic |

@@ -46,12 +46,12 @@ The following tables describe the values you need to set in the schema.
 |  kind | string | No | Kind of resource |
 |  location | string | Yes | Resource Location |
 |  tags | object | No | Resource tags |
-|  properties | object | Yes | [WorkerPool_properties object](#WorkerPool_properties) |
+|  properties | object | Yes | [WorkerPoolProperties object](#WorkerPoolProperties) |
 |  sku | object | No | [SkuDescription object](#SkuDescription) |
 
 
-<a id="WorkerPool_properties" />
-### WorkerPool_properties object
+<a id="WorkerPoolProperties" />
+### WorkerPoolProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  workerSizeId | integer | No | Worker size id for referencing this worker pool |

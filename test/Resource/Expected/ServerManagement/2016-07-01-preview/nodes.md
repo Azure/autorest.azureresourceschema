@@ -33,12 +33,12 @@ The following tables describe the values you need to set in the schema.
 |  apiVersion | enum | Yes | 2016-07-01-preview |
 |  location | string | No | location of the resource? |
 |  tags | object | No | resource tags |
-|  properties | object | Yes | collection of properties - [NodeParameters_properties object](#NodeParameters_properties) |
+|  properties | object | Yes | collection of properties - [NodeParametersProperties object](#NodeParametersProperties) |
 |  resources | array | No | [sessions](./nodes/sessions.md) |
 
 
-<a id="NodeParameters_properties" />
-### NodeParameters_properties object
+<a id="NodeParametersProperties" />
+### NodeParametersProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  gatewayId | string | No | Gateway id which will manage this node |

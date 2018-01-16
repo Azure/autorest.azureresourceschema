@@ -49,12 +49,12 @@ The following tables describe the values you need to set in the schema.
 |  kind | string | No | Kind of resource |
 |  location | string | Yes | Resource Location |
 |  tags | object | No | Resource tags |
-|  properties | object | Yes | [ServerFarmWithRichSku_properties object](#ServerFarmWithRichSku_properties) |
+|  properties | object | Yes | [ServerFarmWithRichSkuProperties object](#ServerFarmWithRichSkuProperties) |
 |  sku | object | No | [SkuDescription object](#SkuDescription) |
 
 
-<a id="ServerFarmWithRichSku_properties" />
-### ServerFarmWithRichSku_properties object
+<a id="ServerFarmWithRichSkuProperties" />
+### ServerFarmWithRichSkuProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  name | string | No | Name for the App Service Plan |

@@ -71,38 +71,19 @@ namespace AutoRest.AzureResourceSchema
                 throw new Exception($"Generator received incorrect number of inputs: {files.Length} : {string.Join(",", files)}");
             }
             var modelAsJson = (await ReadFile(files[0])).EnsureYamlIsJson();
-            var codeModelT = new ModelSerializer<CodeModel>().Load(modelAsJson);
 
             // build settings
-            var altNamespace = (await GetValue<string[]>("input-file") ?? new[] { "" }).FirstOrDefault()?.Split('/').Last().Split('\\').Last().Split('.').First();
             
             new Settings
             {
-                Namespace = await GetValue("namespace"),
-                ClientName = GetXmsCodeGenSetting<string>(codeModelT, "name") ?? await GetValue("override-client-name"),
-                PayloadFlatteningThreshold = GetXmsCodeGenSetting<int?>(codeModelT, "ft") ?? await GetValue<int?>("payload-flattening-threshold") ?? 0,
-                AddCredentials = await GetValue<bool?>("add-credentials") ?? false,
                 Host = this
             };
-            var header = await GetValue("license-header");
-            if (header != null)
-            {
-                Settings.Instance.Header = header;
-            }
-            Settings.Instance.CustomSettings.Add("InternalConstructors", GetXmsCodeGenSetting<bool?>(codeModelT, "internalConstructors") ?? await GetValue<bool?>("use-internal-constructors") ?? false);
-            Settings.Instance.CustomSettings.Add("SyncMethods", GetXmsCodeGenSetting<string>(codeModelT, "syncMethods") ?? await GetValue("sync-methods") ?? "essential");
-            Settings.Instance.CustomSettings.Add("UseDateTimeOffset", GetXmsCodeGenSetting<bool?>(codeModelT, "useDateTimeOffset") ?? await GetValue<bool?>("use-datetimeoffset") ?? false);
-            Settings.Instance.CustomSettings["ClientSideValidation"] = await GetValue<bool?>("client-side-validation") ?? false;
-            Settings.Instance.MaximumCommentColumns = await GetValue<int?>("max-comment-columns") ?? Settings.DefaultMaximumCommentColumns;
-            Settings.Instance.OutputFileName = await GetValue<string>("output-file");
 
             // process
             var plugin = new AutoRest.AzureResourceSchema.PluginArs();
-            Settings.PopulateSettings(plugin.Settings, Settings.Instance.CustomSettings);
             
             using (plugin.Activate())
             {
-                Settings.Instance.Namespace = Settings.Instance.Namespace ?? CodeNamer.Instance.GetNamespaceName(altNamespace);
                 var codeModel = plugin.Serializer.Load(modelAsJson);
                 codeModel = plugin.Transformer.TransformCodeModel(codeModel);
                 plugin.CodeGenerator.Generate(codeModel).GetAwaiter().GetResult();
