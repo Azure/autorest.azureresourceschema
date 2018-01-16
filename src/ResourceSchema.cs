@@ -38,13 +38,13 @@ namespace AutoRest.AzureResourceSchema
         /// <summary>
         /// The named JSON schemas that define the resources of this resource schema.
         /// </summary>
-        public IDictionary<string, JsonSchema> ResourceDefinitions { get; private set; }
+        public IDictionary<string, JsonSchema> ResourceDefinitions { get; private set; } = new Dictionary<string,JsonSchema>();
 
         /// <summary>
         /// The named reusable JSON schemas that the resource definitions reference. These
         /// definitions can also reference each other or themselves.
         /// </summary>
-        public IDictionary<string,JsonSchema> Definitions { get; private set; }
+        public IDictionary<string,JsonSchema> Definitions { get; private set; } = new Dictionary<string,JsonSchema>();
 
         /// <summary>
         /// Search this ResourceSchema for a resource definition that has the provided type.
