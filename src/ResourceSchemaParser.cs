@@ -319,7 +319,7 @@ namespace AutoRest.AzureResourceSchema
 
         private static JsonSchema ParseCompositeType(Property property, CompositeType compositeType, bool includeBaseModelTypeProperties, IDictionary<string, JsonSchema> definitions, IEnumerable<CompositeType> modelTypes)
         {
-            string definitionName = compositeType.SerializedName;
+            string definitionName = compositeType.Name;
 
             if (!definitions.ContainsKey(definitionName))
             {
@@ -372,21 +372,11 @@ namespace AutoRest.AzureResourceSchema
 
                                     derivedTypeDefinitionRefs.AddAnyOf(new JsonSchema()
                                     {
-                                        Ref = "#/definitions/" + subType.SerializedName,
+                                        Ref = "#/definitions/" + subType.Name,
                                     });
                                 }
 
-                                const string discriminatorValueExtensionName = "x-ms-discriminator-value";
-                                if (subType.Extensions.TryGetValue(discriminatorValueExtensionName, out object val) &&
-                                    val is string discriminatorValue &&
-                                    !string.IsNullOrWhiteSpace(discriminatorValue))
-                                {
-                                    discriminatorDefinition.AddEnum(discriminatorValue);
-                                }
-                                else
-                                {
-                                    discriminatorDefinition.AddEnum(subType.SerializedName);
-                                }
+                                discriminatorDefinition.AddEnum(subType.SerializedName);
                             }
                         }
 
