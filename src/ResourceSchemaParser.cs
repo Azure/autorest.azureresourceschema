@@ -347,6 +347,10 @@ namespace AutoRest.AzureResourceSchema
                     definition.AddAllOf(baseTypeDefinition);
 
                     JsonSchema derivedTypeDefinitionRefs = new JsonSchema();
+                    derivedTypeDefinitionRefs.AddOneOf(new JsonSchema()
+                    {
+                        JsonType = "object"
+                    });
 
                     Func<CompositeType, bool> isSubType = null;
                     isSubType = type => type == compositeType || (type.BaseModelType is CompositeType baseType && isSubType(baseType));
@@ -370,7 +374,7 @@ namespace AutoRest.AzureResourceSchema
                                     // sub-type we add the sub-type to the resource schema.
                                     ParseCompositeType(null, subType, false, definitions, modelTypes);
 
-                                    derivedTypeDefinitionRefs.AddAnyOf(new JsonSchema()
+                                    derivedTypeDefinitionRefs.AddOneOf(new JsonSchema()
                                     {
                                         Ref = "#/definitions/" + subType.Name,
                                     });
