@@ -51,7 +51,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/Certificate_properties"
+              "$ref": "#/definitions/CertificateProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -115,7 +115,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/Csr_properties"
+              "$ref": "#/definitions/CsrProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -179,7 +179,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/HostingEnvironment_properties"
+              "$ref": "#/definitions/HostingEnvironmentProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -253,7 +253,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/WorkerPool_properties"
+              "$ref": "#/definitions/WorkerPoolProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -327,7 +327,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/HostingEnvironment_properties"
+              "$ref": "#/definitions/HostingEnvironmentProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -391,7 +391,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/ServerFarmWithRichSku_properties"
+              "$ref": "#/definitions/ServerFarmWithRichSkuProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -465,7 +465,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/VnetGateway_properties"
+              "$ref": "#/definitions/VnetGatewayProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -529,7 +529,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/VnetRoute_properties"
+              "$ref": "#/definitions/VnetRouteProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -593,7 +593,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/Site_properties"
+              "$ref": "#/definitions/SiteProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -682,7 +682,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/Deployment_properties"
+              "$ref": "#/definitions/DeploymentProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -746,7 +746,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/HostNameBinding_properties"
+              "$ref": "#/definitions/HostNameBindingProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -810,7 +810,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/RelayServiceConnectionEntity_properties"
+              "$ref": "#/definitions/RelayServiceConnectionEntityProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -874,7 +874,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/Deployment_properties"
+              "$ref": "#/definitions/DeploymentProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1008,7 +1008,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/Site_properties"
+              "$ref": "#/definitions/SiteProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1094,7 +1094,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/Deployment_properties"
+              "$ref": "#/definitions/DeploymentProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1158,7 +1158,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/HostNameBinding_properties"
+              "$ref": "#/definitions/HostNameBindingProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1222,7 +1222,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/RelayServiceConnectionEntity_properties"
+              "$ref": "#/definitions/RelayServiceConnectionEntityProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1286,7 +1286,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/Deployment_properties"
+              "$ref": "#/definitions/DeploymentProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1420,7 +1420,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/VnetInfo_properties"
+              "$ref": "#/definitions/VnetInfoProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1494,7 +1494,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/VnetGateway_properties"
+              "$ref": "#/definitions/VnetGatewayProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1558,7 +1558,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/VnetInfo_properties"
+              "$ref": "#/definitions/VnetInfoProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1632,7 +1632,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/VnetGateway_properties"
+              "$ref": "#/definitions/VnetGatewayProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1822,7 +1822,7 @@
       },
       "description": "AutoHealTriggers - describes the triggers for auto-heal."
     },
-    "Certificate_properties": {
+    "CertificateProperties": {
       "type": "object",
       "properties": {
         "friendlyName": {
@@ -2044,7 +2044,7 @@
       },
       "description": "Cross-Origin Resource Sharing (CORS) settings for the web app."
     },
-    "Csr_properties": {
+    "CsrProperties": {
       "type": "object",
       "properties": {
         "name": {
@@ -2077,7 +2077,7 @@
         }
       }
     },
-    "Deployment_properties": {
+    "DeploymentProperties": {
       "type": "object",
       "properties": {
         "id": {
@@ -2176,7 +2176,25 @@
       },
       "description": "The IIS handler mappings used to define which handler processes HTTP requests with certain extension. \r\n            For example it is used to configure php-cgi.exe process to handle all HTTP requests with *.php extension."
     },
-    "HostingEnvironment_properties": {
+    "HostingEnvironmentProfile": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Resource id of the hostingEnvironment (App Service Environment)"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the hostingEnvironment (App Service Environment) (read only)"
+        },
+        "type": {
+          "type": "string",
+          "description": "Resource type of the hostingEnvironment (App Service Environment) (read only)"
+        }
+      },
+      "description": "Specification for a hostingEnvironment (App Service Environment) to use for this resource"
+    },
+    "HostingEnvironmentProperties": {
       "type": "object",
       "properties": {
         "name": {
@@ -2445,25 +2463,10 @@
           ],
           "description": "Custom settings for changing the behavior of the hosting environment"
         }
-      }
-    },
-    "HostingEnvironmentProfile": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "string",
-          "description": "Resource id of the hostingEnvironment (App Service Environment)"
-        },
-        "name": {
-          "type": "string",
-          "description": "Name of the hostingEnvironment (App Service Environment) (read only)"
-        },
-        "type": {
-          "type": "string",
-          "description": "Resource type of the hostingEnvironment (App Service Environment) (read only)"
-        }
       },
-      "description": "Specification for a hostingEnvironment (App Service Environment) to use for this resource"
+      "required": [
+        "status"
+      ]
     },
     "hostingEnvironments_workerPools_childResource": {
       "type": "object",
@@ -2512,7 +2515,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/WorkerPool_properties"
+              "$ref": "#/definitions/WorkerPoolProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2539,7 +2542,7 @@
       ],
       "description": "Microsoft.Web/hostingEnvironments/workerPools"
     },
-    "HostNameBinding_properties": {
+    "HostNameBindingProperties": {
       "type": "object",
       "properties": {
         "name": {
@@ -2789,7 +2792,7 @@
       },
       "description": "Routing rules for ramp up testing. This rule allows to redirect static traffic % to a slot or to gradually change routing % based on performance"
     },
-    "RelayServiceConnectionEntity_properties": {
+    "RelayServiceConnectionEntityProperties": {
       "type": "object",
       "properties": {
         "entityName": {
@@ -2843,7 +2846,7 @@
       },
       "description": "RequestsBasedTrigger"
     },
-    "ServerFarmWithRichSku_properties": {
+    "ServerFarmWithRichSkuProperties": {
       "type": "object",
       "properties": {
         "name": {
@@ -2893,149 +2896,6 @@
         }
       }
     },
-    "Site_properties": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "Name of web app"
-        },
-        "enabled": {
-          "oneOf": [
-            {
-              "type": "boolean"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "True if the site is enabled; otherwise, false. Setting this  value to false disables the site (takes the site off line)."
-        },
-        "hostNameSslStates": {
-          "oneOf": [
-            {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/HostNameSslState"
-              }
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "Hostname SSL states are  used to manage the SSL bindings for site's hostnames."
-        },
-        "serverFarmId": {
-          "type": "string"
-        },
-        "siteConfig": {
-          "oneOf": [
-            {
-              "$ref": "#/definitions/SiteConfig"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "Configuration of web app"
-        },
-        "scmSiteAlsoStopped": {
-          "oneOf": [
-            {
-              "type": "boolean"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "If set indicates whether to stop SCM (KUDU) site when the web app is stopped. Default is false."
-        },
-        "hostingEnvironmentProfile": {
-          "oneOf": [
-            {
-              "$ref": "#/definitions/HostingEnvironmentProfile"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "Specification for the hosting environment (App Service Environment) to use for the web app"
-        },
-        "microService": {
-          "type": "string"
-        },
-        "gatewaySiteName": {
-          "type": "string",
-          "description": "Name of gateway app associated with web app"
-        },
-        "clientAffinityEnabled": {
-          "oneOf": [
-            {
-              "type": "boolean"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "Specifies if the client affinity is enabled when load balancing http request for multiple instances of the web app"
-        },
-        "clientCertEnabled": {
-          "oneOf": [
-            {
-              "type": "boolean"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "Specifies if the client certificate is enabled for the web app"
-        },
-        "hostNamesDisabled": {
-          "oneOf": [
-            {
-              "type": "boolean"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "Specifies if the public hostnames are disabled the web app.\r\n            If set to true the app is only accessible via API Management process"
-        },
-        "containerSize": {
-          "oneOf": [
-            {
-              "type": "integer"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "Size of a function container"
-        },
-        "maxNumberOfWorkers": {
-          "oneOf": [
-            {
-              "type": "integer"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "Maximum number of workers\r\n            This only applies to function container"
-        },
-        "cloningInfo": {
-          "oneOf": [
-            {
-              "$ref": "#/definitions/CloningInfo"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "This is only valid for web app creation. If specified, web app is cloned from \r\n            a source web app"
-        }
-      }
-    },
     "SiteConfig": {
       "type": "object",
       "properties": {
@@ -3076,7 +2936,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/SiteConfig_properties"
+              "$ref": "#/definitions/SiteConfigProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -3089,7 +2949,7 @@
       ],
       "description": "Configuration of Azure web site"
     },
-    "SiteConfig_properties": {
+    "SiteConfigProperties": {
       "type": "object",
       "properties": {
         "numberOfWorkers": {
@@ -3501,6 +3361,149 @@
       },
       "description": "Represents metric limits set on a web app."
     },
+    "SiteProperties": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of web app"
+        },
+        "enabled": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "True if the site is enabled; otherwise, false. Setting this  value to false disables the site (takes the site off line)."
+        },
+        "hostNameSslStates": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/HostNameSslState"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Hostname SSL states are  used to manage the SSL bindings for site's hostnames."
+        },
+        "serverFarmId": {
+          "type": "string"
+        },
+        "siteConfig": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SiteConfig"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Configuration of web app"
+        },
+        "scmSiteAlsoStopped": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "If set indicates whether to stop SCM (KUDU) site when the web app is stopped. Default is false."
+        },
+        "hostingEnvironmentProfile": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/HostingEnvironmentProfile"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Specification for the hosting environment (App Service Environment) to use for the web app"
+        },
+        "microService": {
+          "type": "string"
+        },
+        "gatewaySiteName": {
+          "type": "string",
+          "description": "Name of gateway app associated with web app"
+        },
+        "clientAffinityEnabled": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Specifies if the client affinity is enabled when load balancing http request for multiple instances of the web app"
+        },
+        "clientCertEnabled": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Specifies if the client certificate is enabled for the web app"
+        },
+        "hostNamesDisabled": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Specifies if the public hostnames are disabled the web app.\r\n            If set to true the app is only accessible via API Management process"
+        },
+        "containerSize": {
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Size of a function container"
+        },
+        "maxNumberOfWorkers": {
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Maximum number of workers\r\n            This only applies to function container"
+        },
+        "cloningInfo": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CloningInfo"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "This is only valid for web app creation. If specified, web app is cloned from \r\n            a source web app"
+        }
+      }
+    },
     "sites_deployments_childResource": {
       "type": "object",
       "properties": {
@@ -3548,7 +3551,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/Deployment_properties"
+              "$ref": "#/definitions/DeploymentProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -3612,7 +3615,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/HostNameBinding_properties"
+              "$ref": "#/definitions/HostNameBindingProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -3676,7 +3679,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/RelayServiceConnectionEntity_properties"
+              "$ref": "#/definitions/RelayServiceConnectionEntityProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -3810,7 +3813,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/Site_properties"
+              "$ref": "#/definitions/SiteProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -3893,7 +3896,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/Deployment_properties"
+              "$ref": "#/definitions/DeploymentProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -3957,7 +3960,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/HostNameBinding_properties"
+              "$ref": "#/definitions/HostNameBindingProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -4021,7 +4024,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/RelayServiceConnectionEntity_properties"
+              "$ref": "#/definitions/RelayServiceConnectionEntityProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -4155,7 +4158,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/VnetInfo_properties"
+              "$ref": "#/definitions/VnetInfoProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -4229,7 +4232,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/VnetGateway_properties"
+              "$ref": "#/definitions/VnetGatewayProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -4293,7 +4296,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/VnetInfo_properties"
+              "$ref": "#/definitions/VnetInfoProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -4367,7 +4370,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/VnetGateway_properties"
+              "$ref": "#/definitions/VnetGatewayProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -4712,7 +4715,7 @@
       },
       "description": "Specification for using a virtual network"
     },
-    "VnetGateway_properties": {
+    "VnetGatewayProperties": {
       "type": "object",
       "properties": {
         "vnetName": {
@@ -4725,7 +4728,7 @@
         }
       }
     },
-    "VnetInfo_properties": {
+    "VnetInfoProperties": {
       "type": "object",
       "properties": {
         "vnetResourceId": {
@@ -4811,7 +4814,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/VnetRoute_properties"
+              "$ref": "#/definitions/VnetRouteProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -4824,7 +4827,7 @@
       ],
       "description": "VnetRoute contract used to pass routing information for a vnet."
     },
-    "VnetRoute_properties": {
+    "VnetRouteProperties": {
       "type": "object",
       "properties": {
         "name": {
@@ -4885,7 +4888,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/WorkerPool_properties"
+              "$ref": "#/definitions/WorkerPoolProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -4908,7 +4911,7 @@
       ],
       "description": "Worker pool of a hostingEnvironment (App Service Environment)"
     },
-    "WorkerPool_properties": {
+    "WorkerPoolProperties": {
       "type": "object",
       "properties": {
         "workerSizeId": {

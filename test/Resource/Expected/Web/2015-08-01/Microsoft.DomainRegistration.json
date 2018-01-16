@@ -51,7 +51,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/Domain_properties"
+              "$ref": "#/definitions/DomainProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -149,7 +149,7 @@
       },
       "description": "Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information will be  be made publicly available through the Whois directories as per ICANN requirements."
     },
-    "Domain_properties": {
+    "DomainProperties": {
       "type": "object",
       "properties": {
         "contactAdmin": {

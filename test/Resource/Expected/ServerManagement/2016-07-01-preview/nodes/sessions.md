@@ -29,11 +29,11 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes |  |
 |  type | enum | Yes | Microsoft.ServerManagement/nodes/sessions |
 |  apiVersion | enum | Yes | 2016-07-01-preview |
-|  properties | object | Yes | collection of properties - [SessionParameters_properties object](#SessionParameters_properties) |
+|  properties | object | Yes | collection of properties - [SessionParametersProperties object](#SessionParametersProperties) |
 
 
-<a id="SessionParameters_properties" />
-### SessionParameters_properties object
+<a id="SessionParametersProperties" />
+### SessionParametersProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  userName | string | No | encrypted User name to be used to connect to node |

@@ -103,12 +103,12 @@ The following tables describe the values you need to set in the schema.
 |  kind | string | No | Kind of resource |
 |  location | string | Yes | Resource Location |
 |  tags | object | No | Resource tags |
-|  properties | object | Yes | [CertificateOrder_properties object](#CertificateOrder_properties) |
+|  properties | object | Yes | [CertificateOrderProperties object](#CertificateOrderProperties) |
 |  resources | array | No | [certificates](./certificateOrders/certificates.md) |
 
 
-<a id="CertificateOrder_properties" />
-### CertificateOrder_properties object
+<a id="CertificateOrderProperties" />
+### CertificateOrderProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  certificates | object | No | State of the Key Vault secret |
@@ -139,11 +139,11 @@ The following tables describe the values you need to set in the schema.
 |  location | string | Yes | Resource Location |
 |  type | string | No | Resource type |
 |  tags | object | No | Resource tags |
-|  properties | object | No | [CertificateDetails_properties object](#CertificateDetails_properties) |
+|  properties | object | No | [CertificateDetailsProperties object](#CertificateDetailsProperties) |
 
 
-<a id="CertificateDetails_properties" />
-### CertificateDetails_properties object
+<a id="CertificateDetailsProperties" />
+### CertificateDetailsProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  version | integer | No | Version |

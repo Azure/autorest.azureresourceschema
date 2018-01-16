@@ -51,7 +51,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/CertificateOrder_properties"
+              "$ref": "#/definitions/CertificateOrderProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -125,7 +125,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/CertificateOrderCertificate_properties"
+              "$ref": "#/definitions/CertificateOrderCertificateProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -184,7 +184,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/CertificateDetails_properties"
+              "$ref": "#/definitions/CertificateDetailsProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -197,7 +197,7 @@
       ],
       "description": "Certificate Details"
     },
-    "CertificateDetails_properties": {
+    "CertificateDetailsProperties": {
       "type": "object",
       "properties": {
         "version": {
@@ -247,7 +247,96 @@
         }
       }
     },
-    "CertificateOrder_properties": {
+    "CertificateOrderCertificate": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Resource Id"
+        },
+        "name": {
+          "type": "string",
+          "description": "Resource Name"
+        },
+        "kind": {
+          "type": "string",
+          "description": "Kind of resource"
+        },
+        "location": {
+          "type": "string",
+          "description": "Resource Location"
+        },
+        "type": {
+          "type": "string",
+          "description": "Resource type"
+        },
+        "tags": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Resource tags"
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/CertificateOrderCertificateProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "location"
+      ],
+      "description": "Class representing the Key Vault container for certificate purchased through Azure"
+    },
+    "CertificateOrderCertificateProperties": {
+      "type": "object",
+      "properties": {
+        "keyVaultId": {
+          "type": "string",
+          "description": "Key Vault Csm resource Id"
+        },
+        "keyVaultSecretName": {
+          "type": "string",
+          "description": "Key Vault secret name"
+        },
+        "provisioningState": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "Initialized",
+                "WaitingOnCertificateOrder",
+                "Succeeded",
+                "CertificateOrderFailed",
+                "OperationNotPermittedOnKeyVault",
+                "AzureServiceUnauthorizedToAccessKeyVault",
+                "KeyVaultDoesNotExist",
+                "KeyVaultSecretDoesNotExist",
+                "UnknownError",
+                "Unknown"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Status of the Key Vault secret."
+        }
+      }
+    },
+    "CertificateOrderProperties": {
       "type": "object",
       "properties": {
         "certificates": {
@@ -414,95 +503,6 @@
         }
       }
     },
-    "CertificateOrderCertificate": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "string",
-          "description": "Resource Id"
-        },
-        "name": {
-          "type": "string",
-          "description": "Resource Name"
-        },
-        "kind": {
-          "type": "string",
-          "description": "Kind of resource"
-        },
-        "location": {
-          "type": "string",
-          "description": "Resource Location"
-        },
-        "type": {
-          "type": "string",
-          "description": "Resource type"
-        },
-        "tags": {
-          "oneOf": [
-            {
-              "type": "object",
-              "additionalProperties": {
-                "type": "string"
-              }
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "Resource tags"
-        },
-        "properties": {
-          "oneOf": [
-            {
-              "$ref": "#/definitions/CertificateOrderCertificate_properties"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ]
-        }
-      },
-      "required": [
-        "location"
-      ],
-      "description": "Class representing the Key Vault container for certificate purchased through Azure"
-    },
-    "CertificateOrderCertificate_properties": {
-      "type": "object",
-      "properties": {
-        "keyVaultId": {
-          "type": "string",
-          "description": "Key Vault Csm resource Id"
-        },
-        "keyVaultSecretName": {
-          "type": "string",
-          "description": "Key Vault secret name"
-        },
-        "provisioningState": {
-          "oneOf": [
-            {
-              "type": "string",
-              "enum": [
-                "Initialized",
-                "WaitingOnCertificateOrder",
-                "Succeeded",
-                "CertificateOrderFailed",
-                "OperationNotPermittedOnKeyVault",
-                "AzureServiceUnauthorizedToAccessKeyVault",
-                "KeyVaultDoesNotExist",
-                "KeyVaultSecretDoesNotExist",
-                "UnknownError",
-                "Unknown"
-              ]
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "Status of the Key Vault secret."
-        }
-      }
-    },
     "certificateOrders_certificates_childResource": {
       "type": "object",
       "properties": {
@@ -550,7 +550,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/CertificateOrderCertificate_properties"
+              "$ref": "#/definitions/CertificateOrderCertificateProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
