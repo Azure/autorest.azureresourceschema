@@ -1,0 +1,246 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2016-06-01/Microsoft.RecoveryServices.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Microsoft.RecoveryServices",
+  "description": "Microsoft RecoveryServices Resource Types",
+  "resourceDefinitions": {
+    "vaults": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the recovery services vault."
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "Microsoft.RecoveryServices/vaults"
+          ]
+        },
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2016-06-01"
+          ]
+        },
+        "eTag": {
+          "type": "string",
+          "description": "Optional ETag."
+        },
+        "location": {
+          "type": "string",
+          "description": "Resource location."
+        },
+        "tags": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Resource tags."
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/VaultProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ]
+        },
+        "sku": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Sku"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ]
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/vaults_certificates_childResource"
+              }
+            ]
+          }
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "apiVersion",
+        "location",
+        "properties"
+      ],
+      "description": "Microsoft.RecoveryServices/vaults"
+    },
+    "vaults_certificates": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "Microsoft.RecoveryServices/vaults/certificates"
+          ]
+        },
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2016-06-01"
+          ]
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/RawCertificateData"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "apiVersion",
+        "properties"
+      ],
+      "description": "Microsoft.RecoveryServices/vaults/certificates"
+    }
+  },
+  "definitions": {
+    "RawCertificateData": {
+      "type": "object",
+      "properties": {
+        "authType": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "Invalid",
+                "ACS",
+                "AAD",
+                "AccessControlService",
+                "AzureActiveDirectory"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Specifies the authentication type."
+        },
+        "certificate": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The base64 encoded certificate raw data string"
+        }
+      },
+      "description": "Raw certificate data."
+    },
+    "Sku": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "Standard",
+                "RS0"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The Sku name."
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "description": "Identifies the unique system identifier for each Azure resource."
+    },
+    "UpgradeDetails": {
+      "description": "Details for upgrading vault."
+    },
+    "VaultProperties": {
+      "type": "object",
+      "properties": {
+        "upgradeDetails": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/UpgradeDetails"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "description": "Properties of the vault."
+    },
+    "vaults_certificates_childResource": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "certificates"
+          ]
+        },
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2016-06-01"
+          ]
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/RawCertificateData"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "apiVersion",
+        "properties"
+      ],
+      "description": "Microsoft.RecoveryServices/vaults/certificates"
+    }
+  }
+}

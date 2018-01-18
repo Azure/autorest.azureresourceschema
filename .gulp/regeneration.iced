@@ -9,18 +9,13 @@ regenExpected = (opts,done) ->
 
   for kkey in keys
     value = opts.mappings[kkey]
-    # swaggerFiles = [swaggerFiles] if !(swaggerFiles instanceof Array)
     key = kkey.trim();
 
     args = [
       "--#{opts.language}.output-folder=#{__dirname}/../#{opts.outputDir}/#{key}",
-      # "--clear-output-folder", # run multiple times on same folders (API version nests)
-      "--title=title",
-      "--license-header=#{if !!opts.header then opts.header else 'MICROSOFT_MIT_NO_VERSION'}"
+      "--title=title"
     ]
 
-    # for swaggerFile in swaggerFiles
-    #   args.push("--input-file=#{if !!opts.inputBaseDir then "#{opts.inputBaseDir}/#{swaggerFile}" else swaggerFile}")
     args.push("#{opts.inputBaseDir}/#{value.folder}/resource-manager/readme.md")
     for tag in value.tags
       args2 = args.slice()
@@ -34,49 +29,47 @@ task 'regenerate', '', (done) ->
     'outputDir': 'test/Resource/Expected',
     'inputBaseDir': 'https://github.com/Azure/azure-rest-api-specs/blob/olydis-patches/specification',
     'mappings': {
-      'Compute': { folder: 'compute', tags: [ 'package-2017-12', 'package-2017-03', 'package-2016-04-preview', 'package-2016-03', 'package-2015-06-preview' ] },
-      # 'ApiManagement':'apimanagement/resource-manager/Microsoft.ApiManagement/stable/2017-03-01/apimanagement.json',
-      # 'Batch':'batch/resource-manager/Microsoft.Batch/stable/2015-12-01/BatchManagement.json',
-      # 'CDN':'cdn/resource-manager/Microsoft.Cdn/stable/2015-06-01/cdn.json',
-      # 'CDN ':'cdn/resource-manager/Microsoft.Cdn/stable/2016-04-02/cdn.json',
-      # 'CognitiveServices':'cognitiveservices/resource-manager/Microsoft.CognitiveServices/preview/2016-02-01-preview/cognitiveservices.json',
-      # 'CommitmentPlans':'machinelearning/resource-manager/Microsoft.MachineLearning/preview/2016-05-01-preview/commitmentPlans.json',
-      # 'Compute':'compute/resource-manager/Microsoft.Compute/stable/2015-06-15/compute.json',
-      # 'Compute ':'compute/resource-manager/Microsoft.Compute/stable/2016-03-30/compute.json',
-      # 'Compute  ': [ 'compute/resource-manager/Microsoft.Compute/stable/2017-03-30/compute.json', 'compute/resource-manager/Microsoft.Compute/stable/2017-03-30/disk.json'],
-      # 'ContainerService':'compute/resource-manager/Microsoft.ContainerService/stable/2016-03-30/containerService.json',
-      # 'DataLakeAnalytics':'datalake-analytics/resource-manager/Microsoft.DataLakeAnalytics/preview/2015-10-01-preview/account.json',
-      # 'DataLakeStore':'datalake-store/resource-manager/Microsoft.DataLakeStore/preview/2015-10-01-preview/account.json',
-      # 'DevTestLabs':'devtestlabs/resource-manager/Microsoft.DevTestLab/preview/2015-05-21-preview/DTL.json',
-      # 'DevTestLabs ':'devtestlabs/resource-manager/Microsoft.DevTestLab/stable/2016-05-15/DTL.json',
-      # 'DNS':'dns/resource-manager/Microsoft.Network/preview/2015-05-04-preview/dns.json',
-      # 'DNS ':'dns/resource-manager/Microsoft.Network/stable/2016-04-01/dns.json',
-      # 'Insights':'monitor/resource-manager/microsoft.insights/stable/2016-03-01/alertRules_API.json',
-      # 'Insights ':'monitor/resource-manager/microsoft.insights/stable/2017-04-01/actionGroups_API.json',
-      # 'Insights  ':'monitor/resource-manager/microsoft.insights/stable/2017-04-01/activityLogAlerts_API.json',
-      # 'Logic':'logic/resource-manager/Microsoft.Logic/preview/2015-02-01-preview/logic.json',
-      # 'Logic ':'logic/resource-manager/Microsoft.Logic/stable/2016-06-01/logic.json',
-      # 'MachineLearning':'machinelearning/resource-manager/Microsoft.MachineLearning/preview/2016-05-01-preview/webservices.json',
-      # 'MobileEngagement':'mobileengagement/resource-manager/Microsoft.MobileEngagement/stable/2014-12-01/mobile-engagement.json',
-      # 'Network':'network/resource-manager/Microsoft.Network/preview/2015-05-01-preview/network.json',
-      # 'Network ':'network/resource-manager/Microsoft.Network/stable/2015-06-15/network.json',
-      # 'Network  ':'network/resource-manager/Microsoft.Network/stable/2016-03-30/network.json',
-      # 'Network   ':'network/resource-manager/Microsoft.Network/stable/2016-09-01/virtualNetwork.json',
-      # 'NotificationHubs':'notificationhubs/resource-manager/Microsoft.NotificationHubs/stable/2016-03-01/notificationhubs.json',
-      # 'PowerBIEmbedded':'powerbiembedded/resource-manager/Microsoft.PowerBI/stable/2016-01-29/powerbiembedded.json',
-      # 'RecoveryServices':'recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/stable/2016-06-01/recoveryservicesbackup.json',
-      # 'Redis':'redis/resource-manager/Microsoft.Cache/stable/2016-04-01/redis.json',
-      # 'Resources':'resources/resource-manager/Microsoft.Authorization/stable/2016-09-01/locks.json',
-      # 'Resources ':'resources/resource-manager/Microsoft.Resources/stable/2016-02-01/resources.json',
-      # 'Scheduler':'scheduler/resource-manager/Microsoft.Scheduler/stable/2016-03-01/scheduler.json',
-      # 'Search':'search/resource-manager/Microsoft.Search/stable/2015-02-28/search.json',
-      # 'ServerManagement':'servermanagement/resource-manager/Microsoft.ServerManagement/preview/2016-07-01-preview/servermanagement.json',
-      # 'ServiceBus':'servicebus/resource-manager/Microsoft.ServiceBus/stable/2015-08-01/servicebus.json',
-      # 'Storage':'storage/resource-manager/Microsoft.Storage/preview/2015-05-01-preview/storage.json',
-      # 'Storage ':'storage/resource-manager/Microsoft.Storage/stable/2015-06-15/storage.json',
-      # 'Storage  ':'storage/resource-manager/Microsoft.Storage/stable/2016-01-01/storage.json',
-      # 'TrafficManager':'trafficmanager/resource-manager/Microsoft.Network/stable/2015-11-01/trafficmanager.json',
-      # 'Web':'web/resource-manager/Microsoft.Web/stable/2016-08-01/WebApps.json'
+      'Advisor': { folder: 'advisor', tags: [ 'package-2017-04', 'package-2017-03', 'package-2016-07-preview' ] },
+      'AnalysisServices': { folder: 'analysisservices', tags: [ 'package-2017-08-beta', 'package-2017-07', 'package-2016-05' ] },
+      'ApiManagement': { folder: 'apimanagement', tags: [ 'package-2017-03', 'package-2016-10' ] },
+      'ApplicationInsights': { folder: 'applicationinsights', tags: [ 'package-2015-05' ] },
+      'Authorization': { folder: 'authorization', tags: [ 'package-2015-07', 'package-2017-10-01-preview' ] },
+      'Automation': { folder: 'automation', tags: [ 'package-2015-10', 'package-2017-05-preview' ] },
+      'Batch': { folder: 'batch', tags: [ 'package-2017-09', 'package-2017-05', 'package-2017-01', 'package-2015-12' ] },
+      'CDN': { folder: 'cdn', tags: [ 'package-2017-04', 'package-2016-10', 'package-2016-04', 'package-2015-06' ] },
+      'CognitiveServices': { folder: 'cognitiveservices', tags: [ 'package-2017-04', 'package-2016-02-preview' ] },
+      'Compute': { folder: 'compute', tags: [ 'package-compute-only-2017-12', 'package-skus-2017-09', 'package-2017-03', 'package-2016-04-preview', 'package-2016-03', 'package-2015-06-preview' ] },
+      'Consumption': { folder: 'consumption', tags: [ 'package-2017-11', 'package-2017-04-preview', 'package-2017-12-preview' ] },
+      'ContainerRegistry': { folder: 'containerregistry', tags: [ 'package-2017-10', 'package-2017-06-preview', 'package-2017-03', 'package-2016-06-preview' ] },
+      'ContainerService': { folder: 'containerservices', tags: [ 'package-2017-09', 'package-2017-08', 'package-2017-07' ] },
+      'CustomerInsights': { folder: 'customer-insights', tags: [ 'package-2017-04', 'package-2017-01' ] },
+      'DataLakeAnalytics': { folder: 'datalake-analytics', tags: [ 'package-2016-11', 'package-2015-10-preview' ] },
+      'DataLakeStore': { folder: 'datalake-store', tags: [ 'package-2016-11', 'package-2015-10-preview' ] },
+      'DevTestLabs': { folder: 'devtestlabs', tags: [ 'package-2016-05', 'package-2015-05-preview' ] },
+      'DNS': { folder: 'dns', tags: [ 'package-2017-09', 'package-2016-04', 'package-2015-05-preview' ] },
+      'DomainServices': { folder: 'domainservices', tags: [ 'package-2017-06', 'package-2017-01' ] },
+      'EventHub': { folder: 'eventhub', tags: [ 'package-2017-04', 'package-2015-08' ] },
+      'IotHub': { folder: 'iothub', tags: [ 'package-2017-07', 'package-2017-01', 'package-2016-02' ] },
+      'KeyVault': { folder: 'keyvault', tags: [ 'package-2016-10', 'package-2015-06' ] },
+      'Logic': { folder: 'logic', tags: [ 'package-2016-06', 'package-2015-08-preview', 'package-2015-02-preview' ] },
+      'MobileEngagement': { folder: 'mobileengagement', tags: [ 'package-2014-12' ] },
+      'Monitor': { folder: 'monitor', tags: [ 'package-2017-09', 'package-2017-08' ] },
+      'Network': { folder: 'network', tags: [ 'package-2017-10', 'package-2017-09', 'package-2017-08', 'package-2017-06', 'package-2017-03', 'package-2016-12', 'package-2016-09', 'package-2016-06', 'package-2016-03' ] },
+      'NotificationHubs': { folder: 'notificationhubs', tags: [ 'package-2017-04', 'package-2016-03', 'package-2014-09' ] },
+      'PowerBIEmbedded': { folder: 'powerbiembedded', tags: [ 'package-2016-01' ] },
+      'ProvisioningServices': { folder: 'provisioningservices', tags: [ 'package-2017-08', 'package-2017-11' ] },
+      'RecoveryServices': { folder: 'recoveryservices', tags: [ 'package-2016-12', 'package-2016-06' ] },
+      'RecoveryServicesBackup': { folder: 'recoveryservicesbackup', tags: [ 'package-2017-07', 'package-2016-06' ] },
+      'Redis': { folder: 'redis', tags: [ 'package-2017-10', 'package-2017-02', 'package-2016-04', 'package-2015-08' ] },
+      'Relay': { folder: 'relay', tags: [ 'package-2017-04', 'package-2016-07' ] },
+      'Reservations': { folder: 'reservations', tags: [ 'package-2017-11' ] },
+      'Scheduler': { folder: 'scheduler', tags: [ 'package-2016-03', 'package-2016-01', 'package-2014-08-preview' ] },
+      'Search': { folder: 'search', tags: [ 'package-2015-08', 'package-2015-02' ] },
+      'ServiceBus': { folder: 'servicebus', tags: [ 'package-2017-04', 'package-2015-08' ] },
+      'ServiceFabric': { folder: 'servicefabric', tags: [ 'package-2017-07', 'package-2016-09' ] },
+      'Storage': { folder: 'storage', tags: [ 'package-2017-10', 'package-2017-06', 'package-2016-12', 'package-2016-05', 'package-2016-01', 'package-2015-06', 'package-2015-05-preview' ] },
+      'TrafficManager': { folder: 'trafficmanager', tags: [ 'package-2017-09-preview', 'package-2017-05', 'package-2017-03', 'package-2015-11' ] },
+      'Web': { folder: 'web', tags: [ 'package-2016-09', 'package-2015-08-preview' ] }
     },
     'language': 'azureresourceschema'
   },done
