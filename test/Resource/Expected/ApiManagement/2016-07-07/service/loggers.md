@@ -26,6 +26,6 @@ The following tables describe the values you need to set in the schema.
 |  type | enum | Yes | Microsoft.ApiManagement/service/loggers |
 |  apiVersion | enum | Yes | 2016-07-07 |
 |  description | string | No | Logger description. |
-|  credentials | object | Yes | Logger credentials. |
-|  isBuffered | boolean | No | whether records are buffered in the logger before publishing. Default is assumed to be true. |
+|  credentials | object | Yes | The name and SendRule connection string of the event hub. |
+|  isBuffered | boolean | No | Whether records are buffered in the logger before publishing. Default is assumed to be true. |
 

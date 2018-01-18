@@ -65,34 +65,34 @@ The following tables describe the values you need to set in the schema.
 ### VirtualMachineExtensionProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  forceUpdateTag | string | No | how the extension handler should be forced to update even if the extension configuration has not changed. |
-|  publisher | string | No | the name of the extension handler publisher. |
-|  type | string | No | the type of the extension handler. |
-|  typeHandlerVersion | string | No | the type version of the extension handler. |
-|  autoUpgradeMinorVersion | boolean | No | whether the extension handler should be automatically upgraded across minor versions. |
+|  forceUpdateTag | string | No | How the extension handler should be forced to update even if the extension configuration has not changed. |
+|  publisher | string | No | The name of the extension handler publisher. |
+|  type | string | No | Specifies the type of the extension; an example is "CustomScriptExtension". |
+|  typeHandlerVersion | string | No | Specifies the version of the script handler. |
+|  autoUpgradeMinorVersion | boolean | No | Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true. |
 |  settings | object | No | Json formatted public settings for the extension. |
-|  protectedSettings | object | No | Json formatted protected settings for the extension. |
-|  instanceView | object | No | the virtual machine extension instance view. - [VirtualMachineExtensionInstanceView object](#VirtualMachineExtensionInstanceView) |
+|  protectedSettings | object | No | The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all. |
+|  instanceView | object | No | The virtual machine extension instance view. - [VirtualMachineExtensionInstanceView object](#VirtualMachineExtensionInstanceView) |
 
 
 <a id="VirtualMachineExtensionInstanceView" />
 ### VirtualMachineExtensionInstanceView object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  name | string | No | the virtual machine extension name. |
-|  type | string | No | the full type of the extension handler which includes both publisher and type. |
-|  typeHandlerVersion | string | No | the type version of the extension handler. |
-|  substatuses | array | No | the resource status information. - [InstanceViewStatus object](#InstanceViewStatus) |
-|  statuses | array | No | the resource status information. - [InstanceViewStatus object](#InstanceViewStatus) |
+|  name | string | No | The virtual machine extension name. |
+|  type | string | No | Specifies the type of the extension; an example is "CustomScriptExtension". |
+|  typeHandlerVersion | string | No | Specifies the version of the script handler. |
+|  substatuses | array | No | The resource status information. - [InstanceViewStatus object](#InstanceViewStatus) |
+|  statuses | array | No | The resource status information. - [InstanceViewStatus object](#InstanceViewStatus) |
 
 
 <a id="InstanceViewStatus" />
 ### InstanceViewStatus object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  code | string | No | the status Code. |
-|  level | enum | No | the level Code. - Info, Warning, Error |
-|  displayStatus | string | No | the short localizable label for the status. |
-|  message | string | No | the detailed Message, including for alerts and error messages. |
-|  time | string | No | the time of the status. |
+|  code | string | No | The status code. |
+|  level | enum | No | The level code. - Info, Warning, Error |
+|  displayStatus | string | No | The short localizable label for the status. |
+|  message | string | No | The detailed status message, including for alerts and error messages. |
+|  time | string | No | The time of the status. |
 

@@ -29,16 +29,16 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes |  |
 |  type | enum | Yes | Microsoft.ServerManagement/nodes/sessions |
 |  apiVersion | enum | Yes | 2016-07-01-preview |
-|  properties | object | Yes | collection of properties - [SessionParametersProperties object](#SessionParametersProperties) |
+|  properties | object | Yes | Collection of properties - [SessionParametersProperties object](#SessionParametersProperties) |
 
 
 <a id="SessionParametersProperties" />
 ### SessionParametersProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  userName | string | No | encrypted User name to be used to connect to node |
-|  password | string | No | encrypted Password associated with user name |
-|  retentionPeriod | enum | No | session retention period. - Session or Persistent |
-|  credentialDataFormat | enum | No | credential data format. - RsaEncrypted |
-|  EncryptionCertificateThumbprint | string | No | encryption certificate thumbprint |
+|  userName | string | No | Encrypted User name to be used to connect to node. |
+|  password | string | No | Encrypted Password associated with user name. |
+|  retentionPeriod | enum | No | Session retention period. - Session or Persistent |
+|  credentialDataFormat | enum | No | Credential data format. - RsaEncrypted |
+|  EncryptionCertificateThumbprint | string | No | Encryption certificate thumbprint. |
 

@@ -38,14 +38,14 @@ The following tables describe the values you need to set in the schema.
 ### ManagementLockProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  level | enum | Yes | The lock level of the management lock. - NotSpecified, CanNotDelete, ReadOnly |
-|  notes | string | No | The notes of the management lock. |
-|  owners | array | No | The owners of the management lock. - [ManagementLockOwner object](#ManagementLockOwner) |
+|  level | enum | Yes | The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it. - NotSpecified, CanNotDelete, ReadOnly |
+|  notes | string | No | Notes about the lock. Maximum of 512 characters. |
+|  owners | array | No | The owners of the lock. - [ManagementLockOwner object](#ManagementLockOwner) |
 
 
 <a id="ManagementLockOwner" />
 ### ManagementLockOwner object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  applicationId | string | No | The application Id of the management lock owner. |
+|  applicationId | string | No | The application ID of the lock owner. |
 

@@ -9,25 +9,21 @@ To create a Microsoft.ApiManagement/service/apis resource, add the following JSO
   "name": "string",
   "type": "Microsoft.ApiManagement/service/apis",
   "apiVersion": "2016-07-07",
-  "ApiContract": {
-    "name": "string",
-    "description": "string",
-    "serviceUrl": "string",
-    "path": "string",
-    "protocols": [
-      "string"
-    ],
-    "authenticationSettings": {
-      "oAuth2": {
-        "authorizationServerId": "string",
-        "scope": "string"
-      }
-    },
-    "subscriptionKeyParameterNames": {
-      "header": "string",
-      "query": "string"
-    },
-    "type": "string"
+  "description": "string",
+  "serviceUrl": "string",
+  "path": "string",
+  "protocols": [
+    "string"
+  ],
+  "authenticationSettings": {
+    "oAuth2": {
+      "authorizationServerId": "string",
+      "scope": "string"
+    }
+  },
+  "subscriptionKeyParameterNames": {
+    "header": "string",
+    "query": "string"
   },
   "resources": []
 }
@@ -43,22 +39,13 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes | API identifier. Must be unique in the current API Management service instance. |
 |  type | enum | Yes | Microsoft.ApiManagement/service/apis |
 |  apiVersion | enum | Yes | 2016-07-07 |
-|  ApiContract | object | Yes | ApiContract. - [ApiContract object](#ApiContract) |
-|  resources | array | No | [operations](./apis/operations.md) |
-
-
-<a id="ApiContract" />
-### ApiContract object
-|  Name | Type | Required | Value |
-|  ---- | ---- | ---- | ---- |
-|  name | string | Yes | API name. |
 |  description | string | No | Description of the API. May include HTML formatting tags. |
 |  serviceUrl | string | Yes | Absolute URL of the backend service implementing this API. |
-|  path | string | Yes | Path for API requests. |
-|  protocols | array | Yes | Protocols over which API is made available. - Http or Https |
+|  path | string | Yes | Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API. |
+|  protocols | array | Yes | Describes on which protocols the operations in this API can be invoked. - Http or Https |
 |  authenticationSettings | object | No | Collection of authentication settings included into this API. - [AuthenticationSettingsContract object](#AuthenticationSettingsContract) |
 |  subscriptionKeyParameterNames | object | No | Protocols over which API is made available. - [SubscriptionKeyParameterNamesContract object](#SubscriptionKeyParameterNamesContract) |
-|  type | enum | No | Type of API. - Http or Soap |
+|  resources | array | No | [operations](./apis/operations.md) |
 
 
 <a id="AuthenticationSettingsContract" />

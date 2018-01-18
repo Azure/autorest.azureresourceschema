@@ -16,7 +16,11 @@ To create a microsoft.insights/alertrules resource, add the following JSON to th
     "description": "string",
     "isEnabled": boolean,
     "condition": {
-      "odata.type": "string"
+      "odata.type": "string",
+      "dataSource": {
+        "odata.type": "string",
+        "resourceUri": "string"
+      }
     },
     "actions": [
       {
@@ -39,7 +43,7 @@ The following tables describe the values you need to set in the schema.
 |  apiVersion | enum | Yes | 2016-03-01 |
 |  location | string | Yes | Resource location |
 |  tags | object | No | Resource tags |
-|  properties | object | Yes | [AlertRule object](#AlertRule) |
+|  properties | object | Yes | The alert rule properties of the resource. - [AlertRule object](#AlertRule) |
 
 
 <a id="AlertRule" />
@@ -49,8 +53,8 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes | the name of the alert rule. |
 |  description | string | No | the description of the alert rule that will be included in the alert email. |
 |  isEnabled | boolean | Yes | the flag that indicates whether the alert rule is enabled. |
-|  condition | object | No | the condition that results in the alert rule being activated. - [RuleCondition object](#RuleCondition) |
-|  actions | array | No | the actions that are performed when the alert rule becomes active, and when an alert condition is resolved. - [RuleAction object](#RuleAction) |
+|  condition | object | Yes | the condition that results in the alert rule being activated. - [RuleCondition object](#RuleCondition) |
+|  actions | array | No | the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved. - [RuleAction object](#RuleAction) |
 
 
 <a id="RuleCondition" />
@@ -58,6 +62,7 @@ The following tables describe the values you need to set in the schema.
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  odata.type | enum | No | RuleCondition, Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition, Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition, Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition |
+|  dataSource | object | No | the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource. - [RuleDataSource object](#RuleDataSource) |
 
 
 <a id="RuleAction" />
@@ -65,4 +70,12 @@ The following tables describe the values you need to set in the schema.
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  odata.type | enum | No | RuleAction, Microsoft.Azure.Management.Insights.Models.RuleEmailAction, Microsoft.Azure.Management.Insights.Models.RuleWebhookAction |
+
+
+<a id="RuleDataSource" />
+### RuleDataSource object
+|  Name | Type | Required | Value |
+|  ---- | ---- | ---- | ---- |
+|  odata.type | enum | No | RuleDataSource, Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource, Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource |
+|  resourceUri | string | No | the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule. |
 

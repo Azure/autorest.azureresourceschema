@@ -27,7 +27,7 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes |  |
 |  type | enum | Yes | Microsoft.ApiManagement/service/properties |
 |  apiVersion | enum | Yes | 2016-07-07 |
-|  value | string | Yes | The Value of the Property. |
-|  tags | array | No | Collection of tags associated with a property. - string |
-|  secret | boolean | No | The value which determines the value should be encrypted or not. Default value is false. |
+|  value | string | Yes | Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace. |
+|  tags | array | No | Optional tags that when provided can be used to filter the property list. - string |
+|  secret | boolean | No | Determines whether the value is a secret and should be encrypted or not. Default value is false. |
 

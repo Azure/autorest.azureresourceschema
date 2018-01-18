@@ -207,6 +207,7 @@ To create a Microsoft.Network/networkSecurityGroups resource, add the following 
                   "name": "string",
                   "etag": "string"
                 },
+                "primary": boolean,
                 "publicIPAddress": {
                   "id": "string",
                   "location": "string",
@@ -565,6 +566,7 @@ The following tables describe the values you need to set in the schema.
 |  privateIPAllocationMethod | enum | No | Gets or sets PrivateIP allocation method (Static/Dynamic). - Static or Dynamic |
 |  privateIPAddressVersion | enum | No | Gets or sets PrivateIP address version (IPv4/IPv6). - IPv4 or IPv6 |
 |  subnet | object | No | [Subnet object](#Subnet) |
+|  primary | boolean | No | Gets whether this is a primary customer address on the NIC |
 |  publicIPAddress | object | No | [PublicIPAddress object](#PublicIPAddress) |
 |  provisioningState | string | No |  |
 

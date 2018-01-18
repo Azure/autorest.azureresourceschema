@@ -9,37 +9,34 @@ To create a Microsoft.ApiManagement/service/authorizationServers resource, add t
   "name": "string",
   "type": "Microsoft.ApiManagement/service/authorizationServers",
   "apiVersion": "2016-07-07",
-  "OAuth2AuthorizationServerContract": {
-    "name": "string",
-    "description": "string",
-    "clientRegistrationEndpoint": "string",
-    "authorizationEndpoint": "string",
-    "authorizationMethods": [
-      "string"
-    ],
-    "clientAuthenticationMethod": [
-      "string"
-    ],
-    "tokenBodyParameters": [
-      {
-        "name": "string",
-        "value": "string"
-      }
-    ],
-    "tokenEndpoint": "string",
-    "supportState": boolean,
-    "defaultScope": "string",
-    "grantTypes": [
-      "string"
-    ],
-    "bearerTokenSendingMethods": [
-      "string"
-    ],
-    "clientId": "string",
-    "clientSecret": "string",
-    "resourceOwnerUsername": "string",
-    "resourceOwnerPassword": "string"
-  }
+  "description": "string",
+  "clientRegistrationEndpoint": "string",
+  "authorizationEndpoint": "string",
+  "authorizationMethods": [
+    "string"
+  ],
+  "clientAuthenticationMethod": [
+    "string"
+  ],
+  "tokenBodyParameters": [
+    {
+      "name": "string",
+      "value": "string"
+    }
+  ],
+  "tokenEndpoint": "string",
+  "supportState": boolean,
+  "defaultScope": "string",
+  "grantTypes": [
+    "string"
+  ],
+  "bearerTokenSendingMethods": [
+    "string"
+  ],
+  "clientId": "string",
+  "clientSecret": "string",
+  "resourceOwnerUsername": "string",
+  "resourceOwnerPassword": "string"
 }
 ```
 ## Property values
@@ -53,35 +50,27 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes |  |
 |  type | enum | Yes | Microsoft.ApiManagement/service/authorizationServers |
 |  apiVersion | enum | Yes | 2016-07-07 |
-|  OAuth2AuthorizationServerContract | object | Yes | OAuth2 Authorization Server details. - [OAuth2AuthorizationServerContract object](#OAuth2AuthorizationServerContract) |
-
-
-<a id="OAuth2AuthorizationServerContract" />
-### OAuth2AuthorizationServerContract object
-|  Name | Type | Required | Value |
-|  ---- | ---- | ---- | ---- |
-|  name | string | No | User-friendly authorization server name. |
-|  description | string | No | User-friendly authorization server name. |
-|  clientRegistrationEndpoint | string | No | Client registration URI that will be shown for developers. |
-|  authorizationEndpoint | string | No | OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2. |
-|  authorizationMethods | array | No | Supported methods of authorization. - HEAD, OPTIONS, TRACE, GET, POST, PUT, PATCH, DELETE |
-|  clientAuthenticationMethod | array | No | Supported methods of authorization. - Basic or Body |
-|  tokenBodyParameters | array | No | Token request body parameters. - [TokenBodyParameterContract object](#TokenBodyParameterContract) |
-|  tokenEndpoint | string | No | OAuth token endpoint. See http://tools.ietf.org/html/rfc6749#section-3.1 . |
-|  supportState | boolean | No | whether Auhtorizatoin Server supports client credentials in body or not. See http://tools.ietf.org/html/rfc6749#section-3.1 . |
-|  defaultScope | string | No | Scope that is going to applied by default on the console page. See http://tools.ietf.org/html/rfc6749#section-3.3 . |
-|  grantTypes | array | No | Form of an authorization grant, which the client uses to request the access token. See http://tools.ietf.org/html/rfc6749#section-4 . - authorizationCode, implicit, resourceOwnerPassword, clientCredentials |
-|  bearerTokenSendingMethods | array | No | Form of an authorization grant, which the client uses to request the access token. See http://tools.ietf.org/html/rfc6749#section-4 . - authorizationHeader or query |
-|  clientId | string | No | Client ID of developer console which is the client application. |
-|  clientSecret | string | No | Client Secret of developer console which is the client application. |
-|  resourceOwnerUsername | string | No | Username of the resource owner on behalf of whom developer console will make requests. |
-|  resourceOwnerPassword | string | No | Password of the resource owner on behalf of whom developer console will make requests. |
+|  description | string | No | Description of the authorization server. Can contain HTML formatting tags. |
+|  clientRegistrationEndpoint | string | Yes | Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced. |
+|  authorizationEndpoint | string | Yes | OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2. |
+|  authorizationMethods | array | No | HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional. - HEAD, OPTIONS, TRACE, GET, POST, PUT, PATCH, DELETE |
+|  clientAuthenticationMethod | array | No | Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format. - Basic or Body |
+|  tokenBodyParameters | array | No | Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}. - [TokenBodyParameterContract object](#TokenBodyParameterContract) |
+|  tokenEndpoint | string | No | OAuth token endpoint. Contains absolute URI to entity being referenced. |
+|  supportState | boolean | No | If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security. |
+|  defaultScope | string | No | Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values. |
+|  grantTypes | array | Yes | Form of an authorization grant, which the client uses to request the access token. - authorizationCode, implicit, resourceOwnerPassword, clientCredentials |
+|  bearerTokenSendingMethods | array | No | Specifies the mechanism by which access token is passed to the API.  - authorizationHeader or query |
+|  clientId | string | Yes | Client or app id registered with this authorization server. |
+|  clientSecret | string | No | Client or app secret registered with this authorization server. |
+|  resourceOwnerUsername | string | No | Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username. |
+|  resourceOwnerPassword | string | No | Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password. |
 
 
 <a id="TokenBodyParameterContract" />
 ### TokenBodyParameterContract object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  name | string | No | body parameter name. |
-|  value | string | No | body parameter value. |
+|  name | string | Yes | body parameter name. |
+|  value | string | Yes | body parameter value. |
 

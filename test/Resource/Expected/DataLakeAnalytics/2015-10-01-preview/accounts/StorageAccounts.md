@@ -26,13 +26,13 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes |  |
 |  type | enum | Yes | Microsoft.DataLakeAnalytics/accounts/StorageAccounts |
 |  apiVersion | enum | Yes | 2015-10-01-preview |
-|  properties | object | Yes | Gets or sets the properties for the Azure Storage account being added. - [StorageAccountProperties object](#StorageAccountProperties) |
+|  properties | object | Yes | the properties for the Azure Storage account being added. - [StorageAccountProperties object](#StorageAccountProperties) |
 
 
 <a id="StorageAccountProperties" />
 ### StorageAccountProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  accessKey | string | Yes | Gets or sets the access key associated with this Azure Storage account that will be used to connect to it. |
-|  suffix | string | No | Gets or sets the optional suffix for the Data Lake account. |
+|  accessKey | string | Yes | the access key associated with this Azure Storage account that will be used to connect to it. |
+|  suffix | string | No | the optional suffix for the Data Lake account. |
 

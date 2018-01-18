@@ -1,13 +1,13 @@
-# Microsoft.Network/virtualnetworks/subnets template reference
+# Microsoft.Network/virtualNetworks/subnets template reference
 API Version: 2016-03-30
 ## Template format
 
-To create a Microsoft.Network/virtualnetworks/subnets resource, add the following JSON to the resources section of your template.
+To create a Microsoft.Network/virtualNetworks/subnets resource, add the following JSON to the resources section of your template.
 
 ```json
 {
   "name": "string",
-  "type": "Microsoft.Network/virtualnetworks/subnets",
+  "type": "Microsoft.Network/virtualNetworks/subnets",
   "apiVersion": "2016-03-30",
   "id": "string",
   "properties": {
@@ -137,6 +137,7 @@ To create a Microsoft.Network/virtualnetworks/subnets resource, add the followin
                       "name": "string",
                       "etag": "string"
                     },
+                    "primary": boolean,
                     "publicIPAddress": {
                       "id": "string",
                       "location": "string",
@@ -289,12 +290,12 @@ To create a Microsoft.Network/virtualnetworks/subnets resource, add the followin
 
 The following tables describe the values you need to set in the schema.
 
-<a id="Microsoft.Network/virtualnetworks/subnets" />
-### Microsoft.Network/virtualnetworks/subnets object
+<a id="Microsoft.Network/virtualNetworks/subnets" />
+### Microsoft.Network/virtualNetworks/subnets object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  name | string | Yes |  |
-|  type | enum | Yes | Microsoft.Network/virtualnetworks/subnets |
+|  type | enum | Yes | Microsoft.Network/virtualNetworks/subnets |
 |  apiVersion | enum | Yes | 2016-03-30 |
 |  id | string | No | Resource Id |
 |  properties | object | Yes | [SubnetPropertiesFormat object](#SubnetPropertiesFormat) |
@@ -531,6 +532,7 @@ The following tables describe the values you need to set in the schema.
 |  privateIPAllocationMethod | enum | No | Gets or sets PrivateIP allocation method (Static/Dynamic). - Static or Dynamic |
 |  privateIPAddressVersion | enum | No | Gets or sets PrivateIP address version (IPv4/IPv6). - IPv4 or IPv6 |
 |  subnet | object | No | [Subnet object](#Subnet) |
+|  primary | boolean | No | Gets whether this is a primary customer address on the NIC |
 |  publicIPAddress | object | No | [PublicIPAddress object](#PublicIPAddress) |
 |  provisioningState | string | No |  |
 

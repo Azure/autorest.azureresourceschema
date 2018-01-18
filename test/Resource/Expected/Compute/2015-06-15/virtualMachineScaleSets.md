@@ -32,7 +32,7 @@ To create a Microsoft.Compute/virtualMachineScaleSets resource, add the followin
           "timeZone": "string",
           "additionalUnattendContent": [
             {
-              "passName": "oobeSystem",
+              "passName": "OobeSystem",
               "componentName": "Microsoft-Windows-Shell-Setup",
               "settingName": "string",
               "content": "string"
@@ -159,7 +159,7 @@ The following tables describe the values you need to set in the schema.
 |  apiVersion | enum | Yes | 2015-06-15 |
 |  location | string | Yes | Resource location |
 |  tags | object | No | Resource tags |
-|  sku | object | No | Gets or sets the virtual machine scale set sku. - [Sku object](#Sku) |
+|  sku | object | No | The virtual machine scale set sku. - [Sku object](#Sku) |
 |  properties | object | Yes | [VirtualMachineScaleSetProperties object](#VirtualMachineScaleSetProperties) |
 
 
@@ -167,18 +167,18 @@ The following tables describe the values you need to set in the schema.
 ### Sku object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  name | string | No | Gets or sets the sku name. |
-|  tier | string | No | Gets or sets the sku tier. |
-|  capacity | integer | No | Gets or sets the sku capacity. |
+|  name | string | No | The sku name. |
+|  tier | string | No | Specifies the tier of virtual machines in a scale set.<br /><br /> Possible Values:<br /><br /> **Standard**<br /><br /> **Basic** |
+|  capacity | integer | No | Specifies the number of virtual machines in the scale set. |
 
 
 <a id="VirtualMachineScaleSetProperties" />
 ### VirtualMachineScaleSetProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  upgradePolicy | object | No | Gets or sets the upgrade policy. - [UpgradePolicy object](#UpgradePolicy) |
-|  virtualMachineProfile | object | No | Gets or sets the virtual machine profile. - [VirtualMachineScaleSetVMProfile object](#VirtualMachineScaleSetVMProfile) |
-|  provisioningState | string | No | Gets or sets the provisioning state, which only appears in the response. |
+|  upgradePolicy | object | No | The upgrade policy. - [UpgradePolicy object](#UpgradePolicy) |
+|  virtualMachineProfile | object | No | The virtual machine profile. - [VirtualMachineScaleSetVMProfile object](#VirtualMachineScaleSetVMProfile) |
+|  provisioningState | string | No | The provisioning state, which only appears in the response. |
 |  overProvision | boolean | No | Specifies whether the Virtual Machine Scale Set should be overprovisioned. |
 
 
@@ -186,101 +186,101 @@ The following tables describe the values you need to set in the schema.
 ### UpgradePolicy object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  mode | enum | No | Gets or sets the upgrade mode. - Automatic or Manual |
+|  mode | enum | No | Specifies the mode of an upgrade to virtual machines in the scale set.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of updates to virtual machines in the scale set. You do this by using the manualUpgrade action.<br /><br /> **Automatic** - All virtual machines in the scale set are  automatically updated at the same time. - Automatic or Manual |
 
 
 <a id="VirtualMachineScaleSetVMProfile" />
 ### VirtualMachineScaleSetVMProfile object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  osProfile | object | No | Gets or sets the virtual machine scale set OS profile. - [VirtualMachineScaleSetOSProfile object](#VirtualMachineScaleSetOSProfile) |
-|  storageProfile | object | No | Gets or sets the virtual machine scale set storage profile. - [VirtualMachineScaleSetStorageProfile object](#VirtualMachineScaleSetStorageProfile) |
-|  networkProfile | object | No | Gets or sets the virtual machine scale set network profile. - [VirtualMachineScaleSetNetworkProfile object](#VirtualMachineScaleSetNetworkProfile) |
-|  extensionProfile | object | No | Gets the virtual machine scale set extension profile. - [VirtualMachineScaleSetExtensionProfile object](#VirtualMachineScaleSetExtensionProfile) |
+|  osProfile | object | No | The virtual machine scale set OS profile. - [VirtualMachineScaleSetOSProfile object](#VirtualMachineScaleSetOSProfile) |
+|  storageProfile | object | No | The virtual machine scale set storage profile. - [VirtualMachineScaleSetStorageProfile object](#VirtualMachineScaleSetStorageProfile) |
+|  networkProfile | object | No | The virtual machine scale set network profile. - [VirtualMachineScaleSetNetworkProfile object](#VirtualMachineScaleSetNetworkProfile) |
+|  extensionProfile | object | No | The virtual machine scale set extension profile. - [VirtualMachineScaleSetExtensionProfile object](#VirtualMachineScaleSetExtensionProfile) |
 
 
 <a id="VirtualMachineScaleSetOSProfile" />
 ### VirtualMachineScaleSetOSProfile object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  computerNamePrefix | string | No | Gets or sets the computer name prefix. |
-|  adminUsername | string | No | Gets or sets the admin user name. |
-|  adminPassword | string | No | Gets or sets the admin user password. |
-|  customData | string | No | Gets or sets a base-64 encoded string of custom data. |
-|  windowsConfiguration | object | No | Gets or sets the Windows Configuration of the OS profile. - [WindowsConfiguration object](#WindowsConfiguration) |
-|  linuxConfiguration | object | No | Gets or sets the Linux Configuration of the OS profile. - [LinuxConfiguration object](#LinuxConfiguration) |
-|  secrets | array | No | Gets or sets the List of certificates for addition to the VM. - [VaultSecretGroup object](#VaultSecretGroup) |
+|  computerNamePrefix | string | No | Specifies the computer name prefix for all of the virtual machines in the scale set. Computer name prefixes must be 1 to 15 characters long. |
+|  adminUsername | string | No | Specifies the name of the administrator account. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters  <br><br><li> For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) |
+|  adminPassword | string | No | Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password) |
+|  customData | string | No | A base-64 encoded string of custom data. |
+|  windowsConfiguration | object | No | The Windows Configuration of the OS profile. - [WindowsConfiguration object](#WindowsConfiguration) |
+|  linuxConfiguration | object | No | The Linux Configuration of the OS profile. - [LinuxConfiguration object](#LinuxConfiguration) |
+|  secrets | array | No | The List of certificates for addition to the VM. - [VaultSecretGroup object](#VaultSecretGroup) |
 
 
 <a id="VirtualMachineScaleSetStorageProfile" />
 ### VirtualMachineScaleSetStorageProfile object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  imageReference | object | No | Gets or sets the image reference. - [ImageReference object](#ImageReference) |
-|  osDisk | object | No | Gets or sets the OS disk. - [VirtualMachineScaleSetOSDisk object](#VirtualMachineScaleSetOSDisk) |
+|  imageReference | object | No | The image reference. - [ImageReference object](#ImageReference) |
+|  osDisk | object | No | The OS disk. - [VirtualMachineScaleSetOSDisk object](#VirtualMachineScaleSetOSDisk) |
 
 
 <a id="VirtualMachineScaleSetNetworkProfile" />
 ### VirtualMachineScaleSetNetworkProfile object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  networkInterfaceConfigurations | array | No | Gets or sets the list of network configurations. - [VirtualMachineScaleSetNetworkConfiguration object](#VirtualMachineScaleSetNetworkConfiguration) |
+|  networkInterfaceConfigurations | array | No | The list of network configurations. - [VirtualMachineScaleSetNetworkConfiguration object](#VirtualMachineScaleSetNetworkConfiguration) |
 
 
 <a id="VirtualMachineScaleSetExtensionProfile" />
 ### VirtualMachineScaleSetExtensionProfile object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  extensions | array | No | Gets the virtual machine scale set child extension resources. - [VirtualMachineScaleSetExtension object](#VirtualMachineScaleSetExtension) |
+|  extensions | array | No | The virtual machine scale set child extension resources. - [VirtualMachineScaleSetExtension object](#VirtualMachineScaleSetExtension) |
 
 
 <a id="WindowsConfiguration" />
 ### WindowsConfiguration object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  provisionVMAgent | boolean | No | Gets or sets whether VM Agent should be provisioned on the Virtual Machine. |
-|  enableAutomaticUpdates | boolean | No | Gets or sets whether Windows updates are automatically installed on the VM |
-|  timeZone | string | No | Gets or sets the Time Zone of the VM |
-|  additionalUnattendContent | array | No | Gets or sets the additional base-64 encoded XML formatted information that can be included in the Unattend.xml file. - [AdditionalUnattendContent object](#AdditionalUnattendContent) |
-|  winRM | object | No | Gets or sets the Windows Remote Management configuration of the VM - [WinRMConfiguration object](#WinRMConfiguration) |
+|  provisionVMAgent | boolean | No | Indicates whether virtual machine agent should be provisioned on the virtual machine. <br><br> When this property is not specified in the request body, default behavior is to set it to true.  This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later. |
+|  enableAutomaticUpdates | boolean | No | Indicates whether virtual machine is enabled for automatic updates. |
+|  timeZone | string | No | Specifies the time zone of the virtual machine. e.g. "Pacific Standard Time" |
+|  additionalUnattendContent | array | No | Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup. - [AdditionalUnattendContent object](#AdditionalUnattendContent) |
+|  winRM | object | No | Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell. - [WinRMConfiguration object](#WinRMConfiguration) |
 
 
 <a id="LinuxConfiguration" />
 ### LinuxConfiguration object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  disablePasswordAuthentication | boolean | No | Gets or sets whether Authentication using user name and password is allowed or not |
-|  ssh | object | No | Gets or sets the SSH configuration for linux VMs - [SshConfiguration object](#SshConfiguration) |
+|  disablePasswordAuthentication | boolean | No | Specifies whether password authentication should be disabled. |
+|  ssh | object | No | Specifies the ssh key configuration for a Linux OS. - [SshConfiguration object](#SshConfiguration) |
 
 
 <a id="VaultSecretGroup" />
 ### VaultSecretGroup object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  sourceVault | object | No | Gets or sets the Relative URL of the Key Vault containing all of the certificates in VaultCertificates. - [SubResource object](#SubResource) |
-|  vaultCertificates | array | No | Gets or sets the list of key vault references in SourceVault which contain certificates - [VaultCertificate object](#VaultCertificate) |
+|  sourceVault | object | No | The relative URL of the Key Vault containing all of the certificates in VaultCertificates. - [SubResource object](#SubResource) |
+|  vaultCertificates | array | No | The list of key vault references in SourceVault which contain certificates. - [VaultCertificate object](#VaultCertificate) |
 
 
 <a id="ImageReference" />
 ### ImageReference object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  publisher | string | No | Gets or sets the image publisher. |
-|  offer | string | No | Gets or sets the image offer. |
-|  sku | string | No | Gets or sets the image sku. |
-|  version | string | No | Gets or sets the image version. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor and Build being decimal numbers. Specify 'latest' to use the latest version of image. |
+|  publisher | string | No | The image publisher. |
+|  offer | string | No | Specifies the offer of the platform image or marketplace image used to create the virtual machine. |
+|  sku | string | No | The image SKU. |
+|  version | string | No | Specifies the version of the platform image or marketplace image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available. |
 
 
 <a id="VirtualMachineScaleSetOSDisk" />
 ### VirtualMachineScaleSetOSDisk object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  name | string | Yes | Gets or sets the disk name. |
-|  caching | enum | No | Gets or sets the caching type. - None, ReadOnly, ReadWrite |
-|  createOption | enum | Yes | Gets or sets the create option. - fromImage, empty, attach |
-|  osType | enum | No | Gets or sets the Operating System type. - Windows or Linux |
-|  image | object | No | Gets or sets the Source User Image VirtualHardDisk. This VirtualHardDisk will be copied before using it to attach to the Virtual Machine.If SourceImage is provided, the destination VirtualHardDisk should not exist. - [VirtualHardDisk object](#VirtualHardDisk) |
-|  vhdContainers | array | No | Gets or sets the list of virtual hard disk container uris. - string |
+|  name | string | Yes | The disk name. |
+|  caching | enum | No | Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**. - None, ReadOnly, ReadWrite |
+|  createOption | enum | Yes | Specifies how the virtual machines in the scale set should be created.<br><br> The only allowed value is: **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described. - FromImage, Empty, Attach |
+|  osType | enum | No | This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**. - Windows or Linux |
+|  image | object | No | The Source User Image VirtualHardDisk. This VirtualHardDisk will be copied before using it to attach to the Virtual Machine. If SourceImage is provided, the destination VirtualHardDisk should not exist. - [VirtualHardDisk object](#VirtualHardDisk) |
+|  vhdContainers | array | No | The list of virtual hard disk container uris. - string |
 
 
 <a id="VirtualMachineScaleSetNetworkConfiguration" />
@@ -288,7 +288,7 @@ The following tables describe the values you need to set in the schema.
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  id | string | No | Resource Id |
-|  name | string | Yes | Gets or sets the network configuration name. |
+|  name | string | Yes | The network configuration name. |
 |  properties | object | No | [VirtualMachineScaleSetNetworkConfigurationProperties object](#VirtualMachineScaleSetNetworkConfigurationProperties) |
 
 
@@ -297,7 +297,7 @@ The following tables describe the values you need to set in the schema.
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  id | string | No | Resource Id |
-|  name | string | No | Gets or sets the name of the extension. |
+|  name | string | No | The name of the extension. |
 |  properties | object | No | [VirtualMachineScaleSetExtensionProperties object](#VirtualMachineScaleSetExtensionProperties) |
 
 
@@ -305,24 +305,24 @@ The following tables describe the values you need to set in the schema.
 ### AdditionalUnattendContent object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  passName | enum | No | Gets or sets the pass name. Currently, the only allowable value is oobeSystem. - oobeSystem |
-|  componentName | enum | No | Gets or sets the component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup. - Microsoft-Windows-Shell-Setup |
-|  settingName | enum | No | Gets or sets setting name (e.g. FirstLogonCommands, AutoLogon ). - AutoLogon or FirstLogonCommands |
-|  content | string | No | Gets or sets XML formatted content that is added to the unattend.xml file in the specified pass and component.The XML must be less than 4 KB and must include the root element for the setting or feature that is being inserted. |
+|  passName | enum | No | The pass name. Currently, the only allowable value is OobeSystem. - OobeSystem |
+|  componentName | enum | No | The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup. - Microsoft-Windows-Shell-Setup |
+|  settingName | enum | No | Specifies the name of the setting to which the content applies. Possible values are: FirstLogonCommands and AutoLogon. - AutoLogon or FirstLogonCommands |
+|  content | string | No | Specifies the XML formatted content that is added to the unattend.xml file for the specified path and component. The XML must be less than 4KB and must include the root element for the setting or feature that is being inserted. |
 
 
 <a id="WinRMConfiguration" />
 ### WinRMConfiguration object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  listeners | array | No | Gets or sets the list of Windows Remote Management listeners - [WinRMListener object](#WinRMListener) |
+|  listeners | array | No | The list of Windows Remote Management listeners - [WinRMListener object](#WinRMListener) |
 
 
 <a id="SshConfiguration" />
 ### SshConfiguration object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  publicKeys | array | No | Gets or sets the list of SSH public keys used to authenticate with linux based VMs - [SshPublicKey object](#SshPublicKey) |
+|  publicKeys | array | No | The list of SSH public keys used to authenticate with linux based VMs. - [SshPublicKey object](#SshPublicKey) |
 
 
 <a id="SubResource" />
@@ -336,51 +336,51 @@ The following tables describe the values you need to set in the schema.
 ### VaultCertificate object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  certificateUrl | string | No | Gets or sets the URL referencing a secret in a Key Vault which contains a properly formatted certificate. |
-|  certificateStore | string | No | Gets or sets the Certificate store in LocalMachine to add the certificate to on Windows, leave empty on Linux. |
+|  certificateUrl | string | No | This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8: <br><br> {<br>  "data":"<Base64-encoded-certificate>",<br>  "dataType":"pfx",<br>  "password":"<pfx-file-password>"<br>} |
+|  certificateStore | string | No | For Windows VMs, specifies the certificate store on the Virtual Machine to which the certificate should be added. The specified certificate store is implicitly in the LocalMachine account. <br><br>For Linux VMs, the certificate file is placed under the /var/lib/waagent directory, with the file name <UppercaseThumbprint>.crt for the X509 certificate file and <UppercaseThumbpring>.prv for private key. Both of these files are .pem formatted. |
 
 
 <a id="VirtualHardDisk" />
 ### VirtualHardDisk object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  uri | string | No | Gets or sets the virtual hard disk's uri. It should be a valid Uri to a virtual hard disk. |
+|  uri | string | No | Specifies the virtual hard disk's uri. |
 
 
 <a id="VirtualMachineScaleSetNetworkConfigurationProperties" />
 ### VirtualMachineScaleSetNetworkConfigurationProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  primary | boolean | No | Gets or sets whether this is a primary NIC on a virtual machine. |
-|  ipConfigurations | array | Yes | Gets or sets the virtual machine scale set IP Configuration. - [VirtualMachineScaleSetIPConfiguration object](#VirtualMachineScaleSetIPConfiguration) |
+|  primary | boolean | No | Whether this is a primary NIC on a virtual machine. |
+|  ipConfigurations | array | Yes | The virtual machine scale set IP Configuration. - [VirtualMachineScaleSetIPConfiguration object](#VirtualMachineScaleSetIPConfiguration) |
 
 
 <a id="VirtualMachineScaleSetExtensionProperties" />
 ### VirtualMachineScaleSetExtensionProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  publisher | string | No | Gets or sets the name of the extension handler publisher. |
-|  type | string | No | Gets or sets the type of the extension handler. |
-|  typeHandlerVersion | string | No | Gets or sets the type version of the extension handler. |
-|  autoUpgradeMinorVersion | boolean | No | Gets or sets whether the extension handler should be automatically upgraded across minor versions. |
-|  settings | object | No | Gets or sets Json formatted public settings for the extension. |
-|  protectedSettings | object | No | Gets or sets Json formatted protected settings for the extension. |
+|  publisher | string | No | The name of the extension handler publisher. |
+|  type | string | No | The type of the extension handler. |
+|  typeHandlerVersion | string | No | The type version of the extension handler. |
+|  autoUpgradeMinorVersion | boolean | No | Whether the extension handler should be automatically upgraded across minor versions. |
+|  settings | object | No | Json formatted public settings for the extension. |
+|  protectedSettings | object | No | Json formatted protected settings for the extension. |
 
 
 <a id="WinRMListener" />
 ### WinRMListener object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  protocol | enum | No | Gets or sets the Protocol used by WinRM listener. Currently only Http and Https are supported. - Http or Https |
-|  certificateUrl | string | No | Gets or sets the Certificate URL in KMS for Https listeners. Should be null for Http listeners. |
+|  protocol | enum | No | Specifies the protocol of listener. <br><br> Possible values are: <br>**http** <br><br> **https**. - Http or Https |
+|  certificateUrl | string | No | This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see [Add a key or secret to the key vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8: <br><br> {<br>  "data":"<Base64-encoded-certificate>",<br>  "dataType":"pfx",<br>  "password":"<pfx-file-password>"<br>} |
 
 
 <a id="SshPublicKey" />
 ### SshPublicKey object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  path | string | No | Gets or sets the full path on the created VM where SSH public key is stored. If the file already exists, the specified key is appended to the file. |
-|  keyData | string | No | Gets or sets Certificate public key used to authenticate with VM through SSH.The certificate must be in Pem format with or without headers. |
+|  path | string | No | Specifies the full path on the created VM where ssh public key is stored. If the file already exists, the specified key is appended to the file. Example: /home/user/.ssh/authorized_keys |
+|  keyData | string | No | SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json). |
 
 
 <a id="VirtualMachineScaleSetIPConfiguration" />
@@ -388,7 +388,7 @@ The following tables describe the values you need to set in the schema.
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  id | string | No | Resource Id |
-|  name | string | Yes | Gets or sets the IP configuration name. |
+|  name | string | Yes | The IP configuration name. |
 |  properties | object | No | [VirtualMachineScaleSetIPConfigurationProperties object](#VirtualMachineScaleSetIPConfigurationProperties) |
 
 
@@ -396,14 +396,14 @@ The following tables describe the values you need to set in the schema.
 ### VirtualMachineScaleSetIPConfigurationProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  subnet | object | Yes | Gets or sets the subnet. - [ApiEntityReference object](#ApiEntityReference) |
-|  loadBalancerBackendAddressPools | array | No | Gets or sets the load balancer backend address pools. - [SubResource object](#SubResource) |
-|  loadBalancerInboundNatPools | array | No | Gets or sets the load balancer inbound nat pools. - [SubResource object](#SubResource) |
+|  subnet | object | Yes | The subnet. - [ApiEntityReference object](#ApiEntityReference) |
+|  loadBalancerBackendAddressPools | array | No | The load balancer backend address pools. - [SubResource object](#SubResource) |
+|  loadBalancerInboundNatPools | array | No | The load balancer inbound nat pools. - [SubResource object](#SubResource) |
 
 
 <a id="ApiEntityReference" />
 ### ApiEntityReference object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  id | string | No | Gets or sets ARM resource id in the form of /subscriptions/{SubcriptionId}/resourceGroups/{ResourceGroupName}/... |
+|  id | string | No | The ARM resource id in the form of /subscriptions/{SubcriptionId}/resourceGroups/{ResourceGroupName}/... |
 

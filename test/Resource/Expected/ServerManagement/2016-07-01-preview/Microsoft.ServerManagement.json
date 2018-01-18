@@ -24,10 +24,10 @@
         },
         "location": {
           "type": "string",
-          "description": "location of the resource"
+          "description": "Location of the resource."
         },
         "tags": {
-          "description": "resource tags"
+          "description": "Resource tags."
         },
         "properties": {
           "oneOf": [
@@ -38,7 +38,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "collection of properties"
+          "description": "Collection of properties."
         }
       },
       "required": [
@@ -69,10 +69,10 @@
         },
         "location": {
           "type": "string",
-          "description": "location of the resource?"
+          "description": "Location of the resource."
         },
         "tags": {
-          "description": "resource tags"
+          "description": "Resource tags."
         },
         "properties": {
           "oneOf": [
@@ -83,7 +83,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "collection of properties"
+          "description": "Collection of properties."
         },
         "resources": {
           "type": "array",
@@ -131,7 +131,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "collection of properties"
+          "description": "Collection of properties"
         }
       },
       "required": [
@@ -189,14 +189,14 @@
           "description": "The upgradeMode property gives the flexibility to gateway to auto upgrade itself. If properties value not specified, then we assume upgradeMode = Automatic."
         }
       },
-      "description": "collection of properties"
+      "description": "Collection of properties."
     },
     "NodeParametersProperties": {
       "type": "object",
       "properties": {
         "gatewayId": {
           "type": "string",
-          "description": "Gateway id which will manage this node"
+          "description": "Gateway ID which will manage this node."
         },
         "connectionName": {
           "type": "string",
@@ -204,15 +204,15 @@
         },
         "userName": {
           "type": "string",
-          "description": "User name to be used to connect to node"
+          "description": "User name to be used to connect to node."
         },
         "password": {
           "type": "string",
           "format": "password",
-          "description": "Password associated with user name"
+          "description": "Password associated with user name."
         }
       },
-      "description": "collection of properties"
+      "description": "Collection of properties."
     },
     "nodes_sessions_childResource": {
       "type": "object",
@@ -241,7 +241,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "collection of properties"
+          "description": "Collection of properties"
         }
       },
       "required": [
@@ -257,11 +257,11 @@
       "properties": {
         "userName": {
           "type": "string",
-          "description": "encrypted User name to be used to connect to node"
+          "description": "Encrypted User name to be used to connect to node."
         },
         "password": {
           "type": "string",
-          "description": "encrypted Password associated with user name"
+          "description": "Encrypted Password associated with user name."
         },
         "retentionPeriod": {
           "oneOf": [
@@ -276,7 +276,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "session retention period."
+          "description": "Session retention period."
         },
         "credentialDataFormat": {
           "oneOf": [
@@ -290,14 +290,14 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "credential data format."
+          "description": "Credential data format."
         },
         "EncryptionCertificateThumbprint": {
           "type": "string",
-          "description": "encryption certificate thumbprint"
+          "description": "Encryption certificate thumbprint."
         }
       },
-      "description": "collection of properties"
+      "description": "Collection of properties"
     }
   }
 }

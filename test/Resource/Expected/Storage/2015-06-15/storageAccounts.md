@@ -27,8 +27,8 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes |  |
 |  type | enum | Yes | Microsoft.Storage/storageAccounts |
 |  apiVersion | enum | Yes | 2015-06-15 |
-|  location | string | Yes | Resource location |
-|  tags | object | No | Resource tags |
+|  location | string | Yes | The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed. |
+|  tags | object | No | A list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters. |
 |  properties | object | Yes | [StorageAccountPropertiesCreateParameters object](#StorageAccountPropertiesCreateParameters) |
 
 
@@ -36,5 +36,5 @@ The following tables describe the values you need to set in the schema.
 ### StorageAccountPropertiesCreateParameters object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  accountType | enum | Yes | Gets or sets the account type. - Standard_LRS, Standard_ZRS, Standard_GRS, Standard_RAGRS, Premium_LRS |
+|  accountType | enum | Yes | The sku name. Required for account creation; optional for update. Note that in older versions, sku name was called accountType. - Standard_LRS, Standard_ZRS, Standard_GRS, Standard_RAGRS, Premium_LRS |
 

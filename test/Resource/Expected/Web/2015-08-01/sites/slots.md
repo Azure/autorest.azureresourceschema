@@ -41,6 +41,7 @@ To create a Microsoft.Web/sites/slots resource, add the following JSON to the re
         "netFrameworkVersion": "string",
         "phpVersion": "string",
         "pythonVersion": "string",
+        "nodeVersion": "string",
         "requestTracingEnabled": boolean,
         "requestTracingExpirationTime": "string",
         "remoteDebuggingEnabled": boolean,
@@ -84,6 +85,7 @@ To create a Microsoft.Web/sites/slots resource, add the following JSON to the re
         "javaVersion": "string",
         "javaContainer": "string",
         "javaContainerVersion": "string",
+        "appCommandLine": "string",
         "managedPipelineMode": "string",
         "virtualApplications": [
           {
@@ -305,6 +307,7 @@ The following tables describe the values you need to set in the schema.
 |  netFrameworkVersion | string | No | Net Framework Version |
 |  phpVersion | string | No | Version of PHP |
 |  pythonVersion | string | No | Version of Python |
+|  nodeVersion | string | No | Version of Node |
 |  requestTracingEnabled | boolean | No | Enable request tracing |
 |  requestTracingExpirationTime | string | No | Request tracing expiration time |
 |  remoteDebuggingEnabled | boolean | No | Remote Debugging Enabled |
@@ -326,6 +329,7 @@ The following tables describe the values you need to set in the schema.
 |  javaVersion | string | No | Java version |
 |  javaContainer | string | No | Java container |
 |  javaContainerVersion | string | No | Java container version |
+|  appCommandLine | string | No | App Command Line to launch |
 |  managedPipelineMode | enum | No | Managed pipeline mode. - Integrated or Classic |
 |  virtualApplications | array | No | Virtual applications - [VirtualApplication object](#VirtualApplication) |
 |  loadBalancing | enum | No | Site load balancing. - WeightedRoundRobin, LeastRequests, LeastResponseTime, WeightedTotalTraffic, RequestHash |

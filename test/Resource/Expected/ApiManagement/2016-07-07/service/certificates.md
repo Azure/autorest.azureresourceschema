@@ -24,6 +24,6 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes |  |
 |  type | enum | Yes | Microsoft.ApiManagement/service/certificates |
 |  apiVersion | enum | Yes | 2016-07-07 |
-|  data | string | No | Base 64 encoded Certificate |
-|  password | string | No | Password for the Certificate |
+|  data | string | Yes | Base 64 encoded certificate using the application/x-pkcs12 representation. |
+|  password | string | Yes | Password for the Certificate |
 

@@ -23,7 +23,8 @@ To create a Microsoft.Web/serverfarms resource, add the following JSON to the re
       "type": "string"
     },
     "maximumNumberOfWorkers": "integer",
-    "perSiteScaling": boolean
+    "perSiteScaling": boolean,
+    "reserved": boolean
   },
   "sku": {
     "name": "string",
@@ -64,6 +65,7 @@ The following tables describe the values you need to set in the schema.
 |  maximumNumberOfWorkers | integer | No | Maximum number of instances that can be assigned to this App Service Plan |
 |  perSiteScaling | boolean | No | If True apps assigned to this App Service Plan can be scaled independently
             If False apps assigned to this App Service Plan will scale to all instances of the plan |
+|  reserved | boolean | No | Enables creation of a Linux App Service Plan |
 
 
 <a id="SkuDescription" />

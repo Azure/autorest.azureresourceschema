@@ -1,13 +1,13 @@
-# Microsoft.Network/virtualnetworks template reference
+# Microsoft.Network/virtualNetworks template reference
 API Version: 2016-03-30
 ## Template format
 
-To create a Microsoft.Network/virtualnetworks resource, add the following JSON to the resources section of your template.
+To create a Microsoft.Network/virtualNetworks resource, add the following JSON to the resources section of your template.
 
 ```json
 {
   "name": "string",
-  "type": "Microsoft.Network/virtualnetworks",
+  "type": "Microsoft.Network/virtualNetworks",
   "apiVersion": "2016-03-30",
   "id": "string",
   "location": "string",
@@ -148,6 +148,7 @@ To create a Microsoft.Network/virtualnetworks resource, add the following JSON t
                           "privateIPAllocationMethod": "string",
                           "privateIPAddressVersion": "string",
                           "subnet": "Subnet",
+                          "primary": boolean,
                           "publicIPAddress": {
                             "id": "string",
                             "location": "string",
@@ -288,19 +289,19 @@ To create a Microsoft.Network/virtualnetworks resource, add the following JSON t
 
 The following tables describe the values you need to set in the schema.
 
-<a id="Microsoft.Network/virtualnetworks" />
-### Microsoft.Network/virtualnetworks object
+<a id="Microsoft.Network/virtualNetworks" />
+### Microsoft.Network/virtualNetworks object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  name | string | Yes |  |
-|  type | enum | Yes | Microsoft.Network/virtualnetworks |
+|  type | enum | Yes | Microsoft.Network/virtualNetworks |
 |  apiVersion | enum | Yes | 2016-03-30 |
 |  id | string | No | Resource Id |
 |  location | string | No | Resource location |
 |  tags | object | No | Resource tags |
 |  properties | object | Yes | [VirtualNetworkPropertiesFormat object](#VirtualNetworkPropertiesFormat) |
 |  etag | string | No | Gets a unique read-only string that changes whenever the resource is updated |
-|  resources | array | No | [subnets](./virtualnetworks/subnets.md) |
+|  resources | array | No | [subnets](./virtualNetworks/subnets.md) |
 
 
 <a id="VirtualNetworkPropertiesFormat" />
@@ -558,6 +559,7 @@ The following tables describe the values you need to set in the schema.
 |  privateIPAllocationMethod | enum | No | Gets or sets PrivateIP allocation method (Static/Dynamic). - Static or Dynamic |
 |  privateIPAddressVersion | enum | No | Gets or sets PrivateIP address version (IPv4/IPv6). - IPv4 or IPv6 |
 |  subnet | object | No | [Subnet object](#Subnet) |
+|  primary | boolean | No | Gets whether this is a primary customer address on the NIC |
 |  publicIPAddress | object | No | [PublicIPAddress object](#PublicIPAddress) |
 |  provisioningState | string | No |  |
 

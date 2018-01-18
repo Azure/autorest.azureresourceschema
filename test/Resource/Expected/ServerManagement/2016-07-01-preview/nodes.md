@@ -31,9 +31,9 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes |  |
 |  type | enum | Yes | Microsoft.ServerManagement/nodes |
 |  apiVersion | enum | Yes | 2016-07-01-preview |
-|  location | string | No | location of the resource? |
-|  tags | object | No | resource tags |
-|  properties | object | Yes | collection of properties - [NodeParametersProperties object](#NodeParametersProperties) |
+|  location | string | No | Location of the resource. |
+|  tags | object | No | Resource tags. |
+|  properties | object | Yes | Collection of properties. - [NodeParametersProperties object](#NodeParametersProperties) |
 |  resources | array | No | [sessions](./nodes/sessions.md) |
 
 
@@ -41,8 +41,8 @@ The following tables describe the values you need to set in the schema.
 ### NodeParametersProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  gatewayId | string | No | Gateway id which will manage this node |
+|  gatewayId | string | No | Gateway ID which will manage this node. |
 |  connectionName | string | No | myhost.domain.com |
-|  userName | string | No | User name to be used to connect to node |
-|  password | string | No | Password associated with user name |
+|  userName | string | No | User name to be used to connect to node. |
+|  password | string | No | Password associated with user name. |
 

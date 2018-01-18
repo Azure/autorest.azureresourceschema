@@ -1,13 +1,13 @@
-# Microsoft.Network/virtualnetworkgateways template reference
+# Microsoft.Network/virtualNetworkGateways template reference
 API Version: 2016-03-30
 ## Template format
 
-To create a Microsoft.Network/virtualnetworkgateways resource, add the following JSON to the resources section of your template.
+To create a Microsoft.Network/virtualNetworkGateways resource, add the following JSON to the resources section of your template.
 
 ```json
 {
   "name": "string",
-  "type": "Microsoft.Network/virtualnetworkgateways",
+  "type": "Microsoft.Network/virtualNetworkGateways",
   "apiVersion": "2016-03-30",
   "id": "string",
   "location": "string",
@@ -86,12 +86,12 @@ To create a Microsoft.Network/virtualnetworkgateways resource, add the following
 
 The following tables describe the values you need to set in the schema.
 
-<a id="Microsoft.Network/virtualnetworkgateways" />
-### Microsoft.Network/virtualnetworkgateways object
+<a id="Microsoft.Network/virtualNetworkGateways" />
+### Microsoft.Network/virtualNetworkGateways object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  name | string | Yes |  |
-|  type | enum | Yes | Microsoft.Network/virtualnetworkgateways |
+|  type | enum | Yes | Microsoft.Network/virtualNetworkGateways |
 |  apiVersion | enum | Yes | 2016-03-30 |
 |  id | string | No | Resource Id |
 |  location | string | No | Resource location |

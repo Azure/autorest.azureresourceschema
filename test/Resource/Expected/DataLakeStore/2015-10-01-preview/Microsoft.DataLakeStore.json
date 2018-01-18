@@ -24,7 +24,18 @@
         },
         "location": {
           "type": "string",
-          "description": "Gets or sets the account regional location."
+          "description": "the account regional location."
+        },
+        "identity": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/EncryptionIdentity"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The Key vault encryption identity, if any."
         },
         "tags": {
           "oneOf": [
@@ -38,7 +49,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the value of custom properties."
+          "description": "the value of custom properties."
         },
         "properties": {
           "oneOf": [
@@ -49,7 +60,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the Data Lake Store account properties."
+          "description": "the Data Lake Store account properties."
         },
         "resources": {
           "type": "array",
@@ -90,11 +101,11 @@
         },
         "id": {
           "type": "string",
-          "description": "Gets or sets the firewall rule's subscription ID."
+          "description": "the firewall rule's subscription ID."
         },
         "location": {
           "type": "string",
-          "description": "Gets or sets the firewall rule's regional location."
+          "description": "the firewall rule's regional location."
         },
         "properties": {
           "oneOf": [
@@ -105,7 +116,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the properties of the firewall rule."
+          "description": "the properties of the firewall rule."
         }
       },
       "required": [
@@ -138,11 +149,11 @@
         },
         "id": {
           "type": "string",
-          "description": "Gets or sets the firewall rule's subscription ID."
+          "description": "the firewall rule's subscription ID."
         },
         "location": {
           "type": "string",
-          "description": "Gets or sets the firewall rule's regional location."
+          "description": "the firewall rule's regional location."
         },
         "properties": {
           "oneOf": [
@@ -153,7 +164,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the properties of the firewall rule."
+          "description": "the properties of the firewall rule."
         }
       },
       "required": [
@@ -167,30 +178,109 @@
     "DataLakeStoreAccountProperties": {
       "type": "object",
       "properties": {
+        "encryptionState": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "Enabled",
+                "Disabled"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The current state of encryption for this Data Lake store account."
+        },
+        "encryptionConfig": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/EncryptionConfig"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The Key vault encryption configuration."
+        },
         "endpoint": {
           "type": "string",
-          "description": "Gets or sets the gateway host."
+          "description": "the gateway host."
         },
         "defaultGroup": {
           "type": "string",
-          "description": "Gets or sets the default owner group for all new folders and files created in the Data Lake Store account."
+          "description": "the default owner group for all new folders and files created in the Data Lake Store account."
         }
       },
       "description": "Data Lake Store account properties information"
+    },
+    "EncryptionConfig": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "UserManaged",
+            "ServiceManaged"
+          ],
+          "description": "The type of encryption configuration being used. Currently the only supported types are 'UserManaged' and 'ServiceManaged'."
+        },
+        "keyVaultMetaInfo": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/KeyVaultMetaInfo"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The Key vault information for connecting to user managed encryption keys."
+        }
+      }
+    },
+    "EncryptionIdentity": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "SystemAssigned"
+          ],
+          "description": "The type of encryption being used. Currently the only supported type is 'SystemAssigned'."
+        }
+      }
     },
     "FirewallRuleProperties": {
       "type": "object",
       "properties": {
         "startIpAddress": {
           "type": "string",
-          "description": "Gets or sets the start IP address for the firewall rule."
+          "description": "the start IP address for the firewall rule."
         },
         "endIpAddress": {
           "type": "string",
-          "description": "Gets or sets the end IP address for the firewall rule."
+          "description": "the end IP address for the firewall rule."
         }
       },
       "description": "Data Lake Store firewall rule properties information"
+    },
+    "KeyVaultMetaInfo": {
+      "type": "object",
+      "properties": {
+        "keyVaultResourceId": {
+          "type": "string",
+          "description": "The resource identifier for the user managed Key Vault being used to encrypt."
+        },
+        "encryptionKeyName": {
+          "type": "string",
+          "description": "The name of the user managed encryption key."
+        },
+        "encryptionKeyVersion": {
+          "type": "string",
+          "description": "The version of the user managed encryption key."
+        }
+      }
     }
   }
 }

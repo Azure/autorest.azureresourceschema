@@ -49,7 +49,8 @@
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
-          ]
+          ],
+          "description": "The alert rule properties of the resource."
         }
       },
       "required": [
@@ -108,12 +109,13 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "the actions that are performed when the alert rule becomes active, and when an alert condition is resolved."
+          "description": "the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved."
         }
       },
       "required": [
         "name",
-        "isEnabled"
+        "isEnabled",
+        "condition"
       ],
       "description": "An alert rule."
     },
@@ -122,17 +124,6 @@
       "allOf": [
         {
           "properties": {
-            "dataSource": {
-              "oneOf": [
-                {
-                  "$ref": "#/definitions/RuleDataSource"
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ],
-              "description": "the resource from which the rule collects its data."
-            },
             "windowSize": {
               "type": "string",
               "format": "duration",
@@ -141,7 +132,8 @@
             "failedLocationCount": {
               "oneOf": [
                 {
-                  "type": "integer"
+                  "type": "integer",
+                  "minimum": 0
                 },
                 {
                   "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -186,7 +178,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "the condition threshold."
+          "description": "The threshold value that activates the alert."
         },
         "windowSize": {
           "type": "string",
@@ -194,24 +186,13 @@
           "description": "the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day."
         }
       },
-      "description": "A management event aggregation condition."
+      "description": "How the data that is collected should be combined over time."
     },
     "ManagementEventRuleCondition": {
       "type": "object",
       "allOf": [
         {
           "properties": {
-            "dataSource": {
-              "oneOf": [
-                {
-                  "$ref": "#/definitions/RuleDataSource"
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ],
-              "description": "the resource from which the rule collects its data."
-            },
             "aggregation": {
               "oneOf": [
                 {
@@ -221,7 +202,7 @@
                   "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
                 }
               ],
-              "description": "the aggregation condition."
+              "description": "How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate."
             }
           }
         }
@@ -284,6 +265,17 @@
                   "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
                 }
               ]
+            },
+            "dataSource": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/RuleDataSource"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                }
+              ],
+              "description": "the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource."
             }
           }
         },
@@ -323,6 +315,10 @@
                   "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
                 }
               ]
+            },
+            "resourceUri": {
+              "type": "string",
+              "description": "the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule."
             }
           }
         },
@@ -354,7 +350,7 @@
                   "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
                 }
               ],
-              "description": "the flag to send e-mails to the service owners. Whether the administrators (service and co-adiminstrators) of the service should be notified when the alert is activated."
+              "description": "Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated."
             },
             "customEmails": {
               "oneOf": [
@@ -368,12 +364,12 @@
                   "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
                 }
               ],
-              "description": "the list of administrator's custom email addresses notifiy of the activation of the alert."
+              "description": "the list of administrator's custom email addresses to notify of the activation of the alert."
             }
           }
         }
       ],
-      "description": "Specifies the action to send email when the rule condition is evaluated."
+      "description": "Specifies the action to send email when the rule condition is evaluated. The discriminator is always RuleEmailAction in this case."
     },
     "RuleManagementEventClaimsDataSource": {
       "type": "object",
@@ -414,10 +410,6 @@
               "type": "string",
               "description": "the resource provider name."
             },
-            "resourceUri": {
-              "type": "string",
-              "description": "the resource uri."
-            },
             "status": {
               "type": "string",
               "description": "The status of the operation that should be checked for. If no status is provided, any status will match."
@@ -440,17 +432,13 @@
           }
         }
       ],
-      "description": "A rule management event data source."
+      "description": "A rule management event data source. The discriminator fields is always RuleManagementEventDataSource in this case."
     },
     "RuleMetricDataSource": {
       "type": "object",
       "allOf": [
         {
           "properties": {
-            "resourceUri": {
-              "type": "string",
-              "description": "the resource identifier of the resource the rule monitors."
-            },
             "metricName": {
               "type": "string",
               "description": "the name of the metric that defines what the rule monitors."
@@ -458,7 +446,7 @@
           }
         }
       ],
-      "description": "A rule metric data source."
+      "description": "A rule metric data source. The discriminator value is always RuleMetricDataSource in this case."
     },
     "RuleWebhookAction": {
       "type": "object",
@@ -467,7 +455,7 @@
           "properties": {
             "serviceUri": {
               "type": "string",
-              "description": "the service uri to Post the notitication."
+              "description": "the service uri to Post the notification when the alert activates or resolves."
             },
             "properties": {
               "oneOf": [
@@ -481,29 +469,18 @@
                   "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
                 }
               ],
-              "description": "the dictionary of custom properties to include with the post operation."
+              "description": "the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload."
             }
           }
         }
       ],
-      "description": "Specifies the action to post to service when the rule condition is evaluated."
+      "description": "Specifies the action to post to service when the rule condition is evaluated. The discriminator is always RuleWebhookAction in this case."
     },
     "ThresholdRuleCondition": {
       "type": "object",
       "allOf": [
         {
           "properties": {
-            "dataSource": {
-              "oneOf": [
-                {
-                  "$ref": "#/definitions/RuleDataSource"
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ],
-              "description": "the resource from which the rule collects its data."
-            },
             "operator": {
               "oneOf": [
                 {
@@ -553,7 +530,7 @@
                   "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
                 }
               ],
-              "description": "the time aggregation operator. How the data that is collected should be combined over time. The default value is the PrimaryAggregationType of the Metric."
+              "description": "the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric."
             }
           },
           "required": [

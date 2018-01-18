@@ -27,9 +27,9 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes |  |
 |  type | enum | Yes | Microsoft.ServerManagement/gateways |
 |  apiVersion | enum | Yes | 2016-07-01-preview |
-|  location | string | No | location of the resource |
-|  tags | object | No | resource tags |
-|  properties | object | Yes | collection of properties - [GatewayParametersProperties object](#GatewayParametersProperties) |
+|  location | string | No | Location of the resource. |
+|  tags | object | No | Resource tags. |
+|  properties | object | Yes | Collection of properties. - [GatewayParametersProperties object](#GatewayParametersProperties) |
 
 
 <a id="GatewayParametersProperties" />

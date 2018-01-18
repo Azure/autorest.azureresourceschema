@@ -2893,6 +2893,17 @@
             }
           ],
           "description": "If True apps assigned to this App Service Plan can be scaled independently\r\n            If False apps assigned to this App Service Plan will scale to all instances of the plan"
+        },
+        "reserved": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Enables creation of a Linux App Service Plan"
         }
       }
     },
@@ -2988,6 +2999,10 @@
         "pythonVersion": {
           "type": "string",
           "description": "Version of Python"
+        },
+        "nodeVersion": {
+          "type": "string",
+          "description": "Version of Node"
         },
         "requestTracingEnabled": {
           "oneOf": [
@@ -3169,6 +3184,10 @@
         "javaContainerVersion": {
           "type": "string",
           "description": "Java container version"
+        },
+        "appCommandLine": {
+          "type": "string",
+          "description": "App Command Line to launch"
         },
         "managedPipelineMode": {
           "oneOf": [

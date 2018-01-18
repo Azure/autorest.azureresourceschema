@@ -45,11 +45,11 @@ The following tables describe the values you need to set in the schema.
 ### DeploymentProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  template | object | No | The template content. It can be a JObject or a well formed JSON string. Use only one of Template or TemplateLink. |
-|  templateLink | object | No | The template URI. Use only one of Template or TemplateLink. - [TemplateLink object](#TemplateLink) |
-|  parameters | object | No | Deployment parameters. It can be a JObject or a well formed JSON string. Use only one of Parameters or ParametersLink. |
-|  parametersLink | object | No | The parameters URI. Use only one of Parameters or ParametersLink. - [ParametersLink object](#ParametersLink) |
-|  mode | enum | Yes | The deployment mode. - Incremental or Complete |
+|  template | object | No | The template content. You use this element when you want to pass the template syntax directly in the request rather than link to an existing template. It can be a JObject or well-formed JSON string. Use either the templateLink property or the template property, but not both. |
+|  templateLink | object | No | The URI of the template. Use either the templateLink property or the template property, but not both. - [TemplateLink object](#TemplateLink) |
+|  parameters | object | No | Name and value pairs that define the deployment parameters for the template. You use this element when you want to provide the parameter values directly in the request rather than link to an existing parameter file. Use either the parametersLink property or the parameters property, but not both. It can be a JObject or a well formed JSON string. |
+|  parametersLink | object | No | The URI of parameters file. You use this element to link to an existing parameters file. Use either the parametersLink property or the parameters property, but not both. - [ParametersLink object](#ParametersLink) |
+|  mode | enum | Yes | The mode that is used to deploy resources. This value can be either Incremental or Complete. In Incremental mode, resources are deployed without deleting existing resources that are not included in the template. In Complete mode, resources are deployed and existing resources in the resource group that are not included in the template are deleted. Be careful when using Complete mode as you may unintentionally delete resources. - Incremental or Complete |
 |  debugSetting | object | No | The debug setting of the deployment. - [DebugSetting object](#DebugSetting) |
 
 
@@ -57,21 +57,21 @@ The following tables describe the values you need to set in the schema.
 ### TemplateLink object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  uri | string | Yes | URI referencing the template. |
-|  contentVersion | string | No | If included it must match the ContentVersion in the template. |
+|  uri | string | Yes | The URI of the template to deploy. |
+|  contentVersion | string | No | If included, must match the ContentVersion in the template. |
 
 
 <a id="ParametersLink" />
 ### ParametersLink object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  uri | string | Yes | URI referencing the template. |
-|  contentVersion | string | No | If included it must match the ContentVersion in the template. |
+|  uri | string | Yes | The URI of the parameters file. |
+|  contentVersion | string | No | If included, must match the ContentVersion in the template. |
 
 
 <a id="DebugSetting" />
 ### DebugSetting object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  detailLevel | string | No | The debug detail level. |
+|  detailLevel | string | No | Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information you are passing in during deployment. By logging information about the request or response, you could potentially expose sensitive data that is retrieved through the deployment operations. |
 

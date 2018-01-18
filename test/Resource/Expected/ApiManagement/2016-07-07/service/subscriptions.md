@@ -31,5 +31,5 @@ The following tables describe the values you need to set in the schema.
 |  productId | string | Yes | Product (product id path) for which subscription is being created in form /products/{productid} |
 |  primaryKey | string | No | Primary subscription key. If not specified during request key will be generated automatically. |
 |  secondaryKey | string | No | Secondary subscription key. If not specified during request key will be generated automatically. |
-|  state | enum | No | Initial subscription state. - Suspended, Active, Expired, Submitted, Rejected, Cancelled |
+|  state | enum | No | Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated. - Suspended, Active, Expired, Submitted, Rejected, Cancelled |
 

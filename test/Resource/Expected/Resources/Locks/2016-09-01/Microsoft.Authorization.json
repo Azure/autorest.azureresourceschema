@@ -49,9 +49,10 @@
       "properties": {
         "applicationId": {
           "type": "string",
-          "description": "The application Id of the management lock owner."
+          "description": "The application ID of the lock owner."
         }
-      }
+      },
+      "description": "Lock owner properties."
     },
     "ManagementLockProperties": {
       "type": "object",
@@ -70,11 +71,11 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "The lock level of the management lock."
+          "description": "The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it."
         },
         "notes": {
           "type": "string",
-          "description": "The notes of the management lock."
+          "description": "Notes about the lock. Maximum of 512 characters."
         },
         "owners": {
           "oneOf": [
@@ -88,13 +89,13 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "The owners of the management lock."
+          "description": "The owners of the lock."
         }
       },
       "required": [
         "level"
       ],
-      "description": "The management lock properties."
+      "description": "The lock properties."
     }
   }
 }

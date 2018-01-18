@@ -28,10 +28,10 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes | User identifier. Must be unique in the current API Management service instance. |
 |  type | enum | Yes | Microsoft.ApiManagement/service/users |
 |  apiVersion | enum | Yes | 2016-07-07 |
-|  email | string | Yes | Email address. |
-|  password | string | Yes | Password. |
+|  email | string | Yes | Email address. Must not be empty and must be unique within the service instance. |
+|  password | string | Yes | User Password. |
 |  firstName | string | Yes | First name. |
 |  lastName | string | Yes | Last name. |
-|  state | enum | No | Account state. - Active or Blocked |
-|  note | string | No | Note about user. |
+|  state | enum | No | Account state. Specifies whether the user is active or not. Blocked users are unable to sign into the developer portal or call any APIs of subscribed products. Default state is Active. - Active or Blocked |
+|  note | string | No | Optional note about a user set by the administrator. |
 

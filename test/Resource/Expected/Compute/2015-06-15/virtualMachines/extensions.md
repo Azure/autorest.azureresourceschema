@@ -12,14 +12,13 @@ To create a Microsoft.Compute/virtualMachines/extensions resource, add the follo
   "location": "string",
   "tags": {},
   "properties": {
-    "forceUpdateTag": "RerunExtension",
+    "forceUpdateTag": "string",
     "publisher": "string",
     "type": "string",
     "typeHandlerVersion": "string",
     "autoUpgradeMinorVersion": boolean,
     "settings": {},
     "protectedSettings": {},
-    "provisioningState": "string",
     "instanceView": {
       "name": "string",
       "type": "string",
@@ -66,35 +65,34 @@ The following tables describe the values you need to set in the schema.
 ### VirtualMachineExtensionProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  forceUpdateTag | enum | No | Gets or sets how the extension handler should be forced to update even if the extension configuration has not changed. - RerunExtension |
-|  publisher | string | No | Gets or sets the name of the extension handler publisher. |
-|  type | string | No | Gets or sets the type of the extension handler. |
-|  typeHandlerVersion | string | No | Gets or sets the type version of the extension handler. |
-|  autoUpgradeMinorVersion | boolean | No | Gets or sets whether the extension handler should be automatically upgraded across minor versions. |
-|  settings | object | No | Gets or sets Json formatted public settings for the extension. |
-|  protectedSettings | object | No | Gets or sets Json formatted protected settings for the extension. |
-|  provisioningState | string | No | Gets or sets the provisioning state, which only appears in the response. |
-|  instanceView | object | No | Gets or sets the virtual machine extension instance view. - [VirtualMachineExtensionInstanceView object](#VirtualMachineExtensionInstanceView) |
+|  forceUpdateTag | string | No | How the extension handler should be forced to update even if the extension configuration has not changed. |
+|  publisher | string | No | The name of the extension handler publisher. |
+|  type | string | No | Specifies the type of the extension; an example is "CustomScriptExtension". |
+|  typeHandlerVersion | string | No | Specifies the version of the script handler. |
+|  autoUpgradeMinorVersion | boolean | No | Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true. |
+|  settings | object | No | Json formatted public settings for the extension. |
+|  protectedSettings | object | No | The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all. |
+|  instanceView | object | No | The virtual machine extension instance view. - [VirtualMachineExtensionInstanceView object](#VirtualMachineExtensionInstanceView) |
 
 
 <a id="VirtualMachineExtensionInstanceView" />
 ### VirtualMachineExtensionInstanceView object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  name | string | No | Gets or sets the virtual machine extension name. |
-|  type | string | No | Gets or sets the full type of the extension handler which includes both publisher and type. |
-|  typeHandlerVersion | string | No | Gets or sets the type version of the extension handler. |
-|  substatuses | array | No | Gets or sets the resource status information. - [InstanceViewStatus object](#InstanceViewStatus) |
-|  statuses | array | No | Gets or sets the resource status information. - [InstanceViewStatus object](#InstanceViewStatus) |
+|  name | string | No | The virtual machine extension name. |
+|  type | string | No | Specifies the type of the extension; an example is "CustomScriptExtension". |
+|  typeHandlerVersion | string | No | Specifies the version of the script handler. |
+|  substatuses | array | No | The resource status information. - [InstanceViewStatus object](#InstanceViewStatus) |
+|  statuses | array | No | The resource status information. - [InstanceViewStatus object](#InstanceViewStatus) |
 
 
 <a id="InstanceViewStatus" />
 ### InstanceViewStatus object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  code | string | No | Gets the status Code. |
-|  level | enum | No | Gets or sets the level Code. - Info, Warning, Error |
-|  displayStatus | string | No | Gets or sets the short localizable label for the status. |
-|  message | string | No | Gets or sets the detailed Message, including for alerts and error messages. |
-|  time | string | No | Gets or sets the time of the status. |
+|  code | string | No | The status code. |
+|  level | enum | No | The level code. - Info, Warning, Error |
+|  displayStatus | string | No | The short localizable label for the status. |
+|  message | string | No | The detailed status message, including for alerts and error messages. |
+|  time | string | No | The time of the status. |
 

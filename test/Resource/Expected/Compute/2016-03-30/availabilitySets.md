@@ -18,15 +18,6 @@ To create a Microsoft.Compute/availabilitySets resource, add the following JSON 
       {
         "id": "string"
       }
-    ],
-    "statuses": [
-      {
-        "code": "string",
-        "level": "string",
-        "displayStatus": "string",
-        "message": "string",
-        "time": "string"
-      }
     ]
   }
 }
@@ -53,8 +44,7 @@ The following tables describe the values you need to set in the schema.
 |  ---- | ---- | ---- | ---- |
 |  platformUpdateDomainCount | integer | No | Update Domain count. |
 |  platformFaultDomainCount | integer | No | Fault Domain count. |
-|  virtualMachines | array | No | a list containing reference to all Virtual Machines created under this Availability Set. - [SubResource object](#SubResource) |
-|  statuses | array | No | the resource status information. - [InstanceViewStatus object](#InstanceViewStatus) |
+|  virtualMachines | array | No | A list of references to all virtual machines in the availability set. - [SubResource object](#SubResource) |
 
 
 <a id="SubResource" />
@@ -62,15 +52,4 @@ The following tables describe the values you need to set in the schema.
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  id | string | No | Resource Id |
-
-
-<a id="InstanceViewStatus" />
-### InstanceViewStatus object
-|  Name | Type | Required | Value |
-|  ---- | ---- | ---- | ---- |
-|  code | string | No | the status Code. |
-|  level | enum | No | the level Code. - Info, Warning, Error |
-|  displayStatus | string | No | the short localizable label for the status. |
-|  message | string | No | the detailed Message, including for alerts and error messages. |
-|  time | string | No | the time of the status. |
 
