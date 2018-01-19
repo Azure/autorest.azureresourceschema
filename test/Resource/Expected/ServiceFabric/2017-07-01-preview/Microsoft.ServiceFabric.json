@@ -1332,11 +1332,15 @@
             }
           ],
           "description": "Array of size specified by the ‘Count’ parameter, for the names of the partitions."
+        },
+        "PartitionScheme": {
+          "type": "string"
         }
       },
       "required": [
         "Count",
-        "Names"
+        "Names",
+        "PartitionScheme"
       ],
       "description": "Describes the named partition scheme of the service."
     },
@@ -1566,6 +1570,14 @@
           }
         }
       ],
+      "properties": {
+        "PartitionScheme": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "PartitionScheme"
+      ],
       "description": "Describes how the service is partitioned."
     },
     "RollingUpgradeMonitoringPolicy": {
@@ -1700,6 +1712,14 @@
             }
           }
         }
+      ],
+      "properties": {
+        "Type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "Type"
       ],
       "description": "Describes the policy to be used for placement of a Service Fabric service."
     },
@@ -1841,8 +1861,14 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ]
+        },
+        "serviceKind": {
+          "type": "string"
         }
       },
+      "required": [
+        "serviceKind"
+      ],
       "description": "The service resource properties."
     },
     "ServiceTypeHealthPolicy": {
@@ -1978,6 +2004,14 @@
           }
         }
       ],
+      "properties": {
+        "PartitionScheme": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "PartitionScheme"
+      ],
       "description": "Describes the partition scheme of a singleton-partitioned, or non-partitioned service."
     },
     "StatefulServiceProperties": {
@@ -2051,8 +2085,14 @@
           "type": "string",
           "format": "date-time",
           "description": "The definition on how long StandBy replicas should be maintained before being removed, represented in ISO 8601 format (hh:mm:ss.s)."
+        },
+        "serviceKind": {
+          "type": "string"
         }
       },
+      "required": [
+        "serviceKind"
+      ],
       "description": "The properties of a stateful service resource."
     },
     "StatelessServiceProperties": {
@@ -2088,8 +2128,14 @@
             }
           ],
           "description": "The instance count."
+        },
+        "serviceKind": {
+          "type": "string"
         }
       },
+      "required": [
+        "serviceKind"
+      ],
       "description": "The properties of a stateless service resource."
     },
     "UniformInt64RangePartitionSchemeDescription": {
@@ -2132,12 +2178,16 @@
         "HighKey": {
           "type": "string",
           "description": "String indicating the upper bound of the partition key range that\nshould be split between the partition ‘Count’\n"
+        },
+        "PartitionScheme": {
+          "type": "string"
         }
       },
       "required": [
         "Count",
         "LowKey",
-        "HighKey"
+        "HighKey",
+        "PartitionScheme"
       ],
       "description": "Describes a partitioning scheme where an integer range is allocated evenly across a number of partitions."
     },

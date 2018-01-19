@@ -16,7 +16,11 @@ regenExpected = (opts,done) ->
       "--title=title"
     ]
 
-    args.push("#{opts.inputBaseDir}/#{value.folder}/resource-manager/readme.md")
+    if value.file
+      args.push("--input-file=#{value.file}")
+    else
+      args.push("#{opts.inputBaseDir}/#{value.folder}/resource-manager/readme.md")
+
     for tag in value.tags
       args2 = args.slice()
       args2.push("--tag=#{tag}")
@@ -68,7 +72,8 @@ task 'regenerate', '', (done) ->
       'ServiceFabric': { folder: 'servicefabric', tags: [ 'package-2017-07', 'package-2016-09' ] },
       'Storage': { folder: 'storage', tags: [ 'package-2017-10', 'package-2017-06', 'package-2016-12', 'package-2016-05', 'package-2016-01', 'package-2015-06', 'package-2015-05-preview' ] },
       # 'TrafficManager': { folder: 'trafficmanager', tags: [ 'package-2017-09-preview', 'package-2017-05', 'package-2017-03', 'package-2015-11' ] },
-      'Web': { folder: 'web', tags: [ 'package-2016-09' ] }
+      'Web': { folder: 'web', tags: [ 'package-2016-09' ] },
+      # 'poly': { file: __dirname + "/../test/Resource/poly-service.json", tags: [ '' ] }
     },
     'language': 'azureresourceschema'
   },done

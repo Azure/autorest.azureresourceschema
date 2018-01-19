@@ -324,6 +324,8 @@ namespace AutoRest.AzureResourceSchema
                 string discriminatorPropertyName = compositeType.BasePolymorphicDiscriminator;
                 if (!string.IsNullOrWhiteSpace(discriminatorPropertyName))
                 {
+                    definition.AddProperty(discriminatorPropertyName, new JsonSchema() { JsonType = "string" }, true);
+
                     Func<CompositeType, bool> isSubTypeOrSelf = type => type == compositeType || type.BaseModelType == compositeType;
                     CompositeType[] subTypes = modelTypes.Where(isSubTypeOrSelf).ToArray();
 
