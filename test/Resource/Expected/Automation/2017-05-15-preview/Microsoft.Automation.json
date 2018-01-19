@@ -25,7 +25,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/softwareUpdateConfigurationProperties"
+              "$ref": "#/definitions/SoftwareUpdateConfigurationProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -285,13 +285,13 @@
       },
       "description": "Definition of schedule parameters."
     },
-    "softwareUpdateConfigurationProperties": {
+    "SoftwareUpdateConfigurationProperties": {
       "type": "object",
       "properties": {
         "updateConfiguration": {
           "oneOf": [
             {
-              "$ref": "#/definitions/updateConfiguration"
+              "$ref": "#/definitions/UpdateConfiguration"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -328,7 +328,7 @@
       ],
       "description": "Software update configuration properties."
     },
-    "updateConfiguration": {
+    "UpdateConfiguration": {
       "type": "object",
       "properties": {
         "operatingSystem": {

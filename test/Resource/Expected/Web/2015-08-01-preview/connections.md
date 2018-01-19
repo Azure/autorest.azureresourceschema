@@ -175,11 +175,11 @@ The following tables describe the values you need to set in the schema.
 |  kind | string | No | Kind of resource |
 |  location | string | Yes | Resource Location |
 |  tags | object | No | Resource tags |
-|  properties | object | Yes | [Connection_properties object](#Connection_properties) |
+|  properties | object | Yes | [ConnectionProperties object](#ConnectionProperties) |
 
 
-<a id="Connection_properties" />
-### Connection_properties object
+<a id="ConnectionProperties" />
+### ConnectionProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  name | string | No | connection name |
@@ -194,7 +194,7 @@ The following tables describe the values you need to set in the schema.
 |  keywords | array | No | List of Keywords that tag the acl - string |
 |  createdTime | string | No | Timestamp of the connection creation |
 |  changedTime | string | No | Timestamp of last connection change. |
-|  api | object | No | expanded connection provider name - [ExpandedParent_ApiEntity_ object](#ExpandedParent_ApiEntity_) |
+|  api | object | No | expanded connection provider name - [ExpandedParentApiEntity object](#ExpandedParentApiEntity) |
 
 
 <a id="ConnectionStatus" />
@@ -207,11 +207,11 @@ The following tables describe the values you need to set in the schema.
 |  location | string | Yes | Resource Location |
 |  type | string | No | Resource type |
 |  tags | object | No | Resource tags |
-|  properties | object | No | [ConnectionStatus_properties object](#ConnectionStatus_properties) |
+|  properties | object | No | [ConnectionStatusProperties object](#ConnectionStatusProperties) |
 
 
-<a id="ExpandedParent_ApiEntity_" />
-### ExpandedParent_ApiEntity_ object
+<a id="ExpandedParentApiEntity" />
+### ExpandedParentApiEntity object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  id | string | No | Resource Id |
@@ -220,11 +220,11 @@ The following tables describe the values you need to set in the schema.
 |  location | string | Yes | Resource Location |
 |  type | string | No | Resource type |
 |  tags | object | No | Resource tags |
-|  properties | object | No | [ExpandedParent_ApiEntity__properties object](#ExpandedParent_ApiEntity__properties) |
+|  properties | object | No | [ExpandedParentApiEntityProperties object](#ExpandedParentApiEntityProperties) |
 
 
-<a id="ConnectionStatus_properties" />
-### ConnectionStatus_properties object
+<a id="ConnectionStatusProperties" />
+### ConnectionStatusProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  status | string | No | Status |
@@ -232,12 +232,12 @@ The following tables describe the values you need to set in the schema.
 |  error | object | No | Error details - [ConnectionError object](#ConnectionError) |
 
 
-<a id="ExpandedParent_ApiEntity__properties" />
-### ExpandedParent_ApiEntity__properties object
+<a id="ExpandedParentApiEntityProperties" />
+### ExpandedParentApiEntityProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  id | string | No | Id of connection provider |
-|  entity | object | No | Id of connection provider - [ResponseMessageEnvelope_ApiEntity_ object](#ResponseMessageEnvelope_ApiEntity_) |
+|  entity | object | No | Id of connection provider - [ResponseMessageEnvelopeApiEntity object](#ResponseMessageEnvelopeApiEntity) |
 
 
 <a id="ConnectionError" />
@@ -250,11 +250,11 @@ The following tables describe the values you need to set in the schema.
 |  location | string | Yes | Resource Location |
 |  type | string | No | Resource type |
 |  tags | object | No | Resource tags |
-|  properties | object | No | [ConnectionError_properties object](#ConnectionError_properties) |
+|  properties | object | No | [ConnectionErrorProperties object](#ConnectionErrorProperties) |
 
 
-<a id="ResponseMessageEnvelope_ApiEntity_" />
-### ResponseMessageEnvelope_ApiEntity_ object
+<a id="ResponseMessageEnvelopeApiEntity" />
+### ResponseMessageEnvelopeApiEntity object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  id | string | No | Resource Id. Typically id is populated only for responses to GET requests. Caller is responsible for passing in this
@@ -269,8 +269,8 @@ The following tables describe the values you need to set in the schema.
 |  sku | object | No | Sku description of the resource - [SkuDescription object](#SkuDescription) |
 
 
-<a id="ConnectionError_properties" />
-### ConnectionError_properties object
+<a id="ConnectionErrorProperties" />
+### ConnectionErrorProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  code | string | No | code of the status |
@@ -298,7 +298,7 @@ The following tables describe the values you need to set in the schema.
 |  location | string | Yes | Resource Location |
 |  type | string | No | Resource type |
 |  tags | object | No | Resource tags |
-|  properties | object | No | [ApiEntity_properties object](#ApiEntity_properties) |
+|  properties | object | No | [ApiEntityProperties object](#ApiEntityProperties) |
 
 
 <a id="SkuDescription" />
@@ -312,8 +312,8 @@ The following tables describe the values you need to set in the schema.
 |  capacity | integer | No | Current number of instances assigned to the resource |
 
 
-<a id="ApiEntity_properties" />
-### ApiEntity_properties object
+<a id="ApiEntityProperties" />
+### ApiEntityProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  name | string | No | Name of the API
@@ -342,7 +342,7 @@ The following tables describe the values you need to set in the schema.
 |  location | string | Yes | Resource Location |
 |  type | string | No | Resource type |
 |  tags | object | No | Resource tags |
-|  properties | object | No | [GeneralApiInformation_properties object](#GeneralApiInformation_properties) |
+|  properties | object | No | [GeneralApiInformationProperties object](#GeneralApiInformationProperties) |
 
 
 <a id="ApiPolicies" />
@@ -355,7 +355,7 @@ The following tables describe the values you need to set in the schema.
 |  location | string | Yes | Resource Location |
 |  type | string | No | Resource type |
 |  tags | object | No | Resource tags |
-|  properties | object | No | [ApiPolicies_properties object](#ApiPolicies_properties) |
+|  properties | object | No | [ApiPoliciesProperties object](#ApiPoliciesProperties) |
 
 
 <a id="BackendServiceDefinition" />
@@ -368,11 +368,11 @@ The following tables describe the values you need to set in the schema.
 |  location | string | Yes | Resource Location |
 |  type | string | No | Resource type |
 |  tags | object | No | Resource tags |
-|  properties | object | No | [BackendServiceDefinition_properties object](#BackendServiceDefinition_properties) |
+|  properties | object | No | [BackendServiceDefinitionProperties object](#BackendServiceDefinitionProperties) |
 
 
-<a id="GeneralApiInformation_properties" />
-### GeneralApiInformation_properties object
+<a id="GeneralApiInformationProperties" />
+### GeneralApiInformationProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  iconUrl | string | No | Icon Url |
@@ -383,15 +383,15 @@ The following tables describe the values you need to set in the schema.
 |  connectionPortalUrl | object | No | ConnectionPortalUrl |
 
 
-<a id="ApiPolicies_properties" />
-### ApiPolicies_properties object
+<a id="ApiPoliciesProperties" />
+### ApiPoliciesProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  content | string | No | Content of xml policy |
 
 
-<a id="BackendServiceDefinition_properties" />
-### BackendServiceDefinition_properties object
+<a id="BackendServiceDefinitionProperties" />
+### BackendServiceDefinitionProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  serviceUrl | string | No | Url from which the swagger payload will be fetched |

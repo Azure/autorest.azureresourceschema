@@ -34,11 +34,11 @@ The following tables describe the values you need to set in the schema.
 |  type | enum | Yes | Microsoft.Web/sites/hostNameBindings |
 |  apiVersion | enum | Yes | 2016-08-01 |
 |  kind | string | No | Kind of resource. |
-|  properties | object | Yes | HostNameBinding resource specific properties - [HostNameBinding_properties object](#HostNameBinding_properties) |
+|  properties | object | Yes | HostNameBinding resource specific properties - [HostNameBindingProperties object](#HostNameBindingProperties) |
 
 
-<a id="HostNameBinding_properties" />
-### HostNameBinding_properties object
+<a id="HostNameBindingProperties" />
+### HostNameBindingProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  siteName | string | No | App Service app name. |

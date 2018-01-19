@@ -1286,7 +1286,7 @@
       ],
       "description": "Port range details"
     },
-    "Named": {
+    "NamedPartitionSchemeDescription": {
       "type": "object",
       "allOf": [
         {
@@ -1490,13 +1490,13 @@
         {
           "anyOf": [
             {
-              "$ref": "#/definitions/Named"
+              "$ref": "#/definitions/NamedPartitionSchemeDescription"
             },
             {
-              "$ref": "#/definitions/Singleton"
+              "$ref": "#/definitions/SingletonPartitionSchemeDescription"
             },
             {
-              "$ref": "#/definitions/UniformInt64Range"
+              "$ref": "#/definitions/UniformInt64RangePartitionSchemeDescription"
             }
           ]
         }
@@ -1720,10 +1720,10 @@
         {
           "anyOf": [
             {
-              "$ref": "#/definitions/Stateless"
+              "$ref": "#/definitions/StatelessServiceProperties"
             },
             {
-              "$ref": "#/definitions/Stateful"
+              "$ref": "#/definitions/StatefulServiceProperties"
             }
           ]
         }
@@ -1842,14 +1842,14 @@
       ],
       "description": "Describes a section in the fabric settings of the cluster."
     },
-    "Singleton": {
+    "SingletonPartitionSchemeDescription": {
       "type": "object",
       "allOf": [
         {}
       ],
       "description": "Describes the partition scheme of a singleton-partitioned, or non-partitioned service."
     },
-    "Stateful": {
+    "StatefulServiceProperties": {
       "type": "object",
       "allOf": [
         {
@@ -1909,7 +1909,7 @@
       ],
       "description": "The properties of a stateful service resource."
     },
-    "Stateless": {
+    "StatelessServiceProperties": {
       "type": "object",
       "allOf": [
         {
@@ -1931,7 +1931,7 @@
       ],
       "description": "The properties of a stateless service resource."
     },
-    "UniformInt64Range": {
+    "UniformInt64RangePartitionSchemeDescription": {
       "type": "object",
       "allOf": [
         {

@@ -2743,7 +2743,7 @@
         "parametersSchema": {
           "oneOf": [
             {
-              "$ref": "#/definitions/IntegrationAccountMapProperties_parametersSchema"
+              "$ref": "#/definitions/IntegrationAccountMapPropertiesParametersSchema"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2768,7 +2768,7 @@
       ],
       "description": "The integration account map."
     },
-    "IntegrationAccountMapProperties_parametersSchema": {
+    "IntegrationAccountMapPropertiesParametersSchema": {
       "type": "object",
       "properties": {
         "ref": {
@@ -3240,7 +3240,7 @@
         "keyVault": {
           "oneOf": [
             {
-              "$ref": "#/definitions/KeyVaultKeyReference_keyVault"
+              "$ref": "#/definitions/KeyVaultKeyReferenceKeyVault"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -3263,7 +3263,7 @@
       ],
       "description": "The reference to the key vault key."
     },
-    "KeyVaultKeyReference_keyVault": {
+    "KeyVaultKeyReferenceKeyVault": {
       "type": "object",
       "properties": {
         "id": {

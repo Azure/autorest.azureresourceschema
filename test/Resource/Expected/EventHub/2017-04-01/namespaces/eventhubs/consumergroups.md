@@ -25,11 +25,11 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes | The consumer group name |
 |  type | enum | Yes | Microsoft.EventHub/namespaces/eventhubs/consumergroups |
 |  apiVersion | enum | Yes | 2017-04-01 |
-|  properties | object | Yes | Single item in List or Get Consumer group operation - [ConsumerGroup_properties object](#ConsumerGroup_properties) |
+|  properties | object | Yes | Single item in List or Get Consumer group operation - [ConsumerGroupProperties object](#ConsumerGroupProperties) |
 
 
-<a id="ConsumerGroup_properties" />
-### ConsumerGroup_properties object
+<a id="ConsumerGroupProperties" />
+### ConsumerGroupProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  userMetadata | string | No | Usermetadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored. |

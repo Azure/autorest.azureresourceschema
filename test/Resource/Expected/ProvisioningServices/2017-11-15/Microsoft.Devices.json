@@ -186,7 +186,7 @@
             {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/SharedAccessSignatureAuthorizationRule_AccessRightsDescription_"
+                "$ref": "#/definitions/SharedAccessSignatureAuthorizationRuleAccessRightsDescription"
               }
             },
             {
@@ -299,7 +299,7 @@
       ],
       "description": "Microsoft.Devices/provisioningServices/certificates"
     },
-    "SharedAccessSignatureAuthorizationRule_AccessRightsDescription_": {
+    "SharedAccessSignatureAuthorizationRuleAccessRightsDescription": {
       "type": "object",
       "properties": {
         "keyName": {

@@ -126,11 +126,11 @@ The following tables describe the values you need to set in the schema.
 |  kind | string | No | Kind of resource |
 |  location | string | Yes | Resource Location |
 |  tags | object | No | Resource tags |
-|  properties | object | Yes | [HostingEnvironment_properties object](#HostingEnvironment_properties) |
+|  properties | object | Yes | [HostingEnvironmentProperties object](#HostingEnvironmentProperties) |
 
 
-<a id="HostingEnvironment_properties" />
-### HostingEnvironment_properties object
+<a id="HostingEnvironmentProperties" />
+### HostingEnvironmentProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  name | string | No | Name of the hostingEnvironment (App Service Environment) |
@@ -188,7 +188,7 @@ The following tables describe the values you need to set in the schema.
 |  location | string | Yes | Resource Location |
 |  type | string | No | Resource type |
 |  tags | object | No | Resource tags |
-|  properties | object | No | [WorkerPool_properties object](#WorkerPool_properties) |
+|  properties | object | No | [WorkerPoolProperties object](#WorkerPoolProperties) |
 |  sku | object | No | [SkuDescription object](#SkuDescription) |
 
 
@@ -240,8 +240,8 @@ The following tables describe the values you need to set in the schema.
 |  value | string | No | Pair value |
 
 
-<a id="WorkerPool_properties" />
-### WorkerPool_properties object
+<a id="WorkerPoolProperties" />
+### WorkerPoolProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  workerSizeId | integer | No | Worker size id for referencing this worker pool |

@@ -62,7 +62,7 @@ The following tables describe the values you need to set in the schema.
 |  Kind | enum | Yes | The kind of web test this is, valid choices are ping and multistep. - ping or multistep |
 |  RetryEnabled | boolean | No | Allow for retries should this WebTest fail. |
 |  Locations | array | Yes | A list of where to physically run the tests from to give global coverage for accessibility of your application. - [WebTestGeolocation object](#WebTestGeolocation) |
-|  Configuration | object | No | An XML configuration specification for a WebTest. - [WebTestProperties_Configuration object](#WebTestProperties_Configuration) |
+|  Configuration | object | No | An XML configuration specification for a WebTest. - [WebTestPropertiesConfiguration object](#WebTestPropertiesConfiguration) |
 
 
 <a id="WebTestGeolocation" />
@@ -72,8 +72,8 @@ The following tables describe the values you need to set in the schema.
 |  Id | string | No | Location ID for the webtest to run from. |
 
 
-<a id="WebTestProperties_Configuration" />
-### WebTestProperties_Configuration object
+<a id="WebTestPropertiesConfiguration" />
+### WebTestPropertiesConfiguration object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  WebTest | string | No | The XML specification of a WebTest to run against an application. |

@@ -47,7 +47,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/AppServiceCertificateOrder_properties"
+              "$ref": "#/definitions/AppServiceCertificateOrderProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -152,7 +152,7 @@
       },
       "description": "Key Vault container for a certificate that is purchased through Azure."
     },
-    "AppServiceCertificateOrder_properties": {
+    "AppServiceCertificateOrderProperties": {
       "type": "object",
       "properties": {
         "certificates": {

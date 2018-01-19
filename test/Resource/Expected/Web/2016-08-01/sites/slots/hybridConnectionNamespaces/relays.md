@@ -34,11 +34,11 @@ The following tables describe the values you need to set in the schema.
 |  type | enum | Yes | Microsoft.Web/sites/slots/hybridConnectionNamespaces/relays |
 |  apiVersion | enum | Yes | 2016-08-01 |
 |  kind | string | No | Kind of resource. |
-|  properties | object | Yes | HybridConnection resource specific properties - [HybridConnection_properties object](#HybridConnection_properties) |
+|  properties | object | Yes | HybridConnection resource specific properties - [HybridConnectionProperties object](#HybridConnectionProperties) |
 
 
-<a id="HybridConnection_properties" />
-### HybridConnection_properties object
+<a id="HybridConnectionProperties" />
+### HybridConnectionProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  serviceBusNamespace | string | No | The name of the Service Bus namespace. |

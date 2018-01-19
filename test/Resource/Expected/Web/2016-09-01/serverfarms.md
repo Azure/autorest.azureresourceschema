@@ -65,12 +65,12 @@ The following tables describe the values you need to set in the schema.
 |  kind | string | No | Kind of resource. |
 |  location | string | Yes | Resource Location. |
 |  tags | object | No | Resource tags. |
-|  properties | object | Yes | AppServicePlan resource specific properties - [AppServicePlan_properties object](#AppServicePlan_properties) |
+|  properties | object | Yes | AppServicePlan resource specific properties - [AppServicePlanProperties object](#AppServicePlanProperties) |
 |  sku | object | No | [SkuDescription object](#SkuDescription) |
 
 
-<a id="AppServicePlan_properties" />
-### AppServicePlan_properties object
+<a id="AppServicePlanProperties" />
+### AppServicePlanProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  name | string | Yes | Name for the App Service plan. |

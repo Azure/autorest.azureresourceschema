@@ -51,7 +51,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/Connection_properties"
+              "$ref": "#/definitions/ConnectionProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -110,7 +110,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/ApiEntity_properties"
+              "$ref": "#/definitions/ApiEntityProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -123,7 +123,7 @@
       ],
       "description": "API Management"
     },
-    "ApiEntity_properties": {
+    "ApiEntityProperties": {
       "type": "object",
       "properties": {
         "name": {
@@ -351,7 +351,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/ApiPolicies_properties"
+              "$ref": "#/definitions/ApiPoliciesProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -364,7 +364,7 @@
       ],
       "description": "Api policies"
     },
-    "ApiPolicies_properties": {
+    "ApiPoliciesProperties": {
       "type": "object",
       "properties": {
         "content": {
@@ -439,7 +439,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/BackendServiceDefinition_properties"
+              "$ref": "#/definitions/BackendServiceDefinitionProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -452,7 +452,7 @@
       ],
       "description": "API definitions with backend urls"
     },
-    "BackendServiceDefinition_properties": {
+    "BackendServiceDefinitionProperties": {
       "type": "object",
       "properties": {
         "serviceUrl": {
@@ -475,7 +475,111 @@
         }
       }
     },
-    "Connection_properties": {
+    "ConnectionError": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Resource Id"
+        },
+        "name": {
+          "type": "string",
+          "description": "Resource Name"
+        },
+        "kind": {
+          "type": "string",
+          "description": "Kind of resource"
+        },
+        "location": {
+          "type": "string",
+          "description": "Resource Location"
+        },
+        "type": {
+          "type": "string",
+          "description": "Resource type"
+        },
+        "tags": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Resource tags"
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ConnectionErrorProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "location"
+      ],
+      "description": "Connection error"
+    },
+    "ConnectionErrorProperties": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "code of the status"
+        },
+        "message": {
+          "type": "string",
+          "description": "Description of the status"
+        }
+      }
+    },
+    "ConnectionParameter": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "string",
+            "securestring",
+            "secureobject",
+            "int",
+            "bool",
+            "object",
+            "array",
+            "oauthSetting",
+            "connection"
+          ],
+          "description": "Type of the parameter."
+        },
+        "defaultValue": {
+          "description": "Default parameter value"
+        },
+        "oAuthSettings": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ApiOAuthSettings"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Settings defining OAuth flow for the back end provider"
+        },
+        "uiDefinition": {
+          "description": "UI definitions"
+        }
+      },
+      "description": "connection provider parameters"
+    },
+    "ConnectionProperties": {
       "type": "object",
       "properties": {
         "name": {
@@ -574,7 +678,7 @@
         "api": {
           "oneOf": [
             {
-              "$ref": "#/definitions/ExpandedParent_ApiEntity_"
+              "$ref": "#/definitions/ExpandedParentApiEntity"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -583,110 +687,6 @@
           "description": "expanded connection provider name"
         }
       }
-    },
-    "ConnectionError": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "string",
-          "description": "Resource Id"
-        },
-        "name": {
-          "type": "string",
-          "description": "Resource Name"
-        },
-        "kind": {
-          "type": "string",
-          "description": "Kind of resource"
-        },
-        "location": {
-          "type": "string",
-          "description": "Resource Location"
-        },
-        "type": {
-          "type": "string",
-          "description": "Resource type"
-        },
-        "tags": {
-          "oneOf": [
-            {
-              "type": "object",
-              "additionalProperties": {
-                "type": "string"
-              }
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "Resource tags"
-        },
-        "properties": {
-          "oneOf": [
-            {
-              "$ref": "#/definitions/ConnectionError_properties"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ]
-        }
-      },
-      "required": [
-        "location"
-      ],
-      "description": "Connection error"
-    },
-    "ConnectionError_properties": {
-      "type": "object",
-      "properties": {
-        "code": {
-          "type": "string",
-          "description": "code of the status"
-        },
-        "message": {
-          "type": "string",
-          "description": "Description of the status"
-        }
-      }
-    },
-    "ConnectionParameter": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "string",
-            "securestring",
-            "secureobject",
-            "int",
-            "bool",
-            "object",
-            "array",
-            "oauthSetting",
-            "connection"
-          ],
-          "description": "Type of the parameter."
-        },
-        "defaultValue": {
-          "description": "Default parameter value"
-        },
-        "oAuthSettings": {
-          "oneOf": [
-            {
-              "$ref": "#/definitions/ApiOAuthSettings"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "Settings defining OAuth flow for the back end provider"
-        },
-        "uiDefinition": {
-          "description": "UI definitions"
-        }
-      },
-      "description": "connection provider parameters"
     },
     "ConnectionStatus": {
       "type": "object",
@@ -728,7 +728,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/ConnectionStatus_properties"
+              "$ref": "#/definitions/ConnectionStatusProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -741,7 +741,7 @@
       ],
       "description": "Connection status"
     },
-    "ConnectionStatus_properties": {
+    "ConnectionStatusProperties": {
       "type": "object",
       "properties": {
         "status": {
@@ -805,7 +805,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/CustomLoginSettingValue_properties"
+              "$ref": "#/definitions/CustomLoginSettingValueProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -818,7 +818,7 @@
       ],
       "description": "Custom logging setting value"
     },
-    "CustomLoginSettingValue_properties": {
+    "CustomLoginSettingValueProperties": {
       "type": "object",
       "properties": {
         "option": {
@@ -827,7 +827,7 @@
         }
       }
     },
-    "ExpandedParent_ApiEntity_": {
+    "ExpandedParentApiEntity": {
       "type": "object",
       "properties": {
         "id": {
@@ -867,7 +867,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/ExpandedParent_ApiEntity__properties"
+              "$ref": "#/definitions/ExpandedParentApiEntityProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -880,7 +880,7 @@
       ],
       "description": "expanded parent object for expansion"
     },
-    "ExpandedParent_ApiEntity__properties": {
+    "ExpandedParentApiEntityProperties": {
       "type": "object",
       "properties": {
         "id": {
@@ -890,7 +890,7 @@
         "entity": {
           "oneOf": [
             {
-              "$ref": "#/definitions/ResponseMessageEnvelope_ApiEntity_"
+              "$ref": "#/definitions/ResponseMessageEnvelopeApiEntity"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -940,7 +940,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/GeneralApiInformation_properties"
+              "$ref": "#/definitions/GeneralApiInformationProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -953,7 +953,7 @@
       ],
       "description": "General API information"
     },
-    "GeneralApiInformation_properties": {
+    "GeneralApiInformationProperties": {
       "type": "object",
       "properties": {
         "iconUrl": {
@@ -1050,7 +1050,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/ParameterCustomLoginSettingValues_properties"
+              "$ref": "#/definitions/ParameterCustomLoginSettingValuesProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1063,7 +1063,7 @@
       ],
       "description": "Custom logging setting values"
     },
-    "ParameterCustomLoginSettingValues_properties": {
+    "ParameterCustomLoginSettingValuesProperties": {
       "type": "object",
       "properties": {
         "customParameters": {
@@ -1082,7 +1082,7 @@
         }
       }
     },
-    "ResponseMessageEnvelope_ApiEntity_": {
+    "ResponseMessageEnvelopeApiEntity": {
       "type": "object",
       "properties": {
         "id": {

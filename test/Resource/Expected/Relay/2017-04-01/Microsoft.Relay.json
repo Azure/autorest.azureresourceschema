@@ -114,7 +114,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/AuthorizationRule_properties"
+              "$ref": "#/definitions/AuthorizationRuleProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -154,7 +154,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/HybridConnection_properties"
+              "$ref": "#/definitions/HybridConnectionProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -204,7 +204,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/AuthorizationRule_properties"
+              "$ref": "#/definitions/AuthorizationRuleProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -244,7 +244,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/WcfRelay_properties"
+              "$ref": "#/definitions/WcfRelayProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -294,7 +294,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/AuthorizationRule_properties"
+              "$ref": "#/definitions/AuthorizationRuleProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -313,7 +313,7 @@
     }
   },
   "definitions": {
-    "AuthorizationRule_properties": {
+    "AuthorizationRuleProperties": {
       "type": "object",
       "properties": {
         "rights": {
@@ -341,7 +341,7 @@
       ],
       "description": "Authorization rule properties."
     },
-    "HybridConnection_properties": {
+    "HybridConnectionProperties": {
       "type": "object",
       "properties": {
         "requiresClientAuthorization": {
@@ -384,7 +384,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/AuthorizationRule_properties"
+              "$ref": "#/definitions/AuthorizationRuleProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -423,7 +423,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/AuthorizationRule_properties"
+              "$ref": "#/definitions/AuthorizationRuleProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -462,7 +462,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/HybridConnection_properties"
+              "$ref": "#/definitions/HybridConnectionProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -511,7 +511,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/AuthorizationRule_properties"
+              "$ref": "#/definitions/AuthorizationRuleProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -550,7 +550,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/WcfRelay_properties"
+              "$ref": "#/definitions/WcfRelayProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -617,7 +617,7 @@
       ],
       "description": "SKU of the namespace."
     },
-    "WcfRelay_properties": {
+    "WcfRelayProperties": {
       "type": "object",
       "properties": {
         "relayType": {

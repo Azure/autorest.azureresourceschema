@@ -170,7 +170,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/AppServicePlan_properties"
+              "$ref": "#/definitions/AppServicePlanProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -223,7 +223,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/VnetGateway_properties"
+              "$ref": "#/definitions/VnetGatewayProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -265,7 +265,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/VnetRoute_properties"
+              "$ref": "#/definitions/VnetRouteProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -466,7 +466,7 @@
       ],
       "description": "Description of an App Service Environment."
     },
-    "AppServicePlan_properties": {
+    "AppServicePlanProperties": {
       "type": "object",
       "properties": {
         "name": {
@@ -823,7 +823,7 @@
       },
       "description": "Specification for using a Virtual Network."
     },
-    "VnetGateway_properties": {
+    "VnetGatewayProperties": {
       "type": "object",
       "properties": {
         "vnetName": {
@@ -840,7 +840,7 @@
       ],
       "description": "VnetGateway resource specific properties"
     },
-    "VnetRoute_properties": {
+    "VnetRouteProperties": {
       "type": "object",
       "properties": {
         "name": {

@@ -39,11 +39,11 @@ The following tables describe the values you need to set in the schema.
 |  kind | string | No | Kind of resource |
 |  location | string | Yes | Resource Location |
 |  tags | object | No | Resource tags |
-|  properties | object | Yes | [HostNameBinding_properties object](#HostNameBinding_properties) |
+|  properties | object | Yes | [HostNameBindingProperties object](#HostNameBindingProperties) |
 
 
-<a id="HostNameBinding_properties" />
-### HostNameBinding_properties object
+<a id="HostNameBindingProperties" />
+### HostNameBindingProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  name | string | No | Hostname |

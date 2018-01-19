@@ -224,13 +224,13 @@ The following tables describe the values you need to set in the schema.
 |  kind | string | No | Kind of resource. |
 |  location | string | Yes | Resource Location. |
 |  tags | object | No | Resource tags. |
-|  properties | object | Yes | Site resource specific properties - [Site_properties object](#Site_properties) |
+|  properties | object | Yes | Site resource specific properties - [SiteProperties object](#SiteProperties) |
 |  identity | object | No | [ManagedServiceIdentity object](#ManagedServiceIdentity) |
 |  resources | array | No | [virtualNetworkConnections](./slots/virtualNetworkConnections.md) [siteextensions](./slots/siteextensions.md) [publicCertificates](./slots/publicCertificates.md) [premieraddons](./slots/premieraddons.md) [hybridconnection](./slots/hybridconnection.md) [hostNameBindings](./slots/hostNameBindings.md) [functions](./slots/functions.md) [domainOwnershipIdentifiers](./slots/domainOwnershipIdentifiers.md) [deployments](./slots/deployments.md) |
 
 
-<a id="Site_properties" />
-### Site_properties object
+<a id="SiteProperties" />
+### SiteProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  enabled | boolean | No | <code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline). |
@@ -346,7 +346,7 @@ The following tables describe the values you need to set in the schema.
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  kind | string | No | Kind of resource. |
-|  properties | object | No | SnapshotRecoveryRequest resource specific properties - [SnapshotRecoveryRequest_properties object](#SnapshotRecoveryRequest_properties) |
+|  properties | object | No | SnapshotRecoveryRequest resource specific properties - [SnapshotRecoveryRequestProperties object](#SnapshotRecoveryRequestProperties) |
 
 
 <a id="NameValuePair" />
@@ -421,7 +421,7 @@ The following tables describe the values you need to set in the schema.
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  kind | string | No | Kind of resource. |
-|  properties | object | No | PushSettings resource specific properties - [PushSettings_properties object](#PushSettings_properties) |
+|  properties | object | No | PushSettings resource specific properties - [PushSettingsProperties object](#PushSettingsProperties) |
 
 
 <a id="ApiDefinitionInfo" />
@@ -439,8 +439,8 @@ The following tables describe the values you need to set in the schema.
 |  subnetMask | string | No | Subnet mask for the range of IP addresses the restriction is valid for. |
 
 
-<a id="SnapshotRecoveryRequest_properties" />
-### SnapshotRecoveryRequest_properties object
+<a id="SnapshotRecoveryRequestProperties" />
+### SnapshotRecoveryRequestProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  snapshotTime | string | No | Point in time in which the app recovery should be attempted, formatted as a DateTime string. |
@@ -491,8 +491,8 @@ The following tables describe the values you need to set in the schema.
 |  minProcessExecutionTime | string | No | Minimum time the process must executebefore taking the action |
 
 
-<a id="PushSettings_properties" />
-### PushSettings_properties object
+<a id="PushSettingsProperties" />
+### PushSettingsProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  isPushEnabled | boolean | Yes | Gets or sets a flag indicating whether the Push endpoint is enabled. |

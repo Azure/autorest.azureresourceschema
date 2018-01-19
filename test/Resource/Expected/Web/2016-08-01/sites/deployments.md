@@ -36,11 +36,11 @@ The following tables describe the values you need to set in the schema.
 |  type | enum | Yes | Microsoft.Web/sites/deployments |
 |  apiVersion | enum | Yes | 2016-08-01 |
 |  kind | string | No | Kind of resource. |
-|  properties | object | Yes | Deployment resource specific properties - [Deployment_properties object](#Deployment_properties) |
+|  properties | object | Yes | Deployment resource specific properties - [DeploymentProperties object](#DeploymentProperties) |
 
 
-<a id="Deployment_properties" />
-### Deployment_properties object
+<a id="DeploymentProperties" />
+### DeploymentProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  id | string | No | Identifier for deployment. |

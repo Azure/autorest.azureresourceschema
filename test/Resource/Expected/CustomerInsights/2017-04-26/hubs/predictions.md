@@ -72,13 +72,13 @@ The following tables describe the values you need to set in the schema.
 |  predictionName | string | No | Name of the prediction. |
 |  scopeExpression | string | Yes | Scope expression. |
 |  autoAnalyze | boolean | Yes | Whether do auto analyze. |
-|  mappings | object | Yes | Definition of the link mapping of prediction. - [Prediction_mappings object](#Prediction_mappings) |
+|  mappings | object | Yes | Definition of the link mapping of prediction. - [PredictionMappings object](#PredictionMappings) |
 |  scoreLabel | string | Yes | Score label. |
-|  grades | array | No | The prediction grades. - [Prediction_gradesItem object](#Prediction_gradesItem) |
+|  grades | array | No | The prediction grades. - [PredictionGradesItem object](#PredictionGradesItem) |
 
 
-<a id="Prediction_mappings" />
-### Prediction_mappings object
+<a id="PredictionMappings" />
+### PredictionMappings object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  score | string | Yes | The score of the link mapping. |
@@ -86,8 +86,8 @@ The following tables describe the values you need to set in the schema.
 |  reason | string | Yes | The reason of the link mapping. |
 
 
-<a id="Prediction_gradesItem" />
-### Prediction_gradesItem object
+<a id="PredictionGradesItem" />
+### PredictionGradesItem object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  gradeName | string | No | Name of the grade. |

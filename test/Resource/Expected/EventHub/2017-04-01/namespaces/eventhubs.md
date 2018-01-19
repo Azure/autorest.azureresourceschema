@@ -42,12 +42,12 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes | The Event Hub name |
 |  type | enum | Yes | Microsoft.EventHub/namespaces/eventhubs |
 |  apiVersion | enum | Yes | 2017-04-01 |
-|  properties | object | Yes | Properties supplied to the Create Or Update Event Hub operation. - [Eventhub_properties object](#Eventhub_properties) |
+|  properties | object | Yes | Properties supplied to the Create Or Update Event Hub operation. - [EventhubProperties object](#EventhubProperties) |
 |  resources | array | No | [consumergroups](./eventhubs/consumergroups.md) [authorizationRules](./eventhubs/authorizationRules.md) |
 
 
-<a id="Eventhub_properties" />
-### Eventhub_properties object
+<a id="EventhubProperties" />
+### EventhubProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  messageRetentionInDays | integer | No | Number of days to retain the events for this Event Hub, value should be 1 to 7 days |
@@ -72,11 +72,11 @@ The following tables describe the values you need to set in the schema.
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  name | string | No | Name for capture destination |
-|  properties | object | No | Properties describing the storage account, blob container and acrchive anme format for capture destination - [Destination_properties object](#Destination_properties) |
+|  properties | object | No | Properties describing the storage account, blob container and acrchive anme format for capture destination - [DestinationProperties object](#DestinationProperties) |
 
 
-<a id="Destination_properties" />
-### Destination_properties object
+<a id="DestinationProperties" />
+### DestinationProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  storageAccountResourceId | string | No | Resource id of the storage account to be used to create the blobs |

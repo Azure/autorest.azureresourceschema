@@ -53,13 +53,13 @@ The following tables describe the values you need to set in the schema.
 ### KeyVaultKeyReference object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  keyVault | object | Yes | The key vault reference. - [KeyVaultKeyReference_keyVault object](#KeyVaultKeyReference_keyVault) |
+|  keyVault | object | Yes | The key vault reference. - [KeyVaultKeyReferenceKeyVault object](#KeyVaultKeyReferenceKeyVault) |
 |  keyName | string | Yes | The private key name in key vault. |
 |  keyVersion | string | No | The private key version in key vault. |
 
 
-<a id="KeyVaultKeyReference_keyVault" />
-### KeyVaultKeyReference_keyVault object
+<a id="KeyVaultKeyReferenceKeyVault" />
+### KeyVaultKeyReferenceKeyVault object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  id | string | No | The resource id. |

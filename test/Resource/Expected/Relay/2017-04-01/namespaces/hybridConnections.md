@@ -27,12 +27,12 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes | The hybrid connection name. |
 |  type | enum | Yes | Microsoft.Relay/namespaces/hybridConnections |
 |  apiVersion | enum | Yes | 2017-04-01 |
-|  properties | object | Yes | Properties of the HybridConnection. - [HybridConnection_properties object](#HybridConnection_properties) |
+|  properties | object | Yes | Properties of the HybridConnection. - [HybridConnectionProperties object](#HybridConnectionProperties) |
 |  resources | array | No | [authorizationRules](./hybridConnections/authorizationRules.md) |
 
 
-<a id="HybridConnection_properties" />
-### HybridConnection_properties object
+<a id="HybridConnectionProperties" />
+### HybridConnectionProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  requiresClientAuthorization | boolean | No | Returns true if client authorization is needed for this hybrid connection; otherwise, false. |

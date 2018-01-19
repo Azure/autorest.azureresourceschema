@@ -137,11 +137,11 @@ The following tables describe the values you need to set in the schema.
 |  kind | string | No | Kind of resource |
 |  location | string | Yes | Resource Location |
 |  tags | object | No | Resource tags |
-|  properties | object | Yes | [Domain_properties object](#Domain_properties) |
+|  properties | object | Yes | [DomainProperties object](#DomainProperties) |
 
 
-<a id="Domain_properties" />
-### Domain_properties object
+<a id="DomainProperties" />
+### DomainProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  contactAdmin | object | No | Admin contact information - [Contact object](#Contact) |

@@ -2819,7 +2819,7 @@
         "keyVault": {
           "oneOf": [
             {
-              "$ref": "#/definitions/KeyVaultKeyReference_keyVault"
+              "$ref": "#/definitions/KeyVaultKeyReferenceKeyVault"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2837,7 +2837,7 @@
         }
       }
     },
-    "KeyVaultKeyReference_keyVault": {
+    "KeyVaultKeyReferenceKeyVault": {
       "type": "object",
       "properties": {
         "id": {

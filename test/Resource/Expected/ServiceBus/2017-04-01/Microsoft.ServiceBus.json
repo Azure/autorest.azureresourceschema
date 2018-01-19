@@ -115,7 +115,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/SBAuthorizationRule_properties"
+              "$ref": "#/definitions/SBAuthorizationRuleProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -156,7 +156,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/ArmDisasterRecovery_properties"
+              "$ref": "#/definitions/ArmDisasterRecoveryProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -247,7 +247,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/SBAuthorizationRule_properties"
+              "$ref": "#/definitions/SBAuthorizationRuleProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -341,7 +341,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/SBAuthorizationRule_properties"
+              "$ref": "#/definitions/SBAuthorizationRuleProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -485,7 +485,7 @@
       },
       "description": "Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression."
     },
-    "ArmDisasterRecovery_properties": {
+    "ArmDisasterRecoveryProperties": {
       "type": "object",
       "properties": {
         "partnerNamespace": {
@@ -571,7 +571,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/SBAuthorizationRule_properties"
+              "$ref": "#/definitions/SBAuthorizationRuleProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -610,7 +610,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/ArmDisasterRecovery_properties"
+              "$ref": "#/definitions/ArmDisasterRecoveryProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -649,7 +649,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/SBAuthorizationRule_properties"
+              "$ref": "#/definitions/SBAuthorizationRuleProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -737,7 +737,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/SBAuthorizationRule_properties"
+              "$ref": "#/definitions/SBAuthorizationRuleProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -948,7 +948,7 @@
       },
       "description": "Description of Rule Resource."
     },
-    "SBAuthorizationRule_properties": {
+    "SBAuthorizationRuleProperties": {
       "type": "object",
       "properties": {
         "rights": {

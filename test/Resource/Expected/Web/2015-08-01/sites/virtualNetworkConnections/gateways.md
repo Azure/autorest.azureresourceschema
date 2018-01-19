@@ -34,11 +34,11 @@ The following tables describe the values you need to set in the schema.
 |  kind | string | No | Kind of resource |
 |  location | string | Yes | Resource Location |
 |  tags | object | No | Resource tags |
-|  properties | object | Yes | [VnetGateway_properties object](#VnetGateway_properties) |
+|  properties | object | Yes | [VnetGatewayProperties object](#VnetGatewayProperties) |
 
 
-<a id="VnetGateway_properties" />
-### VnetGateway_properties object
+<a id="VnetGatewayProperties" />
+### VnetGatewayProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  vnetName | string | No | The VNET name. |

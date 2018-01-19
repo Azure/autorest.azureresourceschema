@@ -27,11 +27,11 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes | The authorization rule name. |
 |  type | enum | Yes | Microsoft.Relay/namespaces/authorizationRules |
 |  apiVersion | enum | Yes | 2017-04-01 |
-|  properties | object | Yes | Authorization rule properties. - [AuthorizationRule_properties object](#AuthorizationRule_properties) |
+|  properties | object | Yes | Authorization rule properties. - [AuthorizationRuleProperties object](#AuthorizationRuleProperties) |
 
 
-<a id="AuthorizationRule_properties" />
-### AuthorizationRule_properties object
+<a id="AuthorizationRuleProperties" />
+### AuthorizationRuleProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  rights | array | Yes | The rights associated with the rule. - Manage, Send, Listen |

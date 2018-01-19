@@ -27,11 +27,11 @@ The following tables describe the values you need to set in the schema.
 |  type | enum | Yes | Microsoft.Web/sites/slots/domainOwnershipIdentifiers |
 |  apiVersion | enum | Yes | 2016-08-01 |
 |  kind | string | No | Kind of resource. |
-|  properties | object | Yes | Identifier resource specific properties - [Identifier_properties object](#Identifier_properties) |
+|  properties | object | Yes | Identifier resource specific properties - [IdentifierProperties object](#IdentifierProperties) |
 
 
-<a id="Identifier_properties" />
-### Identifier_properties object
+<a id="IdentifierProperties" />
+### IdentifierProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  id | string | No | String representation of the identity. |

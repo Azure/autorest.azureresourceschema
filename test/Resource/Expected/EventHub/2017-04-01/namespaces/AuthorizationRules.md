@@ -27,11 +27,11 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes | The authorization rule name. |
 |  type | enum | Yes | Microsoft.EventHub/namespaces/AuthorizationRules |
 |  apiVersion | enum | Yes | 2017-04-01 |
-|  properties | object | Yes | Properties supplied to create or update AuthorizationRule - [AuthorizationRule_properties object](#AuthorizationRule_properties) |
+|  properties | object | Yes | Properties supplied to create or update AuthorizationRule - [AuthorizationRuleProperties object](#AuthorizationRuleProperties) |
 
 
-<a id="AuthorizationRule_properties" />
-### AuthorizationRule_properties object
+<a id="AuthorizationRuleProperties" />
+### AuthorizationRuleProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  rights | array | Yes | The rights associated with the rule. - Manage, Send, Listen |

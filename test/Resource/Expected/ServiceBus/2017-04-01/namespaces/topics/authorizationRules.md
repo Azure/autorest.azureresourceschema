@@ -27,11 +27,11 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes | The authorizationrule name. |
 |  type | enum | Yes | Microsoft.ServiceBus/namespaces/topics/authorizationRules |
 |  apiVersion | enum | Yes | 2017-04-01 |
-|  properties | object | Yes | AuthorizationRule properties. - [SBAuthorizationRule_properties object](#SBAuthorizationRule_properties) |
+|  properties | object | Yes | AuthorizationRule properties. - [SBAuthorizationRuleProperties object](#SBAuthorizationRuleProperties) |
 
 
-<a id="SBAuthorizationRule_properties" />
-### SBAuthorizationRule_properties object
+<a id="SBAuthorizationRuleProperties" />
+### SBAuthorizationRuleProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  rights | array | Yes | The rights associated with the rule. - Manage, Send, Listen |

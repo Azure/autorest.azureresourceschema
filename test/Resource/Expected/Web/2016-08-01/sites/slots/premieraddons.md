@@ -38,11 +38,11 @@ The following tables describe the values you need to set in the schema.
 |  kind | string | No | Kind of resource. |
 |  location | string | Yes | Resource Location. |
 |  tags | object | No | Resource tags. |
-|  properties | object | Yes | PremierAddOn resource specific properties - [PremierAddOn_properties object](#PremierAddOn_properties) |
+|  properties | object | Yes | PremierAddOn resource specific properties - [PremierAddOnProperties object](#PremierAddOnProperties) |
 
 
-<a id="PremierAddOn_properties" />
-### PremierAddOn_properties object
+<a id="PremierAddOnProperties" />
+### PremierAddOnProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  sku | string | No | Premier add on SKU. |

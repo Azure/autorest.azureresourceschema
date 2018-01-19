@@ -78,20 +78,20 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes |  |
 |  type | enum | Yes | Microsoft.Automation/automationAccounts/softwareUpdateConfigurations |
 |  apiVersion | enum | Yes | 2017-05-15-preview |
-|  properties | object | Yes | Software update configuration properties. - [softwareUpdateConfigurationProperties object](#softwareUpdateConfigurationProperties) |
+|  properties | object | Yes | Software update configuration properties. - [SoftwareUpdateConfigurationProperties object](#SoftwareUpdateConfigurationProperties) |
 
 
-<a id="softwareUpdateConfigurationProperties" />
-### softwareUpdateConfigurationProperties object
+<a id="SoftwareUpdateConfigurationProperties" />
+### SoftwareUpdateConfigurationProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  updateConfiguration | object | Yes | update specific properties for the Software update configuration - [updateConfiguration object](#updateConfiguration) |
+|  updateConfiguration | object | Yes | update specific properties for the Software update configuration - [UpdateConfiguration object](#UpdateConfiguration) |
 |  scheduleInfo | object | Yes | Schedule information for the Software update configuration - [ScheduleProperties object](#ScheduleProperties) |
 |  error | object | No | detailes of provisioning error - [ErrorResponse object](#ErrorResponse) |
 
 
-<a id="updateConfiguration" />
-### updateConfiguration object
+<a id="UpdateConfiguration" />
+### UpdateConfiguration object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  operatingSystem | enum | Yes | operating system of target machines. - Windows or Linux |

@@ -2331,7 +2331,7 @@
         "mappings": {
           "oneOf": [
             {
-              "$ref": "#/definitions/Prediction_mappings"
+              "$ref": "#/definitions/PredictionMappings"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2348,7 +2348,7 @@
             {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/Prediction_gradesItem"
+                "$ref": "#/definitions/PredictionGradesItem"
               }
             },
             {
@@ -2369,7 +2369,7 @@
       ],
       "description": "The prediction definition."
     },
-    "Prediction_gradesItem": {
+    "PredictionGradesItem": {
       "type": "object",
       "properties": {
         "gradeName": {
@@ -2401,7 +2401,7 @@
       },
       "description": "The definition of a prediction grade."
     },
-    "Prediction_mappings": {
+    "PredictionMappings": {
       "type": "object",
       "properties": {
         "score": {

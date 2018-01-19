@@ -73,7 +73,7 @@ The following tables describe the values you need to set in the schema.
 |  protocols | array | No | Describes on which protocols the operations in this API can be invoked. - http or https |
 |  contentValue | string | No | Content value when Importing an API. |
 |  contentFormat | enum | No | Format of the Content in which the API is getting imported. - wadl-xml, wadl-link-json, swagger-json, swagger-link-json, wsdl, wsdl-link |
-|  wsdlSelector | object | No | Criteria to limit import of WSDL to a subset of the document. - [ApiCreateOrUpdateProperties_wsdlSelector object](#ApiCreateOrUpdateProperties_wsdlSelector) |
+|  wsdlSelector | object | No | Criteria to limit import of WSDL to a subset of the document. - [ApiCreateOrUpdatePropertiesWsdlSelector object](#ApiCreateOrUpdatePropertiesWsdlSelector) |
 
 
 <a id="AuthenticationSettingsContract" />
@@ -91,8 +91,8 @@ The following tables describe the values you need to set in the schema.
 |  query | string | No | Subscription key query string parameter name. |
 
 
-<a id="ApiCreateOrUpdateProperties_wsdlSelector" />
-### ApiCreateOrUpdateProperties_wsdlSelector object
+<a id="ApiCreateOrUpdatePropertiesWsdlSelector" />
+### ApiCreateOrUpdatePropertiesWsdlSelector object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  wsdlServiceName | string | No | Name of service to import from WSDL |

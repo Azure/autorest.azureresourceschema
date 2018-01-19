@@ -47,7 +47,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/Certificate_properties"
+              "$ref": "#/definitions/CertificateProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -67,7 +67,7 @@
     }
   },
   "definitions": {
-    "Certificate_properties": {
+    "CertificateProperties": {
       "type": "object",
       "properties": {
         "hostNames": {

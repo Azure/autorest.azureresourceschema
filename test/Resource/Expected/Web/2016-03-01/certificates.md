@@ -40,11 +40,11 @@ The following tables describe the values you need to set in the schema.
 |  kind | string | No | Kind of resource. |
 |  location | string | Yes | Resource Location. |
 |  tags | object | No | Resource tags. |
-|  properties | object | Yes | Certificate resource specific properties - [Certificate_properties object](#Certificate_properties) |
+|  properties | object | Yes | Certificate resource specific properties - [CertificateProperties object](#CertificateProperties) |
 
 
-<a id="Certificate_properties" />
-### Certificate_properties object
+<a id="CertificateProperties" />
+### CertificateProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  hostNames | array | No | Host names the certificate applies to. - string |

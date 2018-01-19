@@ -38,12 +38,12 @@ The following tables describe the values you need to set in the schema.
 |  kind | string | No | Kind of resource. |
 |  location | string | Yes | Resource Location. |
 |  tags | object | No | Resource tags. |
-|  properties | object | Yes | AppServiceCertificateOrder resource specific properties - [AppServiceCertificateOrder_properties object](#AppServiceCertificateOrder_properties) |
+|  properties | object | Yes | AppServiceCertificateOrder resource specific properties - [AppServiceCertificateOrderProperties object](#AppServiceCertificateOrderProperties) |
 |  resources | array | No | [certificates](./certificateOrders/certificates.md) |
 
 
-<a id="AppServiceCertificateOrder_properties" />
-### AppServiceCertificateOrder_properties object
+<a id="AppServiceCertificateOrderProperties" />
+### AppServiceCertificateOrderProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  certificates | object | No | State of the Key Vault secret. |

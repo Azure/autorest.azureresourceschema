@@ -216,12 +216,12 @@ The following tables describe the values you need to set in the schema.
 |  kind | string | No | Kind of resource |
 |  location | string | Yes | Resource Location |
 |  tags | object | No | Resource tags |
-|  properties | object | Yes | [Site_properties object](#Site_properties) |
+|  properties | object | Yes | [SiteProperties object](#SiteProperties) |
 |  resources | array | No | [hybridconnection](./slots/hybridconnection.md) [premieraddons](./slots/premieraddons.md) [hostNameBindings](./slots/hostNameBindings.md) [deployments](./slots/deployments.md) [virtualNetworkConnections](./slots/virtualNetworkConnections.md) |
 
 
-<a id="Site_properties" />
-### Site_properties object
+<a id="SiteProperties" />
+### SiteProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  name | string | No | Name of web app |
@@ -265,7 +265,7 @@ The following tables describe the values you need to set in the schema.
 |  location | string | Yes | Resource Location |
 |  type | string | No | Resource type |
 |  tags | object | No | Resource tags |
-|  properties | object | No | [SiteConfig_properties object](#SiteConfig_properties) |
+|  properties | object | No | [SiteConfigProperties object](#SiteConfigProperties) |
 
 
 <a id="HostingEnvironmentProfile" />
@@ -298,8 +298,8 @@ The following tables describe the values you need to set in the schema.
 |  trafficManagerProfileName | string | No | Name of traffic manager profile to create. This is only needed if traffic manager profile does not already exist |
 
 
-<a id="SiteConfig_properties" />
-### SiteConfig_properties object
+<a id="SiteConfigProperties" />
+### SiteConfigProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  numberOfWorkers | integer | No | Number of workers |

@@ -47,7 +47,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/Domain_properties"
+              "$ref": "#/definitions/DomainProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -100,7 +100,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/DomainOwnershipIdentifier_properties"
+              "$ref": "#/definitions/DomainOwnershipIdentifierProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -211,7 +211,17 @@
       ],
       "description": "Contact information for domain registration. If 'Domain Privacy' option is not selected then the contact information is made publicly available through the Whois \ndirectories as per ICANN requirements."
     },
-    "Domain_properties": {
+    "DomainOwnershipIdentifierProperties": {
+      "type": "object",
+      "properties": {
+        "ownershipId": {
+          "type": "string",
+          "description": "Ownership Id."
+        }
+      },
+      "description": "DomainOwnershipIdentifier resource specific properties"
+    },
+    "DomainProperties": {
       "type": "object",
       "properties": {
         "contactAdmin": {
@@ -339,16 +349,6 @@
       ],
       "description": "Domain resource specific properties"
     },
-    "DomainOwnershipIdentifier_properties": {
-      "type": "object",
-      "properties": {
-        "ownershipId": {
-          "type": "string",
-          "description": "Ownership Id."
-        }
-      },
-      "description": "DomainOwnershipIdentifier resource specific properties"
-    },
     "DomainPurchaseConsent": {
       "type": "object",
       "properties": {
@@ -403,7 +403,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/DomainOwnershipIdentifier_properties"
+              "$ref": "#/definitions/DomainOwnershipIdentifierProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"

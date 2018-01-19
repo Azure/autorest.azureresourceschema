@@ -28,11 +28,11 @@ The following tables describe the values you need to set in the schema.
 |  type | enum | Yes | Microsoft.Web/serverfarms/virtualNetworkConnections/gateways |
 |  apiVersion | enum | Yes | 2016-09-01 |
 |  kind | string | No | Kind of resource. |
-|  properties | object | Yes | VnetGateway resource specific properties - [VnetGateway_properties object](#VnetGateway_properties) |
+|  properties | object | Yes | VnetGateway resource specific properties - [VnetGatewayProperties object](#VnetGatewayProperties) |
 
 
-<a id="VnetGateway_properties" />
-### VnetGateway_properties object
+<a id="VnetGatewayProperties" />
+### VnetGatewayProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  vnetName | string | No | The Virtual Network name. |

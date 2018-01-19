@@ -30,11 +30,11 @@ The following tables describe the values you need to set in the schema.
 |  type | enum | Yes | Microsoft.Web/serverfarms/virtualNetworkConnections/routes |
 |  apiVersion | enum | Yes | 2016-09-01 |
 |  kind | string | No | Kind of resource. |
-|  properties | object | Yes | VnetRoute resource specific properties - [VnetRoute_properties object](#VnetRoute_properties) |
+|  properties | object | Yes | VnetRoute resource specific properties - [VnetRouteProperties object](#VnetRouteProperties) |
 
 
-<a id="VnetRoute_properties" />
-### VnetRoute_properties object
+<a id="VnetRouteProperties" />
+### VnetRouteProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  name | string | No | The name of this route. This is only returned by the server and does not need to be set by the client. |

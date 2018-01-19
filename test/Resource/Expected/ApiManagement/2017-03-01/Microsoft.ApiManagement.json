@@ -1508,7 +1508,7 @@
         "wsdlSelector": {
           "oneOf": [
             {
-              "$ref": "#/definitions/ApiCreateOrUpdateProperties_wsdlSelector"
+              "$ref": "#/definitions/ApiCreateOrUpdatePropertiesWsdlSelector"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1522,7 +1522,7 @@
       ],
       "description": "Api Create or Update Properties."
     },
-    "ApiCreateOrUpdateProperties_wsdlSelector": {
+    "ApiCreateOrUpdatePropertiesWsdlSelector": {
       "type": "object",
       "properties": {
         "wsdlServiceName": {

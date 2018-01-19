@@ -30,11 +30,11 @@ The following tables describe the values you need to set in the schema.
 |  type | enum | Yes | Microsoft.Web/sites/publicCertificates |
 |  apiVersion | enum | Yes | 2016-08-01 |
 |  kind | string | No | Kind of resource. |
-|  properties | object | Yes | PublicCertificate resource specific properties - [PublicCertificate_properties object](#PublicCertificate_properties) |
+|  properties | object | Yes | PublicCertificate resource specific properties - [PublicCertificateProperties object](#PublicCertificateProperties) |
 
 
-<a id="PublicCertificate_properties" />
-### PublicCertificate_properties object
+<a id="PublicCertificateProperties" />
+### PublicCertificateProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  blob | array | No | Public Certificate byte array - integer |

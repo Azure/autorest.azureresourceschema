@@ -53,11 +53,11 @@ The following tables describe the values you need to set in the schema.
 |  kind | string | No | Kind of resource |
 |  location | string | Yes | Resource Location |
 |  tags | object | No | Resource tags |
-|  properties | object | Yes | [Certificate_properties object](#Certificate_properties) |
+|  properties | object | Yes | [CertificateProperties object](#CertificateProperties) |
 
 
-<a id="Certificate_properties" />
-### Certificate_properties object
+<a id="CertificateProperties" />
+### CertificateProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  friendlyName | string | No | Friendly name of the certificate |

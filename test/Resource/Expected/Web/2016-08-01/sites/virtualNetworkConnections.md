@@ -32,12 +32,12 @@ The following tables describe the values you need to set in the schema.
 |  type | enum | Yes | Microsoft.Web/sites/virtualNetworkConnections |
 |  apiVersion | enum | Yes | 2016-08-01 |
 |  kind | string | No | Kind of resource. |
-|  properties | object | Yes | VnetInfo resource specific properties - [VnetInfo_properties object](#VnetInfo_properties) |
+|  properties | object | Yes | VnetInfo resource specific properties - [VnetInfoProperties object](#VnetInfoProperties) |
 |  resources | array | No | [gateways](./virtualNetworkConnections/gateways.md) |
 
 
-<a id="VnetInfo_properties" />
-### VnetInfo_properties object
+<a id="VnetInfoProperties" />
+### VnetInfoProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  vnetResourceId | string | No | The Virtual Network's resource ID. |

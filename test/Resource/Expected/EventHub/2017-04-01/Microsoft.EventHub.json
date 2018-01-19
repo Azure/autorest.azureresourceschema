@@ -57,7 +57,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/EHNamespace_properties"
+              "$ref": "#/definitions/EHNamespaceProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -113,7 +113,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/AuthorizationRule_properties"
+              "$ref": "#/definitions/AuthorizationRuleProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -154,7 +154,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/ArmDisasterRecovery_properties"
+              "$ref": "#/definitions/ArmDisasterRecoveryProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -194,7 +194,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/Eventhub_properties"
+              "$ref": "#/definitions/EventhubProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -247,7 +247,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/AuthorizationRule_properties"
+              "$ref": "#/definitions/AuthorizationRuleProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -288,7 +288,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/ConsumerGroup_properties"
+              "$ref": "#/definitions/ConsumerGroupProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -307,7 +307,7 @@
     }
   },
   "definitions": {
-    "ArmDisasterRecovery_properties": {
+    "ArmDisasterRecoveryProperties": {
       "type": "object",
       "properties": {
         "partnerNamespace": {
@@ -321,7 +321,7 @@
       },
       "description": "Properties required to the Create Or Update Alias(Disaster Recovery configurations)"
     },
-    "AuthorizationRule_properties": {
+    "AuthorizationRuleProperties": {
       "type": "object",
       "properties": {
         "rights": {
@@ -418,7 +418,7 @@
       },
       "description": "Properties to configure capture description for eventhub"
     },
-    "ConsumerGroup_properties": {
+    "ConsumerGroupProperties": {
       "type": "object",
       "properties": {
         "userMetadata": {
@@ -438,7 +438,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/Destination_properties"
+              "$ref": "#/definitions/DestinationProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -449,7 +449,7 @@
       },
       "description": "Capture storage details for capture description"
     },
-    "Destination_properties": {
+    "DestinationProperties": {
       "type": "object",
       "properties": {
         "storageAccountResourceId": {
@@ -467,7 +467,7 @@
       },
       "description": "Properties describing the storage account, blob container and acrchive anme format for capture destination"
     },
-    "EHNamespace_properties": {
+    "EHNamespaceProperties": {
       "type": "object",
       "properties": {
         "isAutoInflateEnabled": {
@@ -497,7 +497,7 @@
       },
       "description": "Namespace properties supplied for create namespace operation."
     },
-    "Eventhub_properties": {
+    "EventhubProperties": {
       "type": "object",
       "properties": {
         "messageRetentionInDays": {
@@ -582,7 +582,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/AuthorizationRule_properties"
+              "$ref": "#/definitions/AuthorizationRuleProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -621,7 +621,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/ArmDisasterRecovery_properties"
+              "$ref": "#/definitions/ArmDisasterRecoveryProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -660,7 +660,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/AuthorizationRule_properties"
+              "$ref": "#/definitions/AuthorizationRuleProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -699,7 +699,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/Eventhub_properties"
+              "$ref": "#/definitions/EventhubProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -751,7 +751,7 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/ConsumerGroup_properties"
+              "$ref": "#/definitions/ConsumerGroupProperties"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"

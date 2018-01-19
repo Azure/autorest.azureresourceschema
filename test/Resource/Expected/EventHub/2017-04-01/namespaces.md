@@ -37,7 +37,7 @@ The following tables describe the values you need to set in the schema.
 |  location | string | No | Resource location |
 |  tags | object | No | Resource tags |
 |  sku | object | No | Properties of sku resource - [Sku object](#Sku) |
-|  properties | object | Yes | Namespace properties supplied for create namespace operation. - [EHNamespace_properties object](#EHNamespace_properties) |
+|  properties | object | Yes | Namespace properties supplied for create namespace operation. - [EHNamespaceProperties object](#EHNamespaceProperties) |
 |  resources | array | No | [eventhubs](./namespaces/eventhubs.md) [disasterRecoveryConfigs](./namespaces/disasterRecoveryConfigs.md) [AuthorizationRules](./namespaces/AuthorizationRules.md) |
 
 
@@ -50,8 +50,8 @@ The following tables describe the values you need to set in the schema.
 |  capacity | integer | No | The Event Hubs throughput units, vaule should be 0 to 20 throughput units. |
 
 
-<a id="EHNamespace_properties" />
-### EHNamespace_properties object
+<a id="EHNamespaceProperties" />
+### EHNamespaceProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  isAutoInflateEnabled | boolean | No | Value that indicates whether AutoInflate is enabled for eventhub namespace. |

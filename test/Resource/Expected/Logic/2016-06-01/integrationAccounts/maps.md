@@ -43,14 +43,14 @@ The following tables describe the values you need to set in the schema.
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  mapType | enum | Yes | The map type. - NotSpecified or Xslt |
-|  parametersSchema | object | No | The parameters schema of integration account map. - [IntegrationAccountMapProperties_parametersSchema object](#IntegrationAccountMapProperties_parametersSchema) |
+|  parametersSchema | object | No | The parameters schema of integration account map. - [IntegrationAccountMapPropertiesParametersSchema object](#IntegrationAccountMapPropertiesParametersSchema) |
 |  content | string | No | The content. |
 |  contentType | string | No | The content type. |
 |  metadata | object | No | The metadata. |
 
 
-<a id="IntegrationAccountMapProperties_parametersSchema" />
-### IntegrationAccountMapProperties_parametersSchema object
+<a id="IntegrationAccountMapPropertiesParametersSchema" />
+### IntegrationAccountMapPropertiesParametersSchema object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  ref | string | No | The reference name. |

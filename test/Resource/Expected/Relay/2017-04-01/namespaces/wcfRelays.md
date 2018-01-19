@@ -29,12 +29,12 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes | The relay name. |
 |  type | enum | Yes | Microsoft.Relay/namespaces/wcfRelays |
 |  apiVersion | enum | Yes | 2017-04-01 |
-|  properties | object | Yes | Properties of the WCF relay. - [WcfRelay_properties object](#WcfRelay_properties) |
+|  properties | object | Yes | Properties of the WCF relay. - [WcfRelayProperties object](#WcfRelayProperties) |
 |  resources | array | No | [authorizationRules](./wcfRelays/authorizationRules.md) |
 
 
-<a id="WcfRelay_properties" />
-### WcfRelay_properties object
+<a id="WcfRelayProperties" />
+### WcfRelayProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  relayType | enum | No | WCF relay type. - NetTcp or Http |

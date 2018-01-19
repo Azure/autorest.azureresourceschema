@@ -33,11 +33,11 @@ The following tables describe the values you need to set in the schema.
 |  type | enum | Yes | Microsoft.Web/sites/hybridconnection |
 |  apiVersion | enum | Yes | 2016-08-01 |
 |  kind | string | No | Kind of resource. |
-|  properties | object | Yes | RelayServiceConnectionEntity resource specific properties - [RelayServiceConnectionEntity_properties object](#RelayServiceConnectionEntity_properties) |
+|  properties | object | Yes | RelayServiceConnectionEntity resource specific properties - [RelayServiceConnectionEntityProperties object](#RelayServiceConnectionEntityProperties) |
 
 
-<a id="RelayServiceConnectionEntity_properties" />
-### RelayServiceConnectionEntity_properties object
+<a id="RelayServiceConnectionEntityProperties" />
+### RelayServiceConnectionEntityProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  entityName | string | No |  |

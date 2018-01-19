@@ -448,7 +448,7 @@
         "Configuration": {
           "oneOf": [
             {
-              "$ref": "#/definitions/WebTestProperties_Configuration"
+              "$ref": "#/definitions/WebTestPropertiesConfiguration"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -465,7 +465,7 @@
       ],
       "description": "Metadata describing a web test for an Azure resource."
     },
-    "WebTestProperties_Configuration": {
+    "WebTestPropertiesConfiguration": {
       "type": "object",
       "properties": {
         "WebTest": {

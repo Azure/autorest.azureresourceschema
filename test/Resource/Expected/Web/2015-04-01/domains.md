@@ -116,12 +116,12 @@ The following tables describe the values you need to set in the schema.
 |  kind | string | No | Kind of resource. |
 |  location | string | Yes | Resource Location. |
 |  tags | object | No | Resource tags. |
-|  properties | object | Yes | Domain resource specific properties - [Domain_properties object](#Domain_properties) |
+|  properties | object | Yes | Domain resource specific properties - [DomainProperties object](#DomainProperties) |
 |  resources | array | No | [domainOwnershipIdentifiers](./domains/domainOwnershipIdentifiers.md) |
 
 
-<a id="Domain_properties" />
-### Domain_properties object
+<a id="DomainProperties" />
+### DomainProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  contactAdmin | object | Yes | Administrative contact. - [Contact object](#Contact) |

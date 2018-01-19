@@ -39,11 +39,11 @@ The following tables describe the values you need to set in the schema.
 |  kind | string | No | Kind of resource |
 |  location | string | Yes | Resource Location |
 |  tags | object | No | Resource tags |
-|  properties | object | Yes | [Csr_properties object](#Csr_properties) |
+|  properties | object | Yes | [CsrProperties object](#CsrProperties) |
 
 
-<a id="Csr_properties" />
-### Csr_properties object
+<a id="CsrProperties" />
+### CsrProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  name | string | No | Name used to locate CSR object |

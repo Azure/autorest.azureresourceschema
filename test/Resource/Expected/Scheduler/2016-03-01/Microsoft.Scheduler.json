@@ -110,32 +110,7 @@
     }
   },
   "definitions": {
-    "ActiveDirectoryOAuth": {
-      "type": "object",
-      "allOf": [
-        {
-          "properties": {
-            "secret": {
-              "type": "string",
-              "description": "Gets or sets the secret, return value will always be empty."
-            },
-            "tenant": {
-              "type": "string",
-              "description": "Gets or sets the tenant."
-            },
-            "audience": {
-              "type": "string",
-              "description": "Gets or sets the audience."
-            },
-            "clientId": {
-              "type": "string",
-              "description": "Gets or sets the client identifier."
-            }
-          }
-        }
-      ]
-    },
-    "Basic": {
+    "BasicAuthentication": {
       "type": "object",
       "allOf": [
         {
@@ -152,7 +127,7 @@
         }
       ]
     },
-    "ClientCertificate": {
+    "ClientCertAuthentication": {
       "type": "object",
       "allOf": [
         {
@@ -201,13 +176,13 @@
         {
           "anyOf": [
             {
-              "$ref": "#/definitions/ClientCertificate"
+              "$ref": "#/definitions/ClientCertAuthentication"
             },
             {
-              "$ref": "#/definitions/Basic"
+              "$ref": "#/definitions/BasicAuthentication"
             },
             {
-              "$ref": "#/definitions/ActiveDirectoryOAuth"
+              "$ref": "#/definitions/OAuthAuthentication"
             }
           ]
         }
@@ -790,6 +765,31 @@
           "description": "Gets or sets the occurrence. Must be between -5 and 5."
         }
       }
+    },
+    "OAuthAuthentication": {
+      "type": "object",
+      "allOf": [
+        {
+          "properties": {
+            "secret": {
+              "type": "string",
+              "description": "Gets or sets the secret, return value will always be empty."
+            },
+            "tenant": {
+              "type": "string",
+              "description": "Gets or sets the tenant."
+            },
+            "audience": {
+              "type": "string",
+              "description": "Gets or sets the audience."
+            },
+            "clientId": {
+              "type": "string",
+              "description": "Gets or sets the client identifier."
+            }
+          }
+        }
+      ]
     },
     "RetryPolicy": {
       "type": "object",

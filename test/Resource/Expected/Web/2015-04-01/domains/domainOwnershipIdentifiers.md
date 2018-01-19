@@ -27,11 +27,11 @@ The following tables describe the values you need to set in the schema.
 |  type | enum | Yes | Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers |
 |  apiVersion | enum | Yes | 2015-04-01 |
 |  kind | string | No | Kind of resource. |
-|  properties | object | Yes | DomainOwnershipIdentifier resource specific properties - [DomainOwnershipIdentifier_properties object](#DomainOwnershipIdentifier_properties) |
+|  properties | object | Yes | DomainOwnershipIdentifier resource specific properties - [DomainOwnershipIdentifierProperties object](#DomainOwnershipIdentifierProperties) |
 
 
-<a id="DomainOwnershipIdentifier_properties" />
-### DomainOwnershipIdentifier_properties object
+<a id="DomainOwnershipIdentifierProperties" />
+### DomainOwnershipIdentifierProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  ownershipId | string | No | Ownership Id. |

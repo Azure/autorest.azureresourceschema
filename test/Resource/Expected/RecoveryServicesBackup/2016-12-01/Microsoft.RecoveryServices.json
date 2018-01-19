@@ -126,41 +126,19 @@
     }
   },
   "definitions": {
-    "AzureIaasVM": {
+    "AzureIaaSClassicComputeVMProtectedItem": {
       "type": "object",
       "allOf": [
-        {
-          "properties": {
-            "schedulePolicy": {
-              "oneOf": [
-                {
-                  "$ref": "#/definitions/SchedulePolicy"
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ],
-              "description": "Backup schedule specified as part of backup policy."
-            },
-            "retentionPolicy": {
-              "oneOf": [
-                {
-                  "$ref": "#/definitions/RetentionPolicy"
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ],
-              "description": "Retention policy with the details on backup copy retention ranges."
-            },
-            "timeZone": {
-              "type": "string",
-              "description": "TimeZone optional input as string. For example: TimeZone = \"Pacific Standard Time\"."
-            }
-          }
-        }
+        {}
       ],
-      "description": "IaaS VM workload-specific backup policy."
+      "description": "IaaS VM workload-specific backup item representing the Classic Compute VM."
+    },
+    "AzureIaaSComputeVMProtectedItem": {
+      "type": "object",
+      "allOf": [
+        {}
+      ],
+      "description": "IaaS VM workload-specific backup item representing the Azure Resource Manager VM."
     },
     "AzureIaaSVMHealthDetails": {
       "type": "object",
@@ -312,10 +290,10 @@
         {
           "anyOf": [
             {
-              "$ref": "#/definitions/Microsoft.ClassicCompute/virtualMachines"
+              "$ref": "#/definitions/AzureIaaSClassicComputeVMProtectedItem"
             },
             {
-              "$ref": "#/definitions/Microsoft.Compute/virtualMachines"
+              "$ref": "#/definitions/AzureIaaSComputeVMProtectedItem"
             }
           ]
         }
@@ -355,11 +333,22 @@
       },
       "description": "Additional information on Azure IaaS VM specific backup item."
     },
-    "AzureSql": {
+    "AzureIaaSVMProtectionPolicy": {
       "type": "object",
       "allOf": [
         {
           "properties": {
+            "schedulePolicy": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/SchedulePolicy"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                }
+              ],
+              "description": "Backup schedule specified as part of backup policy."
+            },
             "retentionPolicy": {
               "oneOf": [
                 {
@@ -369,12 +358,60 @@
                   "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
                 }
               ],
-              "description": "Retention policy details."
+              "description": "Retention policy with the details on backup copy retention ranges."
+            },
+            "timeZone": {
+              "type": "string",
+              "description": "TimeZone optional input as string. For example: TimeZone = \"Pacific Standard Time\"."
             }
           }
         }
       ],
-      "description": "Azure SQL workload-specific backup policy."
+      "description": "IaaS VM workload-specific backup policy."
+    },
+    "AzureSqlProtectedItem": {
+      "type": "object",
+      "allOf": [
+        {
+          "properties": {
+            "protectedItemDataId": {
+              "type": "string",
+              "description": "Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services."
+            },
+            "protectionState": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "Invalid",
+                    "IRPending",
+                    "Protected",
+                    "ProtectionError",
+                    "ProtectionStopped",
+                    "ProtectionPaused"
+                  ]
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                }
+              ],
+              "description": "Backup state of the backed up item."
+            },
+            "extendedInfo": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/AzureSqlProtectedItemExtendedInfo"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                }
+              ],
+              "description": "Additional information for this backup item."
+            }
+          }
+        }
+      ],
+      "description": "Azure SQL workload-specific backup item."
     },
     "AzureSqlProtectedItemExtendedInfo": {
       "type": "object",
@@ -401,6 +438,27 @@
         }
       },
       "description": "Additional information on Azure Sql specific protected item."
+    },
+    "AzureSqlProtectionPolicy": {
+      "type": "object",
+      "allOf": [
+        {
+          "properties": {
+            "retentionPolicy": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/RetentionPolicy"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                }
+              ],
+              "description": "Retention policy details."
+            }
+          }
+        }
+      ],
+      "description": "Azure SQL workload-specific backup policy."
     },
     "DailyRetentionFormat": {
       "type": "object",
@@ -712,38 +770,6 @@
       ],
       "description": "Long term policy schedule."
     },
-    "MAB": {
-      "type": "object",
-      "allOf": [
-        {
-          "properties": {
-            "schedulePolicy": {
-              "oneOf": [
-                {
-                  "$ref": "#/definitions/SchedulePolicy"
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ],
-              "description": "Backup schedule of backup policy."
-            },
-            "retentionPolicy": {
-              "oneOf": [
-                {
-                  "$ref": "#/definitions/RetentionPolicy"
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ],
-              "description": "Retention policy details."
-            }
-          }
-        }
-      ],
-      "description": "Mab container-specific backup policy."
-    },
     "MabFileFolderProtectedItem": {
       "type": "object",
       "allOf": [
@@ -830,63 +856,37 @@
       },
       "description": "Additional information on the backed up item."
     },
-    "Microsoft.ClassicCompute/virtualMachines": {
-      "type": "object",
-      "allOf": [
-        {}
-      ],
-      "description": "IaaS VM workload-specific backup item representing the Classic Compute VM."
-    },
-    "Microsoft.Compute/virtualMachines": {
-      "type": "object",
-      "allOf": [
-        {}
-      ],
-      "description": "IaaS VM workload-specific backup item representing the Azure Resource Manager VM."
-    },
-    "Microsoft.Sql/servers/databases": {
+    "MabProtectionPolicy": {
       "type": "object",
       "allOf": [
         {
           "properties": {
-            "protectedItemDataId": {
-              "type": "string",
-              "description": "Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services."
-            },
-            "protectionState": {
+            "schedulePolicy": {
               "oneOf": [
                 {
-                  "type": "string",
-                  "enum": [
-                    "Invalid",
-                    "IRPending",
-                    "Protected",
-                    "ProtectionError",
-                    "ProtectionStopped",
-                    "ProtectionPaused"
-                  ]
+                  "$ref": "#/definitions/SchedulePolicy"
                 },
                 {
                   "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
                 }
               ],
-              "description": "Backup state of the backed up item."
+              "description": "Backup schedule of backup policy."
             },
-            "extendedInfo": {
+            "retentionPolicy": {
               "oneOf": [
                 {
-                  "$ref": "#/definitions/AzureSqlProtectedItemExtendedInfo"
+                  "$ref": "#/definitions/RetentionPolicy"
                 },
                 {
                   "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
                 }
               ],
-              "description": "Additional information for this backup item."
+              "description": "Retention policy details."
             }
           }
         }
       ],
-      "description": "Azure SQL workload-specific backup item."
+      "description": "Mab container-specific backup policy."
     },
     "MonthlyRetentionSchedule": {
       "type": "object",
@@ -1049,7 +1049,7 @@
               "$ref": "#/definitions/AzureIaaSVMProtectedItem"
             },
             {
-              "$ref": "#/definitions/Microsoft.Sql/servers/databases"
+              "$ref": "#/definitions/AzureSqlProtectedItem"
             },
             {
               "$ref": "#/definitions/DPMProtectedItem"
@@ -1099,13 +1099,13 @@
         {
           "anyOf": [
             {
-              "$ref": "#/definitions/AzureIaasVM"
+              "$ref": "#/definitions/AzureIaaSVMProtectionPolicy"
             },
             {
-              "$ref": "#/definitions/AzureSql"
+              "$ref": "#/definitions/AzureSqlProtectionPolicy"
             },
             {
-              "$ref": "#/definitions/MAB"
+              "$ref": "#/definitions/MabProtectionPolicy"
             }
           ]
         }

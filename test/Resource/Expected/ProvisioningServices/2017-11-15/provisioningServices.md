@@ -67,7 +67,7 @@ The following tables describe the values you need to set in the schema.
 |  provisioningState | string | No | The ARM provisioning state of the provisioning service. |
 |  iotHubs | array | No | List of IoT hubs assosciated with this provisioning service. - [IotHubDefinitionDescription object](#IotHubDefinitionDescription) |
 |  allocationPolicy | enum | No | Allocation policy to be used by this provisioning service. - Hashed, GeoLatency, Static |
-|  authorizationPolicies | array | No | List of authorization keys for a provisioning service. - [SharedAccessSignatureAuthorizationRule_AccessRightsDescription_ object](#SharedAccessSignatureAuthorizationRule_AccessRightsDescription_) |
+|  authorizationPolicies | array | No | List of authorization keys for a provisioning service. - [SharedAccessSignatureAuthorizationRuleAccessRightsDescription object](#SharedAccessSignatureAuthorizationRuleAccessRightsDescription) |
 
 
 <a id="IotDpsSkuInfo" />
@@ -88,8 +88,8 @@ The following tables describe the values you need to set in the schema.
 |  location | string | Yes | ARM region of the IoT hub. |
 
 
-<a id="SharedAccessSignatureAuthorizationRule_AccessRightsDescription_" />
-### SharedAccessSignatureAuthorizationRule_AccessRightsDescription_ object
+<a id="SharedAccessSignatureAuthorizationRuleAccessRightsDescription" />
+### SharedAccessSignatureAuthorizationRuleAccessRightsDescription object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  keyName | string | Yes | Name of the key. |

@@ -34,11 +34,11 @@ The following tables describe the values you need to set in the schema.
 |  type | enum | Yes | Microsoft.Web/sites/slots/functions |
 |  apiVersion | enum | Yes | 2016-08-01 |
 |  kind | string | No | Kind of resource. |
-|  properties | object | Yes | FunctionEnvelope resource specific properties - [FunctionEnvelope_properties object](#FunctionEnvelope_properties) |
+|  properties | object | Yes | FunctionEnvelope resource specific properties - [FunctionEnvelopeProperties object](#FunctionEnvelopeProperties) |
 
 
-<a id="FunctionEnvelope_properties" />
-### FunctionEnvelope_properties object
+<a id="FunctionEnvelopeProperties" />
+### FunctionEnvelopeProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  scriptRootPathHref | string | No | Script root path URI. |
