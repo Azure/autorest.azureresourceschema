@@ -25,7 +25,7 @@ The following tables describe the values you need to set in the schema.
 ### Microsoft.ServiceBus/namespaces/topics/authorizationRules object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  name | string | Yes |  |
+|  name | string | Yes | The authorizationrule name. |
 |  type | enum | Yes | Microsoft.ServiceBus/namespaces/topics/authorizationRules |
 |  apiVersion | enum | Yes | 2015-08-01 |
 |  location | string | No | data center location. |

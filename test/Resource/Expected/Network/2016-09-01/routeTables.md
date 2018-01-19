@@ -43,11 +43,11 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes |  |
 |  type | enum | Yes | Microsoft.Network/routeTables |
 |  apiVersion | enum | Yes | 2016-09-01 |
-|  id | string | No | Resource Id |
-|  location | string | No | Resource location |
-|  tags | object | No | Resource tags |
+|  id | string | No | Resource ID. |
+|  location | string | No | Resource location. |
+|  tags | object | No | Resource tags. |
 |  properties | object | Yes | [RouteTablePropertiesFormat object](#RouteTablePropertiesFormat) |
-|  etag | string | No | Gets a unique read-only string that changes whenever the resource is updated |
+|  etag | string | No | Gets a unique read-only string that changes whenever the resource is updated. |
 |  resources | array | No | [routes](./routeTables/routes.md) |
 
 
@@ -55,26 +55,26 @@ The following tables describe the values you need to set in the schema.
 ### RouteTablePropertiesFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  routes | array | No | Gets or sets Routes in a Route Table - [Route object](#Route) |
-|  provisioningState | string | No | Gets provisioning state of the resource Updating/Deleting/Failed |
+|  routes | array | No | Collection of routes contained within a route table. - [Route object](#Route) |
+|  provisioningState | string | No | The provisioning state of the resource. Possible values are: 'Updating', 'Deleting', and 'Failed'. |
 
 
 <a id="Route" />
 ### Route object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  id | string | No | Resource Id |
+|  id | string | No | Resource ID. |
 |  properties | object | No | [RoutePropertiesFormat object](#RoutePropertiesFormat) |
-|  name | string | No | Gets name of the resource that is unique within a resource group. This name can be used to access the resource |
-|  etag | string | No | A unique read-only string that changes whenever the resource is updated |
+|  name | string | No | The name of the resource that is unique within a resource group. This name can be used to access the resource. |
+|  etag | string | No | A unique read-only string that changes whenever the resource is updated. |
 
 
 <a id="RoutePropertiesFormat" />
 ### RoutePropertiesFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  addressPrefix | string | No | Gets or sets the destination CIDR to which the route applies. |
-|  nextHopType | enum | Yes | Gets or sets the type of Azure hop the packet should be sent to. - VirtualNetworkGateway, VnetLocal, Internet, VirtualAppliance, None |
-|  nextHopIpAddress | string | No | Gets or sets the IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance. |
-|  provisioningState | string | No | Gets provisioning state of the resource Updating/Deleting/Failed |
+|  addressPrefix | string | No | The destination CIDR to which the route applies. |
+|  nextHopType | enum | Yes | The type of Azure hop the packet should be sent to. Possible values are: 'VirtualNetworkGateway', 'VnetLocal', 'Internet', 'VirtualAppliance', and 'None'. - VirtualNetworkGateway, VnetLocal, Internet, VirtualAppliance, None |
+|  nextHopIpAddress | string | No | The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance. |
+|  provisioningState | string | No | The provisioning state of the resource. Possible values are: 'Updating', 'Deleting', and 'Failed'. |
 

@@ -9,81 +9,17 @@ To create a Microsoft.CertificateRegistration/certificateOrders resource, add th
   "name": "string",
   "type": "Microsoft.CertificateRegistration/certificateOrders",
   "apiVersion": "2015-08-01",
-  "id": "string",
   "kind": "string",
   "location": "string",
   "tags": {},
   "properties": {
     "certificates": {},
     "distinguishedName": "string",
-    "domainVerificationToken": "string",
     "validityInYears": "integer",
     "keySize": "integer",
     "productType": "string",
     "autoRenew": boolean,
-    "provisioningState": "string",
-    "status": "string",
-    "signedCertificate": {
-      "id": "string",
-      "name": "string",
-      "kind": "string",
-      "location": "string",
-      "type": "string",
-      "tags": {},
-      "properties": {
-        "version": "integer",
-        "serialNumber": "string",
-        "thumbprint": "string",
-        "subject": "string",
-        "notBefore": "string",
-        "notAfter": "string",
-        "signatureAlgorithm": "string",
-        "issuer": "string",
-        "rawData": "string"
-      }
-    },
-    "csr": "string",
-    "intermediate": {
-      "id": "string",
-      "name": "string",
-      "kind": "string",
-      "location": "string",
-      "type": "string",
-      "tags": {},
-      "properties": {
-        "version": "integer",
-        "serialNumber": "string",
-        "thumbprint": "string",
-        "subject": "string",
-        "notBefore": "string",
-        "notAfter": "string",
-        "signatureAlgorithm": "string",
-        "issuer": "string",
-        "rawData": "string"
-      }
-    },
-    "root": {
-      "id": "string",
-      "name": "string",
-      "kind": "string",
-      "location": "string",
-      "type": "string",
-      "tags": {},
-      "properties": {
-        "version": "integer",
-        "serialNumber": "string",
-        "thumbprint": "string",
-        "subject": "string",
-        "notBefore": "string",
-        "notAfter": "string",
-        "signatureAlgorithm": "string",
-        "issuer": "string",
-        "rawData": "string"
-      }
-    },
-    "serialNumber": "string",
-    "lastCertificateIssuanceTime": "string",
-    "expirationTime": "string"
+    "csr": "string"
   },
   "resources": []
 }
@@ -99,60 +35,22 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes |  |
 |  type | enum | Yes | Microsoft.CertificateRegistration/certificateOrders |
 |  apiVersion | enum | Yes | 2015-08-01 |
-|  id | string | No | Resource Id |
-|  kind | string | No | Kind of resource |
-|  location | string | Yes | Resource Location |
-|  tags | object | No | Resource tags |
-|  properties | object | Yes | [CertificateOrderProperties object](#CertificateOrderProperties) |
+|  kind | string | No | Kind of resource. |
+|  location | string | Yes | Resource Location. |
+|  tags | object | No | Resource tags. |
+|  properties | object | Yes | AppServiceCertificateOrder resource specific properties - [AppServiceCertificateOrderProperties object](#AppServiceCertificateOrderProperties) |
 |  resources | array | No | [certificates](./certificateOrders/certificates.md) |
 
 
-<a id="CertificateOrderProperties" />
-### CertificateOrderProperties object
+<a id="AppServiceCertificateOrderProperties" />
+### AppServiceCertificateOrderProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  certificates | object | No | State of the Key Vault secret |
-|  distinguishedName | string | No | Certificate distinguished name |
-|  domainVerificationToken | string | No | Domain Verification Token |
-|  validityInYears | integer | No | Duration in years (must be between 1 and 3) |
-|  keySize | integer | No | Certificate Key Size |
-|  productType | enum | No | Certificate product type. - StandardDomainValidatedSsl or StandardDomainValidatedWildCardSsl |
-|  autoRenew | boolean | No | Auto renew |
-|  provisioningState | enum | No | Status of certificate order. - Succeeded, Failed, Canceled, InProgress, Deleting |
-|  status | enum | No | Current order status. - Pendingissuance, Issued, Revoked, Canceled, Denied, Pendingrevocation, PendingRekey, Unused, Expired, NotSubmitted |
-|  signedCertificate | object | No | Signed certificate - [CertificateDetails object](#CertificateDetails) |
-|  csr | string | No | Last CSR that was created for this order |
-|  intermediate | object | No | Intermediate certificate - [CertificateDetails object](#CertificateDetails) |
-|  root | object | No | Root certificate - [CertificateDetails object](#CertificateDetails) |
-|  serialNumber | string | No | Current serial number of the certificate |
-|  lastCertificateIssuanceTime | string | No | Certificate last issuance time |
-|  expirationTime | string | No | Certificate expiration time |
-
-
-<a id="CertificateDetails" />
-### CertificateDetails object
-|  Name | Type | Required | Value |
-|  ---- | ---- | ---- | ---- |
-|  id | string | No | Resource Id |
-|  name | string | No | Resource Name |
-|  kind | string | No | Kind of resource |
-|  location | string | Yes | Resource Location |
-|  type | string | No | Resource type |
-|  tags | object | No | Resource tags |
-|  properties | object | No | [CertificateDetailsProperties object](#CertificateDetailsProperties) |
-
-
-<a id="CertificateDetailsProperties" />
-### CertificateDetailsProperties object
-|  Name | Type | Required | Value |
-|  ---- | ---- | ---- | ---- |
-|  version | integer | No | Version |
-|  serialNumber | string | No | Serial Number |
-|  thumbprint | string | No | Thumbprint |
-|  subject | string | No | Subject |
-|  notBefore | string | No | Valid from |
-|  notAfter | string | No | Valid to |
-|  signatureAlgorithm | string | No | Signature Algorithm |
-|  issuer | string | No | Issuer |
-|  rawData | string | No | Raw certificate data |
+|  certificates | object | No | State of the Key Vault secret. |
+|  distinguishedName | string | No | Certificate distinguished name. |
+|  validityInYears | integer | No | Duration in years (must be between 1 and 3). |
+|  keySize | integer | No | Certificate key size. |
+|  productType | enum | Yes | Certificate product type. - StandardDomainValidatedSsl or StandardDomainValidatedWildCardSsl |
+|  autoRenew | boolean | No | <code>true</code> if the certificate should be automatically renewed when it expires; otherwise, <code>false</code>. |
+|  csr | string | No | Last CSR that was created for this order. |
 

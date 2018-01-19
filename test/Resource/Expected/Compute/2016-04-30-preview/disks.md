@@ -1,0 +1,122 @@
+# Microsoft.Compute/disks template reference
+API Version: 2016-04-30-preview
+## Template format
+
+To create a Microsoft.Compute/disks resource, add the following JSON to the resources section of your template.
+
+```json
+{
+  "name": "string",
+  "type": "Microsoft.Compute/disks",
+  "apiVersion": "2016-04-30-preview",
+  "location": "string",
+  "tags": {},
+  "properties": {
+    "accountType": "string",
+    "osType": "string",
+    "creationData": {
+      "createOption": "string",
+      "storageAccountId": "string",
+      "imageReference": {
+        "id": "string",
+        "lun": "integer"
+      },
+      "sourceUri": "string",
+      "sourceResourceId": "string"
+    },
+    "diskSizeGB": "integer",
+    "encryptionSettings": {
+      "enabled": boolean,
+      "diskEncryptionKey": {
+        "sourceVault": {
+          "id": "string"
+        },
+        "secretUrl": "string"
+      },
+      "keyEncryptionKey": {
+        "sourceVault": {
+          "id": "string"
+        },
+        "keyUrl": "string"
+      }
+    }
+  }
+}
+```
+## Property values
+
+The following tables describe the values you need to set in the schema.
+
+<a id="Microsoft.Compute/disks" />
+### Microsoft.Compute/disks object
+|  Name | Type | Required | Value |
+|  ---- | ---- | ---- | ---- |
+|  name | string | Yes | The name of the disk within the given subscription and resource group. |
+|  type | enum | Yes | Microsoft.Compute/disks |
+|  apiVersion | enum | Yes | 2016-04-30-preview |
+|  location | string | Yes | Resource location |
+|  tags | object | No | Resource tags |
+|  properties | object | Yes | [DiskProperties object](#DiskProperties) |
+
+
+<a id="DiskProperties" />
+### DiskProperties object
+|  Name | Type | Required | Value |
+|  ---- | ---- | ---- | ---- |
+|  accountType | enum | No | the storage account type of the disk. - Standard_LRS or Premium_LRS |
+|  osType | enum | No | The Operating System type. - Windows or Linux |
+|  creationData | object | Yes | Disk source information. CreationData information cannot be changed after the disk has been created. - [CreationData object](#CreationData) |
+|  diskSizeGB | integer | No | If creationData.createOption is Empty, this field is mandatory and it indicates the size of the VHD to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size. |
+|  encryptionSettings | object | No | Encryption settings for disk or snapshot - [EncryptionSettings object](#EncryptionSettings) |
+
+
+<a id="CreationData" />
+### CreationData object
+|  Name | Type | Required | Value |
+|  ---- | ---- | ---- | ---- |
+|  createOption | enum | Yes | This enumerates the possible sources of a disk's creation. - Empty, Attach, FromImage, Import, Copy, Restore |
+|  storageAccountId | string | No | If createOption is Import, the Azure Resource Manager identifier of the storage account containing the blob to import as a disk. Required only if the blob is in a different subscription |
+|  imageReference | object | No | Disk source information. - [ImageDiskReference object](#ImageDiskReference) |
+|  sourceUri | string | No | If createOption is Import, this is a SAS URI to a blob to be imported into a managed disk. If createOption is Copy, this is a relative Uri containing the id of the source snapshot to be copied into a managed disk. |
+|  sourceResourceId | string | No | If createOption is Copy, this is the ARM id of the source snapshot or disk. If createOption is Restore, this is the ARM-like id of the source disk restore point. |
+
+
+<a id="EncryptionSettings" />
+### EncryptionSettings object
+|  Name | Type | Required | Value |
+|  ---- | ---- | ---- | ---- |
+|  enabled | boolean | No | Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged. |
+|  diskEncryptionKey | object | No | Key Vault Secret Url and vault id of the disk encryption key - [KeyVaultAndSecretReference object](#KeyVaultAndSecretReference) |
+|  keyEncryptionKey | object | No | Key Vault Key Url and vault id of the key encryption key - [KeyVaultAndKeyReference object](#KeyVaultAndKeyReference) |
+
+
+<a id="ImageDiskReference" />
+### ImageDiskReference object
+|  Name | Type | Required | Value |
+|  ---- | ---- | ---- | ---- |
+|  id | string | Yes | A relative uri containing either a Platform Imgage Repository or user image reference. |
+|  lun | integer | No | If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null. |
+
+
+<a id="KeyVaultAndSecretReference" />
+### KeyVaultAndSecretReference object
+|  Name | Type | Required | Value |
+|  ---- | ---- | ---- | ---- |
+|  sourceVault | object | Yes | Resource id of the KeyVault containing the key or secret - [SourceVault object](#SourceVault) |
+|  secretUrl | string | Yes | Url pointing to a key or secret in KeyVault |
+
+
+<a id="KeyVaultAndKeyReference" />
+### KeyVaultAndKeyReference object
+|  Name | Type | Required | Value |
+|  ---- | ---- | ---- | ---- |
+|  sourceVault | object | Yes | Resource id of the KeyVault containing the key or secret - [SourceVault object](#SourceVault) |
+|  keyUrl | string | Yes | Url pointing to a key or secret in KeyVault |
+
+
+<a id="SourceVault" />
+### SourceVault object
+|  Name | Type | Required | Value |
+|  ---- | ---- | ---- | ---- |
+|  id | string | No | Resource Id |
+

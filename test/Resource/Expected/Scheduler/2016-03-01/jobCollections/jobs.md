@@ -247,8 +247,8 @@ The following tables describe the values you need to set in the schema.
 ### HttpRequest object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  authentication | object | No | Gets or sets the http authentication. - [HttpAuthentication object](#HttpAuthentication) |
-|  uri | string | No | Gets or sets the Uri. |
+|  authentication | object | No | Gets or sets the authentication method of the request. - [HttpAuthentication object](#HttpAuthentication) |
+|  uri | string | No | Gets or sets the URI of the request. |
 |  method | string | No | Gets or sets the method of the request. |
 |  body | string | No | Gets or sets the request body. |
 |  headers | object | No | Gets or sets the headers. |
@@ -268,7 +268,7 @@ The following tables describe the values you need to set in the schema.
 ### ServiceBusQueueMessage object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  authentication | object | No | Gets or sets the authentication. - [ServiceBusAuthentication object](#ServiceBusAuthentication) |
+|  authentication | object | No | Gets or sets the Service Bus authentication. - [ServiceBusAuthentication object](#ServiceBusAuthentication) |
 |  brokeredMessageProperties | object | No | Gets or sets the brokered message properties. - [ServiceBusBrokeredMessageProperties object](#ServiceBusBrokeredMessageProperties) |
 |  customMessageProperties | object | No | Gets or sets the custom message properties. |
 |  message | string | No | Gets or sets the message. |
@@ -281,7 +281,7 @@ The following tables describe the values you need to set in the schema.
 ### ServiceBusTopicMessage object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  authentication | object | No | Gets or sets the authentication. - [ServiceBusAuthentication object](#ServiceBusAuthentication) |
+|  authentication | object | No | Gets or sets the Service Bus authentication. - [ServiceBusAuthentication object](#ServiceBusAuthentication) |
 |  brokeredMessageProperties | object | No | Gets or sets the brokered message properties. - [ServiceBusBrokeredMessageProperties object](#ServiceBusBrokeredMessageProperties) |
 |  customMessageProperties | object | No | Gets or sets the custom message properties. |
 |  message | string | No | Gets or sets the message. |
@@ -295,7 +295,7 @@ The following tables describe the values you need to set in the schema.
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  retryType | enum | No | Gets or sets the retry strategy to be used. - None or Fixed |
-|  retryInterval | string | No | Gets or sets the retry interval between retries. |
+|  retryInterval | string | No | Gets or sets the retry interval between retries, specify duration in ISO 8601 format. |
 |  retryCount | integer | No | Gets or sets the number of times a retry should be attempted. |
 
 
@@ -326,7 +326,7 @@ The following tables describe the values you need to set in the schema.
 ### HttpAuthentication object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  type | enum | No | Gets or sets the http authentication type. - NotSpecified, ClientCertificate, ActiveDirectoryOAuth, Basic |
+|  type | enum | No | HttpAuthentication, ClientCertificate, Basic, ActiveDirectoryOAuth |
 
 
 <a id="ServiceBusAuthentication" />
@@ -343,15 +343,15 @@ The following tables describe the values you need to set in the schema.
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  contentType | string | No | Gets or sets the content type. |
-|  correlationId | string | No | Gets or sets the correlation id. |
+|  correlationId | string | No | Gets or sets the correlation ID. |
 |  forcePersistence | boolean | No | Gets or sets the force persistence. |
 |  label | string | No | Gets or sets the label. |
-|  messageId | string | No | Gets or sets the message id. |
+|  messageId | string | No | Gets or sets the message ID. |
 |  partitionKey | string | No | Gets or sets the partition key. |
 |  replyTo | string | No | Gets or sets the reply to. |
-|  replyToSessionId | string | No | Gets or sets the reply to session id. |
+|  replyToSessionId | string | No | Gets or sets the reply to session ID. |
 |  scheduledEnqueueTimeUtc | string | No | Gets or sets the scheduled enqueue time UTC. |
-|  sessionId | string | No | Gets or sets the session id. |
+|  sessionId | string | No | Gets or sets the session ID. |
 |  timeToLive | string | No | Gets or sets the time to live. |
 |  to | string | No | Gets or sets the to. |
 |  viaPartitionKey | string | No | Gets or sets the via partition key. |

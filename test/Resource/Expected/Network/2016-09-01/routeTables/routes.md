@@ -30,17 +30,17 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes |  |
 |  type | enum | Yes | Microsoft.Network/routeTables/routes |
 |  apiVersion | enum | Yes | 2016-09-01 |
-|  id | string | No | Resource Id |
+|  id | string | No | Resource ID. |
 |  properties | object | Yes | [RoutePropertiesFormat object](#RoutePropertiesFormat) |
-|  etag | string | No | A unique read-only string that changes whenever the resource is updated |
+|  etag | string | No | A unique read-only string that changes whenever the resource is updated. |
 
 
 <a id="RoutePropertiesFormat" />
 ### RoutePropertiesFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  addressPrefix | string | No | Gets or sets the destination CIDR to which the route applies. |
-|  nextHopType | enum | Yes | Gets or sets the type of Azure hop the packet should be sent to. - VirtualNetworkGateway, VnetLocal, Internet, VirtualAppliance, None |
-|  nextHopIpAddress | string | No | Gets or sets the IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance. |
-|  provisioningState | string | No | Gets provisioning state of the resource Updating/Deleting/Failed |
+|  addressPrefix | string | No | The destination CIDR to which the route applies. |
+|  nextHopType | enum | Yes | The type of Azure hop the packet should be sent to. Possible values are: 'VirtualNetworkGateway', 'VnetLocal', 'Internet', 'VirtualAppliance', and 'None'. - VirtualNetworkGateway, VnetLocal, Internet, VirtualAppliance, None |
+|  nextHopIpAddress | string | No | The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance. |
+|  provisioningState | string | No | The provisioning state of the resource. Possible values are: 'Updating', 'Deleting', and 'Failed'. |
 

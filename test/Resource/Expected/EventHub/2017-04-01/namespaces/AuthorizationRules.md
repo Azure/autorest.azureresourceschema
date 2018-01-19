@@ -1,0 +1,38 @@
+# Microsoft.EventHub/namespaces/AuthorizationRules template reference
+API Version: 2017-04-01
+## Template format
+
+To create a Microsoft.EventHub/namespaces/AuthorizationRules resource, add the following JSON to the resources section of your template.
+
+```json
+{
+  "name": "string",
+  "type": "Microsoft.EventHub/namespaces/AuthorizationRules",
+  "apiVersion": "2017-04-01",
+  "properties": {
+    "rights": [
+      "string"
+    ]
+  }
+}
+```
+## Property values
+
+The following tables describe the values you need to set in the schema.
+
+<a id="Microsoft.EventHub/namespaces/AuthorizationRules" />
+### Microsoft.EventHub/namespaces/AuthorizationRules object
+|  Name | Type | Required | Value |
+|  ---- | ---- | ---- | ---- |
+|  name | string | Yes | The authorization rule name. |
+|  type | enum | Yes | Microsoft.EventHub/namespaces/AuthorizationRules |
+|  apiVersion | enum | Yes | 2017-04-01 |
+|  properties | object | Yes | Properties supplied to create or update AuthorizationRule - [AuthorizationRuleProperties object](#AuthorizationRuleProperties) |
+
+
+<a id="AuthorizationRuleProperties" />
+### AuthorizationRuleProperties object
+|  Name | Type | Required | Value |
+|  ---- | ---- | ---- | ---- |
+|  rights | array | Yes | The rights associated with the rule. - Manage, Send, Listen |
+

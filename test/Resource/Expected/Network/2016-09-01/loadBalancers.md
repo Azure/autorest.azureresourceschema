@@ -254,260 +254,260 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes |  |
 |  type | enum | Yes | Microsoft.Network/loadBalancers |
 |  apiVersion | enum | Yes | 2016-09-01 |
-|  id | string | No | Resource Id |
-|  location | string | No | Resource location |
-|  tags | object | No | Resource tags |
+|  id | string | No | Resource ID. |
+|  location | string | No | Resource location. |
+|  tags | object | No | Resource tags. |
 |  properties | object | Yes | [LoadBalancerPropertiesFormat object](#LoadBalancerPropertiesFormat) |
-|  etag | string | No | Gets a unique read-only string that changes whenever the resource is updated |
+|  etag | string | No | A unique read-only string that changes whenever the resource is updated. |
 
 
 <a id="LoadBalancerPropertiesFormat" />
 ### LoadBalancerPropertiesFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  frontendIPConfigurations | array | No | Gets or sets frontend IP addresses of the load balancer - [FrontendIPConfiguration object](#FrontendIPConfiguration) |
-|  backendAddressPools | array | No | Gets or sets Pools of backend IP addresses - [BackendAddressPool object](#BackendAddressPool) |
-|  loadBalancingRules | array | No | Gets or sets load balancing rules - [LoadBalancingRule object](#LoadBalancingRule) |
-|  probes | array | No | Gets or sets list of Load balancer probes - [Probe object](#Probe) |
-|  inboundNatRules | array | No | Gets or sets list of inbound rules - [InboundNatRule object](#InboundNatRule) |
-|  inboundNatPools | array | No | Gets or sets inbound NAT pools - [InboundNatPool object](#InboundNatPool) |
-|  outboundNatRules | array | No | Gets or sets outbound NAT rules - [OutboundNatRule object](#OutboundNatRule) |
-|  resourceGuid | string | No | Gets or sets resource guid property of the Load balancer resource |
-|  provisioningState | string | No | Gets provisioning state of the PublicIP resource Updating/Deleting/Failed |
+|  frontendIPConfigurations | array | No | Object representing the frontend IPs to be used for the load balancer - [FrontendIPConfiguration object](#FrontendIPConfiguration) |
+|  backendAddressPools | array | No | Collection of backend address pools used by a load balancer - [BackendAddressPool object](#BackendAddressPool) |
+|  loadBalancingRules | array | No | Object collection representing the load balancing rules Gets the provisioning  - [LoadBalancingRule object](#LoadBalancingRule) |
+|  probes | array | No | Collection of probe objects used in the load balancer - [Probe object](#Probe) |
+|  inboundNatRules | array | No | Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to reference individual inbound NAT rules. - [InboundNatRule object](#InboundNatRule) |
+|  inboundNatPools | array | No | Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules. - [InboundNatPool object](#InboundNatPool) |
+|  outboundNatRules | array | No | The outbound NAT rules. - [OutboundNatRule object](#OutboundNatRule) |
+|  resourceGuid | string | No | The resource GUID property of the load balancer resource. |
+|  provisioningState | string | No | Gets the provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'. |
 
 
 <a id="FrontendIPConfiguration" />
 ### FrontendIPConfiguration object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  id | string | No | Resource Id |
+|  id | string | No | Resource ID. |
 |  properties | object | No | [FrontendIPConfigurationPropertiesFormat object](#FrontendIPConfigurationPropertiesFormat) |
-|  name | string | No | Gets name of the resource that is unique within a resource group. This name can be used to access the resource |
-|  etag | string | No | A unique read-only string that changes whenever the resource is updated |
+|  name | string | No | The name of the resource that is unique within a resource group. This name can be used to access the resource. |
+|  etag | string | No | A unique read-only string that changes whenever the resource is updated. |
 
 
 <a id="BackendAddressPool" />
 ### BackendAddressPool object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  id | string | No | Resource Id |
+|  id | string | No | Resource ID. |
 |  properties | object | No | [BackendAddressPoolPropertiesFormat object](#BackendAddressPoolPropertiesFormat) |
-|  name | string | No | Gets name of the resource that is unique within a resource group. This name can be used to access the resource |
-|  etag | string | No | A unique read-only string that changes whenever the resource is updated |
+|  name | string | No | Gets name of the resource that is unique within a resource group. This name can be used to access the resource. |
+|  etag | string | No | A unique read-only string that changes whenever the resource is updated. |
 
 
 <a id="LoadBalancingRule" />
 ### LoadBalancingRule object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  id | string | No | Resource Id |
+|  id | string | No | Resource ID. |
 |  properties | object | No | [LoadBalancingRulePropertiesFormat object](#LoadBalancingRulePropertiesFormat) |
-|  name | string | No | Gets name of the resource that is unique within a resource group. This name can be used to access the resource |
-|  etag | string | No | A unique read-only string that changes whenever the resource is updated |
+|  name | string | No | The name of the resource that is unique within a resource group. This name can be used to access the resource. |
+|  etag | string | No | A unique read-only string that changes whenever the resource is updated. |
 
 
 <a id="Probe" />
 ### Probe object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  id | string | No | Resource Id |
+|  id | string | No | Resource ID. |
 |  properties | object | No | [ProbePropertiesFormat object](#ProbePropertiesFormat) |
-|  name | string | No | Gets name of the resource that is unique within a resource group. This name can be used to access the resource |
-|  etag | string | No | A unique read-only string that changes whenever the resource is updated |
+|  name | string | No | Gets name of the resource that is unique within a resource group. This name can be used to access the resource. |
+|  etag | string | No | A unique read-only string that changes whenever the resource is updated. |
 
 
 <a id="InboundNatRule" />
 ### InboundNatRule object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  id | string | No | Resource Id |
+|  id | string | No | Resource ID. |
 |  properties | object | No | [InboundNatRulePropertiesFormat object](#InboundNatRulePropertiesFormat) |
-|  name | string | No | Gets name of the resource that is unique within a resource group. This name can be used to access the resource |
-|  etag | string | No | A unique read-only string that changes whenever the resource is updated |
+|  name | string | No | Gets name of the resource that is unique within a resource group. This name can be used to access the resource. |
+|  etag | string | No | A unique read-only string that changes whenever the resource is updated. |
 
 
 <a id="InboundNatPool" />
 ### InboundNatPool object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  id | string | No | Resource Id |
+|  id | string | No | Resource ID. |
 |  properties | object | No | [InboundNatPoolPropertiesFormat object](#InboundNatPoolPropertiesFormat) |
-|  name | string | No | Gets name of the resource that is unique within a resource group. This name can be used to access the resource |
-|  etag | string | No | A unique read-only string that changes whenever the resource is updated |
+|  name | string | No | The name of the resource that is unique within a resource group. This name can be used to access the resource. |
+|  etag | string | No | A unique read-only string that changes whenever the resource is updated. |
 
 
 <a id="OutboundNatRule" />
 ### OutboundNatRule object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  id | string | No | Resource Id |
+|  id | string | No | Resource ID. |
 |  properties | object | No | [OutboundNatRulePropertiesFormat object](#OutboundNatRulePropertiesFormat) |
-|  name | string | No | Gets name of the resource that is unique within a resource group. This name can be used to access the resource |
-|  etag | string | No | A unique read-only string that changes whenever the resource is updated |
+|  name | string | No | The name of the resource that is unique within a resource group. This name can be used to access the resource. |
+|  etag | string | No | A unique read-only string that changes whenever the resource is updated. |
 
 
 <a id="FrontendIPConfigurationPropertiesFormat" />
 ### FrontendIPConfigurationPropertiesFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  privateIPAddress | string | No | Gets or sets the privateIPAddress of the IP Configuration |
-|  privateIPAllocationMethod | enum | No | Gets or sets PrivateIP allocation method. - Static or Dynamic |
-|  subnet | object | No | Gets or sets the reference of the subnet resource - [Subnet object](#Subnet) |
-|  publicIPAddress | object | No | Gets or sets the reference of the PublicIP resource - [PublicIPAddress object](#PublicIPAddress) |
-|  provisioningState | string | No | Gets provisioning state of the PublicIP resource Updating/Deleting/Failed |
+|  privateIPAddress | string | No | The private IP address of the IP configuration. |
+|  privateIPAllocationMethod | enum | No | The Private IP allocation method. Possible values are: 'Static' and 'Dynamic'. - Static or Dynamic |
+|  subnet | object | No | The reference of the subnet resource. - [Subnet object](#Subnet) |
+|  publicIPAddress | object | No | The reference of the Public IP resource. - [PublicIPAddress object](#PublicIPAddress) |
+|  provisioningState | string | No | Gets the provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'. |
 
 
 <a id="BackendAddressPoolPropertiesFormat" />
 ### BackendAddressPoolPropertiesFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  provisioningState | string | No | Get provisioning state of the PublicIP resource Updating/Deleting/Failed |
+|  provisioningState | string | No | Get provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'. |
 
 
 <a id="LoadBalancingRulePropertiesFormat" />
 ### LoadBalancingRulePropertiesFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  frontendIPConfiguration | object | No | Gets or sets a reference to frontend IP Addresses - [SubResource object](#SubResource) |
-|  backendAddressPool | object | No | Gets or sets  a reference to a pool of DIPs. Inbound traffic is randomly load balanced across IPs in the backend IPs - [SubResource object](#SubResource) |
-|  probe | object | No | Gets or sets the reference of the load balancer probe used by the Load Balancing rule. - [SubResource object](#SubResource) |
-|  protocol | enum | Yes | Gets or sets the transport protocol for the external endpoint. Possible values are Udp or Tcp. - Udp or Tcp |
-|  loadDistribution | enum | No | Gets or sets the load distribution policy for this rule. - Default, SourceIP, SourceIPProtocol |
-|  frontendPort | integer | Yes | Gets or sets the port for the external endpoint. You can specify any port number you choose, but the port numbers specified for each role in the service must be unique. Possible values range between 1 and 65535, inclusive |
-|  backendPort | integer | No | Gets or sets a port used for internal connections on the endpoint. The localPort attribute maps the eternal port of the endpoint to an internal port on a role. This is useful in scenarios where a role must communicate to an internal component on a port that is different from the one that is exposed externally. If not specified, the value of localPort is the same as the port attribute. Set the value of localPort to '*' to automatically assign an unallocated port that is discoverable using the runtime API |
-|  idleTimeoutInMinutes | integer | No | Gets or sets the timeout for the Tcp idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to Tcp |
-|  enableFloatingIP | boolean | No | Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn availability Group. This setting is required when using the SQL Always ON availability Groups in SQL server. This setting can't be changed after you create the endpoint |
-|  provisioningState | string | No | Gets provisioning state of the PublicIP resource Updating/Deleting/Failed |
+|  frontendIPConfiguration | object | No | A reference to frontend IP addresses. - [SubResource object](#SubResource) |
+|  backendAddressPool | object | No | A reference to a pool of DIPs. Inbound traffic is randomly load balanced across IPs in the backend IPs. - [SubResource object](#SubResource) |
+|  probe | object | No | The reference of the load balancer probe used by the load balancing rule. - [SubResource object](#SubResource) |
+|  protocol | enum | Yes | The transport protocol for the external endpoint. Possible values are 'Udp' or 'Tcp'. - Udp or Tcp |
+|  loadDistribution | enum | No | The load distribution policy for this rule. Possible values are 'Default', 'SourceIP', and 'SourceIPProtocol'. - Default, SourceIP, SourceIPProtocol |
+|  frontendPort | integer | Yes | The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534. |
+|  backendPort | integer | No | The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.  |
+|  idleTimeoutInMinutes | integer | No | The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP. |
+|  enableFloatingIP | boolean | No | Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint. |
+|  provisioningState | string | No | Gets the provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'. |
 
 
 <a id="ProbePropertiesFormat" />
 ### ProbePropertiesFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  protocol | enum | Yes | Gets or sets the protocol of the end point. Possible values are http or Tcp. If Tcp is specified, a received ACK is required for the probe to be successful. If http is specified,a 200 OK response from the specifies URI is required for the probe to be successful. - Http or Tcp |
-|  port | integer | Yes | Gets or sets Port for communicating the probe. Possible values range from 1 to 65535, inclusive. |
-|  intervalInSeconds | integer | No | Gets or sets the interval, in seconds, for how frequently to probe the endpoint for health status. Typically, the interval is slightly less than half the allocated timeout period (in seconds) which allows two full probes before taking the instance out of rotation. The default value is 15, the minimum value is 5 |
-|  numberOfProbes | integer | No | Gets or sets the number of probes where if no response, will result in stopping further traffic from being delivered to the endpoint. This values allows endpoints to be taken out of rotation faster or slower than the typical times used in Azure.  |
-|  requestPath | string | No | Gets or sets the URI used for requesting health status from the VM. Path is required if a protocol is set to http. Otherwise, it is not allowed. There is no default value |
-|  provisioningState | string | No | Gets provisioning state of the PublicIP resource Updating/Deleting/Failed |
+|  protocol | enum | Yes | The protocol of the end point. Possible values are: 'Http' or 'Tcp'. If 'Tcp' is specified, a received ACK is required for the probe to be successful. If 'Http' is specified, a 200 OK response from the specifies URI is required for the probe to be successful. - Http or Tcp |
+|  port | integer | Yes | The port for communicating the probe. Possible values range from 1 to 65535, inclusive. |
+|  intervalInSeconds | integer | No | The interval, in seconds, for how frequently to probe the endpoint for health status. Typically, the interval is slightly less than half the allocated timeout period (in seconds) which allows two full probes before taking the instance out of rotation. The default value is 15, the minimum value is 5. |
+|  numberOfProbes | integer | No | The number of probes where if no response, will result in stopping further traffic from being delivered to the endpoint. This values allows endpoints to be taken out of rotation faster or slower than the typical times used in Azure. |
+|  requestPath | string | No | The URI used for requesting health status from the VM. Path is required if a protocol is set to http. Otherwise, it is not allowed. There is no default value. |
+|  provisioningState | string | No | Gets the provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'. |
 
 
 <a id="InboundNatRulePropertiesFormat" />
 ### InboundNatRulePropertiesFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  frontendIPConfiguration | object | No | Gets or sets a reference to frontend IP Addresses - [SubResource object](#SubResource) |
-|  protocol | enum | No | Gets or sets the transport protocol for the endpoint. Possible values are Udp or Tcp. - Udp or Tcp |
-|  frontendPort | integer | No | Gets or sets the port for the external endpoint. You can specify any port number you choose, but the port numbers specified for each role in the service must be unique. Possible values range between 1 and 65535, inclusive |
-|  backendPort | integer | No | Gets or sets a port used for internal connections on the endpoint. The localPort attribute maps the eternal port of the endpoint to an internal port on a role. This is useful in scenarios where a role must communicate to an internal component on a port that is different from the one that is exposed externally. If not specified, the value of localPort is the same as the port attribute. Set the value of localPort to '*' to automatically assign an unallocated port that is discoverable using the runtime API |
-|  idleTimeoutInMinutes | integer | No | Gets or sets the timeout for the Tcp idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to Tcp |
-|  enableFloatingIP | boolean | No | Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn availability Group. This setting is required when using the SQL Always ON availability Groups in SQL server. This setting can't be changed after you create the endpoint |
-|  provisioningState | string | No | Gets provisioning state of the PublicIP resource Updating/Deleting/Failed |
+|  frontendIPConfiguration | object | No | A reference to frontend IP addresses. - [SubResource object](#SubResource) |
+|  protocol | enum | No | The transport protocol for the endpoint. Possible values are: 'Udp' or 'Tcp'. - Udp or Tcp |
+|  frontendPort | integer | No | The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534. |
+|  backendPort | integer | No | The port used for the internal endpoint. Acceptable values range from 1 to 65535. |
+|  idleTimeoutInMinutes | integer | No | The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP. |
+|  enableFloatingIP | boolean | No | Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint. |
+|  provisioningState | string | No | Gets the provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'. |
 
 
 <a id="InboundNatPoolPropertiesFormat" />
 ### InboundNatPoolPropertiesFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  frontendIPConfiguration | object | No | Gets or sets a reference to frontend IP Addresses - [SubResource object](#SubResource) |
-|  protocol | enum | Yes | Gets or sets the transport protocol for the endpoint. Possible values are Udp or Tcp. - Udp or Tcp |
-|  frontendPortRangeStart | integer | Yes | Gets or sets the starting port range for the NAT pool. You can specify any port number you choose, but the port numbers specified for each role in the service must be unique. Possible values range between 1 and 65535, inclusive |
-|  frontendPortRangeEnd | integer | Yes | Gets or sets the ending port range for the NAT pool. You can specify any port number you choose, but the port numbers specified for each role in the service must be unique. Possible values range between 1 and 65535, inclusive |
-|  backendPort | integer | Yes | Gets or sets a port used for internal connections on the endpoint. The localPort attribute maps the eternal port of the endpoint to an internal port on a role. This is useful in scenarios where a role must communicate to an internal component on a port that is different from the one that is exposed externally. If not specified, the value of localPort is the same as the port attribute. Set the value of localPort to '*' to automatically assign an unallocated port that is discoverable using the runtime API |
-|  provisioningState | string | No | Gets provisioning state of the PublicIP resource Updating/Deleting/Failed |
+|  frontendIPConfiguration | object | No | A reference to frontend IP addresses. - [SubResource object](#SubResource) |
+|  protocol | enum | Yes | The transport protocol for the endpoint. Possible values are: 'Udp' or 'Tcp'. - Udp or Tcp |
+|  frontendPortRangeStart | integer | Yes | The first port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65534. |
+|  frontendPortRangeEnd | integer | Yes | The last port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65535. |
+|  backendPort | integer | Yes | The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535. |
+|  provisioningState | string | No | Gets the provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'. |
 
 
 <a id="OutboundNatRulePropertiesFormat" />
 ### OutboundNatRulePropertiesFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  allocatedOutboundPorts | integer | No | Gets or sets the number of outbound ports to be used for SNAT |
-|  frontendIPConfigurations | array | No | Gets or sets Frontend IP addresses of the load balancer - [SubResource object](#SubResource) |
-|  backendAddressPool | object | Yes | Gets or sets a reference to a pool of DIPs. Outbound traffic is randomly load balanced across IPs in the backend IPs - [SubResource object](#SubResource) |
-|  provisioningState | string | No | Gets provisioning state of the PublicIP resource Updating/Deleting/Failed |
+|  allocatedOutboundPorts | integer | No | The number of outbound ports to be used for NAT. |
+|  frontendIPConfigurations | array | No | The Frontend IP addresses of the load balancer. - [SubResource object](#SubResource) |
+|  backendAddressPool | object | Yes | A reference to a pool of DIPs. Outbound traffic is randomly load balanced across IPs in the backend IPs. - [SubResource object](#SubResource) |
+|  provisioningState | string | No | Gets the provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'. |
 
 
 <a id="Subnet" />
 ### Subnet object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  id | string | No | Resource Id |
+|  id | string | No | Resource ID. |
 |  properties | object | No | [SubnetPropertiesFormat object](#SubnetPropertiesFormat) |
-|  name | string | No | Gets or sets the name of the resource that is unique within a resource group. This name can be used to access the resource |
-|  etag | string | No | A unique read-only string that changes whenever the resource is updated |
+|  name | string | No | The name of the resource that is unique within a resource group. This name can be used to access the resource. |
+|  etag | string | No | A unique read-only string that changes whenever the resource is updated. |
 
 
 <a id="PublicIPAddress" />
 ### PublicIPAddress object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  id | string | No | Resource Id |
-|  location | string | No | Resource location |
-|  tags | object | No | Resource tags |
+|  id | string | No | Resource ID. |
+|  location | string | No | Resource location. |
+|  tags | object | No | Resource tags. |
 |  properties | object | No | [PublicIPAddressPropertiesFormat object](#PublicIPAddressPropertiesFormat) |
-|  etag | string | No | Gets a unique read-only string that changes whenever the resource is updated |
+|  etag | string | No | A unique read-only string that changes whenever the resource is updated. |
 
 
 <a id="SubResource" />
 ### SubResource object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  id | string | No | Resource Id |
+|  id | string | No | Resource ID. |
 
 
 <a id="SubnetPropertiesFormat" />
 ### SubnetPropertiesFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  addressPrefix | string | No | Gets or sets Address prefix for the subnet. |
-|  networkSecurityGroup | object | No | Gets or sets the reference of the NetworkSecurityGroup resource - [NetworkSecurityGroup object](#NetworkSecurityGroup) |
-|  routeTable | object | No | Gets or sets the reference of the RouteTable resource - [RouteTable object](#RouteTable) |
-|  resourceNavigationLinks | array | No | Gets array of references to the external resources using subnet - [ResourceNavigationLink object](#ResourceNavigationLink) |
-|  provisioningState | string | No | Gets provisioning state of the resource |
+|  addressPrefix | string | No | The address prefix for the subnet. |
+|  networkSecurityGroup | object | No | The reference of the NetworkSecurityGroup resource. - [NetworkSecurityGroup object](#NetworkSecurityGroup) |
+|  routeTable | object | No | The reference of the RouteTable resource. - [RouteTable object](#RouteTable) |
+|  resourceNavigationLinks | array | No | Gets an array of references to the external resources using subnet. - [ResourceNavigationLink object](#ResourceNavigationLink) |
+|  provisioningState | string | No | The provisioning state of the resource. |
 
 
 <a id="PublicIPAddressPropertiesFormat" />
 ### PublicIPAddressPropertiesFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  publicIPAllocationMethod | enum | No | Gets or sets PublicIP allocation method (Static/Dynamic). - Static or Dynamic |
-|  publicIPAddressVersion | enum | No | Gets or sets PublicIP address version (IPv4/IPv6). - IPv4 or IPv6 |
-|  dnsSettings | object | No | Gets or sets FQDN of the DNS record associated with the public IP address - [PublicIPAddressDnsSettings object](#PublicIPAddressDnsSettings) |
+|  publicIPAllocationMethod | enum | No | The public IP allocation method. Possible values are: 'Static' and 'Dynamic'. - Static or Dynamic |
+|  publicIPAddressVersion | enum | No | The public IP address version. Possible values are: 'IPv4' and 'IPv6'. - IPv4 or IPv6 |
+|  dnsSettings | object | No | The FQDN of the DNS record associated with the public IP address. - [PublicIPAddressDnsSettings object](#PublicIPAddressDnsSettings) |
 |  ipAddress | string | No |  |
-|  idleTimeoutInMinutes | integer | No | Gets or sets the Idletimeout of the public IP address |
-|  resourceGuid | string | No | Gets or sets resource guid property of the PublicIP resource |
-|  provisioningState | string | No | Gets provisioning state of the PublicIP resource Updating/Deleting/Failed |
+|  idleTimeoutInMinutes | integer | No | The idle timeout of the public IP address. |
+|  resourceGuid | string | No | The resource GUID property of the public IP resource. |
+|  provisioningState | string | No | The provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'. |
 
 
 <a id="NetworkSecurityGroup" />
 ### NetworkSecurityGroup object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  id | string | No | Resource Id |
-|  location | string | No | Resource location |
-|  tags | object | No | Resource tags |
+|  id | string | No | Resource ID. |
+|  location | string | No | Resource location. |
+|  tags | object | No | Resource tags. |
 |  properties | object | No | [NetworkSecurityGroupPropertiesFormat object](#NetworkSecurityGroupPropertiesFormat) |
-|  etag | string | No | Gets a unique read-only string that changes whenever the resource is updated |
+|  etag | string | No | A unique read-only string that changes whenever the resource is updated. |
 
 
 <a id="RouteTable" />
 ### RouteTable object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  id | string | No | Resource Id |
-|  location | string | No | Resource location |
-|  tags | object | No | Resource tags |
+|  id | string | No | Resource ID. |
+|  location | string | No | Resource location. |
+|  tags | object | No | Resource tags. |
 |  properties | object | No | [RouteTablePropertiesFormat object](#RouteTablePropertiesFormat) |
-|  etag | string | No | Gets a unique read-only string that changes whenever the resource is updated |
+|  etag | string | No | Gets a unique read-only string that changes whenever the resource is updated. |
 
 
 <a id="ResourceNavigationLink" />
 ### ResourceNavigationLink object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  id | string | No | Resource Id |
+|  id | string | No | Resource ID. |
 |  properties | object | No | [ResourceNavigationLinkFormat object](#ResourceNavigationLinkFormat) |
-|  name | string | No | Name of the resource that is unique within a resource group. This name can be used to access the resource |
+|  name | string | No | Name of the resource that is unique within a resource group. This name can be used to access the resource. |
 
 
 <a id="PublicIPAddressDnsSettings" />
@@ -523,25 +523,25 @@ The following tables describe the values you need to set in the schema.
 ### NetworkSecurityGroupPropertiesFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  securityRules | array | No | Gets or sets security rules of network security group - [SecurityRule object](#SecurityRule) |
-|  defaultSecurityRules | array | No | Gets or default security rules of network security group - [SecurityRule object](#SecurityRule) |
-|  resourceGuid | string | No | Gets or sets resource guid property of the network security group resource |
-|  provisioningState | string | No | Gets provisioning state of the PublicIP resource Updating/Deleting/Failed |
+|  securityRules | array | No | A collection of security rules of the network security group. - [SecurityRule object](#SecurityRule) |
+|  defaultSecurityRules | array | No | The default security rules of network security group. - [SecurityRule object](#SecurityRule) |
+|  resourceGuid | string | No | The resource GUID property of the network security group resource. |
+|  provisioningState | string | No | The provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'. |
 
 
 <a id="RouteTablePropertiesFormat" />
 ### RouteTablePropertiesFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  routes | array | No | Gets or sets Routes in a Route Table - [Route object](#Route) |
-|  provisioningState | string | No | Gets provisioning state of the resource Updating/Deleting/Failed |
+|  routes | array | No | Collection of routes contained within a route table. - [Route object](#Route) |
+|  provisioningState | string | No | The provisioning state of the resource. Possible values are: 'Updating', 'Deleting', and 'Failed'. |
 
 
 <a id="ResourceNavigationLinkFormat" />
 ### ResourceNavigationLinkFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  linkedResourceType | string | No | Resource type of the linked resource |
+|  linkedResourceType | string | No | Resource type of the linked resource. |
 |  link | string | No | Link to the external resource |
 
 
@@ -549,44 +549,44 @@ The following tables describe the values you need to set in the schema.
 ### SecurityRule object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  id | string | No | Resource Id |
+|  id | string | No | Resource ID. |
 |  properties | object | No | [SecurityRulePropertiesFormat object](#SecurityRulePropertiesFormat) |
-|  name | string | No | Gets name of the resource that is unique within a resource group. This name can be used to access the resource |
-|  etag | string | No | A unique read-only string that changes whenever the resource is updated |
+|  name | string | No | The name of the resource that is unique within a resource group. This name can be used to access the resource. |
+|  etag | string | No | A unique read-only string that changes whenever the resource is updated. |
 
 
 <a id="Route" />
 ### Route object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  id | string | No | Resource Id |
+|  id | string | No | Resource ID. |
 |  properties | object | No | [RoutePropertiesFormat object](#RoutePropertiesFormat) |
-|  name | string | No | Gets name of the resource that is unique within a resource group. This name can be used to access the resource |
-|  etag | string | No | A unique read-only string that changes whenever the resource is updated |
+|  name | string | No | The name of the resource that is unique within a resource group. This name can be used to access the resource. |
+|  etag | string | No | A unique read-only string that changes whenever the resource is updated. |
 
 
 <a id="SecurityRulePropertiesFormat" />
 ### SecurityRulePropertiesFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  description | string | No | Gets or sets a description for this rule. Restricted to 140 chars. |
-|  protocol | enum | Yes | Gets or sets Network protocol this rule applies to. Can be Tcp, Udp or All(*). - Tcp, Udp, * |
-|  sourcePortRange | string | No | Gets or sets Source Port or Range. Integer or range between 0 and 65535. Asterix '*' can also be used to match all ports. |
-|  destinationPortRange | string | No | Gets or sets Destination Port or Range. Integer or range between 0 and 65535. Asterix '*' can also be used to match all ports. |
-|  sourceAddressPrefix | string | Yes | Gets or sets source address prefix. CIDR or source IP range. Asterix '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from.  |
-|  destinationAddressPrefix | string | Yes | Gets or sets destination address prefix. CIDR or source IP range. Asterix '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used.  |
-|  access | enum | Yes | Gets or sets network traffic is allowed or denied. Possible values are 'Allow' and 'Deny'. - Allow or Deny |
-|  priority | integer | No | Gets or sets the priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule. |
-|  direction | enum | Yes | Gets or sets the direction of the rule.InBound or Outbound. The direction specifies if rule will be evaluated on incoming or outcoming traffic. - Inbound or Outbound |
-|  provisioningState | string | No | Gets provisioning state of the PublicIP resource Updating/Deleting/Failed |
+|  description | string | No | A description for this rule. Restricted to 140 chars. |
+|  protocol | enum | Yes | Network protocol this rule applies to. Possible values are 'Tcp', 'Udp', and '*'. - Tcp, Udp, * |
+|  sourcePortRange | string | No | The source port or range. Integer or range between 0 and 65535. Asterix '*' can also be used to match all ports. |
+|  destinationPortRange | string | No | The destination port or range. Integer or range between 0 and 65535. Asterix '*' can also be used to match all ports. |
+|  sourceAddressPrefix | string | Yes | The CIDR or source IP range. Asterix '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from.  |
+|  destinationAddressPrefix | string | Yes | The destination address prefix. CIDR or source IP range. Asterix '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. |
+|  access | enum | Yes | The network traffic is allowed or denied. Possible values are: 'Allow' and 'Deny'. - Allow or Deny |
+|  priority | integer | No | The priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule. |
+|  direction | enum | Yes | The direction of the rule. The direction specifies if rule will be evaluated on incoming or outcoming traffic. Possible values are: 'Inbound' and 'Outbound'. - Inbound or Outbound |
+|  provisioningState | string | No | The provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'. |
 
 
 <a id="RoutePropertiesFormat" />
 ### RoutePropertiesFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  addressPrefix | string | No | Gets or sets the destination CIDR to which the route applies. |
-|  nextHopType | enum | Yes | Gets or sets the type of Azure hop the packet should be sent to. - VirtualNetworkGateway, VnetLocal, Internet, VirtualAppliance, None |
-|  nextHopIpAddress | string | No | Gets or sets the IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance. |
-|  provisioningState | string | No | Gets provisioning state of the resource Updating/Deleting/Failed |
+|  addressPrefix | string | No | The destination CIDR to which the route applies. |
+|  nextHopType | enum | Yes | The type of Azure hop the packet should be sent to. Possible values are: 'VirtualNetworkGateway', 'VnetLocal', 'Internet', 'VirtualAppliance', and 'None'. - VirtualNetworkGateway, VnetLocal, Internet, VirtualAppliance, None |
+|  nextHopIpAddress | string | No | The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance. |
+|  provisioningState | string | No | The provisioning state of the resource. Possible values are: 'Updating', 'Deleting', and 'Failed'. |
 

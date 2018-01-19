@@ -39,24 +39,24 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes |  |
 |  type | enum | Yes | Microsoft.Network/publicIPAddresses |
 |  apiVersion | enum | Yes | 2016-09-01 |
-|  id | string | No | Resource Id |
-|  location | string | No | Resource location |
-|  tags | object | No | Resource tags |
+|  id | string | No | Resource ID. |
+|  location | string | No | Resource location. |
+|  tags | object | No | Resource tags. |
 |  properties | object | Yes | [PublicIPAddressPropertiesFormat object](#PublicIPAddressPropertiesFormat) |
-|  etag | string | No | Gets a unique read-only string that changes whenever the resource is updated |
+|  etag | string | No | A unique read-only string that changes whenever the resource is updated. |
 
 
 <a id="PublicIPAddressPropertiesFormat" />
 ### PublicIPAddressPropertiesFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  publicIPAllocationMethod | enum | No | Gets or sets PublicIP allocation method (Static/Dynamic). - Static or Dynamic |
-|  publicIPAddressVersion | enum | No | Gets or sets PublicIP address version (IPv4/IPv6). - IPv4 or IPv6 |
-|  dnsSettings | object | No | Gets or sets FQDN of the DNS record associated with the public IP address - [PublicIPAddressDnsSettings object](#PublicIPAddressDnsSettings) |
+|  publicIPAllocationMethod | enum | No | The public IP allocation method. Possible values are: 'Static' and 'Dynamic'. - Static or Dynamic |
+|  publicIPAddressVersion | enum | No | The public IP address version. Possible values are: 'IPv4' and 'IPv6'. - IPv4 or IPv6 |
+|  dnsSettings | object | No | The FQDN of the DNS record associated with the public IP address. - [PublicIPAddressDnsSettings object](#PublicIPAddressDnsSettings) |
 |  ipAddress | string | No |  |
-|  idleTimeoutInMinutes | integer | No | Gets or sets the Idletimeout of the public IP address |
-|  resourceGuid | string | No | Gets or sets resource guid property of the PublicIP resource |
-|  provisioningState | string | No | Gets provisioning state of the PublicIP resource Updating/Deleting/Failed |
+|  idleTimeoutInMinutes | integer | No | The idle timeout of the public IP address. |
+|  resourceGuid | string | No | The resource GUID property of the public IP resource. |
+|  provisioningState | string | No | The provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'. |
 
 
 <a id="PublicIPAddressDnsSettings" />

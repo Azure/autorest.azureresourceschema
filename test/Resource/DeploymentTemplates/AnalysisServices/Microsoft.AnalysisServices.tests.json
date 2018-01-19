@@ -1,0 +1,111 @@
+{
+  "tests": [
+    {
+      "name": "servers - Minimal",
+      "definition": "https://schema.management.azure.com/schemas/2016-05-16/Microsoft.AnalysisServices.json#/resourceDefinitions/servers",
+      "json": {
+        "type": "Microsoft.AnalysisServices/servers",
+        "name": "name",
+        "apiVersion": "2016-05-16",
+        "sku": {
+          "name": "S1"
+        },
+        "location": "westus",
+        "properties": {}
+      }
+    },
+    {
+      "name": "servers - Without type property",
+      "expectedErrors": [
+        {
+          "message": "Missing required property: type",
+          "dataPath": "/"
+        }
+      ],
+      "definition": "https://schema.management.azure.com/schemas/2016-05-16/Microsoft.AnalysisServices.json#/resourceDefinitions/servers",
+      "json": {
+        "name": "name",
+        "apiVersion": "2016-05-16",
+        "location": "westus",
+        "sku": {
+          "name": "S1"
+        },
+        "properties": {}
+      }
+    },
+    {
+      "name": "servers - Without api-version property",
+      "expectedErrors": [
+        {
+          "message": "Missing required property: apiVersion",
+          "dataPath": "/"
+        }
+      ],
+      "definition": "https://schema.management.azure.com/schemas/2016-05-16/Microsoft.AnalysisServices.json#/resourceDefinitions/servers",
+      "json": {
+        "type": "Microsoft.AnalysisServices/servers",
+        "name": "name",
+        "location": "westus",
+        "sku": {
+          "name": "S1"
+        },
+        "properties": {}
+      }
+    },
+    {
+      "name": "servers - Without location property",
+      "expectedErrors": [
+        {
+          "message": "Missing required property: location",
+          "dataPath": "/"
+        }
+      ],
+      "definition": "https://schema.management.azure.com/schemas/2016-05-16/Microsoft.AnalysisServices.json#/resourceDefinitions/servers",
+      "json": {
+        "type": "Microsoft.AnalysisServices/servers",
+        "name": "name",
+        "apiVersion": "2016-05-16",
+        "sku": {
+          "name": "S1"
+        },
+        "properties": {}
+      }
+    },
+    {
+      "name": "servers - Without sku property",
+      "expectedErrors": [
+        {
+          "message": "Missing required property: sku",
+          "dataPath": "/"
+        }
+      ],
+      "definition": "https://schema.management.azure.com/schemas/2016-05-16/Microsoft.AnalysisServices.json#/resourceDefinitions/servers",
+      "json": {
+        "type": "Microsoft.AnalysisServices/servers",
+        "name": "name",
+        "location": "westus",
+        "apiVersion": "2016-05-16",
+        "properties": {}
+      }
+    },
+    {
+      "name": "servers - Without properties property",
+      "expectedErrors": [
+        {
+          "message": "Missing required property: properties",
+          "dataPath": "/"
+        }
+      ],
+      "definition": "https://schema.management.azure.com/schemas/2016-05-16/Microsoft.AnalysisServices.json#/resourceDefinitions/servers",
+      "json": {
+        "type": "Microsoft.AnalysisServices/servers",
+        "name": "name",
+        "sku": {
+          "name": "S1"
+        },
+        "location": "westus",
+        "apiVersion": "2016-05-16"
+      }
+    }
+  ]
+}

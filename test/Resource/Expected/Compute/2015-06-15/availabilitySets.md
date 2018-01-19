@@ -18,15 +18,6 @@ To create a Microsoft.Compute/availabilitySets resource, add the following JSON 
       {
         "id": "string"
       }
-    ],
-    "statuses": [
-      {
-        "code": "string",
-        "level": "string",
-        "displayStatus": "string",
-        "message": "string",
-        "time": "string"
-      }
     ]
   }
 }
@@ -51,10 +42,9 @@ The following tables describe the values you need to set in the schema.
 ### AvailabilitySetProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  platformUpdateDomainCount | integer | No | Gets or sets Update Domain count. |
-|  platformFaultDomainCount | integer | No | Gets or sets Fault Domain count. |
-|  virtualMachines | array | No | Gets or sets a list containing reference to all Virtual Machines  created under this Availability Set. - [SubResource object](#SubResource) |
-|  statuses | array | No | Gets or sets the resource status information. - [InstanceViewStatus object](#InstanceViewStatus) |
+|  platformUpdateDomainCount | integer | No | Update Domain count. |
+|  platformFaultDomainCount | integer | No | Fault Domain count. |
+|  virtualMachines | array | No | A list of references to all virtual machines in the availability set. - [SubResource object](#SubResource) |
 
 
 <a id="SubResource" />
@@ -62,15 +52,4 @@ The following tables describe the values you need to set in the schema.
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  id | string | No | Resource Id |
-
-
-<a id="InstanceViewStatus" />
-### InstanceViewStatus object
-|  Name | Type | Required | Value |
-|  ---- | ---- | ---- | ---- |
-|  code | string | No | Gets the status Code. |
-|  level | enum | No | Gets or sets the level Code. - Info, Warning, Error |
-|  displayStatus | string | No | Gets or sets the short localizable label for the status. |
-|  message | string | No | Gets or sets the detailed Message, including for alerts and error messages. |
-|  time | string | No | Gets or sets the time of the status. |
 

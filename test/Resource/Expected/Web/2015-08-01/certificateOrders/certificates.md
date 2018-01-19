@@ -9,14 +9,12 @@ To create a Microsoft.CertificateRegistration/certificateOrders/certificates res
   "name": "string",
   "type": "Microsoft.CertificateRegistration/certificateOrders/certificates",
   "apiVersion": "2015-08-01",
-  "id": "string",
   "kind": "string",
   "location": "string",
   "tags": {},
   "properties": {
     "keyVaultId": "string",
-    "keyVaultSecretName": "string",
-    "provisioningState": "string"
+    "keyVaultSecretName": "string"
   }
 }
 ```
@@ -31,18 +29,16 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes |  |
 |  type | enum | Yes | Microsoft.CertificateRegistration/certificateOrders/certificates |
 |  apiVersion | enum | Yes | 2015-08-01 |
-|  id | string | No | Resource Id |
-|  kind | string | No | Kind of resource |
-|  location | string | Yes | Resource Location |
-|  tags | object | No | Resource tags |
-|  properties | object | Yes | [CertificateOrderCertificateProperties object](#CertificateOrderCertificateProperties) |
+|  kind | string | No | Kind of resource. |
+|  location | string | Yes | Resource Location. |
+|  tags | object | No | Resource tags. |
+|  properties | object | Yes | Core resource properties - [AppServiceCertificate object](#AppServiceCertificate) |
 
 
-<a id="CertificateOrderCertificateProperties" />
-### CertificateOrderCertificateProperties object
+<a id="AppServiceCertificate" />
+### AppServiceCertificate object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  keyVaultId | string | No | Key Vault Csm resource Id |
-|  keyVaultSecretName | string | No | Key Vault secret name |
-|  provisioningState | enum | No | Status of the Key Vault secret. - Initialized, WaitingOnCertificateOrder, Succeeded, CertificateOrderFailed, OperationNotPermittedOnKeyVault, AzureServiceUnauthorizedToAccessKeyVault, KeyVaultDoesNotExist, KeyVaultSecretDoesNotExist, UnknownError, Unknown |
+|  keyVaultId | string | No | Key Vault resource Id. |
+|  keyVaultSecretName | string | No | Key Vault secret name. |
 

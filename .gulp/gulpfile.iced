@@ -24,6 +24,8 @@ task 'init', "" ,(done)->
 
 # Run language-specific tests:
 task 'test', "more", [], (done) ->
+  await execute "node test/deploymentTemplates/testSchemasSchema.js", defer code, stderr, stdout
+  await execute "node test/deploymentTemplates/testSchemasMatch.js", defer code, stderr, stdout
   done();
 
 # CI job

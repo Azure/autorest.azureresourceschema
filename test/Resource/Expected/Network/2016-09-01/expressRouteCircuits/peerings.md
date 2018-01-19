@@ -53,40 +53,40 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes |  |
 |  type | enum | Yes | Microsoft.Network/expressRouteCircuits/peerings |
 |  apiVersion | enum | Yes | 2016-09-01 |
-|  id | string | No | Resource Id |
+|  id | string | No | Resource ID. |
 |  properties | object | Yes | [ExpressRouteCircuitPeeringPropertiesFormat object](#ExpressRouteCircuitPeeringPropertiesFormat) |
-|  etag | string | No | A unique read-only string that changes whenever the resource is updated |
+|  etag | string | No | A unique read-only string that changes whenever the resource is updated. |
 
 
 <a id="ExpressRouteCircuitPeeringPropertiesFormat" />
 ### ExpressRouteCircuitPeeringPropertiesFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  peeringType | enum | No | Gets or sets PeeringType. - AzurePublicPeering, AzurePrivatePeering, MicrosoftPeering |
-|  state | enum | No | Gets or sets state of Peering. - Disabled or Enabled |
-|  azureASN | integer | No | Gets or sets the azure ASN |
-|  peerASN | integer | No | Gets or sets the peer ASN |
-|  primaryPeerAddressPrefix | string | No | Gets or sets the primary address prefix |
-|  secondaryPeerAddressPrefix | string | No | Gets or sets the secondary address prefix |
-|  primaryAzurePort | string | No | Gets or sets the primary port |
-|  secondaryAzurePort | string | No | Gets or sets the secondary port |
-|  sharedKey | string | No | Gets or sets the shared key |
-|  vlanId | integer | No | Gets or sets the vlan id |
-|  microsoftPeeringConfig | object | No | Gets or sets the mircosoft peering config - [ExpressRouteCircuitPeeringConfig object](#ExpressRouteCircuitPeeringConfig) |
-|  stats | object | No | Gets or peering stats - [ExpressRouteCircuitStats object](#ExpressRouteCircuitStats) |
-|  provisioningState | string | No | Gets provisioning state of the PublicIP resource Updating/Deleting/Failed |
-|  gatewayManagerEtag | string | No | Gets or sets the GatewayManager Etag |
-|  lastModifiedBy | string | No | Gets whether the provider or the customer last modified the peering |
+|  peeringType | enum | No | The PeeringType. Possible values are: 'AzurePublicPeering', 'AzurePrivatePeering', and 'MicrosoftPeering'. - AzurePublicPeering, AzurePrivatePeering, MicrosoftPeering |
+|  state | enum | No | The state of peering. Possible values are: 'Disabled' and 'Enabled'. - Disabled or Enabled |
+|  azureASN | integer | No | The Azure ASN. |
+|  peerASN | integer | No | The peer ASN. |
+|  primaryPeerAddressPrefix | string | No | The primary address prefix. |
+|  secondaryPeerAddressPrefix | string | No | The secondary address prefix. |
+|  primaryAzurePort | string | No | The primary port. |
+|  secondaryAzurePort | string | No | The secondary port. |
+|  sharedKey | string | No | The shared key. |
+|  vlanId | integer | No | The VLAN ID. |
+|  microsoftPeeringConfig | object | No | The Microsoft peering configuration. - [ExpressRouteCircuitPeeringConfig object](#ExpressRouteCircuitPeeringConfig) |
+|  stats | object | No | Gets peering stats. - [ExpressRouteCircuitStats object](#ExpressRouteCircuitStats) |
+|  provisioningState | string | No | Gets the provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'. |
+|  gatewayManagerEtag | string | No | The GatewayManager Etag. |
+|  lastModifiedBy | string | No | Gets whether the provider or the customer last modified the peering. |
 
 
 <a id="ExpressRouteCircuitPeeringConfig" />
 ### ExpressRouteCircuitPeeringConfig object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  advertisedPublicPrefixes | array | No | Gets or sets the reference of AdvertisedPublicPrefixes - string |
-|  advertisedPublicPrefixesState | enum | No | Gets or sets AdvertisedPublicPrefixState of the Peering resource. - NotConfigured, Configuring, Configured, ValidationNeeded |
-|  customerASN | integer | No | Gets or Sets CustomerAsn of the peering. |
-|  routingRegistryName | string | No | Gets or Sets RoutingRegistryName of the config. |
+|  advertisedPublicPrefixes | array | No | The reference of AdvertisedPublicPrefixes. - string |
+|  advertisedPublicPrefixesState | enum | No | AdvertisedPublicPrefixState of the Peering resource. Possible values are 'NotConfigured', 'Configuring', 'Configured', and 'ValidationNeeded'. - NotConfigured, Configuring, Configured, ValidationNeeded |
+|  customerASN | integer | No | The CustomerASN of the peering. |
+|  routingRegistryName | string | No | The RoutingRegistryName of the configuration. |
 
 
 <a id="ExpressRouteCircuitStats" />

@@ -25,12 +25,12 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes |  |
 |  type | enum | Yes | Microsoft.DataLakeAnalytics/accounts/DataLakeStoreAccounts |
 |  apiVersion | enum | Yes | 2015-10-01-preview |
-|  properties | object | Yes | Gets or sets the properties for the Data Lake Store account being added. - [DataLakeStoreAccountInfoProperties object](#DataLakeStoreAccountInfoProperties) |
+|  properties | object | Yes | the properties for the Data Lake Store account being added. - [DataLakeStoreAccountInfoProperties object](#DataLakeStoreAccountInfoProperties) |
 
 
 <a id="DataLakeStoreAccountInfoProperties" />
 ### DataLakeStoreAccountInfoProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  suffix | string | No | Gets or sets the optional suffix for the Data Lake Store account. |
+|  suffix | string | No | the optional suffix for the Data Lake Store account. |
 
