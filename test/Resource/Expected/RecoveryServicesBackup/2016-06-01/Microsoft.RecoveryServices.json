@@ -134,21 +134,7 @@
   "definitions": {
     "AzureIaaSClassicComputeVMProtectedItem": {
       "type": "object",
-      "allOf": [
-        {}
-      ],
-      "description": "IaaS VM workload-specific backup item representing the classic VM."
-    },
-    "AzureIaaSComputeVMProtectedItem": {
-      "type": "object",
-      "allOf": [
-        {}
-      ],
-      "description": "IaaS VM workload-specific backup item representing the Resource Manager VM."
-    },
-    "AzureIaaSVMProtectedItem": {
-      "type": "object",
-      "allOf": [
+      "oneOf": [
         {
           "properties": {
             "protectedItemType": {
@@ -156,8 +142,6 @@
                 {
                   "type": "string",
                   "enum": [
-                    "AzureIaaSVMProtectedItem",
-                    "Microsoft.Compute/virtualMachines",
                     "Microsoft.ClassicCompute/virtualMachines"
                   ]
                 },
@@ -165,71 +149,153 @@
                   "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
                 }
               ]
-            },
-            "friendlyName": {
-              "type": "string",
-              "description": "The friendly name of the VM represented by this backup item."
-            },
-            "virtualMachineId": {
-              "type": "string",
-              "description": "The fully qualified Resource Manager ID of the virtual machine represented by this item."
-            },
-            "protectionStatus": {
-              "type": "string",
-              "description": "The backup status of this backup item."
-            },
-            "protectionState": {
+            }
+          }
+        }
+      ],
+      "description": "IaaS VM workload-specific backup item representing the classic VM."
+    },
+    "AzureIaaSComputeVMProtectedItem": {
+      "type": "object",
+      "oneOf": [
+        {
+          "properties": {
+            "protectedItemType": {
               "oneOf": [
                 {
                   "type": "string",
                   "enum": [
-                    "Invalid",
-                    "IRPending",
-                    "Protected",
-                    "ProtectionError",
-                    "ProtectionStopped",
-                    "ProtectionPaused"
+                    "Microsoft.Compute/virtualMachines"
                   ]
                 },
                 {
                   "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
                 }
-              ],
-              "description": "The backup state of this backup item."
-            },
-            "lastBackupStatus": {
-              "type": "string",
-              "description": "The last backup operation status. The possible values are: Healthy or Unhealthy."
-            },
-            "lastBackupTime": {
-              "type": "string",
-              "format": "date-time",
-              "description": "The timestamp of the last backup operation for this backup item."
-            },
-            "extendedInfo": {
+              ]
+            }
+          }
+        }
+      ],
+      "description": "IaaS VM workload-specific backup item representing the Resource Manager VM."
+    },
+    "AzureIaaSVMProtectedItem": {
+      "type": "object",
+      "oneOf": [
+        {
+          "properties": {
+            "protectedItemType": {
               "oneOf": [
                 {
-                  "$ref": "#/definitions/AzureIaaSVMProtectedItemExtendedInfo"
+                  "type": "string",
+                  "enum": [
+                    "AzureIaaSVMProtectedItem"
+                  ]
                 },
                 {
                   "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
                 }
-              ],
-              "description": "Additional information for this backup item."
+              ]
             }
           }
         },
         {
-          "anyOf": [
+          "allOf": [
             {
               "$ref": "#/definitions/AzureIaaSComputeVMProtectedItem"
-            },
+            }
+          ],
+          "properties": {
+            "protectedItemType": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "Microsoft.Compute/virtualMachines"
+                  ]
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "allOf": [
             {
               "$ref": "#/definitions/AzureIaaSClassicComputeVMProtectedItem"
             }
-          ]
+          ],
+          "properties": {
+            "protectedItemType": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "Microsoft.ClassicCompute/virtualMachines"
+                  ]
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                }
+              ]
+            }
+          }
         }
       ],
+      "properties": {
+        "friendlyName": {
+          "type": "string",
+          "description": "The friendly name of the VM represented by this backup item."
+        },
+        "virtualMachineId": {
+          "type": "string",
+          "description": "The fully qualified Resource Manager ID of the virtual machine represented by this item."
+        },
+        "protectionStatus": {
+          "type": "string",
+          "description": "The backup status of this backup item."
+        },
+        "protectionState": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "Invalid",
+                "IRPending",
+                "Protected",
+                "ProtectionError",
+                "ProtectionStopped",
+                "ProtectionPaused"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The backup state of this backup item."
+        },
+        "lastBackupStatus": {
+          "type": "string",
+          "description": "The last backup operation status. The possible values are: Healthy or Unhealthy."
+        },
+        "lastBackupTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The timestamp of the last backup operation for this backup item."
+        },
+        "extendedInfo": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/AzureIaaSVMProtectedItemExtendedInfo"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Additional information for this backup item."
+        }
+      },
       "description": "This Azure VM workload-specific (also known as IaaS VM workload-specific) backup item has been backed up."
     },
     "AzureIaaSVMProtectedItemExtendedInfo": {
@@ -267,78 +333,108 @@
     },
     "AzureIaaSVMProtectionPolicy": {
       "type": "object",
-      "allOf": [
+      "oneOf": [
         {
           "properties": {
-            "schedulePolicy": {
-              "oneOf": [
-                {
-                  "$ref": "#/definitions/SchedulePolicy"
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ],
-              "description": "The backup schedule specified as part of backup policy."
-            },
-            "retentionPolicy": {
-              "oneOf": [
-                {
-                  "$ref": "#/definitions/RetentionPolicy"
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ],
-              "description": "The retention policy with the details on backup copy retention ranges."
-            }
-          }
-        }
-      ],
-      "description": "Azure VM (also known as IaaS VM) workload-specific backup policy."
-    },
-    "AzureSqlProtectedItem": {
-      "type": "object",
-      "allOf": [
-        {
-          "properties": {
-            "protectedItemDataId": {
-              "type": "string",
-              "description": "The internal ID of a backup item. The internal ID is used by the Azure SQL Backup engine to contact Recovery Services."
-            },
-            "protectionState": {
+            "backupManagementType": {
               "oneOf": [
                 {
                   "type": "string",
                   "enum": [
-                    "Invalid",
-                    "IRPending",
-                    "Protected",
-                    "ProtectionError",
-                    "ProtectionStopped",
-                    "ProtectionPaused"
+                    "AzureIaasVM"
                   ]
                 },
                 {
                   "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
                 }
-              ],
-              "description": "The backup state of the backup item."
-            },
-            "extendedInfo": {
-              "oneOf": [
-                {
-                  "$ref": "#/definitions/AzureSqlProtectedItemExtendedInfo"
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ],
-              "description": "Additional information for this backup item."
+              ]
             }
           }
         }
       ],
+      "properties": {
+        "schedulePolicy": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SchedulePolicy"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The backup schedule specified as part of backup policy."
+        },
+        "retentionPolicy": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/RetentionPolicy"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The retention policy with the details on backup copy retention ranges."
+        }
+      },
+      "description": "Azure VM (also known as IaaS VM) workload-specific backup policy."
+    },
+    "AzureSqlProtectedItem": {
+      "type": "object",
+      "oneOf": [
+        {
+          "properties": {
+            "protectedItemType": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "Microsoft.Sql/servers/databases"
+                  ]
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "properties": {
+        "protectedItemDataId": {
+          "type": "string",
+          "description": "The internal ID of a backup item. The internal ID is used by the Azure SQL Backup engine to contact Recovery Services."
+        },
+        "protectionState": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "Invalid",
+                "IRPending",
+                "Protected",
+                "ProtectionError",
+                "ProtectionStopped",
+                "ProtectionPaused"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The backup state of the backup item."
+        },
+        "extendedInfo": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/AzureSqlProtectedItemExtendedInfo"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Additional information for this backup item."
+        }
+      },
       "description": "This is an Azure SQL workload-specific backup item."
     },
     "AzureSqlProtectedItemExtendedInfo": {
@@ -369,23 +465,38 @@
     },
     "AzureSqlProtectionPolicy": {
       "type": "object",
-      "allOf": [
+      "oneOf": [
         {
           "properties": {
-            "retentionPolicy": {
+            "backupManagementType": {
               "oneOf": [
                 {
-                  "$ref": "#/definitions/RetentionPolicy"
+                  "type": "string",
+                  "enum": [
+                    "AzureSql"
+                  ]
                 },
                 {
                   "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
                 }
-              ],
-              "description": "The retention policy details."
+              ]
             }
           }
         }
       ],
+      "properties": {
+        "retentionPolicy": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/RetentionPolicy"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The retention policy details."
+        }
+      },
       "description": " The Azure SQL workload-specific backup policy."
     },
     "DailyRetentionFormat": {
@@ -467,110 +578,156 @@
     },
     "LongTermRetentionPolicy": {
       "type": "object",
-      "allOf": [
+      "oneOf": [
         {
           "properties": {
-            "dailySchedule": {
+            "retentionPolicyType": {
               "oneOf": [
                 {
-                  "$ref": "#/definitions/DailyRetentionSchedule"
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ],
-              "description": "Daily retention schedule of the backup policy."
-            },
-            "weeklySchedule": {
-              "oneOf": [
-                {
-                  "$ref": "#/definitions/WeeklyRetentionSchedule"
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ],
-              "description": "Weekly retention schedule of the backup policy."
-            },
-            "monthlySchedule": {
-              "oneOf": [
-                {
-                  "$ref": "#/definitions/MonthlyRetentionSchedule"
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ],
-              "description": "Monthly retention schedule of the backup policy."
-            },
-            "yearlySchedule": {
-              "oneOf": [
-                {
-                  "$ref": "#/definitions/YearlyRetentionSchedule"
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ],
-              "description": "Yearly retention schedule of the backup policy."
-            }
-          }
-        }
-      ],
-      "description": "Long-term retention policy."
-    },
-    "LongTermSchedulePolicy": {
-      "type": "object",
-      "allOf": [
-        {}
-      ],
-      "description": "Long-term policy schedule."
-    },
-    "MabFileFolderProtectedItem": {
-      "type": "object",
-      "allOf": [
-        {
-          "properties": {
-            "friendlyName": {
-              "type": "string",
-              "description": "The friendly name of this backup item."
-            },
-            "computerName": {
-              "type": "string",
-              "description": "The name of the computer associated with this backup item."
-            },
-            "lastBackupStatus": {
-              "type": "string",
-              "description": "The status of last backup operation."
-            },
-            "protectionState": {
-              "type": "string",
-              "description": "The states for this property are: Protected, ProtectionStopped, IRPending, or ProtectionError."
-            },
-            "isScheduledForDeferredDelete": {
-              "oneOf": [
-                {
-                  "type": "boolean"
+                  "type": "string",
+                  "enum": [
+                    "LongTermRetentionPolicy"
+                  ]
                 },
                 {
                   "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
                 }
               ]
-            },
-            "extendedInfo": {
-              "oneOf": [
-                {
-                  "$ref": "#/definitions/MabFileFolderProtectedItemExtendedInfo"
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ],
-              "description": "Additional information for this backup item."
             }
           }
         }
       ],
+      "properties": {
+        "dailySchedule": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DailyRetentionSchedule"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Daily retention schedule of the backup policy."
+        },
+        "weeklySchedule": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/WeeklyRetentionSchedule"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Weekly retention schedule of the backup policy."
+        },
+        "monthlySchedule": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/MonthlyRetentionSchedule"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Monthly retention schedule of the backup policy."
+        },
+        "yearlySchedule": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/YearlyRetentionSchedule"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Yearly retention schedule of the backup policy."
+        }
+      },
+      "description": "Long-term retention policy."
+    },
+    "LongTermSchedulePolicy": {
+      "type": "object",
+      "oneOf": [
+        {
+          "properties": {
+            "schedulePolicyType": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "LongTermSchedulePolicy"
+                  ]
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "description": "Long-term policy schedule."
+    },
+    "MabFileFolderProtectedItem": {
+      "type": "object",
+      "oneOf": [
+        {
+          "properties": {
+            "protectedItemType": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "MabFileFolderProtectedItem"
+                  ]
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "properties": {
+        "friendlyName": {
+          "type": "string",
+          "description": "The friendly name of this backup item."
+        },
+        "computerName": {
+          "type": "string",
+          "description": "The name of the computer associated with this backup item."
+        },
+        "lastBackupStatus": {
+          "type": "string",
+          "description": "The status of last backup operation."
+        },
+        "protectionState": {
+          "type": "string",
+          "description": "The states for this property are: Protected, ProtectionStopped, IRPending, or ProtectionError."
+        },
+        "isScheduledForDeferredDelete": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ]
+        },
+        "extendedInfo": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/MabFileFolderProtectedItemExtendedInfo"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Additional information for this backup item."
+        }
+      },
       "description": "This is a file or folder workload-specific backup item."
     },
     "MabFileFolderProtectedItemExtendedInfo": {
@@ -602,34 +759,49 @@
     },
     "MabProtectionPolicy": {
       "type": "object",
-      "allOf": [
+      "oneOf": [
         {
           "properties": {
-            "schedulePolicy": {
+            "backupManagementType": {
               "oneOf": [
                 {
-                  "$ref": "#/definitions/SchedulePolicy"
+                  "type": "string",
+                  "enum": [
+                    "MAB"
+                  ]
                 },
                 {
                   "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
                 }
-              ],
-              "description": "The schedule specified in the backup policy."
-            },
-            "retentionPolicy": {
-              "oneOf": [
-                {
-                  "$ref": "#/definitions/RetentionPolicy"
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ],
-              "description": "The details specified in the Retention policy."
+              ]
             }
           }
         }
       ],
+      "properties": {
+        "schedulePolicy": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SchedulePolicy"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The schedule specified in the backup policy."
+        },
+        "retentionPolicy": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/RetentionPolicy"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The details specified in the Retention policy."
+        }
+      },
       "description": "The backup policy for the file or folder container."
     },
     "MonthlyRetentionSchedule": {
@@ -703,7 +875,7 @@
     },
     "ProtectedItem": {
       "type": "object",
-      "allOf": [
+      "oneOf": [
         {
           "properties": {
             "protectedItemType": {
@@ -711,93 +883,143 @@
                 {
                   "type": "string",
                   "enum": [
-                    "ProtectedItem",
-                    "AzureIaaSVMProtectedItem",
-                    "MabFileFolderProtectedItem",
-                    "Microsoft.Sql/servers/databases",
-                    "Microsoft.Compute/virtualMachines",
-                    "Microsoft.ClassicCompute/virtualMachines"
+                    "ProtectedItem"
                   ]
                 },
                 {
                   "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
                 }
               ]
-            },
-            "backupManagementType": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "Invalid",
-                    "AzureIaasVM",
-                    "MAB",
-                    "DPM",
-                    "AzureBackupServer",
-                    "AzureSql"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ],
-              "description": "The backup managemenent type associated with the backup item."
-            },
-            "workloadType": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "Invalid",
-                    "VM",
-                    "FileFolder",
-                    "AzureSqlDb",
-                    "SQLDB",
-                    "Exchange",
-                    "Sharepoint",
-                    "DPMUnknown"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ],
-              "description": "The workload type for this item."
-            },
-            "sourceResourceId": {
-              "type": "string",
-              "description": "The ID of the resource to be backed up."
-            },
-            "policyId": {
-              "type": "string",
-              "description": "The ID of the backup policy associated with this backup item."
-            },
-            "lastRecoveryPoint": {
-              "type": "string",
-              "format": "date-time",
-              "description": "The timestamp when the most recent backup copy was created for this backup item."
             }
           }
         },
         {
-          "anyOf": [
+          "allOf": [
             {
               "$ref": "#/definitions/AzureIaaSVMProtectedItem"
-            },
+            }
+          ],
+          "properties": {
+            "protectedItemType": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "AzureIaaSVMProtectedItem"
+                  ]
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "allOf": [
             {
               "$ref": "#/definitions/MabFileFolderProtectedItem"
-            },
+            }
+          ],
+          "properties": {
+            "protectedItemType": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "MabFileFolderProtectedItem"
+                  ]
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "allOf": [
             {
               "$ref": "#/definitions/AzureSqlProtectedItem"
             }
-          ]
+          ],
+          "properties": {
+            "protectedItemType": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "Microsoft.Sql/servers/databases"
+                  ]
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                }
+              ]
+            }
+          }
         }
       ],
+      "properties": {
+        "backupManagementType": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "Invalid",
+                "AzureIaasVM",
+                "MAB",
+                "DPM",
+                "AzureBackupServer",
+                "AzureSql"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The backup managemenent type associated with the backup item."
+        },
+        "workloadType": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "Invalid",
+                "VM",
+                "FileFolder",
+                "AzureSqlDb",
+                "SQLDB",
+                "Exchange",
+                "Sharepoint",
+                "DPMUnknown"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The workload type for this item."
+        },
+        "sourceResourceId": {
+          "type": "string",
+          "description": "The ID of the resource to be backed up."
+        },
+        "policyId": {
+          "type": "string",
+          "description": "The ID of the backup policy associated with this backup item."
+        },
+        "lastRecoveryPoint": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The timestamp when the most recent backup copy was created for this backup item."
+        }
+      },
       "description": "The base class for backup items."
     },
     "ProtectionPolicy": {
       "type": "object",
-      "allOf": [
+      "oneOf": [
         {
           "properties": {
             "backupManagementType": {
@@ -805,9 +1027,72 @@
                 {
                   "type": "string",
                   "enum": [
-                    "ProtectionPolicy",
-                    "AzureIaasVM",
-                    "MAB",
+                    "ProtectionPolicy"
+                  ]
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "allOf": [
+            {
+              "$ref": "#/definitions/AzureIaaSVMProtectionPolicy"
+            }
+          ],
+          "properties": {
+            "backupManagementType": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "AzureIaasVM"
+                  ]
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "allOf": [
+            {
+              "$ref": "#/definitions/MabProtectionPolicy"
+            }
+          ],
+          "properties": {
+            "backupManagementType": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "MAB"
+                  ]
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "allOf": [
+            {
+              "$ref": "#/definitions/AzureSqlProtectionPolicy"
+            }
+          ],
+          "properties": {
+            "backupManagementType": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
                     "AzureSql"
                   ]
                 },
@@ -815,34 +1100,23 @@
                   "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
                 }
               ]
-            },
-            "protectedItemsCount": {
-              "oneOf": [
-                {
-                  "type": "integer"
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ],
-              "description": "The number of items associated with this policy."
             }
           }
-        },
-        {
-          "anyOf": [
-            {
-              "$ref": "#/definitions/AzureIaaSVMProtectionPolicy"
-            },
-            {
-              "$ref": "#/definitions/MabProtectionPolicy"
-            },
-            {
-              "$ref": "#/definitions/AzureSqlProtectionPolicy"
-            }
-          ]
         }
       ],
+      "properties": {
+        "protectedItemsCount": {
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The number of items associated with this policy."
+        }
+      },
       "description": "The base class for a backup policy. Workload-specific backup policies are derived from this class."
     },
     "RetentionDuration": {
@@ -882,7 +1156,7 @@
     },
     "RetentionPolicy": {
       "type": "object",
-      "allOf": [
+      "oneOf": [
         {
           "properties": {
             "retentionPolicyType": {
@@ -890,8 +1164,50 @@
                 {
                   "type": "string",
                   "enum": [
-                    "RetentionPolicy",
-                    "SimpleRetentionPolicy",
+                    "RetentionPolicy"
+                  ]
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "allOf": [
+            {
+              "$ref": "#/definitions/SimpleRetentionPolicy"
+            }
+          ],
+          "properties": {
+            "retentionPolicyType": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "SimpleRetentionPolicy"
+                  ]
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "allOf": [
+            {
+              "$ref": "#/definitions/LongTermRetentionPolicy"
+            }
+          ],
+          "properties": {
+            "retentionPolicyType": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
                     "LongTermRetentionPolicy"
                   ]
                 },
@@ -901,23 +1217,13 @@
               ]
             }
           }
-        },
-        {
-          "anyOf": [
-            {
-              "$ref": "#/definitions/SimpleRetentionPolicy"
-            },
-            {
-              "$ref": "#/definitions/LongTermRetentionPolicy"
-            }
-          ]
         }
       ],
       "description": "The base class for retention policy."
     },
     "SchedulePolicy": {
       "type": "object",
-      "allOf": [
+      "oneOf": [
         {
           "properties": {
             "schedulePolicyType": {
@@ -925,9 +1231,7 @@
                 {
                   "type": "string",
                   "enum": [
-                    "SchedulePolicy",
-                    "LongTermSchedulePolicy",
-                    "SimpleSchedulePolicy"
+                    "SchedulePolicy"
                   ]
                 },
                 {
@@ -938,111 +1242,175 @@
           }
         },
         {
-          "anyOf": [
+          "allOf": [
             {
               "$ref": "#/definitions/LongTermSchedulePolicy"
-            },
+            }
+          ],
+          "properties": {
+            "schedulePolicyType": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "LongTermSchedulePolicy"
+                  ]
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "allOf": [
             {
               "$ref": "#/definitions/SimpleSchedulePolicy"
             }
-          ]
+          ],
+          "properties": {
+            "schedulePolicyType": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "SimpleSchedulePolicy"
+                  ]
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                }
+              ]
+            }
+          }
         }
       ],
       "description": "The base class for backup schedules."
     },
     "SimpleRetentionPolicy": {
       "type": "object",
-      "allOf": [
+      "oneOf": [
         {
           "properties": {
-            "retentionDuration": {
-              "oneOf": [
-                {
-                  "$ref": "#/definitions/RetentionDuration"
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ],
-              "description": "Retention duration of the protection policy."
-            }
-          }
-        }
-      ],
-      "description": "Simple policy retention."
-    },
-    "SimpleSchedulePolicy": {
-      "type": "object",
-      "allOf": [
-        {
-          "properties": {
-            "scheduleRunFrequency": {
+            "retentionPolicyType": {
               "oneOf": [
                 {
                   "type": "string",
                   "enum": [
-                    "Invalid",
-                    "Daily",
-                    "Weekly"
+                    "SimpleRetentionPolicy"
                   ]
                 },
                 {
                   "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
                 }
-              ],
-              "description": "Defines the frequency interval (daily or weekly) for the schedule policy."
-            },
-            "scheduleRunDays": {
-              "oneOf": [
-                {
-                  "type": "array",
-                  "items": {
-                    "type": "string",
-                    "enum": [
-                      "Sunday",
-                      "Monday",
-                      "Tuesday",
-                      "Wednesday",
-                      "Thursday",
-                      "Friday",
-                      "Saturday"
-                    ]
-                  }
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ],
-              "description": "This list is the days of the week when the schedule runs."
-            },
-            "scheduleRunTimes": {
-              "oneOf": [
-                {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ],
-              "description": "List of times, during a day, when the schedule runs."
-            },
-            "scheduleWeeklyFrequency": {
-              "oneOf": [
-                {
-                  "type": "integer"
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ],
-              "description": "The number of times per week the schedule runs."
+              ]
             }
           }
         }
       ],
+      "properties": {
+        "retentionDuration": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/RetentionDuration"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Retention duration of the protection policy."
+        }
+      },
+      "description": "Simple policy retention."
+    },
+    "SimpleSchedulePolicy": {
+      "type": "object",
+      "oneOf": [
+        {
+          "properties": {
+            "schedulePolicyType": {
+              "oneOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "SimpleSchedulePolicy"
+                  ]
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "properties": {
+        "scheduleRunFrequency": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "Invalid",
+                "Daily",
+                "Weekly"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Defines the frequency interval (daily or weekly) for the schedule policy."
+        },
+        "scheduleRunDays": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "Sunday",
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday"
+                ]
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "This list is the days of the week when the schedule runs."
+        },
+        "scheduleRunTimes": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "List of times, during a day, when the schedule runs."
+        },
+        "scheduleWeeklyFrequency": {
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The number of times per week the schedule runs."
+        }
+      },
       "description": "Simple policy schedule."
     },
     "WeeklyRetentionFormat": {

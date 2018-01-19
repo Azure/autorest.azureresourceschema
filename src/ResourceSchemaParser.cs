@@ -311,65 +311,45 @@ namespace AutoRest.AzureResourceSchema
                 // definition.
                 definitions.Add(definitionName, definition);
 
-                JsonSchema baseTypeDefinition;
-
-                string discriminatorPropertyName = compositeType.BasePolymorphicDiscriminator;
-                if (string.IsNullOrWhiteSpace(discriminatorPropertyName))
-                {
-                    baseTypeDefinition = definition;
-                }
-                else
-                {
-                    baseTypeDefinition = new JsonSchema();
-                    definition.AddAllOf(baseTypeDefinition);
-
-                    JsonSchema derivedTypeDefinitionRefs = new JsonSchema();
-
-                    Func<CompositeType, bool> isSubType = null;
-                    isSubType = type => type == compositeType || (type.BaseModelType is CompositeType baseType && isSubType(baseType));
-                    CompositeType[] subTypes = modelTypes.Where(isSubType).ToArray();
-                    if (subTypes.Length > 1)
-                    {
-                        JsonSchema discriminatorDefinition = new JsonSchema()
-                        {
-                            JsonType = "string"
-                        };
-
-                        foreach (CompositeType subType in subTypes)
-                        {
-                            if (subType != null)
-                            {
-                                if (subType.BaseModelType == compositeType)
-                                {
-                                    // Sub-types are never referenced directly in the Swagger
-                                    // discriminator scenario, so they wouldn't be added to the
-                                    // produced resource schema. By calling ParseCompositeType() on the
-                                    // sub-type we add the sub-type to the resource schema.
-                                    ParseCompositeType(null, subType, false, definitions, modelTypes);
-
-                                    derivedTypeDefinitionRefs.AddAnyOf(new JsonSchema()
-                                    {
-                                        Ref = "#/definitions/" + subType.Name,
-                                    });
-                                }
-
-                                discriminatorDefinition.AddEnum(subType.SerializedName);
-                            }
-                        }
-
-                        baseTypeDefinition.AddProperty(discriminatorPropertyName, discriminatorDefinition);
-
-                        definition.AddAllOf(derivedTypeDefinitionRefs);
-                    }
-                }
-
                 IEnumerable<Property> compositeTypeProperties = includeBaseModelTypeProperties ? compositeType.ComposedProperties : compositeType.Properties;
                 foreach (Property subProperty in compositeTypeProperties)
                 {
                     JsonSchema subPropertyDefinition = ParseType(subProperty, subProperty.ModelType, definitions, modelTypes);
                     if (subPropertyDefinition != null)
                     {
-                        baseTypeDefinition.AddProperty(subProperty.SerializedName.Else(subProperty.Name.RawValue) , subPropertyDefinition, subProperty.IsRequired);
+                        definition.AddProperty(subProperty.SerializedName.Else(subProperty.Name.RawValue), subPropertyDefinition, subProperty.IsRequired);
+                    }
+                }
+
+                string discriminatorPropertyName = compositeType.BasePolymorphicDiscriminator;
+                if (!string.IsNullOrWhiteSpace(discriminatorPropertyName))
+                {
+                    Func<CompositeType, bool> isSubTypeOrSelf = type => type == compositeType || type.BaseModelType == compositeType;
+                    CompositeType[] subTypes = modelTypes.Where(isSubTypeOrSelf).ToArray();
+
+                    foreach (CompositeType subType in subTypes)
+                    {
+                        JsonSchema derivedTypeDefinitionRef = new JsonSchema();
+
+                        JsonSchema discriminatorDefinition = new JsonSchema() { JsonType = "string" };
+                        discriminatorDefinition.AddEnum(subType.SerializedName);
+                        derivedTypeDefinitionRef.AddProperty(discriminatorPropertyName, discriminatorDefinition);
+
+                        if (subType != compositeType)
+                        {
+                            // Sub-types are never referenced directly in the Swagger
+                            // discriminator scenario, so they wouldn't be added to the
+                            // produced resource schema. By calling ParseCompositeType() on the
+                            // sub-type we add the sub-type to the resource schema.
+                            ParseCompositeType(null, subType, false, definitions, modelTypes);
+
+                            derivedTypeDefinitionRef.AddAllOf(new JsonSchema()
+                            {
+                                Ref = "#/definitions/" + subType.Name,
+                            });
+                        }
+
+                        definition.AddOneOf(derivedTypeDefinitionRef);
                     }
                 }
             }

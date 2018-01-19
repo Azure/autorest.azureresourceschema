@@ -14,9 +14,7 @@ To create a Microsoft.Scheduler/jobCollections/jobs resource, add the following 
     "action": {
       "type": "string",
       "request": {
-        "authentication": {
-          "type": "string"
-        },
+        "authentication": {},
         "uri": "string",
         "method": "string",
         "body": "string",
@@ -90,9 +88,7 @@ To create a Microsoft.Scheduler/jobCollections/jobs resource, add the following 
       "errorAction": {
         "type": "string",
         "request": {
-          "authentication": {
-            "type": "string"
-          },
+          "authentication": {},
           "uri": "string",
           "method": "string",
           "body": "string",
@@ -320,13 +316,6 @@ The following tables describe the values you need to set in the schema.
 |  minutes | array | No | Gets or sets the minutes of the hour that the job should execute at. - integer |
 |  monthDays | array | No | Gets or sets the days of the month that the job should execute on. Must be between 1 and 31. - integer |
 |  monthlyOccurrences | array | No | Gets or sets the occurrences of days within a month. - [JobRecurrenceScheduleMonthlyOccurrence object](#JobRecurrenceScheduleMonthlyOccurrence) |
-
-
-<a id="HttpAuthentication" />
-### HttpAuthentication object
-|  Name | Type | Required | Value |
-|  ---- | ---- | ---- | ---- |
-|  type | enum | No | HttpAuthentication, ClientCertificate, Basic, ActiveDirectoryOAuth |
 
 
 <a id="ServiceBusAuthentication" />

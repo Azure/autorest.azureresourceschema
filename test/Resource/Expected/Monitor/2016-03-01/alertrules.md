@@ -16,16 +16,12 @@ To create a microsoft.insights/alertrules resource, add the following JSON to th
     "description": "string",
     "isEnabled": boolean,
     "condition": {
-      "odata.type": "string",
       "dataSource": {
-        "odata.type": "string",
         "resourceUri": "string"
       }
     },
     "actions": [
-      {
-        "odata.type": "string"
-      }
+      {}
     ]
   }
 }
@@ -61,21 +57,12 @@ The following tables describe the values you need to set in the schema.
 ### RuleCondition object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  odata.type | enum | No | RuleCondition, Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition, Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition, Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition |
 |  dataSource | object | No | the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource. - [RuleDataSource object](#RuleDataSource) |
-
-
-<a id="RuleAction" />
-### RuleAction object
-|  Name | Type | Required | Value |
-|  ---- | ---- | ---- | ---- |
-|  odata.type | enum | No | RuleAction, Microsoft.Azure.Management.Insights.Models.RuleEmailAction, Microsoft.Azure.Management.Insights.Models.RuleWebhookAction |
 
 
 <a id="RuleDataSource" />
 ### RuleDataSource object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  odata.type | enum | No | RuleDataSource, Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource, Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource |
 |  resourceUri | string | No | the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule. |
 

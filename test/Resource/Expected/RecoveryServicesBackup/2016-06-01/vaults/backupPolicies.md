@@ -14,7 +14,6 @@ To create a Microsoft.RecoveryServices/vaults/backupPolicies resource, add the f
   "tags": {},
   "eTag": "string",
   "properties": {
-    "backupManagementType": "string",
     "protectedItemsCount": "integer"
   }
 }
@@ -41,6 +40,5 @@ The following tables describe the values you need to set in the schema.
 ### ProtectionPolicy object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  backupManagementType | enum | No | ProtectionPolicy, AzureIaasVM, MAB, AzureSql |
 |  protectedItemsCount | integer | No | The number of items associated with this policy. |
 

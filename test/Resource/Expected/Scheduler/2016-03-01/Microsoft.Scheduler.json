@@ -112,79 +112,124 @@
   "definitions": {
     "BasicAuthentication": {
       "type": "object",
-      "allOf": [
-        {
-          "properties": {
-            "username": {
-              "type": "string",
-              "description": "Gets or sets the username."
-            },
-            "password": {
-              "type": "string",
-              "description": "Gets or sets the password, return value will always be empty."
-            }
-          }
-        }
-      ]
-    },
-    "ClientCertAuthentication": {
-      "type": "object",
-      "allOf": [
-        {
-          "properties": {
-            "password": {
-              "type": "string",
-              "description": "Gets or sets the certificate password, return value will always be empty."
-            },
-            "pfx": {
-              "type": "string",
-              "description": "Gets or sets the pfx certificate. Accepts certification in base64 encoding, return value will always be empty."
-            },
-            "certificateThumbprint": {
-              "type": "string",
-              "description": "Gets or sets the certificate thumbprint."
-            },
-            "certificateExpirationDate": {
-              "type": "string",
-              "format": "date-time",
-              "description": "Gets or sets the certificate expiration date."
-            },
-            "certificateSubjectName": {
-              "type": "string",
-              "description": "Gets or sets the certificate subject name."
-            }
-          }
-        }
-      ]
-    },
-    "HttpAuthentication": {
-      "type": "object",
-      "allOf": [
+      "oneOf": [
         {
           "properties": {
             "type": {
               "type": "string",
               "enum": [
-                "HttpAuthentication",
-                "ClientCertificate",
-                "Basic",
-                "ActiveDirectoryOAuth"
+                "Basic"
+              ]
+            }
+          }
+        }
+      ],
+      "properties": {
+        "username": {
+          "type": "string",
+          "description": "Gets or sets the username."
+        },
+        "password": {
+          "type": "string",
+          "description": "Gets or sets the password, return value will always be empty."
+        }
+      }
+    },
+    "ClientCertAuthentication": {
+      "type": "object",
+      "oneOf": [
+        {
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "ClientCertificate"
+              ]
+            }
+          }
+        }
+      ],
+      "properties": {
+        "password": {
+          "type": "string",
+          "description": "Gets or sets the certificate password, return value will always be empty."
+        },
+        "pfx": {
+          "type": "string",
+          "description": "Gets or sets the pfx certificate. Accepts certification in base64 encoding, return value will always be empty."
+        },
+        "certificateThumbprint": {
+          "type": "string",
+          "description": "Gets or sets the certificate thumbprint."
+        },
+        "certificateExpirationDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Gets or sets the certificate expiration date."
+        },
+        "certificateSubjectName": {
+          "type": "string",
+          "description": "Gets or sets the certificate subject name."
+        }
+      }
+    },
+    "HttpAuthentication": {
+      "type": "object",
+      "oneOf": [
+        {
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "HttpAuthentication"
               ]
             }
           }
         },
         {
-          "anyOf": [
+          "allOf": [
             {
               "$ref": "#/definitions/ClientCertAuthentication"
-            },
+            }
+          ],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "ClientCertificate"
+              ]
+            }
+          }
+        },
+        {
+          "allOf": [
             {
               "$ref": "#/definitions/BasicAuthentication"
-            },
+            }
+          ],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "Basic"
+              ]
+            }
+          }
+        },
+        {
+          "allOf": [
             {
               "$ref": "#/definitions/OAuthAuthentication"
             }
-          ]
+          ],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "ActiveDirectoryOAuth"
+              ]
+            }
+          }
         }
       ]
     },
@@ -768,28 +813,36 @@
     },
     "OAuthAuthentication": {
       "type": "object",
-      "allOf": [
+      "oneOf": [
         {
           "properties": {
-            "secret": {
+            "type": {
               "type": "string",
-              "description": "Gets or sets the secret, return value will always be empty."
-            },
-            "tenant": {
-              "type": "string",
-              "description": "Gets or sets the tenant."
-            },
-            "audience": {
-              "type": "string",
-              "description": "Gets or sets the audience."
-            },
-            "clientId": {
-              "type": "string",
-              "description": "Gets or sets the client identifier."
+              "enum": [
+                "ActiveDirectoryOAuth"
+              ]
             }
           }
         }
-      ]
+      ],
+      "properties": {
+        "secret": {
+          "type": "string",
+          "description": "Gets or sets the secret, return value will always be empty."
+        },
+        "tenant": {
+          "type": "string",
+          "description": "Gets or sets the tenant."
+        },
+        "audience": {
+          "type": "string",
+          "description": "Gets or sets the audience."
+        },
+        "clientId": {
+          "type": "string",
+          "description": "Gets or sets the client identifier."
+        }
+      }
     },
     "RetryPolicy": {
       "type": "object",
