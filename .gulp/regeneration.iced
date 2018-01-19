@@ -52,7 +52,6 @@ task 'regenerate', '', (done) ->
       'IotHub': { folder: 'iothub', tags: [ 'package-2017-07', 'package-2017-01', 'package-2016-02' ] },
       'KeyVault': { folder: 'keyvault', tags: [ 'package-2016-10', 'package-2015-06' ] },
       'Logic': { folder: 'logic', tags: [ 'package-2016-06', 'package-2015-08-preview', 'package-2015-02-preview' ] },
-      'MobileEngagement': { folder: 'mobileengagement', tags: [ 'package-2014-12' ] },
       'Monitor': { folder: 'monitor', tags: [ 'package-2017-09', 'package-2017-08' ] },
       'Network': { folder: 'network', tags: [ 'package-2017-10', 'package-2017-09', 'package-2017-08', 'package-2017-06', 'package-2017-03', 'package-2016-12', 'package-2016-09', 'package-2016-06', 'package-2016-03' ] },
       'NotificationHubs': { folder: 'notificationhubs', tags: [ 'package-2017-04', 'package-2016-03', 'package-2014-09' ] },

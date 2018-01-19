@@ -37,6 +37,7 @@ for (const schemaFilePath of schemaFilePaths) {
                 const error = validationResult.errors[errorIndex];
                 console.log(chalk.red(`        ${errorIndex + 1}. Error at "${error.dataPath}" - ${error.message}`));
             }
+            throw "failure";
         }
         else {
             console.log(chalk.green("        Passed"));

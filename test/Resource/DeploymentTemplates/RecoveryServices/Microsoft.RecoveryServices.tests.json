@@ -1,0 +1,56 @@
+{
+  "tests": [
+    {
+      "name": "vaults - Minimal",
+      "definition": "https://schema.management.azure.com/schemas/2016-06-01/Microsoft.RecoveryServices.json#/resourceDefinitions/vaults",
+      "json": {
+        "type": "Microsoft.RecoveryServices/vaults",
+        "apiVersion": "2016-06-01",
+        "location": "West US",
+        "name": "name",
+        "sku": {
+          "name": "RS0",
+          "tier": "Standard"
+        },
+        "properties": {}
+      }
+    },
+    {
+      "name": "vaults - Without api-version property",
+      "expectedErrors": [
+        {
+          "message": "Missing required property: apiVersion",
+          "dataPath": "/",
+          "schemaPath": "/required/2"
+        }
+      ],
+      "definition": "https://schema.management.azure.com/schemas/2016-06-01/Microsoft.RecoveryServices.json#/resourceDefinitions/vaults",
+      "json": {
+        "type": "Microsoft.RecoveryServices/vaults",
+        "location": "West Us",
+        "name": "name",
+        "sku": {
+          "name": "RS0",
+          "tier": "Standard"
+        },
+        "properties": {}
+      }
+    },
+    {
+      "name": "vaults - Without location property",
+      "expectedErrors": [
+        {
+          "message": "Missing required property: location",
+          "dataPath": "/"
+        }
+      ],
+      "definition": "https://schema.management.azure.com/schemas/2016-06-01/Microsoft.RecoveryServices.json#/resourceDefinitions/vaults",
+      "json": {
+        "type": "Microsoft.RecoveryServices/vaults",
+        "apiVersion": "2016-06-01",
+        "name": "name",
+        "properties": {}
+      }
+    }
+  ]
+}
