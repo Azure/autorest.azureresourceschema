@@ -27,7 +27,7 @@ regenExpected = (opts,done) ->
 task 'regenerate', '', (done) ->
   regenExpected {
     'outputDir': 'test/Resource/Expected',
-    'inputBaseDir': 'https://github.com/Azure/azure-rest-api-specs/blob/olydis-patches/specification',
+    'inputBaseDir': 'https://github.com/Azure/azure-rest-api-specs/blob/ee4507de8c2ba506fb8a7a9decff67691ed4d336/specification',
     'mappings': {
       'Advisor': { folder: 'advisor', tags: [ 'package-2017-04', 'package-2017-03', 'package-2016-07-preview' ] },
       'AnalysisServices': { folder: 'analysisservices', tags: [ 'package-2017-08-beta', 'package-2017-07', 'package-2016-05' ] },
@@ -68,7 +68,7 @@ task 'regenerate', '', (done) ->
       'ServiceFabric': { folder: 'servicefabric', tags: [ 'package-2017-07', 'package-2016-09' ] },
       'Storage': { folder: 'storage', tags: [ 'package-2017-10', 'package-2017-06', 'package-2016-12', 'package-2016-05', 'package-2016-01', 'package-2015-06', 'package-2015-05-preview' ] },
       'TrafficManager': { folder: 'trafficmanager', tags: [ 'package-2017-09-preview', 'package-2017-05', 'package-2017-03', 'package-2015-11' ] },
-      'Web': { folder: 'web', tags: [ 'package-2016-09', 'package-2015-08-preview' ] }
+      'Web': { folder: 'web', tags: [ 'package-2016-09' ] }
     },
     'language': 'azureresourceschema'
   },done
