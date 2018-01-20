@@ -11,7 +11,6 @@ To create a Microsoft.ServiceFabric/clusters/applications/services resource, add
   "apiVersion": "2017-07-01-preview",
   "location": "string",
   "properties": {
-    "serviceKind": "string",
     "placementConstraints": "string",
     "correlationScheme": [
       {
@@ -29,13 +28,16 @@ To create a Microsoft.ServiceFabric/clusters/applications/services resource, add
       }
     ],
     "servicePlacementPolicies": [
-      {}
+      {
+        "Type": "string"
+      }
     ],
     "defaultMoveCost": "string",
     "serviceTypeName": "string",
     "partitionDescription": {
       "PartitionScheme": "string"
-    }
+    },
+    "serviceKind": "string"
   }
 }
 ```
@@ -58,7 +60,6 @@ The following tables describe the values you need to set in the schema.
 ### ServiceProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  serviceKind | enum | No | ServiceProperties, Stateless, Stateful |
 |  placementConstraints | string | No | The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)". |
 |  correlationScheme | array | No | [ServiceCorrelationDescription object](#ServiceCorrelationDescription) |
 |  serviceLoadMetrics | array | No | [ServiceLoadMetricDescription object](#ServiceLoadMetricDescription) |
@@ -66,6 +67,7 @@ The following tables describe the values you need to set in the schema.
 |  defaultMoveCost | enum | No | Zero, Low, Medium, High |
 |  serviceTypeName | string | No | The name of the service type |
 |  partitionDescription | object | No | [PartitionSchemeDescription object](#PartitionSchemeDescription) |
+|  serviceKind | string | Yes |  |
 
 
 <a id="ServiceCorrelationDescription" />
@@ -91,11 +93,12 @@ The following tables describe the values you need to set in the schema.
 ### ServicePlacementPolicyDescription object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
+|  Type | string | Yes |  |
 
 
 <a id="PartitionSchemeDescription" />
 ### PartitionSchemeDescription object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  PartitionScheme | enum | No | PartitionSchemeDescription, Named, Singleton, UniformInt64Range |
+|  PartitionScheme | string | Yes |  |
 
