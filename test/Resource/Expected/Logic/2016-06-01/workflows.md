@@ -9,20 +9,15 @@ To create a Microsoft.Logic/workflows resource, add the following JSON to the re
   "name": "string",
   "type": "Microsoft.Logic/workflows",
   "apiVersion": "2016-06-01",
-  "id": "string",
   "location": "string",
   "tags": {},
   "properties": {
     "state": "string",
     "sku": {
       "name": "string",
-      "plan": {
-        "id": "string"
-      }
+      "plan": {}
     },
-    "integrationAccount": {
-      "id": "string"
-    },
+    "integrationAccount": {},
     "definition": {},
     "parameters": {}
   }
@@ -39,7 +34,6 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes |  |
 |  type | enum | Yes | Microsoft.Logic/workflows |
 |  apiVersion | enum | Yes | 2016-06-01 |
-|  id | string | No | The resource id. |
 |  location | string | No | The resource location. |
 |  tags | object | No | The resource tags. |
 |  properties | object | Yes | The workflow properties. - [WorkflowProperties object](#WorkflowProperties) |
@@ -60,13 +54,6 @@ The following tables describe the values you need to set in the schema.
 ### Sku object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  name | enum | No | The name. - NotSpecified, Free, Shared, Basic, Standard, Premium |
+|  name | enum | Yes | The name. - NotSpecified, Free, Shared, Basic, Standard, Premium |
 |  plan | object | No | The reference to plan. - [ResourceReference object](#ResourceReference) |
-
-
-<a id="ResourceReference" />
-### ResourceReference object
-|  Name | Type | Required | Value |
-|  ---- | ---- | ---- | ---- |
-|  id | string | No | The resource id. |
 

@@ -9,12 +9,16 @@ To create a Microsoft.RecoveryServices/vaults resource, add the following JSON t
   "name": "string",
   "type": "Microsoft.RecoveryServices/vaults",
   "apiVersion": "2016-06-01",
+  "eTag": "string",
   "location": "string",
+  "tags": {},
+  "properties": {
+    "upgradeDetails": {}
+  },
   "sku": {
     "name": "string"
   },
-  "tags": {},
-  "properties": {}
+  "resources": []
 }
 ```
 ## Property values
@@ -28,10 +32,19 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes | The name of the recovery services vault. |
 |  type | enum | Yes | Microsoft.RecoveryServices/vaults |
 |  apiVersion | enum | Yes | 2016-06-01 |
-|  location | string | No | Resource Location |
-|  sku | object | No | [Sku object](#Sku) |
-|  tags | object | No | Resource Tags |
+|  eTag | string | No | Optional ETag. |
+|  location | string | Yes | Resource location. |
+|  tags | object | No | Resource tags. |
 |  properties | object | Yes | [VaultProperties object](#VaultProperties) |
+|  sku | object | No | [Sku object](#Sku) |
+|  resources | array | No | [certificates](./vaults/certificates.md) |
+
+
+<a id="VaultProperties" />
+### VaultProperties object
+|  Name | Type | Required | Value |
+|  ---- | ---- | ---- | ---- |
+|  upgradeDetails | object | No | [UpgradeDetails object](#UpgradeDetails) |
 
 
 <a id="Sku" />

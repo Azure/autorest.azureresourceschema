@@ -4,74 +4,77 @@
 # Instead: have bunch of configuration files sitting in a well-known spot, discover them, feed them to AutoRest, done.
 
 regenExpected = (opts,done) ->
-  outputDir = if !!opts.outputBaseDir then "#{opts.outputBaseDir}/#{opts.outputDir}" else opts.outputDir
   keys = Object.getOwnPropertyNames(opts.mappings)
   instances = keys.length
 
   for kkey in keys
-    optsMappingsValue = opts.mappings[kkey]
+    value = opts.mappings[kkey]
     key = kkey.trim();
-    
-    swaggerFiles = (if optsMappingsValue instanceof Array then optsMappingsValue[0] else optsMappingsValue).split(";")
+
     args = [
-      "--#{opts.language}",
-      # "--clear-output-folder", # run multiple times on same folders (API version nests)
-      "--output-folder=#{outputDir}/#{key}",
-      "--license-header=#{if !!opts.header then opts.header else 'MICROSOFT_MIT_NO_VERSION'}"
+      "--#{opts.language}.output-folder=#{__dirname}/../#{opts.outputDir}/#{key}",
+      "--title=title"
     ]
 
-    for swaggerFile in swaggerFiles
-      args.push("--input-file=#{if !!opts.inputBaseDir then "#{opts.inputBaseDir}/#{swaggerFile}" else swaggerFile}")
+    if value.file
+      args.push("--input-file=#{value.file}")
+    else
+      args.push("#{opts.inputBaseDir}/#{value.folder}/resource-manager/readme.md")
 
-    autorest args,() =>
-      instances--
-      return done() if instances is 0 
+    for tag in value.tags
+      args2 = args.slice()
+      args2.push("--tag=#{tag}")
+      autorest args2,() =>
+        instances--
+        return done() if instances is 0 
 
 task 'regenerate', '', (done) ->
   regenExpected {
-    'outputBaseDir': 'test',
-    'inputBaseDir': 'test/Resource/Swagger',
+    'outputDir': 'test/Resource/Expected',
+    'inputBaseDir': 'https://github.com/Azure/azure-rest-api-specs/blob/ee4507de8c2ba506fb8a7a9decff67691ed4d336/specification',
     'mappings': {
-      'ApiManagement':'ApiManagement/2016-07-07/apimanagement.json',
-      'Batch':'Batch/2015-12-01/BatchManagement.json',
-      'CDN':'CDN/2015-06-01/cdn.json',
-      'CDN ':'CDN/2016-04-02/cdn.json',
-      'CognitiveServices':'CognitiveServices/2016-02-01-preview/cognitiveservices.json',
-      'CommitmentPlans':'CommitmentPlans/2016-05-01-preview/commitmentPlans.json',
-      'Compute':'Compute/2015-06-15/compute.json',
-      'Compute ':'Compute/2016-03-30/compute.json',
-      'ContainerService':'ContainerService/2016-03-30/containerService.json',
-      'DataLakeAnalytics':'DataLakeAnalytics/2015-10-01-preview/account.json',
-      'DataLakeStore':'DataLakeStore/2015-10-01-preview/account.json',
-      'DevTestLabs':'DevTestLabs/2015-05-21-preview/DTL.json',
-      'DNS':'DNS/2015-05-04-preview/dns.json',
-      'DNS ':'DNS/2016-04-01/dns.json',
-      'Insights':'Insights/2016-03-01/insightsManagementClient.json',
-      'Logic':'Logic/2015-02-01-preview/logic.json',
-      'Logic ':'Logic/2016-06-01/logic.json',
-      'MachineLearning':'MachineLearning/2016-05-01-preview/webservices.json',
-      'MobileEngagement':'MobileEngagement/2014-12-01/mobile-engagement.json',
-      'Network':'Network/2015-05-01-preview/network.json',
-      'Network ':'Network/2015-06-15/network.json',
-      'Network  ':'Network/2016-03-30/network.json',
-      'Network   ':'Network/2016-09-01/network.json',
-      'NotificationHubs':'NotificationHubs/2016-03-01/notificationhubs.json',
-      'PowerBIEmbedded':'PowerBIEmbedded/2016-01-29/powerbiembedded.json',
-      'RecoveryServices':'RecoveryServices/2016-06-01/recoveryservices.json',
-      'Redis':'Redis/2016-04-01/redis.json',
-      'Resources/Locks':'Resources/Locks/2016-09-01/locks.json',
-      'Resources/Resources':'Resources/Resources/2016-09-01/resources.json',
-      'Scheduler':'Scheduler/2016-03-01/scheduler.json',
-      'Search':'Search/2015-02-28/search.json',
-      'ServerManagement':'ServerManagement/2016-07-01-preview/servermanagement.json',
-      'ServiceBus':'ServiceBus/2015-08-01/servicebus.json',
-      'Storage':'Storage/2015-05-01-preview/storage.json',
-      'Storage ':'Storage/2015-06-15/storage.json',
-      'Storage  ':'Storage/2016-01-01/storage.json',
-      'TrafficManager':'TrafficManager/2015-11-01/trafficmanager.json',
-      'Web':'Web/2015-08-01/web.json'
+      # 'Advisor': { folder: 'advisor', tags: [ 'package-2017-04', 'package-2017-03', 'package-2016-07-preview' ] },
+      'AnalysisServices': { folder: 'analysisservices', tags: [ 'package-2017-08-beta', 'package-2017-07', 'package-2016-05' ] },
+      'ApiManagement': { folder: 'apimanagement', tags: [ 'package-2017-03', 'package-2016-10' ] },
+      # 'ApplicationInsights': { folder: 'applicationinsights', tags: [ 'package-2015-05' ] },
+      # 'Authorization': { folder: 'authorization', tags: [ 'package-2015-07', 'package-2017-10-01-preview' ] },
+      'Automation': { folder: 'automation', tags: [ 'package-2015-10', 'package-2017-05-preview' ] },
+      'Batch': { folder: 'batch', tags: [ 'package-2017-09', 'package-2017-05', 'package-2017-01', 'package-2015-12' ] },
+      # 'CDN': { folder: 'cdn', tags: [ 'package-2017-04', 'package-2016-10', 'package-2016-04', 'package-2015-06' ] },
+      # 'CognitiveServices': { folder: 'cognitiveservices', tags: [ 'package-2017-04', 'package-2016-02-preview' ] },
+      'Compute': { folder: 'compute', tags: [ 'package-compute-only-2017-12', 'package-skus-2017-09', 'package-2017-03', 'package-2016-04-preview', 'package-2016-03', 'package-2015-06-preview' ] },
+      # 'Consumption': { folder: 'consumption', tags: [ 'package-2017-11', 'package-2017-04-preview', 'package-2017-12-preview' ] },
+      'ContainerRegistry': { folder: 'containerregistry', tags: [ 'package-2017-10', 'package-2017-06-preview', 'package-2017-03', 'package-2016-06-preview' ] },
+      # 'ContainerService': { folder: 'containerservices', tags: [ 'package-2017-09', 'package-2017-08', 'package-2017-07' ] },
+      'CustomerInsights': { folder: 'customer-insights', tags: [ 'package-2017-04', 'package-2017-01' ] },
+      # 'DataLakeAnalytics': { folder: 'datalake-analytics', tags: [ 'package-2016-11', 'package-2015-10-preview' ] },
+      # 'DataLakeStore': { folder: 'datalake-store', tags: [ 'package-2016-11', 'package-2015-10-preview' ] },
+      'DevTestLabs': { folder: 'devtestlabs', tags: [ 'package-2016-05', 'package-2015-05-preview' ] },
+      # 'DNS': { folder: 'dns', tags: [ 'package-2017-09', 'package-2016-04', 'package-2015-05-preview' ] },
+      # 'DomainServices': { folder: 'domainservices', tags: [ 'package-2017-06', 'package-2017-01' ] },
+      'EventHub': { folder: 'eventhub', tags: [ 'package-2017-04', 'package-2015-08' ] },
+      # 'IotHub': { folder: 'iothub', tags: [ 'package-2017-07', 'package-2017-01', 'package-2016-02' ] },
+      # 'KeyVault': { folder: 'keyvault', tags: [ 'package-2016-10', 'package-2015-06' ] },
+      'Logic': { folder: 'logic', tags: [ 'package-2016-06', 'package-2015-08-preview', 'package-2015-02-preview' ] },
+      # 'Monitor': { folder: 'monitor', tags: [ 'package-2017-09' ] },
+      'Network': { folder: 'network', tags: [ 'package-2017-10', 'package-2017-09', 'package-2017-08', 'package-2017-06', 'package-2017-03', 'package-2016-12', 'package-2016-09', 'package-2016-06', 'package-2016-03' ] },
+      # 'NotificationHubs': { folder: 'notificationhubs', tags: [ 'package-2017-04', 'package-2016-03', 'package-2014-09' ] },
+      # 'PowerBIEmbedded': { folder: 'powerbiembedded', tags: [ 'package-2016-01' ] },
+      # 'ProvisioningServices': { folder: 'provisioningservices', tags: [ 'package-2017-08', 'package-2017-11' ] },
+      'RecoveryServices': { folder: 'recoveryservices', tags: [ 'package-2016-12', 'package-2016-06' ] },
+      # 'RecoveryServicesBackup': { folder: 'recoveryservicesbackup', tags: [ 'package-2017-07', 'package-2016-06' ] },
+      # 'Redis': { folder: 'redis', tags: [ 'package-2017-10', 'package-2017-02', 'package-2016-04', 'package-2015-08' ] },
+      'Relay': { folder: 'relay', tags: [ 'package-2017-04', 'package-2016-07' ] },
+      # 'Reservations': { folder: 'reservations', tags: [ 'package-2017-11' ] },
+      # 'Scheduler': { folder: 'scheduler', tags: [ 'package-2016-03', 'package-2016-01', 'package-2014-08-preview' ] },
+      # 'Search': { folder: 'search', tags: [ 'package-2015-08', 'package-2015-02' ] },
+      'ServiceBus': { folder: 'servicebus', tags: [ 'package-2017-04', 'package-2015-08' ] },
+      'ServiceFabric': { folder: 'servicefabric', tags: [ 'package-2017-07', 'package-2016-09' ] },
+      'Storage': { folder: 'storage', tags: [ 'package-2017-10', 'package-2017-06', 'package-2016-12', 'package-2016-05', 'package-2016-01', 'package-2015-06', 'package-2015-05-preview' ] },
+      # 'TrafficManager': { folder: 'trafficmanager', tags: [ 'package-2017-09-preview', 'package-2017-05', 'package-2017-03', 'package-2015-11' ] },
+      'Web': { folder: 'web', tags: [ 'package-2016-09' ] },
+      # 'poly': { file: __dirname + "/../test/Resource/poly-service.json", tags: [ '' ] }
     },
-    'outputDir': 'Resource/Expected',
     'language': 'azureresourceschema'
   },done
   return null

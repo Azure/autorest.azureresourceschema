@@ -29,16 +29,16 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes |  |
 |  type | enum | Yes | Microsoft.Network/expressRouteCircuits/authorizations |
 |  apiVersion | enum | Yes | 2016-09-01 |
-|  id | string | No | Resource Id |
+|  id | string | No | Resource ID. |
 |  properties | object | Yes | [AuthorizationPropertiesFormat object](#AuthorizationPropertiesFormat) |
-|  etag | string | No | A unique read-only string that changes whenever the resource is updated |
+|  etag | string | No | A unique read-only string that changes whenever the resource is updated. |
 
 
 <a id="AuthorizationPropertiesFormat" />
 ### AuthorizationPropertiesFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  authorizationKey | string | No | Gets or sets the authorization key |
-|  authorizationUseStatus | enum | No | Gets or sets AuthorizationUseStatus. - Available or InUse |
-|  provisioningState | string | No | Gets provisioning state of the PublicIP resource Updating/Deleting/Failed |
+|  authorizationKey | string | No | The authorization key. |
+|  authorizationUseStatus | enum | No | AuthorizationUseStatus. Possible values are: 'Available' and 'InUse'. - Available or InUse |
+|  provisioningState | string | No | Gets the provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'. |
 

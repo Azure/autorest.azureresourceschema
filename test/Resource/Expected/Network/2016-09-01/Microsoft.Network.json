@@ -24,11 +24,11 @@
         },
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "location": {
           "type": "string",
-          "description": "Resource location"
+          "description": "Resource location."
         },
         "tags": {
           "oneOf": [
@@ -42,7 +42,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Resource tags"
+          "description": "Resource tags."
         },
         "properties": {
           "oneOf": [
@@ -56,7 +56,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "required": [
@@ -87,11 +87,11 @@
         },
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "location": {
           "type": "string",
-          "description": "Resource location"
+          "description": "Resource location."
         },
         "tags": {
           "oneOf": [
@@ -105,7 +105,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Resource tags"
+          "description": "Resource tags."
         },
         "properties": {
           "oneOf": [
@@ -119,7 +119,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "Gets a unique read-only string that changes whenever the resource is updated"
+          "description": "Gets a unique read-only string that changes whenever the resource is updated."
         }
       },
       "required": [
@@ -150,11 +150,11 @@
         },
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "location": {
           "type": "string",
-          "description": "Resource location"
+          "description": "Resource location."
         },
         "tags": {
           "oneOf": [
@@ -168,7 +168,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Resource tags"
+          "description": "Resource tags."
         },
         "sku": {
           "oneOf": [
@@ -179,7 +179,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets sku"
+          "description": "The SKU."
         },
         "properties": {
           "oneOf": [
@@ -193,7 +193,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "Gets a unique read-only string that changes whenever the resource is updated"
+          "description": "Gets a unique read-only string that changes whenever the resource is updated."
         },
         "resources": {
           "type": "array",
@@ -237,7 +237,7 @@
         },
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -251,7 +251,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "required": [
@@ -282,7 +282,7 @@
         },
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -296,7 +296,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "required": [
@@ -327,11 +327,11 @@
         },
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "location": {
           "type": "string",
-          "description": "Resource location"
+          "description": "Resource location."
         },
         "tags": {
           "oneOf": [
@@ -345,7 +345,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Resource tags"
+          "description": "Resource tags."
         },
         "properties": {
           "oneOf": [
@@ -359,7 +359,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "Gets a unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "required": [
@@ -390,11 +390,11 @@
         },
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "location": {
           "type": "string",
-          "description": "Resource location"
+          "description": "Resource location."
         },
         "tags": {
           "oneOf": [
@@ -408,7 +408,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Resource tags"
+          "description": "Resource tags."
         },
         "properties": {
           "oneOf": [
@@ -422,7 +422,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "Gets a unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "required": [
@@ -453,11 +453,11 @@
         },
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "location": {
           "type": "string",
-          "description": "Resource location"
+          "description": "Resource location."
         },
         "tags": {
           "oneOf": [
@@ -471,7 +471,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Resource tags"
+          "description": "Resource tags."
         },
         "properties": {
           "oneOf": [
@@ -485,7 +485,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "Gets a unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "required": [
@@ -516,11 +516,11 @@
         },
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "location": {
           "type": "string",
-          "description": "Resource location"
+          "description": "Resource location."
         },
         "tags": {
           "oneOf": [
@@ -534,7 +534,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Resource tags"
+          "description": "Resource tags."
         },
         "properties": {
           "oneOf": [
@@ -548,7 +548,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "Gets a unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         },
         "resources": {
           "type": "array",
@@ -589,7 +589,7 @@
         },
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -603,7 +603,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "required": [
@@ -613,6 +613,116 @@
         "properties"
       ],
       "description": "Microsoft.Network/networkSecurityGroups/securityRules"
+    },
+    "networkWatchers": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "Microsoft.Network/networkWatchers"
+          ]
+        },
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2016-09-01"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "description": "Resource ID."
+        },
+        "location": {
+          "type": "string",
+          "description": "Resource location."
+        },
+        "tags": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Resource tags."
+        },
+        "etag": {
+          "type": "string",
+          "description": "A unique read-only string that changes whenever the resource is updated."
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/NetworkWatcherPropertiesFormat"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ]
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/networkWatchers_packetCaptures_childResource"
+              }
+            ]
+          }
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "apiVersion",
+        "properties"
+      ],
+      "description": "Microsoft.Network/networkWatchers"
+    },
+    "networkWatchers_packetCaptures": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "Microsoft.Network/networkWatchers/packetCaptures"
+          ]
+        },
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2016-09-01"
+          ]
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PacketCaptureParameters"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "apiVersion",
+        "properties"
+      ],
+      "description": "Microsoft.Network/networkWatchers/packetCaptures"
     },
     "publicIPAddresses": {
       "type": "object",
@@ -634,11 +744,11 @@
         },
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "location": {
           "type": "string",
-          "description": "Resource location"
+          "description": "Resource location."
         },
         "tags": {
           "oneOf": [
@@ -652,7 +762,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Resource tags"
+          "description": "Resource tags."
         },
         "properties": {
           "oneOf": [
@@ -666,7 +776,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "Gets a unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "required": [
@@ -697,11 +807,11 @@
         },
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "location": {
           "type": "string",
-          "description": "Resource location"
+          "description": "Resource location."
         },
         "tags": {
           "oneOf": [
@@ -715,7 +825,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Resource tags"
+          "description": "Resource tags."
         },
         "properties": {
           "oneOf": [
@@ -729,7 +839,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "Gets a unique read-only string that changes whenever the resource is updated"
+          "description": "Gets a unique read-only string that changes whenever the resource is updated."
         },
         "resources": {
           "type": "array",
@@ -770,7 +880,7 @@
         },
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -784,7 +894,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "required": [
@@ -815,11 +925,11 @@
         },
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "location": {
           "type": "string",
-          "description": "Resource location"
+          "description": "Resource location."
         },
         "tags": {
           "oneOf": [
@@ -833,7 +943,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Resource tags"
+          "description": "Resource tags."
         },
         "properties": {
           "oneOf": [
@@ -847,7 +957,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "Gets a unique read-only string that changes whenever the resource is updated"
+          "description": "Gets a unique read-only string that changes whenever the resource is updated."
         }
       },
       "required": [
@@ -878,11 +988,11 @@
         },
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "location": {
           "type": "string",
-          "description": "Resource location"
+          "description": "Resource location."
         },
         "tags": {
           "oneOf": [
@@ -896,7 +1006,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Resource tags"
+          "description": "Resource tags."
         },
         "properties": {
           "oneOf": [
@@ -910,7 +1020,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "Gets a unique read-only string that changes whenever the resource is updated"
+          "description": "Gets a unique read-only string that changes whenever the resource is updated."
         },
         "resources": {
           "type": "array",
@@ -954,7 +1064,7 @@
         },
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -968,7 +1078,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "required": [
@@ -999,7 +1109,7 @@
         },
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -1013,7 +1123,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "required": [
@@ -1041,17 +1151,17 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets list of address blocks reserved for this virtual network in CIDR notation"
+          "description": "A list of address blocks reserved for this virtual network in CIDR notation."
         }
       },
-      "description": "AddressSpace contains an array of IP address ranges that can be used by subnets"
+      "description": "AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network."
     },
     "ApplicationGatewayAuthenticationCertificate": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -1065,49 +1175,49 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "Authentication certificates of application gateway"
+      "description": "Authentication certificates of an application gateway."
     },
     "ApplicationGatewayAuthenticationCertificatePropertiesFormat": {
       "type": "object",
       "properties": {
         "data": {
           "type": "string",
-          "description": "Certificate public data "
+          "description": "Certificate public data."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the authentication certificate resource Updating/Deleting/Failed"
+          "description": "Provisioning state of the authentication certificate resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
-      "description": "Properties of Authentication certificates of application gateway"
+      "description": "Authentication certificates properties of an application gateway."
     },
     "ApplicationGatewayBackendAddress": {
       "type": "object",
       "properties": {
         "fqdn": {
           "type": "string",
-          "description": "Dns name"
+          "description": "Fully qualified domain name (FQDN)."
         },
         "ipAddress": {
           "type": "string",
-          "description": "Ip address"
+          "description": "IP address"
         }
       },
-      "description": "Backend Address of application gateway"
+      "description": "Backend address of an application gateway."
     },
     "ApplicationGatewayBackendAddressPool": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -1121,14 +1231,14 @@
         },
         "name": {
           "type": "string",
-          "description": "Resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "Backend Address Pool of application gateway"
+      "description": "Backend Address Pool of an application gateway."
     },
     "ApplicationGatewayBackendAddressPoolPropertiesFormat": {
       "type": "object",
@@ -1145,7 +1255,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Collection of references to IPs defined in NICs"
+          "description": "Collection of references to IPs defined in network interfaces."
         },
         "backendAddresses": {
           "oneOf": [
@@ -1163,17 +1273,17 @@
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the backend address pool resource Updating/Deleting/Failed"
+          "description": "Provisioning state of the backend address pool resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
-      "description": "Properties of Backend Address Pool of application gateway"
+      "description": "Properties of Backend Address Pool of an application gateway."
     },
     "ApplicationGatewayBackendHttpSettings": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -1187,14 +1297,14 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "Backend address pool settings of application gateway"
+      "description": "Backend address pool settings of an application gateway."
     },
     "ApplicationGatewayBackendHttpSettingsPropertiesFormat": {
       "type": "object",
@@ -1223,7 +1333,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Protocol."
+          "description": "Protocol. Possible values are: 'Http' and 'Https'."
         },
         "cookieBasedAffinity": {
           "oneOf": [
@@ -1238,7 +1348,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Cookie affinity."
+          "description": "Cookie based affinity. Possible values are: 'Enabled' and 'Disabled'."
         },
         "requestTimeout": {
           "oneOf": [
@@ -1249,7 +1359,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Request timeout"
+          "description": "Request timeout in seconds. Application Gateway will fail the request if response is not received within RequestTimeout. Acceptable values are from 1 second to 86400 seconds."
         },
         "probe": {
           "oneOf": [
@@ -1260,7 +1370,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Probe resource of application gateway "
+          "description": "Probe resource of an application gateway."
         },
         "authenticationCertificates": {
           "oneOf": [
@@ -1274,21 +1384,21 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Array of references to Application Gateway Authentication Certificates"
+          "description": "Array of references to application gateway authentication certificates."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the backend http settings resource Updating/Deleting/Failed"
+          "description": "Provisioning state of the backend http settings resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
-      "description": "Properties of Backend address pool settings of application gateway"
+      "description": "Properties of Backend address pool settings of an application gateway."
     },
     "ApplicationGatewayFrontendIPConfiguration": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -1302,21 +1412,21 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "Frontend IP configuration of application gateway"
+      "description": "Frontend IP configuration of an application gateway."
     },
     "ApplicationGatewayFrontendIPConfigurationPropertiesFormat": {
       "type": "object",
       "properties": {
         "privateIPAddress": {
           "type": "string",
-          "description": "PrivateIPAddress of the Network Interface IP Configuration"
+          "description": "PrivateIPAddress of the network interface IP Configuration."
         },
         "privateIPAllocationMethod": {
           "oneOf": [
@@ -1331,7 +1441,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "PrivateIP allocation method (Static/Dynamic)."
+          "description": "PrivateIP allocation method. Possible values are: 'Static' and 'Dynamic'."
         },
         "subnet": {
           "oneOf": [
@@ -1342,7 +1452,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Reference of the subnet resource"
+          "description": "Reference of the subnet resource."
         },
         "publicIPAddress": {
           "oneOf": [
@@ -1353,21 +1463,21 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Reference of the PublicIP resource"
+          "description": "Reference of the PublicIP resource."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "Provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
-      "description": "Properties of Frontend IP configuration of application gateway"
+      "description": "Properties of Frontend IP configuration of an application gateway."
     },
     "ApplicationGatewayFrontendPort": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -1381,14 +1491,14 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "Frontend Port of application gateway"
+      "description": "Frontend port of an application gateway."
     },
     "ApplicationGatewayFrontendPortPropertiesFormat": {
       "type": "object",
@@ -1406,17 +1516,17 @@
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the frontend port resource Updating/Deleting/Failed"
+          "description": "Provisioning state of the frontend port resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
-      "description": "Properties of Frontend Port of application gateway"
+      "description": "Properties of Frontend port of an application gateway."
     },
     "ApplicationGatewayHttpListener": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -1430,14 +1540,14 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "Http listener of application gateway"
+      "description": "Http listener of an application gateway."
     },
     "ApplicationGatewayHttpListenerPropertiesFormat": {
       "type": "object",
@@ -1451,7 +1561,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Frontend IP configuration resource of application gateway "
+          "description": "Frontend IP configuration resource of an application gateway."
         },
         "frontendPort": {
           "oneOf": [
@@ -1462,7 +1572,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Frontend port resource of application gateway "
+          "description": "Frontend port resource of an application gateway."
         },
         "protocol": {
           "oneOf": [
@@ -1477,11 +1587,11 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Protocol."
+          "description": "Protocol. Possible values are: 'Http' and 'Https'."
         },
         "hostName": {
           "type": "string",
-          "description": "Host name of http listener "
+          "description": "Host name of HTTP listener."
         },
         "sslCertificate": {
           "oneOf": [
@@ -1492,7 +1602,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Ssl certificate resource of application gateway "
+          "description": "SSL certificate resource of an application gateway."
         },
         "requireServerNameIndication": {
           "oneOf": [
@@ -1503,21 +1613,21 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "RequireServerNameIndication of http listener "
+          "description": "Applicable only if protocol is https. Enables SNI for multi-hosting."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the http listener resource Updating/Deleting/Failed"
+          "description": "Provisioning state of the HTTP listener resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
-      "description": "Properties of Http listener of application gateway"
+      "description": "Properties of HTTP listener of an application gateway."
     },
     "ApplicationGatewayIPConfiguration": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -1531,14 +1641,14 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "IP configuration of application gateway"
+      "description": "IP configuration of an application gateway. Currently 1 public and 1 private IP configuration is allowed."
     },
     "ApplicationGatewayIPConfigurationPropertiesFormat": {
       "type": "object",
@@ -1552,21 +1662,21 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Reference of the subnet resource. A subnet from where application gateway gets its private address "
+          "description": "Reference of the subnet resource. A subnet from where application gateway gets its private address."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the application gateway subnet resource Updating/Deleting/Failed"
+          "description": "Provisioning state of the application gateway subnet resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
-      "description": "Properties of IP configuration of application gateway"
+      "description": "Properties of IP configuration of an application gateway."
     },
     "ApplicationGatewayPathRule": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -1580,14 +1690,14 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "Path rule of URL path map of application gateway"
+      "description": "Path rule of URL path map of an application gateway."
     },
     "ApplicationGatewayPathRulePropertiesFormat": {
       "type": "object",
@@ -1604,7 +1714,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Path rules of URL path map"
+          "description": "Path rules of URL path map."
         },
         "backendAddressPool": {
           "oneOf": [
@@ -1615,7 +1725,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Backend address pool resource of URL path map "
+          "description": "Backend address pool resource of URL path map."
         },
         "backendHttpSettings": {
           "oneOf": [
@@ -1626,21 +1736,21 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Backend http settings resource of URL path map "
+          "description": "Backend http settings resource of URL path map."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Path rule of URL path map resource Updating/Deleting/Failed"
+          "description": "Path rule of URL path map resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
-      "description": "Properties of probe of application gateway"
+      "description": "Properties of probe of an application gateway."
     },
     "ApplicationGatewayProbe": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -1654,14 +1764,14 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "Probe of application gateway"
+      "description": "Probe of the application gateway."
     },
     "ApplicationGatewayProbePropertiesFormat": {
       "type": "object",
@@ -1679,15 +1789,15 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Protocol."
+          "description": "Protocol. Possible values are: 'Http' and 'Https'."
         },
         "host": {
           "type": "string",
-          "description": "Host to send probe to "
+          "description": "Host name to send the probe to."
         },
         "path": {
           "type": "string",
-          "description": "Relative path of probe "
+          "description": "Relative path of probe. Valid path starts from '/'. Probe is sent to <Protocol>://<host>:<port><path>"
         },
         "interval": {
           "oneOf": [
@@ -1698,7 +1808,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Probing interval in seconds "
+          "description": "The probing interval in seconds. This is the time interval between two consecutive probes. Acceptable values are from 1 second to 86400 seconds."
         },
         "timeout": {
           "oneOf": [
@@ -1709,7 +1819,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Probing timeout in seconds "
+          "description": "the probe timeout in seconds. Probe marked as failed if valid response is not received with this timeout period. Acceptable values are from 1 second to 86400 seconds."
         },
         "unhealthyThreshold": {
           "oneOf": [
@@ -1720,14 +1830,14 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Probing unhealthy threshold "
+          "description": "The probe retry count. Backend server is marked down after consecutive probe failure count reaches UnhealthyThreshold. Acceptable values are from 1 second to 20."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the backend http settings resource Updating/Deleting/Failed"
+          "description": "Provisioning state of the backend http settings resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
-      "description": "Properties of probe of application gateway"
+      "description": "Properties of probe of an application gateway."
     },
     "ApplicationGatewayPropertiesFormat": {
       "type": "object",
@@ -1741,7 +1851,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Sku of application gateway resource"
+          "description": "SKU of the application gateway resource."
         },
         "sslPolicy": {
           "oneOf": [
@@ -1752,7 +1862,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "SSL policy of application gateway resource"
+          "description": "SSL policy of the application gateway resource."
         },
         "gatewayIPConfigurations": {
           "oneOf": [
@@ -1766,7 +1876,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Subnets of application gateway resource"
+          "description": "Subnets of application the gateway resource."
         },
         "authenticationCertificates": {
           "oneOf": [
@@ -1780,7 +1890,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Authentication certificates of application gateway resource"
+          "description": "Authentication certificates of the application gateway resource."
         },
         "sslCertificates": {
           "oneOf": [
@@ -1794,7 +1904,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "SSL certificates of application gateway resource"
+          "description": "SSL certificates of the application gateway resource."
         },
         "frontendIPConfigurations": {
           "oneOf": [
@@ -1808,7 +1918,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Frontend IP addresses of application gateway resource"
+          "description": "Frontend IP addresses of the application gateway resource."
         },
         "frontendPorts": {
           "oneOf": [
@@ -1822,7 +1932,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Frontend ports of application gateway resource"
+          "description": "Frontend ports of the application gateway resource."
         },
         "probes": {
           "oneOf": [
@@ -1836,7 +1946,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Probes of application gateway resource"
+          "description": "Probes of the application gateway resource."
         },
         "backendAddressPools": {
           "oneOf": [
@@ -1850,7 +1960,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Backend address pool of application gateway resource"
+          "description": "Backend address pool of the application gateway resource."
         },
         "backendHttpSettingsCollection": {
           "oneOf": [
@@ -1864,7 +1974,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Backend http settings of application gateway resource"
+          "description": "Backend http settings of the application gateway resource."
         },
         "httpListeners": {
           "oneOf": [
@@ -1878,7 +1988,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "HTTP listeners of application gateway resource"
+          "description": "Http listeners of the application gateway resource."
         },
         "urlPathMaps": {
           "oneOf": [
@@ -1892,7 +2002,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "URL path map of application gateway resource"
+          "description": "URL path map of the application gateway resource."
         },
         "requestRoutingRules": {
           "oneOf": [
@@ -1906,7 +2016,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Request routing rules of application gateway resource"
+          "description": "Request routing rules of the application gateway resource."
         },
         "webApplicationFirewallConfiguration": {
           "oneOf": [
@@ -1917,25 +2027,25 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Web application firewall configuration"
+          "description": "Web application firewall configuration."
         },
         "resourceGuid": {
           "type": "string",
-          "description": "Resource guid property of the ApplicationGateway resource"
+          "description": "Resource GUID property of the application gateway resource."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the ApplicationGateway resource Updating/Deleting/Failed"
+          "description": "Provisioning state of the application gateway resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
-      "description": "Properties of Application Gateway"
+      "description": "Properties of the application gateway."
     },
     "ApplicationGatewayRequestRoutingRule": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -1949,14 +2059,14 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "Request routing rule of application gateway"
+      "description": "Request routing rule of an application gateway."
     },
     "ApplicationGatewayRequestRoutingRulePropertiesFormat": {
       "type": "object",
@@ -1974,7 +2084,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Rule type."
+          "description": "Rule type. Possible values are: 'Basic' and 'PathBasedRouting'."
         },
         "backendAddressPool": {
           "oneOf": [
@@ -1985,7 +2095,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Backend address pool resource of application gateway "
+          "description": "Backend address pool resource of the application gateway. "
         },
         "backendHttpSettings": {
           "oneOf": [
@@ -1996,7 +2106,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Frontend port resource of application gateway "
+          "description": "Frontend port resource of the application gateway."
         },
         "httpListener": {
           "oneOf": [
@@ -2007,7 +2117,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Http listener resource of application gateway "
+          "description": "Http listener resource of the application gateway. "
         },
         "urlPathMap": {
           "oneOf": [
@@ -2018,14 +2128,14 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Url path map resource of application gateway "
+          "description": "URL path map resource of the application gateway."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the request routing rule resource Updating/Deleting/Failed"
+          "description": "Provisioning state of the request routing rule resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
-      "description": "Properties of Request routing rule of application gateway"
+      "description": "Properties of request routing rule of the application gateway."
     },
     "ApplicationGatewaySku": {
       "type": "object",
@@ -2046,7 +2156,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Name of application gateway SKU."
+          "description": "Name of an application gateway SKU. Possible values are: 'Standard_Small', 'Standard_Medium', 'Standard_Large', 'WAF_Medium', and 'WAF_Large'."
         },
         "tier": {
           "oneOf": [
@@ -2061,7 +2171,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Tier of application gateway."
+          "description": "Tier of an application gateway. Possible values are: 'Standard' and 'WAF'."
         },
         "capacity": {
           "oneOf": [
@@ -2072,17 +2182,17 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Capacity (instance count) of application gateway"
+          "description": "Capacity (instance count) of an application gateway."
         }
       },
-      "description": "SKU of application gateway"
+      "description": "SKU of an application gateway"
     },
     "ApplicationGatewaySslCertificate": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -2096,36 +2206,36 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "SSL certificates of application gateway"
+      "description": "SSL certificates of an application gateway."
     },
     "ApplicationGatewaySslCertificatePropertiesFormat": {
       "type": "object",
       "properties": {
         "data": {
           "type": "string",
-          "description": "SSL Certificate data "
+          "description": "Base-64 encoded pfx certificate. Only applicable in PUT Request."
         },
         "password": {
           "type": "string",
-          "description": "SSL Certificate password "
+          "description": "Password for the pfx file specified in data. Only applicable in PUT request."
         },
         "publicCertData": {
           "type": "string",
-          "description": "SSL Certificate public data "
+          "description": "Base-64 encoded Public cert data corresponding to pfx specified in data. Only applicable in GET request."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the ssl certificate resource Updating/Deleting/Failed"
+          "description": "Provisioning state of the SSL certificate resource Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
-      "description": "Properties of SSL certificates of application gateway"
+      "description": "Properties of SSL certificates of an application gateway."
     },
     "ApplicationGatewaySslPolicy": {
       "type": "object",
@@ -2147,17 +2257,17 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "SSL protocols to be disabled on Application Gateway"
+          "description": "SSL protocols to be disabled on application gateway. Possible values are: 'TLSv1_0', 'TLSv1_1', and 'TLSv1_2'."
         }
       },
-      "description": "Application gateway SSL policy"
+      "description": "Application gateway SSL policy."
     },
     "ApplicationGatewayUrlPathMap": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -2171,14 +2281,14 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "UrlPathMap of application gateway"
+      "description": "UrlPathMaps give a url path to the backend mapping information for PathBasedRouting."
     },
     "ApplicationGatewayUrlPathMapPropertiesFormat": {
       "type": "object",
@@ -2192,7 +2302,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Default backend address pool resource of URL path map "
+          "description": "Default backend address pool resource of URL path map."
         },
         "defaultBackendHttpSettings": {
           "oneOf": [
@@ -2203,7 +2313,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Default backend http settings resource of URL path map "
+          "description": "Default backend http settings resource of URL path map."
         },
         "pathRules": {
           "oneOf": [
@@ -2217,14 +2327,14 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Path rule of URL path map resource"
+          "description": "Path rule of URL path map resource."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Provisioning state of the backend http settings resource Updating/Deleting/Failed"
+          "description": "Provisioning state of the backend http settings resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
-      "description": "Properties of UrlPathMap of application gateway"
+      "description": "Properties of UrlPathMap of the application gateway."
     },
     "ApplicationGatewayWebApplicationFirewallConfiguration": {
       "type": "object",
@@ -2238,7 +2348,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Whether web application firewall is enabled"
+          "description": "Whether the web application firewall is enabled."
         },
         "firewallMode": {
           "oneOf": [
@@ -2253,20 +2363,20 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Web application firewall mode."
+          "description": "Web application firewall mode. Possible values are: 'Detection' and 'Prevention'."
         }
       },
       "required": [
         "enabled"
       ],
-      "description": "Application gateway web application firewall configuration"
+      "description": "Application gateway web application firewall configuration."
     },
     "AuthorizationPropertiesFormat": {
       "type": "object",
       "properties": {
         "authorizationKey": {
           "type": "string",
-          "description": "Gets or sets the authorization key"
+          "description": "The authorization key."
         },
         "authorizationUseStatus": {
           "oneOf": [
@@ -2281,11 +2391,11 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets AuthorizationUseStatus."
+          "description": "AuthorizationUseStatus. Possible values are: 'Available' and 'InUse'."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "Gets the provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       }
     },
@@ -2294,7 +2404,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -2308,24 +2418,24 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "Pool of backend IP addresses"
+      "description": "Pool of backend IP addresses."
     },
     "BackendAddressPoolPropertiesFormat": {
       "type": "object",
       "properties": {
         "provisioningState": {
           "type": "string",
-          "description": "Get provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "Get provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
-      "description": "Properties of BackendAddressPool"
+      "description": "Properties of the backend address pool."
     },
     "BgpSettings": {
       "type": "object",
@@ -2339,11 +2449,11 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets this BGP speaker's ASN"
+          "description": "The BGP speaker's ASN."
         },
         "bgpPeeringAddress": {
           "type": "string",
-          "description": "Gets or sets the BGP peering address and BGP identifier of this BGP speaker"
+          "description": "The BGP peering address and BGP identifier of this BGP speaker."
         },
         "peerWeight": {
           "oneOf": [
@@ -2354,7 +2464,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the weight added to routes learned from this BGP speaker"
+          "description": "The weight added to routes learned from this BGP speaker."
         }
       }
     },
@@ -2373,17 +2483,17 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets list of DNS servers IP addresses"
+          "description": "The list of DNS servers IP addresses."
         }
       },
-      "description": "DHCPOptions contains an array of DNS servers available to VMs deployed in the virtual networkStandard DHCP option for a subnet overrides VNET DHCP options."
+      "description": "DhcpOptions contains an array of DNS servers available to VMs deployed in the virtual network. Standard DHCP option for a subnet overrides VNET DHCP options."
     },
     "ExpressRouteCircuitAuthorization": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -2397,21 +2507,21 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "Authorization in a ExpressRouteCircuit resource"
+      "description": "Authorization in an ExpressRouteCircuit resource."
     },
     "ExpressRouteCircuitPeering": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -2425,14 +2535,14 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "Peering in a ExpressRouteCircuit resource"
+      "description": "Peering in an ExpressRouteCircuit resource."
     },
     "ExpressRouteCircuitPeeringConfig": {
       "type": "object",
@@ -2449,7 +2559,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the reference of AdvertisedPublicPrefixes"
+          "description": "The reference of AdvertisedPublicPrefixes."
         },
         "advertisedPublicPrefixesState": {
           "oneOf": [
@@ -2466,7 +2576,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets AdvertisedPublicPrefixState of the Peering resource."
+          "description": "AdvertisedPublicPrefixState of the Peering resource. Possible values are 'NotConfigured', 'Configuring', 'Configured', and 'ValidationNeeded'."
         },
         "customerASN": {
           "oneOf": [
@@ -2477,14 +2587,14 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or Sets CustomerAsn of the peering."
+          "description": "The CustomerASN of the peering."
         },
         "routingRegistryName": {
           "type": "string",
-          "description": "Gets or Sets RoutingRegistryName of the config."
+          "description": "The RoutingRegistryName of the configuration."
         }
       },
-      "description": "Specifies the peering config"
+      "description": "Specifies the peering configuration."
     },
     "ExpressRouteCircuitPeeringPropertiesFormat": {
       "type": "object",
@@ -2503,7 +2613,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets PeeringType."
+          "description": "The PeeringType. Possible values are: 'AzurePublicPeering', 'AzurePrivatePeering', and 'MicrosoftPeering'."
         },
         "state": {
           "oneOf": [
@@ -2518,7 +2628,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets state of Peering."
+          "description": "The state of peering. Possible values are: 'Disabled' and 'Enabled'."
         },
         "azureASN": {
           "oneOf": [
@@ -2529,7 +2639,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the azure ASN"
+          "description": "The Azure ASN."
         },
         "peerASN": {
           "oneOf": [
@@ -2540,27 +2650,27 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the peer ASN"
+          "description": "The peer ASN."
         },
         "primaryPeerAddressPrefix": {
           "type": "string",
-          "description": "Gets or sets the primary address prefix"
+          "description": "The primary address prefix."
         },
         "secondaryPeerAddressPrefix": {
           "type": "string",
-          "description": "Gets or sets the secondary address prefix"
+          "description": "The secondary address prefix."
         },
         "primaryAzurePort": {
           "type": "string",
-          "description": "Gets or sets the primary port"
+          "description": "The primary port."
         },
         "secondaryAzurePort": {
           "type": "string",
-          "description": "Gets or sets the secondary port"
+          "description": "The secondary port."
         },
         "sharedKey": {
           "type": "string",
-          "description": "Gets or sets the shared key"
+          "description": "The shared key."
         },
         "vlanId": {
           "oneOf": [
@@ -2571,7 +2681,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the vlan id"
+          "description": "The VLAN ID."
         },
         "microsoftPeeringConfig": {
           "oneOf": [
@@ -2582,7 +2692,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the mircosoft peering config"
+          "description": "The Microsoft peering configuration."
         },
         "stats": {
           "oneOf": [
@@ -2593,19 +2703,19 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or peering stats"
+          "description": "Gets peering stats."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "Gets the provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         },
         "gatewayManagerEtag": {
           "type": "string",
-          "description": "Gets or sets the GatewayManager Etag"
+          "description": "The GatewayManager Etag."
         },
         "lastModifiedBy": {
           "type": "string",
-          "description": "Gets whether the provider or the customer last modified the peering"
+          "description": "Gets whether the provider or the customer last modified the peering."
         }
       }
     },
@@ -2621,11 +2731,11 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "allow classic operations"
+          "description": "Allow classic operations"
         },
         "circuitProvisioningState": {
           "type": "string",
-          "description": "Gets or sets CircuitProvisioningState state of the resource "
+          "description": "The CircuitProvisioningState state of the resource."
         },
         "serviceProviderProvisioningState": {
           "oneOf": [
@@ -2642,7 +2752,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets ServiceProviderProvisioningState state of the resource."
+          "description": "The ServiceProviderProvisioningState state of the resource. Possible values are 'NotProvisioned', 'Provisioning', 'Provisioned', and 'Deprovisioning'."
         },
         "authorizations": {
           "oneOf": [
@@ -2656,7 +2766,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets list of authorizations"
+          "description": "The list of authorizations."
         },
         "peerings": {
           "oneOf": [
@@ -2670,15 +2780,15 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets list of peerings"
+          "description": "The list of peerings."
         },
         "serviceKey": {
           "type": "string",
-          "description": "Gets or sets ServiceKey"
+          "description": "The ServiceKey."
         },
         "serviceProviderNotes": {
           "type": "string",
-          "description": "Gets or sets ServiceProviderNotes"
+          "description": "The ServiceProviderNotes."
         },
         "serviceProviderProperties": {
           "oneOf": [
@@ -2689,18 +2799,18 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets ServiceProviderProperties"
+          "description": "The ServiceProviderProperties."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "Gets the provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         },
         "gatewayManagerEtag": {
           "type": "string",
-          "description": "Gets or sets the GatewayManager Etag"
+          "description": "The GatewayManager Etag."
         }
       },
-      "description": "Properties of ExpressRouteCircuit"
+      "description": "Properties of ExpressRouteCircuit."
     },
     "expressRouteCircuits_authorizations_childResource": {
       "type": "object",
@@ -2722,7 +2832,7 @@
         },
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -2736,7 +2846,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "required": [
@@ -2767,7 +2877,7 @@
         },
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -2781,7 +2891,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "required": [
@@ -2797,11 +2907,11 @@
       "properties": {
         "serviceProviderName": {
           "type": "string",
-          "description": "Gets or sets serviceProviderName."
+          "description": "The serviceProviderName."
         },
         "peeringLocation": {
           "type": "string",
-          "description": "Gets or sets peering location."
+          "description": "The peering location."
         },
         "bandwidthInMbps": {
           "oneOf": [
@@ -2812,17 +2922,17 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets BandwidthInMbps."
+          "description": "The BandwidthInMbps."
         }
       },
-      "description": "Contains ServiceProviderProperties in an ExpressRouteCircuit"
+      "description": "Contains ServiceProviderProperties in an ExpressRouteCircuit."
     },
     "ExpressRouteCircuitSku": {
       "type": "object",
       "properties": {
         "name": {
           "type": "string",
-          "description": "Gets or sets name of the sku."
+          "description": "The name of the SKU."
         },
         "tier": {
           "oneOf": [
@@ -2837,7 +2947,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets tier of the sku."
+          "description": "The tier of the SKU. Possible values are 'Standard' and 'Premium'."
         },
         "family": {
           "oneOf": [
@@ -2852,10 +2962,10 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets family of the sku."
+          "description": "The family of the SKU. Possible values are: 'UnlimitedData' and 'MeteredData'."
         }
       },
-      "description": "Contains sku in an ExpressRouteCircuit"
+      "description": "Contains SKU in an ExpressRouteCircuit."
     },
     "ExpressRouteCircuitStats": {
       "type": "object",
@@ -2905,14 +3015,14 @@
           "description": "Gets BytesOut of the peering."
         }
       },
-      "description": "Contains Stats associated with the peering"
+      "description": "Contains stats associated with the peering."
     },
     "FrontendIPConfiguration": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -2926,21 +3036,21 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "The name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "Frontend IP address of the load balancer"
+      "description": "Frontend IP address of the load balancer."
     },
     "FrontendIPConfigurationPropertiesFormat": {
       "type": "object",
       "properties": {
         "privateIPAddress": {
           "type": "string",
-          "description": "Gets or sets the privateIPAddress of the IP Configuration"
+          "description": "The private IP address of the IP configuration."
         },
         "privateIPAllocationMethod": {
           "oneOf": [
@@ -2955,7 +3065,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets PrivateIP allocation method."
+          "description": "The Private IP allocation method. Possible values are: 'Static' and 'Dynamic'."
         },
         "subnet": {
           "oneOf": [
@@ -2966,7 +3076,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the reference of the subnet resource"
+          "description": "The reference of the subnet resource."
         },
         "publicIPAddress": {
           "oneOf": [
@@ -2977,21 +3087,21 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the reference of the PublicIP resource"
+          "description": "The reference of the Public IP resource."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "Gets the provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
-      "description": "Properties of Frontend IP Configuration of the load balancer"
+      "description": "Properties of Frontend IP Configuration of the load balancer."
     },
     "InboundNatPool": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -3005,14 +3115,14 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "The name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "Inbound NAT pool of the load balancer"
+      "description": "Inbound NAT pool of the load balancer."
     },
     "InboundNatPoolPropertiesFormat": {
       "type": "object",
@@ -3026,7 +3136,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets a reference to frontend IP Addresses"
+          "description": "A reference to frontend IP addresses."
         },
         "protocol": {
           "oneOf": [
@@ -3041,7 +3151,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the transport protocol for the endpoint. Possible values are Udp or Tcp."
+          "description": "The transport protocol for the endpoint. Possible values are: 'Udp' or 'Tcp'."
         },
         "frontendPortRangeStart": {
           "oneOf": [
@@ -3052,7 +3162,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the starting port range for the NAT pool. You can specify any port number you choose, but the port numbers specified for each role in the service must be unique. Possible values range between 1 and 65535, inclusive"
+          "description": "The first port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65534."
         },
         "frontendPortRangeEnd": {
           "oneOf": [
@@ -3063,7 +3173,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the ending port range for the NAT pool. You can specify any port number you choose, but the port numbers specified for each role in the service must be unique. Possible values range between 1 and 65535, inclusive"
+          "description": "The last port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65535."
         },
         "backendPort": {
           "oneOf": [
@@ -3074,11 +3184,11 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets a port used for internal connections on the endpoint. The localPort attribute maps the eternal port of the endpoint to an internal port on a role. This is useful in scenarios where a role must communicate to an internal component on a port that is different from the one that is exposed externally. If not specified, the value of localPort is the same as the port attribute. Set the value of localPort to '*' to automatically assign an unallocated port that is discoverable using the runtime API"
+          "description": "The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "Gets the provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
       "required": [
@@ -3087,14 +3197,14 @@
         "frontendPortRangeEnd",
         "backendPort"
       ],
-      "description": "Properties of Inbound NAT pool"
+      "description": "Properties of Inbound NAT pool."
     },
     "InboundNatRule": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -3108,14 +3218,14 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "Inbound NAT rule of the loadbalancer"
+      "description": "Inbound NAT rule of the load balancer."
     },
     "InboundNatRulePropertiesFormat": {
       "type": "object",
@@ -3129,7 +3239,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets a reference to frontend IP Addresses"
+          "description": "A reference to frontend IP addresses."
         },
         "protocol": {
           "oneOf": [
@@ -3144,7 +3254,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the transport protocol for the endpoint. Possible values are Udp or Tcp."
+          "description": "The transport protocol for the endpoint. Possible values are: 'Udp' or 'Tcp'."
         },
         "frontendPort": {
           "oneOf": [
@@ -3155,7 +3265,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the port for the external endpoint. You can specify any port number you choose, but the port numbers specified for each role in the service must be unique. Possible values range between 1 and 65535, inclusive"
+          "description": "The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534."
         },
         "backendPort": {
           "oneOf": [
@@ -3166,7 +3276,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets a port used for internal connections on the endpoint. The localPort attribute maps the eternal port of the endpoint to an internal port on a role. This is useful in scenarios where a role must communicate to an internal component on a port that is different from the one that is exposed externally. If not specified, the value of localPort is the same as the port attribute. Set the value of localPort to '*' to automatically assign an unallocated port that is discoverable using the runtime API"
+          "description": "The port used for the internal endpoint. Acceptable values range from 1 to 65535."
         },
         "idleTimeoutInMinutes": {
           "oneOf": [
@@ -3177,7 +3287,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the timeout for the Tcp idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to Tcp"
+          "description": "The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP."
         },
         "enableFloatingIP": {
           "oneOf": [
@@ -3188,14 +3298,14 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn availability Group. This setting is required when using the SQL Always ON availability Groups in SQL server. This setting can't be changed after you create the endpoint"
+          "description": "Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "Gets the provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
-      "description": "Properties of Inbound NAT rule"
+      "description": "Properties of the inbound NAT rule."
     },
     "LoadBalancerPropertiesFormat": {
       "type": "object",
@@ -3212,7 +3322,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets frontend IP addresses of the load balancer"
+          "description": "Object representing the frontend IPs to be used for the load balancer"
         },
         "backendAddressPools": {
           "oneOf": [
@@ -3226,7 +3336,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets Pools of backend IP addresses"
+          "description": "Collection of backend address pools used by a load balancer"
         },
         "loadBalancingRules": {
           "oneOf": [
@@ -3240,7 +3350,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets load balancing rules"
+          "description": "Object collection representing the load balancing rules Gets the provisioning "
         },
         "probes": {
           "oneOf": [
@@ -3254,7 +3364,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets list of Load balancer probes"
+          "description": "Collection of probe objects used in the load balancer"
         },
         "inboundNatRules": {
           "oneOf": [
@@ -3268,7 +3378,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets list of inbound rules"
+          "description": "Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to reference individual inbound NAT rules."
         },
         "inboundNatPools": {
           "oneOf": [
@@ -3282,7 +3392,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets inbound NAT pools"
+          "description": "Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules."
         },
         "outboundNatRules": {
           "oneOf": [
@@ -3296,25 +3406,25 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets outbound NAT rules"
+          "description": "The outbound NAT rules."
         },
         "resourceGuid": {
           "type": "string",
-          "description": "Gets or sets resource guid property of the Load balancer resource"
+          "description": "The resource GUID property of the load balancer resource."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "Gets the provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
-      "description": "Properties of Load Balancer"
+      "description": "Properties of the load balancer."
     },
     "LoadBalancingRule": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -3328,14 +3438,14 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "The name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "Rules of the load balancer"
+      "description": "A loag balancing rule for a load balancer."
     },
     "LoadBalancingRulePropertiesFormat": {
       "type": "object",
@@ -3349,7 +3459,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets a reference to frontend IP Addresses"
+          "description": "A reference to frontend IP addresses."
         },
         "backendAddressPool": {
           "oneOf": [
@@ -3360,7 +3470,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets  a reference to a pool of DIPs. Inbound traffic is randomly load balanced across IPs in the backend IPs"
+          "description": "A reference to a pool of DIPs. Inbound traffic is randomly load balanced across IPs in the backend IPs."
         },
         "probe": {
           "oneOf": [
@@ -3371,7 +3481,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the reference of the load balancer probe used by the Load Balancing rule."
+          "description": "The reference of the load balancer probe used by the load balancing rule."
         },
         "protocol": {
           "oneOf": [
@@ -3386,7 +3496,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the transport protocol for the external endpoint. Possible values are Udp or Tcp."
+          "description": "The transport protocol for the external endpoint. Possible values are 'Udp' or 'Tcp'."
         },
         "loadDistribution": {
           "oneOf": [
@@ -3402,7 +3512,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the load distribution policy for this rule."
+          "description": "The load distribution policy for this rule. Possible values are 'Default', 'SourceIP', and 'SourceIPProtocol'."
         },
         "frontendPort": {
           "oneOf": [
@@ -3413,7 +3523,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the port for the external endpoint. You can specify any port number you choose, but the port numbers specified for each role in the service must be unique. Possible values range between 1 and 65535, inclusive"
+          "description": "The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534."
         },
         "backendPort": {
           "oneOf": [
@@ -3424,7 +3534,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets a port used for internal connections on the endpoint. The localPort attribute maps the eternal port of the endpoint to an internal port on a role. This is useful in scenarios where a role must communicate to an internal component on a port that is different from the one that is exposed externally. If not specified, the value of localPort is the same as the port attribute. Set the value of localPort to '*' to automatically assign an unallocated port that is discoverable using the runtime API"
+          "description": "The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535. "
         },
         "idleTimeoutInMinutes": {
           "oneOf": [
@@ -3435,7 +3545,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the timeout for the Tcp idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to Tcp"
+          "description": "The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP."
         },
         "enableFloatingIP": {
           "oneOf": [
@@ -3446,29 +3556,29 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn availability Group. This setting is required when using the SQL Always ON availability Groups in SQL server. This setting can't be changed after you create the endpoint"
+          "description": "Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "Gets the provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
       "required": [
         "protocol",
         "frontendPort"
       ],
-      "description": "Properties of the load balancer"
+      "description": "Properties of the load balancer."
     },
     "LocalNetworkGateway": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "location": {
           "type": "string",
-          "description": "Resource location"
+          "description": "Resource location."
         },
         "tags": {
           "oneOf": [
@@ -3482,7 +3592,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Resource tags"
+          "description": "Resource tags."
         },
         "properties": {
           "oneOf": [
@@ -3496,9 +3606,12 @@
         },
         "etag": {
           "type": "string",
-          "description": "Gets a unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
+      "required": [
+        "properties"
+      ],
       "description": "A common class for general resource information"
     },
     "LocalNetworkGatewayPropertiesFormat": {
@@ -3513,7 +3626,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Local network site Address space"
+          "description": "Local network site address space."
         },
         "gatewayIpAddress": {
           "type": "string",
@@ -3528,17 +3641,16 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Local network gateway's BGP speaker settings"
+          "description": "Local network gateway's BGP speaker settings."
         },
         "resourceGuid": {
           "type": "string",
-          "description": "Gets or sets resource guid property of the LocalNetworkGateway resource"
-        },
-        "provisioningState": {
-          "type": "string",
-          "description": "Gets provisioning state of the LocalNetworkGateway resource Updating/Deleting/Failed"
+          "description": "The resource GUID property of the LocalNetworkGateway resource."
         }
       },
+      "required": [
+        "localNetworkAddressSpace"
+      ],
       "description": "LocalNetworkGateway properties"
     },
     "NetworkInterfaceDnsSettings": {
@@ -3556,7 +3668,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets list of DNS servers IP addresses"
+          "description": "List of DNS servers IP addresses. Use 'AzureProvidedDNS' to switch to azure provided DNS resolution. 'AzureProvidedDNS' value cannot be combined with other IPs, it must be the only value in dnsServers collection."
         },
         "appliedDnsServers": {
           "oneOf": [
@@ -3570,29 +3682,29 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets list of Applied DNS servers IP addresses"
+          "description": "If the VM that uses this NIC is part of an Availability Set, then this list will have the union of all DNS servers from all NICs that are part of the Availability Set. This property is what is configured on each of those VMs."
         },
         "internalDnsNameLabel": {
           "type": "string",
-          "description": "Gets or sets the internal DNS name"
+          "description": "Relative DNS name for this NIC used for internal communications between VMs in the same virtual network."
         },
         "internalFqdn": {
           "type": "string",
-          "description": "Gets or sets the internal fqdn."
+          "description": "Fully qualified DNS name supporting internal communications between VMs in the same virtual network."
         },
         "internalDomainNameSuffix": {
           "type": "string",
-          "description": "Gets or sets internal domain name suffix of the NIC."
+          "description": "Even if internalDnsNameLabel is not specified, a DNS entry is created for the primary NIC of the VM. This DNS name can be constructed by concatenating the VM name with the value of internalDomainNameSuffix."
         }
       },
-      "description": "Dns settings of a network interface"
+      "description": "DNS settings of a network interface."
     },
     "NetworkInterfaceIPConfiguration": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -3606,14 +3718,14 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "The name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "IPConfiguration in a NetworkInterface"
+      "description": "IPConfiguration in a network interface."
     },
     "NetworkInterfaceIPConfigurationPropertiesFormat": {
       "type": "object",
@@ -3630,7 +3742,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the reference of ApplicationGatewayBackendAddressPool resource"
+          "description": "The reference of ApplicationGatewayBackendAddressPool resource."
         },
         "loadBalancerBackendAddressPools": {
           "oneOf": [
@@ -3644,7 +3756,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the reference of LoadBalancerBackendAddressPool resource"
+          "description": "The reference of LoadBalancerBackendAddressPool resource."
         },
         "loadBalancerInboundNatRules": {
           "oneOf": [
@@ -3658,7 +3770,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets list of references of LoadBalancerInboundNatRules"
+          "description": "A list of references of LoadBalancerInboundNatRules."
         },
         "privateIPAddress": {
           "type": "string"
@@ -3676,7 +3788,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets PrivateIP allocation method."
+          "description": "Defines how a private IP address is assigned. Possible values are: 'Static' and 'Dynamic'."
         },
         "privateIPAddressVersion": {
           "oneOf": [
@@ -3691,7 +3803,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets PrivateIP address version (IPv4/IPv6)."
+          "description": "Available from Api-Version 2016-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'."
         },
         "subnet": {
           "oneOf": [
@@ -3712,7 +3824,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets whether this is a primary customer address on the NIC"
+          "description": "Gets whether this is a primary customer address on the network interface."
         },
         "publicIPAddress": {
           "oneOf": [
@@ -3728,7 +3840,7 @@
           "type": "string"
         }
       },
-      "description": "Properties of IPConfiguration"
+      "description": "Properties of IP configuration."
     },
     "NetworkInterfacePropertiesFormat": {
       "type": "object",
@@ -3742,7 +3854,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the reference of a VirtualMachine"
+          "description": "The reference of a virtual machine."
         },
         "networkSecurityGroup": {
           "oneOf": [
@@ -3753,7 +3865,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the reference of the NetworkSecurityGroup resource"
+          "description": "The reference of the NetworkSecurityGroup resource."
         },
         "ipConfigurations": {
           "oneOf": [
@@ -3767,7 +3879,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets list of IPConfigurations of the network interface"
+          "description": "A list of IPConfigurations of the network interface."
         },
         "dnsSettings": {
           "oneOf": [
@@ -3778,11 +3890,11 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets DNS settings in network interface"
+          "description": "The DNS settings in network interface."
         },
         "macAddress": {
           "type": "string",
-          "description": "Gets the MAC address of the network interface"
+          "description": "The MAC address of the network interface."
         },
         "primary": {
           "oneOf": [
@@ -3793,7 +3905,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets whether this is a primary NIC on a virtual machine"
+          "description": "Gets whether this is a primary network interface on a virtual machine."
         },
         "enableAcceleratedNetworking": {
           "oneOf": [
@@ -3804,7 +3916,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets if the network interface is accelerated networking enabled"
+          "description": "If the network interface is accelerated networking enabled."
         },
         "enableIPForwarding": {
           "oneOf": [
@@ -3815,15 +3927,15 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets whether IPForwarding is enabled on the NIC"
+          "description": "Indicates whether IP forwarding is enabled on this network interface."
         },
         "resourceGuid": {
           "type": "string",
-          "description": "Gets or sets resource guid property of the network interface resource"
+          "description": "The resource GUID property of the network interface resource."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "The provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
       "description": "NetworkInterface properties. "
@@ -3833,11 +3945,11 @@
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "location": {
           "type": "string",
-          "description": "Resource location"
+          "description": "Resource location."
         },
         "tags": {
           "oneOf": [
@@ -3851,7 +3963,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Resource tags"
+          "description": "Resource tags."
         },
         "properties": {
           "oneOf": [
@@ -3865,10 +3977,10 @@
         },
         "etag": {
           "type": "string",
-          "description": "Gets a unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "NetworkSecurityGroup resource"
+      "description": "NetworkSecurityGroup resource."
     },
     "NetworkSecurityGroupPropertiesFormat": {
       "type": "object",
@@ -3885,7 +3997,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets security rules of network security group"
+          "description": "A collection of security rules of the network security group."
         },
         "defaultSecurityRules": {
           "oneOf": [
@@ -3899,18 +4011,18 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or default security rules of network security group"
+          "description": "The default security rules of network security group."
         },
         "resourceGuid": {
           "type": "string",
-          "description": "Gets or sets resource guid property of the network security group resource"
+          "description": "The resource GUID property of the network security group resource."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "The provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
-      "description": "Network Security Group resource"
+      "description": "Network Security Group resource."
     },
     "networkSecurityGroups_securityRules_childResource": {
       "type": "object",
@@ -3932,7 +4044,7 @@
         },
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -3946,7 +4058,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "required": [
@@ -3957,12 +4069,52 @@
       ],
       "description": "Microsoft.Network/networkSecurityGroups/securityRules"
     },
+    "NetworkWatcherPropertiesFormat": {
+      "description": "The network watcher properties."
+    },
+    "networkWatchers_packetCaptures_childResource": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "packetCaptures"
+          ]
+        },
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2016-09-01"
+          ]
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PacketCaptureParameters"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "apiVersion",
+        "properties"
+      ],
+      "description": "Microsoft.Network/networkWatchers/packetCaptures"
+    },
     "OutboundNatRule": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -3976,14 +4128,14 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "The name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "Outbound NAT pool of the load balancer"
+      "description": "Outbound NAT pool of the load balancer."
     },
     "OutboundNatRulePropertiesFormat": {
       "type": "object",
@@ -3997,7 +4149,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the number of outbound ports to be used for SNAT"
+          "description": "The number of outbound ports to be used for NAT."
         },
         "frontendIPConfigurations": {
           "oneOf": [
@@ -4011,7 +4163,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets Frontend IP addresses of the load balancer"
+          "description": "The Frontend IP addresses of the load balancer."
         },
         "backendAddressPool": {
           "oneOf": [
@@ -4022,24 +4174,153 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets a reference to a pool of DIPs. Outbound traffic is randomly load balanced across IPs in the backend IPs"
+          "description": "A reference to a pool of DIPs. Outbound traffic is randomly load balanced across IPs in the backend IPs."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "Gets the provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
       "required": [
         "backendAddressPool"
       ],
-      "description": "Outbound NAT pool of the load balancer"
+      "description": "Outbound NAT pool of the load balancer."
+    },
+    "PacketCaptureFilter": {
+      "type": "object",
+      "properties": {
+        "protocol": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "TCP",
+                "UDP",
+                "Any"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Protocol to be filtered on."
+        },
+        "localIPAddress": {
+          "type": "string",
+          "description": "Local IP Address to be filtered on. Notation: \"127.0.0.1\" for single address entry. \"127.0.0.1-127.0.0.255\" for range. \"127.0.0.1;127.0.0.5\"? for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null."
+        },
+        "remoteIPAddress": {
+          "type": "string",
+          "description": "Local IP Address to be filtered on. Notation: \"127.0.0.1\" for single address entry. \"127.0.0.1-127.0.0.255\" for range. \"127.0.0.1;127.0.0.5;\" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null."
+        },
+        "localPort": {
+          "type": "string",
+          "description": "Local port to be filtered on. Notation: \"80\" for single port entry.\"80-85\" for range. \"80;443;\" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null."
+        },
+        "remotePort": {
+          "type": "string",
+          "description": "Remote port to be filtered on. Notation: \"80\" for single port entry.\"80-85\" for range. \"80;443;\" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null."
+        }
+      },
+      "description": "Filter that is applied to packet capture request. Multiple filters can be applied."
+    },
+    "PacketCaptureParameters": {
+      "type": "object",
+      "properties": {
+        "target": {
+          "type": "string",
+          "description": "The ID of the targeted resource, only VM is currently supported."
+        },
+        "bytesToCapturePerPacket": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "default": "0"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Number of bytes captured per packet, the remaining bytes are truncated."
+        },
+        "totalBytesPerSession": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "default": "1073741824"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Maximum size of the capture output."
+        },
+        "timeLimitInSeconds": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "default": "18000"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Maximum duration of the capture session in seconds."
+        },
+        "storageLocation": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/PacketCaptureStorageLocation"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ]
+        },
+        "filters": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/PacketCaptureFilter"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "target",
+        "storageLocation"
+      ],
+      "description": "Parameters that define the create packet capture operation."
+    },
+    "PacketCaptureStorageLocation": {
+      "type": "object",
+      "properties": {
+        "storageId": {
+          "type": "string",
+          "description": "The ID of the storage account to save the packet capture session. Required if no local file path is provided."
+        },
+        "storagePath": {
+          "type": "string",
+          "description": "The URI of the storage path to save the packet capture. Must be a well-formed URI describing the location to save the packet capture."
+        },
+        "filePath": {
+          "type": "string",
+          "description": "A valid local path on the targeting VM. Must include the name of the capture file (*.cap). For linux virtual machine it must start with /var/captures. Required if no storage ID is provided, otherwise optional."
+        }
+      },
+      "description": "Describes the storage location for a packet capture session."
     },
     "Probe": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -4053,14 +4334,14 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "Load balancer Probe"
+      "description": "A load balancer probe."
     },
     "ProbePropertiesFormat": {
       "type": "object",
@@ -4078,7 +4359,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the protocol of the end point. Possible values are http or Tcp. If Tcp is specified, a received ACK is required for the probe to be successful. If http is specified,a 200 OK response from the specifies URI is required for the probe to be successful."
+          "description": "The protocol of the end point. Possible values are: 'Http' or 'Tcp'. If 'Tcp' is specified, a received ACK is required for the probe to be successful. If 'Http' is specified, a 200 OK response from the specifies URI is required for the probe to be successful."
         },
         "port": {
           "oneOf": [
@@ -4089,7 +4370,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets Port for communicating the probe. Possible values range from 1 to 65535, inclusive."
+          "description": "The port for communicating the probe. Possible values range from 1 to 65535, inclusive."
         },
         "intervalInSeconds": {
           "oneOf": [
@@ -4100,7 +4381,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the interval, in seconds, for how frequently to probe the endpoint for health status. Typically, the interval is slightly less than half the allocated timeout period (in seconds) which allows two full probes before taking the instance out of rotation. The default value is 15, the minimum value is 5"
+          "description": "The interval, in seconds, for how frequently to probe the endpoint for health status. Typically, the interval is slightly less than half the allocated timeout period (in seconds) which allows two full probes before taking the instance out of rotation. The default value is 15, the minimum value is 5."
         },
         "numberOfProbes": {
           "oneOf": [
@@ -4111,15 +4392,15 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the number of probes where if no response, will result in stopping further traffic from being delivered to the endpoint. This values allows endpoints to be taken out of rotation faster or slower than the typical times used in Azure. "
+          "description": "The number of probes where if no response, will result in stopping further traffic from being delivered to the endpoint. This values allows endpoints to be taken out of rotation faster or slower than the typical times used in Azure."
         },
         "requestPath": {
           "type": "string",
-          "description": "Gets or sets the URI used for requesting health status from the VM. Path is required if a protocol is set to http. Otherwise, it is not allowed. There is no default value"
+          "description": "The URI used for requesting health status from the VM. Path is required if a protocol is set to http. Otherwise, it is not allowed. There is no default value."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "Gets the provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
       "required": [
@@ -4132,11 +4413,11 @@
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "location": {
           "type": "string",
-          "description": "Resource location"
+          "description": "Resource location."
         },
         "tags": {
           "oneOf": [
@@ -4150,7 +4431,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Resource tags"
+          "description": "Resource tags."
         },
         "properties": {
           "oneOf": [
@@ -4164,10 +4445,10 @@
         },
         "etag": {
           "type": "string",
-          "description": "Gets a unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "PublicIPAddress resource"
+      "description": "Public IP address resource."
     },
     "PublicIPAddressDnsSettings": {
       "type": "object",
@@ -4203,7 +4484,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets PublicIP allocation method (Static/Dynamic)."
+          "description": "The public IP allocation method. Possible values are: 'Static' and 'Dynamic'."
         },
         "publicIPAddressVersion": {
           "oneOf": [
@@ -4218,7 +4499,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets PublicIP address version (IPv4/IPv6)."
+          "description": "The public IP address version. Possible values are: 'IPv4' and 'IPv6'."
         },
         "dnsSettings": {
           "oneOf": [
@@ -4229,7 +4510,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets FQDN of the DNS record associated with the public IP address"
+          "description": "The FQDN of the DNS record associated with the public IP address."
         },
         "ipAddress": {
           "type": "string"
@@ -4243,25 +4524,25 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the Idletimeout of the public IP address"
+          "description": "The idle timeout of the public IP address."
         },
         "resourceGuid": {
           "type": "string",
-          "description": "Gets or sets resource guid property of the PublicIP resource"
+          "description": "The resource GUID property of the public IP resource."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "The provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
-      "description": "PublicIpAddress properties"
+      "description": "Public IP address properties."
     },
     "ResourceNavigationLink": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -4275,31 +4556,31 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "Name of the resource that is unique within a resource group. This name can be used to access the resource."
         }
       },
-      "description": "ResourceNavigationLink resource"
+      "description": "ResourceNavigationLink resource."
     },
     "ResourceNavigationLinkFormat": {
       "type": "object",
       "properties": {
         "linkedResourceType": {
           "type": "string",
-          "description": "Resource type of the linked resource"
+          "description": "Resource type of the linked resource."
         },
         "link": {
           "type": "string",
           "description": "Link to the external resource"
         }
       },
-      "description": "Properties of ResourceNavigationLink"
+      "description": "Properties of ResourceNavigationLink."
     },
     "Route": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -4313,11 +4594,11 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "The name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "description": "Route resource"
@@ -4327,7 +4608,7 @@
       "properties": {
         "addressPrefix": {
           "type": "string",
-          "description": "Gets or sets the destination CIDR to which the route applies."
+          "description": "The destination CIDR to which the route applies."
         },
         "nextHopType": {
           "oneOf": [
@@ -4345,15 +4626,15 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the type of Azure hop the packet should be sent to."
+          "description": "The type of Azure hop the packet should be sent to. Possible values are: 'VirtualNetworkGateway', 'VnetLocal', 'Internet', 'VirtualAppliance', and 'None'."
         },
         "nextHopIpAddress": {
           "type": "string",
-          "description": "Gets or sets the IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance."
+          "description": "The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the resource Updating/Deleting/Failed"
+          "description": "The provisioning state of the resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
       "required": [
@@ -4366,11 +4647,11 @@
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "location": {
           "type": "string",
-          "description": "Resource location"
+          "description": "Resource location."
         },
         "tags": {
           "oneOf": [
@@ -4384,7 +4665,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Resource tags"
+          "description": "Resource tags."
         },
         "properties": {
           "oneOf": [
@@ -4398,10 +4679,10 @@
         },
         "etag": {
           "type": "string",
-          "description": "Gets a unique read-only string that changes whenever the resource is updated"
+          "description": "Gets a unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "RouteTable resource"
+      "description": "Route table resource."
     },
     "RouteTablePropertiesFormat": {
       "type": "object",
@@ -4418,11 +4699,11 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets Routes in a Route Table"
+          "description": "Collection of routes contained within a route table."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the resource Updating/Deleting/Failed"
+          "description": "The provisioning state of the resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
       "description": "Route Table resource"
@@ -4447,7 +4728,7 @@
         },
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -4461,7 +4742,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "required": [
@@ -4477,7 +4758,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -4491,21 +4772,21 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "The name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "Network security rule"
+      "description": "Network security rule."
     },
     "SecurityRulePropertiesFormat": {
       "type": "object",
       "properties": {
         "description": {
           "type": "string",
-          "description": "Gets or sets a description for this rule. Restricted to 140 chars."
+          "description": "A description for this rule. Restricted to 140 chars."
         },
         "protocol": {
           "oneOf": [
@@ -4521,23 +4802,23 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets Network protocol this rule applies to. Can be Tcp, Udp or All(*)."
+          "description": "Network protocol this rule applies to. Possible values are 'Tcp', 'Udp', and '*'."
         },
         "sourcePortRange": {
           "type": "string",
-          "description": "Gets or sets Source Port or Range. Integer or range between 0 and 65535. Asterix '*' can also be used to match all ports."
+          "description": "The source port or range. Integer or range between 0 and 65535. Asterix '*' can also be used to match all ports."
         },
         "destinationPortRange": {
           "type": "string",
-          "description": "Gets or sets Destination Port or Range. Integer or range between 0 and 65535. Asterix '*' can also be used to match all ports."
+          "description": "The destination port or range. Integer or range between 0 and 65535. Asterix '*' can also be used to match all ports."
         },
         "sourceAddressPrefix": {
           "type": "string",
-          "description": "Gets or sets source address prefix. CIDR or source IP range. Asterix '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from. "
+          "description": "The CIDR or source IP range. Asterix '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from. "
         },
         "destinationAddressPrefix": {
           "type": "string",
-          "description": "Gets or sets destination address prefix. CIDR or source IP range. Asterix '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. "
+          "description": "The destination address prefix. CIDR or source IP range. Asterix '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used."
         },
         "access": {
           "oneOf": [
@@ -4552,7 +4833,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets network traffic is allowed or denied. Possible values are 'Allow' and 'Deny'."
+          "description": "The network traffic is allowed or denied. Possible values are: 'Allow' and 'Deny'."
         },
         "priority": {
           "oneOf": [
@@ -4563,7 +4844,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule."
+          "description": "The priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule."
         },
         "direction": {
           "oneOf": [
@@ -4578,11 +4859,11 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the direction of the rule.InBound or Outbound. The direction specifies if rule will be evaluated on incoming or outcoming traffic."
+          "description": "The direction of the rule. The direction specifies if rule will be evaluated on incoming or outcoming traffic. Possible values are: 'Inbound' and 'Outbound'."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "The provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       },
       "required": [
@@ -4598,7 +4879,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -4612,21 +4893,21 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets or sets the name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "The name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "Subnet in a VirtualNework resource"
+      "description": "Subnet in a virtual network resource."
     },
     "SubnetPropertiesFormat": {
       "type": "object",
       "properties": {
         "addressPrefix": {
           "type": "string",
-          "description": "Gets or sets Address prefix for the subnet."
+          "description": "The address prefix for the subnet."
         },
         "networkSecurityGroup": {
           "oneOf": [
@@ -4637,7 +4918,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the reference of the NetworkSecurityGroup resource"
+          "description": "The reference of the NetworkSecurityGroup resource."
         },
         "routeTable": {
           "oneOf": [
@@ -4648,7 +4929,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the reference of the RouteTable resource"
+          "description": "The reference of the RouteTable resource."
         },
         "resourceNavigationLinks": {
           "oneOf": [
@@ -4662,11 +4943,11 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets array of references to the external resources using subnet"
+          "description": "Gets an array of references to the external resources using subnet."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the resource"
+          "description": "The provisioning state of the resource."
         }
       }
     },
@@ -4675,7 +4956,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         }
       }
     },
@@ -4684,11 +4965,11 @@
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "location": {
           "type": "string",
-          "description": "Resource location"
+          "description": "Resource location."
         },
         "tags": {
           "oneOf": [
@@ -4702,7 +4983,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Resource tags"
+          "description": "Resource tags."
         },
         "properties": {
           "oneOf": [
@@ -4716,9 +4997,12 @@
         },
         "etag": {
           "type": "string",
-          "description": "Gets a unique read-only string that changes whenever the resource is updated"
+          "description": "Gets a unique read-only string that changes whenever the resource is updated."
         }
       },
+      "required": [
+        "properties"
+      ],
       "description": "A common class for general resource information"
     },
     "VirtualNetworkGatewayConnectionPropertiesFormat": {
@@ -4773,7 +5057,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gateway connection type -Ipsec/Dedicated/VpnClient/Vnet2Vnet."
+          "description": "Gateway connection type. Possible values are: 'Ipsec','Vnet2Vnet','ExpressRoute', and 'VPNClient."
         },
         "routingWeight": {
           "oneOf": [
@@ -4784,50 +5068,11 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "The Routing weight."
+          "description": "The routing weight."
         },
         "sharedKey": {
           "type": "string",
-          "description": "The Ipsec share key."
-        },
-        "connectionStatus": {
-          "oneOf": [
-            {
-              "type": "string",
-              "enum": [
-                "Unknown",
-                "Connecting",
-                "Connected",
-                "NotConnected"
-              ]
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "Virtual network Gateway connection status."
-        },
-        "egressBytesTransferred": {
-          "oneOf": [
-            {
-              "type": "integer"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "The Egress Bytes Transferred in this connection"
-        },
-        "ingressBytesTransferred": {
-          "oneOf": [
-            {
-              "type": "integer"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "The Ingress Bytes Transferred in this connection"
+          "description": "The IPSec shared key."
         },
         "peer": {
           "oneOf": [
@@ -4849,17 +5094,17 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "EnableBgp Flag"
+          "description": "EnableBgp flag"
         },
         "resourceGuid": {
           "type": "string",
-          "description": "Gets or sets resource guid property of the VirtualNetworkGatewayConnection resource"
-        },
-        "provisioningState": {
-          "type": "string",
-          "description": "Gets provisioning state of the VirtualNetworkGatewayConnection resource Updating/Deleting/Failed"
+          "description": "The resource GUID property of the VirtualNetworkGatewayConnection resource."
         }
       },
+      "required": [
+        "virtualNetworkGateway1",
+        "connectionType"
+      ],
       "description": "VirtualNetworkGatewayConnection properties"
     },
     "VirtualNetworkGatewayIPConfiguration": {
@@ -4867,7 +5112,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -4881,14 +5126,14 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "The name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "IpConfiguration for Virtual network gateway"
+      "description": "IP configuration for virtual network gateway"
     },
     "VirtualNetworkGatewayIPConfigurationPropertiesFormat": {
       "type": "object",
@@ -4906,7 +5151,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets PrivateIP allocation method."
+          "description": "The private IP allocation method. Possible values are: 'Static' and 'Dynamic'."
         },
         "subnet": {
           "oneOf": [
@@ -4917,7 +5162,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the reference of the subnet resource"
+          "description": "The reference of the subnet resource."
         },
         "publicIPAddress": {
           "oneOf": [
@@ -4928,13 +5173,13 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the reference of the PublicIP resource"
-        },
-        "provisioningState": {
-          "type": "string",
-          "description": "Gets provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "The reference of the public IP resource."
         }
       },
+      "required": [
+        "subnet",
+        "publicIPAddress"
+      ],
       "description": "Properties of VirtualNetworkGatewayIPConfiguration"
     },
     "VirtualNetworkGatewayPropertiesFormat": {
@@ -4952,7 +5197,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "IpConfigurations for Virtual network gateway."
+          "description": "IP configurations for virtual network gateway."
         },
         "gatewayType": {
           "oneOf": [
@@ -4967,7 +5212,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "The type of this virtual network gateway."
+          "description": "The type of this virtual network gateway. Possible values are: 'Vpn' and 'ExpressRoute'."
         },
         "vpnType": {
           "oneOf": [
@@ -4982,7 +5227,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "The type of this virtual network gateway."
+          "description": "The type of this virtual network gateway. Possible values are: 'PolicyBased' and 'RouteBased'."
         },
         "enableBgp": {
           "oneOf": [
@@ -4993,7 +5238,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "EnableBgp Flag"
+          "description": "Whether BGP is enabled for this virtual network gateway or not."
         },
         "activeActive": {
           "oneOf": [
@@ -5015,7 +5260,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the reference of the LocalNetworkGateway resource which represents Local network site having default routes. Assign Null value in case of removing existing default site setting."
+          "description": "The reference of the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting."
         },
         "sku": {
           "oneOf": [
@@ -5026,7 +5271,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the reference of the VirtualNetworkGatewaySku resource which represents the sku selected for Virtual network gateway."
+          "description": "The reference of the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway."
         },
         "vpnClientConfiguration": {
           "oneOf": [
@@ -5037,7 +5282,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the reference of the VpnClientConfiguration resource which represents the P2S VpnClient configurations."
+          "description": "The reference of the VpnClientConfiguration resource which represents the P2S VpnClient configurations."
         },
         "bgpSettings": {
           "oneOf": [
@@ -5048,17 +5293,18 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Virtual network gateway's BGP speaker settings"
+          "description": "Virtual network gateway's BGP speaker settings."
         },
         "resourceGuid": {
           "type": "string",
-          "description": "Gets or sets resource guid property of the VirtualNetworkGateway resource"
-        },
-        "provisioningState": {
-          "type": "string",
-          "description": "Gets provisioning state of the VirtualNetworkGateway resource Updating/Deleting/Failed"
+          "description": "The resource GUID property of the VirtualNetworkGateway resource."
         }
       },
+      "required": [
+        "ipConfigurations",
+        "gatewayType",
+        "vpnType"
+      ],
       "description": "VirtualNetworkGateway properties"
     },
     "VirtualNetworkGatewaySku": {
@@ -5079,7 +5325,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gateway sku name -Basic/HighPerformance/Standard/UltraPerformance."
+          "description": "Gateway SKU name. Possible values are: 'Basic', 'HighPerformance','Standard', and 'UltraPerformance'."
         },
         "tier": {
           "oneOf": [
@@ -5096,7 +5342,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gateway sku tier -Basic/HighPerformance/Standard/UltraPerformance."
+          "description": "Gateway SKU tier. Possible values are: 'Basic', 'HighPerformance','Standard', and 'UltraPerformance'."
         },
         "capacity": {
           "oneOf": [
@@ -5107,9 +5353,13 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "The capacity"
+          "description": "The capacity."
         }
       },
+      "required": [
+        "name",
+        "tier"
+      ],
       "description": "VirtualNetworkGatewaySku details"
     },
     "VirtualNetworkPeering": {
@@ -5117,7 +5367,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -5131,14 +5381,14 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets or sets the name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "The name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "Peerings in a VirtualNework resource"
+      "description": "Peerings in a virtual network resource."
     },
     "VirtualNetworkPeeringPropertiesFormat": {
       "type": "object",
@@ -5152,7 +5402,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets whether the VMs in the linked virtual network space would be able to access all the VMs in local Virtual network space"
+          "description": "Whether the VMs in the linked virtual network space would be able to access all the VMs in local Virtual network space."
         },
         "allowForwardedTraffic": {
           "oneOf": [
@@ -5163,7 +5413,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets whether the forwarded traffic from the VMs in the remote virtual network will be allowed/disallowed"
+          "description": "Whether the forwarded traffic from the VMs in the remote virtual network will be allowed/disallowed."
         },
         "allowGatewayTransit": {
           "oneOf": [
@@ -5174,7 +5424,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets if gatewayLinks can be used in remote virtual network’s link to this virtual network"
+          "description": "If gateway links can be used in remote virtual networking to link to this virtual network."
         },
         "useRemoteGateways": {
           "oneOf": [
@@ -5185,7 +5435,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets if remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only 1 peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway."
+          "description": "If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway."
         },
         "remoteVirtualNetwork": {
           "oneOf": [
@@ -5196,7 +5446,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the reference of the remote virtual network"
+          "description": "The reference of the remote virtual network."
         },
         "peeringState": {
           "oneOf": [
@@ -5212,11 +5462,11 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets the status of the virtual network peering."
+          "description": "The status of the virtual network peering. Possible values are 'Initiated', 'Connected', and 'Disconnected'."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the resource"
+          "description": "The provisioning state of the resource."
         }
       }
     },
@@ -5232,7 +5482,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets AddressSpace that contains an array of IP address ranges that can be used by subnets"
+          "description": "The AddressSpace that contains an array of IP address ranges that can be used by subnets."
         },
         "dhcpOptions": {
           "oneOf": [
@@ -5243,7 +5493,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets DHCPOptions that contains an array of DNS servers available to VMs deployed in the virtual network"
+          "description": "The dhcpOptions that contains an array of DNS servers available to VMs deployed in the virtual network."
         },
         "subnets": {
           "oneOf": [
@@ -5257,9 +5507,9 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets list of subnets in a VirtualNetwork"
+          "description": "A list of subnets in a Virtual Network."
         },
-        "VirtualNetworkPeerings": {
+        "virtualNetworkPeerings": {
           "oneOf": [
             {
               "type": "array",
@@ -5271,15 +5521,15 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets list of peerings in a VirtualNetwork"
+          "description": "A list of peerings in a Virtual Network."
         },
         "resourceGuid": {
           "type": "string",
-          "description": "Gets or sets resource guid property of the VirtualNetwork resource"
+          "description": "The resourceGuid property of the Virtual Network resource."
         },
         "provisioningState": {
           "type": "string",
-          "description": "Gets provisioning state of the PublicIP resource Updating/Deleting/Failed"
+          "description": "The provisioning state of the PublicIP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         }
       }
     },
@@ -5303,7 +5553,7 @@
         },
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -5317,7 +5567,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "required": [
@@ -5348,7 +5598,7 @@
         },
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -5362,7 +5612,7 @@
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
       "required": [
@@ -5385,7 +5635,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "Gets or sets the reference of the Address space resource which represents Address space for P2S VpnClient."
+          "description": "The reference of the address space resource which represents Address space for P2S VpnClient."
         },
         "vpnClientRootCertificates": {
           "oneOf": [
@@ -5399,7 +5649,7 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ],
-          "description": "VpnClientRootCertificate for Virtual network gateway."
+          "description": "VpnClientRootCertificate for virtual network gateway."
         },
         "vpnClientRevokedCertificates": {
           "oneOf": [
@@ -5416,14 +5666,14 @@
           "description": "VpnClientRevokedCertificate for Virtual network gateway."
         }
       },
-      "description": "VpnClientConfiguration for P2S client"
+      "description": "VpnClientConfiguration for P2S client."
     },
     "VpnClientRevokedCertificate": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -5437,35 +5687,31 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "The name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
-      "description": "VPN client revoked certificate of virtual network gateway"
+      "description": "VPN client revoked certificate of virtual network gateway."
     },
     "VpnClientRevokedCertificatePropertiesFormat": {
       "type": "object",
       "properties": {
         "thumbprint": {
           "type": "string",
-          "description": "Gets or sets the revoked Vpn client certificate thumbprint"
-        },
-        "provisioningState": {
-          "type": "string",
-          "description": "Gets provisioning state of the VPN client revoked certificate resource Updating/Deleting/Failed"
+          "description": "The revoked VPN client certificate thumbprint."
         }
       },
-      "description": "Properties of the revoked VPN client certificate of virtual network gateway"
+      "description": "Properties of the revoked VPN client certificate of virtual network gateway."
     },
     "VpnClientRootCertificate": {
       "type": "object",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Resource Id"
+          "description": "Resource ID."
         },
         "properties": {
           "oneOf": [
@@ -5479,13 +5725,16 @@
         },
         "name": {
           "type": "string",
-          "description": "Gets name of the resource that is unique within a resource group. This name can be used to access the resource"
+          "description": "The name of the resource that is unique within a resource group. This name can be used to access the resource."
         },
         "etag": {
           "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
+          "description": "A unique read-only string that changes whenever the resource is updated."
         }
       },
+      "required": [
+        "properties"
+      ],
       "description": "VPN client root certificate of virtual network gateway"
     },
     "VpnClientRootCertificatePropertiesFormat": {
@@ -5493,13 +5742,12 @@
       "properties": {
         "publicCertData": {
           "type": "string",
-          "description": "Gets or sets the certificate public data"
-        },
-        "provisioningState": {
-          "type": "string",
-          "description": "Gets provisioning state of the VPN client root certificate resource Updating/Deleting/Failed"
+          "description": "The certificate public data."
         }
       },
+      "required": [
+        "publicCertData"
+      ],
       "description": "Properties of SSL certificates of application gateway"
     }
   }

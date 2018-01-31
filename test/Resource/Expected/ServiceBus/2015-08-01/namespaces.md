@@ -17,11 +17,7 @@ To create a Microsoft.ServiceBus/namespaces resource, add the following JSON to 
   },
   "tags": {},
   "properties": {
-    "provisioningState": "string",
     "status": "string",
-    "createdAt": "string",
-    "updatedAt": "string",
-    "serviceBusEndpoint": "string",
     "createACSNamespace": boolean,
     "enabled": boolean
   },
@@ -50,20 +46,16 @@ The following tables describe the values you need to set in the schema.
 ### Sku object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  name | enum | No | Name of this Sku. - Basic, Standard, Premium |
-|  tier | enum | Yes | The tier of this particular SKU. - Basic, Standard, Premium |
-|  capacity | integer | No | The messaging units for the tier specified |
+|  name | enum | No | Name of this SKU. - Basic, Standard, Premium |
+|  tier | enum | Yes | The billing tier of this particular SKU. - Basic, Standard, Premium |
+|  capacity | integer | No | The specified messaging units for the tier. |
 
 
 <a id="NamespaceProperties" />
 ### NamespaceProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  provisioningState | string | No | Provisioning state of the Namespace. |
 |  status | enum | No | State of the namespace. - Unknown, Creating, Created, Activating, Enabling, Active, Disabling, Disabled, SoftDeleting, SoftDeleted, Removing, Removed, Failed |
-|  createdAt | string | No | The time the namespace was created. |
-|  updatedAt | string | No | The time the namespace was updated. |
-|  serviceBusEndpoint | string | No | Endpoint you can use to perform ServiceBus operations. |
-|  createACSNamespace | boolean | No | Indicates whether to create ACS namespace. |
+|  createACSNamespace | boolean | No | Indicates whether to create an ACS namespace. |
 |  enabled | boolean | No | Specifies whether this instance is enabled. |
 

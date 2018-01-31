@@ -30,14 +30,14 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes |  |
 |  type | enum | Yes | Microsoft.Batch/batchAccounts |
 |  apiVersion | enum | Yes | 2015-12-01 |
-|  location | string | No | The region in which the account is created. |
+|  location | string | Yes | The region in which to create the account. |
 |  tags | object | No | The user specified tags associated with the account. |
-|  properties | object | Yes | The properties of the account. - [AccountBaseProperties object](#AccountBaseProperties) |
+|  properties | object | Yes | The properties of the account. - [BatchAccountBaseProperties object](#BatchAccountBaseProperties) |
 |  resources | array | No | [applications](./batchAccounts/applications.md) |
 
 
-<a id="AccountBaseProperties" />
-### AccountBaseProperties object
+<a id="BatchAccountBaseProperties" />
+### BatchAccountBaseProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  autoStorage | object | No | The properties related to auto storage account. - [AutoStorageBaseProperties object](#AutoStorageBaseProperties) |
@@ -47,5 +47,5 @@ The following tables describe the values you need to set in the schema.
 ### AutoStorageBaseProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  storageAccountId | string | Yes | The resource id of the storage account to be used for auto storage account. |
+|  storageAccountId | string | Yes | The resource ID of the storage account to be used for auto storage account. |
 

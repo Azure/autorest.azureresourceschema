@@ -94,12 +94,12 @@ The following tables describe the values you need to set in the schema.
 |  name | string | Yes |  |
 |  type | enum | Yes | Microsoft.Network/expressRouteCircuits |
 |  apiVersion | enum | Yes | 2016-09-01 |
-|  id | string | No | Resource Id |
-|  location | string | No | Resource location |
-|  tags | object | No | Resource tags |
-|  sku | object | No | Gets or sets sku - [ExpressRouteCircuitSku object](#ExpressRouteCircuitSku) |
+|  id | string | No | Resource ID. |
+|  location | string | No | Resource location. |
+|  tags | object | No | Resource tags. |
+|  sku | object | No | The SKU. - [ExpressRouteCircuitSku object](#ExpressRouteCircuitSku) |
 |  properties | object | Yes | [ExpressRouteCircuitPropertiesFormat object](#ExpressRouteCircuitPropertiesFormat) |
-|  etag | string | No | Gets a unique read-only string that changes whenever the resource is updated |
+|  etag | string | No | Gets a unique read-only string that changes whenever the resource is updated. |
 |  resources | array | No | [peerings](./expressRouteCircuits/peerings.md) [authorizations](./expressRouteCircuits/authorizations.md) |
 
 
@@ -107,94 +107,94 @@ The following tables describe the values you need to set in the schema.
 ### ExpressRouteCircuitSku object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  name | string | No | Gets or sets name of the sku. |
-|  tier | enum | No | Gets or sets tier of the sku. - Standard or Premium |
-|  family | enum | No | Gets or sets family of the sku. - UnlimitedData or MeteredData |
+|  name | string | No | The name of the SKU. |
+|  tier | enum | No | The tier of the SKU. Possible values are 'Standard' and 'Premium'. - Standard or Premium |
+|  family | enum | No | The family of the SKU. Possible values are: 'UnlimitedData' and 'MeteredData'. - UnlimitedData or MeteredData |
 
 
 <a id="ExpressRouteCircuitPropertiesFormat" />
 ### ExpressRouteCircuitPropertiesFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  allowClassicOperations | boolean | No | allow classic operations |
-|  circuitProvisioningState | string | No | Gets or sets CircuitProvisioningState state of the resource  |
-|  serviceProviderProvisioningState | enum | No | Gets or sets ServiceProviderProvisioningState state of the resource. - NotProvisioned, Provisioning, Provisioned, Deprovisioning |
-|  authorizations | array | No | Gets or sets list of authorizations - [ExpressRouteCircuitAuthorization object](#ExpressRouteCircuitAuthorization) |
-|  peerings | array | No | Gets or sets list of peerings - [ExpressRouteCircuitPeering object](#ExpressRouteCircuitPeering) |
-|  serviceKey | string | No | Gets or sets ServiceKey |
-|  serviceProviderNotes | string | No | Gets or sets ServiceProviderNotes |
-|  serviceProviderProperties | object | No | Gets or sets ServiceProviderProperties - [ExpressRouteCircuitServiceProviderProperties object](#ExpressRouteCircuitServiceProviderProperties) |
-|  provisioningState | string | No | Gets provisioning state of the PublicIP resource Updating/Deleting/Failed |
-|  gatewayManagerEtag | string | No | Gets or sets the GatewayManager Etag |
+|  allowClassicOperations | boolean | No | Allow classic operations |
+|  circuitProvisioningState | string | No | The CircuitProvisioningState state of the resource. |
+|  serviceProviderProvisioningState | enum | No | The ServiceProviderProvisioningState state of the resource. Possible values are 'NotProvisioned', 'Provisioning', 'Provisioned', and 'Deprovisioning'. - NotProvisioned, Provisioning, Provisioned, Deprovisioning |
+|  authorizations | array | No | The list of authorizations. - [ExpressRouteCircuitAuthorization object](#ExpressRouteCircuitAuthorization) |
+|  peerings | array | No | The list of peerings. - [ExpressRouteCircuitPeering object](#ExpressRouteCircuitPeering) |
+|  serviceKey | string | No | The ServiceKey. |
+|  serviceProviderNotes | string | No | The ServiceProviderNotes. |
+|  serviceProviderProperties | object | No | The ServiceProviderProperties. - [ExpressRouteCircuitServiceProviderProperties object](#ExpressRouteCircuitServiceProviderProperties) |
+|  provisioningState | string | No | Gets the provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'. |
+|  gatewayManagerEtag | string | No | The GatewayManager Etag. |
 
 
 <a id="ExpressRouteCircuitAuthorization" />
 ### ExpressRouteCircuitAuthorization object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  id | string | No | Resource Id |
+|  id | string | No | Resource ID. |
 |  properties | object | No | [AuthorizationPropertiesFormat object](#AuthorizationPropertiesFormat) |
-|  name | string | No | Gets name of the resource that is unique within a resource group. This name can be used to access the resource |
-|  etag | string | No | A unique read-only string that changes whenever the resource is updated |
+|  name | string | No | Gets name of the resource that is unique within a resource group. This name can be used to access the resource. |
+|  etag | string | No | A unique read-only string that changes whenever the resource is updated. |
 
 
 <a id="ExpressRouteCircuitPeering" />
 ### ExpressRouteCircuitPeering object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  id | string | No | Resource Id |
+|  id | string | No | Resource ID. |
 |  properties | object | No | [ExpressRouteCircuitPeeringPropertiesFormat object](#ExpressRouteCircuitPeeringPropertiesFormat) |
-|  name | string | No | Gets name of the resource that is unique within a resource group. This name can be used to access the resource |
-|  etag | string | No | A unique read-only string that changes whenever the resource is updated |
+|  name | string | No | Gets name of the resource that is unique within a resource group. This name can be used to access the resource. |
+|  etag | string | No | A unique read-only string that changes whenever the resource is updated. |
 
 
 <a id="ExpressRouteCircuitServiceProviderProperties" />
 ### ExpressRouteCircuitServiceProviderProperties object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  serviceProviderName | string | No | Gets or sets serviceProviderName. |
-|  peeringLocation | string | No | Gets or sets peering location. |
-|  bandwidthInMbps | integer | No | Gets or sets BandwidthInMbps. |
+|  serviceProviderName | string | No | The serviceProviderName. |
+|  peeringLocation | string | No | The peering location. |
+|  bandwidthInMbps | integer | No | The BandwidthInMbps. |
 
 
 <a id="AuthorizationPropertiesFormat" />
 ### AuthorizationPropertiesFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  authorizationKey | string | No | Gets or sets the authorization key |
-|  authorizationUseStatus | enum | No | Gets or sets AuthorizationUseStatus. - Available or InUse |
-|  provisioningState | string | No | Gets provisioning state of the PublicIP resource Updating/Deleting/Failed |
+|  authorizationKey | string | No | The authorization key. |
+|  authorizationUseStatus | enum | No | AuthorizationUseStatus. Possible values are: 'Available' and 'InUse'. - Available or InUse |
+|  provisioningState | string | No | Gets the provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'. |
 
 
 <a id="ExpressRouteCircuitPeeringPropertiesFormat" />
 ### ExpressRouteCircuitPeeringPropertiesFormat object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  peeringType | enum | No | Gets or sets PeeringType. - AzurePublicPeering, AzurePrivatePeering, MicrosoftPeering |
-|  state | enum | No | Gets or sets state of Peering. - Disabled or Enabled |
-|  azureASN | integer | No | Gets or sets the azure ASN |
-|  peerASN | integer | No | Gets or sets the peer ASN |
-|  primaryPeerAddressPrefix | string | No | Gets or sets the primary address prefix |
-|  secondaryPeerAddressPrefix | string | No | Gets or sets the secondary address prefix |
-|  primaryAzurePort | string | No | Gets or sets the primary port |
-|  secondaryAzurePort | string | No | Gets or sets the secondary port |
-|  sharedKey | string | No | Gets or sets the shared key |
-|  vlanId | integer | No | Gets or sets the vlan id |
-|  microsoftPeeringConfig | object | No | Gets or sets the mircosoft peering config - [ExpressRouteCircuitPeeringConfig object](#ExpressRouteCircuitPeeringConfig) |
-|  stats | object | No | Gets or peering stats - [ExpressRouteCircuitStats object](#ExpressRouteCircuitStats) |
-|  provisioningState | string | No | Gets provisioning state of the PublicIP resource Updating/Deleting/Failed |
-|  gatewayManagerEtag | string | No | Gets or sets the GatewayManager Etag |
-|  lastModifiedBy | string | No | Gets whether the provider or the customer last modified the peering |
+|  peeringType | enum | No | The PeeringType. Possible values are: 'AzurePublicPeering', 'AzurePrivatePeering', and 'MicrosoftPeering'. - AzurePublicPeering, AzurePrivatePeering, MicrosoftPeering |
+|  state | enum | No | The state of peering. Possible values are: 'Disabled' and 'Enabled'. - Disabled or Enabled |
+|  azureASN | integer | No | The Azure ASN. |
+|  peerASN | integer | No | The peer ASN. |
+|  primaryPeerAddressPrefix | string | No | The primary address prefix. |
+|  secondaryPeerAddressPrefix | string | No | The secondary address prefix. |
+|  primaryAzurePort | string | No | The primary port. |
+|  secondaryAzurePort | string | No | The secondary port. |
+|  sharedKey | string | No | The shared key. |
+|  vlanId | integer | No | The VLAN ID. |
+|  microsoftPeeringConfig | object | No | The Microsoft peering configuration. - [ExpressRouteCircuitPeeringConfig object](#ExpressRouteCircuitPeeringConfig) |
+|  stats | object | No | Gets peering stats. - [ExpressRouteCircuitStats object](#ExpressRouteCircuitStats) |
+|  provisioningState | string | No | Gets the provisioning state of the public IP resource. Possible values are: 'Updating', 'Deleting', and 'Failed'. |
+|  gatewayManagerEtag | string | No | The GatewayManager Etag. |
+|  lastModifiedBy | string | No | Gets whether the provider or the customer last modified the peering. |
 
 
 <a id="ExpressRouteCircuitPeeringConfig" />
 ### ExpressRouteCircuitPeeringConfig object
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
-|  advertisedPublicPrefixes | array | No | Gets or sets the reference of AdvertisedPublicPrefixes - string |
-|  advertisedPublicPrefixesState | enum | No | Gets or sets AdvertisedPublicPrefixState of the Peering resource. - NotConfigured, Configuring, Configured, ValidationNeeded |
-|  customerASN | integer | No | Gets or Sets CustomerAsn of the peering. |
-|  routingRegistryName | string | No | Gets or Sets RoutingRegistryName of the config. |
+|  advertisedPublicPrefixes | array | No | The reference of AdvertisedPublicPrefixes. - string |
+|  advertisedPublicPrefixesState | enum | No | AdvertisedPublicPrefixState of the Peering resource. Possible values are 'NotConfigured', 'Configuring', 'Configured', and 'ValidationNeeded'. - NotConfigured, Configuring, Configured, ValidationNeeded |
+|  customerASN | integer | No | The CustomerASN of the peering. |
+|  routingRegistryName | string | No | The RoutingRegistryName of the configuration. |
 
 
 <a id="ExpressRouteCircuitStats" />
