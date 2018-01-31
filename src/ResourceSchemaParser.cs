@@ -8,6 +8,7 @@ using System.Globalization;
 using System.Linq;
 using AutoRest.Core.Model;
 using AutoRest.Core.Utilities;
+using System.Text.RegularExpressions;
 
 namespace AutoRest.AzureResourceSchema
 {
@@ -18,6 +19,7 @@ namespace AutoRest.AzureResourceSchema
     public static class ResourceSchemaParser
     {
         private const string resourceMethodPrefix = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/";
+        private static Regex resourceMethodPrefixRx = new Regex( "^/subscriptions/{subscriptionId}/resourceGroups/{\\w*}/providers/",RegexOptions.IgnoreCase );
 
         /// <summary>
         /// Parse a ResourceSchemaModel from the provided ServiceClient.
@@ -26,6 +28,7 @@ namespace AutoRest.AzureResourceSchema
         /// <returns></returns>
         public static IDictionary<string, ResourceSchema> Parse(CodeModel serviceClient, string version)
         {
+            
             if (serviceClient == null)
             {
                 throw new ArgumentNullException(nameof(serviceClient));
@@ -37,13 +40,13 @@ namespace AutoRest.AzureResourceSchema
             {
                 if (method.HttpMethod != HttpMethod.Put ||
                     string.IsNullOrWhiteSpace(method.Url) ||
-                    !method.Url.StartsWith(resourceMethodPrefix, StringComparison.OrdinalIgnoreCase) ||
+                    !resourceMethodPrefixRx.IsMatch(method.Url) || 
                     !method.Url.EndsWith("}", StringComparison.OrdinalIgnoreCase))
                 {
                     continue;
                 }
 
-                string afterPrefix = method.Url.Substring(resourceMethodPrefix.Length);
+                string afterPrefix = method.Url.Substring(resourceMethodPrefixRx.Match(method.Url).Length);
                 int forwardSlashIndexAfterProvider = afterPrefix.IndexOf('/');
                 string resourceProvider = afterPrefix.Substring(0, forwardSlashIndexAfterProvider);
 
