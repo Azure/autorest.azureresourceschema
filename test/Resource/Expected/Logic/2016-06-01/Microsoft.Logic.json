@@ -27,7 +27,7 @@
           "description": "The resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -45,7 +45,7 @@
           "description": "The integration account properties."
         },
         "sku": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/IntegrationAccountSku"
             },
@@ -112,7 +112,7 @@
           "description": "The resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -126,7 +126,7 @@
           "description": "The resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/IntegrationAccountAgreementProperties"
             },
@@ -168,7 +168,7 @@
           "description": "The resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -182,7 +182,7 @@
           "description": "The resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/IntegrationAccountCertificateProperties"
             },
@@ -224,7 +224,7 @@
           "description": "The resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -238,7 +238,7 @@
           "description": "The resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/IntegrationAccountMapProperties"
             },
@@ -280,7 +280,7 @@
           "description": "The resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -294,7 +294,7 @@
           "description": "The resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/IntegrationAccountPartnerProperties"
             },
@@ -336,7 +336,7 @@
           "description": "The resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -350,7 +350,7 @@
           "description": "The resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/IntegrationAccountSchemaProperties"
             },
@@ -392,7 +392,7 @@
           "description": "The resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -406,7 +406,7 @@
           "description": "The resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/IntegrationAccountSessionProperties"
             },
@@ -448,7 +448,7 @@
           "description": "The resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -462,7 +462,7 @@
           "description": "The resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/WorkflowProperties"
             },
@@ -487,7 +487,7 @@
       "type": "object",
       "properties": {
         "aS2": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AS2AgreementContent"
             },
@@ -498,7 +498,7 @@
           "description": "The AS2 agreement content."
         },
         "x12": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/X12AgreementContent"
             },
@@ -509,7 +509,7 @@
           "description": "The X12 agreement content."
         },
         "edifact": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/EdifactAgreementContent"
             },
@@ -526,7 +526,7 @@
       "type": "object",
       "properties": {
         "ignoreCertificateNameMismatch": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -537,7 +537,7 @@
           "description": "The value indicating whether to ignore mismatch in certificate name."
         },
         "supportHttpStatusCodeContinue": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -548,7 +548,7 @@
           "description": "The value indicating whether to support HTTP status code 'CONTINUE'."
         },
         "keepHttpConnectionAlive": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -559,7 +559,7 @@
           "description": "The value indicating whether to keep the connection alive."
         },
         "unfoldHttpHeaders": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -582,7 +582,7 @@
       "type": "object",
       "properties": {
         "receiveAgreement": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AS2OneWayAgreement"
             },
@@ -593,7 +593,7 @@
           "description": "The AS2 one-way receive agreement."
         },
         "sendAgreement": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AS2OneWayAgreement"
             },
@@ -618,7 +618,7 @@
           "description": "The message content type."
         },
         "transmitFileNameInMimeHeader": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -633,7 +633,7 @@
           "description": "The template for file name."
         },
         "suspendMessageOnFileNameGenerationError": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -644,7 +644,7 @@
           "description": "The value indicating whether to suspend message on file name generation error."
         },
         "autogenerateFileName": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -668,7 +668,7 @@
       "type": "object",
       "properties": {
         "suspendDuplicateMessage": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -679,7 +679,7 @@
           "description": "The value indicating whether to suspend duplicate message."
         },
         "resendIfMdnNotReceived": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -700,7 +700,7 @@
       "type": "object",
       "properties": {
         "needMdn": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -711,7 +711,7 @@
           "description": "The value indicating whether to send or request a MDN."
         },
         "signMdn": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -722,7 +722,7 @@
           "description": "The value indicating whether the MDN needs to be signed or not."
         },
         "sendMdnAsynchronously": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -741,7 +741,7 @@
           "description": "The disposition notification to header value."
         },
         "signOutboundMdnIfOptional": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -756,7 +756,7 @@
           "description": "The MDN text."
         },
         "sendInboundMdnToMessageBox": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -767,7 +767,7 @@
           "description": "The value indicating whether to send inbound MDN to message box."
         },
         "micHashingAlgorithm": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -801,7 +801,7 @@
       "type": "object",
       "properties": {
         "ignoreCertificateNameMismatch": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -812,7 +812,7 @@
           "description": "The value indicating whether to ignore mismatch in certificate name."
         },
         "supportHttpStatusCodeContinue": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -823,7 +823,7 @@
           "description": "The value indicating whether to support HTTP status code 'CONTINUE'."
         },
         "keepHttpConnectionAlive": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -834,7 +834,7 @@
           "description": "The value indicating whether to keep the connection alive."
         },
         "unfoldHttpHeaders": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -857,7 +857,7 @@
       "type": "object",
       "properties": {
         "senderBusinessIdentity": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/BusinessIdentity"
             },
@@ -868,7 +868,7 @@
           "description": "The sender business identity"
         },
         "receiverBusinessIdentity": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/BusinessIdentity"
             },
@@ -879,7 +879,7 @@
           "description": "The receiver business identity"
         },
         "protocolSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AS2ProtocolSettings"
             },
@@ -901,7 +901,7 @@
       "type": "object",
       "properties": {
         "messageConnectionSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AS2MessageConnectionSettings"
             },
@@ -912,7 +912,7 @@
           "description": "The message connection settings."
         },
         "acknowledgementConnectionSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AS2AcknowledgementConnectionSettings"
             },
@@ -923,7 +923,7 @@
           "description": "The acknowledgement connection settings."
         },
         "mdnSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AS2MdnSettings"
             },
@@ -934,7 +934,7 @@
           "description": "The MDN settings."
         },
         "securitySettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AS2SecuritySettings"
             },
@@ -945,7 +945,7 @@
           "description": "The security settings."
         },
         "validationSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AS2ValidationSettings"
             },
@@ -956,7 +956,7 @@
           "description": "The validation settings."
         },
         "envelopeSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AS2EnvelopeSettings"
             },
@@ -967,7 +967,7 @@
           "description": "The envelope settings."
         },
         "errorSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AS2ErrorSettings"
             },
@@ -993,7 +993,7 @@
       "type": "object",
       "properties": {
         "overrideGroupSigningCertificate": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1012,7 +1012,7 @@
           "description": "The name of the encryption certificate."
         },
         "enableNrrForInboundEncodedMessages": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1023,7 +1023,7 @@
           "description": "The value indicating whether to enable NRR for inbound encoded messages."
         },
         "enableNrrForInboundDecodedMessages": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1034,7 +1034,7 @@
           "description": "The value indicating whether to enable NRR for inbound decoded messages."
         },
         "enableNrrForOutboundMdn": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1045,7 +1045,7 @@
           "description": "The value indicating whether to enable NRR for outbound MDN."
         },
         "enableNrrForOutboundEncodedMessages": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1056,7 +1056,7 @@
           "description": "The value indicating whether to enable NRR for outbound encoded messages."
         },
         "enableNrrForOutboundDecodedMessages": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1067,7 +1067,7 @@
           "description": "The value indicating whether to enable NRR for outbound decoded messages."
         },
         "enableNrrForInboundMdn": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1097,7 +1097,7 @@
       "type": "object",
       "properties": {
         "overrideMessageProperties": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1108,7 +1108,7 @@
           "description": "The value indicating whether to override incoming message properties with those in agreement."
         },
         "encryptMessage": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1119,7 +1119,7 @@
           "description": "The value indicating whether the message has to be encrypted."
         },
         "signMessage": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1130,7 +1130,7 @@
           "description": "The value indicating whether the message has to be signed."
         },
         "compressMessage": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1141,7 +1141,7 @@
           "description": "The value indicating whether the message has to be compressed."
         },
         "checkDuplicateMessage": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1152,7 +1152,7 @@
           "description": "The value indicating whether to check for duplicate message."
         },
         "interchangeDuplicatesValidityDays": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1163,7 +1163,7 @@
           "description": "The number of days to look back for duplicate interchange."
         },
         "checkCertificateRevocationListOnSend": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1174,7 +1174,7 @@
           "description": "The value indicating whether to check for certificate revocation list on send."
         },
         "checkCertificateRevocationListOnReceive": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1185,7 +1185,7 @@
           "description": "The value indicating whether to check for certificate revocation list on receive."
         },
         "encryptionAlgorithm": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1205,7 +1205,7 @@
           "description": "The encryption algorithm."
         },
         "signingAlgorithm": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1241,7 +1241,7 @@
       "type": "object",
       "properties": {
         "businessIdentities": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1279,7 +1279,7 @@
       "type": "object",
       "properties": {
         "needTechnicalAcknowledgement": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1290,7 +1290,7 @@
           "description": "The value indicating whether technical acknowledgement is needed."
         },
         "batchTechnicalAcknowledgements": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1301,7 +1301,7 @@
           "description": "The value indicating whether to batch the technical acknowledgements."
         },
         "needFunctionalAcknowledgement": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1312,7 +1312,7 @@
           "description": "The value indicating whether functional acknowledgement is needed."
         },
         "batchFunctionalAcknowledgements": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1323,7 +1323,7 @@
           "description": "The value indicating whether to batch functional acknowledgements."
         },
         "needLoopForValidMessages": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1334,7 +1334,7 @@
           "description": "The value indicating whether a loop is needed for valid messages."
         },
         "sendSynchronousAcknowledgement": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1353,7 +1353,7 @@
           "description": "The acknowledgement control number suffix."
         },
         "acknowledgementControlNumberLowerBound": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1364,7 +1364,7 @@
           "description": "The acknowledgement control number lower bound."
         },
         "acknowledgementControlNumberUpperBound": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1375,7 +1375,7 @@
           "description": "The acknowledgement control number upper bound."
         },
         "rolloverAcknowledgementControlNumber": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1403,7 +1403,7 @@
       "type": "object",
       "properties": {
         "receiveAgreement": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/EdifactOneWayAgreement"
             },
@@ -1414,7 +1414,7 @@
           "description": "The EDIFACT one-way receive agreement."
         },
         "sendAgreement": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/EdifactOneWayAgreement"
             },
@@ -1447,7 +1447,7 @@
           "description": "The message releaseversion."
         },
         "dataElementSeparator": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1458,7 +1458,7 @@
           "description": "The data element separator."
         },
         "componentSeparator": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1469,7 +1469,7 @@
           "description": "The component separator."
         },
         "segmentTerminator": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1480,7 +1480,7 @@
           "description": "The segment terminator."
         },
         "repetitionSeparator": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1491,7 +1491,7 @@
           "description": "The repetition separator."
         },
         "segmentTerminatorSuffix": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1509,7 +1509,7 @@
           "description": "The segment terminator suffix."
         },
         "decimalPointIndicator": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1525,7 +1525,7 @@
           "description": "The decimal point indicator."
         },
         "releaseIndicator": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1633,7 +1633,7 @@
           "description": "The communication agreement id."
         },
         "applyDelimiterStringAdvice": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1644,7 +1644,7 @@
           "description": "The value indicating whether to apply delimiter string advice."
         },
         "createGroupingSegments": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1655,7 +1655,7 @@
           "description": "The value indicating whether to create grouping segments."
         },
         "enableDefaultGroupHeaders": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1682,7 +1682,7 @@
           "description": "The processing priority code."
         },
         "interchangeControlNumberLowerBound": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1693,7 +1693,7 @@
           "description": "The interchange control number lower bound."
         },
         "interchangeControlNumberUpperBound": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1704,7 +1704,7 @@
           "description": "The interchange control number upper bound."
         },
         "rolloverInterchangeControlNumber": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1747,7 +1747,7 @@
           "description": "The group message release."
         },
         "groupControlNumberLowerBound": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1758,7 +1758,7 @@
           "description": "The group control number lower bound."
         },
         "groupControlNumberUpperBound": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1769,7 +1769,7 @@
           "description": "The group control number upper bound."
         },
         "rolloverGroupControlNumber": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1808,7 +1808,7 @@
           "description": "The group application password."
         },
         "overwriteExistingTransactionSetControlNumber": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1827,7 +1827,7 @@
           "description": "The transaction set control number suffix."
         },
         "transactionSetControlNumberLowerBound": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1838,7 +1838,7 @@
           "description": "The transaction set control number lower bound."
         },
         "transactionSetControlNumberUpperBound": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1849,7 +1849,7 @@
           "description": "The transaction set control number upper bound."
         },
         "rolloverTransactionSetControlNumber": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1860,7 +1860,7 @@
           "description": "The value indicating whether to rollover transaction set control number."
         },
         "isTestInterchange": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1917,7 +1917,7 @@
           "description": "The character encoding."
         },
         "protocolVersion": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1928,7 +1928,7 @@
           "description": "The protocol version."
         },
         "dataElementSeparator": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1939,7 +1939,7 @@
           "description": "The data element separator."
         },
         "componentSeparator": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1950,7 +1950,7 @@
           "description": "The component separator."
         },
         "segmentTerminator": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1961,7 +1961,7 @@
           "description": "The segment terminator."
         },
         "releaseIndicator": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1972,7 +1972,7 @@
           "description": "The release indicator."
         },
         "repetitionSeparator": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1983,7 +1983,7 @@
           "description": "The repetition separator."
         },
         "characterSet": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2011,7 +2011,7 @@
           "description": "The EDIFACT frame setting characterSet."
         },
         "decimalPointIndicator": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2027,7 +2027,7 @@
           "description": "The EDIFACT frame setting decimal indicator."
         },
         "segmentTerminatorSuffix": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2062,7 +2062,7 @@
       "type": "object",
       "properties": {
         "messageFilterType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2100,7 +2100,7 @@
       "type": "object",
       "properties": {
         "senderBusinessIdentity": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/BusinessIdentity"
             },
@@ -2111,7 +2111,7 @@
           "description": "The sender business identity"
         },
         "receiverBusinessIdentity": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/BusinessIdentity"
             },
@@ -2122,7 +2122,7 @@
           "description": "The receiver business identity"
         },
         "protocolSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/EdifactProtocolSettings"
             },
@@ -2144,7 +2144,7 @@
       "type": "object",
       "properties": {
         "maskSecurityInfo": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2155,7 +2155,7 @@
           "description": "The value indicating whether to mask security information."
         },
         "preserveInterchange": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2166,7 +2166,7 @@
           "description": "The value indicating whether to preserve interchange."
         },
         "suspendInterchangeOnError": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2177,7 +2177,7 @@
           "description": "The value indicating whether to suspend interchange on error."
         },
         "createEmptyXmlTagsForTrailingSeparators": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2188,7 +2188,7 @@
           "description": "The value indicating whether to create empty xml tags for trailing separators."
         },
         "useDotAsDecimalSeparator": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2212,7 +2212,7 @@
       "type": "object",
       "properties": {
         "validationSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/EdifactValidationSettings"
             },
@@ -2223,7 +2223,7 @@
           "description": "The EDIFACT validation settings."
         },
         "framingSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/EdifactFramingSettings"
             },
@@ -2234,7 +2234,7 @@
           "description": "The EDIFACT framing settings."
         },
         "envelopeSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/EdifactEnvelopeSettings"
             },
@@ -2245,7 +2245,7 @@
           "description": "The EDIFACT envelope settings."
         },
         "acknowledgementSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/EdifactAcknowledgementSettings"
             },
@@ -2256,7 +2256,7 @@
           "description": "The EDIFACT acknowledgement settings."
         },
         "messageFilter": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/EdifactMessageFilter"
             },
@@ -2267,7 +2267,7 @@
           "description": "The EDIFACT message filter."
         },
         "processingSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/EdifactProcessingSettings"
             },
@@ -2278,7 +2278,7 @@
           "description": "The EDIFACT processing Settings."
         },
         "envelopeOverrides": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2292,7 +2292,7 @@
           "description": "The EDIFACT envelope override settings."
         },
         "messageFilterList": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2306,7 +2306,7 @@
           "description": "The EDIFACT message filter list."
         },
         "schemaReferences": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2320,7 +2320,7 @@
           "description": "The EDIFACT schema references."
         },
         "validationOverrides": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2334,7 +2334,7 @@
           "description": "The EDIFACT validation override settings."
         },
         "edifactDelimiterOverrides": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2407,7 +2407,7 @@
           "description": "The message id on which the validation settings has to be applied."
         },
         "enforceCharacterSet": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2418,7 +2418,7 @@
           "description": "The value indicating whether to validate character Set."
         },
         "validateEdiTypes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2429,7 +2429,7 @@
           "description": "The value indicating whether to validate EDI types."
         },
         "validateXsdTypes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2440,7 +2440,7 @@
           "description": "The value indicating whether to validate XSD types."
         },
         "allowLeadingAndTrailingSpacesAndZeroes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2451,7 +2451,7 @@
           "description": "The value indicating whether to allow leading and trailing spaces and zeroes."
         },
         "trailingSeparatorPolicy": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2468,7 +2468,7 @@
           "description": "The trailing separator policy."
         },
         "trimLeadingAndTrailingSpacesAndZeroes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2494,7 +2494,7 @@
       "type": "object",
       "properties": {
         "validateCharacterSet": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2505,7 +2505,7 @@
           "description": "The value indicating whether to validate character set in the message."
         },
         "checkDuplicateInterchangeControlNumber": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2516,7 +2516,7 @@
           "description": "The value indicating whether to check for duplicate interchange control number."
         },
         "interchangeControlNumberValidityDays": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -2527,7 +2527,7 @@
           "description": "The validity period of interchange control number."
         },
         "checkDuplicateGroupControlNumber": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2538,7 +2538,7 @@
           "description": "The value indicating whether to check for duplicate group control number."
         },
         "checkDuplicateTransactionSetControlNumber": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2549,7 +2549,7 @@
           "description": "The value indicating whether to check for duplicate transaction set control number."
         },
         "validateEdiTypes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2560,7 +2560,7 @@
           "description": "The value indicating whether to Whether to validate EDI types."
         },
         "validateXsdTypes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2571,7 +2571,7 @@
           "description": "The value indicating whether to Whether to validate XSD types."
         },
         "allowLeadingAndTrailingSpacesAndZeroes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2582,7 +2582,7 @@
           "description": "The value indicating whether to allow leading and trailing spaces and zeroes."
         },
         "trimLeadingAndTrailingSpacesAndZeroes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2593,7 +2593,7 @@
           "description": "The value indicating whether to trim leading and trailing spaces and zeroes."
         },
         "trailingSeparatorPolicy": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2632,7 +2632,7 @@
           "description": "The metadata."
         },
         "agreementType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2657,7 +2657,7 @@
           "description": "The integration account partner that is set as guest partner for this agreement."
         },
         "hostIdentity": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/BusinessIdentity"
             },
@@ -2668,7 +2668,7 @@
           "description": "The business identity of the host partner."
         },
         "guestIdentity": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/BusinessIdentity"
             },
@@ -2679,7 +2679,7 @@
           "description": "The business identity of the guest partner."
         },
         "content": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AgreementContent"
             },
@@ -2708,7 +2708,7 @@
           "description": "The metadata."
         },
         "key": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/KeyVaultKeyReference"
             },
@@ -2729,7 +2729,7 @@
       "type": "object",
       "properties": {
         "mapType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2744,7 +2744,7 @@
           "description": "The map type."
         },
         "parametersSchema": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/IntegrationAccountMapPropertiesParametersSchema"
             },
@@ -2786,7 +2786,7 @@
       "type": "object",
       "properties": {
         "partnerType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2805,7 +2805,7 @@
           "description": "The metadata."
         },
         "content": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/PartnerContent"
             },
@@ -2845,7 +2845,7 @@
           "description": "The resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2859,7 +2859,7 @@
           "description": "The resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/IntegrationAccountAgreementProperties"
             },
@@ -2901,7 +2901,7 @@
           "description": "The resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2915,7 +2915,7 @@
           "description": "The resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/IntegrationAccountCertificateProperties"
             },
@@ -2957,7 +2957,7 @@
           "description": "The resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2971,7 +2971,7 @@
           "description": "The resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/IntegrationAccountMapProperties"
             },
@@ -3013,7 +3013,7 @@
           "description": "The resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -3027,7 +3027,7 @@
           "description": "The resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/IntegrationAccountPartnerProperties"
             },
@@ -3069,7 +3069,7 @@
           "description": "The resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -3083,7 +3083,7 @@
           "description": "The resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/IntegrationAccountSchemaProperties"
             },
@@ -3125,7 +3125,7 @@
           "description": "The resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -3139,7 +3139,7 @@
           "description": "The resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/IntegrationAccountSessionProperties"
             },
@@ -3162,7 +3162,7 @@
       "type": "object",
       "properties": {
         "schemaType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -3220,7 +3220,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -3245,7 +3245,7 @@
       "type": "object",
       "properties": {
         "keyVault": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/KeyVaultKeyReferenceKeyVault"
             },
@@ -3284,7 +3284,7 @@
       "type": "object",
       "properties": {
         "b2b": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/B2BPartnerContent"
             },
@@ -3305,7 +3305,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -3324,7 +3324,7 @@
           "description": "The name."
         },
         "plan": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ResourceReference"
             },
@@ -3377,7 +3377,7 @@
       "type": "object",
       "properties": {
         "state": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -3396,7 +3396,7 @@
           "description": "The state."
         },
         "sku": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/Sku"
             },
@@ -3407,7 +3407,7 @@
           "description": "The sku."
         },
         "integrationAccount": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ResourceReference"
             },
@@ -3422,7 +3422,7 @@
           "description": "The definition."
         },
         "parameters": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -3442,7 +3442,7 @@
       "type": "object",
       "properties": {
         "needTechnicalAcknowledgement": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3453,7 +3453,7 @@
           "description": "The value indicating whether technical acknowledgement is needed."
         },
         "batchTechnicalAcknowledgements": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3464,7 +3464,7 @@
           "description": "The value indicating whether to batch the technical acknowledgements."
         },
         "needFunctionalAcknowledgement": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3479,7 +3479,7 @@
           "description": "The functional acknowledgement version."
         },
         "batchFunctionalAcknowledgements": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3490,7 +3490,7 @@
           "description": "The value indicating whether to batch functional acknowledgements."
         },
         "needImplementationAcknowledgement": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3505,7 +3505,7 @@
           "description": "The implementation acknowledgement version."
         },
         "batchImplementationAcknowledgements": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3516,7 +3516,7 @@
           "description": "The value indicating whether to batch implementation acknowledgements."
         },
         "needLoopForValidMessages": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3527,7 +3527,7 @@
           "description": "The value indicating whether a loop is needed for valid messages."
         },
         "sendSynchronousAcknowledgement": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3546,7 +3546,7 @@
           "description": "The acknowledgement control number suffix."
         },
         "acknowledgementControlNumberLowerBound": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3557,7 +3557,7 @@
           "description": "The acknowledgement control number lower bound."
         },
         "acknowledgementControlNumberUpperBound": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3568,7 +3568,7 @@
           "description": "The acknowledgement control number upper bound."
         },
         "rolloverAcknowledgementControlNumber": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3598,7 +3598,7 @@
       "type": "object",
       "properties": {
         "receiveAgreement": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/X12OneWayAgreement"
             },
@@ -3609,7 +3609,7 @@
           "description": "The X12 one-way receive agreement."
         },
         "sendAgreement": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/X12OneWayAgreement"
             },
@@ -3638,7 +3638,7 @@
           "description": "The message id."
         },
         "dataElementSeparator": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3649,7 +3649,7 @@
           "description": "The data element separator."
         },
         "componentSeparator": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3660,7 +3660,7 @@
           "description": "The component separator."
         },
         "segmentTerminator": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3671,7 +3671,7 @@
           "description": "The segment terminator."
         },
         "segmentTerminatorSuffix": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -3689,7 +3689,7 @@
           "description": "The segment terminator suffix."
         },
         "replaceCharacter": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3700,7 +3700,7 @@
           "description": "The replacement character."
         },
         "replaceSeparatorsInPayload": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3761,7 +3761,7 @@
           "description": "The functional identifier code."
         },
         "dateFormat": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -3777,7 +3777,7 @@
           "description": "The date format."
         },
         "timeFormat": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -3812,7 +3812,7 @@
       "type": "object",
       "properties": {
         "controlStandardsId": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3823,7 +3823,7 @@
           "description": "The controls standards id."
         },
         "useControlStandardsIdAsRepetitionCharacter": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3846,7 +3846,7 @@
           "description": "The control version number."
         },
         "interchangeControlNumberLowerBound": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3857,7 +3857,7 @@
           "description": "The interchange  control number lower bound."
         },
         "interchangeControlNumberUpperBound": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3868,7 +3868,7 @@
           "description": "The interchange  control number upper bound."
         },
         "rolloverInterchangeControlNumber": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3879,7 +3879,7 @@
           "description": "The value indicating whether to rollover interchange control number."
         },
         "enableDefaultGroupHeaders": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3894,7 +3894,7 @@
           "description": "The functional group id."
         },
         "groupControlNumberLowerBound": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3905,7 +3905,7 @@
           "description": "The group control number lower bound."
         },
         "groupControlNumberUpperBound": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3916,7 +3916,7 @@
           "description": "The group control number upper bound."
         },
         "rolloverGroupControlNumber": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3935,7 +3935,7 @@
           "description": "The group header version."
         },
         "transactionSetControlNumberLowerBound": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3946,7 +3946,7 @@
           "description": "The transaction set control number lower bound."
         },
         "transactionSetControlNumberUpperBound": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3957,7 +3957,7 @@
           "description": "The transaction set control number upper bound."
         },
         "rolloverTransactionSetControlNumber": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3976,7 +3976,7 @@
           "description": "The transaction set control number suffix."
         },
         "overwriteExistingTransactionSetControlNumber": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3987,7 +3987,7 @@
           "description": "The value indicating whether to overwrite existing transaction set control number."
         },
         "groupHeaderDateFormat": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -4003,7 +4003,7 @@
           "description": "The group header date format."
         },
         "groupHeaderTimeFormat": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -4021,7 +4021,7 @@
           "description": "The group header time format."
         },
         "usageIndicator": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -4067,7 +4067,7 @@
       "type": "object",
       "properties": {
         "dataElementSeparator": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -4078,7 +4078,7 @@
           "description": "The data element separator."
         },
         "componentSeparator": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -4089,7 +4089,7 @@
           "description": "The component separator."
         },
         "replaceSeparatorsInPayload": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -4100,7 +4100,7 @@
           "description": "The value indicating whether to replace separators in payload."
         },
         "replaceCharacter": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -4111,7 +4111,7 @@
           "description": "The replacement character."
         },
         "segmentTerminator": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -4122,7 +4122,7 @@
           "description": "The segment terminator."
         },
         "characterSet": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -4139,7 +4139,7 @@
           "description": "The X12 character set."
         },
         "segmentTerminatorSuffix": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -4172,7 +4172,7 @@
       "type": "object",
       "properties": {
         "messageFilterType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -4210,7 +4210,7 @@
       "type": "object",
       "properties": {
         "senderBusinessIdentity": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/BusinessIdentity"
             },
@@ -4221,7 +4221,7 @@
           "description": "The sender business identity"
         },
         "receiverBusinessIdentity": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/BusinessIdentity"
             },
@@ -4232,7 +4232,7 @@
           "description": "The receiver business identity"
         },
         "protocolSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/X12ProtocolSettings"
             },
@@ -4254,7 +4254,7 @@
       "type": "object",
       "properties": {
         "maskSecurityInfo": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -4265,7 +4265,7 @@
           "description": "The value indicating whether to mask security information."
         },
         "convertImpliedDecimal": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -4276,7 +4276,7 @@
           "description": "The value indicating whether to convert numerical type to implied decimal."
         },
         "preserveInterchange": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -4287,7 +4287,7 @@
           "description": "The value indicating whether to preserve interchange."
         },
         "suspendInterchangeOnError": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -4298,7 +4298,7 @@
           "description": "The value indicating whether to suspend interchange on error."
         },
         "createEmptyXmlTagsForTrailingSeparators": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -4309,7 +4309,7 @@
           "description": "The value indicating whether to create empty xml tags for trailing separators."
         },
         "useDotAsDecimalSeparator": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -4334,7 +4334,7 @@
       "type": "object",
       "properties": {
         "validationSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/X12ValidationSettings"
             },
@@ -4345,7 +4345,7 @@
           "description": "The X12 validation settings."
         },
         "framingSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/X12FramingSettings"
             },
@@ -4356,7 +4356,7 @@
           "description": "The X12 framing settings."
         },
         "envelopeSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/X12EnvelopeSettings"
             },
@@ -4367,7 +4367,7 @@
           "description": "The X12 envelope settings."
         },
         "acknowledgementSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/X12AcknowledgementSettings"
             },
@@ -4378,7 +4378,7 @@
           "description": "The X12 acknowledgment settings."
         },
         "messageFilter": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/X12MessageFilter"
             },
@@ -4389,7 +4389,7 @@
           "description": "The X12 message filter."
         },
         "securitySettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/X12SecuritySettings"
             },
@@ -4400,7 +4400,7 @@
           "description": "The X12 security settings."
         },
         "processingSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/X12ProcessingSettings"
             },
@@ -4411,7 +4411,7 @@
           "description": "The X12 processing settings."
         },
         "envelopeOverrides": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -4425,7 +4425,7 @@
           "description": "The X12 envelope override settings."
         },
         "validationOverrides": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -4439,7 +4439,7 @@
           "description": "The X12 validation override settings."
         },
         "messageFilterList": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -4453,7 +4453,7 @@
           "description": "The X12 message filter list."
         },
         "schemaReferences": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -4467,7 +4467,7 @@
           "description": "The X12 schema references."
         },
         "x12DelimiterOverrides": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -4554,7 +4554,7 @@
           "description": "The message id on which the validation settings has to be applied."
         },
         "validateEdiTypes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -4565,7 +4565,7 @@
           "description": "The value indicating whether to validate EDI types."
         },
         "validateXsdTypes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -4576,7 +4576,7 @@
           "description": "The value indicating whether to validate XSD types."
         },
         "allowLeadingAndTrailingSpacesAndZeroes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -4587,7 +4587,7 @@
           "description": "The value indicating whether to allow leading and trailing spaces and zeroes."
         },
         "validateCharacterSet": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -4598,7 +4598,7 @@
           "description": "The value indicating whether to validate character Set."
         },
         "trimLeadingAndTrailingSpacesAndZeroes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -4609,7 +4609,7 @@
           "description": "The value indicating whether to trim leading and trailing spaces and zeroes."
         },
         "trailingSeparatorPolicy": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -4641,7 +4641,7 @@
       "type": "object",
       "properties": {
         "validateCharacterSet": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -4652,7 +4652,7 @@
           "description": "The value indicating whether to validate character set in the message."
         },
         "checkDuplicateInterchangeControlNumber": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -4663,7 +4663,7 @@
           "description": "The value indicating whether to check for duplicate interchange control number."
         },
         "interchangeControlNumberValidityDays": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -4674,7 +4674,7 @@
           "description": "The validity period of interchange control number."
         },
         "checkDuplicateGroupControlNumber": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -4685,7 +4685,7 @@
           "description": "The value indicating whether to check for duplicate group control number."
         },
         "checkDuplicateTransactionSetControlNumber": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -4696,7 +4696,7 @@
           "description": "The value indicating whether to check for duplicate transaction set control number."
         },
         "validateEdiTypes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -4707,7 +4707,7 @@
           "description": "The value indicating whether to Whether to validate EDI types."
         },
         "validateXsdTypes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -4718,7 +4718,7 @@
           "description": "The value indicating whether to Whether to validate XSD types."
         },
         "allowLeadingAndTrailingSpacesAndZeroes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -4729,7 +4729,7 @@
           "description": "The value indicating whether to allow leading and trailing spaces and zeroes."
         },
         "trimLeadingAndTrailingSpacesAndZeroes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -4740,7 +4740,7 @@
           "description": "The value indicating whether to trim leading and trailing spaces and zeroes."
         },
         "trailingSeparatorPolicy": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [

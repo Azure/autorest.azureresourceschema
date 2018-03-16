@@ -32,7 +32,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -46,7 +46,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VaultProperties"
             },
@@ -56,7 +56,7 @@
           ]
         },
         "sku": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/Sku"
             },
@@ -104,7 +104,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RawCertificateData"
             },
@@ -128,7 +128,7 @@
       "type": "object",
       "properties": {
         "authType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -146,7 +146,7 @@
           "description": "Specifies the authentication type."
         },
         "certificate": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -166,7 +166,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -194,7 +194,7 @@
       "type": "object",
       "properties": {
         "upgradeDetails": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/UpgradeDetails"
             },
@@ -225,7 +225,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RawCertificateData"
             },

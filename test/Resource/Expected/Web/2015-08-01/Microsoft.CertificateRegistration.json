@@ -31,7 +31,7 @@
           "description": "Resource Location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -45,7 +45,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AppServiceCertificateOrderProperties"
             },
@@ -102,7 +102,7 @@
           "description": "Resource Location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -116,7 +116,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AppServiceCertificate"
             },
@@ -156,7 +156,7 @@
       "type": "object",
       "properties": {
         "certificates": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -174,7 +174,7 @@
           "description": "Certificate distinguished name."
         },
         "validityInYears": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "minimum": 1,
@@ -188,7 +188,7 @@
           "description": "Duration in years (must be between 1 and 3)."
         },
         "keySize": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "default": "2048"
@@ -200,7 +200,7 @@
           "description": "Certificate key size."
         },
         "productType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -215,7 +215,7 @@
           "description": "Certificate product type."
         },
         "autoRenew": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean",
               "default": true
@@ -263,7 +263,7 @@
           "description": "Resource Location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -277,7 +277,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AppServiceCertificate"
             },

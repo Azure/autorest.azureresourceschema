@@ -27,7 +27,7 @@
           "description": "The region in which to create the account."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -41,7 +41,7 @@
           "description": "The user-specified tags associated with the account."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/BatchAccountCreateProperties"
             },
@@ -96,7 +96,7 @@
           ]
         },
         "allowUpdates": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -158,7 +158,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "pattern": "^[\\w]+-[\\w]+$"
@@ -182,7 +182,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/CertificateCreateOrUpdateProperties"
             },
@@ -205,7 +205,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "pattern": "^[a-zA-Z0-9_-]+$"
@@ -229,7 +229,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/PoolProperties"
             },
@@ -298,7 +298,7 @@
       "type": "object",
       "properties": {
         "scope": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -313,7 +313,7 @@
           "description": "pool - specifies that the task runs as the common auto user account which is created on every node in a pool. task - specifies that the service should create a new user for the task. The default value is task."
         },
         "elevationLevel": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -333,7 +333,7 @@
       "type": "object",
       "properties": {
         "autoStorage": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AutoStorageBaseProperties"
             },
@@ -344,7 +344,7 @@
           "description": "The properties related to the auto-storage account."
         },
         "poolAllocationMode": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -359,7 +359,7 @@
           "description": "The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService."
         },
         "keyVaultReference": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/KeyVaultReference"
             },
@@ -391,7 +391,7 @@
           ]
         },
         "allowUpdates": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -443,7 +443,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "pattern": "^[\\w]+-[\\w]+$"
@@ -467,7 +467,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/CertificateCreateOrUpdateProperties"
             },
@@ -490,7 +490,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "pattern": "^[a-zA-Z0-9_-]+$"
@@ -514,7 +514,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/PoolProperties"
             },
@@ -545,7 +545,7 @@
           "description": "This must match the thumbprint from the name."
         },
         "format": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -580,7 +580,7 @@
           "type": "string"
         },
         "storeLocation": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -599,7 +599,7 @@
           "description": "This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). Common store names include: My, Root, CA, Trust, Disallowed, TrustedPeople, TrustedPublisher, AuthRoot, AddressBook, but any custom store name can also be used. The default value is My."
         },
         "visibility": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -646,7 +646,7 @@
       "type": "object",
       "properties": {
         "lun": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -657,7 +657,7 @@
           "description": "The lun is used to uniquely identify each data disk. If attaching multiple disks, each should have a distinct lun."
         },
         "caching": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -673,7 +673,7 @@
           "description": "Values are:\n\n none - The caching mode for the disk is not enabled.\n readOnly - The caching mode for the disk is read only.\n readWrite - The caching mode for the disk is read and write.\n\n The default value for caching is none. For information about the caching options see: https://blogs.msdn.microsoft.com/windowsazurestorage/2012/06/27/exploring-windows-azure-drives-disks-and-images/."
         },
         "diskSizeGB": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -683,7 +683,7 @@
           ]
         },
         "storageAccountType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -708,7 +708,7 @@
       "type": "object",
       "properties": {
         "cloudServiceConfiguration": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/CloudServiceConfiguration"
             },
@@ -719,7 +719,7 @@
           "description": "This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to 'UserSubscription'."
         },
         "virtualMachineConfiguration": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VirtualMachineConfiguration"
             },
@@ -754,7 +754,7 @@
           "description": "The default value is 15 minutes. Timeout values use ISO 8601 format. For example, use PT10M for 10 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service rejects the request with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request)."
         },
         "targetDedicatedNodes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -765,7 +765,7 @@
           "description": "At least one of targetDedicatedNodes, targetLowPriority nodes must be set."
         },
         "targetLowPriorityNodes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -776,7 +776,7 @@
           "description": "At least one of targetDedicatedNodes, targetLowPriority nodes must be set."
         },
         "nodeDeallocationOption": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -827,7 +827,7 @@
           "description": "The name must be unique within a Batch pool, can contain letters, numbers, underscores, periods, and hyphens. Names must start with a letter or number, must end with a letter, number, or underscore, and cannot exceed 77 characters.  If any invalid values are provided the request fails with HTTP status code 400."
         },
         "protocol": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -841,7 +841,7 @@
           ]
         },
         "backendPort": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -852,7 +852,7 @@
           "description": "This must be unique within a Batch pool. Acceptable values are between 1 and 65535 except for 22, 3389, 29876 and 29877 as these are reserved. If any reserved values are provided the request fails with HTTP status code 400."
         },
         "frontendPortRangeStart": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -863,7 +863,7 @@
           "description": "Acceptable values range between 1 and 65534 except ports from 50000 to 55000 which are reserved. All ranges within a pool must be distinct and cannot overlap. If any reserved or overlapping values are provided the request fails with HTTP status code 400."
         },
         "frontendPortRangeEnd": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -874,7 +874,7 @@
           "description": "Acceptable values range between 1 and 65534 except ports from 50000 to 55000 which are reserved by the Batch service. All ranges within a pool must be distinct and cannot overlap. If any reserved or overlapping values are provided the request fails with HTTP status code 400."
         },
         "networkSecurityGroupRules": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -918,7 +918,7 @@
       "type": "object",
       "properties": {
         "uid": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -929,7 +929,7 @@
           "description": "The uid and gid properties must be specified together or not at all. If not specified the underlying operating system picks the uid."
         },
         "gid": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -969,7 +969,7 @@
           "description": "The virtual network must be in the same region and subscription as the Azure Batch account. The specified subnet should have enough free IP addresses to accommodate the number of nodes in the pool. If the subnet doesn't have enough free IP addresses, the pool will partially allocate compute nodes, and a resize error will occur. The 'MicrosoftAzureBatch' service principal must have the 'Classic Virtual Machine Contributor' Role-Based Access Control (RBAC) role for the specified VNet. The specified subnet must allow communication from the Azure Batch service to be able to schedule tasks on the compute nodes. This can be verified by checking if the specified VNet has any associated Network Security Groups (NSG). If communication to the compute nodes in the specified subnet is denied by an NSG, then the Batch service will set the state of the compute nodes to unusable. For pools created via virtualMachineConfiguration the Batch account must have poolAllocationMode userSubscription in order to use a VNet. If the specified VNet has any associated Network Security Groups (NSG), then a few reserved system ports must be enabled for inbound communication. For pools created with a virtual machine configuration, enable ports 29876 and 29877, as well as port 22 for Linux and port 3389 for Windows. For pools created with a cloud service configuration, enable ports 10100, 20100, and 30100. Also enable outbound connections to Azure Storage on port 443. For more details see: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration"
         },
         "endpointConfiguration": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/PoolEndpointConfiguration"
             },
@@ -986,7 +986,7 @@
       "type": "object",
       "properties": {
         "priority": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -997,7 +997,7 @@
           "description": "Priorities within a pool must be unique and are evaluated in order of priority. The lower the number the higher the priority. For example, rules could be specified with order numbers of 150, 250, and 350. The rule with the order number of 150 takes precedence over the rule that has an order of 250. Allowed priorities are 150 to 3500. If any reserved or duplicate values are provided the request fails with HTTP status code 400."
         },
         "access": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1025,7 +1025,7 @@
       "type": "object",
       "properties": {
         "caching": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1046,7 +1046,7 @@
       "type": "object",
       "properties": {
         "inboundNatPools": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1076,7 +1076,7 @@
           "description": "For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (http://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/). Batch supports all Cloud Services VM sizes except ExtraSmall. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/) or Sizes for Virtual Machines (Windows) (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series)."
         },
         "deploymentConfiguration": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/DeploymentConfiguration"
             },
@@ -1087,7 +1087,7 @@
           "description": "Using CloudServiceConfiguration specifies that the nodes should be creating using Azure Cloud Services (PaaS), while VirtualMachineConfiguration uses Azure Virtual Machines (IaaS)."
         },
         "scaleSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ScaleSettings"
             },
@@ -1097,7 +1097,7 @@
           ]
         },
         "interNodeCommunication": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1112,7 +1112,7 @@
           "description": "This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to 'Disabled'."
         },
         "networkConfiguration": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/NetworkConfiguration"
             },
@@ -1122,7 +1122,7 @@
           ]
         },
         "maxTasksPerNode": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1132,7 +1132,7 @@
           ]
         },
         "taskSchedulingPolicy": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/TaskSchedulingPolicy"
             },
@@ -1142,7 +1142,7 @@
           ]
         },
         "userAccounts": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1155,7 +1155,7 @@
           ]
         },
         "metadata": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1169,7 +1169,7 @@
           "description": "The Batch service does not assign any meaning to metadata; it is solely for the use of user code."
         },
         "startTask": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/StartTask"
             },
@@ -1180,7 +1180,7 @@
           "description": "In an PATCH (update) operation, this property can be set to an empty object to remove the start task from the pool."
         },
         "certificates": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1194,7 +1194,7 @@
           "description": "For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory."
         },
         "applicationPackages": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1208,7 +1208,7 @@
           "description": "Changes to application packages affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged."
         },
         "applicationLicenses": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1248,7 +1248,7 @@
       "type": "object",
       "properties": {
         "fixedScale": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/FixedScaleSettings"
             },
@@ -1259,7 +1259,7 @@
           "description": "This property and autoScale are mutually exclusive and one of the properties must be specified."
         },
         "autoScale": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AutoScaleSettings"
             },
@@ -1280,7 +1280,7 @@
           "description": "The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using \"cmd /c MyCommand\" in Windows or \"/bin/sh -c MyCommand\" in Linux. Required if any other properties of the startTask are specified."
         },
         "resourceFiles": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1293,7 +1293,7 @@
           ]
         },
         "environmentSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1306,7 +1306,7 @@
           ]
         },
         "userIdentity": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/UserIdentity"
             },
@@ -1317,7 +1317,7 @@
           "description": "If omitted, the task runs as a non-administrative user unique to the task."
         },
         "maxTaskRetryCount": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1328,7 +1328,7 @@
           "description": "The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task. If the maximum retry count is -1, the Batch service retries the task without limit."
         },
         "waitForSuccess": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1344,7 +1344,7 @@
       "type": "object",
       "properties": {
         "nodeFillType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1372,7 +1372,7 @@
           "type": "string"
         },
         "elevationLevel": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1387,7 +1387,7 @@
           "description": "nonAdmin - The auto user is a standard user without elevated access. admin - The auto user is a user with elevated access and operates with full Administrator permissions. The default value is nonAdmin."
         },
         "linuxUserConfiguration": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/LinuxUserConfiguration"
             },
@@ -1411,7 +1411,7 @@
           "description": "The userName and autoUser properties are mutually exclusive; you must specify one but not both."
         },
         "autoUser": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AutoUserSpecification"
             },
@@ -1428,7 +1428,7 @@
       "type": "object",
       "properties": {
         "imageReference": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ImageReference"
             },
@@ -1438,7 +1438,7 @@
           ]
         },
         "osDisk": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/OSDisk"
             },
@@ -1452,7 +1452,7 @@
           "description": "The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the 'List supported node agent SKUs' operation."
         },
         "windowsConfiguration": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/WindowsConfiguration"
             },
@@ -1463,7 +1463,7 @@
           "description": "This property must not be specified if the imageReference specifies a Linux OS image."
         },
         "dataDisks": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1490,7 +1490,7 @@
       "type": "object",
       "properties": {
         "enableAutomaticUpdates": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },

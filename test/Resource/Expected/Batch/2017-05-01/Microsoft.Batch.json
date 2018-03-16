@@ -27,7 +27,7 @@
           "description": "The region in which to create the account."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -41,7 +41,7 @@
           "description": "The user-specified tags associated with the account."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/BatchAccountCreateProperties"
             },
@@ -90,7 +90,7 @@
           ]
         },
         "allowUpdates": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -167,7 +167,7 @@
       "type": "object",
       "properties": {
         "autoStorage": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AutoStorageBaseProperties"
             },
@@ -178,7 +178,7 @@
           "description": "The properties related to the auto-storage account."
         },
         "poolAllocationMode": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -193,7 +193,7 @@
           "description": "The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService."
         },
         "keyVaultReference": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/KeyVaultReference"
             },
@@ -225,7 +225,7 @@
           ]
         },
         "allowUpdates": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },

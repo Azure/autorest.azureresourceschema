@@ -27,7 +27,7 @@
           "description": "Resource location"
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -41,7 +41,7 @@
           "description": "Resource tags"
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ContainerServiceProperties"
             },
@@ -70,7 +70,7 @@
           "description": "Unique name of the agent pool profile in the context of the subscription and resource group."
         },
         "count": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "minimum": 1,
@@ -83,7 +83,7 @@
           "description": "Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. "
         },
         "vmSize": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -158,7 +158,7 @@
       "type": "object",
       "properties": {
         "vmDiagnostics": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ContainerServiceVMDiagnostics"
             },
@@ -181,7 +181,7 @@
           "description": "The administrator username to use for all Linux VMs"
         },
         "ssh": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ContainerServiceSshConfiguration"
             },
@@ -202,7 +202,7 @@
       "type": "object",
       "properties": {
         "count": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "default": "1"
@@ -227,7 +227,7 @@
       "type": "object",
       "properties": {
         "orchestratorType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -251,7 +251,7 @@
       "type": "object",
       "properties": {
         "orchestratorProfile": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ContainerServiceOrchestratorProfile"
             },
@@ -262,7 +262,7 @@
           "description": "Properties of the orchestrator."
         },
         "masterProfile": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ContainerServiceMasterProfile"
             },
@@ -273,7 +273,7 @@
           "description": "Properties of master agents."
         },
         "agentPoolProfiles": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -287,7 +287,7 @@
           "description": "Properties of the agent pool."
         },
         "windowsProfile": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ContainerServiceWindowsProfile"
             },
@@ -298,7 +298,7 @@
           "description": "Properties of Windows VMs."
         },
         "linuxProfile": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ContainerServiceLinuxProfile"
             },
@@ -309,7 +309,7 @@
           "description": "Properties of Linux VMs."
         },
         "diagnosticsProfile": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ContainerServiceDiagnosticsProfile"
             },
@@ -331,7 +331,7 @@
       "type": "object",
       "properties": {
         "publicKeys": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -367,7 +367,7 @@
       "type": "object",
       "properties": {
         "enabled": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },

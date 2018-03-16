@@ -31,7 +31,7 @@
           "description": "Gets or sets the resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -45,7 +45,7 @@
           "description": "Gets or sets the resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/WorkflowProperties"
             },
@@ -97,7 +97,7 @@
           "description": "Gets or sets the resource id."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/WorkflowAccessKeyProperties"
             },
@@ -143,7 +143,7 @@
           "description": "Gets or sets the content version."
         },
         "contentSize": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -154,7 +154,7 @@
           "description": "Gets or sets the content size."
         },
         "contentHash": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ContentHash"
             },
@@ -183,7 +183,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -202,7 +202,7 @@
           "description": "Gets or sets the name."
         },
         "plan": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ResourceReference"
             },
@@ -261,7 +261,7 @@
       "type": "object",
       "properties": {
         "state": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -279,7 +279,7 @@
           "description": "Gets or sets the state."
         },
         "sku": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/Sku"
             },
@@ -290,7 +290,7 @@
           "description": "Gets or sets the sku."
         },
         "definitionLink": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ContentLink"
             },
@@ -305,7 +305,7 @@
           "description": "Gets or sets the definition."
         },
         "parametersLink": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ContentLink"
             },
@@ -316,7 +316,7 @@
           "description": "Gets or sets the link to parameters."
         },
         "parameters": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -354,7 +354,7 @@
           "description": "Gets or sets the resource id."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/WorkflowAccessKeyProperties"
             },

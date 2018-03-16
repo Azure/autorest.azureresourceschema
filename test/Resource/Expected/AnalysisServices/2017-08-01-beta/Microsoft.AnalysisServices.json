@@ -27,7 +27,7 @@
           "description": "Location of the Analysis Services resource."
         },
         "sku": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ResourceSku"
             },
@@ -38,7 +38,7 @@
           "description": "The SKU of the Analysis Services resource."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -52,7 +52,7 @@
           "description": "Key-value pairs of additional resource provisioning properties."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AnalysisServicesServerProperties"
             },
@@ -79,7 +79,7 @@
       "type": "object",
       "properties": {
         "asAdministrators": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ServerAdministrators"
             },
@@ -94,7 +94,7 @@
           "description": "The SAS container URI to the backup container."
         },
         "gatewayDetails": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/GatewayDetails"
             },
@@ -105,7 +105,7 @@
           "description": "The gateway details configured for the AS server."
         },
         "ipV4FirewallSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/IPv4FirewallSettings"
             },
@@ -116,7 +116,7 @@
           "description": "The firewall settings for the AS server."
         },
         "querypoolConnectionMode": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -165,7 +165,7 @@
       "type": "object",
       "properties": {
         "firewallRules": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -193,7 +193,7 @@
           "description": "Name of the SKU level."
         },
         "tier": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -209,7 +209,7 @@
           "description": "The name of the Azure pricing tier to which the SKU applies."
         },
         "capacity": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "minimum": 1,
@@ -232,7 +232,7 @@
       "type": "object",
       "properties": {
         "members": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {

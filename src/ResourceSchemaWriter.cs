@@ -113,7 +113,7 @@ namespace AutoRest.AzureResourceSchema
                         writer.WritePropertyName(definitionName);
                         writer.WriteStartObject();
 
-                        writer.WritePropertyName("anyOf");
+                        writer.WritePropertyName("oneOf");
                         writer.WriteStartArray();
 
                         if (definition.Description != null)

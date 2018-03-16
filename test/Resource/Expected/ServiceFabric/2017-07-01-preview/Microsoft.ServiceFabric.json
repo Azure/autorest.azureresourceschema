@@ -28,7 +28,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -42,7 +42,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ClusterProperties"
             },
@@ -99,7 +99,7 @@
           "description": "Resource location."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApplicationProperties"
             },
@@ -152,7 +152,7 @@
           "description": "Resource location."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ServiceProperties"
             },
@@ -195,7 +195,7 @@
           "description": "Resource location."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApplicationTypeProperties"
             },
@@ -248,7 +248,7 @@
           "description": "Resource location."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VersionProperties"
             },
@@ -273,7 +273,7 @@
       "type": "object",
       "properties": {
         "ConsiderWarningAsError": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean",
               "default": false
@@ -285,7 +285,7 @@
           "description": "Indicates whether warnings are treated with the same severity as errors."
         },
         "MaxPercentUnhealthyDeployedApplications": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "default": "0"
@@ -297,7 +297,7 @@
           "description": "The maximum allowed percentage of unhealthy deployed applications. Allowed values are Byte values from zero to 100.\nThe percentage represents the maximum tolerated percentage of deployed applications that can be unhealthy before the application is considered in error.\nThis is calculated by dividing the number of unhealthy deployed applications over the number of nodes where the application is currently deployed on in the cluster.\nThe computation rounds up to tolerate one failure on small numbers of nodes. Default percentage is zero.\n"
         },
         "DefaultServiceTypeHealthPolicy": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ServiceTypeHealthPolicy"
             },
@@ -307,7 +307,7 @@
           ]
         },
         "ServiceTypeHealthPolicyMap": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -330,7 +330,7 @@
           "description": "The name of the metric."
         },
         "MaximumCapacity": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -341,7 +341,7 @@
           "description": "The maximum node capacity for Service Fabric application.\nThis is the maximum Load for an instance of this application on a single node. Even if the capacity of node is greater than this value, Service Fabric will limit the total load of services within the application on each node to this value.\nIf set to zero, capacity for this metric is unlimited on each node.\nWhen creating a new application with application capacity defined, the product of MaximumNodes and this value must always be smaller than or equal to TotalApplicationCapacity.\nWhen updating existing application with application capacity, the product of MaximumNodes and this value must always be smaller than or equal to TotalApplicationCapacity.\n"
         },
         "ReservationCapacity": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -352,7 +352,7 @@
           "description": "The node reservation capacity for Service Fabric application.\nThis is the amount of load which is reserved on nodes which have instances of this application.\nIf MinimumNodes is specified, then the product of these values will be the capacity reserved in the cluster for the application.\nIf set to zero, no capacity is reserved for this metric.\nWhen setting application capacity or when updating application capacity; this value must be smaller than or equal to MaximumCapacity for each metric.\n"
         },
         "TotalApplicationCapacity": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -390,7 +390,7 @@
           "type": "string"
         },
         "parameters": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -403,7 +403,7 @@
           ]
         },
         "upgradePolicy": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApplicationUpgradePolicy"
             },
@@ -413,7 +413,7 @@
           ]
         },
         "minimumNodes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "minimum": 0
@@ -425,7 +425,7 @@
           "description": "The minimum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. If this property is set to zero, no capacity will be reserved. The value of this property cannot be more than the value of the MaximumNodes property."
         },
         "maximumNodes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "minimum": 0,
@@ -438,7 +438,7 @@
           "description": "The maximum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. By default, the value of this property is zero and it means that the services can be placed on any node."
         },
         "removeApplicationCapacity": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -449,7 +449,7 @@
           "description": "The version of the application type"
         },
         "metrics": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -475,7 +475,7 @@
       "type": "object",
       "properties": {
         "upgradeReplicaSetCheckTimeout": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -485,7 +485,7 @@
           ]
         },
         "forceRestart": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -495,7 +495,7 @@
           ]
         },
         "rollingUpgradeMonitoringPolicy": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RollingUpgradeMonitoringPolicy"
             },
@@ -505,7 +505,7 @@
           ]
         },
         "applicationHealthPolicy": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApplicationHealthPolicy"
             },
@@ -547,7 +547,7 @@
           "description": "Thumbprint of the secondary certificate."
         },
         "x509StoreName": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -577,7 +577,7 @@
       "type": "object",
       "properties": {
         "isAdmin": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -607,7 +607,7 @@
       "type": "object",
       "properties": {
         "isAdmin": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -632,7 +632,7 @@
       "type": "object",
       "properties": {
         "maxPercentUnhealthyNodes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "minimum": 0,
@@ -645,7 +645,7 @@
           "description": "The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10. "
         },
         "maxPercentUnhealthyApplications": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "minimum": 0,
@@ -664,7 +664,7 @@
       "type": "object",
       "properties": {
         "availableClusterVersions": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -678,7 +678,7 @@
           "description": "The Service Fabric runtime versions available for this cluster."
         },
         "clusterState": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -704,7 +704,7 @@
           "description": "The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**."
         },
         "certificate": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/CertificateDescription"
             },
@@ -715,7 +715,7 @@
           "description": "The certificate to use for securing the cluster. The certificate provided will be used for  node to node security within the cluster, SSL certificate for cluster management endpoint and default  admin client."
         },
         "reliabilityLevel": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -732,7 +732,7 @@
           ]
         },
         "upgradeMode": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -746,7 +746,7 @@
           ]
         },
         "clientCertificateThumbprints": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -760,7 +760,7 @@
           "description": "The list of client certificates referenced by thumbprint that are allowed to manage the cluster."
         },
         "clientCertificateCommonNames": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -774,7 +774,7 @@
           "description": "The list of client certificates referenced by common name that are allowed to manage the cluster."
         },
         "fabricSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -788,7 +788,7 @@
           "description": "The list of custom fabric settings to configure the cluster."
         },
         "reverseProxyCertificate": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/CertificateDescription"
             },
@@ -803,7 +803,7 @@
           "description": "The http management endpoint of the cluster."
         },
         "nodeTypes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -817,7 +817,7 @@
           "description": "The list of node types in the cluster."
         },
         "azureActiveDirectory": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AzureActiveDirectory"
             },
@@ -832,7 +832,7 @@
           "description": "The VM image VMSS has been configured with. Generic names such as Windows or Linux can be used."
         },
         "diagnosticsStorageAccountConfig": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/DiagnosticsStorageAccountConfig"
             },
@@ -843,7 +843,7 @@
           "description": "The storage account information for storing Service Fabric diagnostic logs."
         },
         "upgradeDescription": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ClusterUpgradePolicy"
             },
@@ -854,7 +854,7 @@
           "description": "The policy to use when upgrading the cluster."
         },
         "addOnFeatures": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -903,7 +903,7 @@
           "description": "Resource location."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApplicationProperties"
             },
@@ -956,7 +956,7 @@
           "description": "Resource location."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ServiceProperties"
             },
@@ -999,7 +999,7 @@
           "description": "Resource location."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApplicationTypeProperties"
             },
@@ -1052,7 +1052,7 @@
           "description": "Resource location."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VersionProperties"
             },
@@ -1075,7 +1075,7 @@
       "type": "object",
       "properties": {
         "maxPercentDeltaUnhealthyNodes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "minimum": 0,
@@ -1088,7 +1088,7 @@
           "description": "The maximum allowed percentage of nodes health degradation allowed during cluster upgrades. The delta is measured between the state of the nodes at the beginning of upgrade and the state of the nodes at the time of the health evaluation. The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits."
         },
         "maxPercentUpgradeDomainDeltaUnhealthyNodes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "minimum": 0,
@@ -1101,7 +1101,7 @@
           "description": "The maximum allowed percentage of upgrade domain nodes health degradation allowed during cluster upgrades. The delta is measured between the state of the upgrade domain nodes at the beginning of upgrade and the state of the upgrade domain nodes at the time of the health evaluation. The check is performed after every upgrade domain upgrade completion for all completed upgrade domains to make sure the state of the upgrade domains is within tolerated limits. "
         },
         "maxPercentDeltaUnhealthyApplications": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "minimum": 0,
@@ -1125,7 +1125,7 @@
       "type": "object",
       "properties": {
         "forceRestart": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1160,7 +1160,7 @@
           "description": "The amount of time each upgrade domain has to complete before the upgrade rolls back. The timeout can be in either hh:mm:ss or in d.hh:mm:ss.ms format."
         },
         "healthPolicy": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ClusterHealthPolicy"
             },
@@ -1171,7 +1171,7 @@
           "description": "The cluster health policy used when upgrading the cluster."
         },
         "deltaHealthPolicy": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ClusterUpgradeDeltaHealthPolicy"
             },
@@ -1205,7 +1205,7 @@
           "description": "The date of expiry of support of the version."
         },
         "environment": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1259,7 +1259,7 @@
       "type": "object",
       "properties": {
         "startPort": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1270,7 +1270,7 @@
           "description": "Starting port of a range of ports"
         },
         "endPort": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1293,7 +1293,7 @@
         {
           "properties": {
             "PartitionScheme": {
-              "anyOf": [
+              "oneOf": [
                 {
                   "type": "string",
                   "enum": [
@@ -1310,7 +1310,7 @@
       ],
       "properties": {
         "Count": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1321,7 +1321,7 @@
           "description": "The number of partitions."
         },
         "Names": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1353,7 +1353,7 @@
           "description": "The name of the node type."
         },
         "placementProperties": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -1367,7 +1367,7 @@
           "description": "The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run."
         },
         "capacities": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -1381,7 +1381,7 @@
           "description": "The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has."
         },
         "clientConnectionEndpointPort": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1392,7 +1392,7 @@
           "description": "The TCP cluster management endpoint port."
         },
         "httpGatewayEndpointPort": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1403,7 +1403,7 @@
           "description": "The HTTP cluster management endpoint port."
         },
         "durabilityLevel": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1418,7 +1418,7 @@
           ]
         },
         "applicationPorts": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/EndpointRangeDescription"
             },
@@ -1429,7 +1429,7 @@
           "description": "The range of ports from which cluster assigned port to Service Fabric applications."
         },
         "ephemeralPorts": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/EndpointRangeDescription"
             },
@@ -1440,7 +1440,7 @@
           "description": "The range of empheral ports that nodes in this node type should be configured with."
         },
         "isPrimary": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1451,7 +1451,7 @@
           "description": "The node type on which system services will run. Only one node type should be marked as primary. Primary node type cannot be deleted or changed for existing clusters."
         },
         "vmInstanceCount": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "minimum": 1,
@@ -1464,7 +1464,7 @@
           "description": "The number of nodes in the node type. This count should match the capacity property in the corresponding VirtualMachineScaleSet resource."
         },
         "reverseProxyEndpointPort": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1490,7 +1490,7 @@
         {
           "properties": {
             "PartitionScheme": {
-              "anyOf": [
+              "oneOf": [
                 {
                   "type": "string",
                   "enum": [
@@ -1512,7 +1512,7 @@
           ],
           "properties": {
             "PartitionScheme": {
-              "anyOf": [
+              "oneOf": [
                 {
                   "type": "string",
                   "enum": [
@@ -1534,7 +1534,7 @@
           ],
           "properties": {
             "PartitionScheme": {
-              "anyOf": [
+              "oneOf": [
                 {
                   "type": "string",
                   "enum": [
@@ -1556,7 +1556,7 @@
           ],
           "properties": {
             "PartitionScheme": {
-              "anyOf": [
+              "oneOf": [
                 {
                   "type": "string",
                   "enum": [
@@ -1606,7 +1606,7 @@
       "type": "object",
       "properties": {
         "Scheme": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1639,7 +1639,7 @@
           "description": "The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive."
         },
         "Weight": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1655,7 +1655,7 @@
           ]
         },
         "PrimaryDefaultLoad": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1666,7 +1666,7 @@
           "description": "Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica."
         },
         "SecondaryDefaultLoad": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1677,7 +1677,7 @@
           "description": "Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica."
         },
         "DefaultLoad": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1699,7 +1699,7 @@
         {
           "properties": {
             "Type": {
-              "anyOf": [
+              "oneOf": [
                 {
                   "type": "string",
                   "enum": [
@@ -1730,7 +1730,7 @@
         {
           "properties": {
             "serviceKind": {
-              "anyOf": [
+              "oneOf": [
                 {
                   "type": "string",
                   "enum": [
@@ -1752,7 +1752,7 @@
           ],
           "properties": {
             "serviceKind": {
-              "anyOf": [
+              "oneOf": [
                 {
                   "type": "string",
                   "enum": [
@@ -1774,7 +1774,7 @@
           ],
           "properties": {
             "serviceKind": {
-              "anyOf": [
+              "oneOf": [
                 {
                   "type": "string",
                   "enum": [
@@ -1795,7 +1795,7 @@
           "description": "The placement constraints as a string. Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements. For example, to place a service on nodes where NodeType is blue specify the following: \"NodeColor == blue)\"."
         },
         "correlationScheme": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1808,7 +1808,7 @@
           ]
         },
         "serviceLoadMetrics": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1821,7 +1821,7 @@
           ]
         },
         "servicePlacementPolicies": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1834,7 +1834,7 @@
           ]
         },
         "defaultMoveCost": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1854,7 +1854,7 @@
           "description": "The name of the service type"
         },
         "partitionDescription": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/PartitionSchemeDescription"
             },
@@ -1876,7 +1876,7 @@
       "type": "object",
       "properties": {
         "MaxPercentUnhealthyPartitionsPerService": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "default": "0"
@@ -1888,7 +1888,7 @@
           "description": "The maximum allowed percentage of unhealthy partitions per service. Allowed values are Byte values from zero to 100\n\nThe percentage represents the maximum tolerated percentage of partitions that can be unhealthy before the service is considered in error.\nIf the percentage is respected but there is at least one unhealthy partition, the health is evaluated as Warning.\nThe percentage is calculated by dividing the number of unhealthy partitions over the total number of partitions in the service.\nThe computation rounds up to tolerate one failure on small numbers of partitions. Default percentage is zero.\n"
         },
         "MaxPercentUnhealthyReplicasPerPartition": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "default": "0"
@@ -1900,7 +1900,7 @@
           "description": "The maximum allowed percentage of unhealthy replicas per partition. Allowed values are Byte values from zero to 100.\n\nThe percentage represents the maximum tolerated percentage of replicas that can be unhealthy before the partition is considered in error.\nIf the percentage is respected but there is at least one unhealthy replica, the health is evaluated as Warning.\nThe percentage is calculated by dividing the number of unhealthy replicas over the total number of replicas in the partition.\nThe computation rounds up to tolerate one failure on small numbers of replicas. Default percentage is zero.\n"
         },
         "MaxPercentUnhealthyServices": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "default": "0"
@@ -1922,7 +1922,7 @@
           "description": "The key of the service type health policy map item. This is the name of the service type."
         },
         "Value": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ServiceTypeHealthPolicy"
             },
@@ -1964,7 +1964,7 @@
           "description": "The section name of the fabric settings."
         },
         "parameters": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1990,7 +1990,7 @@
         {
           "properties": {
             "PartitionScheme": {
-              "anyOf": [
+              "oneOf": [
                 {
                   "type": "string",
                   "enum": [
@@ -2021,7 +2021,7 @@
         {
           "properties": {
             "serviceKind": {
-              "anyOf": [
+              "oneOf": [
                 {
                   "type": "string",
                   "enum": [
@@ -2038,7 +2038,7 @@
       ],
       "properties": {
         "hasPersistedState": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2049,7 +2049,7 @@
           "description": "A flag indicating whether this is a persistent service which stores states on the local disk. If it is then the value of this property is true, if not it is false."
         },
         "targetReplicaSetSize": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "minimum": 1
@@ -2061,7 +2061,7 @@
           "description": "The target replica set size as a number."
         },
         "minReplicaSetSize": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "minimum": 1
@@ -2102,7 +2102,7 @@
         {
           "properties": {
             "serviceKind": {
-              "anyOf": [
+              "oneOf": [
                 {
                   "type": "string",
                   "enum": [
@@ -2119,7 +2119,7 @@
       ],
       "properties": {
         "instanceCount": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "minimum": -1
@@ -2145,7 +2145,7 @@
         {
           "properties": {
             "PartitionScheme": {
-              "anyOf": [
+              "oneOf": [
                 {
                   "type": "string",
                   "enum": [
@@ -2162,7 +2162,7 @@
       ],
       "properties": {
         "Count": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },

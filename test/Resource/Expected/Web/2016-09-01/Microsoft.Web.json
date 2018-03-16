@@ -31,7 +31,7 @@
           "description": "Resource Location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -45,7 +45,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AppServiceEnvironment"
             },
@@ -98,7 +98,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/WorkerPool"
             },
@@ -109,7 +109,7 @@
           "description": "Core resource properties"
         },
         "sku": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SkuDescription"
             },
@@ -154,7 +154,7 @@
           "description": "Resource Location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -168,7 +168,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AppServicePlanProperties"
             },
@@ -179,7 +179,7 @@
           "description": "AppServicePlan resource specific properties"
         },
         "sku": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SkuDescription"
             },
@@ -221,7 +221,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VnetGatewayProperties"
             },
@@ -263,7 +263,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VnetRouteProperties"
             },
@@ -308,7 +308,7 @@
           "description": "Subnet of the Virtual Network."
         },
         "virtualNetwork": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VirtualNetworkProfile"
             },
@@ -319,7 +319,7 @@
           "description": "Description of the Virtual Network."
         },
         "internalLoadBalancingMode": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -339,7 +339,7 @@
           "description": "Front-end VM size, e.g. \"Medium\", \"Large\"."
         },
         "multiRoleCount": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -350,7 +350,7 @@
           "description": "Number of front-end instances."
         },
         "workerPools": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -364,7 +364,7 @@
           "description": "Description of worker pools with worker size IDs, VM sizes, and number of workers in each pool."
         },
         "ipsslAddressCount": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -379,7 +379,7 @@
           "description": "DNS suffix of the App Service Environment."
         },
         "networkAccessControlList": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -393,7 +393,7 @@
           "description": "Access control list for controlling traffic to the App Service Environment."
         },
         "frontEndScaleFactor": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -408,7 +408,7 @@
           "description": "API Management Account associated with the App Service Environment."
         },
         "suspended": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -419,7 +419,7 @@
           "description": "<code>true</code> if the App Service Environment is suspended; otherwise, <code>false</code>. The environment can be suspended, e.g. when the management endpoint is no longer available\n (most likely because NSG blocked the incoming traffic)."
         },
         "dynamicCacheEnabled": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -430,7 +430,7 @@
           "description": "True/false indicating whether the App Service Environment is suspended. The environment can be suspended e.g. when the management endpoint is no longer available\n(most likely because NSG blocked the incoming traffic)."
         },
         "clusterSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -444,7 +444,7 @@
           "description": "Custom settings for changing the behavior of the App Service Environment."
         },
         "userWhitelistedIpRanges": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -482,7 +482,7 @@
           "description": "App Service plan administration site."
         },
         "hostingEnvironmentProfile": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/HostingEnvironmentProfile"
             },
@@ -493,7 +493,7 @@
           "description": "Specification for the App Service Environment to use for the App Service plan."
         },
         "perSiteScaling": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean",
               "default": false
@@ -505,7 +505,7 @@
           "description": "If <code>true</code>, apps assigned to this App Service plan can be scaled independently.\nIf <code>false</code>, apps assigned to this App Service plan will scale to all instances of the plan."
         },
         "isSpot": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -521,7 +521,7 @@
           "description": "The time when the server farm expires. Valid only if it is a spot server farm."
         },
         "reserved": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean",
               "default": false
@@ -533,7 +533,7 @@
           "description": "If Linux app service plan <code>true</code>, <code>false</code> otherwise."
         },
         "targetWorkerCount": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -544,7 +544,7 @@
           "description": "Scaling worker count."
         },
         "targetWorkerSizeId": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -611,7 +611,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/WorkerPool"
             },
@@ -622,7 +622,7 @@
           "description": "Core resource properties"
         },
         "sku": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SkuDescription"
             },
@@ -658,7 +658,7 @@
       "type": "object",
       "properties": {
         "action": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -677,7 +677,7 @@
           "description": "Description of network access control entry."
         },
         "order": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -698,7 +698,7 @@
       "type": "object",
       "properties": {
         "minimum": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -709,7 +709,7 @@
           "description": "Minimum number of workers for this App Service plan SKU."
         },
         "maximum": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -720,7 +720,7 @@
           "description": "Maximum number of workers for this App Service plan SKU."
         },
         "default": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -757,7 +757,7 @@
           "description": "Family code of the resource SKU."
         },
         "capacity": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -768,7 +768,7 @@
           "description": "Current number of instances assigned to the resource."
         },
         "skuCapacity": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SkuCapacity"
             },
@@ -779,7 +779,7 @@
           "description": "Min, max, and default scale values of the SKU."
         },
         "locations": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -793,7 +793,7 @@
           "description": "Locations of the SKU."
         },
         "capabilities": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -856,7 +856,7 @@
           "description": "The ending address for this route. If the start address is specified in CIDR notation, this must be omitted."
         },
         "routeType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -878,7 +878,7 @@
       "type": "object",
       "properties": {
         "workerSizeId": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -889,7 +889,7 @@
           "description": "Worker size ID for referencing this worker pool."
         },
         "computeMode": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -909,7 +909,7 @@
           "description": "VM size of the worker pool instances."
         },
         "workerCount": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },

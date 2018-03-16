@@ -27,7 +27,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -41,7 +41,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/HubPropertiesFormat"
             },
@@ -115,7 +115,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AuthorizationPolicy"
             },
@@ -152,7 +152,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/Connector"
             },
@@ -199,7 +199,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ConnectorMapping"
             },
@@ -236,7 +236,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/InteractionTypeDefinition"
             },
@@ -273,7 +273,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/KpiDefinition"
             },
@@ -310,7 +310,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/LinkDefinition"
             },
@@ -347,7 +347,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ProfileTypeDefinition"
             },
@@ -384,7 +384,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RelationshipLinkDefinition"
             },
@@ -421,7 +421,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RelationshipDefinition"
             },
@@ -458,7 +458,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RoleAssignment"
             },
@@ -495,7 +495,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/View"
             },
@@ -527,7 +527,7 @@
           "description": "The Type of the principal ID."
         },
         "principalMetadata": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -551,7 +551,7 @@
       "type": "object",
       "properties": {
         "permissions": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -591,7 +591,7 @@
           "description": "Name of the connector."
         },
         "connectorType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -618,7 +618,7 @@
           "description": "Description of the connector."
         },
         "connectorProperties": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -632,7 +632,7 @@
           "description": "The connector properties."
         },
         "isInternal": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -653,7 +653,7 @@
       "type": "object",
       "properties": {
         "connectorType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -672,7 +672,7 @@
           "description": "Type of connector."
         },
         "entityType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -701,7 +701,7 @@
           "description": "The description of the connector mapping."
         },
         "mappingProperties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ConnectorMappingProperties"
             },
@@ -723,7 +723,7 @@
       "type": "object",
       "properties": {
         "frequency": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -741,7 +741,7 @@
           "description": "The frequency to update."
         },
         "interval": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -761,7 +761,7 @@
       "type": "object",
       "properties": {
         "completionOperationType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -787,7 +787,7 @@
       "type": "object",
       "properties": {
         "errorManagementType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -803,7 +803,7 @@
           "description": "The type of error management to use for the mapping."
         },
         "errorLimit": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -823,7 +823,7 @@
       "type": "object",
       "properties": {
         "formatType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -874,7 +874,7 @@
           "description": "The file filter for the mapping."
         },
         "hasHeader": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -885,7 +885,7 @@
           "description": "If the file contains a header or not."
         },
         "errorManagement": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ConnectorMappingErrorManagement"
             },
@@ -896,7 +896,7 @@
           "description": "The error management setting for the mapping."
         },
         "format": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ConnectorMappingFormat"
             },
@@ -907,7 +907,7 @@
           "description": "The format of mapping property."
         },
         "availability": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ConnectorMappingAvailability"
             },
@@ -918,7 +918,7 @@
           "description": "The availability of mapping property."
         },
         "structure": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -932,7 +932,7 @@
           "description": "Ingestion mapping information at property level."
         },
         "completeOperation": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ConnectorMappingCompleteOperation"
             },
@@ -968,7 +968,7 @@
           "description": "Custom format specifier for input parsing."
         },
         "isEncrypted": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -997,7 +997,7 @@
           "description": "The sku name."
         },
         "minUnits": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "minimum": 1,
@@ -1010,7 +1010,7 @@
           "description": "The minimum number of units will be billed. One unit is 10,000 Profiles and 100,000 Interactions."
         },
         "maxUnits": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "minimum": 1,
@@ -1029,7 +1029,7 @@
       "type": "object",
       "properties": {
         "tenantFeatures": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1040,7 +1040,7 @@
           "description": "The bit flags for enabled hub features. Bit 0 is set to 1 indicates graph is enabled, or disabled if set to 0. Bit 1 is set to 1 indicates the hub is disabled, or enabled if set to 0."
         },
         "hubBillingInfo": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/HubBillingInfoFormat"
             },
@@ -1072,7 +1072,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AuthorizationPolicy"
             },
@@ -1109,7 +1109,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/Connector"
             },
@@ -1156,7 +1156,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ConnectorMapping"
             },
@@ -1193,7 +1193,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/InteractionTypeDefinition"
             },
@@ -1230,7 +1230,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/KpiDefinition"
             },
@@ -1267,7 +1267,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/LinkDefinition"
             },
@@ -1304,7 +1304,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ProfileTypeDefinition"
             },
@@ -1341,7 +1341,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RelationshipLinkDefinition"
             },
@@ -1378,7 +1378,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RelationshipDefinition"
             },
@@ -1415,7 +1415,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RoleAssignment"
             },
@@ -1452,7 +1452,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/View"
             },
@@ -1474,7 +1474,7 @@
       "type": "object",
       "properties": {
         "attributes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -1491,7 +1491,7 @@
           "description": "The attributes for the Type."
         },
         "description": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -1505,7 +1505,7 @@
           "description": "Localized descriptions for the property."
         },
         "displayName": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -1519,7 +1519,7 @@
           "description": "Localized display names for the property."
         },
         "localizedAttributes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -1552,7 +1552,7 @@
           "description": "The api entity set name. This becomes the odata entity set name for the entity Type being refered in this object."
         },
         "entityType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1569,7 +1569,7 @@
           "description": "Type of entity."
         },
         "fields": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1583,7 +1583,7 @@
           "description": "The properties of the Profile."
         },
         "instancesCount": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1606,7 +1606,7 @@
           "description": "The name of the entity."
         },
         "idPropertyNames": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1620,7 +1620,7 @@
           "description": "The id property names. Properties which uniquely identify an interaction instance."
         },
         "participantProfiles": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1638,7 +1638,7 @@
           "description": "The primary participant property name for an interaction ,This is used to logically represent the agent of the interaction, Specify the participant name here from ParticipantName."
         },
         "defaultDataSource": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/DataSource"
             },
@@ -1649,7 +1649,7 @@
           "description": "Default data source is specifically used in cases where data source is not specified in an instance."
         },
         "isActivity": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1684,7 +1684,7 @@
       "type": "object",
       "properties": {
         "entityType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1705,7 +1705,7 @@
           "description": "The mapping entity name."
         },
         "displayName": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -1719,7 +1719,7 @@
           "description": "Localized display name for the KPI."
         },
         "description": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -1733,7 +1733,7 @@
           "description": "Localized description for the KPI."
         },
         "calculationWindow": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1755,7 +1755,7 @@
           "description": "Name of calculation window field."
         },
         "function": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1788,7 +1788,7 @@
           "description": "The filter expression for the KPI."
         },
         "groupBy": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1802,7 +1802,7 @@
           "description": "the group by properties for the KPI."
         },
         "thresHolds": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/KpiThresholds"
             },
@@ -1813,7 +1813,7 @@
           "description": "The KPI thresholds."
         },
         "aliases": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1827,7 +1827,7 @@
           "description": "The aliases."
         },
         "extracts": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1872,7 +1872,7 @@
       "type": "object",
       "properties": {
         "lowerLimit": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "number"
             },
@@ -1883,7 +1883,7 @@
           "description": "The lower threshold limit."
         },
         "upperLimit": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "number"
             },
@@ -1894,7 +1894,7 @@
           "description": "The upper threshold limit."
         },
         "increasingKpi": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1924,7 +1924,7 @@
           "description": "Name of the target Profile Type."
         },
         "displayName": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -1938,7 +1938,7 @@
           "description": "Localized display name for the Link."
         },
         "description": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -1952,7 +1952,7 @@
           "description": "Localized descriptions for the Link."
         },
         "mappings": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1966,7 +1966,7 @@
           "description": "The set of properties mappings between the source and target Types."
         },
         "participantPropertyReferences": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1980,7 +1980,7 @@
           "description": "The properties that represent the participating profile."
         },
         "referenceOnly": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1991,7 +1991,7 @@
           "description": "Indicating whether the link is reference only link. This flag is ingored if the Mappings are defined. If the mappings are not defined and it is set to true, links processing will not create or update profiles."
         },
         "operationType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2021,7 +2021,7 @@
           "description": "Profile type name."
         },
         "participantPropertyReferences": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2039,7 +2039,7 @@
           "description": "Participant name."
         },
         "displayName": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2053,7 +2053,7 @@
           "description": "Localized display name."
         },
         "description": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2100,7 +2100,7 @@
       "type": "object",
       "properties": {
         "value": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -2111,7 +2111,7 @@
           "description": "The integer value of the enum member."
         },
         "localizedValueNames": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2131,7 +2131,7 @@
       "type": "object",
       "properties": {
         "attributes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2148,7 +2148,7 @@
           "description": "The attributes for the Type."
         },
         "description": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2162,7 +2162,7 @@
           "description": "Localized descriptions for the property."
         },
         "displayName": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2176,7 +2176,7 @@
           "description": "Localized display names for the property."
         },
         "localizedAttributes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2209,7 +2209,7 @@
           "description": "The api entity set name. This becomes the odata entity set name for the entity Type being refered in this object."
         },
         "entityType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2226,7 +2226,7 @@
           "description": "Type of entity."
         },
         "fields": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2240,7 +2240,7 @@
           "description": "The properties of the Profile."
         },
         "instancesCount": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -2263,7 +2263,7 @@
           "description": "The name of the entity."
         },
         "strongIds": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2287,7 +2287,7 @@
           "description": "Array value separator for properties with isArray set."
         },
         "enumValidValues": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2309,7 +2309,7 @@
           "description": "Type of the property."
         },
         "isArray": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2320,7 +2320,7 @@
           "description": "Indicates if the property is actually an array of the fieldType above on the data api."
         },
         "isEnum": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2331,7 +2331,7 @@
           "description": "Indicates if the property is an enum."
         },
         "isFlagEnum": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2342,7 +2342,7 @@
           "description": "Indicates if the property is an flag enum."
         },
         "isImage": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2353,7 +2353,7 @@
           "description": "Whether the property is an Image."
         },
         "isLocalizedString": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2364,7 +2364,7 @@
           "description": "Whether the property is a localized string."
         },
         "isName": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2375,7 +2375,7 @@
           "description": "Whether the property is a name or a part of name."
         },
         "isRequired": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2394,7 +2394,7 @@
           "description": "URL encoded schema.org item prop link for the property."
         },
         "maxLength": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -2405,7 +2405,7 @@
           "description": "Max length of string. Used only if type is string."
         },
         "isAvailableInGraph": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2426,7 +2426,7 @@
       "type": "object",
       "properties": {
         "cardinality": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2442,7 +2442,7 @@
           "description": "The Relationship Cardinality."
         },
         "displayName": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2456,7 +2456,7 @@
           "description": "Localized display name for the Relationship."
         },
         "description": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2475,7 +2475,7 @@
           "description": "The expiry date time in UTC."
         },
         "fields": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2489,7 +2489,7 @@
           "description": "The properties of the Relationship."
         },
         "lookupMappings": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2521,7 +2521,7 @@
       "type": "object",
       "properties": {
         "displayName": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2535,7 +2535,7 @@
           "description": "Localized display name for the Relationship Link."
         },
         "description": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2553,7 +2553,7 @@
           "description": "The InteractionType associated with the Relationship Link."
         },
         "mappings": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2567,7 +2567,7 @@
           "description": "The mappings between Interaction and Relationship fields."
         },
         "profilePropertyReferences": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2581,7 +2581,7 @@
           "description": "The property references for the Profile of the Relationship."
         },
         "relatedProfilePropertyReferences": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2615,7 +2615,7 @@
           "description": "The field name on the Interaction Type."
         },
         "linkType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2662,7 +2662,7 @@
       "type": "object",
       "properties": {
         "fieldMappings": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2685,7 +2685,7 @@
       "type": "object",
       "properties": {
         "elements": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2699,7 +2699,7 @@
           "description": "The elements included in the set."
         },
         "exceptions": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2719,7 +2719,7 @@
       "type": "object",
       "properties": {
         "displayName": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2733,7 +2733,7 @@
           "description": "Localized display names for the metadata."
         },
         "description": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2747,7 +2747,7 @@
           "description": "Localized description for the metadata."
         },
         "role": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2766,7 +2766,7 @@
           "description": "Type of roles."
         },
         "principals": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2780,7 +2780,7 @@
           "description": "The principals being assigned to."
         },
         "profiles": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ResourceSetDescription"
             },
@@ -2791,7 +2791,7 @@
           "description": "Profiles set for the assignment."
         },
         "interactions": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ResourceSetDescription"
             },
@@ -2802,7 +2802,7 @@
           "description": "Interactions set for the assignment."
         },
         "links": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ResourceSetDescription"
             },
@@ -2813,7 +2813,7 @@
           "description": "Links set for the assignment."
         },
         "kpis": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ResourceSetDescription"
             },
@@ -2824,7 +2824,7 @@
           "description": "Kpis set for the assignment."
         },
         "sasPolicies": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ResourceSetDescription"
             },
@@ -2835,7 +2835,7 @@
           "description": "Sas Policies set for the assignment."
         },
         "connectors": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ResourceSetDescription"
             },
@@ -2846,7 +2846,7 @@
           "description": "Connectors set for the assignment."
         },
         "views": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ResourceSetDescription"
             },
@@ -2857,7 +2857,7 @@
           "description": "Views set for the assignment."
         },
         "relationshipLinks": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ResourceSetDescription"
             },
@@ -2868,7 +2868,7 @@
           "description": "The Role assignments set for the relationship links."
         },
         "relationships": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ResourceSetDescription"
             },
@@ -2879,7 +2879,7 @@
           "description": "The Role assignments set for the relationships."
         },
         "widgetTypes": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ResourceSetDescription"
             },
@@ -2890,7 +2890,7 @@
           "description": "Widget types set for the assignment."
         },
         "roleAssignments": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ResourceSetDescription"
             },
@@ -2901,7 +2901,7 @@
           "description": "The Role assignments set for the assignment."
         },
         "conflationPolicies": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ResourceSetDescription"
             },
@@ -2912,7 +2912,7 @@
           "description": "Widget types set for the assignment."
         },
         "segments": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ResourceSetDescription"
             },
@@ -2933,7 +2933,7 @@
       "type": "object",
       "properties": {
         "keyPropertyNames": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2951,7 +2951,7 @@
           "description": "The Name identifying the strong ID."
         },
         "displayName": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2965,7 +2965,7 @@
           "description": "Localized display name."
         },
         "description": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2997,7 +2997,7 @@
           "description": "Property name on the target Profile Type."
         },
         "isProfileTypeId": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3008,7 +3008,7 @@
           "description": "Flag to indicate whether the Profile Type property is an id on the Profile Type."
         },
         "linkType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -3037,7 +3037,7 @@
           "description": "the user ID."
         },
         "displayName": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {

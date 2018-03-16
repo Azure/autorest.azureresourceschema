@@ -28,7 +28,7 @@
           "description": "The location of the resource. This cannot be changed after the resource is created."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -42,7 +42,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RegistryProperties"
             },
@@ -68,7 +68,7 @@
       "type": "object",
       "properties": {
         "adminUserEnabled": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean",
               "default": false
@@ -80,7 +80,7 @@
           "description": "The value that indicates whether the admin user is enabled. This value is false by default."
         },
         "storageAccount": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/StorageAccountProperties"
             },

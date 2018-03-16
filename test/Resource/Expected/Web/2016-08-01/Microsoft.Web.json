@@ -31,7 +31,7 @@
           "description": "Resource Location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -45,7 +45,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SiteProperties"
             },
@@ -56,7 +56,7 @@
           "description": "Site resource specific properties"
         },
         "identity": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ManagedServiceIdentity"
             },
@@ -135,7 +135,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/DeploymentProperties"
             },
@@ -177,7 +177,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/IdentifierProperties"
             },
@@ -219,7 +219,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/FunctionEnvelopeProperties"
             },
@@ -261,7 +261,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/HostNameBindingProperties"
             },
@@ -303,7 +303,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RelayServiceConnectionEntityProperties"
             },
@@ -345,7 +345,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/HybridConnectionProperties"
             },
@@ -391,7 +391,7 @@
           "description": "Resource Location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -405,7 +405,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/PremierAddOnProperties"
             },
@@ -448,7 +448,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/PublicCertificateProperties"
             },
@@ -520,7 +520,7 @@
           "description": "Resource Location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -534,7 +534,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SiteProperties"
             },
@@ -545,7 +545,7 @@
           "description": "Site resource specific properties"
         },
         "identity": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ManagedServiceIdentity"
             },
@@ -621,7 +621,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/DeploymentProperties"
             },
@@ -663,7 +663,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/IdentifierProperties"
             },
@@ -705,7 +705,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/FunctionEnvelopeProperties"
             },
@@ -747,7 +747,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/HostNameBindingProperties"
             },
@@ -789,7 +789,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RelayServiceConnectionEntityProperties"
             },
@@ -831,7 +831,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/HybridConnectionProperties"
             },
@@ -877,7 +877,7 @@
           "description": "Resource Location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -891,7 +891,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/PremierAddOnProperties"
             },
@@ -934,7 +934,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/PublicCertificateProperties"
             },
@@ -1002,7 +1002,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VnetInfoProperties"
             },
@@ -1054,7 +1054,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VnetGatewayProperties"
             },
@@ -1096,7 +1096,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VnetInfoProperties"
             },
@@ -1148,7 +1148,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VnetGatewayProperties"
             },
@@ -1183,7 +1183,7 @@
       "type": "object",
       "properties": {
         "actionType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1199,7 +1199,7 @@
           "description": "Predefined action to be taken."
         },
         "customAction": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AutoHealCustomAction"
             },
@@ -1234,7 +1234,7 @@
       "type": "object",
       "properties": {
         "triggers": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AutoHealTriggers"
             },
@@ -1245,7 +1245,7 @@
           "description": "Conditions that describe when to execute the auto-heal actions."
         },
         "actions": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AutoHealActions"
             },
@@ -1262,7 +1262,7 @@
       "type": "object",
       "properties": {
         "requests": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RequestsBasedTrigger"
             },
@@ -1273,7 +1273,7 @@
           "description": "A rule based on total requests."
         },
         "privateBytesInKB": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1284,7 +1284,7 @@
           "description": "A rule based on private bytes."
         },
         "statusCodes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1298,7 +1298,7 @@
           "description": "A rule based on status codes."
         },
         "slowRequests": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SlowRequestsBasedTrigger"
             },
@@ -1315,7 +1315,7 @@
       "type": "object",
       "properties": {
         "correlationId": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "pattern": "^[0-9a-fA-F]{8}(-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}$"
@@ -1327,7 +1327,7 @@
           "description": "Correlation ID of cloning operation. This ID ties multiple cloning operations\ntogether to use the same snapshot."
         },
         "overwrite": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1338,7 +1338,7 @@
           "description": "<code>true</code> to overwrite destination app; otherwise, <code>false</code>."
         },
         "cloneCustomHostNames": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1349,7 +1349,7 @@
           "description": "<code>true</code> to clone custom hostnames from source app; otherwise, <code>false</code>."
         },
         "cloneSourceControl": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1368,7 +1368,7 @@
           "description": "App Service Environment."
         },
         "appSettingsOverrides": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -1382,7 +1382,7 @@
           "description": "Application setting overrides for cloned app. If specified, these settings override the settings cloned \nfrom source app. Otherwise, application settings from source app are retained."
         },
         "configureLoadBalancing": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1401,7 +1401,7 @@
           "description": "Name of Traffic Manager profile to create. This is only needed if Traffic Manager profile does not already exist."
         },
         "ignoreQuotas": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1452,7 +1452,7 @@
       "type": "object",
       "properties": {
         "allowedOrigins": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1476,7 +1476,7 @@
           "description": "Identifier for deployment."
         },
         "status": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1513,7 +1513,7 @@
           "description": "End time."
         },
         "active": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1534,7 +1534,7 @@
       "type": "object",
       "properties": {
         "rampUpRules": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1578,7 +1578,7 @@
           "description": "Config information."
         },
         "files": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -1642,7 +1642,7 @@
           "description": "Azure resource name."
         },
         "azureResourceType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1657,7 +1657,7 @@
           "description": "Azure resource type."
         },
         "customHostNameDnsRecordType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1672,7 +1672,7 @@
           "description": "Custom DNS record type."
         },
         "hostNameType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1687,7 +1687,7 @@
           "description": "Hostname type."
         },
         "sslState": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1717,7 +1717,7 @@
           "description": "Hostname."
         },
         "sslState": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1741,7 +1741,7 @@
           "description": "SSL certificate thumbprint."
         },
         "toUpdate": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1752,7 +1752,7 @@
           "description": "Set to <code>true</code> to update existing hostname."
         },
         "hostType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1789,7 +1789,7 @@
           "description": "The hostname of the endpoint."
         },
         "port": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1889,7 +1889,7 @@
           "description": "Premier add on Location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -1917,7 +1917,7 @@
       "type": "object",
       "properties": {
         "blob": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1931,7 +1931,7 @@
           "description": "Public Certificate byte array"
         },
         "publicCertificateLocation": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1957,7 +1957,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/PushSettingsProperties"
             },
@@ -1974,7 +1974,7 @@
       "type": "object",
       "properties": {
         "isPushEnabled": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2010,7 +2010,7 @@
           "description": "Hostname of a slot to which the traffic will be redirected if decided to. E.g. myapp-stage.azurewebsites.net."
         },
         "reroutePercentage": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "number"
             },
@@ -2021,7 +2021,7 @@
           "description": "Percentage of the traffic which will be redirected to <code>ActionHostName</code>."
         },
         "changeStep": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "number"
             },
@@ -2032,7 +2032,7 @@
           "description": "In auto ramp up scenario this is the step to to add/remove from <code>ReroutePercentage</code> until it reaches \n<code>MinReroutePercentage</code> or <code>MaxReroutePercentage</code>. Site metrics are checked every N minutes specificed in <code>ChangeIntervalInMinutes</code>.\nCustom decision algorithm can be provided in TiPCallback site extension which URL can be specified in <code>ChangeDecisionCallbackUrl</code>."
         },
         "changeIntervalInMinutes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -2043,7 +2043,7 @@
           "description": "Specifies interval in mimuntes to reevaluate ReroutePercentage."
         },
         "minReroutePercentage": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "number"
             },
@@ -2054,7 +2054,7 @@
           "description": "Specifies lower boundary above which ReroutePercentage will stay."
         },
         "maxReroutePercentage": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "number"
             },
@@ -2094,7 +2094,7 @@
           "type": "string"
         },
         "port": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -2113,7 +2113,7 @@
       "type": "object",
       "properties": {
         "count": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -2134,7 +2134,7 @@
       "type": "object",
       "properties": {
         "numberOfWorkers": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -2145,7 +2145,7 @@
           "description": "Number of workers."
         },
         "defaultDocuments": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2180,7 +2180,7 @@
           "description": "Linux App Framework and version"
         },
         "requestTracingEnabled": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2196,7 +2196,7 @@
           "description": "Request tracing expiration time."
         },
         "remoteDebuggingEnabled": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2211,7 +2211,7 @@
           "description": "Remote debugging version."
         },
         "httpLoggingEnabled": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2222,7 +2222,7 @@
           "description": "<code>true</code> if HTTP logging is enabled; otherwise, <code>false</code>."
         },
         "logsDirectorySizeLimit": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -2233,7 +2233,7 @@
           "description": "HTTP logs directory size limit."
         },
         "detailedErrorLoggingEnabled": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2248,7 +2248,7 @@
           "description": "Publishing user name."
         },
         "appSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2262,7 +2262,7 @@
           "description": "Application settings."
         },
         "connectionStrings": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2276,7 +2276,7 @@
           "description": "Connection strings."
         },
         "handlerMappings": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2294,7 +2294,7 @@
           "description": "Document root."
         },
         "scmType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2320,7 +2320,7 @@
           "description": "SCM type."
         },
         "use32BitWorkerProcess": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2331,7 +2331,7 @@
           "description": "<code>true</code> to use 32-bit worker process; otherwise, <code>false</code>."
         },
         "webSocketsEnabled": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2342,7 +2342,7 @@
           "description": "<code>true</code> if WebSocket is enabled; otherwise, <code>false</code>."
         },
         "alwaysOn": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2369,7 +2369,7 @@
           "description": "App command line to launch."
         },
         "managedPipelineMode": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2384,7 +2384,7 @@
           "description": "Managed pipeline mode."
         },
         "virtualApplications": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2398,7 +2398,7 @@
           "description": "Virtual applications."
         },
         "loadBalancing": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2416,7 +2416,7 @@
           "description": "Site load balancing."
         },
         "experiments": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/Experiments"
             },
@@ -2427,7 +2427,7 @@
           "description": "This is work around for polymophic types."
         },
         "limits": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SiteLimits"
             },
@@ -2438,7 +2438,7 @@
           "description": "Site limits."
         },
         "autoHealEnabled": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2449,7 +2449,7 @@
           "description": "<code>true</code> if Auto Heal is enabled; otherwise, <code>false</code>."
         },
         "autoHealRules": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AutoHealRules"
             },
@@ -2468,7 +2468,7 @@
           "description": "Virtual Network name."
         },
         "cors": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/CorsSettings"
             },
@@ -2479,7 +2479,7 @@
           "description": "Cross-Origin Resource Sharing (CORS) settings."
         },
         "push": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/PushSettings"
             },
@@ -2490,7 +2490,7 @@
           "description": "Push endpoint settings."
         },
         "apiDefinition": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApiDefinitionInfo"
             },
@@ -2505,7 +2505,7 @@
           "description": "Auto-swap slot name."
         },
         "localMySqlEnabled": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean",
               "default": false
@@ -2517,7 +2517,7 @@
           "description": "<code>true</code> to enable local MySQL; otherwise, <code>false</code>."
         },
         "ipSecurityRestrictions": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2537,7 +2537,7 @@
       "type": "object",
       "properties": {
         "maxPercentageCpu": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "number"
             },
@@ -2548,7 +2548,7 @@
           "description": "Maximum allowed CPU usage percentage."
         },
         "maxMemoryInMb": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -2559,7 +2559,7 @@
           "description": "Maximum allowed memory usage in MB."
         },
         "maxDiskSizeInMb": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -2576,7 +2576,7 @@
       "type": "object",
       "properties": {
         "enabled": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2587,7 +2587,7 @@
           "description": "<code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline)."
         },
         "hostNameSslStates": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2605,7 +2605,7 @@
           "description": "Resource ID of the associated App Service plan, formatted as: \"/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}\"."
         },
         "reserved": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean",
               "default": false
@@ -2617,7 +2617,7 @@
           "description": "<code>true</code> if reserved; otherwise, <code>false</code>."
         },
         "siteConfig": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SiteConfig"
             },
@@ -2628,7 +2628,7 @@
           "description": "Configuration of the app."
         },
         "scmSiteAlsoStopped": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean",
               "default": false
@@ -2640,7 +2640,7 @@
           "description": "<code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>. The default is <code>false</code>."
         },
         "hostingEnvironmentProfile": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/HostingEnvironmentProfile"
             },
@@ -2651,7 +2651,7 @@
           "description": "App Service Environment to use for the app."
         },
         "clientAffinityEnabled": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2662,7 +2662,7 @@
           "description": "<code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>."
         },
         "clientCertEnabled": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2673,7 +2673,7 @@
           "description": "<code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>. Default is <code>false</code>."
         },
         "hostNamesDisabled": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2684,7 +2684,7 @@
           "description": "<code>true</code> to disable the public hostnames of the app; otherwise, <code>false</code>.\n If <code>true</code>, the app is only accessible via API management process."
         },
         "containerSize": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -2695,7 +2695,7 @@
           "description": "Size of the function container."
         },
         "dailyMemoryTimeQuota": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -2706,7 +2706,7 @@
           "description": "Maximum allowed daily memory-time quota (applicable on dynamic apps only)."
         },
         "cloningInfo": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/CloningInfo"
             },
@@ -2717,7 +2717,7 @@
           "description": "If specified during app creation, the app is cloned from a source app."
         },
         "snapshotInfo": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SnapshotRecoveryRequest"
             },
@@ -2728,7 +2728,7 @@
           "description": "If specified during app creation, the app is created from a previous snapshot."
         },
         "httpsOnly": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2764,7 +2764,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/DeploymentProperties"
             },
@@ -2806,7 +2806,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/IdentifierProperties"
             },
@@ -2848,7 +2848,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/FunctionEnvelopeProperties"
             },
@@ -2890,7 +2890,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/HostNameBindingProperties"
             },
@@ -2932,7 +2932,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RelayServiceConnectionEntityProperties"
             },
@@ -2978,7 +2978,7 @@
           "description": "Resource Location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2992,7 +2992,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/PremierAddOnProperties"
             },
@@ -3035,7 +3035,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/PublicCertificateProperties"
             },
@@ -3107,7 +3107,7 @@
           "description": "Resource Location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -3121,7 +3121,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SiteProperties"
             },
@@ -3132,7 +3132,7 @@
           "description": "Site resource specific properties"
         },
         "identity": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ManagedServiceIdentity"
             },
@@ -3208,7 +3208,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/DeploymentProperties"
             },
@@ -3250,7 +3250,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/IdentifierProperties"
             },
@@ -3292,7 +3292,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/FunctionEnvelopeProperties"
             },
@@ -3334,7 +3334,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/HostNameBindingProperties"
             },
@@ -3376,7 +3376,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RelayServiceConnectionEntityProperties"
             },
@@ -3422,7 +3422,7 @@
           "description": "Resource Location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -3436,7 +3436,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/PremierAddOnProperties"
             },
@@ -3479,7 +3479,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/PublicCertificateProperties"
             },
@@ -3547,7 +3547,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VnetInfoProperties"
             },
@@ -3599,7 +3599,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VnetGatewayProperties"
             },
@@ -3641,7 +3641,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VnetInfoProperties"
             },
@@ -3693,7 +3693,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VnetGatewayProperties"
             },
@@ -3720,7 +3720,7 @@
           "description": "Time taken."
         },
         "count": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3745,7 +3745,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SnapshotRecoveryRequestProperties"
             },
@@ -3766,7 +3766,7 @@
           "description": "Point in time in which the app recovery should be attempted, formatted as a DateTime string."
         },
         "recoveryTarget": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SnapshotRecoveryTarget"
             },
@@ -3777,7 +3777,7 @@
           "description": "Specifies the web app that snapshot contents will be written to."
         },
         "overwrite": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3788,7 +3788,7 @@
           "description": "If <code>true</code> the recovery operation can overwrite source app; otherwise, <code>false</code>."
         },
         "recoverConfiguration": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3799,7 +3799,7 @@
           "description": "If true, site configuration, in addition to content, will be reverted."
         },
         "ignoreConflictingHostNames": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3833,7 +3833,7 @@
       "type": "object",
       "properties": {
         "status": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3844,7 +3844,7 @@
           "description": "HTTP status code."
         },
         "subStatus": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3855,7 +3855,7 @@
           "description": "Request Sub Status."
         },
         "win32Status": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3866,7 +3866,7 @@
           "description": "Win32 error code."
         },
         "count": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3895,7 +3895,7 @@
           "description": "Physical path."
         },
         "preloadEnabled": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3906,7 +3906,7 @@
           "description": "<code>true</code> if preloading is enabled; otherwise, <code>false</code>."
         },
         "virtualDirectories": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -3961,7 +3961,7 @@
           "description": "The Virtual Network's resource ID."
         },
         "certBlob": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {

@@ -8,7 +8,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "pattern": "^[a-zA-Z0-9]*$"
@@ -32,7 +32,7 @@
           ]
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -50,7 +50,7 @@
           "description": "The location of the container registry. This cannot be changed after the resource is created."
         },
         "sku": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/Sku"
             },
@@ -61,7 +61,7 @@
           "description": "The SKU of the container registry."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RegistryPropertiesCreateParameters"
             },
@@ -88,7 +88,7 @@
       "type": "object",
       "properties": {
         "adminUserEnabled": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean",
               "default": false
@@ -100,7 +100,7 @@
           "description": "The value that indicates whether the admin user is enabled."
         },
         "storageAccount": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/StorageAccountParameters"
             },

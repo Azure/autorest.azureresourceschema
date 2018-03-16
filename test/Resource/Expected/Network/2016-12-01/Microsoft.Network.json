@@ -31,7 +31,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -45,7 +45,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApplicationGatewayPropertiesFormat"
             },
@@ -94,7 +94,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -108,7 +108,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VirtualNetworkGatewayConnectionPropertiesFormat"
             },
@@ -157,7 +157,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -171,7 +171,7 @@
           "description": "Resource tags."
         },
         "sku": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ExpressRouteCircuitSku"
             },
@@ -182,7 +182,7 @@
           "description": "The SKU."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ExpressRouteCircuitPropertiesFormat"
             },
@@ -236,7 +236,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AuthorizationPropertiesFormat"
             },
@@ -277,7 +277,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ExpressRouteCircuitPeeringPropertiesFormat"
             },
@@ -322,7 +322,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -336,7 +336,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/LoadBalancerPropertiesFormat"
             },
@@ -385,7 +385,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -399,7 +399,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/LocalNetworkGatewayPropertiesFormat"
             },
@@ -448,7 +448,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -462,7 +462,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/NetworkInterfacePropertiesFormat"
             },
@@ -511,7 +511,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -525,7 +525,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/NetworkSecurityGroupPropertiesFormat"
             },
@@ -580,7 +580,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SecurityRulePropertiesFormat"
             },
@@ -629,7 +629,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -647,7 +647,7 @@
           "description": "A unique read-only string that changes whenever the resource is updated."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/NetworkWatcherPropertiesFormat"
             },
@@ -694,7 +694,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/PacketCaptureParameters"
             },
@@ -739,7 +739,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -753,7 +753,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/PublicIPAddressPropertiesFormat"
             },
@@ -802,7 +802,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -816,7 +816,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RouteFilterPropertiesFormat"
             },
@@ -867,7 +867,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RouteFilterRulePropertiesFormat"
             },
@@ -881,7 +881,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -930,7 +930,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -944,7 +944,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RouteTablePropertiesFormat"
             },
@@ -999,7 +999,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RoutePropertiesFormat"
             },
@@ -1048,7 +1048,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -1062,7 +1062,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VirtualNetworkGatewayPropertiesFormat"
             },
@@ -1111,7 +1111,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -1125,7 +1125,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VirtualNetworkPropertiesFormat"
             },
@@ -1183,7 +1183,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubnetPropertiesFormat"
             },
@@ -1228,7 +1228,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VirtualNetworkPeeringPropertiesFormat"
             },
@@ -1256,7 +1256,7 @@
       "type": "object",
       "properties": {
         "addressPrefixes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1280,7 +1280,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApplicationGatewayAuthenticationCertificatePropertiesFormat"
             },
@@ -1336,7 +1336,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApplicationGatewayBackendAddressPoolPropertiesFormat"
             },
@@ -1360,7 +1360,7 @@
       "type": "object",
       "properties": {
         "backendIPConfigurations": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1374,7 +1374,7 @@
           "description": "Collection of references to IPs defined in network interfaces."
         },
         "backendAddresses": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1402,7 +1402,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApplicationGatewayBackendHttpSettingsPropertiesFormat"
             },
@@ -1426,7 +1426,7 @@
       "type": "object",
       "properties": {
         "port": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1437,7 +1437,7 @@
           "description": "Port"
         },
         "protocol": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1452,7 +1452,7 @@
           "description": "Protocol. Possible values are: 'Http' and 'Https'."
         },
         "cookieBasedAffinity": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1467,7 +1467,7 @@
           "description": "Cookie based affinity. Possible values are: 'Enabled' and 'Disabled'."
         },
         "requestTimeout": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1478,7 +1478,7 @@
           "description": "Request timeout in seconds. Application Gateway will fail the request if response is not received within RequestTimeout. Acceptable values are from 1 second to 86400 seconds."
         },
         "probe": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -1489,7 +1489,7 @@
           "description": "Probe resource of an application gateway."
         },
         "authenticationCertificates": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1507,7 +1507,7 @@
           "description": "Provisioning state of the backend http settings resource. Possible values are: 'Updating', 'Deleting', and 'Failed'."
         },
         "connectionDraining": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApplicationGatewayConnectionDraining"
             },
@@ -1524,7 +1524,7 @@
       "type": "object",
       "properties": {
         "enabled": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1535,7 +1535,7 @@
           "description": "Whether connection draining is enabled or not."
         },
         "drainTimeoutInSec": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "minimum": 1,
@@ -1562,7 +1562,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApplicationGatewayFrontendIPConfigurationPropertiesFormat"
             },
@@ -1590,7 +1590,7 @@
           "description": "PrivateIPAddress of the network interface IP Configuration."
         },
         "privateIPAllocationMethod": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1605,7 +1605,7 @@
           "description": "PrivateIP allocation method. Possible values are: 'Static' and 'Dynamic'."
         },
         "subnet": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -1616,7 +1616,7 @@
           "description": "Reference of the subnet resource."
         },
         "publicIPAddress": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -1641,7 +1641,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApplicationGatewayFrontendPortPropertiesFormat"
             },
@@ -1665,7 +1665,7 @@
       "type": "object",
       "properties": {
         "port": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1690,7 +1690,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApplicationGatewayHttpListenerPropertiesFormat"
             },
@@ -1714,7 +1714,7 @@
       "type": "object",
       "properties": {
         "frontendIPConfiguration": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -1725,7 +1725,7 @@
           "description": "Frontend IP configuration resource of an application gateway."
         },
         "frontendPort": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -1736,7 +1736,7 @@
           "description": "Frontend port resource of an application gateway."
         },
         "protocol": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1755,7 +1755,7 @@
           "description": "Host name of HTTP listener."
         },
         "sslCertificate": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -1766,7 +1766,7 @@
           "description": "SSL certificate resource of an application gateway."
         },
         "requireServerNameIndication": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -1791,7 +1791,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApplicationGatewayIPConfigurationPropertiesFormat"
             },
@@ -1815,7 +1815,7 @@
       "type": "object",
       "properties": {
         "subnet": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -1840,7 +1840,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApplicationGatewayPathRulePropertiesFormat"
             },
@@ -1864,7 +1864,7 @@
       "type": "object",
       "properties": {
         "paths": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -1878,7 +1878,7 @@
           "description": "Path rules of URL path map."
         },
         "backendAddressPool": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -1889,7 +1889,7 @@
           "description": "Backend address pool resource of URL path map."
         },
         "backendHttpSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -1914,7 +1914,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApplicationGatewayProbePropertiesFormat"
             },
@@ -1938,7 +1938,7 @@
       "type": "object",
       "properties": {
         "protocol": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -1961,7 +1961,7 @@
           "description": "Relative path of probe. Valid path starts from '/'. Probe is sent to <Protocol>://<host>:<port><path>"
         },
         "interval": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1972,7 +1972,7 @@
           "description": "The probing interval in seconds. This is the time interval between two consecutive probes. Acceptable values are from 1 second to 86400 seconds."
         },
         "timeout": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -1983,7 +1983,7 @@
           "description": "the probe timeout in seconds. Probe marked as failed if valid response is not received with this timeout period. Acceptable values are from 1 second to 86400 seconds."
         },
         "unhealthyThreshold": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -2004,7 +2004,7 @@
       "type": "object",
       "properties": {
         "sku": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApplicationGatewaySku"
             },
@@ -2015,7 +2015,7 @@
           "description": "SKU of the application gateway resource."
         },
         "sslPolicy": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApplicationGatewaySslPolicy"
             },
@@ -2026,7 +2026,7 @@
           "description": "SSL policy of the application gateway resource."
         },
         "gatewayIPConfigurations": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2040,7 +2040,7 @@
           "description": "Subnets of application the gateway resource."
         },
         "authenticationCertificates": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2054,7 +2054,7 @@
           "description": "Authentication certificates of the application gateway resource."
         },
         "sslCertificates": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2068,7 +2068,7 @@
           "description": "SSL certificates of the application gateway resource."
         },
         "frontendIPConfigurations": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2082,7 +2082,7 @@
           "description": "Frontend IP addresses of the application gateway resource."
         },
         "frontendPorts": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2096,7 +2096,7 @@
           "description": "Frontend ports of the application gateway resource."
         },
         "probes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2110,7 +2110,7 @@
           "description": "Probes of the application gateway resource."
         },
         "backendAddressPools": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2124,7 +2124,7 @@
           "description": "Backend address pool of the application gateway resource."
         },
         "backendHttpSettingsCollection": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2138,7 +2138,7 @@
           "description": "Backend http settings of the application gateway resource."
         },
         "httpListeners": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2152,7 +2152,7 @@
           "description": "Http listeners of the application gateway resource."
         },
         "urlPathMaps": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2166,7 +2166,7 @@
           "description": "URL path map of the application gateway resource."
         },
         "requestRoutingRules": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2180,7 +2180,7 @@
           "description": "Request routing rules of the application gateway resource."
         },
         "webApplicationFirewallConfiguration": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApplicationGatewayWebApplicationFirewallConfiguration"
             },
@@ -2209,7 +2209,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApplicationGatewayRequestRoutingRulePropertiesFormat"
             },
@@ -2233,7 +2233,7 @@
       "type": "object",
       "properties": {
         "ruleType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2248,7 +2248,7 @@
           "description": "Rule type. Possible values are: 'Basic' and 'PathBasedRouting'."
         },
         "backendAddressPool": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -2259,7 +2259,7 @@
           "description": "Backend address pool resource of the application gateway. "
         },
         "backendHttpSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -2270,7 +2270,7 @@
           "description": "Frontend port resource of the application gateway."
         },
         "httpListener": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -2281,7 +2281,7 @@
           "description": "Http listener resource of the application gateway. "
         },
         "urlPathMap": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -2302,7 +2302,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2320,7 +2320,7 @@
           "description": "Name of an application gateway SKU. Possible values are: 'Standard_Small', 'Standard_Medium', 'Standard_Large', 'WAF_Medium', and 'WAF_Large'."
         },
         "tier": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2335,7 +2335,7 @@
           "description": "Tier of an application gateway. Possible values are: 'Standard' and 'WAF'."
         },
         "capacity": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -2356,7 +2356,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApplicationGatewaySslCertificatePropertiesFormat"
             },
@@ -2402,7 +2402,7 @@
       "type": "object",
       "properties": {
         "disabledSslProtocols": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2431,7 +2431,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ApplicationGatewayUrlPathMapPropertiesFormat"
             },
@@ -2455,7 +2455,7 @@
       "type": "object",
       "properties": {
         "defaultBackendAddressPool": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -2466,7 +2466,7 @@
           "description": "Default backend address pool resource of URL path map."
         },
         "defaultBackendHttpSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -2477,7 +2477,7 @@
           "description": "Default backend http settings resource of URL path map."
         },
         "pathRules": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2501,7 +2501,7 @@
       "type": "object",
       "properties": {
         "enabled": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2512,7 +2512,7 @@
           "description": "Whether the web application firewall is enabled or not."
         },
         "firewallMode": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2540,7 +2540,7 @@
           "description": "The authorization key."
         },
         "authorizationUseStatus": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2568,7 +2568,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/BackendAddressPoolPropertiesFormat"
             },
@@ -2602,7 +2602,7 @@
       "type": "object",
       "properties": {
         "asn": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -2617,7 +2617,7 @@
           "description": "The BGP peering address and BGP identifier of this BGP speaker."
         },
         "peerWeight": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -2633,7 +2633,7 @@
       "type": "object",
       "properties": {
         "dnsServers": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2657,7 +2657,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AuthorizationPropertiesFormat"
             },
@@ -2681,7 +2681,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ExpressRouteCircuitPeeringPropertiesFormat"
             },
@@ -2701,7 +2701,7 @@
       "type": "object",
       "properties": {
         "advertisedPublicPrefixes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2715,7 +2715,7 @@
           "description": "The reference of AdvertisedPublicPrefixes."
         },
         "advertisedPublicPrefixesState": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2732,7 +2732,7 @@
           "description": "AdvertisedPublicPrefixState of the Peering resource. Possible values are 'NotConfigured', 'Configuring', 'Configured', and 'ValidationNeeded'."
         },
         "customerASN": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -2753,7 +2753,7 @@
       "type": "object",
       "properties": {
         "peeringType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2769,7 +2769,7 @@
           "description": "The PeeringType. Possible values are: 'AzurePublicPeering', 'AzurePrivatePeering', and 'MicrosoftPeering'."
         },
         "state": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2784,7 +2784,7 @@
           "description": "The state of peering. Possible values are: 'Disabled' and 'Enabled'."
         },
         "azureASN": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -2795,7 +2795,7 @@
           "description": "The Azure ASN."
         },
         "peerASN": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -2826,7 +2826,7 @@
           "description": "The shared key."
         },
         "vlanId": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -2837,7 +2837,7 @@
           "description": "The VLAN ID."
         },
         "microsoftPeeringConfig": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ExpressRouteCircuitPeeringConfig"
             },
@@ -2848,7 +2848,7 @@
           "description": "The Microsoft peering configuration."
         },
         "stats": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ExpressRouteCircuitStats"
             },
@@ -2871,7 +2871,7 @@
           "description": "Gets whether the provider or the customer last modified the peering."
         },
         "routeFilter": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RouteFilter"
             },
@@ -2887,7 +2887,7 @@
       "type": "object",
       "properties": {
         "allowClassicOperations": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -2902,7 +2902,7 @@
           "description": "The CircuitProvisioningState state of the resource."
         },
         "serviceProviderProvisioningState": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -2919,7 +2919,7 @@
           "description": "The ServiceProviderProvisioningState state of the resource. Possible values are 'NotProvisioned', 'Provisioning', 'Provisioned', and 'Deprovisioning'."
         },
         "authorizations": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2933,7 +2933,7 @@
           "description": "The list of authorizations."
         },
         "peerings": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -2955,7 +2955,7 @@
           "description": "The ServiceProviderNotes."
         },
         "serviceProviderProperties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ExpressRouteCircuitServiceProviderProperties"
             },
@@ -2999,7 +2999,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AuthorizationPropertiesFormat"
             },
@@ -3040,7 +3040,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ExpressRouteCircuitPeeringPropertiesFormat"
             },
@@ -3070,7 +3070,7 @@
           "description": "The peering location."
         },
         "bandwidthInMbps": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3091,7 +3091,7 @@
           "description": "The name of the SKU."
         },
         "tier": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -3106,7 +3106,7 @@
           "description": "The tier of the SKU. Possible values are 'Standard' and 'Premium'."
         },
         "family": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -3127,7 +3127,7 @@
       "type": "object",
       "properties": {
         "primarybytesIn": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3138,7 +3138,7 @@
           "description": "Gets BytesIn of the peering."
         },
         "primarybytesOut": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3149,7 +3149,7 @@
           "description": "Gets BytesOut of the peering."
         },
         "secondarybytesIn": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3160,7 +3160,7 @@
           "description": "Gets BytesIn of the peering."
         },
         "secondarybytesOut": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3181,7 +3181,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/FrontendIPConfigurationPropertiesFormat"
             },
@@ -3209,7 +3209,7 @@
           "description": "The private IP address of the IP configuration."
         },
         "privateIPAllocationMethod": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -3224,7 +3224,7 @@
           "description": "The Private IP allocation method. Possible values are: 'Static' and 'Dynamic'."
         },
         "subnet": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/Subnet"
             },
@@ -3235,7 +3235,7 @@
           "description": "The reference of the subnet resource."
         },
         "publicIPAddress": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/PublicIPAddress"
             },
@@ -3260,7 +3260,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/InboundNatPoolPropertiesFormat"
             },
@@ -3284,7 +3284,7 @@
       "type": "object",
       "properties": {
         "frontendIPConfiguration": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -3295,7 +3295,7 @@
           "description": "A reference to frontend IP addresses."
         },
         "protocol": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -3310,7 +3310,7 @@
           "description": "The transport protocol for the endpoint. Possible values are: 'Udp' or 'Tcp'."
         },
         "frontendPortRangeStart": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3321,7 +3321,7 @@
           "description": "The first port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65534."
         },
         "frontendPortRangeEnd": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3332,7 +3332,7 @@
           "description": "The last port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65535."
         },
         "backendPort": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3363,7 +3363,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/InboundNatRulePropertiesFormat"
             },
@@ -3387,7 +3387,7 @@
       "type": "object",
       "properties": {
         "frontendIPConfiguration": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -3398,7 +3398,7 @@
           "description": "A reference to frontend IP addresses."
         },
         "protocol": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -3413,7 +3413,7 @@
           "description": "The transport protocol for the endpoint. Possible values are: 'Udp' or 'Tcp'."
         },
         "frontendPort": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3424,7 +3424,7 @@
           "description": "The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534."
         },
         "backendPort": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3435,7 +3435,7 @@
           "description": "The port used for the internal endpoint. Acceptable values range from 1 to 65535."
         },
         "idleTimeoutInMinutes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3446,7 +3446,7 @@
           "description": "The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP."
         },
         "enableFloatingIP": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3467,7 +3467,7 @@
       "type": "object",
       "properties": {
         "frontendIPConfigurations": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -3481,7 +3481,7 @@
           "description": "Object representing the frontend IPs to be used for the load balancer"
         },
         "backendAddressPools": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -3495,7 +3495,7 @@
           "description": "Collection of backend address pools used by a load balancer"
         },
         "loadBalancingRules": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -3509,7 +3509,7 @@
           "description": "Object collection representing the load balancing rules Gets the provisioning "
         },
         "probes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -3523,7 +3523,7 @@
           "description": "Collection of probe objects used in the load balancer"
         },
         "inboundNatRules": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -3537,7 +3537,7 @@
           "description": "Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to reference individual inbound NAT rules."
         },
         "inboundNatPools": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -3551,7 +3551,7 @@
           "description": "Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules."
         },
         "outboundNatRules": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -3583,7 +3583,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/LoadBalancingRulePropertiesFormat"
             },
@@ -3607,7 +3607,7 @@
       "type": "object",
       "properties": {
         "frontendIPConfiguration": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -3618,7 +3618,7 @@
           "description": "A reference to frontend IP addresses."
         },
         "backendAddressPool": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -3629,7 +3629,7 @@
           "description": "A reference to a pool of DIPs. Inbound traffic is randomly load balanced across IPs in the backend IPs."
         },
         "probe": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -3640,7 +3640,7 @@
           "description": "The reference of the load balancer probe used by the load balancing rule."
         },
         "protocol": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -3655,7 +3655,7 @@
           "description": "The transport protocol for the external endpoint. Possible values are 'Udp' or 'Tcp'."
         },
         "loadDistribution": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -3671,7 +3671,7 @@
           "description": "The load distribution policy for this rule. Possible values are 'Default', 'SourceIP', and 'SourceIPProtocol'."
         },
         "frontendPort": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3682,7 +3682,7 @@
           "description": "The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534."
         },
         "backendPort": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3693,7 +3693,7 @@
           "description": "The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535. "
         },
         "idleTimeoutInMinutes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -3704,7 +3704,7 @@
           "description": "The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP."
         },
         "enableFloatingIP": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3737,7 +3737,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -3751,7 +3751,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/LocalNetworkGatewayPropertiesFormat"
             },
@@ -3774,7 +3774,7 @@
       "type": "object",
       "properties": {
         "localNetworkAddressSpace": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AddressSpace"
             },
@@ -3789,7 +3789,7 @@
           "description": "IP address of local network gateway."
         },
         "bgpSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/BgpSettings"
             },
@@ -3810,7 +3810,7 @@
       "type": "object",
       "properties": {
         "dnsServers": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -3824,7 +3824,7 @@
           "description": "List of DNS servers IP addresses. Use 'AzureProvidedDNS' to switch to azure provided DNS resolution. 'AzureProvidedDNS' value cannot be combined with other IPs, it must be the only value in dnsServers collection."
         },
         "appliedDnsServers": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -3860,7 +3860,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/NetworkInterfaceIPConfigurationPropertiesFormat"
             },
@@ -3884,7 +3884,7 @@
       "type": "object",
       "properties": {
         "applicationGatewayBackendAddressPools": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -3898,7 +3898,7 @@
           "description": "The reference of ApplicationGatewayBackendAddressPool resource."
         },
         "loadBalancerBackendAddressPools": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -3912,7 +3912,7 @@
           "description": "The reference of LoadBalancerBackendAddressPool resource."
         },
         "loadBalancerInboundNatRules": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -3929,7 +3929,7 @@
           "type": "string"
         },
         "privateIPAllocationMethod": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -3944,7 +3944,7 @@
           "description": "Defines how a private IP address is assigned. Possible values are: 'Static' and 'Dynamic'."
         },
         "privateIPAddressVersion": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -3959,7 +3959,7 @@
           "description": "Available from Api-Version 2016-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'."
         },
         "subnet": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/Subnet"
             },
@@ -3969,7 +3969,7 @@
           ]
         },
         "primary": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -3980,7 +3980,7 @@
           "description": "Gets whether this is a primary customer address on the network interface."
         },
         "publicIPAddress": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/PublicIPAddress"
             },
@@ -3999,7 +3999,7 @@
       "type": "object",
       "properties": {
         "virtualMachine": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -4010,7 +4010,7 @@
           "description": "The reference of a virtual machine."
         },
         "networkSecurityGroup": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/NetworkSecurityGroup"
             },
@@ -4021,7 +4021,7 @@
           "description": "The reference of the NetworkSecurityGroup resource."
         },
         "ipConfigurations": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -4035,7 +4035,7 @@
           "description": "A list of IPConfigurations of the network interface."
         },
         "dnsSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/NetworkInterfaceDnsSettings"
             },
@@ -4050,7 +4050,7 @@
           "description": "The MAC address of the network interface."
         },
         "primary": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -4061,7 +4061,7 @@
           "description": "Gets whether this is a primary network interface on a virtual machine."
         },
         "enableAcceleratedNetworking": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -4072,7 +4072,7 @@
           "description": "If the network interface is accelerated networking enabled."
         },
         "enableIPForwarding": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -4105,7 +4105,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -4119,7 +4119,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/NetworkSecurityGroupPropertiesFormat"
             },
@@ -4139,7 +4139,7 @@
       "type": "object",
       "properties": {
         "securityRules": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -4153,7 +4153,7 @@
           "description": "A collection of security rules of the network security group."
         },
         "defaultSecurityRules": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -4200,7 +4200,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SecurityRulePropertiesFormat"
             },
@@ -4245,7 +4245,7 @@
           ]
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/PacketCaptureParameters"
             },
@@ -4271,7 +4271,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/OutboundNatRulePropertiesFormat"
             },
@@ -4295,7 +4295,7 @@
       "type": "object",
       "properties": {
         "allocatedOutboundPorts": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -4306,7 +4306,7 @@
           "description": "The number of outbound ports to be used for NAT."
         },
         "frontendIPConfigurations": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -4320,7 +4320,7 @@
           "description": "The Frontend IP addresses of the load balancer."
         },
         "backendAddressPool": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -4344,7 +4344,7 @@
       "type": "object",
       "properties": {
         "protocol": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -4386,7 +4386,7 @@
           "description": "The ID of the targeted resource, only VM is currently supported."
         },
         "bytesToCapturePerPacket": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "default": "0"
@@ -4398,7 +4398,7 @@
           "description": "Number of bytes captured per packet, the remaining bytes are truncated."
         },
         "totalBytesPerSession": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "default": "1073741824"
@@ -4410,7 +4410,7 @@
           "description": "Maximum size of the capture output."
         },
         "timeLimitInSeconds": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer",
               "default": "18000"
@@ -4422,7 +4422,7 @@
           "description": "Maximum duration of the capture session in seconds."
         },
         "storageLocation": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/PacketCaptureStorageLocation"
             },
@@ -4432,7 +4432,7 @@
           ]
         },
         "filters": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -4477,7 +4477,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ProbePropertiesFormat"
             },
@@ -4501,7 +4501,7 @@
       "type": "object",
       "properties": {
         "protocol": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -4516,7 +4516,7 @@
           "description": "The protocol of the end point. Possible values are: 'Http' or 'Tcp'. If 'Tcp' is specified, a received ACK is required for the probe to be successful. If 'Http' is specified, a 200 OK response from the specifies URI is required for the probe to be successful."
         },
         "port": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -4527,7 +4527,7 @@
           "description": "The port for communicating the probe. Possible values range from 1 to 65535, inclusive."
         },
         "intervalInSeconds": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -4538,7 +4538,7 @@
           "description": "The interval, in seconds, for how frequently to probe the endpoint for health status. Typically, the interval is slightly less than half the allocated timeout period (in seconds) which allows two full probes before taking the instance out of rotation. The default value is 15, the minimum value is 5."
         },
         "numberOfProbes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -4574,7 +4574,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -4588,7 +4588,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/PublicIPAddressPropertiesFormat"
             },
@@ -4626,7 +4626,7 @@
       "type": "object",
       "properties": {
         "publicIPAllocationMethod": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -4641,7 +4641,7 @@
           "description": "The public IP allocation method. Possible values are: 'Static' and 'Dynamic'."
         },
         "publicIPAddressVersion": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -4656,7 +4656,7 @@
           "description": "The public IP address version. Possible values are: 'IPv4' and 'IPv6'."
         },
         "dnsSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/PublicIPAddressDnsSettings"
             },
@@ -4670,7 +4670,7 @@
           "type": "string"
         },
         "idleTimeoutInMinutes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -4699,7 +4699,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/ResourceNavigationLinkFormat"
             },
@@ -4737,7 +4737,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RoutePropertiesFormat"
             },
@@ -4769,7 +4769,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -4783,7 +4783,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RouteFilterPropertiesFormat"
             },
@@ -4799,7 +4799,7 @@
       "type": "object",
       "properties": {
         "rules": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -4823,7 +4823,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RouteFilterRulePropertiesFormat"
             },
@@ -4837,7 +4837,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -4857,7 +4857,7 @@
       "type": "object",
       "properties": {
         "access": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -4872,7 +4872,7 @@
           "description": "The access type of the rule. Valid values are: 'Allow', 'Deny'."
         },
         "routeFilterRuleType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -4886,7 +4886,7 @@
           "description": "The rule type of the rule. Valid value is: 'Community'"
         },
         "communities": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -4930,7 +4930,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RouteFilterRulePropertiesFormat"
             },
@@ -4944,7 +4944,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -4974,7 +4974,7 @@
           "description": "The destination CIDR to which the route applies."
         },
         "nextHopType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -5017,7 +5017,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -5031,7 +5031,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RouteTablePropertiesFormat"
             },
@@ -5051,7 +5051,7 @@
       "type": "object",
       "properties": {
         "routes": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -5094,7 +5094,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RoutePropertiesFormat"
             },
@@ -5124,7 +5124,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SecurityRulePropertiesFormat"
             },
@@ -5152,7 +5152,7 @@
           "description": "A description for this rule. Restricted to 140 chars."
         },
         "protocol": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -5184,7 +5184,7 @@
           "description": "The destination address prefix. CIDR or source IP range. Asterix '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used."
         },
         "access": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -5199,7 +5199,7 @@
           "description": "The network traffic is allowed or denied. Possible values are: 'Allow' and 'Deny'."
         },
         "priority": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -5210,7 +5210,7 @@
           "description": "The priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule."
         },
         "direction": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -5245,7 +5245,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubnetPropertiesFormat"
             },
@@ -5273,7 +5273,7 @@
           "description": "The address prefix for the subnet."
         },
         "networkSecurityGroup": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/NetworkSecurityGroup"
             },
@@ -5284,7 +5284,7 @@
           "description": "The reference of the NetworkSecurityGroup resource."
         },
         "routeTable": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/RouteTable"
             },
@@ -5295,7 +5295,7 @@
           "description": "The reference of the RouteTable resource."
         },
         "resourceNavigationLinks": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -5335,7 +5335,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -5349,7 +5349,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VirtualNetworkGatewayPropertiesFormat"
             },
@@ -5376,7 +5376,7 @@
           "description": "The authorizationKey."
         },
         "virtualNetworkGateway1": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VirtualNetworkGateway"
             },
@@ -5386,7 +5386,7 @@
           ]
         },
         "virtualNetworkGateway2": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VirtualNetworkGateway"
             },
@@ -5396,7 +5396,7 @@
           ]
         },
         "localNetworkGateway2": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/LocalNetworkGateway"
             },
@@ -5406,7 +5406,7 @@
           ]
         },
         "connectionType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -5423,7 +5423,7 @@
           "description": "Gateway connection type. Possible values are: 'Ipsec','Vnet2Vnet','ExpressRoute', and 'VPNClient."
         },
         "routingWeight": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -5438,7 +5438,7 @@
           "description": "The IPSec shared key."
         },
         "peer": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -5449,7 +5449,7 @@
           "description": "The reference to peerings resource."
         },
         "enableBgp": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -5478,7 +5478,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VirtualNetworkGatewayIPConfigurationPropertiesFormat"
             },
@@ -5502,7 +5502,7 @@
       "type": "object",
       "properties": {
         "privateIPAllocationMethod": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -5517,7 +5517,7 @@
           "description": "The private IP allocation method. Possible values are: 'Static' and 'Dynamic'."
         },
         "subnet": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -5528,7 +5528,7 @@
           "description": "The reference of the subnet resource."
         },
         "publicIPAddress": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -5545,7 +5545,7 @@
       "type": "object",
       "properties": {
         "ipConfigurations": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -5559,7 +5559,7 @@
           "description": "IP configurations for virtual network gateway."
         },
         "gatewayType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -5574,7 +5574,7 @@
           "description": "The type of this virtual network gateway. Possible values are: 'Vpn' and 'ExpressRoute'."
         },
         "vpnType": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -5589,7 +5589,7 @@
           "description": "The type of this virtual network gateway. Possible values are: 'PolicyBased' and 'RouteBased'."
         },
         "enableBgp": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -5600,7 +5600,7 @@
           "description": "Whether BGP is enabled for this virtual network gateway or not."
         },
         "activeActive": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -5611,7 +5611,7 @@
           "description": "ActiveActive flag"
         },
         "gatewayDefaultSite": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -5622,7 +5622,7 @@
           "description": "The reference of the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting."
         },
         "sku": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VirtualNetworkGatewaySku"
             },
@@ -5633,7 +5633,7 @@
           "description": "The reference of the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway."
         },
         "vpnClientConfiguration": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VpnClientConfiguration"
             },
@@ -5644,7 +5644,7 @@
           "description": "The reference of the VpnClientConfiguration resource which represents the P2S VpnClient configurations."
         },
         "bgpSettings": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/BgpSettings"
             },
@@ -5665,7 +5665,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -5682,7 +5682,7 @@
           "description": "Gateway SKU name. Possible values are: 'Basic', 'HighPerformance','Standard', and 'UltraPerformance'."
         },
         "tier": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -5699,7 +5699,7 @@
           "description": "Gateway SKU tier. Possible values are: 'Basic', 'HighPerformance','Standard', and 'UltraPerformance'."
         },
         "capacity": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "integer"
             },
@@ -5720,7 +5720,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VirtualNetworkPeeringPropertiesFormat"
             },
@@ -5744,7 +5744,7 @@
       "type": "object",
       "properties": {
         "allowVirtualNetworkAccess": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -5755,7 +5755,7 @@
           "description": "Whether the VMs in the linked virtual network space would be able to access all the VMs in local Virtual network space."
         },
         "allowForwardedTraffic": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -5766,7 +5766,7 @@
           "description": "Whether the forwarded traffic from the VMs in the remote virtual network will be allowed/disallowed."
         },
         "allowGatewayTransit": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -5777,7 +5777,7 @@
           "description": "If gateway links can be used in remote virtual networking to link to this virtual network."
         },
         "useRemoteGateways": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "boolean"
             },
@@ -5788,7 +5788,7 @@
           "description": "If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway."
         },
         "remoteVirtualNetwork": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -5799,7 +5799,7 @@
           "description": "The reference of the remote virtual network."
         },
         "peeringState": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "string",
               "enum": [
@@ -5824,7 +5824,7 @@
       "type": "object",
       "properties": {
         "addressSpace": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AddressSpace"
             },
@@ -5835,7 +5835,7 @@
           "description": "The AddressSpace that contains an array of IP address ranges that can be used by subnets."
         },
         "dhcpOptions": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/DhcpOptions"
             },
@@ -5846,7 +5846,7 @@
           "description": "The dhcpOptions that contains an array of DNS servers available to VMs deployed in the virtual network."
         },
         "subnets": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -5860,7 +5860,7 @@
           "description": "A list of subnets in a Virtual Network."
         },
         "virtualNetworkPeerings": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -5906,7 +5906,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/SubnetPropertiesFormat"
             },
@@ -5951,7 +5951,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VirtualNetworkPeeringPropertiesFormat"
             },
@@ -5977,7 +5977,7 @@
       "type": "object",
       "properties": {
         "vpnClientAddressPool": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/AddressSpace"
             },
@@ -5988,7 +5988,7 @@
           "description": "The reference of the address space resource which represents Address space for P2S VpnClient."
         },
         "vpnClientRootCertificates": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -6002,7 +6002,7 @@
           "description": "VpnClientRootCertificate for virtual network gateway."
         },
         "vpnClientRevokedCertificates": {
-          "anyOf": [
+          "oneOf": [
             {
               "type": "array",
               "items": {
@@ -6026,7 +6026,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VpnClientRevokedCertificatePropertiesFormat"
             },
@@ -6064,7 +6064,7 @@
           "description": "Resource ID."
         },
         "properties": {
-          "anyOf": [
+          "oneOf": [
             {
               "$ref": "#/definitions/VpnClientRootCertificatePropertiesFormat"
             },
