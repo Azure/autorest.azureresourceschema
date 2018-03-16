@@ -8,7 +8,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[a-zA-Z](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$"
@@ -36,7 +36,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -50,7 +50,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ApiManagementServiceProperties"
             },
@@ -61,7 +61,7 @@
           "description": "Properties of the API Management service."
         },
         "sku": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ApiManagementServiceSkuProperties"
             },
@@ -129,7 +129,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -157,7 +157,7 @@
           "description": "Description of the API. May include HTML formatting tags."
         },
         "authenticationSettings": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/AuthenticationSettingsContract"
             },
@@ -168,7 +168,7 @@
           "description": "Collection of authentication settings included into this API."
         },
         "subscriptionKeyParameterNames": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SubscriptionKeyParameterNamesContract"
             },
@@ -191,7 +191,7 @@
           "description": "Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API."
         },
         "protocols": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -233,7 +233,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -257,7 +257,7 @@
           ]
         },
         "templateParameters": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -276,7 +276,7 @@
           "description": "Description of the operation. May include HTML formatting tags."
         },
         "request": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/RequestContract"
             },
@@ -287,7 +287,7 @@
           "description": "An entity containing request details."
         },
         "responses": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -324,7 +324,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -360,7 +360,7 @@
           "description": "OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2."
         },
         "authorizationMethods": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -384,7 +384,7 @@
           "description": "HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional."
         },
         "clientAuthenticationMethod": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -402,7 +402,7 @@
           "description": "Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format."
         },
         "tokenBodyParameters": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -420,7 +420,7 @@
           "description": "OAuth token endpoint. Contains absolute URI to entity being referenced."
         },
         "supportState": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -435,7 +435,7 @@
           "description": "Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values."
         },
         "grantTypes": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -455,7 +455,7 @@
           "description": "Form of an authorization grant, which the client uses to request the access token."
         },
         "bearerTokenSendingMethods": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -504,7 +504,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -528,7 +528,7 @@
           ]
         },
         "certificate": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -542,7 +542,7 @@
           "description": "List of Client Certificate Thumbprint."
         },
         "query": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -559,7 +559,7 @@
           "description": "Query Parameter description."
         },
         "header": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -608,7 +608,7 @@
           "description": "Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/BackendProperties"
             },
@@ -618,7 +618,7 @@
           ]
         },
         "protocol": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -647,7 +647,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -692,7 +692,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -745,7 +745,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -780,7 +780,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -821,7 +821,7 @@
           "description": "Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft."
         },
         "allowedTenants": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -848,7 +848,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -876,7 +876,7 @@
           "description": "Logger description."
         },
         "credentials": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -890,7 +890,7 @@
           "description": "The name and SendRule connection string of the event hub."
         },
         "isBuffered": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -913,7 +913,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -966,7 +966,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -1000,7 +1000,7 @@
           "description": "Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process."
         },
         "subscriptionRequired": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean",
               "default": true
@@ -1012,7 +1012,7 @@
           "description": "Whether a product subscription is required for accessing APIs included in this product. If true, the product is referred to as \"protected\" and a valid subscription key is required for a request to an API included in the product to succeed. If false, the product is referred to as \"open\" and requests to an API included in the product can be made without a subscription key. If property is omitted when creating a new product it's value is assumed to be true."
         },
         "approvalRequired": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -1023,7 +1023,7 @@
           "description": "whether subscription approval is required. If false, new subscriptions will be approved automatically enabling developers to call the product’s APIs immediately after subscribing. If true, administrators must manually approve the subscription before the developer can any of the product’s APIs. Can be present only if subscriptionRequired property is present and has a value of false."
         },
         "subscriptionsLimit": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -1034,7 +1034,7 @@
           "description": "Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of false."
         },
         "state": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1073,7 +1073,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -1108,7 +1108,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -1143,7 +1143,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -1173,7 +1173,7 @@
           "description": "Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1187,7 +1187,7 @@
           "description": "Optional tags that when provided can be used to filter the property list."
         },
         "secret": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -1210,7 +1210,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -1254,7 +1254,7 @@
           "description": "Secondary subscription key. If not specified during request key will be generated automatically."
         },
         "state": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1286,7 +1286,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -1332,7 +1332,7 @@
           "description": "Last name."
         },
         "state": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1372,7 +1372,7 @@
           "description": "The location name of the additional region among Azure Data center regions."
         },
         "skuType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1388,7 +1388,7 @@
           "description": "The SKU type in the location."
         },
         "skuUnitCount": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer",
               "maximum": 10,
@@ -1401,7 +1401,7 @@
           "description": "The SKU Unit count at the location. The maximum SKU Unit count depends on the SkuType. Maximum allowed for Developer SKU is 1, for Standard SKU is 4, and for Premium SKU is 10, at a location."
         },
         "vpnconfiguration": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualNetworkConfiguration"
             },
@@ -1435,7 +1435,7 @@
           "description": "Addresser email."
         },
         "hostnameConfigurations": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1449,7 +1449,7 @@
           "description": "Custom hostname configuration of the API Management service."
         },
         "vpnconfiguration": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualNetworkConfiguration"
             },
@@ -1460,7 +1460,7 @@
           "description": "Virtual network configuration of the API Management service."
         },
         "additionalLocations": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1474,7 +1474,7 @@
           "description": "Additional datacenter locations of the API Management service."
         },
         "customProperties": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -1488,7 +1488,7 @@
           "description": "Custom properties of the API Management service, like disabling TLS 1.0."
         },
         "vpnType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1514,7 +1514,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1530,7 +1530,7 @@
           "description": "Name of the Sku."
         },
         "capacity": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer",
               "default": "1"
@@ -1551,7 +1551,7 @@
       "type": "object",
       "properties": {
         "oAuth2": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/OAuth2AuthenticationSettingsContract"
             },
@@ -1567,7 +1567,7 @@
       "type": "object",
       "properties": {
         "skipCertificateChainValidation": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean",
               "default": false
@@ -1579,7 +1579,7 @@
           "description": "Flag indicating whether SSL certificate chain validation should be skipped when using self-signed certificates for this backend host."
         },
         "skipCertificateNameValidation": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean",
               "default": false
@@ -1635,7 +1635,7 @@
           "description": "Hostname."
         },
         "certificate": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/CertificateInformation"
             },
@@ -1687,7 +1687,7 @@
           "description": "Default parameter value."
         },
         "required": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -1698,7 +1698,7 @@
           "description": "whether parameter is required or not."
         },
         "values": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1743,7 +1743,7 @@
           "description": "Operation request description."
         },
         "queryParameters": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1757,7 +1757,7 @@
           "description": "Collection of operation request query parameters."
         },
         "headers": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1771,7 +1771,7 @@
           "description": "Collection of operation request headers."
         },
         "representations": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1791,7 +1791,7 @@
       "type": "object",
       "properties": {
         "statusCode": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer",
               "minimum": 100,
@@ -1808,7 +1808,7 @@
           "description": "Operation response description."
         },
         "representations": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1831,7 +1831,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -1859,7 +1859,7 @@
           "description": "Description of the API. May include HTML formatting tags."
         },
         "authenticationSettings": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/AuthenticationSettingsContract"
             },
@@ -1870,7 +1870,7 @@
           "description": "Collection of authentication settings included into this API."
         },
         "subscriptionKeyParameterNames": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SubscriptionKeyParameterNamesContract"
             },
@@ -1889,7 +1889,7 @@
           "description": "Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API."
         },
         "protocols": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1931,7 +1931,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -1955,7 +1955,7 @@
           ]
         },
         "templateParameters": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1973,7 +1973,7 @@
           "description": "Description of the operation. May include HTML formatting tags."
         },
         "request": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/RequestContract"
             },
@@ -1984,7 +1984,7 @@
           "description": "An entity containing request details."
         },
         "responses": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2019,7 +2019,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -2055,7 +2055,7 @@
           "description": "OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2."
         },
         "authorizationMethods": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2079,7 +2079,7 @@
           "description": "HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional."
         },
         "clientAuthenticationMethod": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2097,7 +2097,7 @@
           "description": "Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format."
         },
         "tokenBodyParameters": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2115,7 +2115,7 @@
           "description": "OAuth token endpoint. Contains absolute URI to entity being referenced."
         },
         "supportState": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -2130,7 +2130,7 @@
           "description": "Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values."
         },
         "grantTypes": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2150,7 +2150,7 @@
           "description": "Form of an authorization grant, which the client uses to request the access token."
         },
         "bearerTokenSendingMethods": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2199,7 +2199,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -2223,7 +2223,7 @@
           ]
         },
         "certificate": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2237,7 +2237,7 @@
           "description": "List of Client Certificate Thumbprint."
         },
         "query": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2254,7 +2254,7 @@
           "description": "Query Parameter description."
         },
         "header": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2295,7 +2295,7 @@
           "description": "Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/BackendProperties"
             },
@@ -2305,7 +2305,7 @@
           ]
         },
         "protocol": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -2334,7 +2334,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -2379,7 +2379,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -2432,7 +2432,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -2467,7 +2467,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -2506,7 +2506,7 @@
           "description": "Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft."
         },
         "allowedTenants": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2533,7 +2533,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -2561,7 +2561,7 @@
           "description": "Logger description."
         },
         "credentials": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2575,7 +2575,7 @@
           "description": "The name and SendRule connection string of the event hub."
         },
         "isBuffered": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -2598,7 +2598,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -2651,7 +2651,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -2686,7 +2686,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -2718,7 +2718,7 @@
           "description": "Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process."
         },
         "subscriptionRequired": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean",
               "default": true
@@ -2730,7 +2730,7 @@
           "description": "Whether a product subscription is required for accessing APIs included in this product. If true, the product is referred to as \"protected\" and a valid subscription key is required for a request to an API included in the product to succeed. If false, the product is referred to as \"open\" and requests to an API included in the product can be made without a subscription key. If property is omitted when creating a new product it's value is assumed to be true."
         },
         "approvalRequired": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -2741,7 +2741,7 @@
           "description": "whether subscription approval is required. If false, new subscriptions will be approved automatically enabling developers to call the product’s APIs immediately after subscribing. If true, administrators must manually approve the subscription before the developer can any of the product’s APIs. Can be present only if subscriptionRequired property is present and has a value of false."
         },
         "subscriptionsLimit": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -2752,7 +2752,7 @@
           "description": "Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of false."
         },
         "state": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -2791,7 +2791,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -2826,7 +2826,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -2854,7 +2854,7 @@
           "description": "Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2868,7 +2868,7 @@
           "description": "Optional tags that when provided can be used to filter the property list."
         },
         "secret": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -2891,7 +2891,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -2931,7 +2931,7 @@
           "description": "Secondary subscription key. If not specified during request key will be generated automatically."
         },
         "state": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -2963,7 +2963,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -3003,7 +3003,7 @@
           "description": "Last name."
         },
         "state": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -3069,7 +3069,7 @@
       "type": "object",
       "properties": {
         "subnetResourceId": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^/subscriptions/[^/]*/resourceGroups/[^/]*/providers/Microsoft.(ClassicNetwork|Network)/virtualNetworks/[^/]*/subnets/[^/]*$"

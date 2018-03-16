@@ -31,7 +31,7 @@
           "description": "Resource Location."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -45,7 +45,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/CertificateProperties"
             },
@@ -71,7 +71,7 @@
       "type": "object",
       "properties": {
         "hostNames": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -85,7 +85,7 @@
           "description": "Host names the certificate applies to."
         },
         "pfxBlob": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {

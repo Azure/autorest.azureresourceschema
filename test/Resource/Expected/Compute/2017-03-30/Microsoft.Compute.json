@@ -27,7 +27,7 @@
           "description": "Resource location"
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -41,7 +41,7 @@
           "description": "Resource tags"
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/AvailabilitySetProperties"
             },
@@ -51,7 +51,7 @@
           ]
         },
         "sku": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/Sku"
             },
@@ -95,7 +95,7 @@
           "description": "Resource location"
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -109,7 +109,7 @@
           "description": "Resource tags"
         },
         "sku": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/DiskSku"
             },
@@ -119,7 +119,7 @@
           ]
         },
         "zones": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -133,7 +133,7 @@
           "description": "The Logical zone list for Disk."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/DiskProperties"
             },
@@ -175,7 +175,7 @@
           "description": "Resource location"
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -189,7 +189,7 @@
           "description": "Resource tags"
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ImageProperties"
             },
@@ -232,7 +232,7 @@
           "description": "Resource location"
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -246,7 +246,7 @@
           "description": "Resource tags"
         },
         "sku": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/DiskSku"
             },
@@ -256,7 +256,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/DiskProperties"
             },
@@ -298,7 +298,7 @@
           "description": "Resource location"
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -312,7 +312,7 @@
           "description": "Resource tags"
         },
         "plan": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/Plan"
             },
@@ -323,7 +323,7 @@
           "description": "Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineProperties"
             },
@@ -333,7 +333,7 @@
           ]
         },
         "identity": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineIdentity"
             },
@@ -344,7 +344,7 @@
           "description": "The identity of the virtual machine, if configured."
         },
         "zones": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -400,7 +400,7 @@
           "description": "Resource location"
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -414,7 +414,7 @@
           "description": "Resource tags"
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineExtensionProperties"
             },
@@ -456,7 +456,7 @@
           "description": "Resource location"
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -470,7 +470,7 @@
           "description": "Resource tags"
         },
         "sku": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/Sku"
             },
@@ -481,7 +481,7 @@
           "description": "The virtual machine scale set sku."
         },
         "plan": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/Plan"
             },
@@ -492,7 +492,7 @@
           "description": "Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineScaleSetProperties"
             },
@@ -502,7 +502,7 @@
           ]
         },
         "identity": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineScaleSetIdentity"
             },
@@ -513,7 +513,7 @@
           "description": "The identity of the virtual machine scale set, if configured."
         },
         "zones": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -565,7 +565,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineScaleSetExtensionProperties"
             },
@@ -589,7 +589,7 @@
       "type": "object",
       "properties": {
         "passName": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -603,7 +603,7 @@
           "description": "The pass name. Currently, the only allowable value is OobeSystem."
         },
         "componentName": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -617,7 +617,7 @@
           "description": "The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup."
         },
         "settingName": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -652,7 +652,7 @@
       "type": "object",
       "properties": {
         "platformUpdateDomainCount": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -663,7 +663,7 @@
           "description": "Update Domain count."
         },
         "platformFaultDomainCount": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -674,7 +674,7 @@
           "description": "Fault Domain count."
         },
         "virtualMachines": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -694,7 +694,7 @@
       "type": "object",
       "properties": {
         "enabled": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -715,7 +715,7 @@
       "type": "object",
       "properties": {
         "createOption": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -737,7 +737,7 @@
           "description": "If createOption is Import, the Azure Resource Manager identifier of the storage account containing the blob to import as a disk. Required only if the blob is in a different subscription"
         },
         "imageReference": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ImageDiskReference"
             },
@@ -765,7 +765,7 @@
       "type": "object",
       "properties": {
         "lun": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -780,7 +780,7 @@
           "description": "The disk name."
         },
         "vhd": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualHardDisk"
             },
@@ -791,7 +791,7 @@
           "description": "The virtual hard disk."
         },
         "image": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualHardDisk"
             },
@@ -802,7 +802,7 @@
           "description": "The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist."
         },
         "caching": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -818,7 +818,7 @@
           "description": "Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**."
         },
         "createOption": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -834,7 +834,7 @@
           "description": "Specifies how the virtual machine should be created.<br><br> Possible values are:<br><br> **Attach** \\u2013 This value is used when you are using a specialized disk to create the virtual machine.<br><br> **FromImage** \\u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described."
         },
         "diskSizeGB": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -845,7 +845,7 @@
           "description": "Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB"
         },
         "managedDisk": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ManagedDiskParameters"
             },
@@ -866,7 +866,7 @@
       "type": "object",
       "properties": {
         "bootDiagnostics": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/BootDiagnostics"
             },
@@ -883,7 +883,7 @@
       "type": "object",
       "properties": {
         "diskEncryptionKey": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/KeyVaultSecretReference"
             },
@@ -894,7 +894,7 @@
           "description": "Specifies the location of the disk encryption key, which is a Key Vault Secret."
         },
         "keyEncryptionKey": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/KeyVaultKeyReference"
             },
@@ -905,7 +905,7 @@
           "description": "Specifies the location of the key encryption key in Key Vault."
         },
         "enabled": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -922,7 +922,7 @@
       "type": "object",
       "properties": {
         "osType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -937,7 +937,7 @@
           "description": "The Operating System type."
         },
         "creationData": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/CreationData"
             },
@@ -948,7 +948,7 @@
           "description": "Disk source information. CreationData information cannot be changed after the disk has been created."
         },
         "diskSizeGB": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -959,7 +959,7 @@
           "description": "If creationData.createOption is Empty, this field is mandatory and it indicates the size of the VHD to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size."
         },
         "encryptionSettings": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/EncryptionSettings"
             },
@@ -979,7 +979,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1000,7 +1000,7 @@
       "type": "object",
       "properties": {
         "enabled": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -1011,7 +1011,7 @@
           "description": "Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged."
         },
         "diskEncryptionKey": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/KeyVaultAndSecretReference"
             },
@@ -1022,7 +1022,7 @@
           "description": "Key Vault Secret Url and vault id of the disk encryption key"
         },
         "keyEncryptionKey": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/KeyVaultAndKeyReference"
             },
@@ -1039,7 +1039,7 @@
       "type": "object",
       "properties": {
         "vmSize": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1155,7 +1155,7 @@
       "type": "object",
       "properties": {
         "lun": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -1166,7 +1166,7 @@
           "description": "Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM."
         },
         "snapshot": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -1177,7 +1177,7 @@
           "description": "The snapshot."
         },
         "managedDisk": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -1192,7 +1192,7 @@
           "description": "The Virtual Hard Disk."
         },
         "caching": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1208,7 +1208,7 @@
           "description": "Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**."
         },
         "diskSizeGB": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -1219,7 +1219,7 @@
           "description": "Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB"
         },
         "storageAccountType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1247,7 +1247,7 @@
           "description": "A relative uri containing either a Platform Imgage Repository or user image reference."
         },
         "lun": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -1267,7 +1267,7 @@
       "type": "object",
       "properties": {
         "osType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1282,7 +1282,7 @@
           "description": "This property allows you to specify the type of the OS that is included in the disk if creating a VM from a custom image. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**."
         },
         "osState": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1297,7 +1297,7 @@
           "description": "The OS State."
         },
         "snapshot": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -1308,7 +1308,7 @@
           "description": "The snapshot."
         },
         "managedDisk": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -1323,7 +1323,7 @@
           "description": "The Virtual Hard Disk."
         },
         "caching": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1339,7 +1339,7 @@
           "description": "Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**."
         },
         "diskSizeGB": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -1350,7 +1350,7 @@
           "description": "Specifies the size of empty data disks in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB"
         },
         "storageAccountType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1375,7 +1375,7 @@
       "type": "object",
       "properties": {
         "sourceVirtualMachine": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -1386,7 +1386,7 @@
           "description": "The source virtual machine from which Image is created."
         },
         "storageProfile": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ImageStorageProfile"
             },
@@ -1429,7 +1429,7 @@
       "type": "object",
       "properties": {
         "osDisk": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ImageOSDisk"
             },
@@ -1440,7 +1440,7 @@
           "description": "Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)."
         },
         "dataDisks": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1467,7 +1467,7 @@
           "description": "The status code."
         },
         "level": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1502,7 +1502,7 @@
       "type": "object",
       "properties": {
         "sourceVault": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SourceVault"
             },
@@ -1527,7 +1527,7 @@
       "type": "object",
       "properties": {
         "sourceVault": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SourceVault"
             },
@@ -1556,7 +1556,7 @@
           "description": "The URL referencing a key encryption key in Key Vault."
         },
         "sourceVault": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -1581,7 +1581,7 @@
           "description": "The URL referencing a secret in a Key Vault."
         },
         "sourceVault": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -1602,7 +1602,7 @@
       "type": "object",
       "properties": {
         "disablePasswordAuthentication": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -1613,7 +1613,7 @@
           "description": "Specifies whether password authentication should be disabled."
         },
         "ssh": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SshConfiguration"
             },
@@ -1634,7 +1634,7 @@
           "description": "Resource Id"
         },
         "storageAccountType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1659,7 +1659,7 @@
           "description": "Resource Id"
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/NetworkInterfaceReferenceProperties"
             },
@@ -1675,7 +1675,7 @@
       "type": "object",
       "properties": {
         "primary": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -1692,7 +1692,7 @@
       "type": "object",
       "properties": {
         "networkInterfaces": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1712,7 +1712,7 @@
       "type": "object",
       "properties": {
         "osType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1727,7 +1727,7 @@
           "description": "This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**."
         },
         "encryptionSettings": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/DiskEncryptionSettings"
             },
@@ -1742,7 +1742,7 @@
           "description": "The disk name."
         },
         "vhd": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualHardDisk"
             },
@@ -1753,7 +1753,7 @@
           "description": "The virtual hard disk."
         },
         "image": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualHardDisk"
             },
@@ -1764,7 +1764,7 @@
           "description": "The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist."
         },
         "caching": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1780,7 +1780,7 @@
           "description": "Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**."
         },
         "createOption": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1796,7 +1796,7 @@
           "description": "Specifies how the virtual machine should be created.<br><br> Possible values are:<br><br> **Attach** \\u2013 This value is used when you are using a specialized disk to create the virtual machine.<br><br> **FromImage** \\u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described."
         },
         "diskSizeGB": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -1807,7 +1807,7 @@
           "description": "Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB"
         },
         "managedDisk": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ManagedDiskParameters"
             },
@@ -1843,7 +1843,7 @@
           "description": "Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the Virtual Machine. The maximum length of the binary array is 65535 bytes. <br><br> For using cloud-init for your VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)"
         },
         "windowsConfiguration": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/WindowsConfiguration"
             },
@@ -1854,7 +1854,7 @@
           "description": "Specifies Windows operating system settings on the virtual machine."
         },
         "linuxConfiguration": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/LinuxConfiguration"
             },
@@ -1865,7 +1865,7 @@
           "description": "Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)."
         },
         "secrets": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1907,7 +1907,7 @@
       "type": "object",
       "properties": {
         "maxBatchInstancePercent": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer",
               "minimum": 5,
@@ -1920,7 +1920,7 @@
           "description": "The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability. The default value for this parameter is 20%."
         },
         "maxUnhealthyInstancePercent": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer",
               "minimum": 5,
@@ -1933,7 +1933,7 @@
           "description": "The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch. The default value for this parameter is 20%."
         },
         "maxUnhealthyUpgradedInstancePercent": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer",
               "minimum": 0,
@@ -1964,7 +1964,7 @@
           "description": "Specifies the tier of virtual machines in a scale set.<br /><br /> Possible Values:<br /><br /> **Standard**<br /><br /> **Basic**"
         },
         "capacity": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -1991,7 +1991,7 @@
       "type": "object",
       "properties": {
         "publicKeys": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2025,7 +2025,7 @@
       "type": "object",
       "properties": {
         "imageReference": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ImageReference"
             },
@@ -2036,7 +2036,7 @@
           "description": "Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations."
         },
         "osDisk": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/OSDisk"
             },
@@ -2047,7 +2047,7 @@
           "description": "Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)."
         },
         "dataDisks": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2076,7 +2076,7 @@
       "type": "object",
       "properties": {
         "mode": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -2092,7 +2092,7 @@
           "description": "Specifies the mode of an upgrade to virtual machines in the scale set.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of updates to virtual machines in the scale set. You do this by using the manualUpgrade action.<br /><br /> **Automatic** - All virtual machines in the scale set are  automatically updated at the same time."
         },
         "rollingUpgradePolicy": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/RollingUpgradePolicy"
             },
@@ -2103,7 +2103,7 @@
           "description": "The configuration parameters used while performing a rolling upgrade."
         },
         "automaticOSUpgrade": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -2134,7 +2134,7 @@
       "type": "object",
       "properties": {
         "sourceVault": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -2145,7 +2145,7 @@
           "description": "The relative URL of the Key Vault containing all of the certificates in VaultCertificates."
         },
         "vaultCertificates": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2187,7 +2187,7 @@
           "description": "Specifies the version of the script handler."
         },
         "substatuses": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2201,7 +2201,7 @@
           "description": "The resource status information."
         },
         "statuses": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2237,7 +2237,7 @@
           "description": "Specifies the version of the script handler."
         },
         "autoUpgradeMinorVersion": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -2248,13 +2248,15 @@
           "description": "Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true."
         },
         "settings": {
+          "type": "object",
           "description": "Json formatted public settings for the extension."
         },
         "protectedSettings": {
+          "type": "object",
           "description": "The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all."
         },
         "instanceView": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineExtensionInstanceView"
             },
@@ -2284,7 +2286,7 @@
       "type": "object",
       "properties": {
         "hardwareProfile": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/HardwareProfile"
             },
@@ -2295,7 +2297,7 @@
           "description": "Specifies the hardware settings for the virtual machine."
         },
         "storageProfile": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/StorageProfile"
             },
@@ -2306,7 +2308,7 @@
           "description": "Specifies the storage settings for the virtual machine disks."
         },
         "osProfile": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/OSProfile"
             },
@@ -2317,7 +2319,7 @@
           "description": "Specifies the operating system settings for the virtual machine."
         },
         "networkProfile": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/NetworkProfile"
             },
@@ -2328,7 +2330,7 @@
           "description": "Specifies the network interfaces of the virtual machine."
         },
         "diagnosticsProfile": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/DiagnosticsProfile"
             },
@@ -2339,7 +2341,7 @@
           "description": "Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15."
         },
         "availabilitySet": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -2379,7 +2381,7 @@
           "description": "Resource location"
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2393,7 +2395,7 @@
           "description": "Resource tags"
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineExtensionProperties"
             },
@@ -2420,7 +2422,7 @@
           "description": "The disk name."
         },
         "lun": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -2431,7 +2433,7 @@
           "description": "Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM."
         },
         "caching": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -2447,7 +2449,7 @@
           "description": "Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**."
         },
         "createOption": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -2463,7 +2465,7 @@
           "description": "The create option."
         },
         "diskSizeGB": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -2474,7 +2476,7 @@
           "description": "Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the name of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB"
         },
         "managedDisk": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineScaleSetManagedDiskParameters"
             },
@@ -2499,7 +2501,7 @@
           "description": "The name of the extension."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineScaleSetExtensionProperties"
             },
@@ -2515,7 +2517,7 @@
       "type": "object",
       "properties": {
         "extensions": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2551,7 +2553,7 @@
           "description": "Specifies the version of the script handler."
         },
         "autoUpgradeMinorVersion": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -2562,9 +2564,11 @@
           "description": "Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true."
         },
         "settings": {
+          "type": "object",
           "description": "Json formatted public settings for the extension."
         },
         "protectedSettings": {
+          "type": "object",
           "description": "The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all."
         }
       },
@@ -2595,7 +2599,7 @@
           "description": "The IP configuration name."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineScaleSetIPConfigurationProperties"
             },
@@ -2614,7 +2618,7 @@
       "type": "object",
       "properties": {
         "subnet": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ApiEntityReference"
             },
@@ -2625,7 +2629,7 @@
           "description": "Specifies the identifier of the subnet."
         },
         "primary": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -2636,7 +2640,7 @@
           "description": "Specifies the primary network interface in case the virtual machine has more than 1 network interface."
         },
         "publicIPAddressConfiguration": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineScaleSetPublicIPAddressConfiguration"
             },
@@ -2647,7 +2651,7 @@
           "description": "The publicIPAddressConfiguration."
         },
         "privateIPAddressVersion": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -2662,7 +2666,7 @@
           "description": "Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'."
         },
         "applicationGatewayBackendAddressPools": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2676,7 +2680,7 @@
           "description": "Specifies an array of references to backend address pools of application gateways. A scale set can reference backend address pools of multiple application gateways. Multiple scale sets cannot use the same application gateway."
         },
         "loadBalancerBackendAddressPools": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2690,7 +2694,7 @@
           "description": "Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer."
         },
         "loadBalancerInboundNatPools": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2710,7 +2714,7 @@
       "type": "object",
       "properties": {
         "storageAccountType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -2739,7 +2743,7 @@
           "description": "The network configuration name."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineScaleSetNetworkConfigurationProperties"
             },
@@ -2758,7 +2762,7 @@
       "type": "object",
       "properties": {
         "dnsServers": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2778,7 +2782,7 @@
       "type": "object",
       "properties": {
         "primary": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -2789,7 +2793,7 @@
           "description": "Specifies the primary network interface in case the virtual machine has more than 1 network interface."
         },
         "enableAcceleratedNetworking": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -2800,7 +2804,7 @@
           "description": "Specifies whether the network interface is accelerated networking-enabled."
         },
         "networkSecurityGroup": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SubResource"
             },
@@ -2811,7 +2815,7 @@
           "description": "The network security group."
         },
         "dnsSettings": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineScaleSetNetworkConfigurationDnsSettings"
             },
@@ -2822,7 +2826,7 @@
           "description": "The dns settings to be applied on the network interfaces."
         },
         "ipConfigurations": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2845,7 +2849,7 @@
       "type": "object",
       "properties": {
         "healthProbe": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ApiEntityReference"
             },
@@ -2856,7 +2860,7 @@
           "description": "A reference to a load balancer probe used to determine the health of an instance in the virtual machine scale set. The reference will be in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}'."
         },
         "networkInterfaceConfigurations": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2880,7 +2884,7 @@
           "description": "The disk name."
         },
         "caching": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -2896,7 +2900,7 @@
           "description": "Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**."
         },
         "createOption": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -2912,7 +2916,7 @@
           "description": "Specifies how the virtual machines in the scale set should be created.<br><br> The only allowed value is: **FromImage** \\u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described."
         },
         "osType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -2927,7 +2931,7 @@
           "description": "This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**."
         },
         "image": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualHardDisk"
             },
@@ -2938,7 +2942,7 @@
           "description": "Specifies information about the unmanaged user image to base the scale set on."
         },
         "vhdContainers": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2952,7 +2956,7 @@
           "description": "Specifies the container urls that are used to store operating system disks for the scale set."
         },
         "managedDisk": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineScaleSetManagedDiskParameters"
             },
@@ -2988,7 +2992,7 @@
           "description": "Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the Virtual Machine. The maximum length of the binary array is 65535 bytes. <br><br> For using cloud-init for your VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)"
         },
         "windowsConfiguration": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/WindowsConfiguration"
             },
@@ -2999,7 +3003,7 @@
           "description": "Specifies Windows operating system settings on the virtual machine."
         },
         "linuxConfiguration": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/LinuxConfiguration"
             },
@@ -3010,7 +3014,7 @@
           "description": "Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json) <br><br> For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)."
         },
         "secrets": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -3030,7 +3034,7 @@
       "type": "object",
       "properties": {
         "upgradePolicy": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/UpgradePolicy"
             },
@@ -3041,7 +3045,7 @@
           "description": "The upgrade policy."
         },
         "virtualMachineProfile": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineScaleSetVMProfile"
             },
@@ -3052,7 +3056,7 @@
           "description": "The virtual machine profile."
         },
         "overprovision": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -3063,7 +3067,7 @@
           "description": "Specifies whether the Virtual Machine Scale Set should be overprovisioned."
         },
         "singlePlacementGroup": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -3084,7 +3088,7 @@
           "description": "The publicIP address configuration name."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineScaleSetPublicIPAddressConfigurationProperties"
             },
@@ -3116,7 +3120,7 @@
       "type": "object",
       "properties": {
         "idleTimeoutInMinutes": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -3127,7 +3131,7 @@
           "description": "The idle timeout of the public IP address."
         },
         "dnsSettings": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings"
             },
@@ -3159,7 +3163,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineScaleSetExtensionProperties"
             },
@@ -3181,7 +3185,7 @@
       "type": "object",
       "properties": {
         "imageReference": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ImageReference"
             },
@@ -3192,7 +3196,7 @@
           "description": "Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations."
         },
         "osDisk": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineScaleSetOSDisk"
             },
@@ -3203,7 +3207,7 @@
           "description": "Specifies information about the operating system disk used by the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)."
         },
         "dataDisks": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -3223,7 +3227,7 @@
       "type": "object",
       "properties": {
         "osProfile": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineScaleSetOSProfile"
             },
@@ -3234,7 +3238,7 @@
           "description": "Specifies the operating system settings for the virtual machines in the scale set."
         },
         "storageProfile": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineScaleSetStorageProfile"
             },
@@ -3245,7 +3249,7 @@
           "description": "Specifies the storage settings for the virtual machine disks."
         },
         "networkProfile": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineScaleSetNetworkProfile"
             },
@@ -3256,7 +3260,7 @@
           "description": "Specifies properties of the network interfaces of the virtual machines in the scale set."
         },
         "diagnosticsProfile": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/DiagnosticsProfile"
             },
@@ -3267,7 +3271,7 @@
           "description": "Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15."
         },
         "extensionProfile": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualMachineScaleSetExtensionProfile"
             },
@@ -3288,7 +3292,7 @@
       "type": "object",
       "properties": {
         "provisionVMAgent": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -3299,7 +3303,7 @@
           "description": "Indicates whether virtual machine agent should be provisioned on the virtual machine. <br><br> When this property is not specified in the request body, default behavior is to set it to true.  This will ensure that VM Agent is installed on the VM so that extensions can be added to the VM later."
         },
         "enableAutomaticUpdates": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -3314,7 +3318,7 @@
           "description": "Specifies the time zone of the virtual machine. e.g. \"Pacific Standard Time\""
         },
         "additionalUnattendContent": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -3328,7 +3332,7 @@
           "description": "Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup."
         },
         "winRM": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/WinRMConfiguration"
             },
@@ -3345,7 +3349,7 @@
       "type": "object",
       "properties": {
         "listeners": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -3365,7 +3369,7 @@
       "type": "object",
       "properties": {
         "protocol": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [

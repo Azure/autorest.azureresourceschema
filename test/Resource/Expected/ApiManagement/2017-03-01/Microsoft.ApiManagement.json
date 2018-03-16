@@ -8,7 +8,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[a-zA-Z](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$"
@@ -32,7 +32,7 @@
           ]
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -46,7 +46,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ApiManagementServiceProperties"
             },
@@ -57,7 +57,7 @@
           "description": "Properties of the API Management service."
         },
         "sku": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ApiManagementServiceSkuProperties"
             },
@@ -68,7 +68,7 @@
           "description": "SKU properties of the API Management service."
         },
         "identity": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ApiManagementServiceIdentity"
             },
@@ -149,7 +149,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -173,7 +173,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ApiCreateOrUpdateProperties"
             },
@@ -212,7 +212,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -236,7 +236,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/OperationContractProperties"
             },
@@ -269,7 +269,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -295,7 +295,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/PolicyContractProperties"
             },
@@ -318,7 +318,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -344,7 +344,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/PolicyContractProperties"
             },
@@ -367,7 +367,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -391,7 +391,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SchemaContractProperties"
             },
@@ -414,7 +414,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -438,7 +438,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/AuthorizationServerContractProperties"
             },
@@ -461,7 +461,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -485,7 +485,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/BackendContractProperties"
             },
@@ -508,7 +508,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -532,7 +532,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/CertificateCreateOrUpdateProperties"
             },
@@ -555,7 +555,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -579,7 +579,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/GroupCreateParametersProperties"
             },
@@ -612,7 +612,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -647,7 +647,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -678,7 +678,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/IdentityProviderContractProperties"
             },
@@ -701,7 +701,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -725,7 +725,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/LoggerContractProperties"
             },
@@ -748,7 +748,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -831,7 +831,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -866,7 +866,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -890,7 +890,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/OpenidConnectProviderContractProperties"
             },
@@ -913,7 +913,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -939,7 +939,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/PolicyContractProperties"
             },
@@ -962,7 +962,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -986,7 +986,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ProductContractProperties"
             },
@@ -1025,7 +1025,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -1060,7 +1060,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -1095,7 +1095,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1121,7 +1121,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/PolicyContractProperties"
             },
@@ -1144,7 +1144,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -1168,7 +1168,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/PropertyContractProperties"
             },
@@ -1191,7 +1191,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -1215,7 +1215,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SubscriptionCreateParameterProperties"
             },
@@ -1238,7 +1238,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1277,7 +1277,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/EmailTemplateUpdateParameterProperties"
             },
@@ -1300,7 +1300,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -1324,7 +1324,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/UserCreateParameterProperties"
             },
@@ -1353,7 +1353,7 @@
           "description": "The location name of the additional region among Azure Data center regions."
         },
         "sku": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ApiManagementServiceSkuProperties"
             },
@@ -1364,7 +1364,7 @@
           "description": "SKU properties of the API Management service."
         },
         "virtualNetworkConfiguration": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualNetworkConfiguration"
             },
@@ -1389,7 +1389,7 @@
           "description": "Description of the API. May include HTML formatting tags."
         },
         "authenticationSettings": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/AuthenticationSettingsContract"
             },
@@ -1400,7 +1400,7 @@
           "description": "Collection of authentication settings included into this API."
         },
         "subscriptionKeyParameterNames": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SubscriptionKeyParameterNamesContract"
             },
@@ -1425,7 +1425,7 @@
           "description": "Describes the Revision of the Api. If no value is provided, default revision 1 is created"
         },
         "isCurrent": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -1436,7 +1436,7 @@
           "description": "Indicates if API revision is current api revision."
         },
         "isOnline": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -1465,7 +1465,7 @@
           "description": "Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API."
         },
         "protocols": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1487,7 +1487,7 @@
           "description": "Content value when Importing an API."
         },
         "contentFormat": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1506,7 +1506,7 @@
           "description": "Format of the Content in which the API is getting imported."
         },
         "wsdlSelector": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ApiCreateOrUpdatePropertiesWsdlSelector"
             },
@@ -1561,7 +1561,7 @@
           "description": "Email address from which the notification will be sent."
         },
         "hostnameConfigurations": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1575,7 +1575,7 @@
           "description": "Custom hostname configuration of the API Management service."
         },
         "virtualNetworkConfiguration": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualNetworkConfiguration"
             },
@@ -1586,7 +1586,7 @@
           "description": "Virtual network configuration of the API Management service."
         },
         "additionalLocations": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1600,7 +1600,7 @@
           "description": "Additional datacenter locations of the API Management service."
         },
         "customProperties": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -1614,7 +1614,7 @@
           "description": "Custom properties of the API Management service. Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2). Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1 and setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API Management service."
         },
         "certificates": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1628,7 +1628,7 @@
           "description": "List of Certificates that need to be installed in the API Management service. Max supported certificates that can be installed is 10."
         },
         "virtualNetworkType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1664,7 +1664,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1681,7 +1681,7 @@
           "description": "Name of the Sku."
         },
         "capacity": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer",
               "default": "1"
@@ -1702,7 +1702,7 @@
       "type": "object",
       "properties": {
         "oAuth2": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/OAuth2AuthenticationSettingsContract"
             },
@@ -1723,7 +1723,7 @@
           "description": "Description of the authorization server. Can contain HTML formatting tags."
         },
         "authorizationMethods": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1747,7 +1747,7 @@
           "description": "HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional."
         },
         "clientAuthenticationMethod": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1765,7 +1765,7 @@
           "description": "Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format."
         },
         "tokenBodyParameters": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1783,7 +1783,7 @@
           "description": "OAuth token endpoint. Contains absolute URI to entity being referenced."
         },
         "supportState": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -1798,7 +1798,7 @@
           "description": "Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values."
         },
         "bearerTokenSendingMethods": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1842,7 +1842,7 @@
           "description": "OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2."
         },
         "grantTypes": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1919,7 +1919,7 @@
           "description": "Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/BackendProperties"
             },
@@ -1930,7 +1930,7 @@
           "description": "Backend Properties contract"
         },
         "credentials": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/BackendCredentialsContract"
             },
@@ -1941,7 +1941,7 @@
           "description": "Backend Credentials Contract Properties"
         },
         "proxy": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/BackendProxyContract"
             },
@@ -1952,7 +1952,7 @@
           "description": "Backend Proxy Contract Properties"
         },
         "tls": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/BackendTlsProperties"
             },
@@ -1969,7 +1969,7 @@
           "description": "Runtime Url of the Backend."
         },
         "protocol": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1994,7 +1994,7 @@
       "type": "object",
       "properties": {
         "certificate": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2008,7 +2008,7 @@
           "description": "List of Client Certificate Thumbprint."
         },
         "query": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2025,7 +2025,7 @@
           "description": "Query Parameter description."
         },
         "header": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2042,7 +2042,7 @@
           "description": "Header Parameter description."
         },
         "authorization": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/BackendAuthorizationHeaderCredentials"
             },
@@ -2059,7 +2059,7 @@
       "type": "object",
       "properties": {
         "serviceFabricCluster": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/BackendServiceFabricClusterProperties"
             },
@@ -2103,7 +2103,7 @@
           "description": "The client certificate thumbprint for the management endpoint."
         },
         "maxPartitionResolutionRetries": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -2114,7 +2114,7 @@
           "description": "Maximum number of retries while attempting resolve the parition."
         },
         "managementEndpoints": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2128,7 +2128,7 @@
           "description": "The cluster management endpoint."
         },
         "serverCertificateThumbprints": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2142,7 +2142,7 @@
           "description": "Thumbprints of certificates cluster management service uses for tls communication"
         },
         "serverX509Names": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2166,7 +2166,7 @@
       "type": "object",
       "properties": {
         "validateCertificateChain": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean",
               "default": true
@@ -2178,7 +2178,7 @@
           "description": "Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host."
         },
         "validateCertificateName": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean",
               "default": true
@@ -2204,7 +2204,7 @@
           "description": "Certificate Password."
         },
         "storeName": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -2246,7 +2246,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[A-Za-z0-9-._]+$"
@@ -2264,7 +2264,7 @@
           "description": "Template parameter title."
         },
         "description": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[A-Za-z0-9-._]+$"
@@ -2301,7 +2301,7 @@
           "description": "Email Template Body. This should be a valid XDocument"
         },
         "parameters": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2379,7 +2379,7 @@
           "description": "Certificate Password."
         },
         "defaultSslBinding": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean",
               "default": false
@@ -2391,7 +2391,7 @@
           "description": "Specify true to setup the certificate associated with this Hostname as the Default SSL Certificate. If a client does not send the SNI header, then this will be the certificate that will be challenged. The property is useful if a service has multiple custom hostname enabled and it needs to decide on the default ssl certificate. The setting only applied to Proxy Hostname Type."
         },
         "negotiateClientCertificate": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean",
               "default": false
@@ -2425,7 +2425,7 @@
           "description": "Identity Provider Type identifier."
         },
         "allowedTenants": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2479,7 +2479,7 @@
       "type": "object",
       "properties": {
         "loggerType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -2498,7 +2498,7 @@
           "description": "Logger description."
         },
         "credentials": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2512,7 +2512,7 @@
           "description": "The name and SendRule connection string of the event hub."
         },
         "isBuffered": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -2579,7 +2579,7 @@
       "type": "object",
       "properties": {
         "templateParameters": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2598,7 +2598,7 @@
           "description": "Description of the operation. May include HTML formatting tags."
         },
         "request": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/RequestContract"
             },
@@ -2609,7 +2609,7 @@
           "description": "An entity containing request details."
         },
         "responses": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2670,7 +2670,7 @@
           "description": "Default parameter value."
         },
         "required": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -2681,7 +2681,7 @@
           "description": "whether parameter is required or not."
         },
         "values": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2728,7 +2728,7 @@
           "description": "Product terms of use. Developers trying to subscribe to the product will be presented and required to accept these terms before they can complete the subscription process."
         },
         "subscriptionRequired": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -2739,7 +2739,7 @@
           "description": "Whether a product subscription is required for accessing APIs included in this product. If true, the product is referred to as \"protected\" and a valid subscription key is required for a request to an API included in the product to succeed. If false, the product is referred to as \"open\" and requests to an API included in the product can be made without a subscription key. If property is omitted when creating a new product it's value is assumed to be true."
         },
         "approvalRequired": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -2750,7 +2750,7 @@
           "description": "whether subscription approval is required. If false, new subscriptions will be approved automatically enabling developers to call the product’s APIs immediately after subscribing. If true, administrators must manually approve the subscription before the developer can any of the product’s APIs. Can be present only if subscriptionRequired property is present and has a value of false."
         },
         "subscriptionsLimit": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -2761,7 +2761,7 @@
           "description": "Whether the number of subscriptions a user can have to this product at the same time. Set to null or omit to allow unlimited per user subscriptions. Can be present only if subscriptionRequired property is present and has a value of false."
         },
         "state": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -2791,7 +2791,7 @@
       "type": "object",
       "properties": {
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2805,7 +2805,7 @@
           "description": "Optional tags that when provided can be used to filter the property list."
         },
         "secret": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -2816,7 +2816,7 @@
           "description": "Determines whether the value is a secret and should be encrypted or not. Default value is false."
         },
         "displayName": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[A-Za-z0-9-._]+$"
@@ -2860,7 +2860,7 @@
           "description": "Type name defined by the schema. Applicable only if 'contentType' value is neither 'application/x-www-form-urlencoded' nor 'multipart/form-data'."
         },
         "formParameters": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2887,7 +2887,7 @@
           "description": "Operation request description."
         },
         "queryParameters": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2901,7 +2901,7 @@
           "description": "Collection of operation request query parameters."
         },
         "headers": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2915,7 +2915,7 @@
           "description": "Collection of operation request headers."
         },
         "representations": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2935,7 +2935,7 @@
       "type": "object",
       "properties": {
         "statusCode": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -2950,7 +2950,7 @@
           "description": "Operation response description."
         },
         "representations": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2964,7 +2964,7 @@
           "description": "Collection of operation response representations."
         },
         "headers": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2991,7 +2991,7 @@
           "description": "Must be a valid a media type used in a Content-Type header as defined in the RFC 2616. Media type of the schema document (e.g. application/json, application/xml)."
         },
         "document": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SchemaDocumentProperties"
             },
@@ -3021,7 +3021,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -3045,7 +3045,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ApiCreateOrUpdateProperties"
             },
@@ -3084,7 +3084,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -3108,7 +3108,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/OperationContractProperties"
             },
@@ -3141,7 +3141,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -3167,7 +3167,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/PolicyContractProperties"
             },
@@ -3190,7 +3190,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -3216,7 +3216,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/PolicyContractProperties"
             },
@@ -3239,7 +3239,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -3263,7 +3263,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SchemaContractProperties"
             },
@@ -3286,7 +3286,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -3310,7 +3310,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/AuthorizationServerContractProperties"
             },
@@ -3333,7 +3333,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -3357,7 +3357,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/BackendContractProperties"
             },
@@ -3380,7 +3380,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -3404,7 +3404,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/CertificateCreateOrUpdateProperties"
             },
@@ -3427,7 +3427,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -3451,7 +3451,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/GroupCreateParametersProperties"
             },
@@ -3484,7 +3484,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -3519,7 +3519,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -3550,7 +3550,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/IdentityProviderContractProperties"
             },
@@ -3573,7 +3573,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -3597,7 +3597,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/LoggerContractProperties"
             },
@@ -3620,7 +3620,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -3703,7 +3703,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -3738,7 +3738,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -3762,7 +3762,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/OpenidConnectProviderContractProperties"
             },
@@ -3785,7 +3785,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -3811,7 +3811,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/PolicyContractProperties"
             },
@@ -3834,7 +3834,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -3869,7 +3869,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -3893,7 +3893,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ProductContractProperties"
             },
@@ -3932,7 +3932,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -3967,7 +3967,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -3993,7 +3993,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/PolicyContractProperties"
             },
@@ -4016,7 +4016,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -4040,7 +4040,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/PropertyContractProperties"
             },
@@ -4063,7 +4063,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -4087,7 +4087,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SubscriptionCreateParameterProperties"
             },
@@ -4110,7 +4110,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -4149,7 +4149,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/EmailTemplateUpdateParameterProperties"
             },
@@ -4172,7 +4172,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[^*#&+:<>?]+$"
@@ -4196,7 +4196,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/UserCreateParameterProperties"
             },
@@ -4245,7 +4245,7 @@
           "description": "Secondary subscription key. If not specified during request key will be generated automatically."
         },
         "state": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -4307,7 +4307,7 @@
       "type": "object",
       "properties": {
         "state": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -4350,7 +4350,7 @@
           "description": "User Password. If no value is provided, a default password is generated."
         },
         "confirmation": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -4376,7 +4376,7 @@
       "type": "object",
       "properties": {
         "subnetResourceId": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^/subscriptions/[^/]*/resourceGroups/[^/]*/providers/Microsoft.(ClassicNetwork|Network)/virtualNetworks/[^/]*/subnets/[^/]*$"

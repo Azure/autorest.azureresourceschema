@@ -30,7 +30,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -44,7 +44,7 @@
           "description": "Resource tags."
         },
         "sku": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/Sku"
             },
@@ -55,7 +55,7 @@
           "description": "SKU of the namespace."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/RelayNamespaceProperties"
             },
@@ -112,7 +112,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/AuthorizationRuleProperties"
             },
@@ -152,7 +152,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/HybridConnectionProperties"
             },
@@ -202,7 +202,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/AuthorizationRuleProperties"
             },
@@ -242,7 +242,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/WcfRelayProperties"
             },
@@ -292,7 +292,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/AuthorizationRuleProperties"
             },
@@ -317,7 +317,7 @@
       "type": "object",
       "properties": {
         "rights": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -345,7 +345,7 @@
       "type": "object",
       "properties": {
         "requiresClientAuthorization": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -382,7 +382,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/AuthorizationRuleProperties"
             },
@@ -421,7 +421,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/AuthorizationRuleProperties"
             },
@@ -460,7 +460,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/HybridConnectionProperties"
             },
@@ -509,7 +509,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/AuthorizationRuleProperties"
             },
@@ -548,7 +548,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/WcfRelayProperties"
             },
@@ -578,13 +578,14 @@
       "description": "Microsoft.Relay/namespaces/wcfRelays"
     },
     "RelayNamespaceProperties": {
+      "type": "object",
       "description": "Properties of the namespace."
     },
     "Sku": {
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -598,7 +599,7 @@
           "description": "Name of this SKU."
         },
         "tier": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -621,7 +622,7 @@
       "type": "object",
       "properties": {
         "relayType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -636,7 +637,7 @@
           "description": "WCF relay type."
         },
         "requiresClientAuthorization": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -647,7 +648,7 @@
           "description": "Returns true if client authorization is needed for this relay; otherwise, false."
         },
         "requiresTransportSecurity": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },

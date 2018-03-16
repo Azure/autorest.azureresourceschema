@@ -23,7 +23,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SoftwareUpdateConfigurationProperties"
             },
@@ -48,7 +48,7 @@
       "type": "object",
       "properties": {
         "weekDays": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -62,7 +62,7 @@
           "description": "Days of the week that the job should execute on."
         },
         "monthDays": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -76,7 +76,7 @@
           "description": "Days of the month that the job should execute on. Must be between 1 and 31."
         },
         "monthlyOccurrences": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -96,7 +96,7 @@
       "type": "object",
       "properties": {
         "occurrence": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -107,7 +107,7 @@
           "description": "Occurrence of the week within the month. Must be between 1 and 5"
         },
         "day": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -147,7 +147,7 @@
       "type": "object",
       "properties": {
         "includedPackageClassifications": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -164,7 +164,7 @@
           "description": "Update classifications included in the software update configuration."
         },
         "excludedPackageNameMasks": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -194,7 +194,7 @@
           "description": "Gets or sets the end time of the schedule."
         },
         "expiryTimeOffsetMinutes": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "number"
             },
@@ -205,7 +205,7 @@
           "description": "Gets or sets the expiry time's offset in minutes."
         },
         "isEnabled": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean",
               "default": false
@@ -222,7 +222,7 @@
           "description": "Gets or sets the next run time of the schedule."
         },
         "nextRunOffsetMinutes": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "number"
             },
@@ -233,10 +233,11 @@
           "description": "Gets or sets the next run time's offset in minutes."
         },
         "interval": {
+          "type": "object",
           "description": "Gets or sets the interval of the schedule."
         },
         "frequency": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -258,7 +259,7 @@
           "description": "Gets or sets the time zone of the schedule."
         },
         "advancedSchedule": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/AdvancedSchedule"
             },
@@ -289,7 +290,7 @@
       "type": "object",
       "properties": {
         "updateConfiguration": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/UpdateConfiguration"
             },
@@ -300,7 +301,7 @@
           "description": "update specific properties for the Software update configuration"
         },
         "scheduleInfo": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ScheduleProperties"
             },
@@ -311,7 +312,7 @@
           "description": "Schedule information for the Software update configuration"
         },
         "error": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -332,7 +333,7 @@
       "type": "object",
       "properties": {
         "operatingSystem": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -347,7 +348,7 @@
           "description": "operating system of target machines."
         },
         "windows": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/WindowsProperties"
             },
@@ -358,7 +359,7 @@
           "description": "Windows specific update configuration."
         },
         "linux": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/LinuxProperties"
             },
@@ -374,7 +375,7 @@
           "description": "Maximum time allowed for the software update configuration run. Duration needs to be specified using the format PT[n]H[n]M[n]S as per ISO8601"
         },
         "azureVirtualMachines": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -388,7 +389,7 @@
           "description": "List of azure resource Ids for azure virtual machines targeted by the software update configuration."
         },
         "nonAzureComputerNames": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -411,7 +412,7 @@
       "type": "object",
       "properties": {
         "includedUpdateClassifications": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -433,7 +434,7 @@
           "description": "Update classification included in the software update configuration. A comma separated string with required values."
         },
         "excludedKbNumbers": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {

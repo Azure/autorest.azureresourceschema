@@ -27,7 +27,7 @@
           "description": "The region in which to create the account."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -41,7 +41,7 @@
           "description": "The user specified tags associated with the account."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/BatchAccountBaseProperties"
             },
@@ -90,7 +90,7 @@
           ]
         },
         "allowUpdates": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -167,7 +167,7 @@
       "type": "object",
       "properties": {
         "autoStorage": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/AutoStorageBaseProperties"
             },
@@ -199,7 +199,7 @@
           ]
         },
         "allowUpdates": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },

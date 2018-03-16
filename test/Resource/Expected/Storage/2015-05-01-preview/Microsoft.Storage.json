@@ -27,7 +27,7 @@
           "description": "Resource location"
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -41,7 +41,7 @@
           "description": "Resource tags"
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/StorageAccountPropertiesCreateParameters"
             },
@@ -66,7 +66,7 @@
       "type": "object",
       "properties": {
         "accountType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [

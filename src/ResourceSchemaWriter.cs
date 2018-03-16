@@ -176,6 +176,7 @@ namespace AutoRest.AzureResourceSchema
 
             writer.WriteStartObject();
 
+            WriteProperty(writer, "type", definition.JsonType);
             if (definition.JsonType != "object" || !definition.IsEmpty())
             {
                 WriteProperty(writer, "minimum", definition.Minimum);
@@ -198,7 +199,6 @@ namespace AutoRest.AzureResourceSchema
                 WriteDefinitionMap(writer, "properties", definition.Properties, addExpressionReferences: true);
                 WriteStringArray(writer, "required", definition.Required);
             }
-            WriteProperty(writer, "type", definition.JsonType);
             WriteProperty(writer, "description", definition.Description);
 
             writer.WriteEndObject();

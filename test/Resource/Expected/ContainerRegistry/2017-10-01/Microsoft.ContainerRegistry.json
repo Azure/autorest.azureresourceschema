@@ -8,7 +8,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[a-zA-Z0-9]*$"
@@ -36,7 +36,7 @@
           "description": "The location of the resource. This cannot be changed after the resource is created."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -50,7 +50,7 @@
           "description": "The tags of the resource."
         },
         "sku": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/Sku"
             },
@@ -61,7 +61,7 @@
           "description": "The SKU of the container registry."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/RegistryProperties"
             },
@@ -99,7 +99,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[a-zA-Z0-9]*$"
@@ -127,7 +127,7 @@
           "description": "The location of the resource. This cannot be changed after the resource is created."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -141,7 +141,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ReplicationProperties"
             },
@@ -165,7 +165,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[a-zA-Z0-9]*$"
@@ -189,7 +189,7 @@
           ]
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -207,7 +207,7 @@
           "description": "The location of the webhook. This cannot be changed after the resource is created."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/WebhookPropertiesCreateParameters"
             },
@@ -233,7 +233,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[a-zA-Z0-9]*$"
@@ -261,7 +261,7 @@
           "description": "The location of the resource. This cannot be changed after the resource is created."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -275,7 +275,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ReplicationProperties"
             },
@@ -299,7 +299,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "pattern": "^[a-zA-Z0-9]*$"
@@ -323,7 +323,7 @@
           ]
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -341,7 +341,7 @@
           "description": "The location of the webhook. This cannot be changed after the resource is created."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/WebhookPropertiesCreateParameters"
             },
@@ -365,7 +365,7 @@
       "type": "object",
       "properties": {
         "adminUserEnabled": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean",
               "default": false
@@ -377,7 +377,7 @@
           "description": "The value that indicates whether the admin user is enabled."
         },
         "storageAccount": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/StorageAccountProperties"
             },
@@ -391,13 +391,14 @@
       "description": "The properties of a container registry."
     },
     "ReplicationProperties": {
+      "type": "object",
       "description": "The properties of a replication."
     },
     "Sku": {
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -440,7 +441,7 @@
           "description": "The service URI for the webhook to post notifications."
         },
         "customHeaders": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -454,7 +455,7 @@
           "description": "Custom headers that will be added to the webhook notifications."
         },
         "status": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -473,7 +474,7 @@
           "description": "The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means all events."
         },
         "actions": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {

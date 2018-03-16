@@ -27,7 +27,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -41,7 +41,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/LabProperties"
             },
@@ -120,7 +120,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -134,7 +134,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ArtifactSourceProperties"
             },
@@ -176,7 +176,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -190,7 +190,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/LabCostProperties"
             },
@@ -232,7 +232,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -246,7 +246,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/CustomImageProperties"
             },
@@ -288,7 +288,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -302,7 +302,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/FormulaProperties"
             },
@@ -344,7 +344,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -358,7 +358,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/NotificationChannelProperties"
             },
@@ -400,7 +400,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -414,7 +414,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/PolicyProperties"
             },
@@ -456,7 +456,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -470,7 +470,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ScheduleProperties"
             },
@@ -512,7 +512,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -526,7 +526,7 @@
           "description": "The tags of the resource."
         },
         "identity": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/IdentityProperties"
             },
@@ -567,7 +567,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -581,7 +581,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/UserProperties"
             },
@@ -639,7 +639,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -653,7 +653,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/DiskProperties"
             },
@@ -695,7 +695,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -709,7 +709,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/EnvironmentProperties"
             },
@@ -751,7 +751,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -765,7 +765,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SecretProperties"
             },
@@ -807,7 +807,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -821,7 +821,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/LabVirtualMachineProperties"
             },
@@ -873,7 +873,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -887,7 +887,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ScheduleProperties"
             },
@@ -929,7 +929,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -943,7 +943,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualNetworkProperties"
             },
@@ -985,7 +985,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -999,7 +999,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ScheduleProperties"
             },
@@ -1028,7 +1028,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -1042,7 +1042,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ApplicableScheduleProperties"
             },
@@ -1062,7 +1062,7 @@
       "type": "object",
       "properties": {
         "labVmsShutdown": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/Schedule"
             },
@@ -1073,7 +1073,7 @@
           "description": "The auto-shutdown schedule, if one has been set at the lab or lab resource level."
         },
         "labVmsStartup": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/Schedule"
             },
@@ -1108,7 +1108,7 @@
           "description": "The deployment status of the artifact."
         },
         "artifactsApplied": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -1119,7 +1119,7 @@
           "description": "The total count of the artifacts that were successfully applied."
         },
         "totalArtifacts": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -1140,7 +1140,7 @@
           "description": "The artifact's identifier."
         },
         "parameters": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1199,7 +1199,7 @@
           "description": "The artifact source's URI."
         },
         "sourceType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1230,7 +1230,7 @@
           "description": "The security token to authenticate to the artifact source."
         },
         "status": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1259,7 +1259,7 @@
       "type": "object",
       "properties": {
         "instanceCount": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -1288,7 +1288,7 @@
           "description": "When backed by managed disk, this is the ID of the compute disk resource."
         },
         "diskSizeGiB": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -1323,7 +1323,7 @@
       "type": "object",
       "properties": {
         "statuses": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1353,7 +1353,7 @@
           "description": "Gets OS disk blob uri for the virtual machine."
         },
         "dataDiskIds": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1367,7 +1367,7 @@
           "description": "Gets data disks blob uri for the virtual machine."
         },
         "dataDisks": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1391,7 +1391,7 @@
           "description": "The ID of the cost threshold item."
         },
         "percentageThreshold": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/PercentageCostThresholdProperties"
             },
@@ -1402,7 +1402,7 @@
           "description": "The value of the percentage cost threshold."
         },
         "displayOnChart": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1417,7 +1417,7 @@
           "description": "Indicates whether this threshold will be displayed on cost charts."
         },
         "sendNotificationWhenExceeded": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1442,7 +1442,7 @@
       "type": "object",
       "properties": {
         "vm": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/CustomImagePropertiesFromVm"
             },
@@ -1453,7 +1453,7 @@
           "description": "The virtual machine from which the image is to be created."
         },
         "vhd": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/CustomImagePropertiesCustom"
             },
@@ -1494,7 +1494,7 @@
           "description": "The image name."
         },
         "sysPrep": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -1505,7 +1505,7 @@
           "description": "Indicates whether sysprep has been run on the VHD."
         },
         "osType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1534,7 +1534,7 @@
           "description": "The source vm identifier."
         },
         "windowsOsInfo": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/WindowsOsInfo"
             },
@@ -1545,7 +1545,7 @@
           "description": "The Windows OS information of the VM."
         },
         "linuxOsInfo": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/LinuxOsInfo"
             },
@@ -1572,7 +1572,7 @@
       "type": "object",
       "properties": {
         "diskType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1587,7 +1587,7 @@
           "description": "The storage type for the disk (i.e. Standard, Premium)."
         },
         "diskSizeGiB": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -1636,7 +1636,7 @@
           "description": "The Azure Resource Manager template's identifier."
         },
         "parameters": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -1656,7 +1656,7 @@
       "type": "object",
       "properties": {
         "deploymentProperties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/EnvironmentDeploymentProperties"
             },
@@ -1685,7 +1685,7 @@
       "type": "object",
       "properties": {
         "eventName": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1732,7 +1732,7 @@
           "description": "The OS type of the formula."
         },
         "formulaContent": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/LabVirtualMachineCreationParameter"
             },
@@ -1743,7 +1743,7 @@
           "description": "The content of the formula."
         },
         "vm": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/FormulaPropertiesFromVm"
             },
@@ -1804,7 +1804,7 @@
       "type": "object",
       "properties": {
         "minute": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -1843,7 +1843,7 @@
       "type": "object",
       "properties": {
         "transportProtocol": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1858,7 +1858,7 @@
           "description": "The transport protocol for the endpoint."
         },
         "frontendPort": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -1869,7 +1869,7 @@
           "description": "The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically."
         },
         "backendPort": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -1886,7 +1886,7 @@
       "type": "object",
       "properties": {
         "targetCost": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/TargetCostProperties"
             },
@@ -1930,7 +1930,7 @@
       "type": "object",
       "properties": {
         "labStorageType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1945,7 +1945,7 @@
           "description": "Type of storage used by the lab. It can be either Premium or Standard. Default is Premium."
         },
         "premiumDataDisks": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1993,7 +1993,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2007,7 +2007,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ArtifactSourceProperties"
             },
@@ -2049,7 +2049,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2063,7 +2063,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/LabCostProperties"
             },
@@ -2105,7 +2105,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2119,7 +2119,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/CustomImageProperties"
             },
@@ -2161,7 +2161,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2175,7 +2175,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/FormulaProperties"
             },
@@ -2217,7 +2217,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2231,7 +2231,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/NotificationChannelProperties"
             },
@@ -2273,7 +2273,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2287,7 +2287,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ScheduleProperties"
             },
@@ -2329,7 +2329,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2343,7 +2343,7 @@
           "description": "The tags of the resource."
         },
         "identity": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/IdentityProperties"
             },
@@ -2384,7 +2384,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2398,7 +2398,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/UserProperties"
             },
@@ -2456,7 +2456,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2470,7 +2470,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/DiskProperties"
             },
@@ -2512,7 +2512,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2526,7 +2526,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/EnvironmentProperties"
             },
@@ -2568,7 +2568,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2582,7 +2582,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SecretProperties"
             },
@@ -2624,7 +2624,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2638,7 +2638,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/LabVirtualMachineProperties"
             },
@@ -2690,7 +2690,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2704,7 +2704,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ScheduleProperties"
             },
@@ -2746,7 +2746,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2760,7 +2760,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VirtualNetworkProperties"
             },
@@ -2783,7 +2783,7 @@
       "type": "object",
       "properties": {
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/LabVirtualMachineCreationParameterProperties"
             },
@@ -2802,7 +2802,7 @@
           "description": "The location of the new virtual machine or environment"
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -2822,7 +2822,7 @@
       "type": "object",
       "properties": {
         "bulkCreationParameters": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/BulkCreationParameters"
             },
@@ -2882,7 +2882,7 @@
           "description": "The SSH key of the virtual machine administrator."
         },
         "isAuthenticationWithSshKey": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -2905,7 +2905,7 @@
           "description": "The lab virtual network identifier of the virtual machine."
         },
         "disallowPublicIpAddress": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -2916,7 +2916,7 @@
           "description": "Indicates whether the virtual machine is to be created without a public IP address."
         },
         "artifacts": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -2930,7 +2930,7 @@
           "description": "The artifacts to be installed on the virtual machine."
         },
         "artifactDeploymentStatus": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ArtifactDeploymentStatusProperties"
             },
@@ -2941,7 +2941,7 @@
           "description": "The artifact deployment status for the virtual machine."
         },
         "galleryImageReference": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/GalleryImageReference"
             },
@@ -2952,7 +2952,7 @@
           "description": "The Microsoft Azure Marketplace image reference of the virtual machine."
         },
         "computeVm": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ComputeVmProperties"
             },
@@ -2963,7 +2963,7 @@
           "description": "The compute virtual machine properties."
         },
         "networkInterface": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/NetworkInterfaceProperties"
             },
@@ -2974,7 +2974,7 @@
           "description": "The network interface properties."
         },
         "applicableSchedule": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ApplicableSchedule"
             },
@@ -2990,7 +2990,7 @@
           "description": "The expiration date for VM."
         },
         "allowClaim": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -3005,7 +3005,7 @@
           "description": "Storage type to use for virtual machine (i.e. Standard, Premium)."
         },
         "virtualMachineCreationSource": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -3087,7 +3087,7 @@
           "description": "The SSH key of the virtual machine administrator."
         },
         "isAuthenticationWithSshKey": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -3110,7 +3110,7 @@
           "description": "The lab virtual network identifier of the virtual machine."
         },
         "disallowPublicIpAddress": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -3121,7 +3121,7 @@
           "description": "Indicates whether the virtual machine is to be created without a public IP address."
         },
         "artifacts": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -3135,7 +3135,7 @@
           "description": "The artifacts to be installed on the virtual machine."
         },
         "artifactDeploymentStatus": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ArtifactDeploymentStatusProperties"
             },
@@ -3146,7 +3146,7 @@
           "description": "The artifact deployment status for the virtual machine."
         },
         "galleryImageReference": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/GalleryImageReference"
             },
@@ -3157,7 +3157,7 @@
           "description": "The Microsoft Azure Marketplace image reference of the virtual machine."
         },
         "computeVm": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ComputeVmProperties"
             },
@@ -3168,7 +3168,7 @@
           "description": "The compute virtual machine properties."
         },
         "networkInterface": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/NetworkInterfaceProperties"
             },
@@ -3179,7 +3179,7 @@
           "description": "The network interface properties."
         },
         "applicableSchedule": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ApplicableSchedule"
             },
@@ -3195,7 +3195,7 @@
           "description": "The expiration date for VM."
         },
         "allowClaim": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -3210,7 +3210,7 @@
           "description": "Storage type to use for virtual machine (i.e. Standard, Premium)."
         },
         "virtualMachineCreationSource": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -3243,7 +3243,7 @@
       "type": "object",
       "properties": {
         "linuxOsState": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -3297,7 +3297,7 @@
           "description": "The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH."
         },
         "sharedPublicIpAddressConfiguration": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SharedPublicIpAddressConfiguration"
             },
@@ -3322,7 +3322,7 @@
           "description": "Description of notification."
         },
         "events": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -3350,7 +3350,7 @@
       "type": "object",
       "properties": {
         "status": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -3365,7 +3365,7 @@
           "description": "If notifications are enabled for this schedule (i.e. Enabled, Disabled)."
         },
         "timeInMinutes": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -3386,7 +3386,7 @@
       "type": "object",
       "properties": {
         "thresholdValue": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "number"
             },
@@ -3407,7 +3407,7 @@
           "description": "The description of the policy."
         },
         "status": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -3422,7 +3422,7 @@
           "description": "The status of the policy."
         },
         "factName": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -3451,7 +3451,7 @@
           "description": "The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy)."
         },
         "evaluatorType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -3480,7 +3480,7 @@
       "type": "object",
       "properties": {
         "transportProtocol": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -3495,7 +3495,7 @@
           "description": "Protocol type of the port."
         },
         "backendPort": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -3516,7 +3516,7 @@
           "description": "The location of the resource."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -3530,7 +3530,7 @@
           "description": "The tags of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ScheduleProperties"
             },
@@ -3550,7 +3550,7 @@
       "type": "object",
       "properties": {
         "status": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -3569,7 +3569,7 @@
           "description": "The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart)."
         },
         "weeklyRecurrence": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/WeekDetails"
             },
@@ -3580,7 +3580,7 @@
           "description": "If the schedule will occur only some days of the week, specify the weekly recurrence."
         },
         "dailyRecurrence": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/DayDetails"
             },
@@ -3591,7 +3591,7 @@
           "description": "If the schedule will occur once each day of the week, specify the daily recurrence."
         },
         "hourlyRecurrence": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/HourDetails"
             },
@@ -3606,7 +3606,7 @@
           "description": "The time zone ID (e.g. Pacific Standard time)."
         },
         "notificationSettings": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/NotificationSettings"
             },
@@ -3653,7 +3653,7 @@
       "type": "object",
       "properties": {
         "inboundNatRules": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -3681,7 +3681,7 @@
           "description": "The name of the subnet as seen in the lab."
         },
         "allowPublicIp": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -3711,7 +3711,7 @@
           "description": "The name given to the subnet within the lab."
         },
         "useInVmCreationPermission": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -3727,7 +3727,7 @@
           "description": "Indicates whether this subnet can be used during virtual machine creation (i.e. Allow, Deny)."
         },
         "usePublicIpAddressPermission": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -3743,7 +3743,7 @@
           "description": "Indicates whether public IP addresses can be assigned to virtual machines on this subnet (i.e. Allow, Deny)."
         },
         "sharedPublicIpAddressConfiguration": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SubnetSharedPublicIpAddressConfiguration"
             },
@@ -3764,7 +3764,7 @@
       "type": "object",
       "properties": {
         "allowedPorts": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -3784,7 +3784,7 @@
       "type": "object",
       "properties": {
         "status": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -3799,7 +3799,7 @@
           "description": "Target cost status."
         },
         "target": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -3810,7 +3810,7 @@
           "description": "Lab target cost"
         },
         "costThresholds": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -3834,7 +3834,7 @@
           "description": "Reporting cycle end date."
         },
         "cycleType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -3881,7 +3881,7 @@
       "type": "object",
       "properties": {
         "identity": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/UserIdentity"
             },
@@ -3892,7 +3892,7 @@
           "description": "The identity of the user."
         },
         "secretStore": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/UserSecretStore"
             },
@@ -3931,7 +3931,7 @@
       "type": "object",
       "properties": {
         "allowedSubnets": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -3953,7 +3953,7 @@
           "description": "The Microsoft.Network resource identifier of the virtual network."
         },
         "externalSubnets": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -3967,7 +3967,7 @@
           "description": "The external subnet properties."
         },
         "subnetOverrides": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -3995,7 +3995,7 @@
       "type": "object",
       "properties": {
         "weekdays": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -4019,7 +4019,7 @@
       "type": "object",
       "properties": {
         "windowsOsState": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [

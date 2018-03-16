@@ -27,7 +27,7 @@
           "description": "The Geo-location where the resource lives"
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -41,7 +41,7 @@
           "description": "Resource tags"
         },
         "sku": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SBSku"
             },
@@ -52,7 +52,7 @@
           "description": "Porperties of Sku"
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SBNamespaceProperties"
             },
@@ -113,7 +113,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SBAuthorizationRuleProperties"
             },
@@ -154,7 +154,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ArmDisasterRecoveryProperties"
             },
@@ -194,7 +194,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SBQueueProperties"
             },
@@ -245,7 +245,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SBAuthorizationRuleProperties"
             },
@@ -285,7 +285,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SBTopicProperties"
             },
@@ -339,7 +339,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SBAuthorizationRuleProperties"
             },
@@ -380,7 +380,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SBSubscriptionProperties"
             },
@@ -431,7 +431,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/Ruleproperties"
             },
@@ -460,7 +460,7 @@
           "description": "SQL expression. e.g. MyProperty='ABC'"
         },
         "compatibilityLevel": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -471,7 +471,7 @@
           "description": "This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20."
         },
         "requiresPreprocessing": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean",
               "default": true
@@ -535,7 +535,7 @@
           "description": "Content type of the message."
         },
         "requiresPreprocessing": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean",
               "default": true
@@ -569,7 +569,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SBAuthorizationRuleProperties"
             },
@@ -608,7 +608,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ArmDisasterRecoveryProperties"
             },
@@ -647,7 +647,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SBAuthorizationRuleProperties"
             },
@@ -686,7 +686,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SBQueueProperties"
             },
@@ -735,7 +735,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SBAuthorizationRuleProperties"
             },
@@ -774,7 +774,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SBTopicProperties"
             },
@@ -826,7 +826,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SBSubscriptionProperties"
             },
@@ -875,7 +875,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/Ruleproperties"
             },
@@ -898,7 +898,7 @@
       "type": "object",
       "properties": {
         "action": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/Action"
             },
@@ -909,7 +909,7 @@
           "description": "Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression."
         },
         "filterType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -924,7 +924,7 @@
           "description": "Filter type that is evaluated against a BrokeredMessage."
         },
         "sqlFilter": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SqlFilter"
             },
@@ -935,7 +935,7 @@
           "description": "Properties of sqlFilter"
         },
         "correlationFilter": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/CorrelationFilter"
             },
@@ -952,7 +952,7 @@
       "type": "object",
       "properties": {
         "rights": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -977,6 +977,7 @@
       "description": "AuthorizationRule properties."
     },
     "SBNamespaceProperties": {
+      "type": "object",
       "description": "Properties of the namespace."
     },
     "SBQueueProperties": {
@@ -988,7 +989,7 @@
           "description": "ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute."
         },
         "maxSizeInMegabytes": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -999,7 +1000,7 @@
           "description": "The maximum size of the queue in megabytes, which is the size of memory allocated for the queue. Default is 1024."
         },
         "requiresDuplicateDetection": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -1010,7 +1011,7 @@
           "description": "A value indicating if this queue requires duplicate detection."
         },
         "requiresSession": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -1026,7 +1027,7 @@
           "description": "ISO 8601 default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself."
         },
         "deadLetteringOnMessageExpiration": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -1042,7 +1043,7 @@
           "description": "ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes."
         },
         "maxDeliveryCount": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -1053,7 +1054,7 @@
           "description": "The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10."
         },
         "status": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1080,7 +1081,7 @@
           "description": "ISO 8061 timeSpan idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes."
         },
         "enablePartitioning": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -1091,7 +1092,7 @@
           "description": "A value that indicates whether the queue is to be partitioned across multiple message brokers."
         },
         "enableExpress": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -1116,7 +1117,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1132,7 +1133,7 @@
           "description": "Name of this SKU."
         },
         "tier": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1148,7 +1149,7 @@
           "description": "The billing tier of this particular SKU."
         },
         "capacity": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -1173,7 +1174,7 @@
           "description": "ISO 8061 lock duration timespan for the subscription. The default value is 1 minute."
         },
         "requiresSession": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -1189,7 +1190,7 @@
           "description": "ISO 8061 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself."
         },
         "deadLetteringOnMessageExpiration": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -1205,7 +1206,7 @@
           "description": "ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes."
         },
         "maxDeliveryCount": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -1216,7 +1217,7 @@
           "description": "Number of maximum deliveries."
         },
         "status": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1238,7 +1239,7 @@
           "description": "Enumerates the possible values for the status of a messaging entity."
         },
         "enableBatchedOperations": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -1273,7 +1274,7 @@
           "description": "ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself."
         },
         "maxSizeInMegabytes": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -1284,7 +1285,7 @@
           "description": "Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024."
         },
         "requiresDuplicateDetection": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -1300,7 +1301,7 @@
           "description": "ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes."
         },
         "enableBatchedOperations": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -1311,7 +1312,7 @@
           "description": "Value that indicates whether server-side batched operations are enabled."
         },
         "status": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -1333,7 +1334,7 @@
           "description": "Enumerates the possible values for the status of a messaging entity."
         },
         "supportOrdering": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -1349,7 +1350,7 @@
           "description": "ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes."
         },
         "enablePartitioning": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -1360,7 +1361,7 @@
           "description": "Value that indicates whether the topic to be partitioned across multiple message brokers is enabled."
         },
         "enableExpress": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -1381,7 +1382,7 @@
           "description": "The SQL expression. e.g. MyProperty='ABC'"
         },
         "requiresPreprocessing": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean",
               "default": true

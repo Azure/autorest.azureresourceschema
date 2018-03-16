@@ -32,7 +32,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -46,7 +46,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/VaultProperties"
             },
@@ -56,7 +56,7 @@
           ]
         },
         "sku": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/Sku"
             },
@@ -104,7 +104,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/RawCertificateData"
             },
@@ -128,7 +128,7 @@
       "type": "object",
       "properties": {
         "authType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -146,7 +146,7 @@
           "description": "Specifies the authentication type."
         },
         "certificate": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -166,7 +166,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -187,13 +187,14 @@
       "description": "Identifies the unique system identifier for each Azure resource."
     },
     "UpgradeDetails": {
+      "type": "object",
       "description": "Details for upgrading vault."
     },
     "VaultProperties": {
       "type": "object",
       "properties": {
         "upgradeDetails": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/UpgradeDetails"
             },
@@ -224,7 +225,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/RawCertificateData"
             },

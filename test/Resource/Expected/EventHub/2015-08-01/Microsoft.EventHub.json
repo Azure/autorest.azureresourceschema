@@ -30,7 +30,7 @@
           "description": "Namespace location."
         },
         "sku": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/Sku"
             },
@@ -40,7 +40,7 @@
           ]
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -54,7 +54,7 @@
           "description": "Namespace tags."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/NamespaceProperties"
             },
@@ -112,7 +112,7 @@
           "description": "Data center location."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SharedAccessAuthorizationRuleProperties"
             },
@@ -156,7 +156,7 @@
           "description": "Location of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/EventHubProperties"
             },
@@ -214,7 +214,7 @@
           "description": "Data center location."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SharedAccessAuthorizationRuleProperties"
             },
@@ -258,7 +258,7 @@
           "description": "Location of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ConsumerGroupProperties"
             },
@@ -293,7 +293,7 @@
       "type": "object",
       "properties": {
         "messageRetentionInDays": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -304,7 +304,7 @@
           "description": "Number of days to retain the events for this Event Hub."
         },
         "partitionCount": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -315,7 +315,7 @@
           "description": "Number of partitions created for the Event Hub."
         },
         "status": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -343,7 +343,7 @@
       "type": "object",
       "properties": {
         "status": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -387,7 +387,7 @@
           "description": "Endpoint you can use to perform Service Bus operations."
         },
         "enabled": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -424,7 +424,7 @@
           "description": "Data center location."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SharedAccessAuthorizationRuleProperties"
             },
@@ -466,7 +466,7 @@
           "description": "Data center location."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/SharedAccessAuthorizationRuleProperties"
             },
@@ -508,7 +508,7 @@
           "description": "Location of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/EventHubProperties"
             },
@@ -564,7 +564,7 @@
           "description": "Location of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ConsumerGroupProperties"
             },
@@ -587,7 +587,7 @@
       "type": "object",
       "properties": {
         "rights": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -615,7 +615,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -630,7 +630,7 @@
           "description": "Name of this SKU."
         },
         "tier": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -646,7 +646,7 @@
           "description": "The billing tier of this particular SKU."
         },
         "capacity": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },

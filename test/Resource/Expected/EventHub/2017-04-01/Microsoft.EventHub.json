@@ -30,7 +30,7 @@
           "description": "Resource location"
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -44,7 +44,7 @@
           "description": "Resource tags"
         },
         "sku": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/Sku"
             },
@@ -55,7 +55,7 @@
           "description": "Properties of sku resource"
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/EHNamespaceProperties"
             },
@@ -111,7 +111,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/AuthorizationRuleProperties"
             },
@@ -152,7 +152,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ArmDisasterRecoveryProperties"
             },
@@ -192,7 +192,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/EventhubProperties"
             },
@@ -245,7 +245,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/AuthorizationRuleProperties"
             },
@@ -286,7 +286,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ConsumerGroupProperties"
             },
@@ -325,7 +325,7 @@
       "type": "object",
       "properties": {
         "rights": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -353,7 +353,7 @@
       "type": "object",
       "properties": {
         "enabled": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -364,7 +364,7 @@
           "description": "A value that indicates whether capture description is enabled. "
         },
         "encoding": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -379,7 +379,7 @@
           "description": "Enumerates the possible values for the encoding format of capture description."
         },
         "intervalInSeconds": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer",
               "minimum": 60,
@@ -392,7 +392,7 @@
           "description": "The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds"
         },
         "sizeLimitInBytes": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer",
               "minimum": 10485760,
@@ -405,7 +405,7 @@
           "description": "The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes"
         },
         "destination": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/Destination"
             },
@@ -436,7 +436,7 @@
           "description": "Name for capture destination"
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/DestinationProperties"
             },
@@ -471,7 +471,7 @@
       "type": "object",
       "properties": {
         "isAutoInflateEnabled": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -482,7 +482,7 @@
           "description": "Value that indicates whether AutoInflate is enabled for eventhub namespace."
         },
         "maximumThroughputUnits": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer",
               "minimum": 0,
@@ -501,7 +501,7 @@
       "type": "object",
       "properties": {
         "messageRetentionInDays": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer",
               "minimum": 1
@@ -513,7 +513,7 @@
           "description": "Number of days to retain the events for this Event Hub, value should be 1 to 7 days"
         },
         "partitionCount": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer",
               "minimum": 1
@@ -525,7 +525,7 @@
           "description": "Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions."
         },
         "status": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -547,7 +547,7 @@
           "description": "Enumerates the possible values for the status of the Event Hub."
         },
         "captureDescription": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/CaptureDescription"
             },
@@ -580,7 +580,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/AuthorizationRuleProperties"
             },
@@ -619,7 +619,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ArmDisasterRecoveryProperties"
             },
@@ -658,7 +658,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/AuthorizationRuleProperties"
             },
@@ -697,7 +697,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/EventhubProperties"
             },
@@ -749,7 +749,7 @@
           ]
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ConsumerGroupProperties"
             },
@@ -772,7 +772,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -787,7 +787,7 @@
           "description": "Name of this SKU."
         },
         "tier": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -802,7 +802,7 @@
           "description": "The billing tier of this particular SKU."
         },
         "capacity": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer",
               "minimum": 0,

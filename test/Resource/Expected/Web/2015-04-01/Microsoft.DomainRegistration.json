@@ -31,7 +31,7 @@
           "description": "Resource Location."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -45,7 +45,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/DomainProperties"
             },
@@ -98,7 +98,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/DomainOwnershipIdentifierProperties"
             },
@@ -160,7 +160,7 @@
       "type": "object",
       "properties": {
         "addressMailing": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/Address"
             },
@@ -225,7 +225,7 @@
       "type": "object",
       "properties": {
         "contactAdmin": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/Contact"
             },
@@ -236,7 +236,7 @@
           "description": "Administrative contact."
         },
         "contactBilling": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/Contact"
             },
@@ -247,7 +247,7 @@
           "description": "Billing contact."
         },
         "contactRegistrant": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/Contact"
             },
@@ -258,7 +258,7 @@
           "description": "Registrant contact."
         },
         "contactTech": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/Contact"
             },
@@ -269,7 +269,7 @@
           "description": "Technical contact."
         },
         "privacy": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -280,7 +280,7 @@
           "description": "<code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>."
         },
         "autoRenew": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean",
               "default": true
@@ -292,7 +292,7 @@
           "description": "<code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>."
         },
         "consent": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/DomainPurchaseConsent"
             },
@@ -303,7 +303,7 @@
           "description": "Legal agreement consent."
         },
         "dnsType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -322,7 +322,7 @@
           "description": "Azure DNS Zone to use"
         },
         "targetDnsType": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -353,7 +353,7 @@
       "type": "object",
       "properties": {
         "agreementKeys": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -401,7 +401,7 @@
           "description": "Kind of resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/DomainOwnershipIdentifierProperties"
             },

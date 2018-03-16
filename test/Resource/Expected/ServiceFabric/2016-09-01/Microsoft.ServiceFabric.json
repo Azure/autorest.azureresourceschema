@@ -28,7 +28,7 @@
           "description": "Resource location."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -42,7 +42,7 @@
           "description": "Resource tags."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ClusterProperties"
             },
@@ -93,7 +93,7 @@
           "description": "Thumbprint of the secondary certificate"
         },
         "x509StoreName": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -123,7 +123,7 @@
       "type": "object",
       "properties": {
         "isAdmin": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -153,7 +153,7 @@
       "type": "object",
       "properties": {
         "isAdmin": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -178,7 +178,7 @@
       "type": "object",
       "properties": {
         "maxPercentUnhealthyNodes": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer",
               "minimum": 0,
@@ -191,7 +191,7 @@
           "description": "The maximum allowed percentage of unhealthy nodes before reporting an error. For example, to allow 10% of nodes to be unhealthy, this value would be 10. "
         },
         "maxPercentUnhealthyApplications": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer",
               "minimum": 0,
@@ -214,7 +214,7 @@
           "description": "The ServiceFabric code version running in your cluster"
         },
         "certificate": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/CertificateDescription"
             },
@@ -225,7 +225,7 @@
           "description": "This primay certificate will be used as cluster node to node security, SSL certificate for cluster management endpoint and default admin client"
         },
         "reliabilityLevel": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -242,7 +242,7 @@
           "description": "Cluster reliability level indicates replica set size of system service."
         },
         "upgradeMode": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -257,7 +257,7 @@
           "description": "Cluster upgrade mode indicates if fabric upgrade is initiated automatically by the system or not."
         },
         "clientCertificateThumbprints": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -271,7 +271,7 @@
           "description": "The client thumbprint details ,it is used for client access for cluster operation"
         },
         "clientCertificateCommonNames": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -285,7 +285,7 @@
           "description": " List of client certificates to whitelist based on common names"
         },
         "fabricSettings": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -299,7 +299,7 @@
           "description": "List of custom fabric settings to configure the cluster."
         },
         "reverseProxyCertificate": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/CertificateDescription"
             },
@@ -314,7 +314,7 @@
           "description": "The http management endpoint of the cluster"
         },
         "nodeTypes": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -328,7 +328,7 @@
           "description": "The list of nodetypes that make up the cluster"
         },
         "azureActiveDirectory": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/AzureActiveDirectory"
             },
@@ -343,7 +343,7 @@
           "description": "The name of VM image VMSS has been configured with. Generic names such as Windows or Linux can be used."
         },
         "diagnosticsStorageAccountConfig": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/DiagnosticsStorageAccountConfig"
             },
@@ -354,7 +354,7 @@
           "description": "The storage diagnostics account configuration details"
         },
         "upgradeDescription": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ClusterUpgradePolicy"
             },
@@ -375,7 +375,7 @@
       "type": "object",
       "properties": {
         "maxPercentDeltaUnhealthyNodes": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer",
               "minimum": 0,
@@ -388,7 +388,7 @@
           "description": "Additional unhealthy nodes percentage"
         },
         "maxPercentUpgradeDomainDeltaUnhealthyNodes": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer",
               "minimum": 0,
@@ -401,7 +401,7 @@
           "description": "Additional unhealthy nodes percentage per upgrade domain "
         },
         "maxPercentDeltaUnhealthyApplications": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer",
               "minimum": 0,
@@ -425,7 +425,7 @@
       "type": "object",
       "properties": {
         "overrideUserUpgradePolicy": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -436,7 +436,7 @@
           "description": "Use the user defined upgrade policy or not"
         },
         "forceRestart": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -471,7 +471,7 @@
           "description": "The timeout for any upgrade domain,it represents .Net TimeSpan"
         },
         "healthPolicy": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ClusterHealthPolicy"
             },
@@ -482,7 +482,7 @@
           "description": "Cluster health Policy"
         },
         "deltaHealthPolicy": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/ClusterUpgradeDeltaHealthPolicy"
             },
@@ -541,7 +541,7 @@
       "type": "object",
       "properties": {
         "startPort": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -552,7 +552,7 @@
           "description": "Starting port of a range of ports"
         },
         "endPort": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -577,7 +577,7 @@
           "description": "Name of the node type"
         },
         "placementProperties": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -591,7 +591,7 @@
           "description": "The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run"
         },
         "capacities": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -605,7 +605,7 @@
           "description": "The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much of a resource a node has"
         },
         "clientConnectionEndpointPort": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -616,7 +616,7 @@
           "description": "The TCP cluster management endpoint port"
         },
         "httpGatewayEndpointPort": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -627,7 +627,7 @@
           "description": "The HTTP cluster management endpoint port"
         },
         "durabilityLevel": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -643,7 +643,7 @@
           "description": "Nodetype durability Level."
         },
         "applicationPorts": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/EndpointRangeDescription"
             },
@@ -654,7 +654,7 @@
           "description": "Ports used by applications"
         },
         "ephemeralPorts": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/EndpointRangeDescription"
             },
@@ -665,7 +665,7 @@
           "description": "System assgined application ports"
         },
         "isPrimary": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -676,7 +676,7 @@
           "description": "Mark this as the primary node type"
         },
         "vmInstanceCount": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer",
               "minimum": 1,
@@ -689,7 +689,7 @@
           "description": "The number of node instances in the node type"
         },
         "reverseProxyEndpointPort": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "integer"
             },
@@ -735,7 +735,7 @@
           "description": "The name of settings section"
         },
         "parameters": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {

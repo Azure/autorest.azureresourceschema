@@ -23,7 +23,7 @@
           ]
         },
         "sku": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/Sku"
             },
@@ -34,7 +34,7 @@
           "description": "Required. Gets or sets the sku name."
         },
         "kind": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -54,7 +54,7 @@
           "description": "Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed."
         },
         "tags": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "object",
               "additionalProperties": {
@@ -68,7 +68,7 @@
           "description": "Gets or sets a list of key value pairs that describe the resource. These tags can be used for viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key with a length no greater than 128 characters and a value with a length no greater than 256 characters."
         },
         "identity": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/Identity"
             },
@@ -79,7 +79,7 @@
           "description": "The identity of the resource."
         },
         "properties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/StorageAccountPropertiesCreateParameters"
             },
@@ -111,7 +111,7 @@
           "description": "Gets or sets the custom domain name assigned to the storage account. Name is the CNAME source."
         },
         "useSubDomain": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -131,7 +131,7 @@
       "type": "object",
       "properties": {
         "services": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/EncryptionServices"
             },
@@ -142,7 +142,7 @@
           "description": "List of services which support encryption."
         },
         "keySource": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -157,7 +157,7 @@
           "description": "The encryption keySource (provider). Possible values (case-insensitive):  Microsoft.Storage, Microsoft.Keyvault."
         },
         "keyvaultproperties": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/KeyVaultProperties"
             },
@@ -177,7 +177,7 @@
       "type": "object",
       "properties": {
         "enabled": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean"
             },
@@ -194,7 +194,7 @@
       "type": "object",
       "properties": {
         "blob": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/EncryptionService"
             },
@@ -205,7 +205,7 @@
           "description": "The encryption function of the blob storage service."
         },
         "file": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/EncryptionService"
             },
@@ -242,7 +242,7 @@
           "description": "Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed."
         },
         "action": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -283,7 +283,7 @@
       "type": "object",
       "properties": {
         "bypass": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -300,7 +300,7 @@
           "description": "Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, \"Logging, Metrics\"), or None to bypass none of those traffics."
         },
         "virtualNetworkRules": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -314,7 +314,7 @@
           "description": "Sets the virtual network rules"
         },
         "ipRules": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -328,7 +328,7 @@
           "description": "Sets the IP ACL rules"
         },
         "defaultAction": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -352,7 +352,7 @@
       "type": "object",
       "properties": {
         "reasonCode": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -373,7 +373,7 @@
       "type": "object",
       "properties": {
         "name": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -391,7 +391,7 @@
           "description": "Gets or sets the sku name. Required for account creation; optional for update. Note that in older versions, sku name was called accountType."
         },
         "restrictions": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "array",
               "items": {
@@ -414,7 +414,7 @@
       "type": "object",
       "properties": {
         "customDomain": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/CustomDomain"
             },
@@ -425,7 +425,7 @@
           "description": "User domain assigned to the storage account. Name is the CNAME source. Only one custom domain is supported per storage account at this time. To clear the existing custom domain, use an empty string for the custom domain name property."
         },
         "encryption": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/Encryption"
             },
@@ -436,7 +436,7 @@
           "description": "Provides the encryption settings on the account. If left unspecified the account encryption settings will remain the same. The default setting is unencrypted."
         },
         "networkAcls": {
-          "oneOf": [
+          "anyOf": [
             {
               "$ref": "#/definitions/NetworkRuleSet"
             },
@@ -447,7 +447,7 @@
           "description": "Network rule set"
         },
         "accessTier": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -462,7 +462,7 @@
           "description": "Required for storage accounts where kind = BlobStorage. The access tier used for billing."
         },
         "supportsHttpsTrafficOnly": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "boolean",
               "default": false
@@ -484,7 +484,7 @@
           "description": "Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}."
         },
         "action": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
@@ -498,7 +498,7 @@
           "description": "The action of virtual network rule."
         },
         "state": {
-          "oneOf": [
+          "anyOf": [
             {
               "type": "string",
               "enum": [
