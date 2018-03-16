@@ -113,7 +113,7 @@ namespace AutoRest.AzureResourceSchema
                         writer.WritePropertyName(definitionName);
                         writer.WriteStartObject();
 
-                        writer.WritePropertyName("oneOf");
+                        writer.WritePropertyName("anyOf");
                         writer.WriteStartArray();
 
                         if (definition.Description != null)
@@ -178,7 +178,6 @@ namespace AutoRest.AzureResourceSchema
 
             if (definition.JsonType != "object" || !definition.IsEmpty())
             {
-                WriteProperty(writer, "type", definition.JsonType);
                 WriteProperty(writer, "minimum", definition.Minimum);
                 WriteProperty(writer, "maximum", definition.Maximum);
                 WriteProperty(writer, "pattern", definition.Pattern);
@@ -199,6 +198,7 @@ namespace AutoRest.AzureResourceSchema
                 WriteDefinitionMap(writer, "properties", definition.Properties, addExpressionReferences: true);
                 WriteStringArray(writer, "required", definition.Required);
             }
+            WriteProperty(writer, "type", definition.JsonType);
             WriteProperty(writer, "description", definition.Description);
 
             writer.WriteEndObject();
