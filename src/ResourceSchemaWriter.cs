@@ -192,7 +192,12 @@ namespace AutoRest.AzureResourceSchema
                 WriteDefinitionArray(writer, "oneOf", definition.OneOf);
                 WriteDefinitionArray(writer, "anyOf", definition.AnyOf);
                 WriteDefinitionArray(writer, "allOf", definition.AllOf);
-                WriteProperty(writer, "format", definition.Format);
+                
+                // uuid in format on schemas makes VS cry. just leave it as a string with the pattern.
+                if( definition.Format != "uuid") {
+                    WriteProperty(writer, "format", definition.Format);
+                }
+
                 WriteProperty(writer, "$ref", definition.Ref);
                 WriteDefinition(writer, "items", definition.Items);
                 WriteDefinition(writer, "additionalProperties", definition.AdditionalProperties);
