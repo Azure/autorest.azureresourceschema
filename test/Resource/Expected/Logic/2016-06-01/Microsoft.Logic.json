@@ -41,7 +41,6 @@
           "description": "The resource tags."
         },
         "properties": {
-          "type": "object",
           "description": "The integration account properties."
         },
         "sku": {
@@ -2628,7 +2627,6 @@
       "type": "object",
       "properties": {
         "metadata": {
-          "type": "object",
           "description": "The metadata."
         },
         "agreementType": {
@@ -2704,7 +2702,6 @@
       "type": "object",
       "properties": {
         "metadata": {
-          "type": "object",
           "description": "The metadata."
         },
         "key": {
@@ -2763,7 +2760,6 @@
           "description": "The content type."
         },
         "metadata": {
-          "type": "object",
           "description": "The metadata."
         }
       },
@@ -2801,7 +2797,6 @@
           "description": "The partner type."
         },
         "metadata": {
-          "type": "object",
           "description": "The metadata."
         },
         "content": {
@@ -3189,7 +3184,6 @@
           "description": "The file name."
         },
         "metadata": {
-          "type": "object",
           "description": "The metadata."
         },
         "content": {
@@ -3210,7 +3204,6 @@
       "type": "object",
       "properties": {
         "content": {
-          "type": "object",
           "description": "The session content."
         }
       },
@@ -3298,7 +3291,6 @@
       "description": "The integration account partner content."
     },
     "ResourceReference": {
-      "type": "object",
       "description": "The resource reference."
     },
     "Sku": {
@@ -3359,11 +3351,9 @@
           "description": "The type."
         },
         "value": {
-          "type": "object",
           "description": "The value."
         },
         "metadata": {
-          "type": "object",
           "description": "The metadata."
         },
         "description": {
@@ -3418,7 +3408,6 @@
           "description": "The integration account."
         },
         "definition": {
-          "type": "object",
           "description": "The definition."
         },
         "parameters": {

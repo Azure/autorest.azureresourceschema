@@ -165,7 +165,6 @@
           "description": "Gets or sets the content hash."
         },
         "metadata": {
-          "type": "object",
           "description": "Gets or sets the metadata."
         }
       }
@@ -248,11 +247,9 @@
           "description": "Gets or sets the type."
         },
         "value": {
-          "type": "object",
           "description": "Gets or sets the value."
         },
         "metadata": {
-          "type": "object",
           "description": "Gets or sets the metadata."
         }
       }
@@ -301,7 +298,6 @@
           "description": "Gets or sets the link to definition."
         },
         "definition": {
-          "type": "object",
           "description": "Gets or sets the definition."
         },
         "parametersLink": {

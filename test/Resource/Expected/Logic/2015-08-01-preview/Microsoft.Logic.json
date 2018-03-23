@@ -45,7 +45,6 @@
           "description": "The resource tags."
         },
         "properties": {
-          "type": "object",
           "description": "The integration account properties."
         },
         "sku": {
@@ -2307,7 +2306,6 @@
       "type": "object",
       "properties": {
         "metadata": {
-          "type": "object",
           "description": "The metadata."
         },
         "agreementType": {
@@ -2374,7 +2372,6 @@
       "type": "object",
       "properties": {
         "metadata": {
-          "type": "object",
           "description": "The metadata."
         },
         "key": {
@@ -2413,7 +2410,6 @@
           "description": "The map type."
         },
         "content": {
-          "type": "object",
           "description": "The content."
         },
         "contentType": {
@@ -2421,7 +2417,6 @@
           "description": "The content type."
         },
         "metadata": {
-          "type": "object",
           "description": "The metadata."
         }
       }
@@ -2445,7 +2440,6 @@
           "description": "The partner type."
         },
         "metadata": {
-          "type": "object",
           "description": "The metadata."
         },
         "content": {
@@ -2784,7 +2778,6 @@
           "description": "The target namespace."
         },
         "content": {
-          "type": "object",
           "description": "The content."
         },
         "contentType": {
@@ -2792,7 +2785,6 @@
           "description": "The content type."
         },
         "metadata": {
-          "type": "object",
           "description": "The metadata."
         }
       }
