@@ -292,6 +292,11 @@ namespace AutoRest.AzureResourceSchema
                 {
                     return ParseSequenceType(property, sequenceType, definitions, modelTypes);
                 }
+                // A schema that matches anything
+                if (type is MultiType)
+                {
+                    return new JsonSchema();
+                }
                 Debug.Fail("Unrecognized property type: " + type.GetType());
             }
             return null;

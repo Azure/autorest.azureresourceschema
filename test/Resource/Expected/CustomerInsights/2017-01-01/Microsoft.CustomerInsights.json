@@ -621,9 +621,7 @@
           "oneOf": [
             {
               "type": "object",
-              "additionalProperties": {
-                "type": "object"
-              }
+              "additionalProperties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -986,7 +984,6 @@
       "description": "Connector mapping property structure."
     },
     "DataSource": {
-      "type": "object",
       "description": "Data Source is a way for us to know the source of instances. A single type can have data coming in from multiple places. In activities we use this to determine precedence rules."
     },
     "HubBillingInfoFormat": {

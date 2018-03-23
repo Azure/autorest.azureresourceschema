@@ -55,7 +55,7 @@ task 'regenerate', '', (done) ->
       'EventHub': { folder: 'eventhub', tags: [ 'package-2017-04', 'package-2015-08' ] },
       # 'IotHub': { folder: 'iothub', tags: [ 'package-2017-07', 'package-2017-01', 'package-2016-02' ] },
       # 'KeyVault': { folder: 'keyvault', tags: [ 'package-2016-10', 'package-2015-06' ] },
-      'Logic': { folder: 'logic', tags: [ 'package-2016-06', 'package-2015-08-preview', 'package-2015-02-preview' ] },
+      # 'Logic': { folder: 'logic', tags: [ 'package-2016-06', 'package-2015-08-preview', 'package-2015-02-preview' ] }, # missing 'type: object'
       # 'Monitor': { folder: 'monitor', tags: [ 'package-2017-09' ] },
       'Network': { folder: 'network', tags: [ 'package-2017-10', 'package-2017-09', 'package-2017-08', 'package-2017-06', 'package-2017-03', 'package-2016-12', 'package-2016-09', 'package-2016-06', 'package-2016-03' ] },
       # 'NotificationHubs': { folder: 'notificationhubs', tags: [ 'package-2017-04', 'package-2016-03', 'package-2014-09' ] },
@@ -69,10 +69,10 @@ task 'regenerate', '', (done) ->
       # 'Scheduler': { folder: 'scheduler', tags: [ 'package-2016-03', 'package-2016-01', 'package-2014-08-preview' ] },
       # 'Search': { folder: 'search', tags: [ 'package-2015-08', 'package-2015-02' ] },
       'ServiceBus': { folder: 'servicebus', tags: [ 'package-2017-04', 'package-2015-08' ] },
-      'ServiceFabric': { folder: 'servicefabric', tags: [ 'package-2017-07', 'package-2016-09' ] },
+      # 'ServiceFabric': { folder: 'servicefabric', tags: [ 'package-2017-07', 'package-2016-09' ] }, # missing 'type: object'
       'Storage': { folder: 'storage', tags: [ 'package-2017-10', 'package-2017-06', 'package-2016-12', 'package-2016-05', 'package-2016-01', 'package-2015-06', 'package-2015-05-preview' ] },
       # 'TrafficManager': { folder: 'trafficmanager', tags: [ 'package-2017-09-preview', 'package-2017-05', 'package-2017-03', 'package-2015-11' ] },
-      'Web': { folder: 'web', tags: [ 'package-2016-09' ] },
+      # 'Web': { folder: 'web', tags: [ 'package-2016-09' ] }, # missing 'type: object'
       # 'poly': { file: __dirname + "/../test/Resource/poly-service.json", tags: [ '' ] }
     },
     'language': 'azureresourceschema'

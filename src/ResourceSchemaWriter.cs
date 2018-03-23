@@ -113,7 +113,7 @@ namespace AutoRest.AzureResourceSchema
                         writer.WritePropertyName(definitionName);
                         writer.WriteStartObject();
 
-                        writer.WritePropertyName("oneOf");
+                        writer.WritePropertyName(definition.JsonType == "object" && definition.IsEmpty() ? "anyOf" : "oneOf"); // hack, until MultiType thing is enforced across the specs repo!
                         writer.WriteStartArray();
 
                         if (definition.Description != null)
@@ -176,9 +176,9 @@ namespace AutoRest.AzureResourceSchema
 
             writer.WriteStartObject();
 
-            WriteProperty(writer, "type", definition.JsonType);
             if (definition.JsonType != "object" || !definition.IsEmpty())
             {
+                WriteProperty(writer, "type", definition.JsonType); // move out once MultiType is here
                 WriteProperty(writer, "minimum", definition.Minimum);
                 WriteProperty(writer, "maximum", definition.Maximum);
                 WriteProperty(writer, "pattern", definition.Pattern);

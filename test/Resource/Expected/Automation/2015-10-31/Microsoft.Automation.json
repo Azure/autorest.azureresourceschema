@@ -2287,7 +2287,6 @@
           "description": "Gets or sets the end time of the schedule."
         },
         "interval": {
-          "type": "object",
           "description": "Gets or sets the interval of the schedule."
         },
         "frequency": {
