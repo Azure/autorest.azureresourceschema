@@ -583,6 +583,7 @@
       "description": "Microsoft.Relay/namespaces/WcfRelays"
     },
     "RelayNamespaceProperties": {
+      "type": "object",
       "description": "Properties of the Namespace."
     },
     "Sku": {

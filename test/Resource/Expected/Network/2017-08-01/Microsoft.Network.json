@@ -5136,6 +5136,7 @@
       "description": "Microsoft.Network/networkSecurityGroups/securityRules"
     },
     "NetworkWatcherPropertiesFormat": {
+      "type": "object",
       "description": "The network watcher properties."
     },
     "networkWatchers_packetCaptures_childResource": {

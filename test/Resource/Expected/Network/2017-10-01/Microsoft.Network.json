@@ -3266,6 +3266,7 @@
       "description": "An application security group in a resource group."
     },
     "ApplicationSecurityGroupPropertiesFormat": {
+      "type": "object",
       "description": "Application security group properties."
     },
     "AuthorizationPropertiesFormat": {
@@ -5426,6 +5427,7 @@
       "description": "Microsoft.Network/networkSecurityGroups/securityRules"
     },
     "NetworkWatcherPropertiesFormat": {
+      "type": "object",
       "description": "The network watcher properties."
     },
     "networkWatchers_connectionMonitors_childResource": {

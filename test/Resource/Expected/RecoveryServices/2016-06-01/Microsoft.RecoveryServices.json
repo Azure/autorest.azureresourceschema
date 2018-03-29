@@ -187,6 +187,7 @@
       "description": "Identifies the unique system identifier for each Azure resource."
     },
     "UpgradeDetails": {
+      "type": "object",
       "description": "Details for upgrading vault."
     },
     "VaultProperties": {

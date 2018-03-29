@@ -113,7 +113,7 @@ namespace AutoRest.AzureResourceSchema
                         writer.WritePropertyName(definitionName);
                         writer.WriteStartObject();
 
-                        writer.WritePropertyName(definition.JsonType == "object" && definition.IsEmpty() ? "anyOf" : "oneOf"); // hack, until MultiType thing is enforced across the specs repo!
+                        writer.WritePropertyName("oneOf");
                         writer.WriteStartArray();
 
                         if (definition.Description != null)
@@ -123,12 +123,12 @@ namespace AutoRest.AzureResourceSchema
                             definition = definition.Clone();
                             definition.Description = null;
                         }
-                        WriteDefinition(writer, definition);
+                        WriteDefinition(writer, definition, true);
 
                         WriteDefinition(writer, new JsonSchema()
                         {
                             Ref = "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                        });
+                        }, false);
 
                         writer.WriteEndArray();
 
@@ -150,7 +150,7 @@ namespace AutoRest.AzureResourceSchema
             if (definition != null)
             {
                 writer.WritePropertyName(resourceName);
-                WriteDefinition(writer, definition);
+                WriteDefinition(writer, definition, resourceName != "additionalProperties");
             }
         }
 
@@ -167,7 +167,7 @@ namespace AutoRest.AzureResourceSchema
             }
         }
 
-        private static void WriteDefinition(JsonWriter writer, JsonSchema definition)
+        private static void WriteDefinition(JsonWriter writer, JsonSchema definition, bool writeType)
         {
             if (definition == null)
             {
@@ -176,9 +176,11 @@ namespace AutoRest.AzureResourceSchema
 
             writer.WriteStartObject();
 
+            if (definition.JsonType != "object" || !definition.IsEmpty() || writeType)
+                WriteProperty(writer, "type", definition.JsonType); // unconditional once MultiType is here
+
             if (definition.JsonType != "object" || !definition.IsEmpty())
             {
-                WriteProperty(writer, "type", definition.JsonType); // move out once MultiType is here
                 WriteProperty(writer, "minimum", definition.Minimum);
                 WriteProperty(writer, "maximum", definition.Maximum);
                 WriteProperty(writer, "pattern", definition.Pattern);
@@ -232,7 +234,7 @@ namespace AutoRest.AzureResourceSchema
                 writer.WriteStartArray();
                 foreach (JsonSchema definition in arrayDefinitions)
                 {
-                    WriteDefinition(writer, definition);
+                    WriteDefinition(writer, definition, true);
                 }
                 writer.WriteEndArray();
             }

@@ -233,6 +233,7 @@
           "description": "Gets or sets the next run time's offset in minutes."
         },
         "interval": {
+          "type": "object",
           "description": "Gets or sets the interval of the schedule."
         },
         "frequency": {
