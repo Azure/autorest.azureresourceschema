@@ -1574,6 +1574,7 @@
           "description": "Function URI."
         },
         "config": {
+          "type": "object",
           "description": "Config information."
         },
         "files": {
@@ -1844,6 +1845,7 @@
       "type": "object",
       "properties": {
         "type": {
+          "type": "object",
           "description": "Type of managed service identity."
         }
       },

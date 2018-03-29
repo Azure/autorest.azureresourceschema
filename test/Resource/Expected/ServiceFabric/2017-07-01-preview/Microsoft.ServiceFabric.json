@@ -468,6 +468,7 @@
       "description": "The application resource properties."
     },
     "ApplicationTypeProperties": {
+      "type": "object",
       "description": "The application type name properties"
     },
     "ApplicationUpgradePolicy": {

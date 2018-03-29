@@ -984,6 +984,7 @@
       "description": "Connector mapping property structure."
     },
     "DataSource": {
+      "type": "object",
       "description": "Data Source is a way for us to know the source of instances. A single type can have data coming in from multiple places. In activities we use this to determine precedence rules."
     },
     "HubBillingInfoFormat": {

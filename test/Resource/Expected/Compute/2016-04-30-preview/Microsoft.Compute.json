@@ -2009,9 +2009,11 @@
           "description": "Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true."
         },
         "settings": {
+          "type": "object",
           "description": "Json formatted public settings for the extension."
         },
         "protectedSettings": {
+          "type": "object",
           "description": "The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all."
         },
         "instanceView": {
@@ -2319,9 +2321,11 @@
           "description": "Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true."
         },
         "settings": {
+          "type": "object",
           "description": "Json formatted public settings for the extension."
         },
         "protectedSettings": {
+          "type": "object",
           "description": "The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all."
         }
       },

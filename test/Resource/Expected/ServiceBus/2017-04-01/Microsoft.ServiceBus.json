@@ -977,6 +977,7 @@
       "description": "AuthorizationRule properties."
     },
     "SBNamespaceProperties": {
+      "type": "object",
       "description": "Properties of the namespace."
     },
     "SBQueueProperties": {
