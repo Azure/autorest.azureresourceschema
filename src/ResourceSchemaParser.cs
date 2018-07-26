@@ -19,7 +19,8 @@ namespace AutoRest.AzureResourceSchema
     public static class ResourceSchemaParser
     {
         private const string resourceMethodPrefix = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/";
-        private static Regex resourceMethodPrefixRx = new Regex( "^/subscriptions/{subscriptionId}/resourceGroups/{\\w*}/providers/",RegexOptions.IgnoreCase );
+        // private static Regex resourceMethodPrefixRx = new Regex( "^/subscriptions/{subscriptionId}/resourceGroups/{\\w*}/providers/",RegexOptions.IgnoreCase );
+        private static Regex resourceMethodPrefixRx = new Regex( "^.*/providers/",RegexOptions.IgnoreCase );
 
         /// <summary>
         /// Parse a ResourceSchemaModel from the provided ServiceClient.
@@ -134,6 +135,15 @@ namespace AutoRest.AzureResourceSchema
                     resourceDefinition.Description = resourceType;
 
                     string resourcePropertyName = resourceType.Substring(resourceProvider.Length + 1).Replace('/', '_');
+                    if( string.IsNullOrEmpty(resourcePropertyName) ) {
+                        // System.Console.Error.WriteLine($"Skipping '{method.Url}' -- no resource type.");
+                        continue;
+                    }
+
+                    if( resourceSchema.ResourceDefinitions.ContainsKey(resourcePropertyName) ) {
+                        // System.Console.Error.WriteLine($"Uh oh. '{resourcePropertyName}' -- duplicated?");
+                        continue;
+                    }
 
                     Debug.Assert(!resourceSchema.ResourceDefinitions.ContainsKey(resourcePropertyName));
                     resourceSchema.AddResourceDefinition(resourcePropertyName, resourceDefinition);
