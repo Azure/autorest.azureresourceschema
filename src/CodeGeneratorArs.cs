@@ -44,7 +44,9 @@ namespace AutoRest.AzureResourceSchema
 
                     foreach (var m in md)
                     {
-                        var content = m.Content.Replace("\"boolean\"", "boolean");
+                        // what the heck was this doing in the first place!??!
+                        // var content = m.Content.Replace("\"boolean\"", "boolean");
+                        var content = m.Content;
                         // place nested topics in subdirectories
                         await Write(content, Path.Combine(version, m.Type.Replace('_', Path.DirectorySeparatorChar) + ".md"), false);
                     }
