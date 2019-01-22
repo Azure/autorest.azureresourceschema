@@ -30,13 +30,11 @@ namespace AutoRest.AzureResourceSchema
     {
         public static int Main(string[] args )
         {
-            Console.Error.WriteLine("HI");
             if(args != null && args.Length > 0 && args[0] == "--server") {
                 var connection = new Connection(Console.OpenStandardOutput(), Console.OpenStandardInput());
                 connection.Dispatch<IEnumerable<string>>("GetPluginNames", async () => new []{ "azureresourceschema", "imodeler2" });
                 
                 connection.Dispatch<string, string, bool>("Process", (plugin, sessionId) => {
-                    Console.Error.WriteLine("Process?");
                     if( plugin == "imodeler2") {
                         return  new  AutoRest.Modeler.ModelerPlugin(connection, plugin, sessionId).Process();
                     } 
