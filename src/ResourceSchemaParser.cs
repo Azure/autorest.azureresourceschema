@@ -19,17 +19,18 @@ namespace AutoRest.AzureResourceSchema
     public static class ResourceSchemaParser
     {
         private const string resourceMethodPrefix = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/";
-        // private static Regex resourceMethodPrefixRx = new Regex( "^/subscriptions/{subscriptionId}/resourceGroups/{\\w*}/providers/",RegexOptions.IgnoreCase );
-        private static Regex resourceMethodPrefixRx = new Regex( "^.*/providers/",RegexOptions.IgnoreCase );
+        private static Regex resourceMethodPrefixRxRegular = new Regex( "^/subscriptions/{subscriptionId}/resourceGroups/{\\w*}/providers/",RegexOptions.IgnoreCase );
+        private static Regex resourceMethodPrefixRxTenant = new Regex( "^.*/providers/",RegexOptions.IgnoreCase );
 
         /// <summary>
         /// Parse a ResourceSchemaModel from the provided ServiceClient.
         /// </summary>
         /// <param name="serviceClient"></param>
         /// <returns></returns>
-        public static IDictionary<string, ResourceSchema> Parse(CodeModel serviceClient, string version)
+        public static IDictionary<string, ResourceSchema> Parse(CodeModel serviceClient, string version, bool includeTenantLevel)
         {
-            
+            var resourceMethodPrefixRx =  includeTenantLevel ? resourceMethodPrefixRxTenant : resourceMethodPrefixRxRegular;
+
             if (serviceClient == null)
             {
                 throw new ArgumentNullException(nameof(serviceClient));
@@ -39,6 +40,8 @@ namespace AutoRest.AzureResourceSchema
 
             foreach (Method method in serviceClient.Methods.Where( method => method.Parameters.FirstOrDefault(p => p.SerializedName == "api-version")?.DefaultValue.Value == version || version == serviceClient.ApiVersion))
             {
+                
+
                 if (method.HttpMethod != HttpMethod.Put ||
                     string.IsNullOrWhiteSpace(method.Url) ||
                     !resourceMethodPrefixRx.IsMatch(method.Url) || 

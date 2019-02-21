@@ -24,6 +24,9 @@ namespace AutoRest.AzureResourceSchema
 
         public override async Task Generate(CodeModel serviceClient)
         {
+            var tenantLevel = Settings.Instance.Host?.GetValue<bool?>("include-tenant-level").Result == true;
+            
+
             var apiVersions = serviceClient.Methods
                 .Select(method => method.Parameters.FirstOrDefault(p => p.SerializedName == "api-version")?.DefaultValue.Value)
                 .Concat(new [] { serviceClient.ApiVersion })
@@ -32,7 +35,7 @@ namespace AutoRest.AzureResourceSchema
 
             foreach(var version in apiVersions)
             { 
-                var resourceSchemas = ResourceSchemaParser.Parse(serviceClient, version);
+                var resourceSchemas = ResourceSchemaParser.Parse(serviceClient, version,tenantLevel);
 
                 foreach (string resourceProvider in resourceSchemas.Keys)
                 {
