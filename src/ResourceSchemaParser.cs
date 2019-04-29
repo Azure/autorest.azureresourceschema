@@ -18,6 +18,14 @@ namespace AutoRest.AzureResourceSchema
     /// </summary>
     public static class ResourceSchemaParser
     {
+        public static void LogMessage(string message) {
+            AutoRest.Core.Logging.Logger.Instance.Log(new Core.Logging.LogMessage(Core.Logging.Category.Information,message));
+        }
+
+        public static void LogDebug(string message) {
+               AutoRest.Core.Logging.Logger.Instance.Log(new Core.Logging.LogMessage(Core.Logging.Category.Debug,message));
+        }
+
         private const string resourceMethodPrefix = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/";
         private static Regex resourceMethodPrefixRxRegular = new Regex( "^/subscriptions/{subscriptionId}/resourceGroups/{\\w*}/providers/",RegexOptions.IgnoreCase );
         private static Regex resourceMethodPrefixRxTenant = new Regex( "^.*/providers/",RegexOptions.IgnoreCase );
@@ -40,13 +48,14 @@ namespace AutoRest.AzureResourceSchema
 
             foreach (Method method in serviceClient.Methods.Where( method => method.Parameters.FirstOrDefault(p => p.SerializedName == "api-version")?.DefaultValue.Value == version || version == serviceClient.ApiVersion))
             {
-                
-
                 if (method.HttpMethod != HttpMethod.Put ||
                     string.IsNullOrWhiteSpace(method.Url) ||
                     !resourceMethodPrefixRx.IsMatch(method.Url) || 
                     !method.Url.EndsWith("}", StringComparison.OrdinalIgnoreCase))
                 {
+                    if( method.HttpMethod == HttpMethod.Put ) {
+                        LogMessage( $"Skipping unmatched path '{method.Url}'");
+                    }
                     continue;
                 }
 
