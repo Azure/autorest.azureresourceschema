@@ -24,8 +24,9 @@ This project uses a git submodule for dependent code. When cloning this reposito
 ``` yaml
 load-priority: 1000
 enable-multi-api: true
-try-require:
-  - ./readme.enable-multi-api.md
+
+azureresourceschema:
+  title: none
 
 pipeline:
   azureresourceschema/imodeler2:
