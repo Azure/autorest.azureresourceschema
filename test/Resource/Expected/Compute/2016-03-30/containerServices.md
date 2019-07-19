@@ -43,7 +43,7 @@ To create a Microsoft.ContainerService/containerServices resource, add the follo
     },
     "diagnosticsProfile": {
       "vmDiagnostics": {
-        "enabled": boolean
+        "enabled": "boolean"
       }
     }
   }

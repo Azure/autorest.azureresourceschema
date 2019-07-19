@@ -13,19 +13,19 @@ To create a Microsoft.Web/sites/slots resource, add the following JSON to the re
   "location": "string",
   "tags": {},
   "properties": {
-    "enabled": boolean,
+    "enabled": "boolean",
     "hostNameSslStates": [
       {
         "name": "string",
         "sslState": "string",
         "virtualIP": "string",
         "thumbprint": "string",
-        "toUpdate": boolean,
+        "toUpdate": "boolean",
         "hostType": "string"
       }
     ],
     "serverFarmId": "string",
-    "reserved": boolean,
+    "reserved": "boolean",
     "siteConfig": {
       "numberOfWorkers": "integer",
       "defaultDocuments": [
@@ -36,13 +36,13 @@ To create a Microsoft.Web/sites/slots resource, add the following JSON to the re
       "pythonVersion": "string",
       "nodeVersion": "string",
       "linuxFxVersion": "string",
-      "requestTracingEnabled": boolean,
+      "requestTracingEnabled": "boolean",
       "requestTracingExpirationTime": "string",
-      "remoteDebuggingEnabled": boolean,
+      "remoteDebuggingEnabled": "boolean",
       "remoteDebuggingVersion": "string",
-      "httpLoggingEnabled": boolean,
+      "httpLoggingEnabled": "boolean",
       "logsDirectorySizeLimit": "integer",
-      "detailedErrorLoggingEnabled": boolean,
+      "detailedErrorLoggingEnabled": "boolean",
       "publishingUsername": "string",
       "appSettings": [
         {
@@ -66,9 +66,9 @@ To create a Microsoft.Web/sites/slots resource, add the following JSON to the re
       ],
       "documentRoot": "string",
       "scmType": "string",
-      "use32BitWorkerProcess": boolean,
-      "webSocketsEnabled": boolean,
-      "alwaysOn": boolean,
+      "use32BitWorkerProcess": "boolean",
+      "webSocketsEnabled": "boolean",
+      "alwaysOn": "boolean",
       "javaVersion": "string",
       "javaContainer": "string",
       "javaContainerVersion": "string",
@@ -78,7 +78,7 @@ To create a Microsoft.Web/sites/slots resource, add the following JSON to the re
         {
           "virtualPath": "string",
           "physicalPath": "string",
-          "preloadEnabled": boolean,
+          "preloadEnabled": "boolean",
           "virtualDirectories": [
             {
               "virtualPath": "string",
@@ -107,7 +107,7 @@ To create a Microsoft.Web/sites/slots resource, add the following JSON to the re
         "maxMemoryInMb": "integer",
         "maxDiskSizeInMb": "integer"
       },
-      "autoHealEnabled": boolean,
+      "autoHealEnabled": "boolean",
       "autoHealRules": {
         "triggers": {
           "requests": {
@@ -149,7 +149,7 @@ To create a Microsoft.Web/sites/slots resource, add the following JSON to the re
       "push": {
         "kind": "string",
         "properties": {
-          "isPushEnabled": boolean,
+          "isPushEnabled": "boolean",
           "tagWhitelistJson": "string",
           "tagsRequiringAuth": "string",
           "dynamicTagsJson": "string"
@@ -159,7 +159,7 @@ To create a Microsoft.Web/sites/slots resource, add the following JSON to the re
         "url": "string"
       },
       "autoSwapSlotName": "string",
-      "localMySqlEnabled": boolean,
+      "localMySqlEnabled": "boolean",
       "ipSecurityRestrictions": [
         {
           "ipAddress": "string",
@@ -167,27 +167,27 @@ To create a Microsoft.Web/sites/slots resource, add the following JSON to the re
         }
       ]
     },
-    "scmSiteAlsoStopped": boolean,
+    "scmSiteAlsoStopped": "boolean",
     "hostingEnvironmentProfile": {
       "id": "string"
     },
-    "clientAffinityEnabled": boolean,
-    "clientCertEnabled": boolean,
-    "hostNamesDisabled": boolean,
+    "clientAffinityEnabled": "boolean",
+    "clientCertEnabled": "boolean",
+    "hostNamesDisabled": "boolean",
     "containerSize": "integer",
     "dailyMemoryTimeQuota": "integer",
     "cloningInfo": {
       "correlationId": "string",
-      "overwrite": boolean,
-      "cloneCustomHostNames": boolean,
-      "cloneSourceControl": boolean,
+      "overwrite": "boolean",
+      "cloneCustomHostNames": "boolean",
+      "cloneSourceControl": "boolean",
       "sourceWebAppId": "string",
       "hostingEnvironment": "string",
       "appSettingsOverrides": {},
-      "configureLoadBalancing": boolean,
+      "configureLoadBalancing": "boolean",
       "trafficManagerProfileId": "string",
       "trafficManagerProfileName": "string",
-      "ignoreQuotas": boolean
+      "ignoreQuotas": "boolean"
     },
     "snapshotInfo": {
       "kind": "string",
@@ -197,12 +197,12 @@ To create a Microsoft.Web/sites/slots resource, add the following JSON to the re
           "location": "string",
           "id": "string"
         },
-        "overwrite": boolean,
-        "recoverConfiguration": boolean,
-        "ignoreConflictingHostNames": boolean
+        "overwrite": "boolean",
+        "recoverConfiguration": "boolean",
+        "ignoreConflictingHostNames": "boolean"
       }
     },
-    "httpsOnly": boolean
+    "httpsOnly": "boolean"
   },
   "identity": {
     "type": {}

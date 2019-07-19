@@ -18,7 +18,7 @@ To create a Microsoft.CertificateRegistration/certificateOrders resource, add th
     "validityInYears": "integer",
     "keySize": "integer",
     "productType": "string",
-    "autoRenew": boolean,
+    "autoRenew": "boolean",
     "csr": "string"
   },
   "resources": []

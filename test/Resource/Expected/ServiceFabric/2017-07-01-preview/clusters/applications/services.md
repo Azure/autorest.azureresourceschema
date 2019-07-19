@@ -28,16 +28,11 @@ To create a Microsoft.ServiceFabric/clusters/applications/services resource, add
       }
     ],
     "servicePlacementPolicies": [
-      {
-        "Type": "string"
-      }
+      {}
     ],
     "defaultMoveCost": "string",
     "serviceTypeName": "string",
-    "partitionDescription": {
-      "PartitionScheme": "string"
-    },
-    "serviceKind": "string"
+    "partitionDescription": {}
   }
 }
 ```
@@ -67,7 +62,6 @@ The following tables describe the values you need to set in the schema.
 |  defaultMoveCost | enum | No | Zero, Low, Medium, High |
 |  serviceTypeName | string | No | The name of the service type |
 |  partitionDescription | object | No | [PartitionSchemeDescription object](#PartitionSchemeDescription) |
-|  serviceKind | string | Yes |  |
 
 
 <a id="ServiceCorrelationDescription" />
@@ -87,18 +81,4 @@ The following tables describe the values you need to set in the schema.
 |  PrimaryDefaultLoad | integer | No | Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica. |
 |  SecondaryDefaultLoad | integer | No | Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica. |
 |  DefaultLoad | integer | No | Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric. |
-
-
-<a id="ServicePlacementPolicyDescription" />
-### ServicePlacementPolicyDescription object
-|  Name | Type | Required | Value |
-|  ---- | ---- | ---- | ---- |
-|  Type | string | Yes |  |
-
-
-<a id="PartitionSchemeDescription" />
-### PartitionSchemeDescription object
-|  Name | Type | Required | Value |
-|  ---- | ---- | ---- | ---- |
-|  PartitionScheme | string | Yes |  |
 

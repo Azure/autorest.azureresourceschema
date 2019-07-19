@@ -10,7 +10,7 @@ To create a Microsoft.Automation/automationAccounts/webhooks resource, add the f
   "type": "Microsoft.Automation/automationAccounts/webhooks",
   "apiVersion": "2015-10-31",
   "properties": {
-    "isEnabled": boolean,
+    "isEnabled": "boolean",
     "uri": "string",
     "expiryTime": "string",
     "parameters": {},

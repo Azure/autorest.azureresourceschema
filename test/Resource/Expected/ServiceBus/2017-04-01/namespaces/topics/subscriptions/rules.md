@@ -13,12 +13,12 @@ To create a Microsoft.ServiceBus/namespaces/topics/subscriptions/rules resource,
     "action": {
       "sqlExpression": "string",
       "compatibilityLevel": "integer",
-      "requiresPreprocessing": boolean
+      "requiresPreprocessing": "boolean"
     },
     "filterType": "string",
     "sqlFilter": {
       "sqlExpression": "string",
-      "requiresPreprocessing": boolean
+      "requiresPreprocessing": "boolean"
     },
     "correlationFilter": {
       "correlationId": "string",
@@ -29,7 +29,7 @@ To create a Microsoft.ServiceBus/namespaces/topics/subscriptions/rules resource,
       "sessionId": "string",
       "replyToSessionId": "string",
       "contentType": "string",
-      "requiresPreprocessing": boolean
+      "requiresPreprocessing": "boolean"
     }
   }
 }

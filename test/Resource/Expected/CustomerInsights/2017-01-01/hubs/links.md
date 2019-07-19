@@ -18,7 +18,7 @@ To create a Microsoft.CustomerInsights/hubs/links resource, add the following JS
       {
         "interactionTypePropertyName": "string",
         "profileTypePropertyName": "string",
-        "isProfileTypeId": boolean,
+        "isProfileTypeId": "boolean",
         "linkType": "string"
       }
     ],
@@ -28,7 +28,7 @@ To create a Microsoft.CustomerInsights/hubs/links resource, add the following JS
         "profilePropertyName": "string"
       }
     ],
-    "referenceOnly": boolean,
+    "referenceOnly": "boolean",
     "operationType": "string"
   }
 }

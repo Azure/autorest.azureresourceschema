@@ -14,7 +14,7 @@ To create a Microsoft.Compute/virtualMachineScaleSets/extensions resource, add t
     "publisher": "string",
     "type": "string",
     "typeHandlerVersion": "string",
-    "autoUpgradeMinorVersion": boolean,
+    "autoUpgradeMinorVersion": "boolean",
     "settings": {},
     "protectedSettings": {}
   }
