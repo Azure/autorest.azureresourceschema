@@ -11,10 +11,10 @@ To create a Microsoft.Network/virtualNetworks/virtualNetworkPeerings resource, a
   "apiVersion": "2017-09-01",
   "id": "string",
   "properties": {
-    "allowVirtualNetworkAccess": boolean,
-    "allowForwardedTraffic": boolean,
-    "allowGatewayTransit": boolean,
-    "useRemoteGateways": boolean,
+    "allowVirtualNetworkAccess": "boolean",
+    "allowForwardedTraffic": "boolean",
+    "allowGatewayTransit": "boolean",
+    "useRemoteGateways": "boolean",
     "remoteVirtualNetwork": {
       "id": "string"
     },

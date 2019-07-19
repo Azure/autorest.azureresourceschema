@@ -30,17 +30,17 @@ To create a Microsoft.CustomerInsights/hubs/interactions resource, add the follo
         ],
         "fieldName": "string",
         "fieldType": "string",
-        "isArray": boolean,
-        "isEnum": boolean,
-        "isFlagEnum": boolean,
-        "isImage": boolean,
-        "isLocalizedString": boolean,
-        "isName": boolean,
-        "isRequired": boolean,
+        "isArray": "boolean",
+        "isEnum": "boolean",
+        "isFlagEnum": "boolean",
+        "isImage": "boolean",
+        "isLocalizedString": "boolean",
+        "isName": "boolean",
+        "isRequired": "boolean",
         "propertyId": "string",
         "schemaItemPropLink": "string",
         "maxLength": "integer",
-        "isAvailableInGraph": boolean
+        "isAvailableInGraph": "boolean"
       }
     ],
     "instancesCount": "integer",
@@ -67,7 +67,7 @@ To create a Microsoft.CustomerInsights/hubs/interactions resource, add the follo
     ],
     "primaryParticipantProfilePropertyName": "string",
     "defaultDataSource": {},
-    "isActivity": boolean
+    "isActivity": "boolean"
   }
 }
 ```

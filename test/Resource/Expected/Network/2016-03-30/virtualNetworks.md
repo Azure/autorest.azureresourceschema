@@ -137,7 +137,7 @@ To create a Microsoft.Network/virtualNetworks resource, add the following JSON t
                                 "frontendPort": "integer",
                                 "backendPort": "integer",
                                 "idleTimeoutInMinutes": "integer",
-                                "enableFloatingIP": boolean,
+                                "enableFloatingIP": "boolean",
                                 "provisioningState": "string"
                               },
                               "name": "string",
@@ -148,7 +148,7 @@ To create a Microsoft.Network/virtualNetworks resource, add the following JSON t
                           "privateIPAllocationMethod": "string",
                           "privateIPAddressVersion": "string",
                           "subnet": "Subnet",
-                          "primary": boolean,
+                          "primary": "boolean",
                           "publicIPAddress": {
                             "id": "string",
                             "location": "string",
@@ -198,8 +198,8 @@ To create a Microsoft.Network/virtualNetworks resource, add the following JSON t
                       "internalDomainNameSuffix": "string"
                     },
                     "macAddress": "string",
-                    "primary": boolean,
-                    "enableIPForwarding": boolean,
+                    "primary": "boolean",
+                    "enableIPForwarding": "boolean",
                     "resourceGuid": "string",
                     "provisioningState": "string"
                   },

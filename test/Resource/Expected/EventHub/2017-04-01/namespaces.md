@@ -17,7 +17,7 @@ To create a Microsoft.EventHub/namespaces resource, add the following JSON to th
     "capacity": "integer"
   },
   "properties": {
-    "isAutoInflateEnabled": boolean,
+    "isAutoInflateEnabled": "boolean",
     "maximumThroughputUnits": "integer"
   },
   "resources": []

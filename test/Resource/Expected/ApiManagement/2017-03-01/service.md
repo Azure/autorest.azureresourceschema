@@ -19,8 +19,8 @@ To create a Microsoft.ApiManagement/service resource, add the following JSON to 
         "keyVaultId": "string",
         "encodedCertificate": "string",
         "certificatePassword": "string",
-        "defaultSslBinding": boolean,
-        "negotiateClientCertificate": boolean
+        "defaultSslBinding": "boolean",
+        "negotiateClientCertificate": "boolean"
       }
     ],
     "virtualNetworkConfiguration": {

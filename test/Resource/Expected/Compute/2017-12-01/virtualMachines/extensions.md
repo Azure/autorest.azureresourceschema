@@ -16,7 +16,7 @@ To create a Microsoft.Compute/virtualMachines/extensions resource, add the follo
     "publisher": "string",
     "type": "string",
     "typeHandlerVersion": "string",
-    "autoUpgradeMinorVersion": boolean,
+    "autoUpgradeMinorVersion": "boolean",
     "settings": {},
     "protectedSettings": {},
     "instanceView": {

@@ -39,7 +39,7 @@ To create a Microsoft.Network/connections resource, add the following JSON to th
         ],
         "gatewayType": "string",
         "vpnType": "string",
-        "enableBgp": boolean,
+        "enableBgp": "boolean",
         "gatewayDefaultSite": {
           "id": "string"
         },
@@ -112,7 +112,7 @@ To create a Microsoft.Network/connections resource, add the following JSON to th
         ],
         "gatewayType": "string",
         "vpnType": "string",
-        "enableBgp": boolean,
+        "enableBgp": "boolean",
         "gatewayDefaultSite": {
           "id": "string"
         },
@@ -190,7 +190,7 @@ To create a Microsoft.Network/connections resource, add the following JSON to th
     "peer": {
       "id": "string"
     },
-    "enableBgp": boolean,
+    "enableBgp": "boolean",
     "resourceGuid": "string",
     "provisioningState": "string"
   },

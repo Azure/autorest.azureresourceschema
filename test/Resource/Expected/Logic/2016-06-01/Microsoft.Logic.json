@@ -32,7 +32,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -41,6 +42,8 @@
           "description": "The resource tags."
         },
         "properties": {
+          "type": "object",
+          "properties": {},
           "description": "The integration account properties."
         },
         "sku": {
@@ -116,7 +119,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -172,7 +176,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -228,7 +233,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -284,7 +290,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -340,7 +347,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -396,7 +404,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -452,7 +461,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2627,6 +2637,8 @@
       "type": "object",
       "properties": {
         "metadata": {
+          "type": "object",
+          "properties": {},
           "description": "The metadata."
         },
         "agreementType": {
@@ -2702,6 +2714,8 @@
       "type": "object",
       "properties": {
         "metadata": {
+          "type": "object",
+          "properties": {},
           "description": "The metadata."
         },
         "key": {
@@ -2760,6 +2774,8 @@
           "description": "The content type."
         },
         "metadata": {
+          "type": "object",
+          "properties": {},
           "description": "The metadata."
         }
       },
@@ -2797,6 +2813,8 @@
           "description": "The partner type."
         },
         "metadata": {
+          "type": "object",
+          "properties": {},
           "description": "The metadata."
         },
         "content": {
@@ -2816,6 +2834,91 @@
         "content"
       ],
       "description": "The integration account partner properties."
+    },
+    "IntegrationAccountSchemaProperties": {
+      "type": "object",
+      "properties": {
+        "schemaType": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "NotSpecified",
+                "Xml"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The schema type."
+        },
+        "targetNamespace": {
+          "type": "string",
+          "description": "The target namespace of the schema."
+        },
+        "documentName": {
+          "type": "string",
+          "description": "The document name."
+        },
+        "fileName": {
+          "type": "string",
+          "description": "The file name."
+        },
+        "metadata": {
+          "type": "object",
+          "properties": {},
+          "description": "The metadata."
+        },
+        "content": {
+          "type": "string",
+          "description": "The content."
+        },
+        "contentType": {
+          "type": "string",
+          "description": "The content type."
+        }
+      },
+      "required": [
+        "schemaType"
+      ],
+      "description": "The integration account schema properties."
+    },
+    "IntegrationAccountSessionProperties": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "type": "object",
+          "properties": {},
+          "description": "The session content."
+        }
+      },
+      "description": "The integration account session properties."
+    },
+    "IntegrationAccountSku": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "NotSpecified",
+                "Free",
+                "Standard"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The sku name."
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "description": "The integration account sku."
     },
     "integrationAccounts_agreements_childResource": {
       "type": "object",
@@ -2845,7 +2948,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2901,7 +3005,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2957,7 +3062,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -3013,7 +3119,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -3069,7 +3176,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -3125,7 +3233,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -3152,87 +3261,6 @@
         "properties"
       ],
       "description": "Microsoft.Logic/integrationAccounts/sessions"
-    },
-    "IntegrationAccountSchemaProperties": {
-      "type": "object",
-      "properties": {
-        "schemaType": {
-          "oneOf": [
-            {
-              "type": "string",
-              "enum": [
-                "NotSpecified",
-                "Xml"
-              ]
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "The schema type."
-        },
-        "targetNamespace": {
-          "type": "string",
-          "description": "The target namespace of the schema."
-        },
-        "documentName": {
-          "type": "string",
-          "description": "The document name."
-        },
-        "fileName": {
-          "type": "string",
-          "description": "The file name."
-        },
-        "metadata": {
-          "description": "The metadata."
-        },
-        "content": {
-          "type": "string",
-          "description": "The content."
-        },
-        "contentType": {
-          "type": "string",
-          "description": "The content type."
-        }
-      },
-      "required": [
-        "schemaType"
-      ],
-      "description": "The integration account schema properties."
-    },
-    "IntegrationAccountSessionProperties": {
-      "type": "object",
-      "properties": {
-        "content": {
-          "description": "The session content."
-        }
-      },
-      "description": "The integration account session properties."
-    },
-    "IntegrationAccountSku": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "oneOf": [
-            {
-              "type": "string",
-              "enum": [
-                "NotSpecified",
-                "Free",
-                "Standard"
-              ]
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "The sku name."
-        }
-      },
-      "required": [
-        "name"
-      ],
-      "description": "The integration account sku."
     },
     "KeyVaultKeyReference": {
       "type": "object",
@@ -3291,6 +3319,8 @@
       "description": "The integration account partner content."
     },
     "ResourceReference": {
+      "type": "object",
+      "properties": {},
       "description": "The resource reference."
     },
     "Sku": {
@@ -3351,9 +3381,13 @@
           "description": "The type."
         },
         "value": {
+          "type": "object",
+          "properties": {},
           "description": "The value."
         },
         "metadata": {
+          "type": "object",
+          "properties": {},
           "description": "The metadata."
         },
         "description": {
@@ -3408,6 +3442,8 @@
           "description": "The integration account."
         },
         "definition": {
+          "type": "object",
+          "properties": {},
           "description": "The definition."
         },
         "parameters": {
@@ -3416,7 +3452,8 @@
               "type": "object",
               "additionalProperties": {
                 "$ref": "#/definitions/WorkflowParameter"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"

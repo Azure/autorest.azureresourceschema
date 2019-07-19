@@ -1,0 +1,294 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2017-09-15-preview/Microsoft.EventGrid.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Microsoft.EventGrid",
+  "description": "Microsoft EventGrid Resource Types",
+  "resourceDefinitions": {
+    "eventSubscriptions": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "Microsoft.EventGrid/eventSubscriptions"
+          ]
+        },
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2017-09-15-preview"
+          ]
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/EventSubscriptionProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Properties of the event subscription"
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "apiVersion",
+        "properties"
+      ],
+      "description": "Microsoft.EventGrid/eventSubscriptions"
+    },
+    "topics": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "Microsoft.EventGrid/topics"
+          ]
+        },
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2017-09-15-preview"
+          ]
+        },
+        "location": {
+          "type": "string",
+          "description": "Location of the resource"
+        },
+        "tags": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {}
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Tags of the resource"
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/TopicProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Properties of the topic"
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "apiVersion",
+        "location",
+        "properties"
+      ],
+      "description": "Microsoft.EventGrid/topics"
+    }
+  },
+  "definitions": {
+    "EventHubEventSubscriptionDestination": {
+      "type": "object",
+      "oneOf": [
+        {}
+      ],
+      "properties": {
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/EventHubEventSubscriptionDestinationProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Event Hub Properties of the event subscription destination"
+        },
+        "endpointType": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "endpointType"
+      ],
+      "description": "Information about the event hub destination for an event subscription"
+    },
+    "EventHubEventSubscriptionDestinationProperties": {
+      "type": "object",
+      "properties": {
+        "resourceId": {
+          "type": "string",
+          "description": "The Azure Resource Id that represents the endpoint of an Event Hub destination of an event subscription."
+        }
+      },
+      "description": "The properties for a event hub destination."
+    },
+    "EventSubscriptionDestination": {
+      "type": "object",
+      "oneOf": [
+        {},
+        {
+          "allOf": [
+            {
+              "$ref": "#/definitions/WebHookEventSubscriptionDestination"
+            }
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "$ref": "#/definitions/EventHubEventSubscriptionDestination"
+            }
+          ]
+        }
+      ],
+      "properties": {
+        "endpointType": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "endpointType"
+      ],
+      "description": "Information about the destination for an event subscription"
+    },
+    "EventSubscriptionFilter": {
+      "type": "object",
+      "properties": {
+        "subjectBeginsWith": {
+          "type": "string",
+          "description": "An optional string to filter events for an event subscription based on a resource path prefix.\r\nThe format of this depends on the publisher of the events. \r\nWildcard characters are not supported in this path."
+        },
+        "subjectEndsWith": {
+          "type": "string",
+          "description": "An optional string to filter events for an event subscription based on a resource path suffix.\r\nWildcard characters are not supported in this path."
+        },
+        "includedEventTypes": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "A list of applicable event types that need to be part of the event subscription. \r\nIf it is desired to subscribe to all event types, the string \"all\" needs to be specified as an element in this list."
+        },
+        "isSubjectCaseSensitive": {
+          "oneOf": [
+            {
+              "type": "boolean",
+              "default": false
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter \r\nshould be compared in a case sensitive manner."
+        }
+      },
+      "description": "Filter for the Event Subscription"
+    },
+    "EventSubscriptionProperties": {
+      "type": "object",
+      "properties": {
+        "destination": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/EventSubscriptionDestination"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Information about the destination where events have to be delivered for the event subscription."
+        },
+        "filter": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/EventSubscriptionFilter"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Information about the filter for the event subscription."
+        },
+        "labels": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "List of user defined labels."
+        }
+      },
+      "description": "Properties of the Event Subscription"
+    },
+    "TopicProperties": {
+      "type": "object",
+      "properties": {},
+      "description": "Properties of the Topic"
+    },
+    "WebHookEventSubscriptionDestination": {
+      "type": "object",
+      "oneOf": [
+        {}
+      ],
+      "properties": {
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/WebHookEventSubscriptionDestinationProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "WebHook Properties of the event subscription destination"
+        },
+        "endpointType": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "endpointType"
+      ],
+      "description": "Information about the webhook destination for an event subscription"
+    },
+    "WebHookEventSubscriptionDestinationProperties": {
+      "type": "object",
+      "properties": {
+        "endpointUrl": {
+          "type": "string",
+          "description": "The URL that represents the endpoint of the destination of an event subscription."
+        }
+      },
+      "description": "Information about the webhook destination properties for an event subscription"
+    }
+  }
+}

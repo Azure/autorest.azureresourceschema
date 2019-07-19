@@ -10,7 +10,7 @@ To create a Microsoft.Automation/automationAccounts/connectionTypes resource, ad
   "type": "Microsoft.Automation/automationAccounts/connectionTypes",
   "apiVersion": "2015-10-31",
   "properties": {
-    "isGlobal": boolean,
+    "isGlobal": "boolean",
     "fieldDefinitions": {}
   }
 }

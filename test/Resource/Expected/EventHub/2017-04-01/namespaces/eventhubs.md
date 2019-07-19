@@ -14,7 +14,7 @@ To create a Microsoft.EventHub/namespaces/eventhubs resource, add the following 
     "partitionCount": "integer",
     "status": "string",
     "captureDescription": {
-      "enabled": boolean,
+      "enabled": "boolean",
       "encoding": "string",
       "intervalInSeconds": "integer",
       "sizeLimitInBytes": "integer",

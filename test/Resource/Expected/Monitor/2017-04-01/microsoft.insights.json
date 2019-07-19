@@ -1,0 +1,544 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2017-04-01/microsoft.insights.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "microsoft.insights",
+  "description": "microsoft insights Resource Types",
+  "resourceDefinitions": {
+    "actionGroups": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the action group."
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "microsoft.insights/actionGroups"
+          ]
+        },
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2017-04-01"
+          ]
+        },
+        "location": {
+          "type": "string",
+          "description": "Resource location"
+        },
+        "tags": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {}
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Resource tags"
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ActionGroup"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The action groups properties of the resource."
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "apiVersion",
+        "location",
+        "properties"
+      ],
+      "description": "microsoft.insights/actionGroups"
+    },
+    "activityLogAlerts": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the activity log alert."
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "microsoft.insights/activityLogAlerts"
+          ]
+        },
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2017-04-01"
+          ]
+        },
+        "location": {
+          "type": "string",
+          "description": "Resource location"
+        },
+        "tags": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {}
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Resource tags"
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ActivityLogAlert"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The activity log alert properties of the resource."
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "apiVersion",
+        "location",
+        "properties"
+      ],
+      "description": "microsoft.insights/activityLogAlerts"
+    }
+  },
+  "definitions": {
+    "ActionGroup": {
+      "type": "object",
+      "properties": {
+        "groupShortName": {
+          "type": "string",
+          "maxLength": 15,
+          "description": "The short name of the action group. This will be used in SMS messages."
+        },
+        "enabled": {
+          "oneOf": [
+            {
+              "type": "boolean",
+              "default": true
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications."
+        },
+        "emailReceivers": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/EmailReceiver"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The list of email receivers that are part of this action group."
+        },
+        "smsReceivers": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/SmsReceiver"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The list of SMS receivers that are part of this action group."
+        },
+        "webhookReceivers": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/WebhookReceiver"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The list of webhook receivers that are part of this action group."
+        },
+        "itsmReceivers": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ItsmReceiver"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The list of ITSM receivers that are part of this action group."
+        },
+        "azureAppPushReceivers": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/AzureAppPushReceiver"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The list of AzureAppPush receivers that are part of this action group."
+        },
+        "automationRunbookReceivers": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/AutomationRunbookReceiver"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The list of AutomationRunbook receivers that are part of this action group."
+        }
+      },
+      "required": [
+        "groupShortName",
+        "enabled"
+      ],
+      "description": "An Azure action group."
+    },
+    "ActivityLogAlert": {
+      "type": "object",
+      "properties": {
+        "scopes": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "A list of resourceIds that will be used as prefixes. The alert will only apply to activityLogs with resourceIds that fall under one of these prefixes. This list must include at least one item."
+        },
+        "enabled": {
+          "oneOf": [
+            {
+              "type": "boolean",
+              "default": true
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Indicates whether this activity log alert is enabled. If an activity log alert is not enabled, then none of its actions will be activated."
+        },
+        "condition": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ActivityLogAlertAllOfCondition"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The condition that will cause this alert to activate."
+        },
+        "actions": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ActivityLogAlertActionList"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The actions that will activate when the condition is met."
+        },
+        "description": {
+          "type": "string",
+          "description": "A description of this activity log alert."
+        }
+      },
+      "required": [
+        "scopes",
+        "condition",
+        "actions"
+      ],
+      "description": "An Azure activity log alert."
+    },
+    "ActivityLogAlertActionGroup": {
+      "type": "object",
+      "properties": {
+        "actionGroupId": {
+          "type": "string",
+          "description": "The resourceId of the action group. This cannot be null or empty."
+        },
+        "webhookProperties": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {}
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload."
+        }
+      },
+      "required": [
+        "actionGroupId"
+      ],
+      "description": "A pointer to an Azure Action Group."
+    },
+    "ActivityLogAlertActionList": {
+      "type": "object",
+      "properties": {
+        "actionGroups": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ActivityLogAlertActionGroup"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The list of activity log alerts."
+        }
+      },
+      "description": "A list of activity log alert actions."
+    },
+    "ActivityLogAlertAllOfCondition": {
+      "type": "object",
+      "properties": {
+        "allOf": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ActivityLogAlertLeafCondition"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "The list of activity log alert conditions."
+        }
+      },
+      "required": [
+        "allOf"
+      ],
+      "description": "An Activity Log alert condition that is met when all its member conditions are met."
+    },
+    "ActivityLogAlertLeafCondition": {
+      "type": "object",
+      "properties": {
+        "field": {
+          "type": "string",
+          "description": "The name of the field that this condition will examine. The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties.'."
+        },
+        "equals": {
+          "type": "string",
+          "description": "The field value will be compared to this value (case-insensitive) to determine if the condition is met."
+        }
+      },
+      "required": [
+        "field",
+        "equals"
+      ],
+      "description": "An Activity Log alert condition that is met by comparing an activity log field and value."
+    },
+    "AutomationRunbookReceiver": {
+      "type": "object",
+      "properties": {
+        "automationAccountId": {
+          "type": "string",
+          "description": "The Azure automation account Id which holds this runbook and authenticate to Azure resource."
+        },
+        "runbookName": {
+          "type": "string",
+          "description": "The name for this runbook."
+        },
+        "webhookResourceId": {
+          "type": "string",
+          "description": "The resource id for webhook linked to this runbook."
+        },
+        "isGlobalRunbook": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Indicates whether this instance is global runbook."
+        },
+        "name": {
+          "type": "string",
+          "description": "Indicates name of the webhook."
+        },
+        "serviceUri": {
+          "type": "string",
+          "description": "The URI where webhooks should be sent."
+        }
+      },
+      "required": [
+        "automationAccountId",
+        "runbookName",
+        "webhookResourceId",
+        "isGlobalRunbook"
+      ],
+      "description": "The Azure Automation Runbook notification receiver."
+    },
+    "AzureAppPushReceiver": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group."
+        },
+        "emailAddress": {
+          "type": "string",
+          "description": "The email address registered for the Azure mobile app."
+        }
+      },
+      "required": [
+        "name",
+        "emailAddress"
+      ],
+      "description": "The Azure mobile App push notification receiver."
+    },
+    "EmailReceiver": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the email receiver. Names must be unique across all receivers within an action group."
+        },
+        "emailAddress": {
+          "type": "string",
+          "description": "The email address of this receiver."
+        }
+      },
+      "required": [
+        "name",
+        "emailAddress"
+      ],
+      "description": "An email receiver."
+    },
+    "ItsmReceiver": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the Itsm receiver. Names must be unique across all receivers within an action group."
+        },
+        "workspaceId": {
+          "type": "string",
+          "description": "OMS LA instance identifier."
+        },
+        "connectionId": {
+          "type": "string",
+          "description": "Unique identification of ITSM connection among multiple defined in above workspace."
+        },
+        "ticketConfiguration": {
+          "type": "string",
+          "description": "JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well."
+        },
+        "region": {
+          "type": "string",
+          "description": "Region in which workspace resides. Supported values:'centralindia','japaneast','southeastasia','australiasoutheast','uksouth','westcentralus','canadacentral','eastus','westeurope'"
+        }
+      },
+      "required": [
+        "name",
+        "workspaceId",
+        "connectionId",
+        "ticketConfiguration",
+        "region"
+      ],
+      "description": "An Itsm receiver."
+    },
+    "SmsReceiver": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the SMS receiver. Names must be unique across all receivers within an action group."
+        },
+        "countryCode": {
+          "type": "string",
+          "description": "The country code of the SMS receiver."
+        },
+        "phoneNumber": {
+          "type": "string",
+          "description": "The phone number of the SMS receiver."
+        }
+      },
+      "required": [
+        "name",
+        "countryCode",
+        "phoneNumber"
+      ],
+      "description": "An SMS receiver."
+    },
+    "WebhookReceiver": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the webhook receiver. Names must be unique across all receivers within an action group."
+        },
+        "serviceUri": {
+          "type": "string",
+          "description": "The URI where webhooks should be sent."
+        }
+      },
+      "required": [
+        "name",
+        "serviceUri"
+      ],
+      "description": "A webhook receiver."
+    }
+  }
+}

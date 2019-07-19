@@ -25,7 +25,7 @@ To create a Microsoft.ApiManagement/service/authorizationServers resource, add t
     }
   ],
   "tokenEndpoint": "string",
-  "supportState": boolean,
+  "supportState": "boolean",
   "defaultScope": "string",
   "grantTypes": [
     "string"

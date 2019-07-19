@@ -19,8 +19,7 @@ namespace AutoRest.AzureResourceSchema
     public static class ResourceSchemaParser
     {
         private const string resourceMethodPrefix = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/";
-        // private static Regex resourceMethodPrefixRx = new Regex( "^/subscriptions/{subscriptionId}/resourceGroups/{\\w*}/providers/",RegexOptions.IgnoreCase );
-        private static Regex resourceMethodPrefixRx = new Regex( "^.*/providers/",RegexOptions.IgnoreCase );
+        private static Regex resourceMethodPrefixRx = new Regex("^.*/providers/",RegexOptions.IgnoreCase | RegexOptions.RightToLeft);
 
         /// <summary>
         /// Parse a ResourceSchemaModel from the provided ServiceClient.

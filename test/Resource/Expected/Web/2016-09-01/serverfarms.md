@@ -19,10 +19,10 @@ To create a Microsoft.Web/serverfarms resource, add the following JSON to the re
     "hostingEnvironmentProfile": {
       "id": "string"
     },
-    "perSiteScaling": boolean,
-    "isSpot": boolean,
+    "perSiteScaling": "boolean",
+    "isSpot": "boolean",
     "spotExpirationTime": "string",
-    "reserved": boolean,
+    "reserved": "boolean",
     "targetWorkerCount": "integer",
     "targetWorkerSizeId": "integer"
   },

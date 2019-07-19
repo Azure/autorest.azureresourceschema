@@ -31,7 +31,7 @@ To create a Microsoft.Compute/virtualMachineScaleSets resource, add the followin
         "maxUnhealthyUpgradedInstancePercent": "integer",
         "pauseTimeBetweenBatches": "string"
       },
-      "automaticOSUpgrade": boolean
+      "automaticOSUpgrade": "boolean"
     },
     "virtualMachineProfile": {
       "osProfile": {
@@ -40,8 +40,8 @@ To create a Microsoft.Compute/virtualMachineScaleSets resource, add the followin
         "adminPassword": "string",
         "customData": "string",
         "windowsConfiguration": {
-          "provisionVMAgent": boolean,
-          "enableAutomaticUpdates": boolean,
+          "provisionVMAgent": "boolean",
+          "enableAutomaticUpdates": "boolean",
           "timeZone": "string",
           "additionalUnattendContent": [
             {
@@ -61,7 +61,7 @@ To create a Microsoft.Compute/virtualMachineScaleSets resource, add the followin
           }
         },
         "linuxConfiguration": {
-          "disablePasswordAuthentication": boolean,
+          "disablePasswordAuthentication": "boolean",
           "ssh": {
             "publicKeys": [
               {
@@ -130,8 +130,8 @@ To create a Microsoft.Compute/virtualMachineScaleSets resource, add the followin
             "id": "string",
             "name": "string",
             "properties": {
-              "primary": boolean,
-              "enableAcceleratedNetworking": boolean,
+              "primary": "boolean",
+              "enableAcceleratedNetworking": "boolean",
               "networkSecurityGroup": {
                 "id": "string"
               },
@@ -148,7 +148,7 @@ To create a Microsoft.Compute/virtualMachineScaleSets resource, add the followin
                     "subnet": {
                       "id": "string"
                     },
-                    "primary": boolean,
+                    "primary": "boolean",
                     "publicIPAddressConfiguration": {
                       "name": "string",
                       "properties": {
@@ -177,14 +177,14 @@ To create a Microsoft.Compute/virtualMachineScaleSets resource, add the followin
                   }
                 }
               ],
-              "enableIPForwarding": boolean
+              "enableIPForwarding": "boolean"
             }
           }
         ]
       },
       "diagnosticsProfile": {
         "bootDiagnostics": {
-          "enabled": boolean,
+          "enabled": "boolean",
           "storageUri": "string"
         }
       },
@@ -197,7 +197,7 @@ To create a Microsoft.Compute/virtualMachineScaleSets resource, add the followin
               "publisher": "string",
               "type": "string",
               "typeHandlerVersion": "string",
-              "autoUpgradeMinorVersion": boolean,
+              "autoUpgradeMinorVersion": "boolean",
               "settings": {},
               "protectedSettings": {}
             }
@@ -207,8 +207,8 @@ To create a Microsoft.Compute/virtualMachineScaleSets resource, add the followin
       "licenseType": "string",
       "priority": "string"
     },
-    "overprovision": boolean,
-    "singlePlacementGroup": boolean
+    "overprovision": "boolean",
+    "singlePlacementGroup": "boolean"
   },
   "identity": {
     "type": "string",

@@ -33,8 +33,8 @@ To create a Microsoft.Compute/virtualMachineScaleSets resource, add the followin
         "adminPassword": "string",
         "customData": "string",
         "windowsConfiguration": {
-          "provisionVMAgent": boolean,
-          "enableAutomaticUpdates": boolean,
+          "provisionVMAgent": "boolean",
+          "enableAutomaticUpdates": "boolean",
           "timeZone": "string",
           "additionalUnattendContent": [
             {
@@ -54,7 +54,7 @@ To create a Microsoft.Compute/virtualMachineScaleSets resource, add the followin
           }
         },
         "linuxConfiguration": {
-          "disablePasswordAuthentication": boolean,
+          "disablePasswordAuthentication": "boolean",
           "ssh": {
             "publicKeys": [
               {
@@ -120,7 +120,7 @@ To create a Microsoft.Compute/virtualMachineScaleSets resource, add the followin
             "id": "string",
             "name": "string",
             "properties": {
-              "primary": boolean,
+              "primary": "boolean",
               "ipConfigurations": [
                 {
                   "id": "string",
@@ -159,7 +159,7 @@ To create a Microsoft.Compute/virtualMachineScaleSets resource, add the followin
               "publisher": "string",
               "type": "string",
               "typeHandlerVersion": "string",
-              "autoUpgradeMinorVersion": boolean,
+              "autoUpgradeMinorVersion": "boolean",
               "settings": {},
               "protectedSettings": {}
             }
@@ -167,8 +167,8 @@ To create a Microsoft.Compute/virtualMachineScaleSets resource, add the followin
         ]
       }
     },
-    "overProvision": boolean,
-    "singlePlacementGroup": boolean
+    "overProvision": "boolean",
+    "singlePlacementGroup": "boolean"
   },
   "identity": {
     "type": "SystemAssigned"

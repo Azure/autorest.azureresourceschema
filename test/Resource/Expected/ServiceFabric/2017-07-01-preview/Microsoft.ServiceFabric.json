@@ -33,7 +33,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -468,6 +469,8 @@
       "description": "The application resource properties."
     },
     "ApplicationTypeProperties": {
+      "type": "object",
+      "properties": {},
       "description": "The application type name properties"
     },
     "ApplicationUpgradePolicy": {
@@ -1289,23 +1292,7 @@
     "NamedPartitionSchemeDescription": {
       "type": "object",
       "oneOf": [
-        {
-          "properties": {
-            "PartitionScheme": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "Named"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
-        }
+        {}
       ],
       "properties": {
         "Count": {
@@ -1357,7 +1344,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1371,7 +1359,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1486,88 +1475,27 @@
     "PartitionSchemeDescription": {
       "type": "object",
       "oneOf": [
-        {
-          "properties": {
-            "PartitionScheme": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "PartitionSchemeDescription"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
-        },
+        {},
         {
           "allOf": [
             {
               "$ref": "#/definitions/NamedPartitionSchemeDescription"
             }
-          ],
-          "properties": {
-            "PartitionScheme": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "Named"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
+          ]
         },
         {
           "allOf": [
             {
               "$ref": "#/definitions/SingletonPartitionSchemeDescription"
             }
-          ],
-          "properties": {
-            "PartitionScheme": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "Singleton"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
+          ]
         },
         {
           "allOf": [
             {
               "$ref": "#/definitions/UniformInt64RangePartitionSchemeDescription"
             }
-          ],
-          "properties": {
-            "PartitionScheme": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "UniformInt64Range"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
+          ]
         }
       ],
       "properties": {
@@ -1695,23 +1623,7 @@
     "ServicePlacementPolicyDescription": {
       "type": "object",
       "oneOf": [
-        {
-          "properties": {
-            "Type": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "ServicePlacementPolicyDescription"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
-        }
+        {}
       ],
       "properties": {
         "Type": {
@@ -1726,66 +1638,20 @@
     "ServiceProperties": {
       "type": "object",
       "oneOf": [
-        {
-          "properties": {
-            "serviceKind": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "ServiceProperties"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
-        },
+        {},
         {
           "allOf": [
             {
               "$ref": "#/definitions/StatelessServiceProperties"
             }
-          ],
-          "properties": {
-            "serviceKind": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "Stateless"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
+          ]
         },
         {
           "allOf": [
             {
               "$ref": "#/definitions/StatefulServiceProperties"
             }
-          ],
-          "properties": {
-            "serviceKind": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "Stateful"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
+          ]
         }
       ],
       "properties": {
@@ -1986,23 +1852,7 @@
     "SingletonPartitionSchemeDescription": {
       "type": "object",
       "oneOf": [
-        {
-          "properties": {
-            "PartitionScheme": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "Singleton"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
-        }
+        {}
       ],
       "properties": {
         "PartitionScheme": {
@@ -2017,23 +1867,7 @@
     "StatefulServiceProperties": {
       "type": "object",
       "oneOf": [
-        {
-          "properties": {
-            "serviceKind": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "Stateful"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
-        }
+        {}
       ],
       "properties": {
         "hasPersistedState": {
@@ -2098,23 +1932,7 @@
     "StatelessServiceProperties": {
       "type": "object",
       "oneOf": [
-        {
-          "properties": {
-            "serviceKind": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "Stateless"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
-        }
+        {}
       ],
       "properties": {
         "instanceCount": {
@@ -2141,23 +1959,7 @@
     "UniformInt64RangePartitionSchemeDescription": {
       "type": "object",
       "oneOf": [
-        {
-          "properties": {
-            "PartitionScheme": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "UniformInt64Range"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
-        }
+        {}
       ],
       "properties": {
         "Count": {

@@ -37,7 +37,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -187,6 +188,8 @@
       "description": "Identifies the unique system identifier for each Azure resource."
     },
     "UpgradeDetails": {
+      "type": "object",
+      "properties": {},
       "description": "Details for upgrading vault."
     },
     "VaultProperties": {
