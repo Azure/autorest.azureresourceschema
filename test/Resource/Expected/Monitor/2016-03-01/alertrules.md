@@ -17,15 +17,11 @@ To create a microsoft.insights/alertrules resource, add the following JSON to th
     "isEnabled": "boolean",
     "condition": {
       "dataSource": {
-        "resourceUri": "string",
-        "odata.type": "string"
-      },
-      "odata.type": "string"
+        "resourceUri": "string"
+      }
     },
     "actions": [
-      {
-        "odata.type": "string"
-      }
+      {}
     ]
   }
 }
@@ -62,14 +58,6 @@ The following tables describe the values you need to set in the schema.
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  dataSource | object | No | the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource. - [RuleDataSource object](#RuleDataSource) |
-|  odata.type | string | Yes |  |
-
-
-<a id="RuleAction" />
-### RuleAction object
-|  Name | Type | Required | Value |
-|  ---- | ---- | ---- | ---- |
-|  odata.type | string | Yes |  |
 
 
 <a id="RuleDataSource" />
@@ -77,5 +65,4 @@ The following tables describe the values you need to set in the schema.
 |  Name | Type | Required | Value |
 |  ---- | ---- | ---- | ---- |
 |  resourceUri | string | No | the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule. |
-|  odata.type | string | Yes |  |
 

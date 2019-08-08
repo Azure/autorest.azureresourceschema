@@ -181,9 +181,6 @@
     },
     "LocationThresholdRuleCondition": {
       "type": "object",
-      "oneOf": [
-        {}
-      ],
       "properties": {
         "windowSize": {
           "type": "string",
@@ -203,7 +200,10 @@
           "description": "the number of locations that must fail to activate the alert."
         },
         "odata.type": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition"
+          ]
         }
       },
       "required": [
@@ -311,9 +311,6 @@
     },
     "ManagementEventRuleCondition": {
       "type": "object",
-      "oneOf": [
-        {}
-      ],
       "properties": {
         "aggregation": {
           "oneOf": [
@@ -327,7 +324,10 @@
           "description": "How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate."
         },
         "odata.type": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition"
+          ]
         }
       },
       "required": [
@@ -371,56 +371,27 @@
     "RuleAction": {
       "type": "object",
       "oneOf": [
-        {},
         {
-          "allOf": [
-            {
-              "$ref": "#/definitions/RuleEmailAction"
-            }
-          ]
+          "$ref": "#/definitions/RuleEmailAction"
         },
         {
-          "allOf": [
-            {
-              "$ref": "#/definitions/RuleWebhookAction"
-            }
-          ]
+          "$ref": "#/definitions/RuleWebhookAction"
         }
       ],
-      "properties": {
-        "odata.type": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "odata.type"
-      ],
+      "properties": {},
       "description": "The action that is performed when the alert rule becomes active, and when an alert condition is resolved."
     },
     "RuleCondition": {
       "type": "object",
       "oneOf": [
-        {},
         {
-          "allOf": [
-            {
-              "$ref": "#/definitions/ThresholdRuleCondition"
-            }
-          ]
+          "$ref": "#/definitions/ThresholdRuleCondition"
         },
         {
-          "allOf": [
-            {
-              "$ref": "#/definitions/LocationThresholdRuleCondition"
-            }
-          ]
+          "$ref": "#/definitions/LocationThresholdRuleCondition"
         },
         {
-          "allOf": [
-            {
-              "$ref": "#/definitions/ManagementEventRuleCondition"
-            }
-          ]
+          "$ref": "#/definitions/ManagementEventRuleCondition"
         }
       ],
       "properties": {
@@ -434,54 +405,30 @@
             }
           ],
           "description": "the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource."
-        },
-        "odata.type": {
-          "type": "string"
         }
       },
-      "required": [
-        "odata.type"
-      ],
       "description": "The condition that results in the alert rule being activated."
     },
     "RuleDataSource": {
       "type": "object",
       "oneOf": [
-        {},
         {
-          "allOf": [
-            {
-              "$ref": "#/definitions/RuleMetricDataSource"
-            }
-          ]
+          "$ref": "#/definitions/RuleMetricDataSource"
         },
         {
-          "allOf": [
-            {
-              "$ref": "#/definitions/RuleManagementEventDataSource"
-            }
-          ]
+          "$ref": "#/definitions/RuleManagementEventDataSource"
         }
       ],
       "properties": {
         "resourceUri": {
           "type": "string",
           "description": "the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule."
-        },
-        "odata.type": {
-          "type": "string"
         }
       },
-      "required": [
-        "odata.type"
-      ],
       "description": "The resource from which the rule collects its data."
     },
     "RuleEmailAction": {
       "type": "object",
-      "oneOf": [
-        {}
-      ],
       "properties": {
         "sendToServiceOwners": {
           "oneOf": [
@@ -509,7 +456,10 @@
           "description": "the list of administrator's custom email addresses to notify of the activation of the alert."
         },
         "odata.type": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "Microsoft.Azure.Management.Insights.Models.RuleEmailAction"
+          ]
         }
       },
       "required": [
@@ -529,9 +479,6 @@
     },
     "RuleManagementEventDataSource": {
       "type": "object",
-      "oneOf": [
-        {}
-      ],
       "properties": {
         "eventName": {
           "type": "string",
@@ -577,7 +524,10 @@
           "description": "the claims."
         },
         "odata.type": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource"
+          ]
         }
       },
       "required": [
@@ -587,16 +537,16 @@
     },
     "RuleMetricDataSource": {
       "type": "object",
-      "oneOf": [
-        {}
-      ],
       "properties": {
         "metricName": {
           "type": "string",
           "description": "the name of the metric that defines what the rule monitors."
         },
         "odata.type": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource"
+          ]
         }
       },
       "required": [
@@ -606,9 +556,6 @@
     },
     "RuleWebhookAction": {
       "type": "object",
-      "oneOf": [
-        {}
-      ],
       "properties": {
         "serviceUri": {
           "type": "string",
@@ -630,7 +577,10 @@
           "description": "the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload."
         },
         "odata.type": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "Microsoft.Azure.Management.Insights.Models.RuleWebhookAction"
+          ]
         }
       },
       "required": [
@@ -640,9 +590,6 @@
     },
     "ThresholdRuleCondition": {
       "type": "object",
-      "oneOf": [
-        {}
-      ],
       "properties": {
         "operator": {
           "oneOf": [
@@ -696,7 +643,10 @@
           "description": "the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric."
         },
         "odata.type": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition"
+          ]
         }
       },
       "required": [

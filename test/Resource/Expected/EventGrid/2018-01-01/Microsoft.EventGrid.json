@@ -104,9 +104,6 @@
   "definitions": {
     "EventHubEventSubscriptionDestination": {
       "type": "object",
-      "oneOf": [
-        {}
-      ],
       "properties": {
         "properties": {
           "oneOf": [
@@ -120,7 +117,10 @@
           "description": "Event Hub Properties of the event subscription destination"
         },
         "endpointType": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "EventHub"
+          ]
         }
       },
       "required": [
@@ -141,30 +141,14 @@
     "EventSubscriptionDestination": {
       "type": "object",
       "oneOf": [
-        {},
         {
-          "allOf": [
-            {
-              "$ref": "#/definitions/WebHookEventSubscriptionDestination"
-            }
-          ]
+          "$ref": "#/definitions/WebHookEventSubscriptionDestination"
         },
         {
-          "allOf": [
-            {
-              "$ref": "#/definitions/EventHubEventSubscriptionDestination"
-            }
-          ]
+          "$ref": "#/definitions/EventHubEventSubscriptionDestination"
         }
       ],
-      "properties": {
-        "endpointType": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "endpointType"
-      ],
+      "properties": {},
       "description": "Information about the destination for an event subscription"
     },
     "EventSubscriptionFilter": {
@@ -256,9 +240,6 @@
     },
     "WebHookEventSubscriptionDestination": {
       "type": "object",
-      "oneOf": [
-        {}
-      ],
       "properties": {
         "properties": {
           "oneOf": [
@@ -272,7 +253,10 @@
           "description": "WebHook Properties of the event subscription destination"
         },
         "endpointType": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "WebHook"
+          ]
         }
       },
       "required": [

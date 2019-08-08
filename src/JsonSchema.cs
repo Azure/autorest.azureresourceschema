@@ -7,6 +7,13 @@ using System.Linq;
 
 namespace AutoRest.AzureResourceSchema
 {
+    [Flags]
+    public enum SchemaConfiguration
+    {
+        None = 0,
+        OmitExpressionRef = 1 << 0,
+    }
+
     /// <summary>
     /// An object representing a JSON schema. Each property of a JSON schema ($schema, title, and
     /// description are metadata, not properties) is also a JSON schema, so the class is recursive.
@@ -131,12 +138,17 @@ namespace AutoRest.AzureResourceSchema
         /// <summary>
         /// The schemas that describe the properties of a matching JSON value.
         /// </summary>
-        public IDictionary<string,JsonSchema> Properties { get; private set;} 
+        public IDictionary<string,JsonSchema> Properties { get; private set; }
 
         /// <summary>
         /// The names of the properties that are required for a matching JSON value.
         /// </summary>
-        public IList<string> Required { get; private set;} 
+        public IList<string> Required { get; private set; }
+
+        /// <summary>
+        /// Configuration to override default schema serialization behavior.
+        /// </summary>
+        public SchemaConfiguration Configuration { get; set; }
 
         public bool IsEmpty()
         {
@@ -363,6 +375,7 @@ namespace AutoRest.AzureResourceSchema
             result.OneOf = Clone(OneOf);
             result.AnyOf = Clone(AnyOf);
             result.AllOf = Clone(AllOf);
+            result.Configuration = Configuration;
             return result;
         }
 
@@ -439,7 +452,8 @@ namespace AutoRest.AzureResourceSchema
                          Equals(Description, rhs.Description) &&
                          Equals(Minimum, rhs.Minimum) &&
                          Equals(Maximum, rhs.Maximum) &&
-                         Equals(Pattern, rhs.Pattern);
+                         Equals(Pattern, rhs.Pattern) &&
+                         Equals(Configuration, rhs.Configuration);
             }
 
             return result;
@@ -459,7 +473,8 @@ namespace AutoRest.AzureResourceSchema
                    GetHashCode(Description) ^
                    GetHashCode(Minimum) ^
                    GetHashCode(Maximum) ^
-                   GetHashCode(Pattern);
+                   GetHashCode(Pattern) ^
+                   GetHashCode(Configuration);
         }
 
         private static int GetHashCode(object value)
@@ -518,17 +533,15 @@ namespace AutoRest.AzureResourceSchema
             return result;
         }
 
-        public static JsonSchema CreateStringEnum(string enumValue, params string[] extraEnumValues)
+        public static JsonSchema CreateSingleValuedEnum(string enumValue)
         {
-            JsonSchema result = new JsonSchema() { JsonType = "string" };
-            result.AddEnum(enumValue);
-            if (extraEnumValues != null)
+            var result = new JsonSchema
             {
-                foreach (string extraEnumValue in extraEnumValues)
-                {
-                    result.AddEnum(extraEnumValue);
-                }
-            }
+                JsonType = "string",
+                Configuration = SchemaConfiguration.OmitExpressionRef,
+            };
+            result.AddEnum(enumValue);
+
             return result;
         }
     }
