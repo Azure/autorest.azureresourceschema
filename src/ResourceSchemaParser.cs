@@ -34,34 +34,6 @@ namespace AutoRest.AzureResourceSchema
         private static readonly Regex subscriptionPrefix = new Regex("^/subscriptions/{\\w+}/$", RegexOptions.IgnoreCase);
         private static readonly Regex resourceGroupPrefix = new Regex("^/subscriptions/{\\w+}/resourceGroups/{\\w+}/$", RegexOptions.IgnoreCase);
 
-        [Flags]
-        enum ScopeType
-        {
-            Unknown = 0,
-            Tenant = 1 << 0,
-            Subcription = 1 << 1,
-            ResourceGroup = 1 << 2,
-            ManagementGroup = 1 << 3,
-            Extension = 1 << 4,
-        }
-
-        private class ResourceDescriptor
-        {
-            public ScopeType ScopeType { get; set; }
-
-            public string ProviderNamespace { get; set; }
-
-            public IReadOnlyList<string> ResourceTypeSegments { get; set; }
-
-            public string ApiVersion { get; set; }
-
-            public string RoutingScope { get; set; }
-
-            public string FullyQualifiedType => $"{ProviderNamespace}/{UnQualifiedType}";
-
-            public string UnQualifiedType => $"{string.Join('/', ResourceTypeSegments)}";
-        }
-
         private static bool ShouldProcess(CodeModel codeModel, Method method, string apiVersion)
         {
             if (method.HttpMethod != HttpMethod.Put)
