@@ -493,11 +493,18 @@
           "description": "the scale direction. Whether the scaling action increases or decreases the number of instances."
         },
         "type": {
-          "type": "string",
-          "enum": [
-            "ChangeCount",
-            "PercentChangeCount",
-            "ExactCount"
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "ChangeCount",
+                "PercentChangeCount",
+                "ExactCount"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
           ],
           "description": "the type of action that should occur when the scale rule fires."
         },

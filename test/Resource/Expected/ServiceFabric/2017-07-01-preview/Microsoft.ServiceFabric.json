@@ -1291,9 +1291,6 @@
     },
     "NamedPartitionSchemeDescription": {
       "type": "object",
-      "oneOf": [
-        {}
-      ],
       "properties": {
         "Count": {
           "oneOf": [
@@ -1321,7 +1318,10 @@
           "description": "Array of size specified by the ‘Count’ parameter, for the names of the partitions."
         },
         "PartitionScheme": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "Named"
+          ]
         }
       },
       "required": [
@@ -1475,37 +1475,17 @@
     "PartitionSchemeDescription": {
       "type": "object",
       "oneOf": [
-        {},
         {
-          "allOf": [
-            {
-              "$ref": "#/definitions/NamedPartitionSchemeDescription"
-            }
-          ]
+          "$ref": "#/definitions/NamedPartitionSchemeDescription"
         },
         {
-          "allOf": [
-            {
-              "$ref": "#/definitions/SingletonPartitionSchemeDescription"
-            }
-          ]
+          "$ref": "#/definitions/SingletonPartitionSchemeDescription"
         },
         {
-          "allOf": [
-            {
-              "$ref": "#/definitions/UniformInt64RangePartitionSchemeDescription"
-            }
-          ]
+          "$ref": "#/definitions/UniformInt64RangePartitionSchemeDescription"
         }
       ],
-      "properties": {
-        "PartitionScheme": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "PartitionScheme"
-      ],
+      "properties": {},
       "description": "Describes how the service is partitioned."
     },
     "RollingUpgradeMonitoringPolicy": {
@@ -1622,36 +1602,17 @@
     },
     "ServicePlacementPolicyDescription": {
       "type": "object",
-      "oneOf": [
-        {}
-      ],
-      "properties": {
-        "Type": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "Type"
-      ],
+      "properties": {},
       "description": "Describes the policy to be used for placement of a Service Fabric service."
     },
     "ServiceProperties": {
       "type": "object",
       "oneOf": [
-        {},
         {
-          "allOf": [
-            {
-              "$ref": "#/definitions/StatelessServiceProperties"
-            }
-          ]
+          "$ref": "#/definitions/StatelessServiceProperties"
         },
         {
-          "allOf": [
-            {
-              "$ref": "#/definitions/StatefulServiceProperties"
-            }
-          ]
+          "$ref": "#/definitions/StatefulServiceProperties"
         }
       ],
       "properties": {
@@ -1727,14 +1688,8 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ]
-        },
-        "serviceKind": {
-          "type": "string"
         }
       },
-      "required": [
-        "serviceKind"
-      ],
       "description": "The service resource properties."
     },
     "ServiceTypeHealthPolicy": {
@@ -1851,12 +1806,12 @@
     },
     "SingletonPartitionSchemeDescription": {
       "type": "object",
-      "oneOf": [
-        {}
-      ],
       "properties": {
         "PartitionScheme": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "Singleton"
+          ]
         }
       },
       "required": [
@@ -1866,9 +1821,6 @@
     },
     "StatefulServiceProperties": {
       "type": "object",
-      "oneOf": [
-        {}
-      ],
       "properties": {
         "hasPersistedState": {
           "oneOf": [
@@ -1921,7 +1873,10 @@
           "description": "The definition on how long StandBy replicas should be maintained before being removed, represented in ISO 8601 format (hh:mm:ss.s)."
         },
         "serviceKind": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "Stateful"
+          ]
         }
       },
       "required": [
@@ -1931,9 +1886,6 @@
     },
     "StatelessServiceProperties": {
       "type": "object",
-      "oneOf": [
-        {}
-      ],
       "properties": {
         "instanceCount": {
           "oneOf": [
@@ -1948,7 +1900,10 @@
           "description": "The instance count."
         },
         "serviceKind": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "Stateless"
+          ]
         }
       },
       "required": [
@@ -1958,9 +1913,6 @@
     },
     "UniformInt64RangePartitionSchemeDescription": {
       "type": "object",
-      "oneOf": [
-        {}
-      ],
       "properties": {
         "Count": {
           "oneOf": [
@@ -1982,7 +1934,10 @@
           "description": "String indicating the upper bound of the partition key range that\nshould be split between the partition ‘Count’\n"
         },
         "PartitionScheme": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "UniformInt64Range"
+          ]
         }
       },
       "required": [

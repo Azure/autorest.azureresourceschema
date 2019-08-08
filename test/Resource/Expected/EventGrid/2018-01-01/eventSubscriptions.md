@@ -10,9 +10,7 @@ To create a Microsoft.EventGrid/eventSubscriptions resource, add the following J
   "type": "Microsoft.EventGrid/eventSubscriptions",
   "apiVersion": "2018-01-01",
   "properties": {
-    "destination": {
-      "endpointType": "string"
-    },
+    "destination": {},
     "filter": {
       "subjectBeginsWith": "string",
       "subjectEndsWith": "string",
@@ -48,13 +46,6 @@ The following tables describe the values you need to set in the schema.
 |  destination | object | No | Information about the destination where events have to be delivered for the event subscription. - [EventSubscriptionDestination object](#EventSubscriptionDestination) |
 |  filter | object | No | Information about the filter for the event subscription. - [EventSubscriptionFilter object](#EventSubscriptionFilter) |
 |  labels | array | No | List of user defined labels. - string |
-
-
-<a id="EventSubscriptionDestination" />
-### EventSubscriptionDestination object
-|  Name | Type | Required | Value |
-|  ---- | ---- | ---- | ---- |
-|  endpointType | string | Yes |  |
 
 
 <a id="EventSubscriptionFilter" />

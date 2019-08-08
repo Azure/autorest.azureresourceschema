@@ -1434,19 +1434,26 @@
           "description": "Connection string value."
         },
         "type": {
-          "type": "string",
-          "enum": [
-            "MySql",
-            "SQLServer",
-            "SQLAzure",
-            "Custom",
-            "NotificationHub",
-            "ServiceBus",
-            "EventHub",
-            "ApiHub",
-            "DocDb",
-            "RedisCache",
-            "PostgreSQL"
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "MySql",
+                "SQLServer",
+                "SQLAzure",
+                "Custom",
+                "NotificationHub",
+                "ServiceBus",
+                "EventHub",
+                "ApiHub",
+                "DocDb",
+                "RedisCache",
+                "PostgreSQL"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
           ],
           "description": "Type of database."
         }
