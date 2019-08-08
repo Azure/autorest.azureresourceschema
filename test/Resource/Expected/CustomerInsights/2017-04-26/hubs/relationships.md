@@ -25,17 +25,17 @@ To create a Microsoft.CustomerInsights/hubs/relationships resource, add the foll
         ],
         "fieldName": "string",
         "fieldType": "string",
-        "isArray": boolean,
-        "isEnum": boolean,
-        "isFlagEnum": boolean,
-        "isImage": boolean,
-        "isLocalizedString": boolean,
-        "isName": boolean,
-        "isRequired": boolean,
+        "isArray": "boolean",
+        "isEnum": "boolean",
+        "isFlagEnum": "boolean",
+        "isImage": "boolean",
+        "isLocalizedString": "boolean",
+        "isName": "boolean",
+        "isRequired": "boolean",
         "propertyId": "string",
         "schemaItemPropLink": "string",
         "maxLength": "integer",
-        "isAvailableInGraph": boolean
+        "isAvailableInGraph": "boolean"
       }
     ],
     "lookupMappings": [

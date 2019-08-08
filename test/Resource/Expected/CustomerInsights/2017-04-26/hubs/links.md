@@ -29,7 +29,7 @@ To create a Microsoft.CustomerInsights/hubs/links resource, add the following JS
         "targetPropertyName": "string"
       }
     ],
-    "referenceOnly": boolean,
+    "referenceOnly": "boolean",
     "operationType": "string"
   }
 }

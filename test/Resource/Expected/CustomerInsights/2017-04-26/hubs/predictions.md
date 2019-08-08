@@ -26,7 +26,7 @@ To create a Microsoft.CustomerInsights/hubs/predictions resource, add the follow
     "primaryProfileType": "string",
     "predictionName": "string",
     "scopeExpression": "string",
-    "autoAnalyze": boolean,
+    "autoAnalyze": "boolean",
     "mappings": {
       "score": "string",
       "grade": "string",

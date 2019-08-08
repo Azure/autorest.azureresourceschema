@@ -38,60 +38,60 @@ To create a Microsoft.Logic/integrationAccounts/agreements resource, add the fol
           },
           "protocolSettings": {
             "messageConnectionSettings": {
-              "ignoreCertificateNameMismatch": boolean,
-              "supportHttpStatusCodeContinue": boolean,
-              "keepHttpConnectionAlive": boolean,
-              "unfoldHttpHeaders": boolean
+              "ignoreCertificateNameMismatch": "boolean",
+              "supportHttpStatusCodeContinue": "boolean",
+              "keepHttpConnectionAlive": "boolean",
+              "unfoldHttpHeaders": "boolean"
             },
             "acknowledgementConnectionSettings": {
-              "ignoreCertificateNameMismatch": boolean,
-              "supportHttpStatusCodeContinue": boolean,
-              "keepHttpConnectionAlive": boolean,
-              "unfoldHttpHeaders": boolean
+              "ignoreCertificateNameMismatch": "boolean",
+              "supportHttpStatusCodeContinue": "boolean",
+              "keepHttpConnectionAlive": "boolean",
+              "unfoldHttpHeaders": "boolean"
             },
             "mdnSettings": {
-              "needMdn": boolean,
-              "signMdn": boolean,
-              "sendMdnAsynchronously": boolean,
+              "needMdn": "boolean",
+              "signMdn": "boolean",
+              "sendMdnAsynchronously": "boolean",
               "receiptDeliveryUrl": "string",
               "dispositionNotificationTo": "string",
-              "signOutboundMdnIfOptional": boolean,
+              "signOutboundMdnIfOptional": "boolean",
               "mdnText": "string",
-              "sendInboundMdnToMessageBox": boolean,
+              "sendInboundMdnToMessageBox": "boolean",
               "micHashingAlgorithm": "string"
             },
             "securitySettings": {
-              "overrideGroupSigningCertificate": boolean,
+              "overrideGroupSigningCertificate": "boolean",
               "signingCertificateName": "string",
               "encryptionCertificateName": "string",
-              "enableNrrForInboundEncodedMessages": boolean,
-              "enableNrrForInboundDecodedMessages": boolean,
-              "enableNrrForOutboundMdn": boolean,
-              "enableNrrForOutboundEncodedMessages": boolean,
-              "enableNrrForOutboundDecodedMessages": boolean,
-              "enableNrrForInboundMdn": boolean
+              "enableNrrForInboundEncodedMessages": "boolean",
+              "enableNrrForInboundDecodedMessages": "boolean",
+              "enableNrrForOutboundMdn": "boolean",
+              "enableNrrForOutboundEncodedMessages": "boolean",
+              "enableNrrForOutboundDecodedMessages": "boolean",
+              "enableNrrForInboundMdn": "boolean"
             },
             "validationSettings": {
-              "overrideMessageProperties": boolean,
-              "encryptMessage": boolean,
-              "signMessage": boolean,
-              "compressMessage": boolean,
-              "checkDuplicateMessage": boolean,
+              "overrideMessageProperties": "boolean",
+              "encryptMessage": "boolean",
+              "signMessage": "boolean",
+              "compressMessage": "boolean",
+              "checkDuplicateMessage": "boolean",
               "interchangeDuplicatesValidityDays": "integer",
-              "checkCertificateRevocationListOnSend": boolean,
-              "checkCertificateRevocationListOnReceive": boolean,
+              "checkCertificateRevocationListOnSend": "boolean",
+              "checkCertificateRevocationListOnReceive": "boolean",
               "encryptionAlgorithm": "string"
             },
             "envelopeSettings": {
               "messageContentType": "string",
-              "transmitFileNameInMimeHeader": boolean,
+              "transmitFileNameInMimeHeader": "boolean",
               "fileNameTemplate": "string",
-              "SuspendMessageOnFileNameGenerationError": boolean,
-              "AutogenerateFileName": boolean
+              "SuspendMessageOnFileNameGenerationError": "boolean",
+              "AutogenerateFileName": "boolean"
             },
             "errorSettings": {
-              "SuspendDuplicateMessage": boolean,
-              "ResendIfMdnNotReceived": boolean
+              "SuspendDuplicateMessage": "boolean",
+              "ResendIfMdnNotReceived": "boolean"
             }
           }
         },
@@ -106,60 +106,60 @@ To create a Microsoft.Logic/integrationAccounts/agreements resource, add the fol
           },
           "protocolSettings": {
             "messageConnectionSettings": {
-              "ignoreCertificateNameMismatch": boolean,
-              "supportHttpStatusCodeContinue": boolean,
-              "keepHttpConnectionAlive": boolean,
-              "unfoldHttpHeaders": boolean
+              "ignoreCertificateNameMismatch": "boolean",
+              "supportHttpStatusCodeContinue": "boolean",
+              "keepHttpConnectionAlive": "boolean",
+              "unfoldHttpHeaders": "boolean"
             },
             "acknowledgementConnectionSettings": {
-              "ignoreCertificateNameMismatch": boolean,
-              "supportHttpStatusCodeContinue": boolean,
-              "keepHttpConnectionAlive": boolean,
-              "unfoldHttpHeaders": boolean
+              "ignoreCertificateNameMismatch": "boolean",
+              "supportHttpStatusCodeContinue": "boolean",
+              "keepHttpConnectionAlive": "boolean",
+              "unfoldHttpHeaders": "boolean"
             },
             "mdnSettings": {
-              "needMdn": boolean,
-              "signMdn": boolean,
-              "sendMdnAsynchronously": boolean,
+              "needMdn": "boolean",
+              "signMdn": "boolean",
+              "sendMdnAsynchronously": "boolean",
               "receiptDeliveryUrl": "string",
               "dispositionNotificationTo": "string",
-              "signOutboundMdnIfOptional": boolean,
+              "signOutboundMdnIfOptional": "boolean",
               "mdnText": "string",
-              "sendInboundMdnToMessageBox": boolean,
+              "sendInboundMdnToMessageBox": "boolean",
               "micHashingAlgorithm": "string"
             },
             "securitySettings": {
-              "overrideGroupSigningCertificate": boolean,
+              "overrideGroupSigningCertificate": "boolean",
               "signingCertificateName": "string",
               "encryptionCertificateName": "string",
-              "enableNrrForInboundEncodedMessages": boolean,
-              "enableNrrForInboundDecodedMessages": boolean,
-              "enableNrrForOutboundMdn": boolean,
-              "enableNrrForOutboundEncodedMessages": boolean,
-              "enableNrrForOutboundDecodedMessages": boolean,
-              "enableNrrForInboundMdn": boolean
+              "enableNrrForInboundEncodedMessages": "boolean",
+              "enableNrrForInboundDecodedMessages": "boolean",
+              "enableNrrForOutboundMdn": "boolean",
+              "enableNrrForOutboundEncodedMessages": "boolean",
+              "enableNrrForOutboundDecodedMessages": "boolean",
+              "enableNrrForInboundMdn": "boolean"
             },
             "validationSettings": {
-              "overrideMessageProperties": boolean,
-              "encryptMessage": boolean,
-              "signMessage": boolean,
-              "compressMessage": boolean,
-              "checkDuplicateMessage": boolean,
+              "overrideMessageProperties": "boolean",
+              "encryptMessage": "boolean",
+              "signMessage": "boolean",
+              "compressMessage": "boolean",
+              "checkDuplicateMessage": "boolean",
               "interchangeDuplicatesValidityDays": "integer",
-              "checkCertificateRevocationListOnSend": boolean,
-              "checkCertificateRevocationListOnReceive": boolean,
+              "checkCertificateRevocationListOnSend": "boolean",
+              "checkCertificateRevocationListOnReceive": "boolean",
               "encryptionAlgorithm": "string"
             },
             "envelopeSettings": {
               "messageContentType": "string",
-              "transmitFileNameInMimeHeader": boolean,
+              "transmitFileNameInMimeHeader": "boolean",
               "fileNameTemplate": "string",
-              "SuspendMessageOnFileNameGenerationError": boolean,
-              "AutogenerateFileName": boolean
+              "SuspendMessageOnFileNameGenerationError": "boolean",
+              "AutogenerateFileName": "boolean"
             },
             "errorSettings": {
-              "SuspendDuplicateMessage": boolean,
-              "ResendIfMdnNotReceived": boolean
+              "SuspendDuplicateMessage": "boolean",
+              "ResendIfMdnNotReceived": "boolean"
             }
           }
         }
@@ -176,21 +176,21 @@ To create a Microsoft.Logic/integrationAccounts/agreements resource, add the fol
           },
           "protocolSettings": {
             "validationSettings": {
-              "validateCharacterSet": boolean,
-              "checkDuplicateInterchangeControlNumber": boolean,
+              "validateCharacterSet": "boolean",
+              "checkDuplicateInterchangeControlNumber": "boolean",
               "interchangeControlNumberValidityDays": "integer",
-              "checkDuplicateGroupControlNumber": boolean,
-              "checkDuplicateTransactionSetControlNumber": boolean,
-              "validateEDITypes": boolean,
-              "validateXSDTypes": boolean,
-              "allowLeadingAndTrailingSpacesAndZeroes": boolean,
-              "trimLeadingAndTrailingSpacesAndZeroes": boolean,
+              "checkDuplicateGroupControlNumber": "boolean",
+              "checkDuplicateTransactionSetControlNumber": "boolean",
+              "validateEDITypes": "boolean",
+              "validateXSDTypes": "boolean",
+              "allowLeadingAndTrailingSpacesAndZeroes": "boolean",
+              "trimLeadingAndTrailingSpacesAndZeroes": "boolean",
               "trailingSeparatorPolicy": "string"
             },
             "framingSettings": {
               "dataElementSeparator": "integer",
               "componentSeparator": "integer",
-              "replaceSeparatorsInPayload": boolean,
+              "replaceSeparatorsInPayload": "boolean",
               "replaceCharacter": "integer",
               "segmentTerminator": "integer",
               "characterSet": "string",
@@ -198,46 +198,46 @@ To create a Microsoft.Logic/integrationAccounts/agreements resource, add the fol
             },
             "envelopeSettings": {
               "controlStandardsId": "integer",
-              "useControlStandardsIdAsRepetitionCharacter": boolean,
+              "useControlStandardsIdAsRepetitionCharacter": "boolean",
               "senderApplicationId": "string",
               "receiverApplicationId": "string",
               "controlVersionNumber": "string",
               "interchangeControlNumberLowerBound": "integer",
               "interchangeControlNumberUpperBound": "integer",
-              "rolloverInterchangeControlNumber": boolean,
-              "enableDefaultGroupHeaders": boolean,
+              "rolloverInterchangeControlNumber": "boolean",
+              "enableDefaultGroupHeaders": "boolean",
               "functionalGroupId": "string",
               "groupControlNumberLowerBound": "integer",
               "groupControlNumberUpperBound": "integer",
-              "rolloverGroupControlNumber": boolean,
+              "rolloverGroupControlNumber": "boolean",
               "groupHeaderAgencyCode": "string",
               "groupHeaderVersion": "string",
               "transactionSetControlNumberLowerBound": "integer",
               "transactionSetControlNumberUpperBound": "integer",
-              "rolloverTransactionSetControlNumber": boolean,
+              "rolloverTransactionSetControlNumber": "boolean",
               "transactionSetControlNumberPrefix": "string",
               "transactionSetControlNumberSuffix": "string",
-              "overwriteExistingTransactionSetControlNumber": boolean,
+              "overwriteExistingTransactionSetControlNumber": "boolean",
               "groupHeaderDateFormat": "string",
               "groupHeaderTimeFormat": "string",
               "usageIndicator": "string"
             },
             "acknowledgementSettings": {
-              "needTechnicalAcknowledgement": boolean,
-              "batchTechnicalAcknowledgements": boolean,
-              "needFunctionalAcknowledgement": boolean,
+              "needTechnicalAcknowledgement": "boolean",
+              "batchTechnicalAcknowledgements": "boolean",
+              "needFunctionalAcknowledgement": "boolean",
               "functionalAcknowledgementVersion": "string",
-              "batchFunctionalAcknowledgements": boolean,
-              "needImplementationAcknowledgement": boolean,
+              "batchFunctionalAcknowledgements": "boolean",
+              "needImplementationAcknowledgement": "boolean",
               "implementationAcknowledgementVersion": "string",
-              "batchImplementationAcknowledgements": boolean,
-              "needLoopForValidMessages": boolean,
-              "sendSynchronousAcknowledgement": boolean,
+              "batchImplementationAcknowledgements": "boolean",
+              "needLoopForValidMessages": "boolean",
+              "sendSynchronousAcknowledgement": "boolean",
               "acknowledgementControlNumberPrefix": "string",
               "acknowledgementControlNumberSuffix": "string",
               "acknowledgementControlNumberLowerBound": "integer",
               "acknowledgementControlNumberUpperBound": "integer",
-              "rolloverAcknowledgementControlNumber": boolean
+              "rolloverAcknowledgementControlNumber": "boolean"
             },
             "messageFilter": {
               "messageFilterType": "string"
@@ -249,12 +249,12 @@ To create a Microsoft.Logic/integrationAccounts/agreements resource, add the fol
               "passwordValue": "string"
             },
             "processingSettings": {
-              "maskSecurityInfo": boolean,
-              "convertImpliedDecimal": boolean,
-              "preserveInterchange": boolean,
-              "suspendInterchangeOnError": boolean,
-              "createEmptyXmlTagsForTrailingSeparators": boolean,
-              "useDotAsDecimalSeparator": boolean
+              "maskSecurityInfo": "boolean",
+              "convertImpliedDecimal": "boolean",
+              "preserveInterchange": "boolean",
+              "suspendInterchangeOnError": "boolean",
+              "createEmptyXmlTagsForTrailingSeparators": "boolean",
+              "useDotAsDecimalSeparator": "boolean"
             },
             "envelopeOverrides": [
               {
@@ -273,11 +273,11 @@ To create a Microsoft.Logic/integrationAccounts/agreements resource, add the fol
             "validationOverrides": [
               {
                 "messageId": "string",
-                "validateEDITypes": boolean,
-                "validateXSDTypes": boolean,
-                "allowLeadingAndTrailingSpacesAndZeroes": boolean,
-                "validateCharacterSet": boolean,
-                "trimLeadingAndTrailingSpacesAndZeroes": boolean,
+                "validateEDITypes": "boolean",
+                "validateXSDTypes": "boolean",
+                "allowLeadingAndTrailingSpacesAndZeroes": "boolean",
+                "validateCharacterSet": "boolean",
+                "trimLeadingAndTrailingSpacesAndZeroes": "boolean",
                 "trailingSeparatorPolicy": "string"
               }
             ],
@@ -303,7 +303,7 @@ To create a Microsoft.Logic/integrationAccounts/agreements resource, add the fol
                 "segmentTerminator": "integer",
                 "segmentTerminatorSuffix": "string",
                 "replaceCharacter": "integer",
-                "replaceSeparatorsInPayload": boolean,
+                "replaceSeparatorsInPayload": "boolean",
                 "targetNamespace": "string"
               }
             ]
@@ -320,21 +320,21 @@ To create a Microsoft.Logic/integrationAccounts/agreements resource, add the fol
           },
           "protocolSettings": {
             "validationSettings": {
-              "validateCharacterSet": boolean,
-              "checkDuplicateInterchangeControlNumber": boolean,
+              "validateCharacterSet": "boolean",
+              "checkDuplicateInterchangeControlNumber": "boolean",
               "interchangeControlNumberValidityDays": "integer",
-              "checkDuplicateGroupControlNumber": boolean,
-              "checkDuplicateTransactionSetControlNumber": boolean,
-              "validateEDITypes": boolean,
-              "validateXSDTypes": boolean,
-              "allowLeadingAndTrailingSpacesAndZeroes": boolean,
-              "trimLeadingAndTrailingSpacesAndZeroes": boolean,
+              "checkDuplicateGroupControlNumber": "boolean",
+              "checkDuplicateTransactionSetControlNumber": "boolean",
+              "validateEDITypes": "boolean",
+              "validateXSDTypes": "boolean",
+              "allowLeadingAndTrailingSpacesAndZeroes": "boolean",
+              "trimLeadingAndTrailingSpacesAndZeroes": "boolean",
               "trailingSeparatorPolicy": "string"
             },
             "framingSettings": {
               "dataElementSeparator": "integer",
               "componentSeparator": "integer",
-              "replaceSeparatorsInPayload": boolean,
+              "replaceSeparatorsInPayload": "boolean",
               "replaceCharacter": "integer",
               "segmentTerminator": "integer",
               "characterSet": "string",
@@ -342,46 +342,46 @@ To create a Microsoft.Logic/integrationAccounts/agreements resource, add the fol
             },
             "envelopeSettings": {
               "controlStandardsId": "integer",
-              "useControlStandardsIdAsRepetitionCharacter": boolean,
+              "useControlStandardsIdAsRepetitionCharacter": "boolean",
               "senderApplicationId": "string",
               "receiverApplicationId": "string",
               "controlVersionNumber": "string",
               "interchangeControlNumberLowerBound": "integer",
               "interchangeControlNumberUpperBound": "integer",
-              "rolloverInterchangeControlNumber": boolean,
-              "enableDefaultGroupHeaders": boolean,
+              "rolloverInterchangeControlNumber": "boolean",
+              "enableDefaultGroupHeaders": "boolean",
               "functionalGroupId": "string",
               "groupControlNumberLowerBound": "integer",
               "groupControlNumberUpperBound": "integer",
-              "rolloverGroupControlNumber": boolean,
+              "rolloverGroupControlNumber": "boolean",
               "groupHeaderAgencyCode": "string",
               "groupHeaderVersion": "string",
               "transactionSetControlNumberLowerBound": "integer",
               "transactionSetControlNumberUpperBound": "integer",
-              "rolloverTransactionSetControlNumber": boolean,
+              "rolloverTransactionSetControlNumber": "boolean",
               "transactionSetControlNumberPrefix": "string",
               "transactionSetControlNumberSuffix": "string",
-              "overwriteExistingTransactionSetControlNumber": boolean,
+              "overwriteExistingTransactionSetControlNumber": "boolean",
               "groupHeaderDateFormat": "string",
               "groupHeaderTimeFormat": "string",
               "usageIndicator": "string"
             },
             "acknowledgementSettings": {
-              "needTechnicalAcknowledgement": boolean,
-              "batchTechnicalAcknowledgements": boolean,
-              "needFunctionalAcknowledgement": boolean,
+              "needTechnicalAcknowledgement": "boolean",
+              "batchTechnicalAcknowledgements": "boolean",
+              "needFunctionalAcknowledgement": "boolean",
               "functionalAcknowledgementVersion": "string",
-              "batchFunctionalAcknowledgements": boolean,
-              "needImplementationAcknowledgement": boolean,
+              "batchFunctionalAcknowledgements": "boolean",
+              "needImplementationAcknowledgement": "boolean",
               "implementationAcknowledgementVersion": "string",
-              "batchImplementationAcknowledgements": boolean,
-              "needLoopForValidMessages": boolean,
-              "sendSynchronousAcknowledgement": boolean,
+              "batchImplementationAcknowledgements": "boolean",
+              "needLoopForValidMessages": "boolean",
+              "sendSynchronousAcknowledgement": "boolean",
               "acknowledgementControlNumberPrefix": "string",
               "acknowledgementControlNumberSuffix": "string",
               "acknowledgementControlNumberLowerBound": "integer",
               "acknowledgementControlNumberUpperBound": "integer",
-              "rolloverAcknowledgementControlNumber": boolean
+              "rolloverAcknowledgementControlNumber": "boolean"
             },
             "messageFilter": {
               "messageFilterType": "string"
@@ -393,12 +393,12 @@ To create a Microsoft.Logic/integrationAccounts/agreements resource, add the fol
               "passwordValue": "string"
             },
             "processingSettings": {
-              "maskSecurityInfo": boolean,
-              "convertImpliedDecimal": boolean,
-              "preserveInterchange": boolean,
-              "suspendInterchangeOnError": boolean,
-              "createEmptyXmlTagsForTrailingSeparators": boolean,
-              "useDotAsDecimalSeparator": boolean
+              "maskSecurityInfo": "boolean",
+              "convertImpliedDecimal": "boolean",
+              "preserveInterchange": "boolean",
+              "suspendInterchangeOnError": "boolean",
+              "createEmptyXmlTagsForTrailingSeparators": "boolean",
+              "useDotAsDecimalSeparator": "boolean"
             },
             "envelopeOverrides": [
               {
@@ -417,11 +417,11 @@ To create a Microsoft.Logic/integrationAccounts/agreements resource, add the fol
             "validationOverrides": [
               {
                 "messageId": "string",
-                "validateEDITypes": boolean,
-                "validateXSDTypes": boolean,
-                "allowLeadingAndTrailingSpacesAndZeroes": boolean,
-                "validateCharacterSet": boolean,
-                "trimLeadingAndTrailingSpacesAndZeroes": boolean,
+                "validateEDITypes": "boolean",
+                "validateXSDTypes": "boolean",
+                "allowLeadingAndTrailingSpacesAndZeroes": "boolean",
+                "validateCharacterSet": "boolean",
+                "trimLeadingAndTrailingSpacesAndZeroes": "boolean",
                 "trailingSeparatorPolicy": "string"
               }
             ],
@@ -447,7 +447,7 @@ To create a Microsoft.Logic/integrationAccounts/agreements resource, add the fol
                 "segmentTerminator": "integer",
                 "segmentTerminatorSuffix": "string",
                 "replaceCharacter": "integer",
-                "replaceSeparatorsInPayload": boolean,
+                "replaceSeparatorsInPayload": "boolean",
                 "targetNamespace": "string"
               }
             ]
@@ -466,15 +466,15 @@ To create a Microsoft.Logic/integrationAccounts/agreements resource, add the fol
           },
           "protocolSettings": {
             "validationSettings": {
-              "validateCharacterSet": boolean,
-              "checkDuplicateInterchangeControlNumber": boolean,
+              "validateCharacterSet": "boolean",
+              "checkDuplicateInterchangeControlNumber": "boolean",
               "interchangeControlNumberValidityDays": "integer",
-              "checkDuplicateGroupControlNumber": boolean,
-              "checkDuplicateTransactionSetControlNumber": boolean,
-              "validateEDITypes": boolean,
-              "validateXSDTypes": boolean,
-              "allowLeadingAndTrailingSpacesAndZeroes": boolean,
-              "trimLeadingAndTrailingSpacesAndZeroes": boolean,
+              "checkDuplicateGroupControlNumber": "boolean",
+              "checkDuplicateTransactionSetControlNumber": "boolean",
+              "validateEDITypes": "boolean",
+              "validateXSDTypes": "boolean",
+              "allowLeadingAndTrailingSpacesAndZeroes": "boolean",
+              "trimLeadingAndTrailingSpacesAndZeroes": "boolean",
               "trailingSeparatorPolicy": "string"
             },
             "framingSettings": {
@@ -493,16 +493,16 @@ To create a Microsoft.Logic/integrationAccounts/agreements resource, add the fol
             "envelopeSettings": {
               "groupAssociationAssignedCode": "string",
               "communicationAgreementId": "string",
-              "applyDelimiterStringAdvice": boolean,
-              "createGroupingSegments": boolean,
-              "enableDefaultGroupHeaders": boolean,
+              "applyDelimiterStringAdvice": "boolean",
+              "createGroupingSegments": "boolean",
+              "enableDefaultGroupHeaders": "boolean",
               "recipientReferencePasswordValue": "string",
               "recipientReferencePasswordQualifier": "string",
               "applicationReferenceId": "string",
               "processingPriorityCode": "string",
               "interchangeControlNumberLowerBound": "integer",
               "interchangeControlNumberUpperBound": "integer",
-              "rolloverInterchangeControlNumber": boolean,
+              "rolloverInterchangeControlNumber": "boolean",
               "interchangeControlNumberPrefix": "string",
               "interchangeControlNumberSuffix": "string",
               "senderReverseRoutingAddress": "string",
@@ -513,7 +513,7 @@ To create a Microsoft.Logic/integrationAccounts/agreements resource, add the fol
               "groupMessageRelease": "string",
               "groupControlNumberLowerBound": "integer",
               "groupControlNumberUpperBound": "integer",
-              "rolloverGroupControlNumber": boolean,
+              "rolloverGroupControlNumber": "boolean",
               "groupControlNumberPrefix": "string",
               "groupControlNumberSuffix": "string",
               "groupApplicationReceiverQualifier": "string",
@@ -521,40 +521,40 @@ To create a Microsoft.Logic/integrationAccounts/agreements resource, add the fol
               "groupApplicationSenderQualifier": "string",
               "groupApplicationSenderId": "string",
               "groupApplicationPassword": "string",
-              "overwriteExistingTransactionSetControlNumber": boolean,
+              "overwriteExistingTransactionSetControlNumber": "boolean",
               "transactionSetControlNumberPrefix": "string",
               "transactionSetControlNumberSuffix": "string",
               "transactionSetControlNumberLowerBound": "integer",
               "transactionSetControlNumberUpperBound": "integer",
-              "rolloverTransactionSetControlNumber": boolean,
-              "isTestInterchange": boolean,
+              "rolloverTransactionSetControlNumber": "boolean",
+              "isTestInterchange": "boolean",
               "senderInternalIdentification": "string",
               "senderInternalSubIdentification": "string",
               "receiverInternalIdentification": "string",
               "receiverInternalSubIdentification": "string"
             },
             "acknowledgementSettings": {
-              "needTechnicalAcknowledgement": boolean,
-              "batchTechnicalAcknowledgements": boolean,
-              "needFunctionalAcknowledgement": boolean,
-              "batchFunctionalAcknowledgements": boolean,
-              "needLoopForValidMessages": boolean,
-              "sendSynchronousAcknowledgement": boolean,
+              "needTechnicalAcknowledgement": "boolean",
+              "batchTechnicalAcknowledgements": "boolean",
+              "needFunctionalAcknowledgement": "boolean",
+              "batchFunctionalAcknowledgements": "boolean",
+              "needLoopForValidMessages": "boolean",
+              "sendSynchronousAcknowledgement": "boolean",
               "acknowledgementControlNumberPrefix": "string",
               "acknowledgementControlNumberSuffix": "string",
               "acknowledgementControlNumberLowerBound": "integer",
               "acknowledgementControlNumberUpperBound": "integer",
-              "rolloverAcknowledgementControlNumber": boolean
+              "rolloverAcknowledgementControlNumber": "boolean"
             },
             "messageFilter": {
               "messageFilterType": "string"
             },
             "processingSettings": {
-              "maskSecurityInfo": boolean,
-              "preserveInterchange": boolean,
-              "suspendInterchangeOnError": boolean,
-              "createEmptyXmlTagsForTrailingSeparators": boolean,
-              "useDotAsDecimalSeparator": boolean
+              "maskSecurityInfo": "boolean",
+              "preserveInterchange": "boolean",
+              "suspendInterchangeOnError": "boolean",
+              "createEmptyXmlTagsForTrailingSeparators": "boolean",
+              "useDotAsDecimalSeparator": "boolean"
             },
             "envelopeOverrides": [
               {
@@ -594,12 +594,12 @@ To create a Microsoft.Logic/integrationAccounts/agreements resource, add the fol
             "validationOverrides": [
               {
                 "messageId": "string",
-                "enforceCharacterSet": boolean,
-                "validateEDITypes": boolean,
-                "validateXSDTypes": boolean,
-                "allowLeadingAndTrailingSpacesAndZeroes": boolean,
+                "enforceCharacterSet": "boolean",
+                "validateEDITypes": "boolean",
+                "validateXSDTypes": "boolean",
+                "allowLeadingAndTrailingSpacesAndZeroes": "boolean",
                 "trailingSeparatorPolicy": "string",
-                "trimLeadingAndTrailingSpacesAndZeroes": boolean
+                "trimLeadingAndTrailingSpacesAndZeroes": "boolean"
               }
             ],
             "edifactDelimiterOverrides": [
@@ -631,15 +631,15 @@ To create a Microsoft.Logic/integrationAccounts/agreements resource, add the fol
           },
           "protocolSettings": {
             "validationSettings": {
-              "validateCharacterSet": boolean,
-              "checkDuplicateInterchangeControlNumber": boolean,
+              "validateCharacterSet": "boolean",
+              "checkDuplicateInterchangeControlNumber": "boolean",
               "interchangeControlNumberValidityDays": "integer",
-              "checkDuplicateGroupControlNumber": boolean,
-              "checkDuplicateTransactionSetControlNumber": boolean,
-              "validateEDITypes": boolean,
-              "validateXSDTypes": boolean,
-              "allowLeadingAndTrailingSpacesAndZeroes": boolean,
-              "trimLeadingAndTrailingSpacesAndZeroes": boolean,
+              "checkDuplicateGroupControlNumber": "boolean",
+              "checkDuplicateTransactionSetControlNumber": "boolean",
+              "validateEDITypes": "boolean",
+              "validateXSDTypes": "boolean",
+              "allowLeadingAndTrailingSpacesAndZeroes": "boolean",
+              "trimLeadingAndTrailingSpacesAndZeroes": "boolean",
               "trailingSeparatorPolicy": "string"
             },
             "framingSettings": {
@@ -658,16 +658,16 @@ To create a Microsoft.Logic/integrationAccounts/agreements resource, add the fol
             "envelopeSettings": {
               "groupAssociationAssignedCode": "string",
               "communicationAgreementId": "string",
-              "applyDelimiterStringAdvice": boolean,
-              "createGroupingSegments": boolean,
-              "enableDefaultGroupHeaders": boolean,
+              "applyDelimiterStringAdvice": "boolean",
+              "createGroupingSegments": "boolean",
+              "enableDefaultGroupHeaders": "boolean",
               "recipientReferencePasswordValue": "string",
               "recipientReferencePasswordQualifier": "string",
               "applicationReferenceId": "string",
               "processingPriorityCode": "string",
               "interchangeControlNumberLowerBound": "integer",
               "interchangeControlNumberUpperBound": "integer",
-              "rolloverInterchangeControlNumber": boolean,
+              "rolloverInterchangeControlNumber": "boolean",
               "interchangeControlNumberPrefix": "string",
               "interchangeControlNumberSuffix": "string",
               "senderReverseRoutingAddress": "string",
@@ -678,7 +678,7 @@ To create a Microsoft.Logic/integrationAccounts/agreements resource, add the fol
               "groupMessageRelease": "string",
               "groupControlNumberLowerBound": "integer",
               "groupControlNumberUpperBound": "integer",
-              "rolloverGroupControlNumber": boolean,
+              "rolloverGroupControlNumber": "boolean",
               "groupControlNumberPrefix": "string",
               "groupControlNumberSuffix": "string",
               "groupApplicationReceiverQualifier": "string",
@@ -686,40 +686,40 @@ To create a Microsoft.Logic/integrationAccounts/agreements resource, add the fol
               "groupApplicationSenderQualifier": "string",
               "groupApplicationSenderId": "string",
               "groupApplicationPassword": "string",
-              "overwriteExistingTransactionSetControlNumber": boolean,
+              "overwriteExistingTransactionSetControlNumber": "boolean",
               "transactionSetControlNumberPrefix": "string",
               "transactionSetControlNumberSuffix": "string",
               "transactionSetControlNumberLowerBound": "integer",
               "transactionSetControlNumberUpperBound": "integer",
-              "rolloverTransactionSetControlNumber": boolean,
-              "isTestInterchange": boolean,
+              "rolloverTransactionSetControlNumber": "boolean",
+              "isTestInterchange": "boolean",
               "senderInternalIdentification": "string",
               "senderInternalSubIdentification": "string",
               "receiverInternalIdentification": "string",
               "receiverInternalSubIdentification": "string"
             },
             "acknowledgementSettings": {
-              "needTechnicalAcknowledgement": boolean,
-              "batchTechnicalAcknowledgements": boolean,
-              "needFunctionalAcknowledgement": boolean,
-              "batchFunctionalAcknowledgements": boolean,
-              "needLoopForValidMessages": boolean,
-              "sendSynchronousAcknowledgement": boolean,
+              "needTechnicalAcknowledgement": "boolean",
+              "batchTechnicalAcknowledgements": "boolean",
+              "needFunctionalAcknowledgement": "boolean",
+              "batchFunctionalAcknowledgements": "boolean",
+              "needLoopForValidMessages": "boolean",
+              "sendSynchronousAcknowledgement": "boolean",
               "acknowledgementControlNumberPrefix": "string",
               "acknowledgementControlNumberSuffix": "string",
               "acknowledgementControlNumberLowerBound": "integer",
               "acknowledgementControlNumberUpperBound": "integer",
-              "rolloverAcknowledgementControlNumber": boolean
+              "rolloverAcknowledgementControlNumber": "boolean"
             },
             "messageFilter": {
               "messageFilterType": "string"
             },
             "processingSettings": {
-              "maskSecurityInfo": boolean,
-              "preserveInterchange": boolean,
-              "suspendInterchangeOnError": boolean,
-              "createEmptyXmlTagsForTrailingSeparators": boolean,
-              "useDotAsDecimalSeparator": boolean
+              "maskSecurityInfo": "boolean",
+              "preserveInterchange": "boolean",
+              "suspendInterchangeOnError": "boolean",
+              "createEmptyXmlTagsForTrailingSeparators": "boolean",
+              "useDotAsDecimalSeparator": "boolean"
             },
             "envelopeOverrides": [
               {
@@ -759,12 +759,12 @@ To create a Microsoft.Logic/integrationAccounts/agreements resource, add the fol
             "validationOverrides": [
               {
                 "messageId": "string",
-                "enforceCharacterSet": boolean,
-                "validateEDITypes": boolean,
-                "validateXSDTypes": boolean,
-                "allowLeadingAndTrailingSpacesAndZeroes": boolean,
+                "enforceCharacterSet": "boolean",
+                "validateEDITypes": "boolean",
+                "validateXSDTypes": "boolean",
+                "allowLeadingAndTrailingSpacesAndZeroes": "boolean",
                 "trailingSeparatorPolicy": "string",
-                "trimLeadingAndTrailingSpacesAndZeroes": boolean
+                "trimLeadingAndTrailingSpacesAndZeroes": "boolean"
               }
             ],
             "edifactDelimiterOverrides": [

@@ -85,8 +85,8 @@ To create a Microsoft.DomainRegistration/domains resource, add the following JSO
       "organization": "string",
       "phone": "string"
     },
-    "privacy": boolean,
-    "autoRenew": boolean,
+    "privacy": "boolean",
+    "autoRenew": "boolean",
     "consent": {
       "agreementKeys": [
         "string"

@@ -12,8 +12,8 @@ To create a Microsoft.ApiManagement/service/products resource, add the following
   "properties": {
     "description": "string",
     "terms": "string",
-    "subscriptionRequired": boolean,
-    "approvalRequired": boolean,
+    "subscriptionRequired": "boolean",
+    "approvalRequired": "boolean",
     "subscriptionsLimit": "integer",
     "state": "string",
     "displayName": "string"

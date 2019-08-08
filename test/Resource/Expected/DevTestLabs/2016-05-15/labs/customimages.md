@@ -23,7 +23,7 @@ To create a Microsoft.DevTestLab/labs/customimages resource, add the following J
     },
     "vhd": {
       "imageName": "string",
-      "sysPrep": boolean,
+      "sysPrep": "boolean",
       "osType": "string"
     },
     "description": "string",

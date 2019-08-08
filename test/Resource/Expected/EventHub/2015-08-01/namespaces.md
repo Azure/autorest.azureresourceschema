@@ -22,7 +22,7 @@ To create a Microsoft.EventHub/namespaces resource, add the following JSON to th
     "createdAt": "string",
     "updatedAt": "string",
     "serviceBusEndpoint": "string",
-    "enabled": boolean
+    "enabled": "boolean"
   },
   "resources": []
 }

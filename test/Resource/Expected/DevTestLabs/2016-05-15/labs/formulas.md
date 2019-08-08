@@ -32,11 +32,11 @@ To create a Microsoft.DevTestLab/labs/formulas resource, add the following JSON 
         "userName": "string",
         "password": "string",
         "sshKey": "string",
-        "isAuthenticationWithSshKey": boolean,
+        "isAuthenticationWithSshKey": "boolean",
         "fqdn": "string",
         "labSubnetName": "string",
         "labVirtualNetworkId": "string",
-        "disallowPublicIpAddress": boolean,
+        "disallowPublicIpAddress": "boolean",
         "artifacts": [
           {
             "artifactId": "string",
@@ -172,7 +172,7 @@ To create a Microsoft.DevTestLab/labs/formulas resource, add the following JSON 
           }
         },
         "expirationDate": "string",
-        "allowClaim": boolean,
+        "allowClaim": "boolean",
         "storageType": "string",
         "virtualMachineCreationSource": "string",
         "environmentId": "string",

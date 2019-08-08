@@ -18,7 +18,7 @@ To create a Microsoft.Network/loadBalancers/inboundNatRules resource, add the fo
     "frontendPort": "integer",
     "backendPort": "integer",
     "idleTimeoutInMinutes": "integer",
-    "enableFloatingIP": boolean,
+    "enableFloatingIP": "boolean",
     "provisioningState": "string"
   },
   "etag": "string"

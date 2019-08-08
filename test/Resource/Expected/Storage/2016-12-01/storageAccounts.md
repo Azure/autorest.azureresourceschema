@@ -18,21 +18,21 @@ To create a Microsoft.Storage/storageAccounts resource, add the following JSON t
   "properties": {
     "customDomain": {
       "name": "string",
-      "useSubDomain": boolean
+      "useSubDomain": "boolean"
     },
     "encryption": {
       "services": {
         "blob": {
-          "enabled": boolean
+          "enabled": "boolean"
         },
         "file": {
-          "enabled": boolean
+          "enabled": "boolean"
         }
       },
       "keySource": "Microsoft.Storage"
     },
     "accessTier": "string",
-    "supportsHttpsTrafficOnly": boolean
+    "supportsHttpsTrafficOnly": "boolean"
   }
 }
 ```

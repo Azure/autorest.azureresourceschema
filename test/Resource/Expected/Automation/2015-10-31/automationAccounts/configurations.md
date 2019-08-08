@@ -10,8 +10,8 @@ To create a Microsoft.Automation/automationAccounts/configurations resource, add
   "type": "Microsoft.Automation/automationAccounts/configurations",
   "apiVersion": "2015-10-31",
   "properties": {
-    "logVerbose": boolean,
-    "logProgress": boolean,
+    "logVerbose": "boolean",
+    "logProgress": "boolean",
     "source": {
       "hash": {
         "algorithm": "string",

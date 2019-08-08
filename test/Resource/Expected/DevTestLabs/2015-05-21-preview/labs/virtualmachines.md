@@ -21,11 +21,11 @@ To create a Microsoft.DevTestLab/labs/virtualmachines resource, add the followin
     "userName": "string",
     "password": "string",
     "sshKey": "string",
-    "isAuthenticationWithSshKey": boolean,
+    "isAuthenticationWithSshKey": "boolean",
     "fqdn": "string",
     "labSubnetName": "string",
     "labVirtualNetworkId": "string",
-    "disallowPublicIpAddress": boolean,
+    "disallowPublicIpAddress": "boolean",
     "artifacts": [
       {
         "artifactId": "string",

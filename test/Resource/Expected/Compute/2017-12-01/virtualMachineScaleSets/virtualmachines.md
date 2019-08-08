@@ -38,7 +38,7 @@ To create a Microsoft.Compute/virtualMachineScaleSets/virtualmachines resource, 
               "id": "string"
             }
           },
-          "enabled": boolean
+          "enabled": "boolean"
         },
         "name": "string",
         "vhd": {
@@ -81,8 +81,8 @@ To create a Microsoft.Compute/virtualMachineScaleSets/virtualmachines resource, 
       "adminPassword": "string",
       "customData": "string",
       "windowsConfiguration": {
-        "provisionVMAgent": boolean,
-        "enableAutomaticUpdates": boolean,
+        "provisionVMAgent": "boolean",
+        "enableAutomaticUpdates": "boolean",
         "timeZone": "string",
         "additionalUnattendContent": [
           {
@@ -102,7 +102,7 @@ To create a Microsoft.Compute/virtualMachineScaleSets/virtualmachines resource, 
         }
       },
       "linuxConfiguration": {
-        "disablePasswordAuthentication": boolean,
+        "disablePasswordAuthentication": "boolean",
         "ssh": {
           "publicKeys": [
             {
@@ -131,14 +131,14 @@ To create a Microsoft.Compute/virtualMachineScaleSets/virtualmachines resource, 
         {
           "id": "string",
           "properties": {
-            "primary": boolean
+            "primary": "boolean"
           }
         }
       ]
     },
     "diagnosticsProfile": {
       "bootDiagnostics": {
-        "enabled": boolean,
+        "enabled": "boolean",
         "storageUri": "string"
       }
     },
