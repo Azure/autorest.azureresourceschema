@@ -3,16 +3,13 @@
 
 namespace AutoRest.AzureResourceSchema.Models
 {
-    using System;
-
-    [Flags]
     public enum ScopeType
     {
         Unknown = 0,
-        Tenant = 1 << 0,
-        Subcription = 1 << 1,
-        ResourceGroup = 1 << 2,
-        ManagementGroup = 1 << 3,
-        Extension = 1 << 4,
+        Tenant,
+        Subcription,
+        ResourceGroup,
+        ManagementGroup,
+        Extension,
     }
 }

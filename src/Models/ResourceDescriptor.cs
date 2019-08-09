@@ -17,8 +17,14 @@ namespace AutoRest.AzureResourceSchema.Models
 
         public string RoutingScope { get; set; }
 
-        public string FullyQualifiedType => $"{ProviderNamespace}/{UnQualifiedType}";
+        public string FullyQualifiedType => FormatFullyQualifiedType(ProviderNamespace, ResourceTypeSegments);
 
-        public string UnQualifiedType => $"{string.Join('/', ResourceTypeSegments)}";
+        public string UnqualifiedType => FormatUnqualifiedType(ResourceTypeSegments);
+
+        public static string FormatFullyQualifiedType(string providerNamespace, IEnumerable<string> resourceTypeSegments)
+            => $"{providerNamespace}/{FormatUnqualifiedType(resourceTypeSegments)}";
+
+        public static string FormatUnqualifiedType(IEnumerable<string> resourceTypeSegments)
+            => string.Join('/', resourceTypeSegments);
     }
 }

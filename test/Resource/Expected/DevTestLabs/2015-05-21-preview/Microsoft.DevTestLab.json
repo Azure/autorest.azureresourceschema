@@ -60,22 +60,22 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/labs_virtualnetworks_childResource"
-              },
-              {
-                "$ref": "#/definitions/labs_virtualmachines_childResource"
-              },
-              {
-                "$ref": "#/definitions/labs_schedules_childResource"
-              },
-              {
-                "$ref": "#/definitions/labs_formulas_childResource"
+                "$ref": "#/definitions/labs_artifactsources_childResource"
               },
               {
                 "$ref": "#/definitions/labs_customimages_childResource"
               },
               {
-                "$ref": "#/definitions/labs_artifactsources_childResource"
+                "$ref": "#/definitions/labs_formulas_childResource"
+              },
+              {
+                "$ref": "#/definitions/labs_schedules_childResource"
+              },
+              {
+                "$ref": "#/definitions/labs_virtualmachines_childResource"
+              },
+              {
+                "$ref": "#/definitions/labs_virtualnetworks_childResource"
               }
             ]
           }

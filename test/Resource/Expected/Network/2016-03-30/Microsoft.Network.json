@@ -200,10 +200,10 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/expressRouteCircuits_peerings_childResource"
+                "$ref": "#/definitions/expressRouteCircuits_authorizations_childResource"
               },
               {
-                "$ref": "#/definitions/expressRouteCircuits_authorizations_childResource"
+                "$ref": "#/definitions/expressRouteCircuits_peerings_childResource"
               }
             ]
           }

@@ -257,10 +257,10 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/expressRouteCircuits_peerings_childResource"
+                "$ref": "#/definitions/expressRouteCircuits_authorizations_childResource"
               },
               {
-                "$ref": "#/definitions/expressRouteCircuits_authorizations_childResource"
+                "$ref": "#/definitions/expressRouteCircuits_peerings_childResource"
               }
             ]
           }
@@ -794,10 +794,10 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/networkWatchers_connectionMonitors_childResource"
+                "$ref": "#/definitions/networkWatchers_packetCaptures_childResource"
               },
               {
-                "$ref": "#/definitions/networkWatchers_packetCaptures_childResource"
+                "$ref": "#/definitions/networkWatchers_connectionMonitors_childResource"
               }
             ]
           }
@@ -1364,10 +1364,10 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/virtualNetworks_virtualNetworkPeerings_childResource"
+                "$ref": "#/definitions/virtualNetworks_subnets_childResource"
               },
               {
-                "$ref": "#/definitions/virtualNetworks_subnets_childResource"
+                "$ref": "#/definitions/virtualNetworks_virtualNetworkPeerings_childResource"
               }
             ]
           }

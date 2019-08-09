@@ -70,13 +70,13 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/namespaces_eventhubs_childResource"
+                "$ref": "#/definitions/namespaces_AuthorizationRules_childResource"
               },
               {
                 "$ref": "#/definitions/namespaces_disasterRecoveryConfigs_childResource"
               },
               {
-                "$ref": "#/definitions/namespaces_AuthorizationRules_childResource"
+                "$ref": "#/definitions/namespaces_eventhubs_childResource"
               }
             ]
           }
@@ -207,10 +207,10 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/namespaces_eventhubs_consumergroups_childResource"
+                "$ref": "#/definitions/namespaces_eventhubs_authorizationRules_childResource"
               },
               {
-                "$ref": "#/definitions/namespaces_eventhubs_authorizationRules_childResource"
+                "$ref": "#/definitions/namespaces_eventhubs_consumergroups_childResource"
               }
             ]
           }
@@ -706,19 +706,6 @@
             }
           ],
           "description": "Properties supplied to the Create Or Update Event Hub operation."
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/namespaces_eventhubs_consumergroups_childResource"
-              },
-              {
-                "$ref": "#/definitions/namespaces_eventhubs_authorizationRules_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [

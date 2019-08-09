@@ -87,49 +87,49 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/service_users_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_subscriptions_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_properties_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_products_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_openidConnectProviders_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_notifications_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_loggers_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_identityProviders_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_groups_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_templates_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_certificates_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_backends_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_authorizationServers_childResource"
+                "$ref": "#/definitions/service_policies_childResource"
               },
               {
                 "$ref": "#/definitions/service_apis_childResource"
               },
               {
-                "$ref": "#/definitions/service_policies_childResource"
+                "$ref": "#/definitions/service_authorizationServers_childResource"
+              },
+              {
+                "$ref": "#/definitions/service_backends_childResource"
+              },
+              {
+                "$ref": "#/definitions/service_certificates_childResource"
+              },
+              {
+                "$ref": "#/definitions/service_templates_childResource"
+              },
+              {
+                "$ref": "#/definitions/service_groups_childResource"
+              },
+              {
+                "$ref": "#/definitions/service_identityProviders_childResource"
+              },
+              {
+                "$ref": "#/definitions/service_loggers_childResource"
+              },
+              {
+                "$ref": "#/definitions/service_notifications_childResource"
+              },
+              {
+                "$ref": "#/definitions/service_openidConnectProviders_childResource"
+              },
+              {
+                "$ref": "#/definitions/service_products_childResource"
+              },
+              {
+                "$ref": "#/definitions/service_properties_childResource"
+              },
+              {
+                "$ref": "#/definitions/service_subscriptions_childResource"
+              },
+              {
+                "$ref": "#/definitions/service_users_childResource"
               }
             ]
           }
@@ -188,13 +188,13 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/service_apis_schemas_childResource"
+                "$ref": "#/definitions/service_apis_operations_childResource"
               },
               {
                 "$ref": "#/definitions/service_apis_policies_childResource"
               },
               {
-                "$ref": "#/definitions/service_apis_operations_childResource"
+                "$ref": "#/definitions/service_apis_schemas_childResource"
               }
             ]
           }
@@ -784,10 +784,10 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/service_notifications_recipientEmails_childResource"
+                "$ref": "#/definitions/service_notifications_recipientUsers_childResource"
               },
               {
-                "$ref": "#/definitions/service_notifications_recipientUsers_childResource"
+                "$ref": "#/definitions/service_notifications_recipientEmails_childResource"
               }
             ]
           }
@@ -1001,13 +1001,13 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/service_products_policies_childResource"
+                "$ref": "#/definitions/service_products_apis_childResource"
               },
               {
                 "$ref": "#/definitions/service_products_groups_childResource"
               },
               {
-                "$ref": "#/definitions/service_products_apis_childResource"
+                "$ref": "#/definitions/service_products_policies_childResource"
               }
             ]
           }
@@ -3054,22 +3054,6 @@
             }
           ],
           "description": "Api entity create of update properties."
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/service_apis_schemas_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_apis_policies_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_apis_operations_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [
@@ -3117,16 +3101,6 @@
             }
           ],
           "description": "Properties of the Operation Contract."
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/service_apis_operations_policies_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [
@@ -3460,16 +3434,6 @@
             }
           ],
           "description": "Properties supplied to Create Group operation."
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/service_groups_users_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [
@@ -3650,19 +3614,6 @@
           "enum": [
             "2017-03-01"
           ]
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/service_notifications_recipientEmails_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_notifications_recipientUsers_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [
@@ -3902,22 +3853,6 @@
             }
           ],
           "description": "Product entity contract properties."
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/service_products_policies_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_products_groups_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_products_apis_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [

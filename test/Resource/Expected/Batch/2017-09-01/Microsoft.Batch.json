@@ -56,13 +56,13 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/batchAccounts_pools_childResource"
+                "$ref": "#/definitions/batchAccounts_applications_childResource"
               },
               {
                 "$ref": "#/definitions/batchAccounts_certificates_childResource"
               },
               {
-                "$ref": "#/definitions/batchAccounts_applications_childResource"
+                "$ref": "#/definitions/batchAccounts_pools_childResource"
               }
             ]
           }

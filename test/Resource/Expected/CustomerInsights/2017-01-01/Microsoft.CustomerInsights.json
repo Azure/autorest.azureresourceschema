@@ -55,34 +55,34 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/hubs_roleAssignments_childResource"
-              },
-              {
-                "$ref": "#/definitions/hubs_links_childResource"
-              },
-              {
-                "$ref": "#/definitions/hubs_views_childResource"
-              },
-              {
-                "$ref": "#/definitions/hubs_kpi_childResource"
-              },
-              {
-                "$ref": "#/definitions/hubs_connectors_childResource"
-              },
-              {
-                "$ref": "#/definitions/hubs_authorizationPolicies_childResource"
-              },
-              {
-                "$ref": "#/definitions/hubs_relationshipLinks_childResource"
-              },
-              {
-                "$ref": "#/definitions/hubs_relationships_childResource"
+                "$ref": "#/definitions/hubs_profiles_childResource"
               },
               {
                 "$ref": "#/definitions/hubs_interactions_childResource"
               },
               {
-                "$ref": "#/definitions/hubs_profiles_childResource"
+                "$ref": "#/definitions/hubs_relationships_childResource"
+              },
+              {
+                "$ref": "#/definitions/hubs_relationshipLinks_childResource"
+              },
+              {
+                "$ref": "#/definitions/hubs_authorizationPolicies_childResource"
+              },
+              {
+                "$ref": "#/definitions/hubs_connectors_childResource"
+              },
+              {
+                "$ref": "#/definitions/hubs_kpi_childResource"
+              },
+              {
+                "$ref": "#/definitions/hubs_views_childResource"
+              },
+              {
+                "$ref": "#/definitions/hubs_links_childResource"
+              },
+              {
+                "$ref": "#/definitions/hubs_roleAssignments_childResource"
               }
             ]
           }
@@ -1114,16 +1114,6 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ]
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/hubs_connectors_mappings_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [

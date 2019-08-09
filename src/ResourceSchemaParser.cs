@@ -9,6 +9,8 @@ using System.Linq;
 using AutoRest.Core.Model;
 using AutoRest.Core.Utilities;
 using System.Text.RegularExpressions;
+using AutoRest.AzureResourceSchema.Models;
+using AutoRest.Core.Logging;
 
 namespace AutoRest.AzureResourceSchema
 {
@@ -19,14 +21,10 @@ namespace AutoRest.AzureResourceSchema
     public static class ResourceSchemaParser
     {
         public static void LogMessage(string message)
-        {
-            AutoRest.Core.Logging.Logger.Instance.Log(new Core.Logging.LogMessage(Core.Logging.Category.Information, message));
-        }
+            => Logger.Instance.Log(new LogMessage(Category.Information, message));
 
         public static void LogDebug(string message)
-        {
-            AutoRest.Core.Logging.Logger.Instance.Log(new Core.Logging.LogMessage(Core.Logging.Category.Debug, message));
-        }
+            => Logger.Instance.Log(new LogMessage(Category.Debug, message));
 
         private static readonly Regex parentScopePrefix = new Regex("^.*/providers/", RegexOptions.IgnoreCase | RegexOptions.RightToLeft);
         private static readonly Regex managementGroupPrefix = new Regex("^/providers/Microsoft.Management/managementGroups/{\\w+}/$", RegexOptions.IgnoreCase);
@@ -162,14 +160,14 @@ namespace AutoRest.AzureResourceSchema
         /// </summary>
         /// <param name="serviceClient"></param>
         /// <returns></returns>
-        public static IDictionary<string, ResourceSchema> Parse(CodeModel serviceClient, string apiVersion)
+        public static IDictionary<string, ResourceSchema> Parse(CodeModel serviceClient, string apiVersion, bool multiScope)
         {            
             if (serviceClient == null)
             {
                 throw new ArgumentNullException(nameof(serviceClient));
             }
 
-            var resourceSchemas = new Dictionary<string, ResourceSchema>();
+            var providerSchemas = new Dictionary<string, ResourceSchema>();
 
             foreach (var method in serviceClient.Methods.Where(method => ShouldProcess(serviceClient, method, apiVersion)))
             {
@@ -182,9 +180,15 @@ namespace AutoRest.AzureResourceSchema
 
                 foreach (var descriptor in resourceDescriptors)
                 {
-                    if (!resourceSchemas.ContainsKey(descriptor.ProviderNamespace))
+                    if (!multiScope && descriptor.ScopeType != ScopeType.ResourceGroup)
                     {
-                        resourceSchemas.Add(descriptor.ProviderNamespace, new ResourceSchema
+                        LogMessage($"Skipping resource type {descriptor.FullyQualifiedType} under path '{method.Url}': Detected scope type {descriptor.ScopeType} and multi-scope is disabled");
+                        continue;
+                    }
+
+                    if (!providerSchemas.ContainsKey(descriptor.ProviderNamespace))
+                    {
+                        providerSchemas.Add(descriptor.ProviderNamespace, new ResourceSchema
                         {
                             Id = $"https://schema.management.azure.com/schemas/{apiVersion}/{descriptor.ProviderNamespace}.json#",
                             Title = descriptor.ProviderNamespace,
@@ -193,9 +197,9 @@ namespace AutoRest.AzureResourceSchema
                         });
                     }
 
-                    var resourceSchema = resourceSchemas[descriptor.ProviderNamespace];
+                    var providerSchema = providerSchemas[descriptor.ProviderNamespace];
 
-                    var resourceDefinition = new JsonSchema
+                    var resourceSchema = new JsonSchema
                     {
                         JsonType = "object",
                         ResourceType = descriptor.FullyQualifiedType,
@@ -214,45 +218,44 @@ namespace AutoRest.AzureResourceSchema
                         if (param != null)
                         {
                             // create a schema for it
-                            var nameParamSchema = ParseType(param.ClientProperty, param.ModelType, resourceSchema.Definitions, serviceClient.ModelTypes);
+                            var nameParamSchema = ParseType(param.ClientProperty, param.ModelType, providerSchema.Definitions, serviceClient.ModelTypes);
                             nameParamSchema.ResourceType = resNameParam;
 
                             // add it as the name property
-                            resourceDefinition.AddProperty("name", nameParamSchema, true);
+                            resourceSchema.AddProperty("name", nameParamSchema, true);
                         }
                     }
 
-                    resourceDefinition.AddProperty("type", JsonSchema.CreateStringEnum(descriptor.FullyQualifiedType), true);
-                    resourceDefinition.AddProperty("apiVersion", JsonSchema.CreateStringEnum(apiVersion), true);
+                    resourceSchema.AddProperty("type", JsonSchema.CreateStringEnum(descriptor.FullyQualifiedType), true);
+                    resourceSchema.AddProperty("apiVersion", JsonSchema.CreateStringEnum(apiVersion), true);
 
-                    if (method.Body != null)
+                    if (method.Body?.ModelType is CompositeType body)
                     {
-                        CompositeType body = method.Body.ModelType as CompositeType;
-                        // Debug.Assert(body != null, "The create resource method's body must be a CompositeType and cannot be null.");
-                        if (body != null)
+                        foreach (var property in body.ComposedProperties)
                         {
-                            foreach (Property property in body.ComposedProperties)
+                            if (property.SerializedName != null && !resourceSchema.Properties.Keys.Contains(property.SerializedName))
                             {
-                                if (property.SerializedName != null && !resourceDefinition.Properties.Keys.Contains(property.SerializedName))
+                                var propertyDefinition = ParseType(property, property.ModelType, providerSchema.Definitions, serviceClient.ModelTypes);
+                                if (propertyDefinition != null)
                                 {
-                                    JsonSchema propertyDefinition = ParseType(property, property.ModelType, resourceSchema.Definitions, serviceClient.ModelTypes);
-                                    if (propertyDefinition != null)
-                                    {
-                                        resourceDefinition.AddProperty(property.SerializedName, propertyDefinition, property.IsRequired || property.SerializedName == "properties");
-                                    }
+                                    resourceSchema.AddProperty(property.SerializedName, propertyDefinition, property.IsRequired || property.SerializedName == "properties");
                                 }
                             }
                         }
                     }
 
-                    string resourcePropertyName = string.Join('_', descriptor.ResourceTypeSegments);
-                    if (resourceSchema.ResourceDefinitions.ContainsKey(resourcePropertyName))
+                    string resourcePropertyName = ResourceSchema.FormatResourceSchemaKey(descriptor.ResourceTypeSegments);
+                    if (providerSchema.ResourceDefinitions.ContainsKey(resourcePropertyName))
                     {
                         LogMessage($"Skipping resource type {descriptor.FullyQualifiedType} under path '{method.Url}': Duplicate resource definition {resourcePropertyName}");
                         continue;
                     }
 
-                    resourceSchema.AddResourceDefinition(resourcePropertyName, resourceDefinition);
+                    providerSchema.AddResourceDefinition(resourcePropertyName, new ResourceDefinition
+                    {
+                        Descriptor = descriptor,
+                        Schema = resourceSchema,
+                    });
                 }
             }
 
@@ -260,55 +263,44 @@ namespace AutoRest.AzureResourceSchema
             // this until we're done adding all resources as top level resources, though, because
             // it's possible that we will parse a child resource before we parse the parent
             // resource.
-            foreach (var resourceSchema in resourceSchemas.Values)
+            foreach (var providerSchema in providerSchemas.Values)
             {
-                // By iterating over the reverse order of the defined resource definitions, I'm
-                // counting on the resource definitions being in sorted order. That way I'm
-                // guaranteed to visit child resource definitions before I visit their parent
-                // resource definitions. By doing this, I've guaranteed that grandchildren resource
-                // definitions will be added to their grandparent (and beyond) ancestor
-                // resource definitions.
-                foreach (var resourcePropertyName in resourceSchema.ResourceDefinitions.Keys.Reverse())
+                // Sort by resource length to process parent resources before children
+                var childResourceDefinitions = providerSchema.ResourceDefinitions.Values
+                    .Where(resource => resource.Descriptor.ResourceTypeSegments.Count() > 1)
+                    .OrderBy(resource => resource.Descriptor.ResourceTypeSegments.Count());
+
+                foreach (var childResource in childResourceDefinitions)
                 {
-                    var resourceDefinition = resourceSchema.ResourceDefinitions[resourcePropertyName];
-
-                    string resourceType = resourceDefinition.ResourceType;
-                    int lastSlashIndex = resourceType.LastIndexOf('/');
-                    string parentResourceType = resourceType.Substring(0, lastSlashIndex);
-                    JsonSchema parentResourceDefinition = resourceSchema.GetResourceDefinitionByResourceType(parentResourceType);
-                    if (parentResourceDefinition != null)
+                    var parentTypeSegments = childResource.Descriptor.ResourceTypeSegments.SkipLast(1);
+                    if (!providerSchema.GetResourceDefinitionByResourceType(parentTypeSegments, out var parentResource))
                     {
-                        var childResourceType = resourceType.Substring(lastSlashIndex + 1);
-                        JsonSchema childResourceDefinition = resourceDefinition.Clone();
-                        childResourceDefinition.ResourceType = childResourceType;
+                        continue;
+                    }
 
-                        string childResourceDefinitionPropertyName = string.Join("_", resourcePropertyName, "childResource");
-                        resourceSchema.AddDefinition(childResourceDefinitionPropertyName, childResourceDefinition);
+                    var childResourceSchema = childResource.Schema.Clone();
+                    childResourceSchema.ResourceType = childResource.Descriptor.ResourceTypeSegments.Last();
+                    var childResourceDefinitionName = ResourceSchema.FormatResourceSchemaKey(childResource.Descriptor.ResourceTypeSegments) + "_childResource";
 
-                        JsonSchema childResources;
-                        if (parentResourceDefinition.Properties.ContainsKey("resources"))
-                        {
-                            childResources = parentResourceDefinition.Properties["resources"];
-                        }
-                        else
-                        {
-                            childResources = new JsonSchema()
-                            {
-                                JsonType = "array",
-                                Items = new JsonSchema()
-                            };
-                            parentResourceDefinition.AddProperty("resources", childResources);
-                        }
+                    providerSchema.AddDefinition(childResourceDefinitionName, childResourceSchema);
 
-                        childResources.Items.AddOneOf(new JsonSchema()
+                    if (!parentResource.Schema.Properties.ContainsKey("resources"))
+                    {
+                        parentResource.Schema.AddProperty("resources", new JsonSchema
                         {
-                            Ref = "#/definitions/" + childResourceDefinitionPropertyName,
+                            JsonType = "array",
+                            Items = new JsonSchema()
                         });
                     }
+
+                    parentResource.Schema.Properties["resources"].Items.AddOneOf(new JsonSchema
+                    {
+                        Ref = "#/definitions/" + childResourceDefinitionName,
+                    });
                 }
             }
 
-            return resourceSchemas;
+            return providerSchemas;
         }
 
         private static JsonSchema ParseType(Property property, IModelType type, IDictionary<string, JsonSchema> definitions, IEnumerable<CompositeType> modelTypes)

@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using AutoRest.AzureResourceSchema.Models;
 using Newtonsoft.Json;
 
 namespace AutoRest.AzureResourceSchema
@@ -33,6 +34,11 @@ namespace AutoRest.AzureResourceSchema
             }
         }
 
+        private static IDictionary<string, JsonSchema> GetResourceDefinitions(ResourceSchema resourceSchema, ScopeType scopeType)
+            => resourceSchema.ResourceDefinitions
+                .Where(kvp => kvp.Value.Descriptor.ScopeType == scopeType)
+                .ToDictionary(kvp => kvp.Key, kvp => kvp.Value.Schema);
+
         public static void Write(JsonWriter writer, ResourceSchema resourceSchema)
         {
             if (writer == null)
@@ -51,7 +57,38 @@ namespace AutoRest.AzureResourceSchema
             WriteProperty(writer, "title", resourceSchema.Title);
             WriteProperty(writer, "description", resourceSchema.Description);
 
-            WriteDefinitionMap(writer, "resourceDefinitions", resourceSchema.ResourceDefinitions, sortDefinitions: true);
+            var rgDefinitions = GetResourceDefinitions(resourceSchema, ScopeType.ResourceGroup);
+            WriteDefinitionMap(writer, "resourceDefinitions", rgDefinitions, sortDefinitions: true);
+
+            var subDefinitions = GetResourceDefinitions(resourceSchema, ScopeType.Subcription);
+            if (subDefinitions.Any())
+            {
+                WriteDefinitionMap(writer, "subscription_ResourceDefinitions", subDefinitions, sortDefinitions: true);
+            }
+
+            var mgDefinitions = GetResourceDefinitions(resourceSchema, ScopeType.ManagementGroup);
+            if (mgDefinitions.Any())
+            {
+                WriteDefinitionMap(writer, "managementGroup_resourceDefinitions", mgDefinitions, sortDefinitions: true);
+            }
+
+            var tenantDefinitions = GetResourceDefinitions(resourceSchema, ScopeType.Tenant);
+            if (tenantDefinitions.Any())
+            {
+                WriteDefinitionMap(writer, "tenant_resourceDefinitions", tenantDefinitions, sortDefinitions: true);
+            }
+
+            var extDefinitions = GetResourceDefinitions(resourceSchema, ScopeType.Extension);
+            if (extDefinitions.Any())
+            {
+                WriteDefinitionMap(writer, "extension_resourceDefinitions", extDefinitions, sortDefinitions: true);
+            }
+
+            var unknownDefinitions = GetResourceDefinitions(resourceSchema, ScopeType.Unknown);
+            if (unknownDefinitions.Any())
+            {
+                WriteDefinitionMap(writer, "unknown_resourceDefinitions", unknownDefinitions, sortDefinitions: true);
+            }
 
             WriteDefinitionMap(writer, "definitions", resourceSchema.Definitions, sortDefinitions: true);
 
