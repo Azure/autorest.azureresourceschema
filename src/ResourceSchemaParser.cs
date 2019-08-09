@@ -27,8 +27,12 @@ namespace AutoRest.AzureResourceSchema
         }
 
         private const string resourceMethodPrefix = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/";
-        private static Regex resourceMethodPrefixRxRegular = new Regex( "^/subscriptions/{subscriptionId}/resourceGroups/{\\w*}/providers/",RegexOptions.IgnoreCase );
-        private static Regex resourceMethodPrefixRxTenant = new Regex( "^.*/providers/",RegexOptions.IgnoreCase );
+
+        // private static Regex resourceMethodPrefixRxRegular = new Regex( "^/subscriptions/{subscriptionId}/resourceGroups/{\\w*}/providers/",RegexOptions.IgnoreCase );
+        // private static Regex resourceMethodPrefixRxTenant = new Regex( "^.*/providers/",RegexOptions.IgnoreCase );
+
+        private static Regex resourceMethodPrefixRx = new Regex("^.*/providers/",RegexOptions.IgnoreCase | RegexOptions.RightToLeft);
+
 
         /// <summary>
         /// Parse a ResourceSchemaModel from the provided ServiceClient.
@@ -37,7 +41,7 @@ namespace AutoRest.AzureResourceSchema
         /// <returns></returns>
         public static IDictionary<string, ResourceSchema> Parse(CodeModel serviceClient, string version, bool includeTenantLevel)
         {
-            var resourceMethodPrefixRx =  includeTenantLevel ? resourceMethodPrefixRxTenant : resourceMethodPrefixRxRegular;
+            // var resourceMethodPrefixRx =  includeTenantLevel ? resourceMethodPrefixRxTenant : resourceMethodPrefixRxRegular;
 
             if (serviceClient == null)
             {
