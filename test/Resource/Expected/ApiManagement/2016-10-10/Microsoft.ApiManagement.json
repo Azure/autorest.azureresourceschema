@@ -1621,12 +1621,19 @@
       "type": "object",
       "properties": {
         "type": {
-          "type": "string",
-          "enum": [
-            "Proxy",
-            "Portal",
-            "Management",
-            "Scm"
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "Proxy",
+                "Portal",
+                "Management",
+                "Scm"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
           ],
           "description": "Hostname type."
         },

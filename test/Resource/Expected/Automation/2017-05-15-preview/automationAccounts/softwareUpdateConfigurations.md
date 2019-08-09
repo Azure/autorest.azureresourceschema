@@ -36,7 +36,7 @@ To create a Microsoft.Automation/automationAccounts/softwareUpdateConfigurations
       "startTime": "string",
       "expiryTime": "string",
       "expiryTimeOffsetMinutes": "number",
-      "isEnabled": boolean,
+      "isEnabled": "boolean",
       "nextRun": "string",
       "nextRunOffsetMinutes": "number",
       "interval": {},

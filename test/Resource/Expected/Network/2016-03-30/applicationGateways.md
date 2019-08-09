@@ -133,7 +133,7 @@ To create a Microsoft.Network/applicationGateways resource, add the following JS
                       "frontendPort": "integer",
                       "backendPort": "integer",
                       "idleTimeoutInMinutes": "integer",
-                      "enableFloatingIP": boolean,
+                      "enableFloatingIP": "boolean",
                       "provisioningState": "string"
                     },
                     "name": "string",
@@ -215,8 +215,8 @@ To create a Microsoft.Network/applicationGateways resource, add the following JS
                                 "internalDomainNameSuffix": "string"
                               },
                               "macAddress": "string",
-                              "primary": boolean,
-                              "enableIPForwarding": boolean,
+                              "primary": "boolean",
+                              "enableIPForwarding": "boolean",
                               "resourceGuid": "string",
                               "provisioningState": "string"
                             },
@@ -294,7 +294,7 @@ To create a Microsoft.Network/applicationGateways resource, add the following JS
                   "name": "string",
                   "etag": "string"
                 },
-                "primary": boolean,
+                "primary": "boolean",
                 "publicIPAddress": {
                   "id": "string",
                   "location": "string",
@@ -379,8 +379,8 @@ To create a Microsoft.Network/applicationGateways resource, add the following JS
                                         "internalDomainNameSuffix": "string"
                                       },
                                       "macAddress": "string",
-                                      "primary": boolean,
-                                      "enableIPForwarding": boolean,
+                                      "primary": "boolean",
+                                      "enableIPForwarding": "boolean",
                                       "resourceGuid": "string",
                                       "provisioningState": "string"
                                     },
@@ -496,7 +496,7 @@ To create a Microsoft.Network/applicationGateways resource, add the following JS
           "sslCertificate": {
             "id": "string"
           },
-          "requireServerNameIndication": boolean,
+          "requireServerNameIndication": "boolean",
           "provisioningState": "string"
         },
         "name": "string",

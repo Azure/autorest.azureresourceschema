@@ -45,8 +45,8 @@ To create a Microsoft.Web/hostingEnvironments resource, add the following JSON t
     ],
     "frontEndScaleFactor": "integer",
     "apiManagementAccountId": "string",
-    "suspended": boolean,
-    "dynamicCacheEnabled": boolean,
+    "suspended": "boolean",
+    "dynamicCacheEnabled": "boolean",
     "clusterSettings": [
       {
         "name": "string",

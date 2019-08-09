@@ -15,17 +15,17 @@ To create a Microsoft.ServiceBus/namespaces/topics resource, add the following J
     "entityAvailabilityStatus": "string",
     "defaultMessageTimeToLive": "string",
     "duplicateDetectionHistoryTimeWindow": "string",
-    "enableBatchedOperations": boolean,
-    "enableExpress": boolean,
-    "enablePartitioning": boolean,
-    "enableSubscriptionPartitioning": boolean,
-    "filteringMessagesBeforePublishing": boolean,
-    "isAnonymousAccessible": boolean,
-    "isExpress": boolean,
+    "enableBatchedOperations": "boolean",
+    "enableExpress": "boolean",
+    "enablePartitioning": "boolean",
+    "enableSubscriptionPartitioning": "boolean",
+    "filteringMessagesBeforePublishing": "boolean",
+    "isAnonymousAccessible": "boolean",
+    "isExpress": "boolean",
     "maxSizeInMegabytes": "integer",
-    "requiresDuplicateDetection": boolean,
+    "requiresDuplicateDetection": "boolean",
     "status": "string",
-    "supportOrdering": boolean
+    "supportOrdering": "boolean"
   },
   "resources": []
 }

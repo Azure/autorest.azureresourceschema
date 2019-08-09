@@ -51,9 +51,9 @@ namespace AutoRest.AzureResourceSchema
             WriteProperty(writer, "title", resourceSchema.Title);
             WriteProperty(writer, "description", resourceSchema.Description);
 
-            WriteDefinitionMap(writer, "resourceDefinitions", resourceSchema.ResourceDefinitions, sortDefinitions: true);
+            WriteDefinitionMap(writer, "resourceDefinitions", resourceSchema.ResourceDefinitions, sortDefinitions: true, addExpressionReferences: false);
 
-            WriteDefinitionMap(writer, "definitions", resourceSchema.Definitions, sortDefinitions: true);
+            WriteDefinitionMap(writer, "definitions", resourceSchema.Definitions, sortDefinitions: true, addExpressionReferences: false);
 
             writer.WriteEndObject();
         }
@@ -73,33 +73,25 @@ namespace AutoRest.AzureResourceSchema
 
                 foreach (string definitionName in definitionNames)
                 {
-                    JsonSchema definition = definitionMap[definitionName];
+                    var definition = definitionMap[definitionName];
 
-                    bool shouldAddExpressionReference = addExpressionReferences;
-                    if (shouldAddExpressionReference)
+                    var shouldAddExpressionReference = addExpressionReferences && !definition.Configuration.HasFlag(SchemaConfiguration.OmitExpressionRef);
+                    switch (definition.JsonType)
                     {
-                        switch (definition.JsonType)
-                        {
-                            case "object":
-                                shouldAddExpressionReference = !definition.IsEmpty();
-                                break;
+                        case "object":
+                            shouldAddExpressionReference &= !definition.IsEmpty();
+                            break;
 
-                            case "string":
-                                shouldAddExpressionReference = (definition.Enum != null &&
-                                                                definition.Enum.Any() &&
-                                                                definitionName != "type" 
-                                                                && definitionName != "apiVersion"  // api versions are templated in some templates. No idea why. 
-                                                                ) ||
-                                                               definition.Pattern != null;
-                                break;
+                        case "string":
+                            shouldAddExpressionReference &= (definition.Enum?.Any() == true) || (definition.Pattern != null);
+                            break;
 
-                            case "array":
-                                shouldAddExpressionReference = definitionName != "resources";
-                                break;
+                        case "array":
+                            shouldAddExpressionReference &= definitionName != "resources";
+                            break;
 
-                            default:
-                                break;
-                        }
+                        default:
+                            break;
                     }
 
                     if (!shouldAddExpressionReference)

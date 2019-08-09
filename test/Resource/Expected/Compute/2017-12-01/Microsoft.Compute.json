@@ -1942,12 +1942,19 @@
       "type": "object",
       "properties": {
         "type": {
-          "type": "string",
-          "enum": [
-            "SystemAssigned",
-            "UserAssigned",
-            "SystemAssigned, UserAssigned",
-            "None"
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "SystemAssigned",
+                "UserAssigned",
+                "SystemAssigned, UserAssigned",
+                "None"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
           ],
           "description": "The type of identity used for the virtual machine. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine."
         },
@@ -2262,12 +2269,19 @@
       "type": "object",
       "properties": {
         "type": {
-          "type": "string",
-          "enum": [
-            "SystemAssigned",
-            "UserAssigned",
-            "SystemAssigned, UserAssigned",
-            "None"
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "SystemAssigned",
+                "UserAssigned",
+                "SystemAssigned, UserAssigned",
+                "None"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
           ],
           "description": "The type of identity used for the virtual machine scale set. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine scale set."
         },

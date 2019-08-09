@@ -48,8 +48,8 @@ To create a Microsoft.ApiManagement/service/backends resource, add the following
       "password": "string"
     },
     "tls": {
-      "validateCertificateChain": boolean,
-      "validateCertificateName": boolean
+      "validateCertificateChain": "boolean",
+      "validateCertificateName": "boolean"
     },
     "url": "string",
     "protocol": "string"

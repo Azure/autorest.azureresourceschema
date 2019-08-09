@@ -10,7 +10,7 @@ To create a Microsoft.Relay/namespaces/HybridConnections resource, add the follo
   "type": "Microsoft.Relay/namespaces/HybridConnections",
   "apiVersion": "2016-07-01",
   "properties": {
-    "requiresClientAuthorization": boolean,
+    "requiresClientAuthorization": "boolean",
     "userMetadata": "string"
   },
   "resources": []

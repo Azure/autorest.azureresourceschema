@@ -16,17 +16,17 @@ To create a Microsoft.ServiceBus/namespaces/queues resource, add the following J
     "entityAvailabilityStatus": "string",
     "defaultMessageTimeToLive": "string",
     "duplicateDetectionHistoryTimeWindow": "string",
-    "enableBatchedOperations": boolean,
-    "deadLetteringOnMessageExpiration": boolean,
-    "enableExpress": boolean,
-    "enablePartitioning": boolean,
-    "isAnonymousAccessible": boolean,
+    "enableBatchedOperations": "boolean",
+    "deadLetteringOnMessageExpiration": "boolean",
+    "enableExpress": "boolean",
+    "enablePartitioning": "boolean",
+    "isAnonymousAccessible": "boolean",
     "maxDeliveryCount": "integer",
     "maxSizeInMegabytes": "integer",
-    "requiresDuplicateDetection": boolean,
-    "requiresSession": boolean,
+    "requiresDuplicateDetection": "boolean",
+    "requiresSession": "boolean",
     "status": "string",
-    "supportOrdering": boolean
+    "supportOrdering": "boolean"
   },
   "resources": []
 }

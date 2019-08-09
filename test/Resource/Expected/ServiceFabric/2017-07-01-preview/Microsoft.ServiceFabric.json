@@ -1288,25 +1288,6 @@
     },
     "NamedPartitionSchemeDescription": {
       "type": "object",
-      "oneOf": [
-        {
-          "properties": {
-            "PartitionScheme": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "Named"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
-        }
-      ],
       "properties": {
         "Count": {
           "oneOf": [
@@ -1334,7 +1315,10 @@
           "description": "Array of size specified by the ‘Count’ parameter, for the names of the partitions."
         },
         "PartitionScheme": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "Named"
+          ]
         }
       },
       "required": [
@@ -1487,96 +1471,14 @@
       "type": "object",
       "oneOf": [
         {
-          "properties": {
-            "PartitionScheme": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "PartitionSchemeDescription"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
+          "$ref": "#/definitions/NamedPartitionSchemeDescription"
         },
         {
-          "allOf": [
-            {
-              "$ref": "#/definitions/NamedPartitionSchemeDescription"
-            }
-          ],
-          "properties": {
-            "PartitionScheme": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "Named"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
+          "$ref": "#/definitions/SingletonPartitionSchemeDescription"
         },
         {
-          "allOf": [
-            {
-              "$ref": "#/definitions/SingletonPartitionSchemeDescription"
-            }
-          ],
-          "properties": {
-            "PartitionScheme": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "Singleton"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "allOf": [
-            {
-              "$ref": "#/definitions/UniformInt64RangePartitionSchemeDescription"
-            }
-          ],
-          "properties": {
-            "PartitionScheme": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "UniformInt64Range"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
+          "$ref": "#/definitions/UniformInt64RangePartitionSchemeDescription"
         }
-      ],
-      "properties": {
-        "PartitionScheme": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "PartitionScheme"
       ],
       "description": "Describes how the service is partitioned."
     },
@@ -1693,99 +1595,16 @@
       "description": "Specifies a metric to load balance a service during runtime."
     },
     "ServicePlacementPolicyDescription": {
-      "type": "object",
-      "oneOf": [
-        {
-          "properties": {
-            "Type": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "ServicePlacementPolicyDescription"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
-        }
-      ],
-      "properties": {
-        "Type": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "Type"
-      ],
       "description": "Describes the policy to be used for placement of a Service Fabric service."
     },
     "ServiceProperties": {
       "type": "object",
       "oneOf": [
         {
-          "properties": {
-            "serviceKind": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "ServiceProperties"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
+          "$ref": "#/definitions/StatelessServiceProperties"
         },
         {
-          "allOf": [
-            {
-              "$ref": "#/definitions/StatelessServiceProperties"
-            }
-          ],
-          "properties": {
-            "serviceKind": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "Stateless"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "allOf": [
-            {
-              "$ref": "#/definitions/StatefulServiceProperties"
-            }
-          ],
-          "properties": {
-            "serviceKind": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "Stateful"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
+          "$ref": "#/definitions/StatefulServiceProperties"
         }
       ],
       "properties": {
@@ -1861,14 +1680,8 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ]
-        },
-        "serviceKind": {
-          "type": "string"
         }
       },
-      "required": [
-        "serviceKind"
-      ],
       "description": "The service resource properties."
     },
     "ServiceTypeHealthPolicy": {
@@ -1985,28 +1798,12 @@
     },
     "SingletonPartitionSchemeDescription": {
       "type": "object",
-      "oneOf": [
-        {
-          "properties": {
-            "PartitionScheme": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "Singleton"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
-        }
-      ],
       "properties": {
         "PartitionScheme": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "Singleton"
+          ]
         }
       },
       "required": [
@@ -2016,25 +1813,6 @@
     },
     "StatefulServiceProperties": {
       "type": "object",
-      "oneOf": [
-        {
-          "properties": {
-            "serviceKind": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "Stateful"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
-        }
-      ],
       "properties": {
         "hasPersistedState": {
           "oneOf": [
@@ -2087,7 +1865,10 @@
           "description": "The definition on how long StandBy replicas should be maintained before being removed, represented in ISO 8601 format (hh:mm:ss.s)."
         },
         "serviceKind": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "Stateful"
+          ]
         }
       },
       "required": [
@@ -2097,25 +1878,6 @@
     },
     "StatelessServiceProperties": {
       "type": "object",
-      "oneOf": [
-        {
-          "properties": {
-            "serviceKind": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "Stateless"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
-        }
-      ],
       "properties": {
         "instanceCount": {
           "oneOf": [
@@ -2130,7 +1892,10 @@
           "description": "The instance count."
         },
         "serviceKind": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "Stateless"
+          ]
         }
       },
       "required": [
@@ -2140,25 +1905,6 @@
     },
     "UniformInt64RangePartitionSchemeDescription": {
       "type": "object",
-      "oneOf": [
-        {
-          "properties": {
-            "PartitionScheme": {
-              "oneOf": [
-                {
-                  "type": "string",
-                  "enum": [
-                    "UniformInt64Range"
-                  ]
-                },
-                {
-                  "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                }
-              ]
-            }
-          }
-        }
-      ],
       "properties": {
         "Count": {
           "oneOf": [
@@ -2180,7 +1926,10 @@
           "description": "String indicating the upper bound of the partition key range that\nshould be split between the partition ‘Count’\n"
         },
         "PartitionScheme": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "UniformInt64Range"
+          ]
         }
       },
       "required": [

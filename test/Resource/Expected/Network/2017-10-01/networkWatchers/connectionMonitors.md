@@ -21,7 +21,7 @@ To create a Microsoft.Network/networkWatchers/connectionMonitors resource, add t
       "address": "string",
       "port": "integer"
     },
-    "autoStart": boolean,
+    "autoStart": "boolean",
     "monitoringIntervalInSeconds": "integer"
   }
 }

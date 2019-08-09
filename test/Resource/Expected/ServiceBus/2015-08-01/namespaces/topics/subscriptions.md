@@ -13,14 +13,14 @@ To create a Microsoft.ServiceBus/namespaces/topics/subscriptions resource, add t
   "properties": {
     "autoDeleteOnIdle": "string",
     "defaultMessageTimeToLive": "string",
-    "deadLetteringOnFilterEvaluationExceptions": boolean,
-    "deadLetteringOnMessageExpiration": boolean,
-    "enableBatchedOperations": boolean,
+    "deadLetteringOnFilterEvaluationExceptions": "boolean",
+    "deadLetteringOnMessageExpiration": "boolean",
+    "enableBatchedOperations": "boolean",
     "entityAvailabilityStatus": "string",
-    "isReadOnly": boolean,
+    "isReadOnly": "boolean",
     "lockDuration": "string",
     "maxDeliveryCount": "integer",
-    "requiresSession": boolean,
+    "requiresSession": "boolean",
     "status": "string"
   }
 }

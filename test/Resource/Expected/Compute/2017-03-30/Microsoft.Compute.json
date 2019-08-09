@@ -2271,9 +2271,16 @@
       "type": "object",
       "properties": {
         "type": {
-          "type": "string",
-          "enum": [
-            "SystemAssigned"
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "SystemAssigned"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
           ],
           "description": "The type of identity used for the virtual machine. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity."
         }
@@ -2574,9 +2581,16 @@
       "type": "object",
       "properties": {
         "type": {
-          "type": "string",
-          "enum": [
-            "SystemAssigned"
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "SystemAssigned"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
           ],
           "description": "The type of identity used for the virtual machine scale set. Currently, the only supported type is 'SystemAssigned', which implicitly creates an identity."
         }

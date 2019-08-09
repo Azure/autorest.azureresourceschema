@@ -13,7 +13,7 @@ To create a Microsoft.Automation/automationAccounts/certificates resource, add t
     "base64Value": "string",
     "description": "string",
     "thumbprint": "string",
-    "isExportable": boolean
+    "isExportable": "boolean"
   }
 }
 ```
