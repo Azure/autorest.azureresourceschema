@@ -11,8 +11,8 @@ To create a Microsoft.Relay/namespaces/WcfRelays resource, add the following JSO
   "apiVersion": "2016-07-01",
   "properties": {
     "relayType": "string",
-    "requiresClientAuthorization": boolean,
-    "requiresTransportSecurity": boolean,
+    "requiresClientAuthorization": "boolean",
+    "requiresTransportSecurity": "boolean",
     "userMetadata": "string"
   },
   "resources": []

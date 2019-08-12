@@ -26,7 +26,7 @@ To create a Microsoft.CustomerInsights/hubs/kpi resource, add the following JSON
     "thresHolds": {
       "lowerLimit": "number",
       "upperLimit": "number",
-      "increasingKpi": boolean
+      "increasingKpi": "boolean"
     },
     "aliases": [
       {

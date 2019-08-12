@@ -13,7 +13,7 @@ To create a Microsoft.ApiManagement/service/loggers resource, add the following 
     "loggerType": "azureEventHub",
     "description": "string",
     "credentials": {},
-    "isBuffered": boolean
+    "isBuffered": "boolean"
   }
 }
 ```

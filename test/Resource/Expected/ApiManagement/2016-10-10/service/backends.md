@@ -21,8 +21,8 @@ To create a Microsoft.ApiManagement/service/backends resource, add the following
   "description": "string",
   "resourceId": "string",
   "properties": {
-    "skipCertificateChainValidation": boolean,
-    "skipCertificateNameValidation": boolean
+    "skipCertificateChainValidation": "boolean",
+    "skipCertificateNameValidation": "boolean"
   },
   "protocol": "string"
 }

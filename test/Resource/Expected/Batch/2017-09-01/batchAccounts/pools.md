@@ -31,7 +31,7 @@ To create a Microsoft.Batch/batchAccounts/pools resource, add the following JSON
         },
         "nodeAgentSkuId": "string",
         "windowsConfiguration": {
-          "enableAutomaticUpdates": boolean
+          "enableAutomaticUpdates": "boolean"
         },
         "dataDisks": [
           {
@@ -123,7 +123,7 @@ To create a Microsoft.Batch/batchAccounts/pools resource, add the following JSON
         }
       },
       "maxTaskRetryCount": "integer",
-      "waitForSuccess": boolean
+      "waitForSuccess": "boolean"
     },
     "certificates": [
       {

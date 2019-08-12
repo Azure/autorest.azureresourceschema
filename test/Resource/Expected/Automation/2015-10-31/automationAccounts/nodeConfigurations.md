@@ -21,7 +21,7 @@ To create a Microsoft.Automation/automationAccounts/nodeConfigurations resource,
   "configuration": {
     "name": "string"
   },
-  "newNodeConfigurationBuildVersionRequired": boolean
+  "newNodeConfigurationBuildVersionRequired": "boolean"
 }
 ```
 ## Property values

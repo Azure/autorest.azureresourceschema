@@ -12,7 +12,7 @@ To create a Microsoft.Automation/automationAccounts/variables resource, add the 
   "properties": {
     "value": "string",
     "description": "string",
-    "isEncrypted": boolean
+    "isEncrypted": "boolean"
   }
 }
 ```

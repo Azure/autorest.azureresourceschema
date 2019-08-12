@@ -15,7 +15,7 @@ To create a Microsoft.CustomerInsights/hubs/connectors resource, add the followi
     "displayName": "string",
     "description": "string",
     "connectorProperties": {},
-    "isInternal": boolean
+    "isInternal": "boolean"
   },
   "resources": []
 }

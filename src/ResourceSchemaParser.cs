@@ -226,8 +226,8 @@ namespace AutoRest.AzureResourceSchema
                         }
                     }
 
-                    resourceSchema.AddProperty("type", JsonSchema.CreateStringEnum(descriptor.FullyQualifiedType), true);
-                    resourceSchema.AddProperty("apiVersion", JsonSchema.CreateStringEnum(apiVersion), true);
+                    resourceSchema.AddProperty("type", JsonSchema.CreateSingleValuedEnum(descriptor.FullyQualifiedType), true);
+                    resourceSchema.AddProperty("apiVersion", JsonSchema.CreateSingleValuedEnum(apiVersion), true);
 
                     if (method.Body?.ModelType is CompositeType body)
                     {
@@ -241,6 +241,8 @@ namespace AutoRest.AzureResourceSchema
                                     resourceSchema.AddProperty(property.SerializedName, propertyDefinition, property.IsRequired || property.SerializedName == "properties");
                                 }
                             }
+
+                            HandlePolymorphicType(resourceSchema, body, providerSchema.Definitions, serviceClient.ModelTypes);
                         }
                     }
 
@@ -373,39 +375,7 @@ namespace AutoRest.AzureResourceSchema
                     }
                 }
 
-                string discriminatorPropertyName = compositeType.BasePolymorphicDiscriminator;
-                if (!string.IsNullOrWhiteSpace(discriminatorPropertyName))
-                {
-                    definition.AddProperty(discriminatorPropertyName, new JsonSchema() { JsonType = "string" }, true);
-
-                    Func<CompositeType, bool> isSubTypeOrSelf = type => type == compositeType || type.BaseModelType == compositeType;
-                    CompositeType[] subTypes = modelTypes.Where(isSubTypeOrSelf).ToArray();
-
-                    foreach (CompositeType subType in subTypes)
-                    {
-                        JsonSchema derivedTypeDefinitionRef = new JsonSchema();
-
-                        JsonSchema discriminatorDefinition = new JsonSchema() { JsonType = "string" };
-                        discriminatorDefinition.AddEnum(subType.SerializedName);
-                        derivedTypeDefinitionRef.AddProperty(discriminatorPropertyName, discriminatorDefinition);
-
-                        if (subType != compositeType)
-                        {
-                            // Sub-types are never referenced directly in the Swagger
-                            // discriminator scenario, so they wouldn't be added to the
-                            // produced resource schema. By calling ParseCompositeType() on the
-                            // sub-type we add the sub-type to the resource schema.
-                            ParseCompositeType(null, subType, false, definitions, modelTypes);
-
-                            derivedTypeDefinitionRef.AddAllOf(new JsonSchema()
-                            {
-                                Ref = "#/definitions/" + subType.Name,
-                            });
-                        }
-
-                        definition.AddOneOf(derivedTypeDefinitionRef);
-                    }
-                }
+                HandlePolymorphicType(definition, compositeType, definitions, modelTypes);
             }
 
             JsonSchema result = new JsonSchema()
@@ -419,6 +389,24 @@ namespace AutoRest.AzureResourceSchema
             }
 
             return result;
+        }
+
+        private static void HandlePolymorphicType(JsonSchema definition, CompositeType compositeType, IDictionary<string, JsonSchema> definitions, IEnumerable<CompositeType> modelTypes)
+        {
+            if (!string.IsNullOrWhiteSpace(compositeType.BasePolymorphicDiscriminator))
+            {
+                foreach (var subType in modelTypes.Where(type => type.BaseModelType == compositeType))
+                {
+                    // Sub-types are never referenced directly in the Swagger
+                    // discriminator scenario, so they wouldn't be added to the
+                    // produced resource schema. By calling ParseCompositeType() on the
+                    // sub-type we add the sub-type to the resource schema.
+                    var polymorphicTypeRef = ParseCompositeType(null, subType, false, definitions, modelTypes);
+                    definitions[subType.Name].AddProperty(compositeType.BasePolymorphicDiscriminator, JsonSchema.CreateSingleValuedEnum(subType.SerializedName), true);
+
+                    definition.AddOneOf(polymorphicTypeRef);
+                }
+            }
         }
 
         private static JsonSchema ParseDictionaryType(Property property, DictionaryType dictionaryType, IDictionary<string, JsonSchema> definitions, IEnumerable<CompositeType> modelTypes)

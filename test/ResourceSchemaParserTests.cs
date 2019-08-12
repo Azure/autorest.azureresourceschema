@@ -56,8 +56,8 @@ namespace AutoRest.AzureResourceSchema.Tests
                     JsonType = "object",
                     Description = "Mock.Provider/mockResourceNames"
                 }
-                .AddProperty("type", JsonSchema.CreateStringEnum("Mock.Provider/mockResourceNames"), true)
-                .AddProperty("apiVersion", JsonSchema.CreateStringEnum("2016-01-01"), true),
+                .AddProperty("type", JsonSchema.CreateSingleValuedEnum("Mock.Provider/mockResourceNames"), true)
+                .AddProperty("apiVersion", JsonSchema.CreateSingleValuedEnum("2016-01-01"), true),
                 schema.ResourceDefinitions["mockResourceNames"].Schema);
             Assert.NotNull(schema.Definitions);
             Assert.Equal(0, schema.Definitions.Count);

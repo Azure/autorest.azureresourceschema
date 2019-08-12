@@ -134,7 +134,7 @@ To create a Microsoft.Network/virtualNetworks/subnets resource, add the followin
             "etag": "string"
           }
         ],
-        "disableBgpRoutePropagation": boolean,
+        "disableBgpRoutePropagation": "boolean",
         "provisioningState": "string"
       },
       "etag": "string"

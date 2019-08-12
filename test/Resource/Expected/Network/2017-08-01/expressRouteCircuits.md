@@ -18,7 +18,7 @@ To create a Microsoft.Network/expressRouteCircuits resource, add the following J
     "family": "string"
   },
   "properties": {
-    "allowClassicOperations": boolean,
+    "allowClassicOperations": "boolean",
     "circuitProvisioningState": "string",
     "serviceProviderProvisioningState": "string",
     "authorizations": [

@@ -11,13 +11,13 @@ To create a Microsoft.ServiceBus/namespaces/topics/subscriptions resource, add t
   "apiVersion": "2017-04-01",
   "properties": {
     "lockDuration": "string",
-    "requiresSession": boolean,
+    "requiresSession": "boolean",
     "defaultMessageTimeToLive": "string",
-    "deadLetteringOnMessageExpiration": boolean,
+    "deadLetteringOnMessageExpiration": "boolean",
     "duplicateDetectionHistoryTimeWindow": "string",
     "maxDeliveryCount": "integer",
     "status": "string",
-    "enableBatchedOperations": boolean,
+    "enableBatchedOperations": "boolean",
     "autoDeleteOnIdle": "string",
     "forwardTo": "string",
     "forwardDeadLetteredMessagesTo": "string"

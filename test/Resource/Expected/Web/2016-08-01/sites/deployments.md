@@ -19,7 +19,7 @@ To create a Microsoft.Web/sites/deployments resource, add the following JSON to 
     "authorEmail": "string",
     "startTime": "string",
     "endTime": "string",
-    "active": boolean,
+    "active": "boolean",
     "details": "string"
   }
 }

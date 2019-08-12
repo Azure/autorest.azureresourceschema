@@ -1723,10 +1723,17 @@
           "description": "Gets or sets the hash."
         },
         "type": {
-          "type": "string",
-          "enum": [
-            "embeddedContent",
-            "uri"
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "embeddedContent",
+                "uri"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
           ],
           "description": "Gets or sets the content source type."
         },

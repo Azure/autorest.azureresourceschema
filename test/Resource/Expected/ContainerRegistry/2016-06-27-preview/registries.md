@@ -12,7 +12,7 @@ To create a Microsoft.ContainerRegistry/registries resource, add the following J
   "location": "string",
   "tags": {},
   "properties": {
-    "adminUserEnabled": boolean,
+    "adminUserEnabled": "boolean",
     "storageAccount": {
       "name": "string",
       "accessKey": "string"

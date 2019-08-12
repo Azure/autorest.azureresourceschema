@@ -18,7 +18,7 @@ To create a Microsoft.CustomerInsights/hubs/connectors/mappings resource, add th
     "mappingProperties": {
       "folderPath": "string",
       "fileFilter": "string",
-      "hasHeader": boolean,
+      "hasHeader": "boolean",
       "errorManagement": {
         "errorManagementType": "string",
         "errorLimit": "integer"
@@ -40,7 +40,7 @@ To create a Microsoft.CustomerInsights/hubs/connectors/mappings resource, add th
           "propertyName": "string",
           "columnName": "string",
           "customFormatSpecifier": "string",
-          "isEncrypted": boolean
+          "isEncrypted": "boolean"
         }
       ],
       "completeOperation": {

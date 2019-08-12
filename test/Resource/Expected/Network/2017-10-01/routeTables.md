@@ -26,7 +26,7 @@ To create a Microsoft.Network/routeTables resource, add the following JSON to th
         "etag": "string"
       }
     ],
-    "disableBgpRoutePropagation": boolean,
+    "disableBgpRoutePropagation": "boolean",
     "provisioningState": "string"
   },
   "etag": "string",

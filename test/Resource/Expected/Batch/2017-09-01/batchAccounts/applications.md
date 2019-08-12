@@ -9,7 +9,7 @@ To create a Microsoft.Batch/batchAccounts/applications resource, add the followi
   "name": "string",
   "type": "Microsoft.Batch/batchAccounts/applications",
   "apiVersion": "2017-09-01",
-  "allowUpdates": boolean,
+  "allowUpdates": "boolean",
   "displayName": "string",
   "resources": []
 }

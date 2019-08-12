@@ -14,7 +14,7 @@ To create a Microsoft.Automation/automationAccounts/compilationjobs resource, ad
       "name": "string"
     },
     "parameters": {},
-    "newNodeConfigurationBuildVersionRequired": boolean
+    "newNodeConfigurationBuildVersionRequired": "boolean"
   },
   "location": "string",
   "tags": {}

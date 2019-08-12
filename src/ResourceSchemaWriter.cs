@@ -58,39 +58,39 @@ namespace AutoRest.AzureResourceSchema
             WriteProperty(writer, "description", resourceSchema.Description);
 
             var rgDefinitions = GetResourceDefinitions(resourceSchema, ScopeType.ResourceGroup);
-            WriteDefinitionMap(writer, "resourceDefinitions", rgDefinitions, sortDefinitions: true);
+            WriteDefinitionMap(writer, "resourceDefinitions", rgDefinitions, sortDefinitions: true, addExpressionReferences: false);
 
             var subDefinitions = GetResourceDefinitions(resourceSchema, ScopeType.Subcription);
             if (subDefinitions.Any())
             {
-                WriteDefinitionMap(writer, "subscription_ResourceDefinitions", subDefinitions, sortDefinitions: true);
+                WriteDefinitionMap(writer, "subscription_ResourceDefinitions", subDefinitions, sortDefinitions: true, addExpressionReferences: false);
             }
 
             var mgDefinitions = GetResourceDefinitions(resourceSchema, ScopeType.ManagementGroup);
             if (mgDefinitions.Any())
             {
-                WriteDefinitionMap(writer, "managementGroup_resourceDefinitions", mgDefinitions, sortDefinitions: true);
+                WriteDefinitionMap(writer, "managementGroup_resourceDefinitions", mgDefinitions, sortDefinitions: true, addExpressionReferences: false);
             }
 
             var tenantDefinitions = GetResourceDefinitions(resourceSchema, ScopeType.Tenant);
             if (tenantDefinitions.Any())
             {
-                WriteDefinitionMap(writer, "tenant_resourceDefinitions", tenantDefinitions, sortDefinitions: true);
+                WriteDefinitionMap(writer, "tenant_resourceDefinitions", tenantDefinitions, sortDefinitions: true, addExpressionReferences: false);
             }
 
             var extDefinitions = GetResourceDefinitions(resourceSchema, ScopeType.Extension);
             if (extDefinitions.Any())
             {
-                WriteDefinitionMap(writer, "extension_resourceDefinitions", extDefinitions, sortDefinitions: true);
+                WriteDefinitionMap(writer, "extension_resourceDefinitions", extDefinitions, sortDefinitions: true, addExpressionReferences: false);
             }
 
             var unknownDefinitions = GetResourceDefinitions(resourceSchema, ScopeType.Unknown);
             if (unknownDefinitions.Any())
             {
-                WriteDefinitionMap(writer, "unknown_resourceDefinitions", unknownDefinitions, sortDefinitions: true);
+                WriteDefinitionMap(writer, "unknown_resourceDefinitions", unknownDefinitions, sortDefinitions: true, addExpressionReferences: false);
             }
 
-            WriteDefinitionMap(writer, "definitions", resourceSchema.Definitions, sortDefinitions: true);
+            WriteDefinitionMap(writer, "definitions", resourceSchema.Definitions, sortDefinitions: true, addExpressionReferences: false);
 
             writer.WriteEndObject();
         }
@@ -110,33 +110,25 @@ namespace AutoRest.AzureResourceSchema
 
                 foreach (string definitionName in definitionNames)
                 {
-                    JsonSchema definition = definitionMap[definitionName];
+                    var definition = definitionMap[definitionName];
 
-                    bool shouldAddExpressionReference = addExpressionReferences;
-                    if (shouldAddExpressionReference)
+                    var shouldAddExpressionReference = addExpressionReferences && !definition.Configuration.HasFlag(SchemaConfiguration.OmitExpressionRef);
+                    switch (definition.JsonType)
                     {
-                        switch (definition.JsonType)
-                        {
-                            case "object":
-                                shouldAddExpressionReference = !definition.IsEmpty();
-                                break;
+                        case "object":
+                            shouldAddExpressionReference &= !definition.IsEmpty();
+                            break;
 
-                            case "string":
-                                shouldAddExpressionReference = (definition.Enum != null &&
-                                                                definition.Enum.Any() &&
-                                                                definitionName != "type" 
-                                                                && definitionName != "apiVersion"  // api versions are templated in some templates. No idea why. 
-                                                                ) ||
-                                                               definition.Pattern != null;
-                                break;
+                        case "string":
+                            shouldAddExpressionReference &= (definition.Enum?.Any() == true) || (definition.Pattern != null);
+                            break;
 
-                            case "array":
-                                shouldAddExpressionReference = definitionName != "resources";
-                                break;
+                        case "array":
+                            shouldAddExpressionReference &= definitionName != "resources";
+                            break;
 
-                            default:
-                                break;
-                        }
+                        default:
+                            break;
                     }
 
                     if (!shouldAddExpressionReference)
