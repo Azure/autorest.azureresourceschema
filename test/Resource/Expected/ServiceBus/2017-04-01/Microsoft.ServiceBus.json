@@ -32,7 +32,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -944,6 +945,8 @@
       "description": "AuthorizationRule properties."
     },
     "SBNamespaceProperties": {
+      "type": "object",
+      "properties": {},
       "description": "Properties of the namespace."
     },
     "SBQueueProperties": {

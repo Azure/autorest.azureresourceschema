@@ -95,78 +95,75 @@ namespace AutoRest.AzureResourceSchema
             writer.WriteEndObject();
         }
 
-        private static void WriteDefinitionMap(JsonWriter writer, string definitionMapName, IDictionary<string,JsonSchema> definitionMap, bool sortDefinitions = false, bool addExpressionReferences = false)
+        private static void WriteDefinitionMap(JsonWriter writer, string definitionMapName, IDictionary<string, JsonSchema> definitionMap, bool sortDefinitions = false, bool addExpressionReferences = false)
         {
-            if (definitionMap != null && definitionMap.Count > 0)
+            writer.WritePropertyName(definitionMapName);
+            writer.WriteStartObject();
+
+            var definitionNames = definitionMap?.Keys ?? Enumerable.Empty<string>();
+            if (sortDefinitions)
             {
-                writer.WritePropertyName(definitionMapName);
-                writer.WriteStartObject();
-
-                IEnumerable<string> definitionNames = definitionMap.Keys;
-                if (sortDefinitions)
-                {
-                    definitionNames = definitionNames.OrderBy(key => key);
-                }
-
-                foreach (string definitionName in definitionNames)
-                {
-                    var definition = definitionMap[definitionName];
-
-                    var shouldAddExpressionReference = addExpressionReferences && !definition.Configuration.HasFlag(SchemaConfiguration.OmitExpressionRef);
-                    switch (definition.JsonType)
-                    {
-                        case "object":
-                            shouldAddExpressionReference &= !definition.IsEmpty();
-                            break;
-
-                        case "string":
-                            shouldAddExpressionReference &= (definition.Enum?.Any() == true) || (definition.Pattern != null);
-                            break;
-
-                        case "array":
-                            shouldAddExpressionReference &= definitionName != "resources";
-                            break;
-
-                        default:
-                            break;
-                    }
-
-                    if (!shouldAddExpressionReference)
-                    {
-                        WriteDefinition(writer, definitionName, definition);
-                    }
-                    else
-                    {
-                        string definitionDescription = null;
-
-                        writer.WritePropertyName(definitionName);
-                        writer.WriteStartObject();
-
-                        writer.WritePropertyName(definition.JsonType == "object" && definition.IsEmpty() ? "anyOf" : "oneOf"); // hack, until MultiType thing is enforced across the specs repo!
-                        writer.WriteStartArray();
-
-                        if (definition.Description != null)
-                        {
-                            definitionDescription = definition.Description;
-
-                            definition = definition.Clone();
-                            definition.Description = null;
-                        }
-                        WriteDefinition(writer, definition);
-
-                        WriteDefinition(writer, new JsonSchema()
-                        {
-                            Ref = "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-                        });
-
-                        writer.WriteEndArray();
-
-                        WriteProperty(writer, "description", definitionDescription);
-                        writer.WriteEndObject();
-                    }
-                }
-                writer.WriteEndObject();
+                definitionNames = definitionNames.OrderBy(key => key, StringComparer.OrdinalIgnoreCase);
             }
+
+            foreach (var definitionName in definitionNames)
+            {
+                var definition = definitionMap[definitionName];
+
+                var shouldAddExpressionReference = addExpressionReferences && !definition.Configuration.HasFlag(SchemaConfiguration.OmitExpressionRef);
+                switch (definition.JsonType)
+                {
+                    case "object":
+                        shouldAddExpressionReference &= !definition.IsEmpty();
+                        break;
+
+                    case "string":
+                        shouldAddExpressionReference &= (definition.Enum?.Any() == true) || (definition.Pattern != null);
+                        break;
+
+                    case "array":
+                        shouldAddExpressionReference &= definitionName != "resources";
+                        break;
+
+                    default:
+                        break;
+                }
+
+                if (!shouldAddExpressionReference)
+                {
+                    WriteDefinition(writer, definitionName, definition);
+                }
+                else
+                {
+                    string definitionDescription = null;
+
+                    writer.WritePropertyName(definitionName);
+                    writer.WriteStartObject();
+
+                    writer.WritePropertyName(definition.JsonType == "object" && definition.IsEmpty() ? "anyOf" : "oneOf"); // hack, until MultiType thing is enforced across the specs repo!
+                    writer.WriteStartArray();
+
+                    if (definition.Description != null)
+                    {
+                        definitionDescription = definition.Description;
+
+                        definition = definition.Clone();
+                        definition.Description = null;
+                    }
+                    WriteDefinition(writer, definition);
+
+                    WriteDefinition(writer, new JsonSchema()
+                    {
+                        Ref = "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                    });
+
+                    writer.WriteEndArray();
+
+                    WriteProperty(writer, "description", definitionDescription);
+                    writer.WriteEndObject();
+                }
+            }
+            writer.WriteEndObject();
         }
 
         public static void WriteDefinition(JsonWriter writer, string resourceName, JsonSchema definition)
@@ -205,34 +202,36 @@ namespace AutoRest.AzureResourceSchema
 
             writer.WriteStartObject();
 
-            if (definition.JsonType != "object" || !definition.IsEmpty())
+            WriteProperty(writer, "type", definition.JsonType); // move out once MultiType is here
+            WriteProperty(writer, "minimum", definition.Minimum);
+            WriteProperty(writer, "maximum", definition.Maximum);
+            WriteProperty(writer, "pattern", definition.Pattern);
+            WriteProperty(writer, "minLength", definition.MinLength);
+            WriteProperty(writer, "maxLength", definition.MaxLength);
+            if (definition.Default != null)
             {
-                WriteProperty(writer, "type", definition.JsonType); // move out once MultiType is here
-                WriteProperty(writer, "minimum", definition.Minimum);
-                WriteProperty(writer, "maximum", definition.Maximum);
-                WriteProperty(writer, "pattern", definition.Pattern);
-                WriteProperty(writer, "minLength", definition.MinLength);
-                WriteProperty(writer, "maxLength", definition.MaxLength);
-                if (definition.Default != null)
-                {
-                    WritePropertyRaw(writer, "default", ConvertDefaultValue(definition.Default, definition.JsonType));
-                }
-                WriteStringArray(writer, "enum", definition.Enum);
-                WriteDefinitionArray(writer, "oneOf", definition.OneOf);
-                WriteDefinitionArray(writer, "anyOf", definition.AnyOf);
-                WriteDefinitionArray(writer, "allOf", definition.AllOf);
-                
-                // uuid in format on schemas makes VS cry. just leave it as a string with the pattern.
-                if( definition.Format != "uuid") {
-                    WriteProperty(writer, "format", definition.Format);
-                }
-
-                WriteProperty(writer, "$ref", definition.Ref);
-                WriteDefinition(writer, "items", definition.Items);
-                WriteDefinition(writer, "additionalProperties", definition.AdditionalProperties);
-                WriteDefinitionMap(writer, "properties", definition.Properties, addExpressionReferences: true);
-                WriteStringArray(writer, "required", definition.Required);
+                WritePropertyRaw(writer, "default", ConvertDefaultValue(definition.Default, definition.JsonType));
             }
+            WriteStringArray(writer, "enum", definition.Enum);
+            WriteDefinitionArray(writer, "oneOf", definition.OneOf);
+            WriteDefinitionArray(writer, "anyOf", definition.AnyOf);
+            WriteDefinitionArray(writer, "allOf", definition.AllOf);
+
+            // uuid in format on schemas makes VS cry. just leave it as a string with the pattern.
+            if (definition.Format != "uuid")
+            {
+                WriteProperty(writer, "format", definition.Format);
+            }
+
+            WriteProperty(writer, "$ref", definition.Ref);
+            WriteDefinition(writer, "items", definition.Items);
+            WriteDefinition(writer, "additionalProperties", definition.AdditionalProperties);
+            if (definition.JsonType == "object")
+            {
+                WriteDefinitionMap(writer, "properties", definition.Properties, addExpressionReferences: true);
+            }
+            WriteStringArray(writer, "required", definition.Required);
+
             WriteProperty(writer, "description", definition.Description);
 
             writer.WriteEndObject();

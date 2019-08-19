@@ -35,7 +35,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -558,6 +559,8 @@
       "description": "Microsoft.Relay/namespaces/wcfRelays"
     },
     "RelayNamespaceProperties": {
+      "type": "object",
+      "properties": {},
       "description": "Properties of the namespace."
     },
     "Sku": {
