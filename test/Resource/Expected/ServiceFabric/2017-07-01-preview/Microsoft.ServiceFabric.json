@@ -33,7 +33,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -468,6 +469,8 @@
       "description": "The application resource properties."
     },
     "ApplicationTypeProperties": {
+      "type": "object",
+      "properties": {},
       "description": "The application type name properties"
     },
     "ApplicationUpgradePolicy": {
@@ -1341,7 +1344,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1355,7 +1359,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1480,6 +1485,7 @@
           "$ref": "#/definitions/UniformInt64RangePartitionSchemeDescription"
         }
       ],
+      "properties": {},
       "description": "Describes how the service is partitioned."
     },
     "RollingUpgradeMonitoringPolicy": {
@@ -1595,6 +1601,8 @@
       "description": "Specifies a metric to load balance a service during runtime."
     },
     "ServicePlacementPolicyDescription": {
+      "type": "object",
+      "properties": {},
       "description": "Describes the policy to be used for placement of a Service Fabric service."
     },
     "ServiceProperties": {

@@ -32,7 +32,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -99,7 +100,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -155,7 +157,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -229,62 +232,6 @@
       ],
       "description": "Microsoft.Compute/virtualMachines"
     },
-    "virtualMachines_extensions": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "type": {
-          "type": "string",
-          "enum": [
-            "Microsoft.Compute/virtualMachines/extensions"
-          ]
-        },
-        "apiVersion": {
-          "type": "string",
-          "enum": [
-            "2017-12-01"
-          ]
-        },
-        "location": {
-          "type": "string",
-          "description": "Resource location"
-        },
-        "tags": {
-          "oneOf": [
-            {
-              "type": "object",
-              "additionalProperties": {
-                "type": "string"
-              }
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "Resource tags"
-        },
-        "properties": {
-          "oneOf": [
-            {
-              "$ref": "#/definitions/VirtualMachineExtensionProperties"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ]
-        }
-      },
-      "required": [
-        "name",
-        "type",
-        "apiVersion",
-        "location",
-        "properties"
-      ],
-      "description": "Microsoft.Compute/virtualMachines/extensions"
-    },
     "virtualMachineScaleSets": {
       "type": "object",
       "properties": {
@@ -313,7 +260,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -466,7 +414,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -504,6 +453,63 @@
         "properties"
       ],
       "description": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines"
+    },
+    "virtualMachines_extensions": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "Microsoft.Compute/virtualMachines/extensions"
+          ]
+        },
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2017-12-01"
+          ]
+        },
+        "location": {
+          "type": "string",
+          "description": "Resource location"
+        },
+        "tags": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {}
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Resource tags"
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/VirtualMachineExtensionProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "apiVersion",
+        "location",
+        "properties"
+      ],
+      "description": "Microsoft.Compute/virtualMachines/extensions"
     }
   },
   "definitions": {
@@ -1919,9 +1925,13 @@
           "description": "Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true."
         },
         "settings": {
+          "type": "object",
+          "properties": {},
           "description": "Json formatted public settings for the extension."
         },
         "protectedSettings": {
+          "type": "object",
+          "properties": {},
           "description": "The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all."
         },
         "instanceView": {
@@ -2050,62 +2060,6 @@
         }
       },
       "description": "Describes the properties of a Virtual Machine."
-    },
-    "virtualMachines_extensions_childResource": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "type": {
-          "type": "string",
-          "enum": [
-            "extensions"
-          ]
-        },
-        "apiVersion": {
-          "type": "string",
-          "enum": [
-            "2017-12-01"
-          ]
-        },
-        "location": {
-          "type": "string",
-          "description": "Resource location"
-        },
-        "tags": {
-          "oneOf": [
-            {
-              "type": "object",
-              "additionalProperties": {
-                "type": "string"
-              }
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "Resource tags"
-        },
-        "properties": {
-          "oneOf": [
-            {
-              "$ref": "#/definitions/VirtualMachineExtensionProperties"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ]
-        }
-      },
-      "required": [
-        "name",
-        "type",
-        "apiVersion",
-        "location",
-        "properties"
-      ],
-      "description": "Microsoft.Compute/virtualMachines/extensions"
     },
     "VirtualMachineScaleSetDataDisk": {
       "type": "object",
@@ -2257,9 +2211,13 @@
           "description": "Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true."
         },
         "settings": {
+          "type": "object",
+          "properties": {},
           "description": "Json formatted public settings for the extension."
         },
         "protectedSettings": {
+          "type": "object",
+          "properties": {},
           "description": "The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all."
         }
       },
@@ -2870,6 +2828,48 @@
       },
       "description": "Describes a virtual machines scale set IP Configuration's PublicIPAddress configuration"
     },
+    "VirtualMachineScaleSetStorageProfile": {
+      "type": "object",
+      "properties": {
+        "imageReference": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ImageReference"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations."
+        },
+        "osDisk": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/VirtualMachineScaleSetOSDisk"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Specifies information about the operating system disk used by the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)."
+        },
+        "dataDisks": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/VirtualMachineScaleSetDataDisk"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Specifies the parameters that are used to add data disks to the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)."
+        }
+      },
+      "description": "Describes a virtual machine scale set storage profile."
+    },
     "virtualMachineScaleSets_extensions_childResource": {
       "type": "object",
       "properties": {
@@ -2935,7 +2935,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2973,48 +2974,6 @@
         "properties"
       ],
       "description": "Microsoft.Compute/virtualMachineScaleSets/virtualmachines"
-    },
-    "VirtualMachineScaleSetStorageProfile": {
-      "type": "object",
-      "properties": {
-        "imageReference": {
-          "oneOf": [
-            {
-              "$ref": "#/definitions/ImageReference"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations."
-        },
-        "osDisk": {
-          "oneOf": [
-            {
-              "$ref": "#/definitions/VirtualMachineScaleSetOSDisk"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "Specifies information about the operating system disk used by the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)."
-        },
-        "dataDisks": {
-          "oneOf": [
-            {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/VirtualMachineScaleSetDataDisk"
-              }
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "Specifies the parameters that are used to add data disks to the virtual machines in the scale set. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)."
-        }
-      },
-      "description": "Describes a virtual machine scale set storage profile."
     },
     "VirtualMachineScaleSetVMProfile": {
       "type": "object",
@@ -3171,6 +3130,63 @@
         }
       },
       "description": "Describes the properties of a virtual machine scale set virtual machine."
+    },
+    "virtualMachines_extensions_childResource": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "extensions"
+          ]
+        },
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2017-12-01"
+          ]
+        },
+        "location": {
+          "type": "string",
+          "description": "Resource location"
+        },
+        "tags": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {}
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ],
+          "description": "Resource tags"
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/VirtualMachineExtensionProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "apiVersion",
+        "location",
+        "properties"
+      ],
+      "description": "Microsoft.Compute/virtualMachines/extensions"
     },
     "WindowsConfiguration": {
       "type": "object",

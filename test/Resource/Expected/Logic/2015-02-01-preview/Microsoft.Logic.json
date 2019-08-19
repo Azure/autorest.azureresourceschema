@@ -36,7 +36,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -165,6 +166,8 @@
           "description": "Gets or sets the content hash."
         },
         "metadata": {
+          "type": "object",
+          "properties": {},
           "description": "Gets or sets the metadata."
         }
       }
@@ -254,9 +257,13 @@
           "description": "Gets or sets the type."
         },
         "value": {
+          "type": "object",
+          "properties": {},
           "description": "Gets or sets the value."
         },
         "metadata": {
+          "type": "object",
+          "properties": {},
           "description": "Gets or sets the metadata."
         }
       }
@@ -305,6 +312,8 @@
           "description": "Gets or sets the link to definition."
         },
         "definition": {
+          "type": "object",
+          "properties": {},
           "description": "Gets or sets the definition."
         },
         "parametersLink": {
@@ -324,7 +333,8 @@
               "type": "object",
               "additionalProperties": {
                 "$ref": "#/definitions/WorkflowParameter"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
