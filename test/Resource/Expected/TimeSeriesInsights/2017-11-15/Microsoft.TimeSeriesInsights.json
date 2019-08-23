@@ -66,13 +66,13 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/environments_accessPolicies_childResource"
+                "$ref": "#/definitions/environments_eventSources_childResource"
               },
               {
                 "$ref": "#/definitions/environments_referenceDataSets_childResource"
               },
               {
-                "$ref": "#/definitions/environments_eventSources_childResource"
+                "$ref": "#/definitions/environments_accessPolicies_childResource"
               }
             ]
           }
