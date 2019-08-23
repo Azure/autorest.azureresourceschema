@@ -241,9 +241,9 @@ namespace AutoRest.AzureResourceSchema
                                     resourceSchema.AddProperty(property.SerializedName, propertyDefinition, property.IsRequired || property.SerializedName == "properties");
                                 }
                             }
-
-                            HandlePolymorphicType(resourceSchema, body, providerSchema.Definitions, serviceClient.ModelTypes);
                         }
+
+                        HandlePolymorphicType(resourceSchema, body, providerSchema.Definitions, serviceClient.ModelTypes);
                     }
 
                     string resourcePropertyName = ResourceSchema.FormatResourceSchemaKey(descriptor.ResourceTypeSegments);
