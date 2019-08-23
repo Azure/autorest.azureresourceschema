@@ -57,34 +57,34 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/labs_virtualnetworks_childResource"
-              },
-              {
-                "$ref": "#/definitions/labs_virtualmachines_childResource"
-              },
-              {
-                "$ref": "#/definitions/labs_users_childResource"
-              },
-              {
-                "$ref": "#/definitions/labs_servicerunners_childResource"
-              },
-              {
-                "$ref": "#/definitions/labs_schedules_childResource"
-              },
-              {
-                "$ref": "#/definitions/labs_notificationchannels_childResource"
-              },
-              {
-                "$ref": "#/definitions/labs_formulas_childResource"
-              },
-              {
-                "$ref": "#/definitions/labs_customimages_childResource"
+                "$ref": "#/definitions/labs_artifactsources_childResource"
               },
               {
                 "$ref": "#/definitions/labs_costs_childResource"
               },
               {
-                "$ref": "#/definitions/labs_artifactsources_childResource"
+                "$ref": "#/definitions/labs_customimages_childResource"
+              },
+              {
+                "$ref": "#/definitions/labs_formulas_childResource"
+              },
+              {
+                "$ref": "#/definitions/labs_notificationchannels_childResource"
+              },
+              {
+                "$ref": "#/definitions/labs_schedules_childResource"
+              },
+              {
+                "$ref": "#/definitions/labs_servicerunners_childResource"
+              },
+              {
+                "$ref": "#/definitions/labs_users_childResource"
+              },
+              {
+                "$ref": "#/definitions/labs_virtualmachines_childResource"
+              },
+              {
+                "$ref": "#/definitions/labs_virtualnetworks_childResource"
               }
             ]
           }
@@ -606,13 +606,13 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/labs_users_secrets_childResource"
+                "$ref": "#/definitions/labs_users_disks_childResource"
               },
               {
                 "$ref": "#/definitions/labs_users_environments_childResource"
               },
               {
-                "$ref": "#/definitions/labs_users_disks_childResource"
+                "$ref": "#/definitions/labs_users_secrets_childResource"
               }
             ]
           }
@@ -2433,22 +2433,6 @@
             }
           ],
           "description": "The properties of the resource."
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/labs_users_secrets_childResource"
-              },
-              {
-                "$ref": "#/definitions/labs_users_environments_childResource"
-              },
-              {
-                "$ref": "#/definitions/labs_users_disks_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [
@@ -2677,16 +2661,6 @@
             }
           ],
           "description": "The properties of the resource."
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/labs_virtualmachines_schedules_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [

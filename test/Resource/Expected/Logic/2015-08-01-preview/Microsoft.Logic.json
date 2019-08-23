@@ -66,19 +66,19 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/integrationAccounts_certificates_childResource"
-              },
-              {
-                "$ref": "#/definitions/integrationAccounts_agreements_childResource"
-              },
-              {
-                "$ref": "#/definitions/integrationAccounts_partners_childResource"
+                "$ref": "#/definitions/integrationAccounts_schemas_childResource"
               },
               {
                 "$ref": "#/definitions/integrationAccounts_maps_childResource"
               },
               {
-                "$ref": "#/definitions/integrationAccounts_schemas_childResource"
+                "$ref": "#/definitions/integrationAccounts_partners_childResource"
+              },
+              {
+                "$ref": "#/definitions/integrationAccounts_agreements_childResource"
+              },
+              {
+                "$ref": "#/definitions/integrationAccounts_certificates_childResource"
               }
             ]
           }

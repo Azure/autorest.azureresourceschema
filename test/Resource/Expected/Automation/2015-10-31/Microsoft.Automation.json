@@ -57,46 +57,46 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/automationAccounts_webhooks_childResource"
-              },
-              {
-                "$ref": "#/definitions/automationAccounts_variables_childResource"
-              },
-              {
-                "$ref": "#/definitions/automationAccounts_schedules_childResource"
-              },
-              {
-                "$ref": "#/definitions/automationAccounts_runbooks_childResource"
-              },
-              {
-                "$ref": "#/definitions/automationAccounts_modules_childResource"
-              },
-              {
-                "$ref": "#/definitions/automationAccounts_jobSchedules_childResource"
-              },
-              {
-                "$ref": "#/definitions/automationAccounts_jobs_childResource"
-              },
-              {
-                "$ref": "#/definitions/automationAccounts_nodeConfigurations_childResource"
-              },
-              {
-                "$ref": "#/definitions/automationAccounts_configurations_childResource"
-              },
-              {
-                "$ref": "#/definitions/automationAccounts_compilationjobs_childResource"
-              },
-              {
-                "$ref": "#/definitions/automationAccounts_credentials_childResource"
-              },
-              {
-                "$ref": "#/definitions/automationAccounts_connectionTypes_childResource"
+                "$ref": "#/definitions/automationAccounts_certificates_childResource"
               },
               {
                 "$ref": "#/definitions/automationAccounts_connections_childResource"
               },
               {
-                "$ref": "#/definitions/automationAccounts_certificates_childResource"
+                "$ref": "#/definitions/automationAccounts_connectionTypes_childResource"
+              },
+              {
+                "$ref": "#/definitions/automationAccounts_credentials_childResource"
+              },
+              {
+                "$ref": "#/definitions/automationAccounts_compilationjobs_childResource"
+              },
+              {
+                "$ref": "#/definitions/automationAccounts_configurations_childResource"
+              },
+              {
+                "$ref": "#/definitions/automationAccounts_nodeConfigurations_childResource"
+              },
+              {
+                "$ref": "#/definitions/automationAccounts_jobs_childResource"
+              },
+              {
+                "$ref": "#/definitions/automationAccounts_jobSchedules_childResource"
+              },
+              {
+                "$ref": "#/definitions/automationAccounts_modules_childResource"
+              },
+              {
+                "$ref": "#/definitions/automationAccounts_runbooks_childResource"
+              },
+              {
+                "$ref": "#/definitions/automationAccounts_schedules_childResource"
+              },
+              {
+                "$ref": "#/definitions/automationAccounts_variables_childResource"
+              },
+              {
+                "$ref": "#/definitions/automationAccounts_webhooks_childResource"
               }
             ]
           }

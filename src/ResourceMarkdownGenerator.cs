@@ -66,7 +66,7 @@ namespace AutoRest.AzureResourceSchema
 
                 var writer = new StringWriter();
                 var mdWriter = new ResourceMarkdownGenerator(writer, resourceSchema);
-                mdWriter.Generate(resDef);
+                mdWriter.Generate(resDef.Schema);
 
                 mds[index] = new Markdown(resDefName, writer.ToString());
                 ++index;

@@ -71,34 +71,34 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/sites_virtualNetworkConnections_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_siteextensions_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_publicCertificates_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_premieraddons_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_hybridconnection_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_hostNameBindings_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_functions_childResource"
+                "$ref": "#/definitions/sites_deployments_childResource"
               },
               {
                 "$ref": "#/definitions/sites_domainOwnershipIdentifiers_childResource"
               },
               {
-                "$ref": "#/definitions/sites_deployments_childResource"
+                "$ref": "#/definitions/sites_functions_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_hostNameBindings_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_hybridconnection_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_premieraddons_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_publicCertificates_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_siteextensions_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_slots_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_virtualNetworkConnections_childResource"
               }
             ]
           }
@@ -562,31 +562,31 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/sites_slots_virtualNetworkConnections_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_siteextensions_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_publicCertificates_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_premieraddons_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_hybridconnection_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_hostNameBindings_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_functions_childResource"
+                "$ref": "#/definitions/sites_slots_deployments_childResource"
               },
               {
                 "$ref": "#/definitions/sites_slots_domainOwnershipIdentifiers_childResource"
               },
               {
-                "$ref": "#/definitions/sites_slots_deployments_childResource"
+                "$ref": "#/definitions/sites_slots_functions_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_slots_hostNameBindings_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_slots_hybridconnection_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_slots_premieraddons_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_slots_publicCertificates_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_slots_siteextensions_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_slots_virtualNetworkConnections_childResource"
               }
             ]
           }
@@ -3158,40 +3158,6 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ]
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/sites_slots_virtualNetworkConnections_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_siteextensions_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_publicCertificates_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_premieraddons_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_hybridconnection_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_hostNameBindings_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_functions_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_domainOwnershipIdentifiers_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_deployments_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [
@@ -3575,16 +3541,6 @@
             }
           ],
           "description": "VnetInfo resource specific properties"
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/sites_slots_virtualNetworkConnections_gateways_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [
@@ -3669,16 +3625,6 @@
             }
           ],
           "description": "VnetInfo resource specific properties"
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/sites_virtualNetworkConnections_gateways_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [

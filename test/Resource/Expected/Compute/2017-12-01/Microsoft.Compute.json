@@ -331,10 +331,10 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/virtualMachineScaleSets_virtualmachines_childResource"
+                "$ref": "#/definitions/virtualMachineScaleSets_extensions_childResource"
               },
               {
-                "$ref": "#/definitions/virtualMachineScaleSets_extensions_childResource"
+                "$ref": "#/definitions/virtualMachineScaleSets_virtualmachines_childResource"
               }
             ]
           }

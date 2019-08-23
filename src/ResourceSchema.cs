@@ -1,8 +1,10 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See License.txt in the project root for license information.
 
+using AutoRest.AzureResourceSchema.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace AutoRest.AzureResourceSchema
 {
@@ -38,7 +40,7 @@ namespace AutoRest.AzureResourceSchema
         /// <summary>
         /// The named JSON schemas that define the resources of this resource schema.
         /// </summary>
-        public IDictionary<string, JsonSchema> ResourceDefinitions { get; private set; } = new Dictionary<string,JsonSchema>();
+        public IDictionary<string, ResourceDefinition> ResourceDefinitions { get; private set; } = new Dictionary<string, ResourceDefinition>();
 
         /// <summary>
         /// The named reusable JSON schemas that the resource definitions reference. These
@@ -46,33 +48,19 @@ namespace AutoRest.AzureResourceSchema
         /// </summary>
         public IDictionary<string,JsonSchema> Definitions { get; private set; } = new Dictionary<string,JsonSchema>();
 
+        public static string FormatResourceSchemaKey(IEnumerable<string> resourceTypeSegments)
+            => string.Join('_', resourceTypeSegments);
+
         /// <summary>
         /// Search this ResourceSchema for a resource definition that has the provided type.
         /// </summary>
         /// <param name="resourceType">The resource type to look for in this ResourceSchema.</param>
         /// <returns></returns>
-        public JsonSchema GetResourceDefinitionByResourceType(string resourceType)
+        public bool GetResourceDefinitionByResourceType(IEnumerable<string> resourceTypeSegments, out ResourceDefinition resourceDefinition)
         {
-            if (string.IsNullOrWhiteSpace(resourceType))
-            {
-                throw new ArgumentException("resourceType cannot be null or whitespace.", "resourceType");
-            }
+            var schemaKey = FormatResourceSchemaKey(resourceTypeSegments);
 
-            JsonSchema result = null;
-
-            if (ResourceDefinitions != null && ResourceDefinitions.Count > 0)
-            {
-                foreach(JsonSchema resourceDefinition in ResourceDefinitions.Values)
-                {
-                    if (resourceDefinition.ResourceType == resourceType)
-                    {
-                        result = resourceDefinition;
-                        break;
-                    }
-                }
-            }
-
-            return result;
+            return ResourceDefinitions.TryGetValue(schemaKey, out resourceDefinition);
         }
 
         /// <summary>
@@ -80,7 +68,7 @@ namespace AutoRest.AzureResourceSchema
         /// </summary>
         /// <param name="resourceName">The name of the resource definition.</param>
         /// <param name="resourceDefinition">The JSON schema that describes the resource.</param>
-        public ResourceSchema AddResourceDefinition(string resourceName, JsonSchema resourceDefinition)
+        public ResourceSchema AddResourceDefinition(string resourceName, ResourceDefinition resourceDefinition)
         {
             if (string.IsNullOrWhiteSpace(resourceName))
             {

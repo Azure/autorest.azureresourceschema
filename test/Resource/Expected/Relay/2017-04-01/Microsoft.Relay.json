@@ -71,13 +71,13 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/namespaces_wcfRelays_childResource"
+                "$ref": "#/definitions/namespaces_authorizationRules_childResource"
               },
               {
                 "$ref": "#/definitions/namespaces_hybridConnections_childResource"
               },
               {
-                "$ref": "#/definitions/namespaces_authorizationRules_childResource"
+                "$ref": "#/definitions/namespaces_wcfRelays_childResource"
               }
             ]
           }
@@ -470,16 +470,6 @@
             }
           ],
           "description": "Properties of the HybridConnection."
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/namespaces_hybridConnections_authorizationRules_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [
@@ -558,16 +548,6 @@
             }
           ],
           "description": "Properties of the WCF relay."
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/namespaces_wcfRelays_authorizationRules_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [

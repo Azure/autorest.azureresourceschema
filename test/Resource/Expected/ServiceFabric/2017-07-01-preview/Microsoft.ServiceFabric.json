@@ -58,10 +58,10 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/clusters_applications_childResource"
+                "$ref": "#/definitions/clusters_applicationTypes_childResource"
               },
               {
-                "$ref": "#/definitions/clusters_applicationTypes_childResource"
+                "$ref": "#/definitions/clusters_applications_childResource"
               }
             ]
           }
@@ -913,16 +913,6 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ]
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/clusters_applications_services_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [
@@ -1009,16 +999,6 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ]
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/clusters_applicationTypes_versions_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [

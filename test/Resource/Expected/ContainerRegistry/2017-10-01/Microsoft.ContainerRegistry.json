@@ -77,10 +77,10 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/registries_webhooks_childResource"
+                "$ref": "#/definitions/registries_replications_childResource"
               },
               {
-                "$ref": "#/definitions/registries_replications_childResource"
+                "$ref": "#/definitions/registries_webhooks_childResource"
               }
             ]
           }

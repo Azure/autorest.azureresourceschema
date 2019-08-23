@@ -62,65 +62,6 @@
         "properties"
       ],
       "description": "microsoft.insights/alertrules"
-    },
-    "logprofiles": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the log profile."
-        },
-        "type": {
-          "type": "string",
-          "enum": [
-            "microsoft.insights/logprofiles"
-          ]
-        },
-        "apiVersion": {
-          "type": "string",
-          "enum": [
-            "2016-03-01"
-          ]
-        },
-        "location": {
-          "type": "string",
-          "description": "Resource location"
-        },
-        "tags": {
-          "oneOf": [
-            {
-              "type": "object",
-              "additionalProperties": {
-                "type": "string"
-              },
-              "properties": {}
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "Resource tags"
-        },
-        "properties": {
-          "oneOf": [
-            {
-              "$ref": "#/definitions/LogProfileProperties"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "The log profile properties of the resource."
-        }
-      },
-      "required": [
-        "name",
-        "type",
-        "apiVersion",
-        "location",
-        "properties"
-      ],
-      "description": "microsoft.insights/logprofiles"
     }
   },
   "definitions": {
@@ -212,64 +153,6 @@
       ],
       "description": "A rule condition based on a certain number of locations failing."
     },
-    "LogProfileProperties": {
-      "type": "object",
-      "properties": {
-        "storageAccountId": {
-          "type": "string",
-          "description": "the resource id of the storage account to which you would like to send the Activity Log."
-        },
-        "serviceBusRuleId": {
-          "type": "string",
-          "description": "The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: '{service bus resource ID}/authorizationrules/{key name}'."
-        },
-        "locations": {
-          "oneOf": [
-            {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the 'global' location."
-        },
-        "categories": {
-          "oneOf": [
-            {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "the categories of the logs. These categories are created as is convenient to the user. Some values are: 'Write', 'Delete', and/or 'Action.'"
-        },
-        "retentionPolicy": {
-          "oneOf": [
-            {
-              "$ref": "#/definitions/RetentionPolicy"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "the retention policy for the events in the log."
-        }
-      },
-      "required": [
-        "locations",
-        "categories",
-        "retentionPolicy"
-      ],
-      "description": "The log profile properties."
-    },
     "ManagementEventAggregationCondition": {
       "type": "object",
       "properties": {
@@ -334,39 +217,6 @@
         "odata.type"
       ],
       "description": "A management event rule condition."
-    },
-    "RetentionPolicy": {
-      "type": "object",
-      "properties": {
-        "enabled": {
-          "oneOf": [
-            {
-              "type": "boolean"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "a value indicating whether the retention policy is enabled."
-        },
-        "days": {
-          "oneOf": [
-            {
-              "type": "integer",
-              "minimum": 0
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ],
-          "description": "the number of days for the retention in days. A value of 0 will retain the events indefinitely."
-        }
-      },
-      "required": [
-        "enabled",
-        "days"
-      ],
-      "description": "Specifies the retention policy for the log."
     },
     "RuleAction": {
       "type": "object",

@@ -71,13 +71,13 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/namespaces_WcfRelays_childResource"
+                "$ref": "#/definitions/namespaces_AuthorizationRules_childResource"
               },
               {
                 "$ref": "#/definitions/namespaces_HybridConnections_childResource"
               },
               {
-                "$ref": "#/definitions/namespaces_AuthorizationRules_childResource"
+                "$ref": "#/definitions/namespaces_WcfRelays_childResource"
               }
             ]
           }
@@ -475,16 +475,6 @@
             }
           ],
           "description": "Properties of HybridConnection"
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/namespaces_HybridConnections_authorizationRules_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [
@@ -563,16 +553,6 @@
             }
           ],
           "description": "Properties of WcfRelay"
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/namespaces_WcfRelays_authorizationRules_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [
