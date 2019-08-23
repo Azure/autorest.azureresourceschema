@@ -61,11 +61,6 @@ namespace AutoRest.AzureResourceSchema
                 return (false, "Unable to locate '/providers/' segment", Enumerable.Empty<ResourceDescriptor>());
             }
 
-            if (!method.Url.EndsWith('}'))
-            {
-                return (false, "Path does not end with '}'", Enumerable.Empty<ResourceDescriptor>());
-            }
-
             var parentScope = method.Url.Substring(0, finalProvidersMatch.Length - "providers/".Length);
             var routingScope = method.Url.Substring(finalProvidersMatch.Length);
 
@@ -155,6 +150,44 @@ namespace AutoRest.AzureResourceSchema
             return (true, string.Empty, resourceTypes);
         }
 
+        private static (bool success, string failureReason, JsonSchema nameSchema) ParseNameSchema(CodeModel codeModel, Method method, ResourceSchema providerSchema, ResourceDescriptor descriptor)
+        {
+            // get the resource name parameter, e.g. {fooName}
+            var resNameParam = descriptor.RoutingScope.Substring(descriptor.RoutingScope.LastIndexOf('/') + 1);
+            if (IsPathVariable(resNameParam))
+            {
+                // strip the enclosing braces
+                resNameParam = TrimParamBraces(resNameParam);
+
+                // look up the type
+                var param = method.Parameters.FirstOrDefault(p => p.SerializedName == resNameParam);
+
+                if (param == null)
+                {
+                    return (false, $"Unable to locate parameter with name '{resNameParam}'", null);
+                }
+
+                var nameSchema = ParseType(param.ClientProperty, param.ModelType, providerSchema.Definitions, codeModel.ModelTypes);
+                nameSchema.ResourceType = resNameParam;
+
+                return (true, string.Empty, nameSchema);
+            }
+
+            if (!resNameParam.All(c => char.IsLetterOrDigit(c)))
+            {
+                return (false, $"Unable to process non-alphanumeric name '{resNameParam}'", null);
+            }
+
+            // Resource name is a constant; enforce it with regex.
+            var pattern = descriptor.ResourceTypeSegments.Count > 1 ? $"^.*/{resNameParam}$" : $"^{resNameParam}$";
+
+            return (true, string.Empty, new JsonSchema
+            {
+                JsonType = "string",
+                Pattern = pattern,
+            });
+        }
+
         /// <summary>
         /// Parse a ResourceSchemaModel from the provided ServiceClient.
         /// </summary>
@@ -206,26 +239,15 @@ namespace AutoRest.AzureResourceSchema
                         Description = descriptor.FullyQualifiedType,
                     };
 
-                    // get the resource name parameter, e.g. {fooName}
-                    var resNameParam = descriptor.RoutingScope.Substring(descriptor.RoutingScope.LastIndexOf('/') + 1);
-                    if (IsPathVariable(resNameParam))
+                    JsonSchema nameSchema;
+                    (success, failureReason, nameSchema) = ParseNameSchema(serviceClient, method, providerSchema, descriptor);
+                    if (!success)
                     {
-                        // strip the enclosing braces
-                        resNameParam = TrimParamBraces(resNameParam);
-
-                        // look up the type
-                        var param = method.Parameters.Where(p => p.SerializedName == resNameParam).FirstOrDefault();
-                        if (param != null)
-                        {
-                            // create a schema for it
-                            var nameParamSchema = ParseType(param.ClientProperty, param.ModelType, providerSchema.Definitions, serviceClient.ModelTypes);
-                            nameParamSchema.ResourceType = resNameParam;
-
-                            // add it as the name property
-                            resourceSchema.AddProperty("name", nameParamSchema, true);
-                        }
+                        LogMessage($"Skipping resource type {descriptor.FullyQualifiedType} under path '{method.Url}': {failureReason}");
+                        continue;
                     }
 
+                    resourceSchema.AddProperty("name", nameSchema, true);
                     resourceSchema.AddProperty("type", JsonSchema.CreateSingleValuedEnum(descriptor.FullyQualifiedType), true);
                     resourceSchema.AddProperty("apiVersion", JsonSchema.CreateSingleValuedEnum(apiVersion), true);
 
