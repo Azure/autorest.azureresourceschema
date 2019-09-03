@@ -12,7 +12,7 @@ To create a Microsoft.DevTestLab/labs/customimages resource, add the following J
   "properties": {
     "vm": {
       "sourceVmId": "string",
-      "sysPrep": boolean,
+      "sysPrep": "boolean",
       "windowsOsInfo": {
         "windowsOsState": "string"
       },
@@ -22,7 +22,7 @@ To create a Microsoft.DevTestLab/labs/customimages resource, add the following J
     },
     "vhd": {
       "imageName": "string",
-      "sysPrep": boolean
+      "sysPrep": "boolean"
     },
     "description": "string",
     "osType": "string",

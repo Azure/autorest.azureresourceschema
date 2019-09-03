@@ -110,7 +110,7 @@ To create a Microsoft.Network/applicationGateways resource, add the following JS
           "interval": "integer",
           "timeout": "integer",
           "unhealthyThreshold": "integer",
-          "pickHostNameFromBackendHttpSettings": boolean,
+          "pickHostNameFromBackendHttpSettings": "boolean",
           "minServers": "integer",
           "match": {
             "body": "string",
@@ -157,7 +157,7 @@ To create a Microsoft.Network/applicationGateways resource, add the following JS
                       "frontendPort": "integer",
                       "backendPort": "integer",
                       "idleTimeoutInMinutes": "integer",
-                      "enableFloatingIP": boolean,
+                      "enableFloatingIP": "boolean",
                       "provisioningState": "string"
                     },
                     "name": "string",
@@ -289,7 +289,7 @@ To create a Microsoft.Network/applicationGateways resource, add the following JS
                   "name": "string",
                   "etag": "string"
                 },
-                "primary": boolean,
+                "primary": "boolean",
                 "publicIPAddress": {
                   "id": "string",
                   "location": "string",
@@ -351,13 +351,13 @@ To create a Microsoft.Network/applicationGateways resource, add the following JS
             }
           ],
           "connectionDraining": {
-            "enabled": boolean,
+            "enabled": "boolean",
             "drainTimeoutInSec": "integer"
           },
           "hostName": "string",
-          "pickHostNameFromBackendAddress": boolean,
+          "pickHostNameFromBackendAddress": "boolean",
           "affinityCookieName": "string",
-          "probeEnabled": boolean,
+          "probeEnabled": "boolean",
           "path": "string",
           "provisioningState": "string"
         },
@@ -381,7 +381,7 @@ To create a Microsoft.Network/applicationGateways resource, add the following JS
           "sslCertificate": {
             "id": "string"
           },
-          "requireServerNameIndication": boolean,
+          "requireServerNameIndication": "boolean",
           "provisioningState": "string"
         },
         "name": "string",
@@ -468,8 +468,8 @@ To create a Microsoft.Network/applicationGateways resource, add the following JS
             "id": "string"
           },
           "targetUrl": "string",
-          "includePath": boolean,
-          "includeQueryString": boolean,
+          "includePath": "boolean",
+          "includeQueryString": "boolean",
           "requestRoutingRules": [
             {
               "id": "string"
@@ -492,7 +492,7 @@ To create a Microsoft.Network/applicationGateways resource, add the following JS
       }
     ],
     "webApplicationFirewallConfiguration": {
-      "enabled": boolean,
+      "enabled": "boolean",
       "firewallMode": "string",
       "ruleSetType": "string",
       "ruleSetVersion": "string",

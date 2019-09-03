@@ -41,7 +41,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -76,40 +77,40 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/service_users_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_subscriptions_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_properties_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_products_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_openidConnectProviders_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_loggers_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_identityProviders_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_groups_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_certificates_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_backends_childResource"
+                "$ref": "#/definitions/service_apis_childResource"
               },
               {
                 "$ref": "#/definitions/service_authorizationServers_childResource"
               },
               {
-                "$ref": "#/definitions/service_apis_childResource"
+                "$ref": "#/definitions/service_backends_childResource"
+              },
+              {
+                "$ref": "#/definitions/service_certificates_childResource"
+              },
+              {
+                "$ref": "#/definitions/service_groups_childResource"
+              },
+              {
+                "$ref": "#/definitions/service_identityProviders_childResource"
+              },
+              {
+                "$ref": "#/definitions/service_loggers_childResource"
+              },
+              {
+                "$ref": "#/definitions/service_openidConnectProviders_childResource"
+              },
+              {
+                "$ref": "#/definitions/service_products_childResource"
+              },
+              {
+                "$ref": "#/definitions/service_properties_childResource"
+              },
+              {
+                "$ref": "#/definitions/service_subscriptions_childResource"
+              },
+              {
+                "$ref": "#/definitions/service_users_childResource"
               }
             ]
           }
@@ -550,7 +551,8 @@
                 "items": {
                   "type": "string"
                 }
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -567,7 +569,8 @@
                 "items": {
                   "type": "string"
                 }
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -881,7 +884,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1053,10 +1057,10 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/service_products_groups_childResource"
+                "$ref": "#/definitions/service_products_apis_childResource"
               },
               {
-                "$ref": "#/definitions/service_products_apis_childResource"
+                "$ref": "#/definitions/service_products_groups_childResource"
               }
             ]
           }
@@ -1479,7 +1483,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1621,12 +1626,19 @@
       "type": "object",
       "properties": {
         "type": {
-          "type": "string",
-          "enum": [
-            "Proxy",
-            "Portal",
-            "Management",
-            "Scm"
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "Proxy",
+                "Portal",
+                "Management",
+                "Scm"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
           ],
           "description": "Hostname type."
         },
@@ -1905,16 +1917,6 @@
             }
           ],
           "description": "Describes on which protocols the operations in this API can be invoked."
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/service_apis_operations_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [
@@ -2245,7 +2247,8 @@
                 "items": {
                   "type": "string"
                 }
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2262,7 +2265,8 @@
                 "items": {
                   "type": "string"
                 }
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2409,16 +2413,6 @@
         "externalId": {
           "type": "string",
           "description": "Identifier of the external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory aad://<tenant>.onmicrosoft.com/groups/<group object id>; otherwise the value is null."
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/service_groups_users_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [
@@ -2566,7 +2560,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2765,19 +2760,6 @@
             }
           ],
           "description": "whether product is published or not. Published products are discoverable by users of developer portal. Non published products are visible only to administrators. Default state of Product is NotPublished."
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/service_products_groups_childResource"
-              },
-              {
-                "$ref": "#/definitions/service_products_apis_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [

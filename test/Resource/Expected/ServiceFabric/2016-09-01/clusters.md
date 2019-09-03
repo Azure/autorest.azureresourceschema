@@ -22,13 +22,13 @@ To create a Microsoft.ServiceFabric/clusters resource, add the following JSON to
     "upgradeMode": "string",
     "clientCertificateThumbprints": [
       {
-        "isAdmin": boolean,
+        "isAdmin": "boolean",
         "certificateThumbprint": "string"
       }
     ],
     "clientCertificateCommonNames": [
       {
-        "isAdmin": boolean,
+        "isAdmin": "boolean",
         "certificateCommonName": "string",
         "certificateIssuerThumbprint": "string"
       }
@@ -66,7 +66,7 @@ To create a Microsoft.ServiceFabric/clusters resource, add the following JSON to
           "startPort": "integer",
           "endPort": "integer"
         },
-        "isPrimary": boolean,
+        "isPrimary": "boolean",
         "vmInstanceCount": "integer",
         "reverseProxyEndpointPort": "integer"
       }
@@ -85,8 +85,8 @@ To create a Microsoft.ServiceFabric/clusters resource, add the following JSON to
       "tableEndpoint": "string"
     },
     "upgradeDescription": {
-      "overrideUserUpgradePolicy": boolean,
-      "forceRestart": boolean,
+      "overrideUserUpgradePolicy": "boolean",
+      "forceRestart": "boolean",
       "upgradeReplicaSetCheckTimeout": "string",
       "healthCheckWaitDuration": "string",
       "healthCheckStableDuration": "string",

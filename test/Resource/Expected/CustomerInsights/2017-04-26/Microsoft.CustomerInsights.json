@@ -32,7 +32,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -55,37 +56,37 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/hubs_predictions_childResource"
-              },
-              {
-                "$ref": "#/definitions/hubs_roleAssignments_childResource"
-              },
-              {
-                "$ref": "#/definitions/hubs_links_childResource"
-              },
-              {
-                "$ref": "#/definitions/hubs_views_childResource"
-              },
-              {
-                "$ref": "#/definitions/hubs_kpi_childResource"
-              },
-              {
-                "$ref": "#/definitions/hubs_connectors_childResource"
-              },
-              {
-                "$ref": "#/definitions/hubs_authorizationPolicies_childResource"
-              },
-              {
-                "$ref": "#/definitions/hubs_relationshipLinks_childResource"
-              },
-              {
-                "$ref": "#/definitions/hubs_relationships_childResource"
+                "$ref": "#/definitions/hubs_profiles_childResource"
               },
               {
                 "$ref": "#/definitions/hubs_interactions_childResource"
               },
               {
-                "$ref": "#/definitions/hubs_profiles_childResource"
+                "$ref": "#/definitions/hubs_relationships_childResource"
+              },
+              {
+                "$ref": "#/definitions/hubs_relationshipLinks_childResource"
+              },
+              {
+                "$ref": "#/definitions/hubs_authorizationPolicies_childResource"
+              },
+              {
+                "$ref": "#/definitions/hubs_connectors_childResource"
+              },
+              {
+                "$ref": "#/definitions/hubs_kpi_childResource"
+              },
+              {
+                "$ref": "#/definitions/hubs_views_childResource"
+              },
+              {
+                "$ref": "#/definitions/hubs_links_childResource"
+              },
+              {
+                "$ref": "#/definitions/hubs_roleAssignments_childResource"
+              },
+              {
+                "$ref": "#/definitions/hubs_predictions_childResource"
               }
             ]
           }
@@ -572,7 +573,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -661,7 +663,11 @@
           "oneOf": [
             {
               "type": "object",
-              "additionalProperties": {}
+              "additionalProperties": {
+                "type": "object",
+                "properties": {}
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1024,6 +1030,8 @@
       "description": "Connector mapping property structure."
     },
     "DataSource": {
+      "type": "object",
+      "properties": {},
       "description": "Data Source is a way for us to know the source of instances. A single type can have data coming in from multiple places. In activities we use this to determine precedence rules."
     },
     "HubBillingInfoFormat": {
@@ -1154,16 +1162,6 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ]
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/hubs_connectors_mappings_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [
@@ -1556,7 +1554,8 @@
                 "items": {
                   "type": "string"
                 }
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1570,7 +1569,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1584,7 +1584,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1600,8 +1601,10 @@
                 "type": "object",
                 "additionalProperties": {
                   "type": "string"
-                }
-              }
+                },
+                "properties": {}
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1784,7 +1787,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1798,7 +1802,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2037,7 +2042,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2051,7 +2057,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2154,7 +2161,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2168,7 +2176,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2233,7 +2242,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2247,7 +2257,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2444,7 +2455,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2467,7 +2479,8 @@
                 "items": {
                   "type": "string"
                 }
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2481,7 +2494,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2495,7 +2509,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2511,8 +2526,10 @@
                 "type": "object",
                 "additionalProperties": {
                   "type": "string"
-                }
-              }
+                },
+                "properties": {}
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2775,7 +2792,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2789,7 +2807,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2854,7 +2873,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2868,7 +2888,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -3052,7 +3073,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -3066,7 +3088,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -3284,7 +3307,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -3298,7 +3322,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -3359,7 +3384,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"

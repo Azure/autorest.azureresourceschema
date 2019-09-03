@@ -12,14 +12,14 @@ To create a Microsoft.ServiceBus/namespaces/topics resource, add the following J
   "properties": {
     "defaultMessageTimeToLive": "string",
     "maxSizeInMegabytes": "integer",
-    "requiresDuplicateDetection": boolean,
+    "requiresDuplicateDetection": "boolean",
     "duplicateDetectionHistoryTimeWindow": "string",
-    "enableBatchedOperations": boolean,
+    "enableBatchedOperations": "boolean",
     "status": "string",
-    "supportOrdering": boolean,
+    "supportOrdering": "boolean",
     "autoDeleteOnIdle": "string",
-    "enablePartitioning": boolean,
-    "enableExpress": boolean
+    "enablePartitioning": "boolean",
+    "enableExpress": "boolean"
   },
   "resources": []
 }

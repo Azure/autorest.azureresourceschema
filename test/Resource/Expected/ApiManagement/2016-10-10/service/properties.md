@@ -13,7 +13,7 @@ To create a Microsoft.ApiManagement/service/properties resource, add the followi
   "tags": [
     "string"
   ],
-  "secret": boolean
+  "secret": "boolean"
 }
 ```
 ## Property values

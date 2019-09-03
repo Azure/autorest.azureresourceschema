@@ -33,7 +33,7 @@ To create a Microsoft.Network/virtualNetworkGateways resource, add the following
     ],
     "gatewayType": "string",
     "vpnType": "string",
-    "enableBgp": boolean,
+    "enableBgp": "boolean",
     "gatewayDefaultSite": {
       "id": "string"
     },

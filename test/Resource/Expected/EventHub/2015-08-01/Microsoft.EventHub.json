@@ -45,7 +45,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -68,10 +69,10 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/namespaces_eventhubs_childResource"
+                "$ref": "#/definitions/namespaces_AuthorizationRules_childResource"
               },
               {
-                "$ref": "#/definitions/namespaces_AuthorizationRules_childResource"
+                "$ref": "#/definitions/namespaces_eventhubs_childResource"
               }
             ]
           }
@@ -170,10 +171,10 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/namespaces_eventhubs_consumergroups_childResource"
+                "$ref": "#/definitions/namespaces_eventhubs_authorizationRules_childResource"
               },
               {
-                "$ref": "#/definitions/namespaces_eventhubs_authorizationRules_childResource"
+                "$ref": "#/definitions/namespaces_eventhubs_consumergroups_childResource"
               }
             ]
           }
@@ -516,19 +517,6 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ]
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/namespaces_eventhubs_consumergroups_childResource"
-              },
-              {
-                "$ref": "#/definitions/namespaces_eventhubs_authorizationRules_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [

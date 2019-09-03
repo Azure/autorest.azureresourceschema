@@ -15,7 +15,7 @@ To create a Microsoft.ApiManagement/service/apis/operations resource, add the fo
       "description": "string",
       "type": "string",
       "defaultValue": "string",
-      "required": boolean,
+      "required": "boolean",
       "values": [
         "string"
       ]
@@ -30,7 +30,7 @@ To create a Microsoft.ApiManagement/service/apis/operations resource, add the fo
         "description": "string",
         "type": "string",
         "defaultValue": "string",
-        "required": boolean,
+        "required": "boolean",
         "values": [
           "string"
         ]
@@ -42,7 +42,7 @@ To create a Microsoft.ApiManagement/service/apis/operations resource, add the fo
         "description": "string",
         "type": "string",
         "defaultValue": "string",
-        "required": boolean,
+        "required": "boolean",
         "values": [
           "string"
         ]

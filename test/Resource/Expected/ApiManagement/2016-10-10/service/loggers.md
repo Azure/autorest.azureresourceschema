@@ -11,7 +11,7 @@ To create a Microsoft.ApiManagement/service/loggers resource, add the following 
   "apiVersion": "2016-10-10",
   "description": "string",
   "credentials": {},
-  "isBuffered": boolean
+  "isBuffered": "boolean"
 }
 ```
 ## Property values

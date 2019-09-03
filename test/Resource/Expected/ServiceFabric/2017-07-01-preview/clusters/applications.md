@@ -20,7 +20,7 @@ To create a Microsoft.ServiceFabric/clusters/applications resource, add the foll
     ],
     "upgradePolicy": {
       "upgradeReplicaSetCheckTimeout": "integer",
-      "forceRestart": boolean,
+      "forceRestart": "boolean",
       "rollingUpgradeMonitoringPolicy": {
         "healthCheckWaitDuration": "string",
         "healthCheckStableDuration": "string",
@@ -29,7 +29,7 @@ To create a Microsoft.ServiceFabric/clusters/applications resource, add the foll
         "upgradeDomainTimeout": "string"
       },
       "applicationHealthPolicy": {
-        "ConsiderWarningAsError": boolean,
+        "ConsiderWarningAsError": "boolean",
         "MaxPercentUnhealthyDeployedApplications": "integer",
         "DefaultServiceTypeHealthPolicy": {
           "MaxPercentUnhealthyPartitionsPerService": "integer",
@@ -50,7 +50,7 @@ To create a Microsoft.ServiceFabric/clusters/applications resource, add the foll
     },
     "minimumNodes": "integer",
     "maximumNodes": "integer",
-    "removeApplicationCapacity": boolean,
+    "removeApplicationCapacity": "boolean",
     "metrics": [
       {
         "Name": "string",

@@ -183,10 +183,10 @@ To create a Microsoft.Network/virtualNetworks resource, add the following JSON t
       {
         "id": "string",
         "properties": {
-          "allowVirtualNetworkAccess": boolean,
-          "allowForwardedTraffic": boolean,
-          "allowGatewayTransit": boolean,
-          "useRemoteGateways": boolean,
+          "allowVirtualNetworkAccess": "boolean",
+          "allowForwardedTraffic": "boolean",
+          "allowGatewayTransit": "boolean",
+          "useRemoteGateways": "boolean",
           "remoteVirtualNetwork": {
             "id": "string"
           },
@@ -204,8 +204,8 @@ To create a Microsoft.Network/virtualNetworks resource, add the following JSON t
     ],
     "resourceGuid": "string",
     "provisioningState": "string",
-    "enableDdosProtection": boolean,
-    "enableVmProtection": boolean
+    "enableDdosProtection": "boolean",
+    "enableVmProtection": "boolean"
   },
   "etag": "string",
   "resources": []

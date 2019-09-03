@@ -52,11 +52,12 @@ task 'regenerate', '', (done) ->
       'DevTestLabs': { folder: 'devtestlabs', tags: [ 'package-2016-05', 'package-2015-05-preview' ] },
       # 'DNS': { folder: 'dns', tags: [ 'package-2017-09', 'package-2016-04', 'package-2015-05-preview' ] },
       # 'DomainServices': { folder: 'domainservices', tags: [ 'package-2017-06', 'package-2017-01' ] },
+      'EventGrid': { folder: 'eventgrid', tags: [ 'package-2018-01', 'package-2017-09-preview', 'package-2017-06-preview' ] },
       'EventHub': { folder: 'eventhub', tags: [ 'package-2017-04', 'package-2015-08' ] },
       # 'IotHub': { folder: 'iothub', tags: [ 'package-2017-07', 'package-2017-01', 'package-2016-02' ] },
       # 'KeyVault': { folder: 'keyvault', tags: [ 'package-2016-10', 'package-2015-06' ] },
       'Logic': { folder: 'logic', tags: [ 'package-2016-06', 'package-2015-08-preview', 'package-2015-02-preview' ] }, # missing 'type: object'
-      # 'Monitor': { folder: 'monitor', tags: [ 'package-2017-09' ] },
+      'Monitor': { folder: 'monitor', tags: [ 'package-2017-08', 'package-2017-09' ] }
       'Network': { folder: 'network', tags: [ 'package-2017-10', 'package-2017-09', 'package-2017-08', 'package-2017-06', 'package-2017-03', 'package-2016-12', 'package-2016-09', 'package-2016-06', 'package-2016-03' ] },
       # 'NotificationHubs': { folder: 'notificationhubs', tags: [ 'package-2017-04', 'package-2016-03', 'package-2014-09' ] },
       # 'PowerBIEmbedded': { folder: 'powerbiembedded', tags: [ 'package-2016-01' ] },
@@ -72,6 +73,7 @@ task 'regenerate', '', (done) ->
       'ServiceFabric': { folder: 'servicefabric', tags: [ 'package-2017-07', 'package-2016-09' ] }, # missing 'type: object'
       'Storage': { folder: 'storage', tags: [ 'package-2017-10', 'package-2017-06', 'package-2016-12', 'package-2016-05', 'package-2016-01', 'package-2015-06', 'package-2015-05-preview' ] },
       # 'TrafficManager': { folder: 'trafficmanager', tags: [ 'package-2017-09-preview', 'package-2017-05', 'package-2017-03', 'package-2015-11' ] },
+      'TimeSeriesInsights': { folder: 'timeseriesinsights', tags: [ 'package-2017-11-15' ] },
       'Web': { folder: 'web', tags: [ 'package-2016-09' ] }, # missing 'type: object'
       # 'poly': { file: __dirname + "/../test/Resource/poly-service.json", tags: [ '' ] }
     },

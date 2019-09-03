@@ -32,7 +32,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -56,13 +57,13 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/batchAccounts_pools_childResource"
+                "$ref": "#/definitions/batchAccounts_applications_childResource"
               },
               {
                 "$ref": "#/definitions/batchAccounts_certificates_childResource"
               },
               {
-                "$ref": "#/definitions/batchAccounts_applications_childResource"
+                "$ref": "#/definitions/batchAccounts_pools_childResource"
               }
             ]
           }

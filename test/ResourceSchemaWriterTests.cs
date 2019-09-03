@@ -3,6 +3,7 @@
 
 using System;
 using System.IO;
+using AutoRest.AzureResourceSchema.Models;
 using Newtonsoft.Json;
 using Xunit;
 
@@ -105,7 +106,7 @@ namespace AutoRest.AzureResourceSchema.Tests
 
             ResourceSchema resourceSchema = new ResourceSchema();
             resourceSchema.Description = "MockDescription";
-            resourceSchema.AddResourceDefinition("mockResource", new JsonSchema());
+            resourceSchema.AddResourceDefinition("mockResource", new ResourceDefinition { Schema = new JsonSchema() });
 
             ResourceSchemaWriter.Write(writer, resourceSchema);
             Assert.Equal("{'description':'MockDescription','resourceDefinitions':{'mockResource':{}}}", stringWriter.ToString());
@@ -119,7 +120,7 @@ namespace AutoRest.AzureResourceSchema.Tests
             writer.QuoteChar = '\'';
 
             ResourceSchema resourceSchema = new ResourceSchema();
-            resourceSchema.AddResourceDefinition("mockResource", new JsonSchema());
+            resourceSchema.AddResourceDefinition("mockResource", new ResourceDefinition { Schema = new JsonSchema() });
             resourceSchema.AddDefinition("mockDefinition", new JsonSchema());
 
             ResourceSchemaWriter.Write(writer, resourceSchema);
@@ -166,10 +167,10 @@ namespace AutoRest.AzureResourceSchema.Tests
             writer.QuoteChar = '\'';
 
             const string definitionName = "mockDefinition";
-            JsonSchema definition = JsonSchema.CreateStringEnum("MockEnum1", "MockEnum2");
+            JsonSchema definition = JsonSchema.CreateSingleValuedEnum("MockEnum1");
 
             ResourceSchemaWriter.WriteDefinition(writer, definitionName, definition);
-            Assert.Equal("'mockDefinition':{'type':'string','enum':['MockEnum1','MockEnum2']}", stringWriter.ToString());
+            Assert.Equal("'mockDefinition':{'type':'string','enum':['MockEnum1']}", stringWriter.ToString());
         }
 
         [Fact]

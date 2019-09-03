@@ -32,7 +32,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -67,16 +68,16 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/namespaces_topics_childResource"
-              },
-              {
-                "$ref": "#/definitions/namespaces_queues_childResource"
+                "$ref": "#/definitions/namespaces_AuthorizationRules_childResource"
               },
               {
                 "$ref": "#/definitions/namespaces_disasterRecoveryConfigs_childResource"
               },
               {
-                "$ref": "#/definitions/namespaces_AuthorizationRules_childResource"
+                "$ref": "#/definitions/namespaces_queues_childResource"
+              },
+              {
+                "$ref": "#/definitions/namespaces_topics_childResource"
               }
             ]
           }
@@ -300,10 +301,10 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/namespaces_topics_subscriptions_childResource"
+                "$ref": "#/definitions/namespaces_topics_authorizationRules_childResource"
               },
               {
-                "$ref": "#/definitions/namespaces_topics_authorizationRules_childResource"
+                "$ref": "#/definitions/namespaces_topics_subscriptions_childResource"
               }
             ]
           }
@@ -695,16 +696,6 @@
             }
           ],
           "description": "Queue Properties"
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/namespaces_queues_authorizationRules_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [
@@ -783,19 +774,6 @@
             }
           ],
           "description": "Properties of topic resource."
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/namespaces_topics_subscriptions_childResource"
-              },
-              {
-                "$ref": "#/definitions/namespaces_topics_authorizationRules_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [
@@ -835,16 +813,6 @@
             }
           ],
           "description": "Properties of subscriptions resource."
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/namespaces_topics_subscriptions_rules_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [
@@ -977,6 +945,8 @@
       "description": "AuthorizationRule properties."
     },
     "SBNamespaceProperties": {
+      "type": "object",
+      "properties": {},
       "description": "Properties of the namespace."
     },
     "SBQueueProperties": {

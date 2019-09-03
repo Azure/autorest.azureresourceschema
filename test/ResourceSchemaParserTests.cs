@@ -39,7 +39,7 @@ namespace AutoRest.AzureResourceSchema.Tests
 
             codeModel.Add(method);
 
-            IDictionary<string, ResourceSchema> schemas = ResourceSchemaParser.Parse(codeModel,codeModel.ApiVersion,false);
+            var schemas = ResourceSchemaParser.Parse(codeModel, codeModel.ApiVersion, false);
             Assert.NotNull(schemas);
             Assert.Equal(1, schemas.Count);
 
@@ -56,9 +56,9 @@ namespace AutoRest.AzureResourceSchema.Tests
                     JsonType = "object",
                     Description = "Mock.Provider/mockResourceNames"
                 }
-                .AddProperty("type", JsonSchema.CreateStringEnum("Mock.Provider/mockResourceNames"), true)
-                .AddProperty("apiVersion", JsonSchema.CreateStringEnum("2016-01-01"), true),
-                schema.ResourceDefinitions["mockResourceNames"]);
+                .AddProperty("type", JsonSchema.CreateSingleValuedEnum("Mock.Provider/mockResourceNames"), true)
+                .AddProperty("apiVersion", JsonSchema.CreateSingleValuedEnum("2016-01-01"), true),
+                schema.ResourceDefinitions["mockResourceNames"].Schema);
             Assert.NotNull(schema.Definitions);
             Assert.Equal(0, schema.Definitions.Count);
         }

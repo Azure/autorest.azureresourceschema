@@ -238,8 +238,8 @@ To create a Microsoft.Network/loadBalancers resource, add the following JSON to 
           "frontendPort": "integer",
           "backendPort": "integer",
           "idleTimeoutInMinutes": "integer",
-          "enableFloatingIP": boolean,
-          "disableOutboundSnat": boolean,
+          "enableFloatingIP": "boolean",
+          "disableOutboundSnat": "boolean",
           "provisioningState": "string"
         },
         "name": "string",
@@ -272,7 +272,7 @@ To create a Microsoft.Network/loadBalancers resource, add the following JSON to 
           "frontendPort": "integer",
           "backendPort": "integer",
           "idleTimeoutInMinutes": "integer",
-          "enableFloatingIP": boolean,
+          "enableFloatingIP": "boolean",
           "provisioningState": "string"
         },
         "name": "string",

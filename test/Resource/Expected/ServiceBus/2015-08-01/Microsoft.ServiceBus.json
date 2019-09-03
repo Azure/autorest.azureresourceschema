@@ -42,7 +42,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -65,13 +66,13 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/namespaces_topics_childResource"
+                "$ref": "#/definitions/namespaces_AuthorizationRules_childResource"
               },
               {
                 "$ref": "#/definitions/namespaces_queues_childResource"
               },
               {
-                "$ref": "#/definitions/namespaces_AuthorizationRules_childResource"
+                "$ref": "#/definitions/namespaces_topics_childResource"
               }
             ]
           }
@@ -269,10 +270,10 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/namespaces_topics_subscriptions_childResource"
+                "$ref": "#/definitions/namespaces_topics_authorizationRules_childResource"
               },
               {
-                "$ref": "#/definitions/namespaces_topics_authorizationRules_childResource"
+                "$ref": "#/definitions/namespaces_topics_subscriptions_childResource"
               }
             ]
           }
@@ -548,16 +549,6 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ]
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/namespaces_queues_authorizationRules_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [
@@ -643,19 +634,6 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ]
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/namespaces_topics_subscriptions_childResource"
-              },
-              {
-                "$ref": "#/definitions/namespaces_topics_authorizationRules_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [

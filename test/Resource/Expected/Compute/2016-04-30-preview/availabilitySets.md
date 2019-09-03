@@ -19,7 +19,7 @@ To create a Microsoft.Compute/availabilitySets resource, add the following JSON 
         "id": "string"
       }
     ],
-    "managed": boolean
+    "managed": "boolean"
   },
   "sku": {
     "name": "string",

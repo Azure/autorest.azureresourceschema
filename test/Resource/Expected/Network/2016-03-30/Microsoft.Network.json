@@ -36,7 +36,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -99,7 +100,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -162,7 +164,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -200,10 +203,10 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/expressRouteCircuits_peerings_childResource"
+                "$ref": "#/definitions/expressRouteCircuits_authorizations_childResource"
               },
               {
-                "$ref": "#/definitions/expressRouteCircuits_authorizations_childResource"
+                "$ref": "#/definitions/expressRouteCircuits_peerings_childResource"
               }
             ]
           }
@@ -339,7 +342,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -402,7 +406,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -465,7 +470,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -528,7 +534,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -646,7 +653,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -709,7 +717,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -827,7 +836,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -890,7 +900,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2526,96 +2537,6 @@
       },
       "description": "Properties of ExpressRouteCircuit"
     },
-    "expressRouteCircuits_authorizations_childResource": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "type": {
-          "type": "string",
-          "enum": [
-            "authorizations"
-          ]
-        },
-        "apiVersion": {
-          "type": "string",
-          "enum": [
-            "2016-03-30"
-          ]
-        },
-        "id": {
-          "type": "string",
-          "description": "Resource Id"
-        },
-        "properties": {
-          "oneOf": [
-            {
-              "$ref": "#/definitions/AuthorizationPropertiesFormat"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ]
-        },
-        "etag": {
-          "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
-        }
-      },
-      "required": [
-        "name",
-        "type",
-        "apiVersion",
-        "properties"
-      ],
-      "description": "Microsoft.Network/expressRouteCircuits/authorizations"
-    },
-    "expressRouteCircuits_peerings_childResource": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "type": {
-          "type": "string",
-          "enum": [
-            "peerings"
-          ]
-        },
-        "apiVersion": {
-          "type": "string",
-          "enum": [
-            "2016-03-30"
-          ]
-        },
-        "id": {
-          "type": "string",
-          "description": "Resource Id"
-        },
-        "properties": {
-          "oneOf": [
-            {
-              "$ref": "#/definitions/ExpressRouteCircuitPeeringPropertiesFormat"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
-            }
-          ]
-        },
-        "etag": {
-          "type": "string",
-          "description": "A unique read-only string that changes whenever the resource is updated"
-        }
-      },
-      "required": [
-        "name",
-        "type",
-        "apiVersion",
-        "properties"
-      ],
-      "description": "Microsoft.Network/expressRouteCircuits/peerings"
-    },
     "ExpressRouteCircuitServiceProviderProperties": {
       "type": "object",
       "properties": {
@@ -2730,6 +2651,96 @@
         }
       },
       "description": "Contains Stats associated with the peering"
+    },
+    "expressRouteCircuits_authorizations_childResource": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "authorizations"
+          ]
+        },
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2016-03-30"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "description": "Resource Id"
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/AuthorizationPropertiesFormat"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ]
+        },
+        "etag": {
+          "type": "string",
+          "description": "A unique read-only string that changes whenever the resource is updated"
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "apiVersion",
+        "properties"
+      ],
+      "description": "Microsoft.Network/expressRouteCircuits/authorizations"
+    },
+    "expressRouteCircuits_peerings_childResource": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "peerings"
+          ]
+        },
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2016-03-30"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "description": "Resource Id"
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ExpressRouteCircuitPeeringPropertiesFormat"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
+          ]
+        },
+        "etag": {
+          "type": "string",
+          "description": "A unique read-only string that changes whenever the resource is updated"
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "apiVersion",
+        "properties"
+      ],
+      "description": "Microsoft.Network/expressRouteCircuits/peerings"
     },
     "FrontendIPConfiguration": {
       "type": "object",
@@ -3446,7 +3457,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -3528,7 +3540,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -3846,7 +3859,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -4187,7 +4201,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -4393,7 +4408,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -4725,7 +4741,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"

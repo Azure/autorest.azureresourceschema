@@ -28,7 +28,7 @@ To create a Microsoft.Compute/snapshots resource, add the following JSON to the 
     },
     "diskSizeGB": "integer",
     "encryptionSettings": {
-      "enabled": boolean,
+      "enabled": "boolean",
       "diskEncryptionKey": {
         "sourceVault": {
           "id": "string"

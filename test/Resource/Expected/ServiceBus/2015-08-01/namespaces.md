@@ -18,8 +18,8 @@ To create a Microsoft.ServiceBus/namespaces resource, add the following JSON to 
   "tags": {},
   "properties": {
     "status": "string",
-    "createACSNamespace": boolean,
-    "enabled": boolean
+    "createACSNamespace": "boolean",
+    "enabled": "boolean"
   },
   "resources": []
 }

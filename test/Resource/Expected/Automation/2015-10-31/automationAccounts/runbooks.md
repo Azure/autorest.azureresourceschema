@@ -10,11 +10,11 @@ To create a Microsoft.Automation/automationAccounts/runbooks resource, add the f
   "type": "Microsoft.Automation/automationAccounts/runbooks",
   "apiVersion": "2015-10-31",
   "properties": {
-    "logVerbose": boolean,
-    "logProgress": boolean,
+    "logVerbose": "boolean",
+    "logProgress": "boolean",
     "runbookType": "string",
     "draft": {
-      "inEdit": boolean,
+      "inEdit": "boolean",
       "draftContentLink": {
         "uri": "string",
         "contentHash": {

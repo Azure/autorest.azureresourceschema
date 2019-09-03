@@ -31,7 +31,7 @@ To create a Microsoft.Compute/disks resource, add the following JSON to the reso
     },
     "diskSizeGB": "integer",
     "encryptionSettings": {
-      "enabled": boolean,
+      "enabled": "boolean",
       "diskEncryptionKey": {
         "sourceVault": {
           "id": "string"

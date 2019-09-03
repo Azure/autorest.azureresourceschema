@@ -19,7 +19,7 @@ To create a Microsoft.Web/sites/slots/deployments resource, add the following JS
     "authorEmail": "string",
     "startTime": "string",
     "endTime": "string",
-    "active": boolean,
+    "active": "boolean",
     "details": "string"
   }
 }

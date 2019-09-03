@@ -36,7 +36,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -70,34 +71,34 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/sites_virtualNetworkConnections_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_siteextensions_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_publicCertificates_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_premieraddons_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_hybridconnection_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_hostNameBindings_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_functions_childResource"
+                "$ref": "#/definitions/sites_deployments_childResource"
               },
               {
                 "$ref": "#/definitions/sites_domainOwnershipIdentifiers_childResource"
               },
               {
-                "$ref": "#/definitions/sites_deployments_childResource"
+                "$ref": "#/definitions/sites_functions_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_hostNameBindings_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_hybridconnection_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_premieraddons_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_publicCertificates_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_siteextensions_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_slots_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_virtualNetworkConnections_childResource"
               }
             ]
           }
@@ -396,7 +397,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -525,7 +527,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -559,31 +562,31 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/sites_slots_virtualNetworkConnections_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_siteextensions_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_publicCertificates_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_premieraddons_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_hybridconnection_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_hostNameBindings_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_functions_childResource"
+                "$ref": "#/definitions/sites_slots_deployments_childResource"
               },
               {
                 "$ref": "#/definitions/sites_slots_domainOwnershipIdentifiers_childResource"
               },
               {
-                "$ref": "#/definitions/sites_slots_deployments_childResource"
+                "$ref": "#/definitions/sites_slots_functions_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_slots_hostNameBindings_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_slots_hybridconnection_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_slots_premieraddons_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_slots_publicCertificates_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_slots_siteextensions_childResource"
+              },
+              {
+                "$ref": "#/definitions/sites_slots_virtualNetworkConnections_childResource"
               }
             ]
           }
@@ -882,7 +885,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1373,7 +1377,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1429,19 +1434,26 @@
           "description": "Connection string value."
         },
         "type": {
-          "type": "string",
-          "enum": [
-            "MySql",
-            "SQLServer",
-            "SQLAzure",
-            "Custom",
-            "NotificationHub",
-            "ServiceBus",
-            "EventHub",
-            "ApiHub",
-            "DocDb",
-            "RedisCache",
-            "PostgreSQL"
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "MySql",
+                "SQLServer",
+                "SQLAzure",
+                "Custom",
+                "NotificationHub",
+                "ServiceBus",
+                "EventHub",
+                "ApiHub",
+                "DocDb",
+                "RedisCache",
+                "PostgreSQL"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+            }
           ],
           "description": "Type of database."
         }
@@ -1574,6 +1586,8 @@
           "description": "Function URI."
         },
         "config": {
+          "type": "object",
+          "properties": {},
           "description": "Config information."
         },
         "files": {
@@ -1582,7 +1596,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -1844,6 +1859,8 @@
       "type": "object",
       "properties": {
         "type": {
+          "type": "object",
+          "properties": {},
           "description": "Type of managed service identity."
         }
       },
@@ -1892,7 +1909,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -2981,7 +2999,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -3110,7 +3129,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -3138,40 +3158,6 @@
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
             }
           ]
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/sites_slots_virtualNetworkConnections_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_siteextensions_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_publicCertificates_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_premieraddons_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_hybridconnection_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_hostNameBindings_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_functions_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_domainOwnershipIdentifiers_childResource"
-              },
-              {
-                "$ref": "#/definitions/sites_slots_deployments_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [
@@ -3425,7 +3411,8 @@
               "type": "object",
               "additionalProperties": {
                 "type": "string"
-              }
+              },
+              "properties": {}
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
@@ -3554,16 +3541,6 @@
             }
           ],
           "description": "VnetInfo resource specific properties"
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/sites_slots_virtualNetworkConnections_gateways_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [
@@ -3648,16 +3625,6 @@
             }
           ],
           "description": "VnetInfo resource specific properties"
-        },
-        "resources": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/sites_virtualNetworkConnections_gateways_childResource"
-              }
-            ]
-          }
         }
       },
       "required": [
