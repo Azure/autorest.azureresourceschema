@@ -1,5 +1,5 @@
 {
-  "name": "@microsoft.azure/autorest.azureresourceschema",
+  "name": "@autorest/azureresourceschema",
   "version": "3.0.0",
   "description": "The Azure Resource Schema extension for classic generators in AutoRest.",
   "scripts": {

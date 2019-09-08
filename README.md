@@ -23,10 +23,11 @@ This project uses a git submodule for dependent code. When cloning this reposito
 
 ``` yaml
 load-priority: 1000
-enable-multi-api: true
+pipeline-model: v3
+```
 
-azureresourceschema:
-  title: none
+``` yaml
+title: none
 
 pipeline:
   azureresourceschema/imodeler2:
