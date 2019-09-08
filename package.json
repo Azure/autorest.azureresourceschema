@@ -1,6 +1,6 @@
 {
-  "name": "@microsoft.azure/autorest.azureresourceschema",
-  "version": "2.0.0",
+  "name": "@autorest/azureresourceschema",
+  "version": "3.0.0",
   "description": "The Azure Resource Schema extension for classic generators in AutoRest.",
   "scripts": {
     "autorest": "autorest",
@@ -31,7 +31,6 @@
   },
   "homepage": "https://github.com/Azure/autorest.azureresourceschema/blob/master/README.md",
   "devDependencies": {
-    "@microsoft.azure/autorest.modeler": "2.3.45",
     "autorest": "^2.0.4203",
     "coffee-script": "^1.11.1",
     "dotnet-sdk-2.0.0": "^1.4.4",

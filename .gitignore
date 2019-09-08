@@ -296,3 +296,7 @@ package/
 *.tgz
 src/obj/
 *.log
+
+out/
+schemas/
+tmp/

@@ -8,6 +8,7 @@ using AutoRest.Core.Model;
 using AutoRest.Core.Parsing;
 using AutoRest.Core.Utilities;
 using Microsoft.Perks.JsonRPC;
+#pragma   warning disable  CS1998
 
 using IAnyPlugin = AutoRest.Core.Extensibility.IPlugin<AutoRest.Core.Extensibility.IGeneratorSettings, AutoRest.Core.IModelSerializer<AutoRest.Core.Model.CodeModel>, AutoRest.Core.ITransformer<AutoRest.Core.Model.CodeModel>, AutoRest.Core.CodeGenerator, AutoRest.Core.CodeNamer, AutoRest.Core.Model.CodeModel>;
 
@@ -31,8 +32,15 @@ namespace AutoRest.AzureResourceSchema
         {
             if(args != null && args.Length > 0 && args[0] == "--server") {
                 var connection = new Connection(Console.OpenStandardOutput(), Console.OpenStandardInput());
-                connection.Dispatch<IEnumerable<string>>("GetPluginNames", async () => new []{ "azureresourceschema" });
-                connection.Dispatch<string, string, bool>("Process", (plugin, sessionId) => new Program(connection, plugin, sessionId).Process());
+                connection.Dispatch<IEnumerable<string>>("GetPluginNames", async () => new []{ "azureresourceschema", "imodeler2" });
+                
+                connection.Dispatch<string, string, bool>("Process", (plugin, sessionId) => {
+                    if( plugin == "imodeler2") {
+                        return  new  AutoRest.Modeler.ModelerPlugin(connection, plugin, sessionId).Process();
+                    } 
+                    return new Program(connection, plugin, sessionId).Process();
+                });
+                 
                 connection.DispatchNotification("Shutdown", connection.Stop);
 
                 // wait for something to do.

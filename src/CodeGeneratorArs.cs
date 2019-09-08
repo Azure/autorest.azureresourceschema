@@ -41,7 +41,7 @@ namespace AutoRest.AzureResourceSchema
                     var stringWriter = new StringWriter();
                     ResourceSchemaWriter.Write(stringWriter, resourceSchemas[resourceProvider]);
                     await Write(stringWriter.ToString(), Path.Combine(version, resourceProvider + ".json"), true);
-
+/*
                     var md = ResourceMarkdownGenerator.Generate(resourceSchemas[resourceProvider]);
 
                     foreach (var m in md)
@@ -52,6 +52,7 @@ namespace AutoRest.AzureResourceSchema
                         // place nested topics in subdirectories
                         await Write(content, Path.Combine(version, m.Type.Replace('_', Path.DirectorySeparatorChar) + ".md"), false);
                     }
+*/                    
                 }
             }
         }

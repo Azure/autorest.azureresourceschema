@@ -22,16 +22,20 @@ This project uses a git submodule for dependent code. When cloning this reposito
 # AutoRest extension configuration
 
 ``` yaml
-use-extension:
-  "@microsoft.azure/autorest.modeler": "2.3.45" # keep in sync with package.json's dev dependency in order to have meaningful tests
+load-priority: 1000
+pipeline-model: v3
+```
+
+``` yaml
+title: none
 
 pipeline:
-  azureresourceschema/imodeler1:
-    input: openapi-document/identity
+  azureresourceschema/imodeler2:
+    input: openapi-document/multi-api/identity
     output-artifact: code-model-v1
     scope: azureresourceschema
   azureresourceschema/commonmarker:
-    input: imodeler1
+    input: imodeler2
     output-artifact: code-model-v1
   azureresourceschema/cm/transform:
     input: commonmarker
@@ -55,6 +59,21 @@ scope-azureresourceschema/emitter:
   input-artifact: source-file-azureresourceschema
   output-uri-expr: $key
 
+scope-transform-string:
+  is-object: false
+
 output-artifact:
 - source-file-azureresourceschema
+
+scope-cm/emitter:
+  input-artifact: code-model-v1
+  is-object: true
+  output-uri-expr: |
+    "code-model-v1"
+
+scope-cm-yaml/emitter:
+  input-artifact: code-model-v1-yaml
+  is-object: true
+  output-uri-expr: |
+    "code-model-v1-yaml"
 ```

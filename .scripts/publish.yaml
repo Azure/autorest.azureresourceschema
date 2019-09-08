@@ -1,0 +1,34 @@
+trigger:
+- master 
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install
+    
+    # get patch version 
+    PATCH=`git rev-list --parents HEAD --count --full-history`
+    
+    # update package.json patch#
+    sed -E 's/(.version.:.*?\")(.*\..*\.)[[:digit:]]*(.*)/\1\2'$PATCH'\3/g' -i package.json
+
+    # get rid of .gitignore (makes yarn sad)
+    rm -f .gitignore
+
+    # pack using yarn
+    node_modules/.bin/yarn pack 
+
+    # publish the packages (tag as latest by default)
+    echo "//registry.npmjs.org/:_authToken=$(azure-sdk-npm-token)" > ./.npmrc 
+    for file in *.tgz 
+    do
+     node_modules/.bin/yarn publish $file --tag latest --access public 
+    done
+
