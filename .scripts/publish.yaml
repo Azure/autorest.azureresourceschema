@@ -29,6 +29,6 @@ steps:
     echo "//registry.npmjs.org/:_authToken=$(azure-sdk-npm-token)" > ./.npmrc 
     for file in *.tgz 
     do
-     node_modules/.bin/yarn pack publish $file --tag preview --access public 
+     node_modules/.bin/yarn publish $file --tag preview --access public 
     done
 
