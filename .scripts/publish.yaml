@@ -25,10 +25,10 @@ steps:
     # pack using yarn
     node_modules/.bin/yarn pack 
 
-    # publish the packages (tag as preview by default)
+    # publish the packages (tag as latest by default)
     echo "//registry.npmjs.org/:_authToken=$(azure-sdk-npm-token)" > ./.npmrc 
     for file in *.tgz 
     do
-     node_modules/.bin/yarn publish $file --tag preview --access public 
+     node_modules/.bin/yarn publish $file --tag latest --access public 
     done
 
