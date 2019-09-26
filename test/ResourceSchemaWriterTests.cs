@@ -186,7 +186,7 @@ namespace AutoRest.AzureResourceSchema.Tests
                 .AddProperty("mockPropertyName", new JsonSchema());
 
             ResourceSchemaWriter.WriteDefinition(writer, definitionName, definition);
-            Assert.Equal("'mockDefinition':{'enum':['MockEnum1','MockEnum2'],'properties':{'mockPropertyName':{'oneOf':[{},{'$ref':'https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression'}]}}}", stringWriter.ToString());
+            Assert.Equal("'mockDefinition':{'enum':['MockEnum1','MockEnum2'],'properties':{'mockPropertyName':{'oneOf':[{},{'$ref':'https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression'}]}}}", stringWriter.ToString());
         }
 
         [Fact]
@@ -202,7 +202,7 @@ namespace AutoRest.AzureResourceSchema.Tests
                 .AddProperty("mockPropertyName", new JsonSchema(), true);
 
             ResourceSchemaWriter.WriteDefinition(writer, definitionName, definition);
-            Assert.Equal("'mockDefinition':{'enum':['MockEnum1','MockEnum2'],'properties':{'mockPropertyName':{'oneOf':[{},{'$ref':'https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression'}]}},'required':['mockPropertyName']}", stringWriter.ToString());
+            Assert.Equal("'mockDefinition':{'enum':['MockEnum1','MockEnum2'],'properties':{'mockPropertyName':{'oneOf':[{},{'$ref':'https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression'}]}},'required':['mockPropertyName']}", stringWriter.ToString());
         }
 
         [Fact]
@@ -218,7 +218,7 @@ namespace AutoRest.AzureResourceSchema.Tests
             definition.Description = "MockDescription";
 
             ResourceSchemaWriter.WriteDefinition(writer, definitionName, definition);
-            Assert.Equal("'mockDefinition':{'properties':{'mockPropertyName':{'oneOf':[{},{'$ref':'https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression'}]}},'required':['mockPropertyName'],'description':'MockDescription'}", stringWriter.ToString());
+            Assert.Equal("'mockDefinition':{'properties':{'mockPropertyName':{'oneOf':[{},{'$ref':'https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression'}]}},'required':['mockPropertyName'],'description':'MockDescription'}", stringWriter.ToString());
         }
 
         [Fact]
