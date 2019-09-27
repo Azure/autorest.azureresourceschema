@@ -154,7 +154,7 @@ namespace AutoRest.AzureResourceSchema
 
                     WriteDefinition(writer, new JsonSchema()
                     {
-                        Ref = "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#/definitions/expression"
+                        Ref = "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
                     });
 
                     writer.WriteEndArray();
