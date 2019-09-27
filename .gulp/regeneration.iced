@@ -12,18 +12,17 @@ regenExpected = (opts,done) ->
     key = kkey.trim();
 
     args = [
-      "--#{opts.language}.output-folder=#{__dirname}/../#{opts.outputDir}/#{key}",
-      "--title=title"
+      "--#{opts.language}.multi-scope=true",
+      "--output-folder=#{__dirname}/../#{opts.outputDir}/#{key}",
+      "--tag=all-api-versions",
+      "--title=none"
     ]
 
-    if value.file
-      args.push("--input-file=#{value.file}")
-    else
-      args.push("#{opts.inputBaseDir}/#{value.folder}/resource-manager/readme.md")
+    args.push("#{opts.inputBaseDir}/#{value.basePath}/readme.md")
 
-    for tag in value.tags
+    for apiVersion in value.apiVersions
       args2 = args.slice()
-      args2.push("--tag=#{tag}")
+      args2.push("--api-version=#{apiVersion}")
       autorest args2,() =>
         instances--
         return done() if instances is 0 
@@ -31,51 +30,27 @@ regenExpected = (opts,done) ->
 task 'regenerate', '', (done) ->
   regenExpected {
     'outputDir': 'test/Resource/Expected',
-    'inputBaseDir': 'https://github.com/Azure/azure-rest-api-specs/blob/ee4507de8c2ba506fb8a7a9decff67691ed4d336/specification',
+    'inputBaseDir': 'https://github.com/Azure/azure-rest-api-specs/blob/f1fdf4a5adfb067c78e4625e293ad4bbc97789c7/specification',
     'mappings': {
-      # 'Advisor': { folder: 'advisor', tags: [ 'package-2017-04', 'package-2017-03', 'package-2016-07-preview' ] },
-      'AnalysisServices': { folder: 'analysisservices', tags: [ 'package-2017-08-beta', 'package-2017-07', 'package-2016-05' ] },
-      'ApiManagement': { folder: 'apimanagement', tags: [ 'package-2017-03', 'package-2016-10' ] },
-      # 'ApplicationInsights': { folder: 'applicationinsights', tags: [ 'package-2015-05' ] },
-      # 'Authorization': { folder: 'authorization', tags: [ 'package-2015-07', 'package-2017-10-01-preview' ] },
-      'Automation': { folder: 'automation', tags: [ 'package-2015-10', 'package-2017-05-preview' ] },
-      'Batch': { folder: 'batch', tags: [ 'package-2017-09', 'package-2017-05', 'package-2017-01', 'package-2015-12' ] },
-      # 'CDN': { folder: 'cdn', tags: [ 'package-2017-04', 'package-2016-10', 'package-2016-04', 'package-2015-06' ] },
-      # 'CognitiveServices': { folder: 'cognitiveservices', tags: [ 'package-2017-04', 'package-2016-02-preview' ] },
-      'Compute': { folder: 'compute', tags: [ 'package-compute-only-2017-12', 'package-skus-2017-09', 'package-2017-03', 'package-2016-04-preview', 'package-2016-03', 'package-2015-06-preview' ] },
-      # 'Consumption': { folder: 'consumption', tags: [ 'package-2017-11', 'package-2017-04-preview', 'package-2017-12-preview' ] },
-      'ContainerRegistry': { folder: 'containerregistry', tags: [ 'package-2017-10', 'package-2017-06-preview', 'package-2017-03', 'package-2016-06-preview' ] },
-      # 'ContainerService': { folder: 'containerservices', tags: [ 'package-2017-09', 'package-2017-08', 'package-2017-07' ] },
-      'CustomerInsights': { folder: 'customer-insights', tags: [ 'package-2017-04', 'package-2017-01' ] },
-      # 'DataLakeAnalytics': { folder: 'datalake-analytics', tags: [ 'package-2016-11', 'package-2015-10-preview' ] },
-      # 'DataLakeStore': { folder: 'datalake-store', tags: [ 'package-2016-11', 'package-2015-10-preview' ] },
-      'DevTestLabs': { folder: 'devtestlabs', tags: [ 'package-2016-05', 'package-2015-05-preview' ] },
-      # 'DNS': { folder: 'dns', tags: [ 'package-2017-09', 'package-2016-04', 'package-2015-05-preview' ] },
-      # 'DomainServices': { folder: 'domainservices', tags: [ 'package-2017-06', 'package-2017-01' ] },
-      'EventGrid': { folder: 'eventgrid', tags: [ 'package-2018-01', 'package-2017-09-preview', 'package-2017-06-preview' ] },
-      'EventHub': { folder: 'eventhub', tags: [ 'package-2017-04', 'package-2015-08' ] },
-      # 'IotHub': { folder: 'iothub', tags: [ 'package-2017-07', 'package-2017-01', 'package-2016-02' ] },
-      # 'KeyVault': { folder: 'keyvault', tags: [ 'package-2016-10', 'package-2015-06' ] },
-      'Logic': { folder: 'logic', tags: [ 'package-2016-06', 'package-2015-08-preview', 'package-2015-02-preview' ] }, # missing 'type: object'
-      'Monitor': { folder: 'monitor', tags: [ 'package-2017-08', 'package-2017-09' ] }
-      'Network': { folder: 'network', tags: [ 'package-2017-10', 'package-2017-09', 'package-2017-08', 'package-2017-06', 'package-2017-03', 'package-2016-12', 'package-2016-09', 'package-2016-06', 'package-2016-03' ] },
-      # 'NotificationHubs': { folder: 'notificationhubs', tags: [ 'package-2017-04', 'package-2016-03', 'package-2014-09' ] },
-      # 'PowerBIEmbedded': { folder: 'powerbiembedded', tags: [ 'package-2016-01' ] },
-      # 'ProvisioningServices': { folder: 'provisioningservices', tags: [ 'package-2017-08', 'package-2017-11' ] },
-      'RecoveryServices': { folder: 'recoveryservices', tags: [ 'package-2016-12', 'package-2016-06' ] },
-      # 'RecoveryServicesBackup': { folder: 'recoveryservicesbackup', tags: [ 'package-2017-07', 'package-2016-06' ] },
-      # 'Redis': { folder: 'redis', tags: [ 'package-2017-10', 'package-2017-02', 'package-2016-04', 'package-2015-08' ] },
-      'Relay': { folder: 'relay', tags: [ 'package-2017-04', 'package-2016-07' ] },
-      # 'Reservations': { folder: 'reservations', tags: [ 'package-2017-11' ] },
-      # 'Scheduler': { folder: 'scheduler', tags: [ 'package-2016-03', 'package-2016-01', 'package-2014-08-preview' ] },
-      # 'Search': { folder: 'search', tags: [ 'package-2015-08', 'package-2015-02' ] },
-      'ServiceBus': { folder: 'servicebus', tags: [ 'package-2017-04', 'package-2015-08' ] },
-      'ServiceFabric': { folder: 'servicefabric', tags: [ 'package-2017-07', 'package-2016-09' ] }, # missing 'type: object'
-      'Storage': { folder: 'storage', tags: [ 'package-2017-10', 'package-2017-06', 'package-2016-12', 'package-2016-05', 'package-2016-01', 'package-2015-06', 'package-2015-05-preview' ] },
-      # 'TrafficManager': { folder: 'trafficmanager', tags: [ 'package-2017-09-preview', 'package-2017-05', 'package-2017-03', 'package-2015-11' ] },
-      'TimeSeriesInsights': { folder: 'timeseriesinsights', tags: [ 'package-2017-11-15' ] },
-      'Web': { folder: 'web', tags: [ 'package-2016-09' ] }, # missing 'type: object'
-      # 'poly': { file: __dirname + "/../test/Resource/poly-service.json", tags: [ '' ] }
+      'Microsoft.BotService': { basePath: 'botservice/resource-manager', apiVersions: [ '2017-12-01', '2018-07-12' ] },
+      'Microsoft.DataBox': { basePath: 'databox/resource-manager', apiVersions: [ '2018-01-01' ] },
+      'Microsoft.DataBoxEdge': { basePath: 'databoxedge/resource-manager', apiVersions: [ '2019-03-01', '2019-07-01' ] },
+      'Microsoft.Databricks': { basePath: 'databricks/resource-manager', apiVersions: [ '2018-04-01' ] },
+      'Microsoft.DevSpaces': { basePath: 'devspaces/resource-manager', apiVersions: [ '2019-04-01' ] },
+      'Microsoft.DocumentDB': { basePath: 'cosmos-db/resource-manager', apiVersions: [ '2015-04-08', '2019-08-01' ] },
+      'Microsoft.EnterpriseKnowledgeGraph': { basePath: 'EnterpriseKnowledgeGraph/resource-manager', apiVersions: [ '2018-12-03' ] },
+      'Microsoft.EventHub': { basePath: 'eventhub/resource-manager', apiVersions: [ '2014-09-01', '2015-08-01', '2017-04-01', '2018-01-01-preview' ] },
+      'Microsoft.IoTSpaces': { basePath: 'iotspaces/resource-manager', apiVersions: [ '2017-10-01-preview' ] },
+      'Microsoft.LabServices': { basePath: 'labservices/resource-manager', apiVersions: [ '2018-10-15' ] },
+      'Microsoft.MachineLearningCompute': { basePath: 'machinelearningcompute/resource-manager', apiVersions: [ '2017-06-01-preview', '2017-08-01-preview' ] },
+      'Microsoft.Portal': { basePath: 'portal/resource-manager', apiVersions: [ '2015-08-01-preview', '2018-10-01-preview', '2019-01-01-preview' ] },
+      'Microsoft.Relay': { basePath: 'relay/resource-manager', apiVersions: [ '2016-07-01', '2017-04-01' ] },
+      'Microsoft.ServiceBus': { basePath: 'servicebus/resource-manager', apiVersions: [ '2015-08-01', '2017-04-01', '2018-01-01-preview' ] },
+      'Microsoft.ServiceFabric': { basePath: 'servicefabric/resource-manager', apiVersions: [ '2016-09-01', '2017-07-01-preview', '2018-02-01', '2019-03-01', '2019-03-01-preview' ] },
+      'Microsoft.ServiceFabricMesh': { basePath: 'servicefabricmesh/resource-manager', apiVersions: [ '2018-07-01-preview', '2018-09-01-preview' ] },
+      'Microsoft.SqlVirtualMachine': { basePath: 'sqlvirtualmachine/resource-manager', apiVersions: [ '2017-03-01-preview' ] },
+      'Microsoft.StorageSync': { basePath: 'storagesync/resource-manager', apiVersions: [ '2017-06-05-preview', '2018-04-02', '2018-07-01', '2018-10-01', '2019-02-01', '2019-03-01' ] },
+      'Microsoft.WindowsIoT': { basePath: 'windowsiot/resource-manager', apiVersions: [ '2018-02-16-preview', '2019-06-01' ] },
     },
     'language': 'azureresourceschema'
   },done
