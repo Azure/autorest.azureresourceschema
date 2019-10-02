@@ -63,7 +63,7 @@ namespace AutoRest.AzureResourceSchema
             var subDefinitions = GetResourceDefinitions(resourceSchema, ScopeType.Subcription);
             if (subDefinitions.Any())
             {
-                WriteDefinitionMap(writer, "subscription_ResourceDefinitions", subDefinitions, sortDefinitions: true, addExpressionReferences: false);
+                WriteDefinitionMap(writer, "subscription_resourceDefinitions", subDefinitions, sortDefinitions: true, addExpressionReferences: false);
             }
 
             var mgDefinitions = GetResourceDefinitions(resourceSchema, ScopeType.ManagementGroup);
