@@ -41,6 +41,7 @@ task 'regenerate', '', (done) ->
       'Microsoft.EnterpriseKnowledgeGraph': { basePath: 'EnterpriseKnowledgeGraph/resource-manager', apiVersions: [ '2018-12-03' ] },
       'Microsoft.EventHub': { basePath: 'eventhub/resource-manager', apiVersions: [ '2014-09-01', '2015-08-01', '2017-04-01', '2018-01-01-preview' ] },
       'Microsoft.IoTSpaces': { basePath: 'iotspaces/resource-manager', apiVersions: [ '2017-10-01-preview' ] },
+      'Microsoft.KeyVault': { basePath: 'keyvault/resource-manager', apiVersions: [ '2015-06-01', '2016-10-01', '2018-02-14', '2018-02-14-preview' ] },
       'Microsoft.LabServices': { basePath: 'labservices/resource-manager', apiVersions: [ '2018-10-15' ] },
       'Microsoft.MachineLearningCompute': { basePath: 'machinelearningcompute/resource-manager', apiVersions: [ '2017-06-01-preview', '2017-08-01-preview' ] },
       'Microsoft.Portal': { basePath: 'portal/resource-manager', apiVersions: [ '2015-08-01-preview', '2018-10-01-preview', '2019-01-01-preview' ] },
