@@ -482,6 +482,7 @@ namespace AutoRest.AzureResourceSchema
 
                 case KnownPrimaryType.Int:
                 case KnownPrimaryType.Long:
+                case KnownPrimaryType.UnixTime:
                     result.JsonType = "integer";
                     break;
 
