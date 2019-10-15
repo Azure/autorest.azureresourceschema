@@ -1,14 +1,12 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See License.txt in the project root for license information.
 
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoRest.Core;
 using AutoRest.Core.Model;
 using AutoRest.Core.Utilities.Collections;
-using static AutoRest.Core.Utilities.DependencyInjection;
 
 namespace AutoRest.AzureResourceSchema
 {
@@ -38,21 +36,12 @@ namespace AutoRest.AzureResourceSchema
 
                 foreach (string resourceProvider in resourceSchemas.Keys)
                 {
-                    var stringWriter = new StringWriter();
-                    ResourceSchemaWriter.Write(stringWriter, resourceSchemas[resourceProvider]);
-                    await Write(stringWriter.ToString(), Path.Combine(version, resourceProvider + ".json"), true);
-/*
-                    var md = ResourceMarkdownGenerator.Generate(resourceSchemas[resourceProvider]);
-
-                    foreach (var m in md)
+                    using (var stringWriter = new StringWriter())
                     {
-                        // what the heck was this doing in the first place!??!
-                        // var content = m.Content.Replace("\"boolean\"", "boolean");
-                        var content = m.Content;
-                        // place nested topics in subdirectories
-                        await Write(content, Path.Combine(version, m.Type.Replace('_', Path.DirectorySeparatorChar) + ".md"), false);
+                        ResourceSchemaWriter.Write(stringWriter, resourceSchemas[resourceProvider]);
+
+                        await Write(stringWriter.ToString(), Path.Combine(version, resourceProvider + ".json"), true);
                     }
-*/                    
                 }
             }
         }
