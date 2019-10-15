@@ -200,7 +200,7 @@ namespace AutoRest.AzureResourceSchema
                 throw new ArgumentNullException(nameof(serviceClient));
             }
 
-            var providerSchemas = new Dictionary<string, ResourceSchema>();
+            var providerSchemas = new Dictionary<string, ResourceSchema>(StringComparer.OrdinalIgnoreCase);
 
             foreach (var method in serviceClient.Methods.Where(method => ShouldProcess(serviceClient, method, apiVersion)))
             {
