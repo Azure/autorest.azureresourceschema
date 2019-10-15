@@ -52,6 +52,7 @@ task 'regenerate', '', (done) ->
       'Microsoft.SqlVirtualMachine': { basePath: 'sqlvirtualmachine/resource-manager', apiVersions: [ '2017-03-01-preview' ] },
       'Microsoft.StorageSync': { basePath: 'storagesync/resource-manager', apiVersions: [ '2017-06-05-preview', '2018-04-02', '2018-07-01', '2018-10-01', '2019-02-01', '2019-03-01' ] },
       'Microsoft.WindowsIoT': { basePath: 'windowsiot/resource-manager', apiVersions: [ '2018-02-16-preview', '2019-06-01' ] },
+      'Microsoft.Insights': { basePath: 'monitor/resource-manager', apiVersions: [ '2015-04-01', '2015-07-01', '2016-03-01', '2016-09-01', '2017-03-01-preview', '2017-04-01', '2017-12-01-preview', '2018-01-01', '2018-03-01', '2018-04-16', '2018-06-01-preview', '2018-09-01', '2018-11-27-preview', '2019-03-01', '2019-06-01' ] },
     },
     'language': 'azureresourceschema'
   },done
