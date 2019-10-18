@@ -7,6 +7,16 @@
     "controllers": {
       "type": "object",
       "properties": {
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2019-04-01"
+          ]
+        },
+        "location": {
+          "type": "string",
+          "description": "Region where the Azure resource is located."
+        },
         "name": {
           "oneOf": [
             {
@@ -18,37 +28,6 @@
             }
           ],
           "description": "Name of the resource."
-        },
-        "type": {
-          "type": "string",
-          "enum": [
-            "Microsoft.DevSpaces/controllers"
-          ]
-        },
-        "apiVersion": {
-          "type": "string",
-          "enum": [
-            "2019-04-01"
-          ]
-        },
-        "tags": {
-          "oneOf": [
-            {
-              "type": "object",
-              "additionalProperties": {
-                "type": "string"
-              },
-              "properties": {}
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "Tags for the Azure resource."
-        },
-        "location": {
-          "type": "string",
-          "description": "Region where the Azure resource is located."
         },
         "properties": {
           "oneOf": [
@@ -70,14 +49,35 @@
             }
           ],
           "description": "Model representing SKU for Azure Dev Spaces Controller."
+        },
+        "tags": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {}
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Tags for the Azure resource."
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "Microsoft.DevSpaces/controllers"
+          ]
         }
       },
       "required": [
-        "name",
-        "type",
         "apiVersion",
+        "name",
         "properties",
-        "sku"
+        "sku",
+        "type"
       ],
       "description": "Microsoft.DevSpaces/controllers"
     }
@@ -86,18 +86,18 @@
     "ControllerProperties": {
       "type": "object",
       "properties": {
-        "targetContainerHostResourceId": {
-          "type": "string",
-          "description": "Resource ID of the target container host"
-        },
         "targetContainerHostCredentialsBase64": {
           "type": "string",
           "description": "Credentials of the target container host (base64)."
+        },
+        "targetContainerHostResourceId": {
+          "type": "string",
+          "description": "Resource ID of the target container host"
         }
       },
       "required": [
-        "targetContainerHostResourceId",
-        "targetContainerHostCredentialsBase64"
+        "targetContainerHostCredentialsBase64",
+        "targetContainerHostResourceId"
       ]
     },
     "Sku": {

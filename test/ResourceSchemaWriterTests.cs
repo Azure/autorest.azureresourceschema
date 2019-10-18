@@ -98,39 +98,6 @@ namespace AutoRest.AzureResourceSchema.Tests
         }
 
         [Fact]
-        public void WriteWithOneResourceDefinition()
-        {
-            StringWriter stringWriter = new StringWriter();
-            JsonTextWriter writer = new JsonTextWriter(stringWriter);
-            writer.QuoteChar = '\'';
-
-            ResourceSchema resourceSchema = new ResourceSchema();
-            resourceSchema.Description = "MockDescription";
-            resourceSchema.AddResourceDefinition("mockResource", new ResourceDefinition { Schema = new JsonSchema() });
-
-            ResourceSchemaWriter.Write(writer, resourceSchema);
-            Assert.Equal("{'description':'MockDescription','resourceDefinitions':{'mockResource':{}}}", stringWriter.ToString());
-        }
-
-        [Fact]
-        public void WriteWithOneDefinition()
-        {
-            StringWriter stringWriter = new StringWriter();
-            JsonTextWriter writer = new JsonTextWriter(stringWriter);
-            writer.QuoteChar = '\'';
-
-            ResourceSchema resourceSchema = new ResourceSchema();
-            resourceSchema.AddResourceDefinition("mockResource", new ResourceDefinition { Schema = new JsonSchema() });
-            resourceSchema.AddDefinition("mockDefinition", new JsonSchema());
-
-            ResourceSchemaWriter.Write(writer, resourceSchema);
-            Assert.Equal("{'resourceDefinitions':{'mockResource':{}},'definitions':{'mockDefinition':{}}}", stringWriter.ToString());
-        }
-
-
-
-
-        [Fact]
         public void WriteDefinitionWithEmptyDefinition()
         {
             StringWriter stringWriter = new StringWriter();

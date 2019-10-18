@@ -7,6 +7,16 @@
     "services": {
       "type": "object",
       "properties": {
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2018-12-03"
+          ]
+        },
+        "location": {
+          "type": "string",
+          "description": "Specifies the location of the resource."
+        },
         "name": {
           "oneOf": [
             {
@@ -19,21 +29,27 @@
           ],
           "description": "The name of the EnterpriseKnowledgeGraph resource."
         },
-        "type": {
-          "type": "string",
-          "enum": [
-            "Microsoft.EnterpriseKnowledgeGraph/services"
-          ]
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/EnterpriseKnowledgeGraphProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "The parameters to provide for the EnterpriseKnowledgeGraph."
         },
-        "apiVersion": {
-          "type": "string",
-          "enum": [
-            "2018-12-03"
-          ]
-        },
-        "location": {
-          "type": "string",
-          "description": "Specifies the location of the resource."
+        "sku": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/Sku"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "The SKU of the EnterpriseKnowledgeGraph service account."
         },
         "tags": {
           "oneOf": [
@@ -50,34 +66,18 @@
           ],
           "description": "Contains resource tags defined as key/value pairs."
         },
-        "sku": {
-          "oneOf": [
-            {
-              "$ref": "#/definitions/Sku"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "The SKU of the EnterpriseKnowledgeGraph service account."
-        },
-        "properties": {
-          "oneOf": [
-            {
-              "$ref": "#/definitions/EnterpriseKnowledgeGraphProperties"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "The parameters to provide for the EnterpriseKnowledgeGraph."
+        "type": {
+          "type": "string",
+          "enum": [
+            "Microsoft.EnterpriseKnowledgeGraph/services"
+          ]
         }
       },
       "required": [
-        "name",
-        "type",
         "apiVersion",
-        "properties"
+        "name",
+        "properties",
+        "type"
       ],
       "description": "Microsoft.EnterpriseKnowledgeGraph/services"
     }

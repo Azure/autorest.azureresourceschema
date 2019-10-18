@@ -2,8 +2,10 @@
 {
     public class ResourceDefinition
     {
-        public JsonSchema Schema { get; set; }
-
         public ResourceDescriptor Descriptor { get; set; }
+
+        public ResourceName Name { get; set; }
+
+        public JsonSchema BaseSchema { get; set; }
     }
 }

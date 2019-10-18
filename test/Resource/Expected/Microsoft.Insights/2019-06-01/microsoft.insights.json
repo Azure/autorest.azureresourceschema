@@ -7,16 +7,6 @@
     "actionGroups": {
       "type": "object",
       "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the action group."
-        },
-        "type": {
-          "type": "string",
-          "enum": [
-            "microsoft.insights/actionGroups"
-          ]
-        },
         "apiVersion": {
           "type": "string",
           "enum": [
@@ -26,6 +16,21 @@
         "location": {
           "type": "string",
           "description": "Resource location"
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the action group."
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ActionGroup"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "An Azure action group."
         },
         "tags": {
           "oneOf": [
@@ -42,24 +47,19 @@
           ],
           "description": "Resource tags"
         },
-        "properties": {
-          "oneOf": [
-            {
-              "$ref": "#/definitions/ActionGroup"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "An Azure action group."
+        "type": {
+          "type": "string",
+          "enum": [
+            "microsoft.insights/actionGroups"
+          ]
         }
       },
       "required": [
-        "name",
-        "type",
         "apiVersion",
         "location",
-        "properties"
+        "name",
+        "properties",
+        "type"
       ],
       "description": "microsoft.insights/actionGroups"
     }
@@ -68,92 +68,19 @@
     "ActionGroup": {
       "type": "object",
       "properties": {
-        "groupShortName": {
-          "type": "string",
-          "maxLength": 12,
-          "description": "The short name of the action group. This will be used in SMS messages."
-        },
-        "enabled": {
-          "oneOf": [
-            {
-              "type": "boolean",
-              "default": true
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications."
-        },
-        "emailReceivers": {
+        "armRoleReceivers": {
           "oneOf": [
             {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/EmailReceiver"
+                "$ref": "#/definitions/ArmRoleReceiver"
               }
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
           ],
-          "description": "The list of email receivers that are part of this action group."
-        },
-        "smsReceivers": {
-          "oneOf": [
-            {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/SmsReceiver"
-              }
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "The list of SMS receivers that are part of this action group."
-        },
-        "webhookReceivers": {
-          "oneOf": [
-            {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/WebhookReceiver"
-              }
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "The list of webhook receivers that are part of this action group."
-        },
-        "itsmReceivers": {
-          "oneOf": [
-            {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/ItsmReceiver"
-              }
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "The list of ITSM receivers that are part of this action group."
-        },
-        "azureAppPushReceivers": {
-          "oneOf": [
-            {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/AzureAppPushReceiver"
-              }
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "The list of AzureAppPush receivers that are part of this action group."
+          "description": "The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported."
         },
         "automationRunbookReceivers": {
           "oneOf": [
@@ -169,33 +96,19 @@
           ],
           "description": "The list of AutomationRunbook receivers that are part of this action group."
         },
-        "voiceReceivers": {
+        "azureAppPushReceivers": {
           "oneOf": [
             {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/VoiceReceiver"
+                "$ref": "#/definitions/AzureAppPushReceiver"
               }
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
           ],
-          "description": "The list of voice receivers that are part of this action group."
-        },
-        "logicAppReceivers": {
-          "oneOf": [
-            {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/LogicAppReceiver"
-              }
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "The list of logic app receivers that are part of this action group."
+          "description": "The list of AzureAppPush receivers that are part of this action group."
         },
         "azureFunctionReceivers": {
           "oneOf": [
@@ -211,24 +124,111 @@
           ],
           "description": "The list of azure function receivers that are part of this action group."
         },
-        "armRoleReceivers": {
+        "emailReceivers": {
           "oneOf": [
             {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/ArmRoleReceiver"
+                "$ref": "#/definitions/EmailReceiver"
               }
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
           ],
-          "description": "The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported."
+          "description": "The list of email receivers that are part of this action group."
+        },
+        "enabled": {
+          "oneOf": [
+            {
+              "type": "boolean",
+              "default": true
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications."
+        },
+        "groupShortName": {
+          "type": "string",
+          "maxLength": 12,
+          "description": "The short name of the action group. This will be used in SMS messages."
+        },
+        "itsmReceivers": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ItsmReceiver"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "The list of ITSM receivers that are part of this action group."
+        },
+        "logicAppReceivers": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/LogicAppReceiver"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "The list of logic app receivers that are part of this action group."
+        },
+        "smsReceivers": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/SmsReceiver"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "The list of SMS receivers that are part of this action group."
+        },
+        "voiceReceivers": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/VoiceReceiver"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "The list of voice receivers that are part of this action group."
+        },
+        "webhookReceivers": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/WebhookReceiver"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "The list of webhook receivers that are part of this action group."
         }
       },
       "required": [
-        "groupShortName",
-        "enabled"
+        "enabled",
+        "groupShortName"
       ],
       "description": "An Azure action group."
     },
@@ -269,14 +269,6 @@
           "type": "string",
           "description": "The Azure automation account Id which holds this runbook and authenticate to Azure resource."
         },
-        "runbookName": {
-          "type": "string",
-          "description": "The name for this runbook."
-        },
-        "webhookResourceId": {
-          "type": "string",
-          "description": "The resource id for webhook linked to this runbook."
-        },
         "isGlobalRunbook": {
           "oneOf": [
             {
@@ -292,6 +284,10 @@
           "type": "string",
           "description": "Indicates name of the webhook."
         },
+        "runbookName": {
+          "type": "string",
+          "description": "The name for this runbook."
+        },
         "serviceUri": {
           "type": "string",
           "description": "The URI where webhooks should be sent."
@@ -306,42 +302,42 @@
             }
           ],
           "description": "Indicates whether to use common alert schema."
+        },
+        "webhookResourceId": {
+          "type": "string",
+          "description": "The resource id for webhook linked to this runbook."
         }
       },
       "required": [
         "automationAccountId",
-        "runbookName",
-        "webhookResourceId",
         "isGlobalRunbook",
-        "useCommonAlertSchema"
+        "runbookName",
+        "useCommonAlertSchema",
+        "webhookResourceId"
       ],
       "description": "The Azure Automation Runbook notification receiver."
     },
     "AzureAppPushReceiver": {
       "type": "object",
       "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group."
-        },
         "emailAddress": {
           "type": "string",
           "description": "The email address registered for the Azure mobile app."
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the Azure mobile app push receiver. Names must be unique across all receivers within an action group."
         }
       },
       "required": [
-        "name",
-        "emailAddress"
+        "emailAddress",
+        "name"
       ],
       "description": "The Azure mobile App push notification receiver."
     },
     "AzureFunctionReceiver": {
       "type": "object",
       "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the azure function receiver. Names must be unique across all receivers within an action group."
-        },
         "functionAppResourceId": {
           "type": "string",
           "description": "The azure resource id of the function app."
@@ -354,6 +350,10 @@
           "type": "string",
           "description": "The http trigger url where http request sent to."
         },
+        "name": {
+          "type": "string",
+          "description": "The name of the azure function receiver. Names must be unique across all receivers within an action group."
+        },
         "useCommonAlertSchema": {
           "oneOf": [
             {
@@ -367,10 +367,10 @@
         }
       },
       "required": [
-        "name",
         "functionAppResourceId",
         "functionName",
         "httpTriggerUrl",
+        "name",
         "useCommonAlertSchema"
       ],
       "description": "An azure function receiver."
@@ -378,13 +378,13 @@
     "EmailReceiver": {
       "type": "object",
       "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the email receiver. Names must be unique across all receivers within an action group."
-        },
         "emailAddress": {
           "type": "string",
           "description": "The email address of this receiver."
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the email receiver. Names must be unique across all receivers within an action group."
         },
         "useCommonAlertSchema": {
           "oneOf": [
@@ -399,8 +399,8 @@
         }
       },
       "required": [
-        "name",
         "emailAddress",
+        "name",
         "useCommonAlertSchema"
       ],
       "description": "An email receiver."
@@ -408,39 +408,43 @@
     "ItsmReceiver": {
       "type": "object",
       "properties": {
+        "connectionId": {
+          "type": "string",
+          "description": "Unique identification of ITSM connection among multiple defined in above workspace."
+        },
         "name": {
           "type": "string",
           "description": "The name of the Itsm receiver. Names must be unique across all receivers within an action group."
         },
-        "workspaceId": {
+        "region": {
           "type": "string",
-          "description": "OMS LA instance identifier."
-        },
-        "connectionId": {
-          "type": "string",
-          "description": "Unique identification of ITSM connection among multiple defined in above workspace."
+          "description": "Region in which workspace resides. Supported values:'centralindia','japaneast','southeastasia','australiasoutheast','uksouth','westcentralus','canadacentral','eastus','westeurope'"
         },
         "ticketConfiguration": {
           "type": "string",
           "description": "JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well."
         },
-        "region": {
+        "workspaceId": {
           "type": "string",
-          "description": "Region in which workspace resides. Supported values:'centralindia','japaneast','southeastasia','australiasoutheast','uksouth','westcentralus','canadacentral','eastus','westeurope'"
+          "description": "OMS LA instance identifier."
         }
       },
       "required": [
-        "name",
-        "workspaceId",
         "connectionId",
+        "name",
+        "region",
         "ticketConfiguration",
-        "region"
+        "workspaceId"
       ],
       "description": "An Itsm receiver."
     },
     "LogicAppReceiver": {
       "type": "object",
       "properties": {
+        "callbackUrl": {
+          "type": "string",
+          "description": "The callback url where http request sent to."
+        },
         "name": {
           "type": "string",
           "description": "The name of the logic app receiver. Names must be unique across all receivers within an action group."
@@ -449,10 +453,6 @@
           "type": "string",
           "description": "The azure resource id of the logic app receiver."
         },
-        "callbackUrl": {
-          "type": "string",
-          "description": "The callback url where http request sent to."
-        },
         "useCommonAlertSchema": {
           "oneOf": [
             {
@@ -466,9 +466,9 @@
         }
       },
       "required": [
+        "callbackUrl",
         "name",
         "resourceId",
-        "callbackUrl",
         "useCommonAlertSchema"
       ],
       "description": "A logic app receiver."
@@ -476,13 +476,13 @@
     "SmsReceiver": {
       "type": "object",
       "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the SMS receiver. Names must be unique across all receivers within an action group."
-        },
         "countryCode": {
           "type": "string",
           "description": "The country code of the SMS receiver."
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the SMS receiver. Names must be unique across all receivers within an action group."
         },
         "phoneNumber": {
           "type": "string",
@@ -490,8 +490,8 @@
         }
       },
       "required": [
-        "name",
         "countryCode",
+        "name",
         "phoneNumber"
       ],
       "description": "An SMS receiver."
@@ -499,13 +499,13 @@
     "VoiceReceiver": {
       "type": "object",
       "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the voice receiver. Names must be unique across all receivers within an action group."
-        },
         "countryCode": {
           "type": "string",
           "description": "The country code of the voice receiver."
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the voice receiver. Names must be unique across all receivers within an action group."
         },
         "phoneNumber": {
           "type": "string",
@@ -513,8 +513,8 @@
         }
       },
       "required": [
-        "name",
         "countryCode",
+        "name",
         "phoneNumber"
       ],
       "description": "A voice receiver."
@@ -522,24 +522,25 @@
     "WebhookReceiver": {
       "type": "object",
       "properties": {
+        "identifierUri": {
+          "type": "string",
+          "description": "Indicates the identifier uri for aad auth."
+        },
         "name": {
           "type": "string",
           "description": "The name of the webhook receiver. Names must be unique across all receivers within an action group."
+        },
+        "objectId": {
+          "type": "string",
+          "description": "Indicates the webhook app object Id for aad auth."
         },
         "serviceUri": {
           "type": "string",
           "description": "The URI where webhooks should be sent."
         },
-        "useCommonAlertSchema": {
-          "oneOf": [
-            {
-              "type": "boolean"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "Indicates whether to use common alert schema."
+        "tenantId": {
+          "type": "string",
+          "description": "Indicates the tenant id for aad auth."
         },
         "useAadAuth": {
           "oneOf": [
@@ -553,17 +554,16 @@
           ],
           "description": "Indicates whether or not use AAD authentication."
         },
-        "objectId": {
-          "type": "string",
-          "description": "Indicates the webhook app object Id for aad auth."
-        },
-        "identifierUri": {
-          "type": "string",
-          "description": "Indicates the identifier uri for aad auth."
-        },
-        "tenantId": {
-          "type": "string",
-          "description": "Indicates the tenant id for aad auth."
+        "useCommonAlertSchema": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Indicates whether to use common alert schema."
         }
       },
       "required": [

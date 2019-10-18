@@ -371,6 +371,13 @@ module.exports =
     execute "#{basefolder}/node_modules/.bin/autorest-beta \"--use=#{basefolder}\" #{args.map((a) -> "\"#{a}\"").join(' ')}" , { silent:true, ignoreexitcode: ignoreexitcode || false }, (code,stdout,stderr) ->
       return done(code,stdout,stderr)
 
+  autorestSequential: (argsArray, done) ->
+    if argsArray.length == 0
+      done()
+    else
+      autorest argsArray[0], () =>
+        autorestSequential(argsArray.slice(1), done)
+
 # build task for global build
 module.exports.task 'build', 'builds project', -> 
   echo "Building project in #{basefolder}"

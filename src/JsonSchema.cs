@@ -133,12 +133,12 @@ namespace AutoRest.AzureResourceSchema
         /// <summary>
         /// The list of allOf options that exist for this JSON schema.
         /// </summary>
-        public IList<JsonSchema> AllOf { get; private set;} 
+        public IList<JsonSchema> AllOf { get; private set;}
 
         /// <summary>
         /// The schemas that describe the properties of a matching JSON value.
         /// </summary>
-        public IDictionary<string,JsonSchema> Properties { get; private set; }
+        public IDictionary<string, JsonSchema> Properties { get; private set; }
 
         /// <summary>
         /// The names of the properties that are required for a matching JSON value.
@@ -158,6 +158,8 @@ namespace AutoRest.AzureResourceSchema
                    Minimum == null &&
                    Maximum == null &&
                    Pattern == null &&
+                   MinLength == null &&
+                   MaxLength == null &&
                    IsEmpty(Enum) &&
                    IsEmpty(Properties) &&
                    IsEmpty(Required) &&
@@ -202,6 +204,23 @@ namespace AutoRest.AzureResourceSchema
                     Enum.Add(extraEnumValue);
                 }
             }
+
+            return this;
+        }
+
+        public JsonSchema AddPropertyWithOverwrite(string propertyName, JsonSchema propertyDefinition, bool isRequired)
+        {
+            if (Properties != null && Properties.ContainsKey(propertyName))
+            {
+                Properties.Remove(propertyName);
+            }
+
+            if (Required != null && Required.Contains(propertyName))
+            {
+                Required.Remove(propertyName);
+            }
+
+            AddProperty(propertyName, propertyDefinition, isRequired);
 
             return this;
         }
@@ -368,6 +387,8 @@ namespace AutoRest.AzureResourceSchema
             result.Minimum = Minimum;
             result.Maximum = Maximum;
             result.Pattern = Pattern;
+            result.MinLength = MinLength;
+            result.MaxLength = MaxLength;
             result.Default = Default;
             result.Enum = Clone(Enum);
             result.Properties = Clone(Properties);
@@ -380,158 +401,16 @@ namespace AutoRest.AzureResourceSchema
         }
 
         private static JsonSchema Clone(JsonSchema toClone)
-        {
-            JsonSchema result = null;
-
-            if (toClone != null)
-            {
-                result = toClone.Clone();
-            }
-
-            return result;
-        }
+            => toClone?.Clone();
 
         private static IList<string> Clone(IList<string> toClone)
-        {
-            IList<string> result = null;
-
-            if (toClone != null)
-            {
-                result = new List<string>(toClone);
-            }
-
-            return result;
-        }
+            => toClone?.Select(x => x).ToList();
 
         private static IList<JsonSchema> Clone(IList<JsonSchema> toClone)
-        {
-            IList<JsonSchema> result = null;
+            => toClone?.Select(x => Clone(x)).ToList();
 
-            if (toClone != null)
-            {
-                result = new List<JsonSchema>();
-                foreach (JsonSchema schema in toClone)
-                {
-                    result.Add(Clone(schema));
-                }
-            }
-
-            return result;
-        }
-
-        private static IDictionary<string,JsonSchema> Clone(IDictionary<string,JsonSchema> toClone)
-        {
-            IDictionary<string, JsonSchema> result = null;
-
-            if (toClone != null)
-            {
-                result = new Dictionary<string, JsonSchema>();
-                foreach (string key in toClone.Keys)
-                {
-                    result.Add(key, Clone(toClone[key]));
-                }
-            }
-
-            return result;
-        }
-
-        public override bool Equals(object obj)
-        {
-            bool result = false;
-
-            JsonSchema rhs = obj as JsonSchema;
-            if (rhs != null)
-            {
-                result = Equals(Ref, rhs.Ref) &&
-                         Equals(Items, rhs.Items) &&
-                         Equals(JsonType, rhs.JsonType) &&
-                         Equals(AdditionalProperties, rhs.AdditionalProperties) &&
-                         Equals(Enum, rhs.Enum) &&
-                         Equals(Properties, rhs.Properties) &&
-                         Equals(Required, rhs.Required) &&
-                         Equals(Description, rhs.Description) &&
-                         Equals(Minimum, rhs.Minimum) &&
-                         Equals(Maximum, rhs.Maximum) &&
-                         Equals(Pattern, rhs.Pattern) &&
-                         Equals(Configuration, rhs.Configuration);
-            }
-
-            return result;
-        }
-
-        public override int GetHashCode()
-        {
-            return GetHashCode(GetType()) ^
-                   GetHashCode(Ref) ^
-                   GetHashCode(Items) ^
-                   GetHashCode(Description) ^
-                   GetHashCode(JsonType) ^
-                   GetHashCode(AdditionalProperties) ^
-                   GetHashCode(Enum) ^
-                   GetHashCode(Properties) ^
-                   GetHashCode(Required) ^
-                   GetHashCode(Description) ^
-                   GetHashCode(Minimum) ^
-                   GetHashCode(Maximum) ^
-                   GetHashCode(Pattern) ^
-                   GetHashCode(Configuration);
-        }
-
-        private static int GetHashCode(object value)
-        {
-            return value == null ? 0 : value.GetHashCode();
-        }
-
-        private static bool Equals(IEnumerable<string> lhs, IEnumerable<string> rhs)
-        {
-            bool result = lhs == rhs;
-
-            if (!result &&
-                lhs != null &&
-                rhs != null &&
-                lhs.Count() == rhs.Count())
-            {
-                result = true;
-
-                IEnumerator<string> lhsEnumerator = lhs.GetEnumerator();
-                IEnumerator<string> rhsEnumerator = rhs.GetEnumerator();
-                while (lhsEnumerator.MoveNext() && rhsEnumerator.MoveNext())
-                {
-                    if (!Equals(lhsEnumerator.Current, rhsEnumerator.Current))
-                    {
-                        result = false;
-                        break;
-                    }
-                }
-            }
-
-            return result;
-        }
-
-        private static bool Equals(IDictionary<string, JsonSchema> lhs, IDictionary<string, JsonSchema> rhs)
-        {
-            bool result = lhs == rhs;
-
-            if (!result &&
-                lhs != null &&
-                rhs != null &&
-                lhs.Count == rhs.Count)
-            {
-                result = true;
-
-                foreach (string key in lhs.Keys)
-                {
-                    if (rhs.ContainsKey(key) == false ||
-                        !Equals(lhs[key], rhs[key]))
-                    {
-                        result = false;
-                        break;
-                    }
-                }
-            }
-
-            return result;
-        }
+        private static IDictionary<string, JsonSchema> Clone(IDictionary<string, JsonSchema> toClone)
+            => toClone?.ToDictionary(kvp => kvp.Key, kvp => Clone(kvp.Value));
 
         public static JsonSchema CreateSingleValuedEnum(string enumValue)
         {

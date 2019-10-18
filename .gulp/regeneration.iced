@@ -12,7 +12,8 @@ regenExpected = (opts,done) ->
     key = kkey.trim();
 
     args = [
-      "--#{opts.language}.multi-scope=true",
+      # uncomment for local debugging "--#{opts.language}.debugger=true",
+      "--#{opts.language}",
       "--output-folder=#{__dirname}/../#{opts.outputDir}/#{key}",
       "--tag=all-api-versions",
       "--title=none"
@@ -20,12 +21,17 @@ regenExpected = (opts,done) ->
 
     args.push("#{opts.inputBaseDir}/#{value.basePath}/readme.md")
 
+    argsArray = []
     for apiVersion in value.apiVersions
       args2 = args.slice()
       args2.push("--api-version=#{apiVersion}")
-      autorest args2,() =>
-        instances--
-        return done() if instances is 0 
+
+      argsArray.push(args2)
+
+    # Avoid overloading autorest by chaining commands for each namespace
+    autorestSequential argsArray, () => 
+      instances--
+      return done() if instances is 0
 
 task 'regenerate', '', (done) ->
   regenExpected {

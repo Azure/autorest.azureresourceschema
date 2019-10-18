@@ -36,8 +36,8 @@ namespace AutoRest.AzureResourceSchema
 
         private static IDictionary<string, JsonSchema> GetResourceDefinitions(ResourceSchema resourceSchema, ScopeType scopeType)
             => resourceSchema.ResourceDefinitions
-                .Where(kvp => kvp.Value.Descriptor.ScopeType == scopeType)
-                .ToDictionary(kvp => kvp.Key, kvp => kvp.Value.Schema);
+                .Where(kvp => kvp.Key.ScopeType == scopeType)
+                .ToDictionary(kvp => ResourceSchema.FormatResourceSchemaKey(kvp.Key.ResourceTypeSegments), kvp => kvp.Value);
 
         public static void Write(JsonWriter writer, ResourceSchema resourceSchema)
         {
@@ -212,7 +212,7 @@ namespace AutoRest.AzureResourceSchema
             {
                 WritePropertyRaw(writer, "default", ConvertDefaultValue(definition.Default, definition.JsonType));
             }
-            WriteStringArray(writer, "enum", definition.Enum);
+            WriteStringArray(writer, "enum", definition.Enum, sortDefinitions: false);
             WriteDefinitionArray(writer, "oneOf", definition.OneOf);
             WriteDefinitionArray(writer, "anyOf", definition.AnyOf);
             WriteDefinitionArray(writer, "allOf", definition.AllOf);
@@ -228,27 +228,34 @@ namespace AutoRest.AzureResourceSchema
             WriteDefinition(writer, "additionalProperties", definition.AdditionalProperties);
             if (definition.JsonType == "object")
             {
-                WriteDefinitionMap(writer, "properties", definition.Properties, addExpressionReferences: true);
+                WriteDefinitionMap(writer, "properties", definition.Properties, sortDefinitions: true, addExpressionReferences: true);
             }
-            WriteStringArray(writer, "required", definition.Required);
+            WriteStringArray(writer, "required", definition.Required, sortDefinitions: true);
 
             WriteProperty(writer, "description", definition.Description);
 
             writer.WriteEndObject();
         }
 
-        private static void WriteStringArray(JsonWriter writer, string arrayName, IEnumerable<string> arrayValues)
+        private static void WriteStringArray(JsonWriter writer, string arrayName, IEnumerable<string> arrayValues, bool sortDefinitions = false)
         {
-            if (arrayValues != null && arrayValues.Count() > 0)
+            if (arrayValues == null || !arrayValues.Any())
             {
-                writer.WritePropertyName(arrayName);
-                writer.WriteStartArray();
-                foreach (string arrayValue in arrayValues)
-                {
-                    writer.WriteValue(arrayValue);
-                }
-                writer.WriteEndArray();
+                return;
             }
+
+            if (sortDefinitions)
+            {
+                arrayValues = arrayValues.OrderBy(x => x, StringComparer.OrdinalIgnoreCase);
+            }
+
+            writer.WritePropertyName(arrayName);
+            writer.WriteStartArray();
+            foreach (string arrayValue in arrayValues)
+            {
+                writer.WriteValue(arrayValue);
+            }
+            writer.WriteEndArray();
         }
 
         private static void WriteDefinitionArray(JsonWriter writer, string arrayName, IEnumerable<JsonSchema> arrayDefinitions)

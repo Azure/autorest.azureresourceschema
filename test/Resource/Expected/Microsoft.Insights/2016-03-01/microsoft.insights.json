@@ -7,16 +7,6 @@
     "alertrules": {
       "type": "object",
       "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the rule."
-        },
-        "type": {
-          "type": "string",
-          "enum": [
-            "microsoft.insights/alertrules"
-          ]
-        },
         "apiVersion": {
           "type": "string",
           "enum": [
@@ -27,20 +17,9 @@
           "type": "string",
           "description": "Resource location"
         },
-        "tags": {
-          "oneOf": [
-            {
-              "type": "object",
-              "additionalProperties": {
-                "type": "string"
-              },
-              "properties": {}
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "Resource tags"
+        "name": {
+          "type": "string",
+          "description": "The name of the rule."
         },
         "properties": {
           "oneOf": [
@@ -52,41 +31,6 @@
             }
           ],
           "description": "An alert rule."
-        }
-      },
-      "required": [
-        "name",
-        "type",
-        "apiVersion",
-        "location",
-        "properties"
-      ],
-      "description": "microsoft.insights/alertrules"
-    }
-  },
-  "subscription_resourceDefinitions": {
-    "logprofiles": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the log profile."
-        },
-        "type": {
-          "type": "string",
-          "enum": [
-            "microsoft.insights/logprofiles"
-          ]
-        },
-        "apiVersion": {
-          "type": "string",
-          "enum": [
-            "2016-03-01"
-          ]
-        },
-        "location": {
-          "type": "string",
-          "description": "Resource location"
         },
         "tags": {
           "oneOf": [
@@ -103,6 +47,41 @@
           ],
           "description": "Resource tags"
         },
+        "type": {
+          "type": "string",
+          "enum": [
+            "microsoft.insights/alertrules"
+          ]
+        }
+      },
+      "required": [
+        "apiVersion",
+        "location",
+        "name",
+        "properties",
+        "type"
+      ],
+      "description": "microsoft.insights/alertrules"
+    }
+  },
+  "subscription_resourceDefinitions": {
+    "logprofiles": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2016-03-01"
+          ]
+        },
+        "location": {
+          "type": "string",
+          "description": "Resource location"
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the log profile."
+        },
         "properties": {
           "oneOf": [
             {
@@ -113,14 +92,35 @@
             }
           ],
           "description": "The log profile properties."
+        },
+        "tags": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {}
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Resource tags"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "microsoft.insights/logprofiles"
+          ]
         }
       },
       "required": [
-        "name",
-        "type",
         "apiVersion",
         "location",
-        "properties"
+        "name",
+        "properties",
+        "type"
       ],
       "description": "microsoft.insights/logprofiles"
     }
@@ -129,9 +129,30 @@
     "AlertRule": {
       "type": "object",
       "properties": {
-        "name": {
-          "type": "string",
-          "description": "the name of the alert rule."
+        "actions": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/RuleAction"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved."
+        },
+        "condition": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/RuleCondition"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "The condition that results in the alert rule being activated."
         },
         "description": {
           "type": "string",
@@ -148,47 +169,21 @@
           ],
           "description": "the flag that indicates whether the alert rule is enabled."
         },
-        "condition": {
-          "oneOf": [
-            {
-              "$ref": "#/definitions/RuleCondition"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "The condition that results in the alert rule being activated."
-        },
-        "actions": {
-          "oneOf": [
-            {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/RuleAction"
-              }
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved."
+        "name": {
+          "type": "string",
+          "description": "the name of the alert rule."
         }
       },
       "required": [
-        "name",
+        "condition",
         "isEnabled",
-        "condition"
+        "name"
       ],
       "description": "An alert rule."
     },
     "LocationThresholdRuleCondition": {
       "type": "object",
       "properties": {
-        "windowSize": {
-          "type": "string",
-          "format": "duration",
-          "description": "the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day."
-        },
         "failedLocationCount": {
           "oneOf": [
             {
@@ -206,6 +201,11 @@
           "enum": [
             "Microsoft.Azure.Management.Insights.Models.LocationThresholdRuleCondition"
           ]
+        },
+        "windowSize": {
+          "type": "string",
+          "format": "duration",
+          "description": "the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day."
         }
       },
       "required": [
@@ -217,13 +217,19 @@
     "LogProfileProperties": {
       "type": "object",
       "properties": {
-        "storageAccountId": {
-          "type": "string",
-          "description": "the resource id of the storage account to which you would like to send the Activity Log."
-        },
-        "serviceBusRuleId": {
-          "type": "string",
-          "description": "The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: '{service bus resource ID}/authorizationrules/{key name}'."
+        "categories": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "the categories of the logs. These categories are created as is convenient to the user. Some values are: 'Write', 'Delete', and/or 'Action.'"
         },
         "locations": {
           "oneOf": [
@@ -239,20 +245,6 @@
           ],
           "description": "List of regions for which Activity Log events should be stored or streamed. It is a comma separated list of valid ARM locations including the 'global' location."
         },
-        "categories": {
-          "oneOf": [
-            {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "the categories of the logs. These categories are created as is convenient to the user. Some values are: 'Write', 'Delete', and/or 'Action.'"
-        },
         "retentionPolicy": {
           "oneOf": [
             {
@@ -263,11 +255,19 @@
             }
           ],
           "description": "Specifies the retention policy for the log."
+        },
+        "serviceBusRuleId": {
+          "type": "string",
+          "description": "The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format: '{service bus resource ID}/authorizationrules/{key name}'."
+        },
+        "storageAccountId": {
+          "type": "string",
+          "description": "the resource id of the storage account to which you would like to send the Activity Log."
         }
       },
       "required": [
-        "locations",
         "categories",
+        "locations",
         "retentionPolicy"
       ],
       "description": "The log profile properties."
@@ -340,17 +340,6 @@
     "RetentionPolicy": {
       "type": "object",
       "properties": {
-        "enabled": {
-          "oneOf": [
-            {
-              "type": "boolean"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "a value indicating whether the retention policy is enabled."
-        },
         "days": {
           "oneOf": [
             {
@@ -362,11 +351,22 @@
             }
           ],
           "description": "the number of days for the retention in days. A value of 0 will retain the events indefinitely."
+        },
+        "enabled": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "a value indicating whether the retention policy is enabled."
         }
       },
       "required": [
-        "enabled",
-        "days"
+        "days",
+        "enabled"
       ],
       "description": "Specifies the retention policy for the log."
     },
@@ -432,17 +432,6 @@
     "RuleEmailAction": {
       "type": "object",
       "properties": {
-        "sendToServiceOwners": {
-          "oneOf": [
-            {
-              "type": "boolean"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated."
-        },
         "customEmails": {
           "oneOf": [
             {
@@ -462,6 +451,17 @@
           "enum": [
             "Microsoft.Azure.Management.Insights.Models.RuleEmailAction"
           ]
+        },
+        "sendToServiceOwners": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated."
         }
       },
       "required": [
@@ -482,6 +482,17 @@
     "RuleManagementEventDataSource": {
       "type": "object",
       "properties": {
+        "claims": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/RuleManagementEventClaimsDataSource"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "The claims for a rule management event data source."
+        },
         "eventName": {
           "type": "string",
           "description": "the event name."
@@ -493,6 +504,12 @@
         "level": {
           "type": "string",
           "description": "the level."
+        },
+        "odata.type": {
+          "type": "string",
+          "enum": [
+            "Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource"
+          ]
         },
         "operationName": {
           "type": "string",
@@ -513,23 +530,6 @@
         "subStatus": {
           "type": "string",
           "description": "the substatus."
-        },
-        "claims": {
-          "oneOf": [
-            {
-              "$ref": "#/definitions/RuleManagementEventClaimsDataSource"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "The claims for a rule management event data source."
-        },
-        "odata.type": {
-          "type": "string",
-          "enum": [
-            "Microsoft.Azure.Management.Insights.Models.RuleManagementEventDataSource"
-          ]
         }
       },
       "required": [
@@ -559,9 +559,11 @@
     "RuleWebhookAction": {
       "type": "object",
       "properties": {
-        "serviceUri": {
+        "odata.type": {
           "type": "string",
-          "description": "the service uri to Post the notification when the alert activates or resolves."
+          "enum": [
+            "Microsoft.Azure.Management.Insights.Models.RuleWebhookAction"
+          ]
         },
         "properties": {
           "oneOf": [
@@ -578,11 +580,9 @@
           ],
           "description": "the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload."
         },
-        "odata.type": {
+        "serviceUri": {
           "type": "string",
-          "enum": [
-            "Microsoft.Azure.Management.Insights.Models.RuleWebhookAction"
-          ]
+          "description": "the service uri to Post the notification when the alert activates or resolves."
         }
       },
       "required": [
@@ -593,6 +593,12 @@
     "ThresholdRuleCondition": {
       "type": "object",
       "properties": {
+        "odata.type": {
+          "type": "string",
+          "enum": [
+            "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition"
+          ]
+        },
         "operator": {
           "oneOf": [
             {
@@ -621,11 +627,6 @@
           ],
           "description": "the threshold value that activates the alert."
         },
-        "windowSize": {
-          "type": "string",
-          "format": "duration",
-          "description": "the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day."
-        },
         "timeAggregation": {
           "oneOf": [
             {
@@ -644,17 +645,16 @@
           ],
           "description": "the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric."
         },
-        "odata.type": {
+        "windowSize": {
           "type": "string",
-          "enum": [
-            "Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition"
-          ]
+          "format": "duration",
+          "description": "the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day."
         }
       },
       "required": [
+        "odata.type",
         "operator",
-        "threshold",
-        "odata.type"
+        "threshold"
       ],
       "description": "A rule condition based on a metric crossing a threshold."
     }
