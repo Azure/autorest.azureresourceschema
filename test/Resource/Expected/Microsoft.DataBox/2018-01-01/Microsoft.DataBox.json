@@ -21,7 +21,9 @@
           "oneOf": [
             {
               "type": "string",
-              "pattern": "^[-\\w\\.]+$"
+              "pattern": "^[-\\w\\.]+$",
+              "minLength": 3,
+              "maxLength": 24
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"

@@ -367,16 +367,13 @@ module.exports =
     return proc
 
   autorest: (args,done,ignoreexitcode) ->
-    echo info "Queuing up: AutoRest #{args.join(' ')}"
-    execute "#{basefolder}/node_modules/.bin/autorest-beta \"--use=#{basefolder}\" #{args.map((a) -> "\"#{a}\"").join(' ')}" , { silent:true, ignoreexitcode: ignoreexitcode || false }, (code,stdout,stderr) ->
+    command = "#{basefolder}/node_modules/.bin/autorest-beta"
+    args2 = args.slice()
+    args2.unshift("--use=#{basefolder}")
+    
+    echo info "Queuing up: #{command} #{args2.map((a) -> "\"#{a}\"").join(' ')}"
+    execute "#{command} #{args2.map((a) -> "\"#{a}\"").join(' ')}" , { silent:true, ignoreexitcode: ignoreexitcode || false }, (code,stdout,stderr) ->
       return done(code,stdout,stderr)
-
-  autorestSequential: (argsArray, done) ->
-    if argsArray.length == 0
-      done()
-    else
-      autorest argsArray[0], () =>
-        autorestSequential(argsArray.slice(1), done)
 
 # build task for global build
 module.exports.task 'build', 'builds project', -> 

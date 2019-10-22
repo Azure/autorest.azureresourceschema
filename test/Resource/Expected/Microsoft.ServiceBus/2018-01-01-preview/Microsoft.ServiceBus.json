@@ -260,6 +260,7 @@
         },
         "name": {
           "type": "string",
+          "minLength": 1,
           "description": "The IP Filter Rule name."
         },
         "properties": {
@@ -345,6 +346,7 @@
         },
         "name": {
           "type": "string",
+          "minLength": 1,
           "description": "The Virtual Network Rule name."
         },
         "properties": {

@@ -698,6 +698,8 @@
         },
         "name": {
           "type": "string",
+          "minLength": 1,
+          "maxLength": 50,
           "description": "The authorization rule name."
         },
         "properties": {
@@ -737,6 +739,8 @@
         },
         "name": {
           "type": "string",
+          "minLength": 1,
+          "maxLength": 50,
           "description": "The Disaster Recovery configuration name"
         },
         "properties": {
@@ -871,6 +875,8 @@
         },
         "name": {
           "type": "string",
+          "minLength": 1,
+          "maxLength": 50,
           "description": "The authorization rule name."
         },
         "properties": {
@@ -910,6 +916,7 @@
         },
         "name": {
           "type": "string",
+          "minLength": 1,
           "description": "The queue name."
         },
         "properties": {
@@ -949,6 +956,8 @@
         },
         "name": {
           "type": "string",
+          "minLength": 1,
+          "maxLength": 50,
           "description": "The authorization rule name."
         },
         "properties": {
@@ -988,6 +997,7 @@
         },
         "name": {
           "type": "string",
+          "minLength": 1,
           "description": "The topic name."
         },
         "properties": {
@@ -1027,6 +1037,8 @@
         },
         "name": {
           "type": "string",
+          "minLength": 1,
+          "maxLength": 50,
           "description": "The subscription name."
         },
         "properties": {
@@ -1066,6 +1078,8 @@
         },
         "name": {
           "type": "string",
+          "minLength": 1,
+          "maxLength": 50,
           "description": "The rule name."
         },
         "properties": {

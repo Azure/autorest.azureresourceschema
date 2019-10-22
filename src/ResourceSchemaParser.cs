@@ -185,6 +185,11 @@ namespace AutoRest.AzureResourceSchema
                 var nameSchema = ParseType(param.ClientProperty, param.ModelType, providerDefinition.SchemaDefinitions, codeModel.ModelTypes);
                 nameSchema.ResourceType = resNameParam;
 
+                if (!string.IsNullOrEmpty(param.Documentation))
+                {
+                    nameSchema.Description = RemovePossibleValuesFromDescription(param.Documentation);
+                }
+
                 return (true, string.Empty, new ResourceName
                 {
                     HasConstantName = false,

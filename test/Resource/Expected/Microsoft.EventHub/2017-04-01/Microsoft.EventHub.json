@@ -643,6 +643,7 @@
         },
         "name": {
           "type": "string",
+          "minLength": 1,
           "description": "The authorization rule name."
         },
         "properties": {
@@ -682,6 +683,8 @@
         },
         "name": {
           "type": "string",
+          "minLength": 1,
+          "maxLength": 50,
           "description": "The Disaster Recovery configuration name"
         },
         "properties": {
@@ -721,6 +724,7 @@
         },
         "name": {
           "type": "string",
+          "minLength": 1,
           "description": "The authorization rule name."
         },
         "properties": {
@@ -760,6 +764,7 @@
         },
         "name": {
           "type": "string",
+          "minLength": 1,
           "description": "The Event Hub name"
         },
         "properties": {
@@ -799,6 +804,8 @@
         },
         "name": {
           "type": "string",
+          "minLength": 1,
+          "maxLength": 50,
           "description": "The consumer group name"
         },
         "properties": {

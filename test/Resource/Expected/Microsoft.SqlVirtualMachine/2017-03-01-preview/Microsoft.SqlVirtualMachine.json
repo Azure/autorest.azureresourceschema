@@ -639,6 +639,30 @@
       },
       "description": "Set the access level and network port settings for SQL Server."
     },
+    "SQLStorageSettings": {
+      "type": "object",
+      "properties": {
+        "defaultFilePath": {
+          "type": "string",
+          "description": "SQL Server default file path"
+        },
+        "luns": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Logical Unit Numbers for the disks."
+        }
+      },
+      "description": "Set disk storage settings for SQL Server."
+    },
     "SqlStorageUpdateSettings": {
       "type": "object",
       "properties": {
@@ -862,6 +886,17 @@
           "type": "string",
           "description": "ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of."
         },
+        "storageConfigurationSettings": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/StorageConfigurationSettings"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Storage Configurations for SQL Data, Log and TempDb."
+        },
         "virtualMachineResourceId": {
           "type": "string",
           "description": "ARM Resource id of underlying virtual machine created from SQL marketplace image."
@@ -901,6 +936,77 @@
         }
       },
       "description": "Set workload type to optimize storage for SQL Server."
+    },
+    "StorageConfigurationSettings": {
+      "type": "object",
+      "properties": {
+        "diskConfigurationType": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "NEW",
+                "EXTEND",
+                "ADD"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Disk configuration to apply to SQL Server."
+        },
+        "sqlDataSettings": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SQLStorageSettings"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Set disk storage settings for SQL Server."
+        },
+        "sqlLogSettings": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SQLStorageSettings"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Set disk storage settings for SQL Server."
+        },
+        "sqlTempDbSettings": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SQLStorageSettings"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Set disk storage settings for SQL Server."
+        },
+        "storageWorkloadType": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "GENERAL",
+                "OLTP",
+                "DW"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Storage workload type."
+        }
+      },
+      "description": "Storage Configurations for SQL Data, Log and TempDb."
     },
     "WsfcDomainCredentials": {
       "type": "object",

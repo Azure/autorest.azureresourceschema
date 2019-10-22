@@ -379,6 +379,8 @@
         },
         "name": {
           "type": "string",
+          "minLength": 1,
+          "maxLength": 50,
           "description": "The authorizationRule name."
         },
         "properties": {
@@ -418,6 +420,8 @@
         },
         "name": {
           "type": "string",
+          "minLength": 1,
+          "maxLength": 50,
           "description": "The authorizationRule name."
         },
         "properties": {
@@ -457,6 +461,8 @@
         },
         "name": {
           "type": "string",
+          "minLength": 1,
+          "maxLength": 50,
           "description": "The hybrid connection name."
         },
         "properties": {
@@ -496,6 +502,8 @@
         },
         "name": {
           "type": "string",
+          "minLength": 1,
+          "maxLength": 50,
           "description": "The authorizationRule name."
         },
         "properties": {
@@ -535,6 +543,8 @@
         },
         "name": {
           "type": "string",
+          "minLength": 1,
+          "maxLength": 50,
           "description": "The relay name"
         },
         "properties": {
