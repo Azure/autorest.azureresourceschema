@@ -3,6 +3,7 @@
 
 namespace AutoRest.AzureResourceSchema.Models
 {
+    using AutoRest.Core.Model;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -18,6 +19,8 @@ namespace AutoRest.AzureResourceSchema.Models
         public string ApiVersion { get; set; }
 
         public bool HasVariableName { get; set; }
+
+        public XmsMetadata XmsMetadata { get; set; }
 
         public string FullyQualifiedType => FormatFullyQualifiedType(ProviderNamespace, ResourceTypeSegments);
 

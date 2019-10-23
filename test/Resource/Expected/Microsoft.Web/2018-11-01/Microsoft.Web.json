@@ -97,7 +97,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the certificate."
+          "description": "Unique name of the app to create or update. To create or update a deployment slot, use the {slot} parameter."
         },
         "properties": {
           "oneOf": [
@@ -611,7 +611,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Deployment ID."
+          "description": "ID of an existing deployment."
         },
         "properties": {
           "oneOf": [
@@ -790,7 +790,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Custom hostname."
+          "description": "Hostname in the hostname binding."
         },
         "properties": {
           "oneOf": [
@@ -833,7 +833,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the hybrid connection."
+          "description": "Name of the hybrid connection configuration."
         },
         "properties": {
           "oneOf": [
@@ -1267,7 +1267,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the deployment slot. By default, this API returns the production slot."
+          "description": "Name of the deployment slot to create or update. By default, this API attempts to create or modify the production slot."
         },
         "properties": {
           "oneOf": [
@@ -1739,7 +1739,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Deployment ID."
+          "description": "ID of an existing deployment."
         },
         "properties": {
           "oneOf": [
@@ -1918,7 +1918,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Custom hostname."
+          "description": "Hostname in the hostname binding."
         },
         "properties": {
           "oneOf": [
@@ -1961,7 +1961,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the hybrid connection."
+          "description": "Name of the hybrid connection configuration."
         },
         "properties": {
           "oneOf": [
@@ -2380,7 +2380,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the virtual network."
+          "description": "Name of an existing Virtual Network."
         },
         "properties": {
           "oneOf": [
@@ -2526,7 +2526,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the virtual network."
+          "description": "Name of an existing Virtual Network."
         },
         "properties": {
           "oneOf": [
@@ -5827,7 +5827,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Deployment ID."
+          "description": "ID of an existing deployment."
         },
         "properties": {
           "oneOf": [
@@ -6006,7 +6006,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Custom hostname."
+          "description": "Hostname in the hostname binding."
         },
         "properties": {
           "oneOf": [
@@ -6049,7 +6049,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the hybrid connection."
+          "description": "Name of the hybrid connection configuration."
         },
         "properties": {
           "oneOf": [
@@ -6390,7 +6390,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the deployment slot. By default, this API returns the production slot."
+          "description": "Name of the deployment slot to create or update. By default, this API attempts to create or modify the production slot."
         },
         "properties": {
           "oneOf": [
@@ -6768,7 +6768,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Deployment ID."
+          "description": "ID of an existing deployment."
         },
         "properties": {
           "oneOf": [
@@ -6947,7 +6947,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Custom hostname."
+          "description": "Hostname in the hostname binding."
         },
         "properties": {
           "oneOf": [
@@ -6990,7 +6990,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the hybrid connection."
+          "description": "Name of the hybrid connection configuration."
         },
         "properties": {
           "oneOf": [
@@ -7316,7 +7316,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the virtual network."
+          "description": "Name of an existing Virtual Network."
         },
         "properties": {
           "oneOf": [
@@ -7452,7 +7452,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the virtual network."
+          "description": "Name of an existing Virtual Network."
         },
         "properties": {
           "oneOf": [

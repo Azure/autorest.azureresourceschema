@@ -23,7 +23,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the certificate order.."
+          "description": "Name of the certificate order."
         },
         "properties": {
           "oneOf": [

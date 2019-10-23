@@ -23,7 +23,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The name of the artifact."
+          "description": "The name of the lab."
         },
         "properties": {
           "oneOf": [
@@ -110,7 +110,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The name of the artifact."
+          "description": "The name of the artifact source."
         },
         "properties": {
           "oneOf": [
@@ -172,7 +172,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The name of the artifact."
+          "description": "The name of the custom image."
         },
         "properties": {
           "oneOf": [
@@ -234,7 +234,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The name of the artifact."
+          "description": "The name of the formula."
         },
         "properties": {
           "oneOf": [
@@ -296,7 +296,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The name of the artifact."
+          "description": "The name of the policy."
         },
         "properties": {
           "oneOf": [
@@ -358,7 +358,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The name of the artifact."
+          "description": "The name of the schedule."
         },
         "properties": {
           "oneOf": [
@@ -420,7 +420,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The name of the artifact."
+          "description": "The name of the virtual Machine."
         },
         "properties": {
           "oneOf": [
@@ -482,7 +482,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The name of the artifact."
+          "description": "The name of the virtual network."
         },
         "properties": {
           "oneOf": [
@@ -972,7 +972,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The name of the artifact."
+          "description": "The name of the artifact source."
         },
         "properties": {
           "oneOf": [
@@ -1034,7 +1034,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The name of the artifact."
+          "description": "The name of the custom image."
         },
         "properties": {
           "oneOf": [
@@ -1096,7 +1096,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The name of the artifact."
+          "description": "The name of the formula."
         },
         "properties": {
           "oneOf": [
@@ -1158,7 +1158,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The name of the artifact."
+          "description": "The name of the schedule."
         },
         "properties": {
           "oneOf": [
@@ -1220,7 +1220,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The name of the artifact."
+          "description": "The name of the virtual Machine."
         },
         "properties": {
           "oneOf": [
@@ -1282,7 +1282,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The name of the artifact."
+          "description": "The name of the virtual network."
         },
         "properties": {
           "oneOf": [

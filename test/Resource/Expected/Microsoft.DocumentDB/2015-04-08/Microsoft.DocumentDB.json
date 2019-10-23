@@ -88,6 +88,64 @@
       ],
       "description": "Microsoft.DocumentDB/databaseAccounts"
     },
+    "databaseAccounts_apis_databases": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2015-04-08"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "description": "Cosmos DB database name."
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SqlDatabaseCreateUpdateProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Properties to create and update Azure Cosmos DB SQL database."
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/databaseAccounts_apis_databases_settings_childResource"
+              },
+              {
+                "$ref": "#/definitions/databaseAccounts_apis_databases_containers_childResource"
+              },
+              {
+                "$ref": "#/definitions/databaseAccounts_apis_databases_collections_childResource"
+              },
+              {
+                "$ref": "#/definitions/databaseAccounts_apis_databases_graphs_childResource"
+              }
+            ]
+          }
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "Microsoft.DocumentDB/databaseAccounts/apis/databases"
+          ]
+        }
+      },
+      "required": [
+        "apiVersion",
+        "name",
+        "properties",
+        "type"
+      ],
+      "description": "Microsoft.DocumentDB/databaseAccounts/apis/databases"
+    },
     "databaseAccounts_apis_databases_collections": {
       "type": "object",
       "properties": {
@@ -1255,6 +1313,45 @@
       ],
       "description": "Properties to create and update Azure Cosmos DB database accounts."
     },
+    "databaseAccounts_apis_databases_collections_childResource": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2015-04-08"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "description": "Cosmos DB collection name."
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/MongoDBCollectionCreateUpdateProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Properties to create and update Azure Cosmos DB MongoDB collection."
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "collections"
+          ]
+        }
+      },
+      "required": [
+        "apiVersion",
+        "name",
+        "properties",
+        "type"
+      ],
+      "description": "Microsoft.DocumentDB/databaseAccounts/apis/databases/collections"
+    },
     "databaseAccounts_apis_databases_collections_settings_childResource": {
       "type": "object",
       "properties": {
@@ -1300,6 +1397,45 @@
         "type"
       ],
       "description": "Microsoft.DocumentDB/databaseAccounts/apis/databases/collections/settings"
+    },
+    "databaseAccounts_apis_databases_containers_childResource": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2015-04-08"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "description": "Cosmos DB container name."
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SqlContainerCreateUpdateProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Properties to create and update Azure Cosmos DB container."
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "containers"
+          ]
+        }
+      },
+      "required": [
+        "apiVersion",
+        "name",
+        "properties",
+        "type"
+      ],
+      "description": "Microsoft.DocumentDB/databaseAccounts/apis/databases/containers"
     },
     "databaseAccounts_apis_databases_containers_settings_childResource": {
       "type": "object",
@@ -1347,6 +1483,45 @@
       ],
       "description": "Microsoft.DocumentDB/databaseAccounts/apis/databases/containers/settings"
     },
+    "databaseAccounts_apis_databases_graphs_childResource": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2015-04-08"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "description": "Cosmos DB graph name."
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/GremlinGraphCreateUpdateProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Properties to create and update Azure Cosmos DB Gremlin graph."
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "graphs"
+          ]
+        }
+      },
+      "required": [
+        "apiVersion",
+        "name",
+        "properties",
+        "type"
+      ],
+      "description": "Microsoft.DocumentDB/databaseAccounts/apis/databases/graphs"
+    },
     "databaseAccounts_apis_databases_graphs_settings_childResource": {
       "type": "object",
       "properties": {
@@ -1392,6 +1567,111 @@
         "type"
       ],
       "description": "Microsoft.DocumentDB/databaseAccounts/apis/databases/graphs/settings"
+    },
+    "databaseAccounts_apis_databases_settings_childResource": {
+      "type": "object",
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "enum": [
+                "throughput"
+              ]
+            },
+            "properties": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/ThroughputUpdateProperties"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ],
+              "description": "Properties to update Azure Cosmos DB resource throughput."
+            }
+          },
+          "required": [
+            "name",
+            "properties"
+          ],
+          "description": "Microsoft.DocumentDB/databaseAccounts/apis/databases/settings"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "enum": [
+                "throughput"
+              ]
+            },
+            "properties": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/ThroughputUpdateProperties"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ],
+              "description": "Properties to update Azure Cosmos DB resource throughput."
+            }
+          },
+          "required": [
+            "name",
+            "properties"
+          ],
+          "description": "Microsoft.DocumentDB/databaseAccounts/apis/databases/settings"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "enum": [
+                "throughput"
+              ]
+            },
+            "properties": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/ThroughputUpdateProperties"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ],
+              "description": "Properties to update Azure Cosmos DB resource throughput."
+            }
+          },
+          "required": [
+            "name",
+            "properties"
+          ],
+          "description": "Microsoft.DocumentDB/databaseAccounts/apis/databases/settings"
+        }
+      ],
+      "properties": {
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2015-04-08"
+          ]
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "settings"
+          ]
+        }
+      },
+      "required": [
+        "apiVersion",
+        "type"
+      ],
+      "description": "Microsoft.DocumentDB/databaseAccounts/apis/databases/settings"
     },
     "databaseAccounts_apis_keyspaces_settings_childResource": {
       "type": "object",

@@ -97,7 +97,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The job definition name that is being queried."
+          "description": "The job definition name to be created or updated."
         },
         "properties": {
           "oneOf": [
@@ -136,7 +136,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The data store/repository name queried."
+          "description": "The data store/repository name to be created or updated."
         },
         "properties": {
           "oneOf": [
@@ -213,7 +213,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The data store/repository name queried."
+          "description": "The data store/repository name to be created or updated."
         },
         "properties": {
           "oneOf": [

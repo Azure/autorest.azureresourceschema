@@ -106,7 +106,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The peering service name."
+          "description": "The name of the peering service."
         },
         "properties": {
           "oneOf": [
@@ -171,7 +171,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The prefix name."
+          "description": "The prefix name"
         },
         "properties": {
           "oneOf": [
@@ -677,7 +677,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The prefix name."
+          "description": "The prefix name"
         },
         "properties": {
           "oneOf": [
