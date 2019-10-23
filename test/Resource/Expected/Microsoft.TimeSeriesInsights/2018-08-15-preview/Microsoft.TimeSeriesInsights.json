@@ -27,7 +27,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The name of the Time Series Insights environment associated with the specified resource group."
+          "description": "Name of the environment"
         },
         "resources": {
           "type": "array",
@@ -98,7 +98,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The name of the Time Series Insights access policy associated with the specified environment."
+          "description": "Name of the access policy."
         },
         "properties": {
           "oneOf": [
@@ -148,7 +148,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The name of the Time Series Insights event source associated with the specified environment."
+          "description": "Name of the event source."
         },
         "tags": {
           "oneOf": [
@@ -195,7 +195,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The name of the Time Series Insights reference data set associated with the specified environment."
+          "description": "Name of the reference data set."
         },
         "properties": {
           "oneOf": [
@@ -283,7 +283,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The name of the Time Series Insights access policy associated with the specified environment."
+          "description": "Name of the access policy."
         },
         "properties": {
           "oneOf": [
@@ -333,7 +333,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The name of the Time Series Insights event source associated with the specified environment."
+          "description": "Name of the event source."
         },
         "tags": {
           "oneOf": [
@@ -380,7 +380,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The name of the Time Series Insights reference data set associated with the specified environment."
+          "description": "Name of the reference data set."
         },
         "properties": {
           "oneOf": [

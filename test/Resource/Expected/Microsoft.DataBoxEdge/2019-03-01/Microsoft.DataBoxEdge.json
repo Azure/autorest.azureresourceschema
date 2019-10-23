@@ -117,7 +117,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The alert name."
+          "description": "The bandwidth schedule name which needs to be added/updated."
         },
         "properties": {
           "oneOf": [
@@ -207,7 +207,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The alert name."
+          "description": "The role name."
         },
         "type": {
           "type": "string",
@@ -234,7 +234,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The alert name."
+          "description": "The share name."
         },
         "properties": {
           "oneOf": [
@@ -273,7 +273,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The alert name."
+          "description": "The storage account credential name."
         },
         "properties": {
           "oneOf": [
@@ -320,7 +320,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The alert name."
+          "description": "The trigger name."
         },
         "type": {
           "type": "string",
@@ -347,7 +347,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The alert name."
+          "description": "The user name."
         },
         "properties": {
           "oneOf": [
@@ -674,7 +674,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The alert name."
+          "description": "The bandwidth schedule name which needs to be added/updated."
         },
         "properties": {
           "oneOf": [
@@ -764,7 +764,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The alert name."
+          "description": "The role name."
         },
         "type": {
           "type": "string",
@@ -791,7 +791,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The alert name."
+          "description": "The share name."
         },
         "properties": {
           "oneOf": [
@@ -830,7 +830,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The alert name."
+          "description": "The storage account credential name."
         },
         "properties": {
           "oneOf": [
@@ -877,7 +877,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The alert name."
+          "description": "The trigger name."
         },
         "type": {
           "type": "string",
@@ -904,7 +904,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The alert name."
+          "description": "The user name."
         },
         "properties": {
           "oneOf": [

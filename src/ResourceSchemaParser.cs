@@ -31,6 +31,9 @@ namespace AutoRest.AzureResourceSchema
         public static void LogMessage(string message)
             => Logger.Instance.Log(new LogMessage(Category.Information, message));
 
+        public static void LogWarning(string message)
+            => Logger.Instance.Log(new LogMessage(Category.Warning, message));
+
         public static void LogError(string message)
             => Logger.Instance.Log(new LogMessage(Category.Error, message));
 
@@ -239,7 +242,7 @@ namespace AutoRest.AzureResourceSchema
                 var (success, failureReason, resourceDescriptors) = ParseMethod(method, apiVersion);
                 if (!success)
                 {
-                    LogMessage($"Skipping path '{method.Url}': {failureReason}");
+                    LogWarning($"Skipping path '{method.Url}': {failureReason}");
                     continue;
                 }
 
@@ -266,7 +269,7 @@ namespace AutoRest.AzureResourceSchema
                     (success, failureReason, resourceName) = ParseNameSchema(serviceClient, method, providerDefinition, descriptor);
                     if (!success)
                     {
-                        LogMessage($"Skipping resource type {descriptor.FullyQualifiedType} under path '{method.Url}': {failureReason}");
+                        LogWarning($"Skipping resource type {descriptor.FullyQualifiedType} under path '{method.Url}': {failureReason}");
                         continue;
                     }
 
@@ -326,14 +329,15 @@ namespace AutoRest.AzureResourceSchema
 
                 if (processedSchemas.ContainsKey(descriptor.FullyQualifiedType))
                 {
-                    LogMessage($"Found duplicate definition for type {descriptor.FullyQualifiedType}");
+                    LogWarning($"Found duplicate definition for type {descriptor.FullyQualifiedType}");
                     continue;
                 }
 
                 if (definitions.Length > 1 && descriptor.HasVariableName)
                 {
-                    LogMessage($"Found duplicate definition for variable-named type {descriptor.FullyQualifiedType}");
-                    continue;
+                    LogWarning($"Found duplicate definition for variable-named type {descriptor.FullyQualifiedType}. Using first.");
+
+                    definitions = definitions.Take(1).ToArray();
                 }
 
                 // Add schema to global resources

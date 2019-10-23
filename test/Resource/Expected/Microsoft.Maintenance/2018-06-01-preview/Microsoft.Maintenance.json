@@ -19,7 +19,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Resource identifier"
+          "description": "Resource Identifier"
         },
         "properties": {
           "oneOf": [
@@ -117,6 +117,49 @@
         "type"
       ],
       "description": "Microsoft.Maintenance/applyUpdates"
+    },
+    "configurationAssignments": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2018-06-01-preview"
+          ]
+        },
+        "location": {
+          "type": "string",
+          "description": "Location of the resource"
+        },
+        "name": {
+          "type": "string",
+          "description": "Configuration assignment name"
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/ConfigurationAssignmentProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Properties for configuration assignment"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "Microsoft.Maintenance/configurationAssignments"
+          ]
+        }
+      },
+      "required": [
+        "apiVersion",
+        "name",
+        "properties",
+        "type"
+      ],
+      "description": "Microsoft.Maintenance/configurationAssignments"
     }
   },
   "definitions": {

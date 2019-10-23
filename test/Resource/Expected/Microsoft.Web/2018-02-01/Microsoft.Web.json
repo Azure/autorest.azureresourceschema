@@ -86,7 +86,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the certificate."
+          "description": "Name of the App Service Environment."
         },
         "properties": {
           "oneOf": [
@@ -277,7 +277,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the certificate."
+          "description": "Name of the App Service plan."
         },
         "properties": {
           "oneOf": [
@@ -448,7 +448,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the certificate."
+          "description": "Unique name of the app to create or update. To create or update a deployment slot, use the {slot} parameter."
         },
         "properties": {
           "oneOf": [
@@ -962,7 +962,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Deployment ID."
+          "description": "ID of an existing deployment."
         },
         "properties": {
           "oneOf": [
@@ -1103,13 +1103,22 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/FunctionEnvelopeProperties"
+              "$ref": "#/definitions/FunctionEnvelopePropertiesModel"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
-          ],
-          "description": "FunctionEnvelope resource specific properties"
+          ]
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/sites_functions_keys_childResource"
+              }
+            ]
+          }
         },
         "type": {
           "type": "string",
@@ -1126,6 +1135,37 @@
       ],
       "description": "Microsoft.Web/sites/functions"
     },
+    "sites_functions_keys": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2018-02-01"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the key."
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "Microsoft.Web/sites/functions/keys"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "description": "Key value"
+        }
+      },
+      "required": [
+        "apiVersion",
+        "name",
+        "type"
+      ],
+      "description": "Microsoft.Web/sites/functions/keys"
+    },
     "sites_hostNameBindings": {
       "type": "object",
       "properties": {
@@ -1141,7 +1181,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Custom hostname."
+          "description": "Hostname in the hostname binding."
         },
         "properties": {
           "oneOf": [
@@ -1184,7 +1224,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the hybrid connection."
+          "description": "Name of the hybrid connection configuration."
         },
         "properties": {
           "oneOf": [
@@ -1227,7 +1267,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the Service Bus relay."
+          "description": "The relay name for this hybrid connection."
         },
         "properties": {
           "oneOf": [
@@ -1618,7 +1658,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Slot Name"
+          "description": "Name of the deployment slot to create or update. By default, this API attempts to create or modify the production slot."
         },
         "properties": {
           "oneOf": [
@@ -2090,7 +2130,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Deployment ID."
+          "description": "ID of an existing deployment."
         },
         "properties": {
           "oneOf": [
@@ -2231,13 +2271,22 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/FunctionEnvelopeProperties"
+              "$ref": "#/definitions/FunctionEnvelopePropertiesModel"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
-          ],
-          "description": "FunctionEnvelope resource specific properties"
+          ]
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/sites_slots_functions_keys_childResource"
+              }
+            ]
+          }
         },
         "type": {
           "type": "string",
@@ -2254,6 +2303,37 @@
       ],
       "description": "Microsoft.Web/sites/slots/functions"
     },
+    "sites_slots_functions_keys": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2018-02-01"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the key."
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "Microsoft.Web/sites/slots/functions/keys"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "description": "Key value"
+        }
+      },
+      "required": [
+        "apiVersion",
+        "name",
+        "type"
+      ],
+      "description": "Microsoft.Web/sites/slots/functions/keys"
+    },
     "sites_slots_hostNameBindings": {
       "type": "object",
       "properties": {
@@ -2269,7 +2349,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Custom hostname."
+          "description": "Hostname in the hostname binding."
         },
         "properties": {
           "oneOf": [
@@ -2312,7 +2392,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the hybrid connection."
+          "description": "Name of the hybrid connection configuration."
         },
         "properties": {
           "oneOf": [
@@ -2355,7 +2435,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the Service Bus relay."
+          "description": "The relay name for this hybrid connection."
         },
         "properties": {
           "oneOf": [
@@ -2731,7 +2811,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the Virtual Network."
+          "description": "Name of an existing Virtual Network."
         },
         "properties": {
           "oneOf": [
@@ -2784,7 +2864,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the gateway. Only the 'primary' gateway is supported."
+          "description": "Name of the gateway. Currently, the only supported string is \"primary\"."
         },
         "properties": {
           "oneOf": [
@@ -2877,7 +2957,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the Virtual Network."
+          "description": "Name of an existing Virtual Network."
         },
         "properties": {
           "oneOf": [
@@ -2930,7 +3010,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the gateway. Only the 'primary' gateway is supported."
+          "description": "Name of the gateway. Currently, the only supported string is \"primary\"."
         },
         "properties": {
           "oneOf": [
@@ -4294,7 +4374,7 @@
       },
       "description": "Http logs to file system configuration."
     },
-    "FunctionEnvelopeProperties": {
+    "FunctionEnvelopePropertiesModel": {
       "type": "object",
       "properties": {
         "config": {
@@ -4329,6 +4409,25 @@
           "type": "string",
           "description": "Function URI."
         },
+        "invoke_url_template": {
+          "type": "string",
+          "description": "The invocation URL"
+        },
+        "isDisabled": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Value indicating whether the function is disabled"
+        },
+        "language": {
+          "type": "string",
+          "description": "The function language"
+        },
         "script_href": {
           "type": "string",
           "description": "Script URI."
@@ -4344,9 +4443,12 @@
         "test_data": {
           "type": "string",
           "description": "Test data used when testing via the Azure Portal."
+        },
+        "test_data_href": {
+          "type": "string",
+          "description": "Test data URI."
         }
-      },
-      "description": "FunctionEnvelope resource specific properties"
+      }
     },
     "GeoDistribution": {
       "type": "object",
@@ -6765,7 +6867,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Deployment ID."
+          "description": "ID of an existing deployment."
         },
         "properties": {
           "oneOf": [
@@ -6906,13 +7008,12 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/FunctionEnvelopeProperties"
+              "$ref": "#/definitions/FunctionEnvelopePropertiesModel"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
-          ],
-          "description": "FunctionEnvelope resource specific properties"
+          ]
         },
         "type": {
           "type": "string",
@@ -6929,6 +7030,37 @@
       ],
       "description": "Microsoft.Web/sites/functions"
     },
+    "sites_functions_keys_childResource": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2018-02-01"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the key."
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "keys"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "description": "Key value"
+        }
+      },
+      "required": [
+        "apiVersion",
+        "name",
+        "type"
+      ],
+      "description": "Microsoft.Web/sites/functions/keys"
+    },
     "sites_hostNameBindings_childResource": {
       "type": "object",
       "properties": {
@@ -6944,7 +7076,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Custom hostname."
+          "description": "Hostname in the hostname binding."
         },
         "properties": {
           "oneOf": [
@@ -6987,7 +7119,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the hybrid connection."
+          "description": "Name of the hybrid connection configuration."
         },
         "properties": {
           "oneOf": [
@@ -7328,7 +7460,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Slot Name"
+          "description": "Name of the deployment slot to create or update. By default, this API attempts to create or modify the production slot."
         },
         "properties": {
           "oneOf": [
@@ -7706,7 +7838,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Deployment ID."
+          "description": "ID of an existing deployment."
         },
         "properties": {
           "oneOf": [
@@ -7847,13 +7979,12 @@
         "properties": {
           "oneOf": [
             {
-              "$ref": "#/definitions/FunctionEnvelopeProperties"
+              "$ref": "#/definitions/FunctionEnvelopePropertiesModel"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
-          ],
-          "description": "FunctionEnvelope resource specific properties"
+          ]
         },
         "type": {
           "type": "string",
@@ -7870,6 +8001,37 @@
       ],
       "description": "Microsoft.Web/sites/slots/functions"
     },
+    "sites_slots_functions_keys_childResource": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2018-02-01"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the key."
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "keys"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "description": "Key value"
+        }
+      },
+      "required": [
+        "apiVersion",
+        "name",
+        "type"
+      ],
+      "description": "Microsoft.Web/sites/slots/functions/keys"
+    },
     "sites_slots_hostNameBindings_childResource": {
       "type": "object",
       "properties": {
@@ -7885,7 +8047,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Custom hostname."
+          "description": "Hostname in the hostname binding."
         },
         "properties": {
           "oneOf": [
@@ -7928,7 +8090,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the hybrid connection."
+          "description": "Name of the hybrid connection configuration."
         },
         "properties": {
           "oneOf": [
@@ -8254,7 +8416,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the Virtual Network."
+          "description": "Name of an existing Virtual Network."
         },
         "properties": {
           "oneOf": [
@@ -8297,7 +8459,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the gateway. Only the 'primary' gateway is supported."
+          "description": "Name of the gateway. Currently, the only supported string is \"primary\"."
         },
         "properties": {
           "oneOf": [
@@ -8390,7 +8552,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the Virtual Network."
+          "description": "Name of an existing Virtual Network."
         },
         "properties": {
           "oneOf": [
@@ -8433,7 +8595,7 @@
         },
         "name": {
           "type": "string",
-          "description": "Name of the gateway. Only the 'primary' gateway is supported."
+          "description": "Name of the gateway. Currently, the only supported string is \"primary\"."
         },
         "properties": {
           "oneOf": [

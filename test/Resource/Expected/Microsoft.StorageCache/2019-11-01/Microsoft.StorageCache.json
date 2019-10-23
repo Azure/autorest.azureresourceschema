@@ -100,7 +100,7 @@
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
           ],
-          "description": "Name of Storage Target."
+          "description": "Name of the Storage Target."
         },
         "properties": {
           "oneOf": [
@@ -210,7 +210,7 @@
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
           ],
-          "description": "Name of Storage Target."
+          "description": "Name of the Storage Target."
         },
         "properties": {
           "oneOf": [

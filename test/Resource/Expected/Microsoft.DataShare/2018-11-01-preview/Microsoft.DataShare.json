@@ -231,7 +231,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The name of the dataSetMapping."
+          "description": "The Id of the source data set being mapped."
         },
         "type": {
           "type": "string",
@@ -492,7 +492,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The name of the dataSetMapping."
+          "description": "The Id of the source data set being mapped."
         },
         "type": {
           "type": "string",

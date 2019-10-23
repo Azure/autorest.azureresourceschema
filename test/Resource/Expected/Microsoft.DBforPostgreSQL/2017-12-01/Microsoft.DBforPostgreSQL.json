@@ -234,7 +234,7 @@
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
           ],
-          "description": "The name of the security alert policy."
+          "description": "The name of the threat detection policy."
         },
         "properties": {
           "oneOf": [
@@ -742,7 +742,7 @@
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
           ],
-          "description": "The name of the security alert policy."
+          "description": "The name of the threat detection policy."
         },
         "properties": {
           "oneOf": [
