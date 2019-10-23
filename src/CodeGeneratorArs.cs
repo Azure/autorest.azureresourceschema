@@ -22,8 +22,6 @@ namespace AutoRest.AzureResourceSchema
 
         public override async Task Generate(CodeModel serviceClient)
         {
-            var multiScope = await Settings.Instance.Host?.GetValue<bool?>("multi-scope") ?? false;
-
             var apiVersions = serviceClient.Methods
                 .Select(method => method.Parameters.FirstOrDefault(p => p.SerializedName == "api-version")?.DefaultValue.Value)
                 .Concat(new [] { serviceClient.ApiVersion })
@@ -32,7 +30,7 @@ namespace AutoRest.AzureResourceSchema
 
             foreach(var version in apiVersions)
             { 
-                var resourceSchemas = ResourceSchemaParser.Parse(serviceClient, version, multiScope);
+                var resourceSchemas = ResourceSchemaParser.Parse(serviceClient, version);
 
                 foreach (string resourceProvider in resourceSchemas.Keys)
                 {

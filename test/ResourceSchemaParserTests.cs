@@ -3,6 +3,7 @@
 
 using System.Collections.Generic;
 using System.Linq;
+using AutoRest.AzureResourceSchema.Models;
 using AutoRest.Core.Model;
 using Xunit;
 using static AutoRest.Core.Utilities.DependencyInjection;
@@ -39,7 +40,7 @@ namespace AutoRest.AzureResourceSchema.Tests
 
             codeModel.Add(method);
 
-            var schemas = ResourceSchemaParser.Parse(codeModel, codeModel.ApiVersion, false);
+            var schemas = ResourceSchemaParser.Parse(codeModel, codeModel.ApiVersion);
             Assert.NotNull(schemas);
             Assert.Equal(1, schemas.Count);
 
@@ -49,7 +50,7 @@ namespace AutoRest.AzureResourceSchema.Tests
             Assert.Equal("Mock.Provider", schema.Title);
             Assert.Equal("Mock Provider Resource Types", schema.Description);
             Assert.Equal(1, schema.ResourceDefinitions.Count);
-            Assert.Equal("mockResourceNames", schema.ResourceDefinitions.Keys.Single());
+            Assert.Equal("mockResourceNames", schema.ResourceDefinitions.Keys.Single().UnqualifiedType);
             Assert.Equal(
                 new JsonSchema()
                 {
@@ -58,7 +59,7 @@ namespace AutoRest.AzureResourceSchema.Tests
                 }
                 .AddProperty("type", JsonSchema.CreateSingleValuedEnum("Mock.Provider/mockResourceNames"), true)
                 .AddProperty("apiVersion", JsonSchema.CreateSingleValuedEnum("2016-01-01"), true),
-                schema.ResourceDefinitions["mockResourceNames"].Schema);
+                schema.ResourceDefinitions.Values.Single());
             Assert.NotNull(schema.Definitions);
             Assert.Equal(0, schema.Definitions.Count);
         }

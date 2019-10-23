@@ -7,16 +7,6 @@
     "guestDiagnosticSettings": {
       "type": "object",
       "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the diagnostic setting."
-        },
-        "type": {
-          "type": "string",
-          "enum": [
-            "microsoft.insights/guestDiagnosticSettings"
-          ]
-        },
         "apiVersion": {
           "type": "string",
           "enum": [
@@ -27,20 +17,9 @@
           "type": "string",
           "description": "Resource location"
         },
-        "tags": {
-          "oneOf": [
-            {
-              "type": "object",
-              "additionalProperties": {
-                "type": "string"
-              },
-              "properties": {}
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "Resource tags"
+        "name": {
+          "type": "string",
+          "description": "The name of the diagnostic setting."
         },
         "properties": {
           "oneOf": [
@@ -52,41 +31,6 @@
             }
           ],
           "description": "Virtual machine diagnostic settings"
-        }
-      },
-      "required": [
-        "name",
-        "type",
-        "apiVersion",
-        "location",
-        "properties"
-      ],
-      "description": "microsoft.insights/guestDiagnosticSettings"
-    }
-  },
-  "unknown_resourceDefinitions": {
-    "guestDiagnosticSettingsAssociation": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the diagnostic settings association."
-        },
-        "type": {
-          "type": "string",
-          "enum": [
-            "microsoft.insights/guestDiagnosticSettingsAssociation"
-          ]
-        },
-        "apiVersion": {
-          "type": "string",
-          "enum": [
-            "2018-06-01-preview"
-          ]
-        },
-        "location": {
-          "type": "string",
-          "description": "Resource location"
         },
         "tags": {
           "oneOf": [
@@ -103,6 +47,41 @@
           ],
           "description": "Resource tags"
         },
+        "type": {
+          "type": "string",
+          "enum": [
+            "microsoft.insights/guestDiagnosticSettings"
+          ]
+        }
+      },
+      "required": [
+        "apiVersion",
+        "location",
+        "name",
+        "properties",
+        "type"
+      ],
+      "description": "microsoft.insights/guestDiagnosticSettings"
+    }
+  },
+  "unknown_resourceDefinitions": {
+    "guestDiagnosticSettingsAssociation": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2018-06-01-preview"
+          ]
+        },
+        "location": {
+          "type": "string",
+          "description": "Resource location"
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the diagnostic settings association."
+        },
         "properties": {
           "oneOf": [
             {
@@ -113,14 +92,35 @@
             }
           ],
           "description": "A guest diagnostic settings association."
+        },
+        "tags": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {}
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Resource tags"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "microsoft.insights/guestDiagnosticSettingsAssociation"
+          ]
         }
       },
       "required": [
-        "name",
-        "type",
         "apiVersion",
         "location",
-        "properties"
+        "name",
+        "properties",
+        "type"
       ],
       "description": "microsoft.insights/guestDiagnosticSettingsAssociation"
     }
@@ -129,6 +129,16 @@
     "DataSource": {
       "type": "object",
       "properties": {
+        "configuration": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DataSourceConfiguration"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
         "kind": {
           "oneOf": [
             {
@@ -145,16 +155,6 @@
           ],
           "description": "Datasource kind."
         },
-        "configuration": {
-          "oneOf": [
-            {
-              "$ref": "#/definitions/DataSourceConfiguration"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ]
-        },
         "sinks": {
           "oneOf": [
             {
@@ -170,8 +170,8 @@
         }
       },
       "required": [
-        "kind",
         "configuration",
+        "kind",
         "sinks"
       ],
       "description": "Data source object contains configuration to collect telemetry and one or more sinks to send that telemetry data to"
@@ -179,19 +179,19 @@
     "DataSourceConfiguration": {
       "type": "object",
       "properties": {
-        "providers": {
+        "eventLogs": {
           "oneOf": [
             {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/EtwProviderConfiguration"
+                "$ref": "#/definitions/EventLogConfiguration"
               }
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
           ],
-          "description": "ETW providers configuration"
+          "description": "Windows event logs configuration."
         },
         "perfCounters": {
           "oneOf": [
@@ -207,26 +207,26 @@
           ],
           "description": "Performance counter configuration"
         },
-        "eventLogs": {
+        "providers": {
           "oneOf": [
             {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/EventLogConfiguration"
+                "$ref": "#/definitions/EtwProviderConfiguration"
               }
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
           ],
-          "description": "Windows event logs configuration."
+          "description": "ETW providers configuration"
         }
       }
     },
     "EtwEventConfiguration": {
       "type": "object",
       "properties": {
-        "name": {
+        "filter": {
           "type": "string"
         },
         "id": {
@@ -239,21 +239,18 @@
             }
           ]
         },
-        "filter": {
+        "name": {
           "type": "string"
         }
       },
       "required": [
-        "name",
-        "id"
+        "id",
+        "name"
       ]
     },
     "EtwProviderConfiguration": {
       "type": "object",
       "properties": {
-        "id": {
-          "type": "string"
-        },
         "events": {
           "oneOf": [
             {
@@ -266,20 +263,23 @@
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
           ]
+        },
+        "id": {
+          "type": "string"
         }
       },
       "required": [
-        "id",
-        "events"
+        "events",
+        "id"
       ]
     },
     "EventLogConfiguration": {
       "type": "object",
       "properties": {
-        "logName": {
+        "filter": {
           "type": "string"
         },
-        "filter": {
+        "logName": {
           "type": "string"
         }
       },
@@ -290,6 +290,20 @@
     "GuestDiagnosticSettings": {
       "type": "object",
       "properties": {
+        "dataSources": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/DataSource"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "the array of data source object which are configured to collect and send data"
+        },
         "osType": {
           "oneOf": [
             {
@@ -304,20 +318,6 @@
             }
           ],
           "description": "Operating system type for the configuration."
-        },
-        "dataSources": {
-          "oneOf": [
-            {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/DataSource"
-              }
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "the array of data source object which are configured to collect and send data"
         },
         "proxySetting": {
           "type": "string"
@@ -341,13 +341,13 @@
     "PerformanceCounterConfiguration": {
       "type": "object",
       "properties": {
+        "instance": {
+          "type": "string"
+        },
         "name": {
           "type": "string"
         },
         "samplingPeriod": {
-          "type": "string"
-        },
-        "instance": {
           "type": "string"
         }
       },
