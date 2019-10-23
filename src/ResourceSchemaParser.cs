@@ -119,6 +119,7 @@ namespace AutoRest.AzureResourceSchema
                 ResourceTypeSegments = type.ToList(),
                 ApiVersion = apiVersion,
                 HasVariableName = hasVariableName,
+                XmsMetadata = method.XMsMetadata,
             }));
         }
 
@@ -335,9 +336,15 @@ namespace AutoRest.AzureResourceSchema
 
                 if (definitions.Length > 1 && descriptor.HasVariableName)
                 {
-                    LogWarning($"Found duplicate definition for variable-named type {descriptor.FullyQualifiedType}. Using first.");
+                    var selectedDefinition = definitions.First();
 
-                    definitions = definitions.Take(1).ToArray();
+                    foreach (var definition in definitions.Skip(1))
+                    {
+                        LogWarning($"Found duplicate definition for variable-named type {descriptor.FullyQualifiedType}. Skipping definition with path '{definition.Descriptor.XmsMetadata.path}'.");
+                    }
+                    LogWarning($"Found duplicate definition for variable-named type {descriptor.FullyQualifiedType}. Using definition with path '{selectedDefinition.Descriptor.XmsMetadata.path}'.");
+
+                    definitions = new[] { selectedDefinition };
                 }
 
                 // Add schema to global resources
