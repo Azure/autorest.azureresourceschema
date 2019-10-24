@@ -5912,14 +5912,9 @@
           "description": "Kind of resource."
         },
         "name": {
-          "oneOf": [
-            {
-              "type": "string",
-              "pattern": "^.*/MSDeploy$"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
+          "type": "string",
+          "enum": [
+            "MSDeploy"
           ]
         },
         "properties": {
@@ -6091,14 +6086,9 @@
           "description": "Kind of resource."
         },
         "name": {
-          "oneOf": [
-            {
-              "type": "string",
-              "pattern": "^.*/migrate$"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
+          "type": "string",
+          "enum": [
+            "migrate"
           ]
         },
         "properties": {
@@ -6141,14 +6131,9 @@
           "description": "Kind of resource."
         },
         "name": {
-          "oneOf": [
-            {
-              "type": "string",
-              "pattern": "^.*/virtualNetwork$"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
+          "type": "string",
+          "enum": [
+            "virtualNetwork"
           ]
         },
         "properties": {
@@ -6254,14 +6239,9 @@
           "description": "Kind of resource."
         },
         "name": {
-          "oneOf": [
-            {
-              "type": "string",
-              "pattern": "^.*/virtualNetworks$"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
+          "type": "string",
+          "enum": [
+            "virtualNetworks"
           ]
         },
         "properties": {
@@ -6853,14 +6833,9 @@
           "description": "Kind of resource."
         },
         "name": {
-          "oneOf": [
-            {
-              "type": "string",
-              "pattern": "^.*/MSDeploy$"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
+          "type": "string",
+          "enum": [
+            "MSDeploy"
           ]
         },
         "properties": {
@@ -7032,14 +7007,9 @@
           "description": "Kind of resource."
         },
         "name": {
-          "oneOf": [
-            {
-              "type": "string",
-              "pattern": "^.*/virtualNetwork$"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
+          "type": "string",
+          "enum": [
+            "virtualNetwork"
           ]
         },
         "properties": {
@@ -7145,14 +7115,9 @@
           "description": "Kind of resource."
         },
         "name": {
-          "oneOf": [
-            {
-              "type": "string",
-              "pattern": "^.*/virtualNetworks$"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
+          "type": "string",
+          "enum": [
+            "virtualNetworks"
           ]
         },
         "properties": {
@@ -7265,14 +7230,9 @@
           "description": "Kind of resource."
         },
         "name": {
-          "oneOf": [
-            {
-              "type": "string",
-              "pattern": "^.*/web$"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
+          "type": "string",
+          "enum": [
+            "web"
           ]
         },
         "properties": {
@@ -7401,14 +7361,9 @@
           "description": "Kind of resource."
         },
         "name": {
-          "oneOf": [
-            {
-              "type": "string",
-              "pattern": "^.*/web$"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
+          "type": "string",
+          "enum": [
+            "web"
           ]
         },
         "properties": {

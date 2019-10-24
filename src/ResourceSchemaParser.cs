@@ -165,6 +165,26 @@ namespace AutoRest.AzureResourceSchema
             return (true, string.Empty, resourceTypes);
         }
 
+        private static ResourceName CreateConstantResourceName(ResourceDescriptor descriptor, string nameValue, string description = null)
+        {
+            var constantNameSchema = descriptor.IsRootType ?
+                JsonSchema.CreateSingleValuedEnum(nameValue) :
+                new JsonSchema
+                {
+                    JsonType = "string",
+                    Pattern = $"^.*/{nameValue}$",
+                };
+
+            constantNameSchema.Description = description;
+
+            return new ResourceName
+            {
+                HasConstantName = true,
+                NameString = nameValue,
+                NameSchema = constantNameSchema,
+            };
+        }
+
         private static (bool success, string failureReason, ResourceName name) ParseNameSchema(CodeModel codeModel, Method method, ProviderDefinition providerDefinition, ResourceDescriptor descriptor)
         {
             var finalProvidersMatch = parentScopePrefix.Match(method.Url);
@@ -194,6 +214,12 @@ namespace AutoRest.AzureResourceSchema
                     nameSchema.Description = RemovePossibleValuesFromDescription(param.Documentation);
                 }
 
+                if (nameSchema?.Enum?.Count == 1)
+                {
+                    // Resource name is a constant
+                    return (true, string.Empty, CreateConstantResourceName(descriptor, nameSchema.Enum.Single(), nameSchema.Description));
+                }
+
                 return (true, string.Empty, new ResourceName
                 {
                     HasConstantName = false,
@@ -207,21 +233,8 @@ namespace AutoRest.AzureResourceSchema
                 return (false, $"Unable to process non-alphanumeric name '{resNameParam}'", null);
             }
 
-            // Resource name is a constant; enforce it with regex.
-            var constantNameSchema = descriptor.IsRootType ?
-                JsonSchema.CreateSingleValuedEnum(resNameParam) :
-                new JsonSchema
-                {
-                    JsonType = "string",
-                    Pattern = $"^.*/{resNameParam}$",
-                };
-
-            return (true, string.Empty, new ResourceName
-            {
-                HasConstantName = true,
-                NameString = resNameParam,
-                NameSchema = constantNameSchema,
-            });
+            // Resource name is a constant
+            return (true, string.Empty, CreateConstantResourceName(descriptor, resNameParam));
         }
 
         /// <summary>
@@ -405,7 +418,11 @@ namespace AutoRest.AzureResourceSchema
                     {
                         childSchema = definitions.Single().BaseSchema.Clone();
 
-                        childSchema.AddPropertyWithOverwrite("name", definitions.Single().Name.NameSchema.Clone(), true);
+                        var resourceName = definitions.Single().Name;
+                        var nameSchema = resourceName.HasConstantName ? JsonSchema.CreateSingleValuedEnum(resourceName.NameString) : resourceName.NameSchema;
+                        nameSchema.Description = resourceName.NameSchema?.Description;
+
+                        childSchema.AddPropertyWithOverwrite("name", nameSchema, true);
                         childSchema.AddPropertyWithOverwrite("type", JsonSchema.CreateSingleValuedEnum(descriptor.ResourceTypeSegments.Last()), true);
                         childSchema.AddPropertyWithOverwrite("apiVersion", JsonSchema.CreateSingleValuedEnum(descriptor.ApiVersion), true);
                     }
@@ -426,7 +443,10 @@ namespace AutoRest.AzureResourceSchema
 
                             var oneOfSchema = definition.BaseSchema.Clone();
 
-                            oneOfSchema.AddPropertyWithOverwrite("name", JsonSchema.CreateSingleValuedEnum(definition.Name.NameString), true);
+                            var nameSchema = JsonSchema.CreateSingleValuedEnum(definition.Name.NameString);
+                            nameSchema.Description = definition.Name.NameSchema?.Description;
+
+                            oneOfSchema.AddPropertyWithOverwrite("name", nameSchema, true);
 
                             childSchema.AddOneOf(oneOfSchema);
                         }
