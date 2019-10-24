@@ -31,7 +31,7 @@ regenExpected = (opts,done) ->
 task 'regenerate', '', (done) ->
   regenExpected {
     'outputDir': 'test/Resource/Expected',
-    'inputBaseDir': 'https://github.com/Azure/azure-rest-api-specs/blob/282efa7dd8301ba615d8741f740f1ed7f500fed1/specification',
+    'inputBaseDir': 'https://github.com/Azure/azure-rest-api-specs/blob/282efa7d/specification',
     'mappings': {
       'Microsoft.AlertsManagement': { basePath: 'alertsmanagement/resource-manager', apiVersions: [ '2018-05-05', '2018-05-05-preview', '2019-03-01', '2019-03-01-preview', '2019-05-05-preview', '2019-06-01' ]},
       'Microsoft.Attestation': { basePath: 'attestation/resource-manager', apiVersions: [ '2018-09-01-preview' ]},
@@ -74,6 +74,7 @@ task 'regenerate', '', (done) ->
       'Microsoft.ServiceBus': { basePath: 'servicebus/resource-manager', apiVersions: [ '2014-09-01', '2015-08-01', '2017-04-01', '2018-01-01-preview' ]},
       'Microsoft.ServiceFabric': { basePath: 'servicefabric/resource-manager', apiVersions: [ '2016-09-01', '2017-07-01-preview', '2018-02-01', '2019-03-01', '2019-03-01-preview', '2019-06-01-preview' ]},
       'Microsoft.ServiceFabricMesh': { basePath: 'servicefabricmesh/resource-manager', apiVersions: [ '2018-07-01-preview', '2018-09-01-preview' ]},
+      'Microsoft.Sql': { basePath: 'sql/resource-manager', apiVersions: [ '2014-04-01', '2015-05-01-preview', '2017-03-01-preview', '2017-10-01-preview', '2018-06-01-preview' ]},
       'Microsoft.SqlVirtualMachine': { basePath: 'sqlvirtualmachine/resource-manager', apiVersions: [ '2017-03-01-preview' ]},
       'Microsoft.StorageCache': { basePath: 'storagecache/resource-manager', apiVersions: [ '2019-08-01-preview', '2019-11-01' ]},
       'Microsoft.StorageSync': { basePath: 'storagesync/resource-manager', apiVersions: [ '2017-06-05-preview', '2018-04-02', '2018-07-01', '2018-10-01', '2019-02-01', '2019-03-01', '2019-06-01' ]},
