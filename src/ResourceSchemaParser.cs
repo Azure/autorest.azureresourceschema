@@ -172,7 +172,7 @@ namespace AutoRest.AzureResourceSchema
                 new JsonSchema
                 {
                     JsonType = "string",
-                    Pattern = $"^.*/{nameValue}$",
+                    Pattern = $"^.*/{Regex.Escape(nameValue)}$",
                 };
 
             constantNameSchema.Description = description;
