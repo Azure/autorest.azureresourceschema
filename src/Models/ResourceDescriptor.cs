@@ -31,7 +31,7 @@ namespace AutoRest.AzureResourceSchema.Models
         public bool IsRootType => ResourceTypeSegments.Count == 1;
 
         public static string FormatFullyQualifiedTypeWithScope(ScopeType scopeType, string providerNamespace, IEnumerable<string> resourceTypeSegments)
-            => $"{scopeType}/{FormatFullyQualifiedType(providerNamespace, resourceTypeSegments)}";
+            => $"{scopeType}:{FormatFullyQualifiedType(providerNamespace, resourceTypeSegments)}";
 
         public static string FormatFullyQualifiedType(string providerNamespace, IEnumerable<string> resourceTypeSegments)
             => $"{providerNamespace}/{FormatUnqualifiedType(resourceTypeSegments)}";
