@@ -216,6 +216,12 @@
           "$ref": "#/definitions/ADLSGen2FileSystemDataSetMapping"
         },
         {
+          "$ref": "#/definitions/KustoClusterDataSetMapping"
+        },
+        {
+          "$ref": "#/definitions/KustoDatabaseDataSetMapping"
+        },
+        {
           "$ref": "#/definitions/SqlDWTableDataSetMapping"
         },
         {
@@ -231,7 +237,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The Id of the source data set being mapped."
+          "description": "The name of the data set mapping to be created."
         },
         "type": {
           "type": "string",
@@ -305,6 +311,12 @@
         },
         {
           "$ref": "#/definitions/ADLSGen1FileDataSet"
+        },
+        {
+          "$ref": "#/definitions/KustoClusterDataSet"
+        },
+        {
+          "$ref": "#/definitions/KustoDatabaseDataSet"
         },
         {
           "$ref": "#/definitions/SqlDWTableDataSet"
@@ -477,6 +489,12 @@
           "$ref": "#/definitions/ADLSGen2FileSystemDataSetMapping"
         },
         {
+          "$ref": "#/definitions/KustoClusterDataSetMapping"
+        },
+        {
+          "$ref": "#/definitions/KustoDatabaseDataSetMapping"
+        },
+        {
           "$ref": "#/definitions/SqlDWTableDataSetMapping"
         },
         {
@@ -492,7 +510,7 @@
         },
         "name": {
           "type": "string",
-          "description": "The Id of the source data set being mapped."
+          "description": "The name of the data set mapping to be created."
         },
         "type": {
           "type": "string",
@@ -605,6 +623,12 @@
         },
         {
           "$ref": "#/definitions/ADLSGen1FileDataSet"
+        },
+        {
+          "$ref": "#/definitions/KustoClusterDataSet"
+        },
+        {
+          "$ref": "#/definitions/KustoDatabaseDataSet"
         },
         {
           "$ref": "#/definitions/SqlDWTableDataSet"
@@ -734,7 +758,7 @@
         "kind",
         "properties"
       ],
-      "description": "An ADLS Gen 1 file dataset."
+      "description": "An ADLS Gen 1 file data set."
     },
     "ADLSGen1FileProperties": {
       "type": "object",
@@ -794,7 +818,7 @@
         "kind",
         "properties"
       ],
-      "description": "An ADLS Gen 1 folder dataset."
+      "description": "An ADLS Gen 1 folder data set."
     },
     "ADLSGen1FolderProperties": {
       "type": "object",
@@ -849,7 +873,7 @@
         "kind",
         "properties"
       ],
-      "description": "An ADLS Gen 2 file dataset."
+      "description": "An ADLS Gen 2 file data set."
     },
     "ADLSGen2FileDataSetMapping": {
       "type": "object",
@@ -869,36 +893,21 @@
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
           ],
-          "description": "ADLS Gen 2 file dataset mapping property bag."
+          "description": "ADLS Gen 2 file data set mapping property bag."
         }
       },
       "required": [
         "kind",
         "properties"
       ],
-      "description": "An ADLS Gen2 file dataset mapping."
+      "description": "An ADLS Gen2 file data set mapping."
     },
     "ADLSGen2FileDataSetMappingProperties": {
       "type": "object",
       "properties": {
         "dataSetId": {
           "type": "string",
-          "description": "Gets the id of source dataset."
-        },
-        "dataSetMappingStatus": {
-          "oneOf": [
-            {
-              "type": "string",
-              "enum": [
-                "Ok",
-                "Broken"
-              ]
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "Gets the status of the dataset mapping."
+          "description": "The id of the source data set."
         },
         "filePath": {
           "type": "string",
@@ -937,13 +946,14 @@
         }
       },
       "required": [
+        "dataSetId",
         "filePath",
         "fileSystem",
         "resourceGroup",
         "storageAccountName",
         "subscriptionId"
       ],
-      "description": "ADLS Gen 2 file dataset mapping property bag."
+      "description": "ADLS Gen 2 file data set mapping property bag."
     },
     "ADLSGen2FileProperties": {
       "type": "object",
@@ -1003,7 +1013,7 @@
         "kind",
         "properties"
       ],
-      "description": "An ADLS Gen 2 file system dataset."
+      "description": "An ADLS Gen 2 file system data set."
     },
     "ADLSGen2FileSystemDataSetMapping": {
       "type": "object",
@@ -1023,36 +1033,21 @@
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
           ],
-          "description": "ADLS Gen 2 file system dataset mapping property bag."
+          "description": "ADLS Gen 2 file system data set mapping property bag."
         }
       },
       "required": [
         "kind",
         "properties"
       ],
-      "description": "An ADLS Gen2 file system dataset mapping."
+      "description": "An ADLS Gen2 file system data set mapping."
     },
     "ADLSGen2FileSystemDataSetMappingProperties": {
       "type": "object",
       "properties": {
         "dataSetId": {
           "type": "string",
-          "description": "Gets the id of source dataset."
-        },
-        "dataSetMappingStatus": {
-          "oneOf": [
-            {
-              "type": "string",
-              "enum": [
-                "Ok",
-                "Broken"
-              ]
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "Gets the status of the dataset mapping."
+          "description": "The id of the source data set."
         },
         "fileSystem": {
           "type": "string",
@@ -1072,12 +1067,13 @@
         }
       },
       "required": [
+        "dataSetId",
         "fileSystem",
         "resourceGroup",
         "storageAccountName",
         "subscriptionId"
       ],
-      "description": "ADLS Gen 2 file system dataset mapping property bag."
+      "description": "ADLS Gen 2 file system data set mapping property bag."
     },
     "ADLSGen2FileSystemProperties": {
       "type": "object",
@@ -1132,7 +1128,7 @@
         "kind",
         "properties"
       ],
-      "description": "An ADLS Gen 2 folder dataset."
+      "description": "An ADLS Gen 2 folder data set."
     },
     "ADLSGen2FolderDataSetMapping": {
       "type": "object",
@@ -1152,36 +1148,21 @@
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
           ],
-          "description": "ADLS Gen 2 folder dataset mapping property bag."
+          "description": "ADLS Gen 2 folder data set mapping property bag."
         }
       },
       "required": [
         "kind",
         "properties"
       ],
-      "description": "An ADLS Gen2 folder dataset mapping."
+      "description": "An ADLS Gen2 folder data set mapping."
     },
     "ADLSGen2FolderDataSetMappingProperties": {
       "type": "object",
       "properties": {
         "dataSetId": {
           "type": "string",
-          "description": "Gets the id of source dataset."
-        },
-        "dataSetMappingStatus": {
-          "oneOf": [
-            {
-              "type": "string",
-              "enum": [
-                "Ok",
-                "Broken"
-              ]
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "Gets the status of the dataset mapping."
+          "description": "The id of the source data set."
         },
         "fileSystem": {
           "type": "string",
@@ -1205,13 +1186,14 @@
         }
       },
       "required": [
+        "dataSetId",
         "fileSystem",
         "folderPath",
         "resourceGroup",
         "storageAccountName",
         "subscriptionId"
       ],
-      "description": "ADLS Gen 2 folder dataset mapping property bag."
+      "description": "ADLS Gen 2 folder data set mapping property bag."
     },
     "ADLSGen2FolderProperties": {
       "type": "object",
@@ -1271,7 +1253,7 @@
         "kind",
         "properties"
       ],
-      "description": "An Azure storage blob container dataset."
+      "description": "An Azure storage blob container data set."
     },
     "BlobContainerDataSetMapping": {
       "type": "object",
@@ -1291,14 +1273,14 @@
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
           ],
-          "description": "Azure storage Blob container dataset mapping property bag."
+          "description": "Azure storage Blob container data set mapping property bag."
         }
       },
       "required": [
         "kind",
         "properties"
       ],
-      "description": "A Blob container dataset mapping."
+      "description": "A Blob container data set mapping."
     },
     "BlobContainerMappingProperties": {
       "type": "object",
@@ -1309,22 +1291,7 @@
         },
         "dataSetId": {
           "type": "string",
-          "description": "Gets the id of source dataset."
-        },
-        "dataSetMappingStatus": {
-          "oneOf": [
-            {
-              "type": "string",
-              "enum": [
-                "Ok",
-                "Broken"
-              ]
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "Gets the status of the dataset mapping."
+          "description": "The id of the source data set."
         },
         "resourceGroup": {
           "type": "string",
@@ -1341,11 +1308,12 @@
       },
       "required": [
         "containerName",
+        "dataSetId",
         "resourceGroup",
         "storageAccountName",
         "subscriptionId"
       ],
-      "description": "Azure storage Blob container dataset mapping property bag."
+      "description": "Azure storage Blob container data set mapping property bag."
     },
     "BlobContainerProperties": {
       "type": "object",
@@ -1400,7 +1368,7 @@
         "kind",
         "properties"
       ],
-      "description": "An Azure storage blob dataset."
+      "description": "An Azure storage blob data set."
     },
     "BlobDataSetMapping": {
       "type": "object",
@@ -1420,14 +1388,14 @@
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
           ],
-          "description": "Azure storage Blob dataset mapping property bag."
+          "description": "Azure storage Blob data set mapping property bag."
         }
       },
       "required": [
         "kind",
         "properties"
       ],
-      "description": "A Blob dataset mapping."
+      "description": "A Blob data set mapping."
     },
     "BlobFolderDataSet": {
       "type": "object",
@@ -1454,7 +1422,7 @@
         "kind",
         "properties"
       ],
-      "description": "An Azure storage blob folder dataset."
+      "description": "An Azure storage blob folder data set."
     },
     "BlobFolderDataSetMapping": {
       "type": "object",
@@ -1474,14 +1442,14 @@
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
           ],
-          "description": "Azure storage Blob folder dataset mapping property bag."
+          "description": "Azure storage Blob folder data set mapping property bag."
         }
       },
       "required": [
         "kind",
         "properties"
       ],
-      "description": "A Blob folder dataset mapping."
+      "description": "A Blob folder data set mapping."
     },
     "BlobFolderMappingProperties": {
       "type": "object",
@@ -1492,22 +1460,7 @@
         },
         "dataSetId": {
           "type": "string",
-          "description": "Gets the id of source dataset."
-        },
-        "dataSetMappingStatus": {
-          "oneOf": [
-            {
-              "type": "string",
-              "enum": [
-                "Ok",
-                "Broken"
-              ]
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "Gets the status of the dataset mapping."
+          "description": "The id of the source data set."
         },
         "prefix": {
           "type": "string",
@@ -1528,12 +1481,13 @@
       },
       "required": [
         "containerName",
+        "dataSetId",
         "prefix",
         "resourceGroup",
         "storageAccountName",
         "subscriptionId"
       ],
-      "description": "Azure storage Blob folder dataset mapping property bag."
+      "description": "Azure storage Blob folder data set mapping property bag."
     },
     "BlobFolderProperties": {
       "type": "object",
@@ -1577,22 +1531,7 @@
         },
         "dataSetId": {
           "type": "string",
-          "description": "Gets the id of source dataset."
-        },
-        "dataSetMappingStatus": {
-          "oneOf": [
-            {
-              "type": "string",
-              "enum": [
-                "Ok",
-                "Broken"
-              ]
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "Gets the status of the dataset mapping."
+          "description": "The id of the source data set."
         },
         "filePath": {
           "type": "string",
@@ -1628,12 +1567,13 @@
       },
       "required": [
         "containerName",
+        "dataSetId",
         "filePath",
         "resourceGroup",
         "storageAccountName",
         "subscriptionId"
       ],
-      "description": "Azure storage Blob dataset mapping property bag."
+      "description": "Azure storage Blob data set mapping property bag."
     },
     "BlobProperties": {
       "type": "object",
@@ -1705,6 +1645,176 @@
         }
       },
       "description": "Invitation property bag."
+    },
+    "KustoClusterDataSet": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "KustoCluster"
+          ]
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/KustoClusterDataSetProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Properties of the kusto cluster data set."
+        }
+      },
+      "required": [
+        "kind",
+        "properties"
+      ],
+      "description": "A kusto cluster data set."
+    },
+    "KustoClusterDataSetMapping": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "KustoCluster"
+          ]
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/KustoClusterDataSetMappingProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Properties of the Kusto cluster data set mapping"
+        }
+      },
+      "required": [
+        "kind",
+        "properties"
+      ],
+      "description": "A Kusto cluster data set mapping"
+    },
+    "KustoClusterDataSetMappingProperties": {
+      "type": "object",
+      "properties": {
+        "dataSetId": {
+          "type": "string",
+          "description": "The id of the source data set."
+        },
+        "kustoClusterResourceId": {
+          "type": "string",
+          "description": "Resource id of the sink kusto cluster."
+        }
+      },
+      "required": [
+        "dataSetId",
+        "kustoClusterResourceId"
+      ],
+      "description": "Properties of the Kusto cluster data set mapping"
+    },
+    "KustoClusterDataSetProperties": {
+      "type": "object",
+      "properties": {
+        "kustoClusterResourceId": {
+          "type": "string",
+          "description": "Resource id of the kusto cluster."
+        }
+      },
+      "required": [
+        "kustoClusterResourceId"
+      ],
+      "description": "Properties of the kusto cluster data set."
+    },
+    "KustoDatabaseDataSet": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "KustoDatabase"
+          ]
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/KustoDatabaseDataSetProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Properties of the kusto database data set."
+        }
+      },
+      "required": [
+        "kind",
+        "properties"
+      ],
+      "description": "A kusto database data set."
+    },
+    "KustoDatabaseDataSetMapping": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "KustoDatabase"
+          ]
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/KustoDatabaseDataSetMappingProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Properties of the Kusto database data set mapping"
+        }
+      },
+      "required": [
+        "kind",
+        "properties"
+      ],
+      "description": "A Kusto database data set mapping"
+    },
+    "KustoDatabaseDataSetMappingProperties": {
+      "type": "object",
+      "properties": {
+        "dataSetId": {
+          "type": "string",
+          "description": "The id of the source data set."
+        },
+        "kustoClusterResourceId": {
+          "type": "string",
+          "description": "Resource id of the sink kusto cluster."
+        }
+      },
+      "required": [
+        "dataSetId",
+        "kustoClusterResourceId"
+      ],
+      "description": "Properties of the Kusto database data set mapping"
+    },
+    "KustoDatabaseDataSetProperties": {
+      "type": "object",
+      "properties": {
+        "kustoDatabaseResourceId": {
+          "type": "string",
+          "description": "Resource id of the kusto database."
+        }
+      },
+      "required": [
+        "kustoDatabaseResourceId"
+      ],
+      "description": "Properties of the kusto database data set."
     },
     "ScheduledSynchronizationSetting": {
       "type": "object",
@@ -1847,7 +1957,8 @@
             {
               "type": "string",
               "enum": [
-                "CopyBased"
+                "CopyBased",
+                "InPlace"
               ]
             },
             {
@@ -1900,7 +2011,7 @@
       "required": [
         "kind"
       ],
-      "description": "A SQL DB table dataset."
+      "description": "A SQL DB table data set."
     },
     "SqlDBTableDataSetMapping": {
       "type": "object",
@@ -1927,7 +2038,7 @@
         "kind",
         "properties"
       ],
-      "description": "A SQL DB Table dataset mapping."
+      "description": "A SQL DB Table data set mapping."
     },
     "SqlDBTableDataSetMappingProperties": {
       "type": "object",
@@ -1938,22 +2049,11 @@
         },
         "dataSetId": {
           "type": "string",
-          "description": "Gets the id of source dataset."
+          "description": "The id of the source data set."
         },
-        "dataSetMappingStatus": {
-          "oneOf": [
-            {
-              "type": "string",
-              "enum": [
-                "Ok",
-                "Broken"
-              ]
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "Gets the status of the dataset mapping."
+        "schemaName": {
+          "type": "string",
+          "description": "Schema of the table. Default value is dbo."
         },
         "sqlServerResourceId": {
           "type": "string",
@@ -1966,6 +2066,8 @@
       },
       "required": [
         "databaseName",
+        "dataSetId",
+        "schemaName",
         "sqlServerResourceId",
         "tableName"
       ],
@@ -1978,6 +2080,10 @@
           "type": "string",
           "description": "Database name of the source data set"
         },
+        "schemaName": {
+          "type": "string",
+          "description": "Schema of the table. Default value is dbo."
+        },
         "sqlServerResourceId": {
           "type": "string",
           "description": "Resource id of SQL server"
@@ -1987,6 +2093,12 @@
           "description": "SQL DB table name."
         }
       },
+      "required": [
+        "databaseName",
+        "schemaName",
+        "sqlServerResourceId",
+        "tableName"
+      ],
       "description": "Properties of the SQL DB table data set."
     },
     "SqlDWTableDataSet": {
@@ -2013,7 +2125,7 @@
       "required": [
         "kind"
       ],
-      "description": "A SQL DW table dataset."
+      "description": "A SQL DW table data set."
     },
     "SqlDWTableDataSetMapping": {
       "type": "object",
@@ -2040,33 +2152,22 @@
         "kind",
         "properties"
       ],
-      "description": "A SQL DW Table dataset mapping."
+      "description": "A SQL DW Table data set mapping."
     },
     "SqlDWTableDataSetMappingProperties": {
       "type": "object",
       "properties": {
         "dataSetId": {
           "type": "string",
-          "description": "Gets the id of source dataset."
-        },
-        "dataSetMappingStatus": {
-          "oneOf": [
-            {
-              "type": "string",
-              "enum": [
-                "Ok",
-                "Broken"
-              ]
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ],
-          "description": "Gets the status of the dataset mapping."
+          "description": "The id of the source data set."
         },
         "dataWarehouseName": {
           "type": "string",
           "description": "DataWarehouse name of the source data set"
+        },
+        "schemaName": {
+          "type": "string",
+          "description": "Schema of the table. Default value is dbo."
         },
         "sqlServerResourceId": {
           "type": "string",
@@ -2078,7 +2179,9 @@
         }
       },
       "required": [
+        "dataSetId",
         "dataWarehouseName",
+        "schemaName",
         "sqlServerResourceId",
         "tableName"
       ],
@@ -2091,6 +2194,10 @@
           "type": "string",
           "description": "DataWarehouse name of the source data set"
         },
+        "schemaName": {
+          "type": "string",
+          "description": "Schema of the table. Default value is dbo."
+        },
         "sqlServerResourceId": {
           "type": "string",
           "description": "Resource id of SQL server"
@@ -2100,6 +2207,12 @@
           "description": "SQL DW table name."
         }
       },
+      "required": [
+        "dataWarehouseName",
+        "schemaName",
+        "sqlServerResourceId",
+        "tableName"
+      ],
       "description": "Properties of the SQL DW table data set."
     }
   }
