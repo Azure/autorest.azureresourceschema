@@ -31,7 +31,7 @@ regenExpected = (opts,done) ->
 task 'regenerate', '', (done) ->
   regenExpected {
     'outputDir': 'test/Resource/Expected',
-    'inputBaseDir': 'https://github.com/Azure/azure-rest-api-specs/blob/282efa7d/specification',
+    'inputBaseDir': 'https://github.com/Azure/azure-rest-api-specs/blob/d960c6cf/specification',
     'mappings': {
       'Microsoft.AlertsManagement': { basePath: 'alertsmanagement/resource-manager', apiVersions: [ '2018-05-05', '2018-05-05-preview', '2019-03-01', '2019-03-01-preview', '2019-05-05-preview', '2019-06-01' ]},
       'Microsoft.Attestation': { basePath: 'attestation/resource-manager', apiVersions: [ '2018-09-01-preview' ]},
@@ -39,6 +39,7 @@ task 'regenerate', '', (done) ->
       'Microsoft.Blockchain': { basePath: 'blockchain/resource-manager', apiVersions: [ '2018-06-01-preview' ]},
       'Microsoft.BotService': { basePath: 'botservice/resource-manager', apiVersions: [ '2017-12-01', '2018-07-12' ]},
       'Microsoft.CognitiveServices': { basePath: 'cognitiveservices/resource-manager', apiVersions: [ '2016-02-01-preview', '2017-04-18' ]},
+      'Microsoft.Consumption': { basePath: 'consumption/resource-manager', apiVersions: [ '2018-10-01' ]},
       'Microsoft.ContainerInstance': { basePath: 'containerinstance/resource-manager', apiVersions: [ '2017-08-01-preview', '2017-10-01-preview', '2017-12-01-preview', '2018-02-01-preview', '2018-04-01', '2018-06-01', '2018-09-01', '2018-10-01' ]},
       'Microsoft.DocumentDB': { basePath: 'cosmos-db/resource-manager', apiVersions: [ '2015-04-08', '2019-08-01', '2019-08-01-preview' ]},
       'Microsoft.ContainerRegistry': { basePath: 'containerregistry/resource-manager', apiVersions: [ '2016-06-27-preview', '2017-03-01', '2017-06-01-preview', '2017-10-01', '2018-02-01-preview', '2018-09-01', '2019-04-01', '2019-05-01', '2019-05-01-preview', '2019-06-01-preview' ]},

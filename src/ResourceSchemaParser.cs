@@ -341,9 +341,9 @@ namespace AutoRest.AzureResourceSchema
                 var descriptor = definitionGrouping.Key;
                 var definitions = definitionGrouping.ToArray();
 
-                if (processedSchemas.ContainsKey(descriptor.FullyQualifiedType))
+                if (processedSchemas.ContainsKey(descriptor.FullyQualifiedTypeWithScope))
                 {
-                    LogWarning($"Found duplicate definition for type {descriptor.FullyQualifiedType}");
+                    LogWarning($"Found duplicate definition for type {descriptor.FullyQualifiedType} in scope {descriptor.ScopeType}");
                     continue;
                 }
 
@@ -397,12 +397,12 @@ namespace AutoRest.AzureResourceSchema
                         schema.AddPropertyWithOverwrite("apiVersion", JsonSchema.CreateSingleValuedEnum(descriptor.ApiVersion), true);
                     }
 
-                    processedSchemas[descriptor.FullyQualifiedType] = schema;
+                    processedSchemas[descriptor.FullyQualifiedTypeWithScope] = schema;
                     resourceDefinitions[descriptor] = schema;
                 }
 
                 // Add schema to parent resources if necessary
-                if (!descriptor.IsRootType && processedSchemas.TryGetValue(ResourceDescriptor.FormatParentFullyQualifiedType(descriptor), out var parentSchema))
+                if (!descriptor.IsRootType && processedSchemas.TryGetValue(ResourceDescriptor.FormatParentFullyQualifiedTypeWithScope(descriptor), out var parentSchema))
                 {
                     if (!parentSchema.Properties.ContainsKey("resources"))
                     {

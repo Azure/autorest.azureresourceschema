@@ -22,23 +22,28 @@ namespace AutoRest.AzureResourceSchema.Models
 
         public XmsMetadata XmsMetadata { get; set; }
 
+        public string FullyQualifiedTypeWithScope => FormatFullyQualifiedTypeWithScope(ScopeType, ProviderNamespace, ResourceTypeSegments);
+
         public string FullyQualifiedType => FormatFullyQualifiedType(ProviderNamespace, ResourceTypeSegments);
 
         public string UnqualifiedType => FormatUnqualifiedType(ResourceTypeSegments);
 
         public bool IsRootType => ResourceTypeSegments.Count == 1;
 
+        public static string FormatFullyQualifiedTypeWithScope(ScopeType scopeType, string providerNamespace, IEnumerable<string> resourceTypeSegments)
+            => $"{scopeType}:{FormatFullyQualifiedType(providerNamespace, resourceTypeSegments)}";
+
         public static string FormatFullyQualifiedType(string providerNamespace, IEnumerable<string> resourceTypeSegments)
             => $"{providerNamespace}/{FormatUnqualifiedType(resourceTypeSegments)}";
 
-        public static string FormatParentFullyQualifiedType(ResourceDescriptor descriptor)
+        public static string FormatParentFullyQualifiedTypeWithScope(ResourceDescriptor descriptor)
         {
             if (descriptor.ResourceTypeSegments.Count < 2)
             {
                 throw new ArgumentException($"Cannot find parent of root type {descriptor.FullyQualifiedType}");
             }
 
-            return FormatFullyQualifiedType(descriptor.ProviderNamespace, descriptor.ResourceTypeSegments.SkipLast(1));
+            return FormatFullyQualifiedTypeWithScope(descriptor.ScopeType, descriptor.ProviderNamespace, descriptor.ResourceTypeSegments.SkipLast(1));
         }
 
         public static string FormatUnqualifiedType(IEnumerable<string> resourceTypeSegments)
