@@ -79,6 +79,11 @@ namespace AutoRest.AzureResourceSchema
         }
 
         /// <summary>
+        /// The number that a numeric value matching this schema must be a multiple of
+        /// </summary>
+        public double? MultipleOf { get; set; }
+
+        /// <summary>
         /// The minimum value that a numeric value matching this schema can have.
         /// </summary>
         public double? Minimum { get; set; }
@@ -155,6 +160,7 @@ namespace AutoRest.AzureResourceSchema
             return Ref == null &&
                    Items == null &&
                    AdditionalProperties == null &&
+                   MultipleOf == null &&
                    Minimum == null &&
                    Maximum == null &&
                    Pattern == null &&
@@ -384,6 +390,7 @@ namespace AutoRest.AzureResourceSchema
             result.Description = Description;
             result.JsonType = JsonType;
             result.AdditionalProperties = Clone(AdditionalProperties);
+            result.MultipleOf = MultipleOf;
             result.Minimum = Minimum;
             result.Maximum = Maximum;
             result.Pattern = Pattern;

@@ -203,6 +203,7 @@ namespace AutoRest.AzureResourceSchema
             writer.WriteStartObject();
 
             WriteProperty(writer, "type", definition.JsonType); // move out once MultiType is here
+            WriteProperty(writer, "multipleOf", definition.MultipleOf);
             WriteProperty(writer, "minimum", definition.Minimum);
             WriteProperty(writer, "maximum", definition.Maximum);
             WriteProperty(writer, "pattern", definition.Pattern);
