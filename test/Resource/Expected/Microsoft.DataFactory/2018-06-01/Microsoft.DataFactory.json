@@ -12777,7 +12777,7 @@
         "rootPath": {
           "type": "object",
           "properties": {},
-          "description": "The root path in 'sparkJobLinkedService' for all the job��s files. Type: string (or Expression with resultType string)."
+          "description": "The root path in 'sparkJobLinkedService' for all the job’s files. Type: string (or Expression with resultType string)."
         },
         "sparkConfig": {
           "oneOf": [

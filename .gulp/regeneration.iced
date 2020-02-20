@@ -5,7 +5,11 @@
 
 regenExpected = (opts,done) ->
   keys = Object.getOwnPropertyNames(opts.mappings)
-  instances = keys.length
+  instances = 0
+
+  for kkey in keys
+    value = opts.mappings[kkey]
+    instances += value.apiVersions.length
 
   for kkey in keys
     value = opts.mappings[kkey]

@@ -131,7 +131,7 @@
         },
         "address2": {
           "type": "string",
-          "description": "The second line of the Address. Optional."
+          "description": "First line of an Address."
         },
         "city": {
           "type": "string",

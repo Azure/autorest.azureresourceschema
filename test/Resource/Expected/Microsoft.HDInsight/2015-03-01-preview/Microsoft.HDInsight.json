@@ -703,7 +703,7 @@
             {
               "type": "object",
               "additionalProperties": {
-                "$ref": "#/definitions/Componentsschemasclusteridentitypropertiesuserassignedidentitiesadditionalproperties"
+                "$ref": "#/definitions/Componentsc51ht8schemasclusteridentitypropertiesuserassignedidentitiesadditionalproperties"
               },
               "properties": {}
             },
@@ -811,7 +811,7 @@
       ],
       "description": "Microsoft.HDInsight/clusters/extensions"
     },
-    "Componentsschemasclusteridentitypropertiesuserassignedidentitiesadditionalproperties": {
+    "Componentsc51ht8schemasclusteridentitypropertiesuserassignedidentitiesadditionalproperties": {
       "type": "object",
       "properties": {}
     },

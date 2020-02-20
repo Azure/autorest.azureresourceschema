@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/Azure/autorest.azureresourceschema/blob/master/README.md",
   "devDependencies": {
-    "@autorest/autorest": "^3.0.6113",
+    "@autorest/autorest": "^3.0.6175",
     "coffee-script": "^1.11.1",
     "dotnet-sdk-2.0.0": "^1.4.4",
     "gulp": "^3.9.1",
