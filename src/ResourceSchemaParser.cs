@@ -702,6 +702,11 @@ namespace AutoRest.AzureResourceSchema
                                 result.Maximum = Double.Parse(entry.Value, CultureInfo.CurrentCulture);
                                 break;
 
+                            case Constraint.MultipleOf:
+                                Debug.Assert(result.JsonType == "integer" || result.JsonType == "number", "Expected to only find a MultipleOf constraint on an integer or number property");
+                                result.MultipleOf = Double.Parse(entry.Value, CultureInfo.CurrentCulture);
+                                break;
+
                             case Constraint.Pattern:
                                 Debug.Assert(result.JsonType == "string", "Expected to only find a Pattern constraint on a string property.");
                                 result.Pattern = entry.Value;

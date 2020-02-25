@@ -4066,7 +4066,7 @@
       ],
       "description": "Information needed for cloning operation."
     },
-    "Componentsschemasmanagedserviceidentitypropertiesuserassignedidentitiesadditionalproperties": {
+    "Components1jq1t4ischemasmanagedserviceidentitypropertiesuserassignedidentitiesadditionalproperties": {
       "type": "object",
       "properties": {}
     },
@@ -4938,7 +4938,7 @@
             {
               "type": "object",
               "additionalProperties": {
-                "$ref": "#/definitions/Componentsschemasmanagedserviceidentitypropertiesuserassignedidentitiesadditionalproperties"
+                "$ref": "#/definitions/Components1jq1t4ischemasmanagedserviceidentitypropertiesuserassignedidentitiesadditionalproperties"
               },
               "properties": {}
             },
