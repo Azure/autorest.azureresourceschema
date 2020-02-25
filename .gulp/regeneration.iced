@@ -66,6 +66,7 @@ task 'regenerate', '', (done) ->
       'Microsoft.HybridData': { basePath: 'hybriddatamanager/resource-manager', apiVersions: [ '2016-06-01' ]},
       'Microsoft.IoTSpaces': { basePath: 'iotspaces/resource-manager', apiVersions: [ '2017-10-01-preview' ]},
       'Microsoft.LabServices': { basePath: 'labservices/resource-manager', apiVersions: [ '2018-10-15' ]},
+      'Microsoft.Logic': { basePath: 'logic/resource-manager', apiVersions: [ '2019-05-01' ]},
       'Microsoft.MachineLearningCompute': { basePath: 'machinelearningcompute/resource-manager', apiVersions: [ '2017-06-01-preview', '2017-08-01-preview' ]},
       'Microsoft.Maintenance': { basePath: 'maintenance/resource-manager', apiVersions: [ '2018-06-01-preview' ]},
       'Microsoft.ManagedNetwork': { basePath: 'managednetwork/resource-manager', apiVersions: [ '2019-06-01-preview' ]},
