@@ -48,7 +48,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "microsoft.alertsManagement/smartDetectorAlertRules"

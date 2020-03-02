@@ -60,7 +60,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.StorageSync/storageSyncServices"
@@ -99,7 +98,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.StorageSync/storageSyncServices/registeredServers"
@@ -151,7 +149,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.StorageSync/storageSyncServices/syncGroups"
@@ -190,7 +187,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints"
@@ -229,7 +225,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints"
@@ -563,7 +558,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.StorageSync/storageSyncServices/registeredServers"
@@ -602,7 +596,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.StorageSync/storageSyncServices/syncGroups"
@@ -641,7 +634,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.StorageSync/storageSyncServices/syncGroups/cloudEndpoints"
@@ -680,7 +672,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.StorageSync/storageSyncServices/syncGroups/serverEndpoints"

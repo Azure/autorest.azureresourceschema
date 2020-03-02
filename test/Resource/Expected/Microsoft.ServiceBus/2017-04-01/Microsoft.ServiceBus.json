@@ -96,7 +96,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces"
@@ -137,7 +136,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/AuthorizationRules"
@@ -178,7 +176,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs"
@@ -225,7 +222,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/migrationConfigurations"
@@ -271,7 +267,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/networkRuleSets"
@@ -321,7 +316,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/queues"
@@ -362,7 +356,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/queues/authorizationRules"
@@ -415,7 +408,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/topics"
@@ -456,7 +448,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/topics/authorizationRules"
@@ -507,7 +498,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/topics/subscriptions"
@@ -548,7 +538,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/topics/subscriptions/rules"
@@ -721,7 +710,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/AuthorizationRules"
@@ -762,7 +750,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/disasterRecoveryConfigs"
@@ -804,7 +791,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/migrationConfigurations"
@@ -845,7 +831,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/networkRuleSets"
@@ -886,7 +871,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/queues/authorizationRules"
@@ -926,7 +910,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/queues"
@@ -967,7 +950,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/topics/authorizationRules"
@@ -1007,7 +989,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/topics"
@@ -1048,7 +1029,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/topics/subscriptions"
@@ -1089,7 +1069,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/topics/subscriptions/rules"

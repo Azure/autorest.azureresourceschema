@@ -101,7 +101,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DataBoxEdge/dataBoxEdgeDevices"
@@ -186,7 +185,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders"
@@ -738,7 +736,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DataBoxEdge/dataBoxEdgeDevices/orders"

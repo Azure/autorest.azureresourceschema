@@ -42,7 +42,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.HanaOnAzure/hanaInstances"
@@ -85,7 +84,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.HanaOnAzure/sapMonitors"

@@ -87,7 +87,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces"
@@ -127,7 +126,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/ipfilterrules"
@@ -173,7 +171,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/networkrulesets"
@@ -213,7 +210,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/virtualnetworkrules"
@@ -357,7 +353,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/ipfilterrules"
@@ -398,7 +393,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/networkrulesets"
@@ -438,7 +432,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/virtualnetworkrules"

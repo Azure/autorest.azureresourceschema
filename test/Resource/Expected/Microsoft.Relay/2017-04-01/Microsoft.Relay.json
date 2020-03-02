@@ -87,7 +87,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Relay/namespaces"
@@ -177,7 +176,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Relay/namespaces/hybridConnections"
@@ -267,7 +265,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Relay/namespaces/wcfRelays"
@@ -478,7 +475,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Relay/namespaces/hybridConnections"
@@ -558,7 +554,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Relay/namespaces/wcfRelays"

@@ -48,7 +48,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ContainerRegistry/registries/scopeMaps"
@@ -97,7 +96,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ContainerRegistry/registries/tokens"

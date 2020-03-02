@@ -89,7 +89,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.EventHub/namespaces"
@@ -129,7 +128,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.EventHub/namespaces/AuthorizationRules"
@@ -170,7 +168,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs"
@@ -224,7 +221,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.EventHub/namespaces/eventhubs"
@@ -264,7 +260,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.EventHub/namespaces/eventhubs/authorizationRules"
@@ -305,7 +300,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.EventHub/namespaces/eventhubs/consumergroups"
@@ -351,7 +345,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.EventHub/namespaces/networkRuleSets"
@@ -668,7 +661,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.EventHub/namespaces/AuthorizationRules"
@@ -709,7 +701,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.EventHub/namespaces/disasterRecoveryConfigs"
@@ -749,7 +740,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.EventHub/namespaces/eventhubs/authorizationRules"
@@ -790,7 +780,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.EventHub/namespaces/eventhubs"
@@ -831,7 +820,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.EventHub/namespaces/eventhubs/consumergroups"
@@ -872,7 +860,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.EventHub/namespaces/networkRuleSets"

@@ -68,7 +68,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups"
@@ -107,7 +106,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/availabilityGroupListeners"
@@ -177,7 +175,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.SqlVirtualMachine/sqlVirtualMachines"
@@ -777,7 +774,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/availabilityGroupListeners"

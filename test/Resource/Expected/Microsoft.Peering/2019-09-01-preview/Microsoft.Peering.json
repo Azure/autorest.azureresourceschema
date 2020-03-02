@@ -85,7 +85,6 @@
         "kind",
         "location",
         "name",
-        "properties",
         "sku",
         "type"
       ],
@@ -155,7 +154,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Peering/peeringServices"
@@ -194,7 +192,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Peering/peeringServices/prefixes"
@@ -235,7 +232,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Peering/peerAsns"
@@ -643,7 +639,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Peering/peeringServices/prefixes"

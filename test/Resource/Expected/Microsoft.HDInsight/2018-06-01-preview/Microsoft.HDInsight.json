@@ -81,7 +81,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.HDInsight/clusters"
@@ -139,7 +138,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.HDInsight/clusters/applications"
@@ -769,7 +767,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.HDInsight/clusters/applications"

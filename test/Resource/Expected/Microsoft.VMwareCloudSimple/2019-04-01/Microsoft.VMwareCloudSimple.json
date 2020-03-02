@@ -77,7 +77,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.VMwareCloudSimple/dedicatedCloudNodes"
@@ -136,7 +135,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.VMwareCloudSimple/dedicatedCloudServices"
@@ -195,7 +193,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.VMwareCloudSimple/virtualMachines"

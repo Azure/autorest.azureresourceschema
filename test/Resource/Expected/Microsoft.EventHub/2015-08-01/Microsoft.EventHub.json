@@ -84,7 +84,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.EventHub/namespaces"
@@ -129,7 +128,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.EventHub/namespaces/AuthorizationRules"
@@ -188,7 +186,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.EventHub/namespaces/eventhubs"
@@ -233,7 +230,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.EventHub/namespaces/eventhubs/authorizationRules"
@@ -279,7 +275,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.EventHub/namespaces/eventhubs/consumergroups"
@@ -447,7 +442,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.EventHub/namespaces/AuthorizationRules"
@@ -492,7 +486,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.EventHub/namespaces/eventhubs/authorizationRules"
@@ -538,7 +531,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.EventHub/namespaces/eventhubs"
@@ -584,7 +576,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.EventHub/namespaces/eventhubs/consumergroups"

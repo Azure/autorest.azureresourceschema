@@ -89,7 +89,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ContainerService/managedClusters"
@@ -128,7 +127,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ContainerService/managedClusters/agentPools"
@@ -1329,7 +1327,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ContainerService/managedClusters/agentPools"

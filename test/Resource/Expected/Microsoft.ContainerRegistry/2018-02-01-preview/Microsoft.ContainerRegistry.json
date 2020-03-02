@@ -78,7 +78,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ContainerRegistry/registries/buildTasks"
@@ -127,7 +126,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ContainerRegistry/registries/buildTasks/steps"
@@ -429,7 +427,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ContainerRegistry/registries/buildTasks/steps"

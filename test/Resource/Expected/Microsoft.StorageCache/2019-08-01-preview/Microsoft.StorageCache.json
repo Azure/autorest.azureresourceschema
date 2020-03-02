@@ -76,7 +76,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.StorageCache/caches"
@@ -123,7 +122,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.StorageCache/caches/storageTargets"
@@ -233,7 +231,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.StorageCache/caches/storageTargets"

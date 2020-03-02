@@ -68,7 +68,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.MachineLearningCompute/operationalizationClusters"

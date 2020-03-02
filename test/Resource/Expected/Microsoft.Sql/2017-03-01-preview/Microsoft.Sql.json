@@ -46,7 +46,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/managedInstances/administrators"
@@ -118,7 +117,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/managedInstances/databases"
@@ -165,7 +163,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/managedInstances/databases/backupShortTermRetentionPolicies"
@@ -212,7 +209,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/managedInstances/databases/securityAlertPolicies"
@@ -259,7 +255,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/managedInstances/restorableDroppedDatabases/backupShortTermRetentionPolicies"
@@ -306,7 +301,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/managedInstances/securityAlertPolicies"
@@ -353,7 +347,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/auditingSettings"
@@ -442,7 +435,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases"
@@ -489,7 +481,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/auditingSettings"
@@ -536,7 +527,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies"
@@ -583,7 +573,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/extendedAuditingSettings"
@@ -630,7 +619,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/schemas/tables/columns/sensitivityLabels"
@@ -677,7 +665,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/vulnerabilityAssessments"
@@ -727,7 +714,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/vulnerabilityAssessments/rules/baselines"
@@ -801,7 +787,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/extendedAuditingSettings"
@@ -887,7 +872,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/jobAgents"
@@ -926,7 +910,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/jobAgents/credentials"
@@ -978,7 +961,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/jobAgents/jobs"
@@ -1052,7 +1034,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/jobAgents/jobs/steps"
@@ -1091,7 +1072,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/jobAgents/targetGroups"
@@ -1138,7 +1118,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/securityAlertPolicies"
@@ -2277,7 +2256,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/managedInstances/databases/backupShortTermRetentionPolicies"
@@ -2319,7 +2297,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/managedInstances/databases/securityAlertPolicies"
@@ -2585,7 +2562,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/auditingSettings"
@@ -2627,7 +2603,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies"
@@ -2669,7 +2644,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/extendedAuditingSettings"
@@ -2711,7 +2685,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/vulnerabilityAssessments"
@@ -2750,7 +2723,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/jobAgents/credentials"
@@ -2789,7 +2761,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/jobAgents/jobs"
@@ -2863,7 +2834,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/jobAgents/jobs/steps"
@@ -2902,7 +2872,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/jobAgents/targetGroups"

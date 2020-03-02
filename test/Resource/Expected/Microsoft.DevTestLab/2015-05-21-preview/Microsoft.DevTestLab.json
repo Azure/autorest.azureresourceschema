@@ -86,7 +86,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DevTestLab/labs"
@@ -148,7 +147,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DevTestLab/labs/artifactsources"
@@ -210,7 +208,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DevTestLab/labs/customimages"
@@ -272,7 +269,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DevTestLab/labs/formulas"
@@ -334,7 +330,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DevTestLab/labs/policysets/policies"
@@ -396,7 +391,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DevTestLab/labs/schedules"
@@ -458,7 +452,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DevTestLab/labs/virtualmachines"
@@ -520,7 +513,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DevTestLab/labs/virtualnetworks"
@@ -1010,7 +1002,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DevTestLab/labs/artifactsources"
@@ -1072,7 +1063,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DevTestLab/labs/customimages"
@@ -1134,7 +1124,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DevTestLab/labs/formulas"
@@ -1196,7 +1185,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DevTestLab/labs/schedules"
@@ -1258,7 +1246,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DevTestLab/labs/virtualmachines"
@@ -1320,7 +1307,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DevTestLab/labs/virtualnetworks"

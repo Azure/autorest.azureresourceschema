@@ -69,7 +69,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ContainerRegistry/registries/taskRuns"
@@ -149,7 +148,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ContainerRegistry/registries/tasks"

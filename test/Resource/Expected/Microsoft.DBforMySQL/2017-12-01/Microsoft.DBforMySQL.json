@@ -140,7 +140,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforMySQL/servers/Administrators"
@@ -179,7 +178,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforMySQL/servers/configurations"
@@ -218,7 +216,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforMySQL/servers/databases"
@@ -304,7 +301,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforMySQL/servers/securityAlertPolicies"
@@ -343,7 +339,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforMySQL/servers/virtualNetworkRules"
@@ -892,7 +887,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforMySQL/servers/Administrators"
@@ -931,7 +925,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforMySQL/servers/configurations"
@@ -970,7 +963,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforMySQL/servers/databases"
@@ -1051,7 +1043,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforMySQL/servers/securityAlertPolicies"
@@ -1090,7 +1081,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforMySQL/servers/virtualNetworkRules"

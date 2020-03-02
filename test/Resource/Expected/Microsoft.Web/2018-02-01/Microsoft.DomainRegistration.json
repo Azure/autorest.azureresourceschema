@@ -72,7 +72,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DomainRegistration/domains"
@@ -115,7 +114,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers"
@@ -419,7 +417,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DomainRegistration/domains/domainOwnershipIdentifiers"

@@ -60,7 +60,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.CustomProviders/resourceProviders"
@@ -101,7 +100,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.CustomProviders/associations"

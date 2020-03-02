@@ -68,7 +68,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.AzureData/sqlServerRegistrations"
@@ -107,7 +106,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.AzureData/sqlServerRegistrations/sqlServers"
@@ -207,7 +205,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.AzureData/sqlServerRegistrations/sqlServers"

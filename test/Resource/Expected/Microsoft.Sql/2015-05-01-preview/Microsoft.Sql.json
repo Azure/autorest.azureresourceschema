@@ -80,7 +80,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/managedInstances"
@@ -175,7 +174,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers"
@@ -222,7 +220,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/auditingSettings"
@@ -271,7 +268,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/syncGroups"
@@ -310,7 +306,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/syncGroups/syncMembers"
@@ -357,7 +352,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/encryptionProtector"
@@ -411,7 +405,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/failoverGroups"
@@ -450,7 +443,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/firewallRules"
@@ -493,7 +485,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/keys"
@@ -532,7 +523,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/syncAgents"
@@ -571,7 +561,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/virtualNetworkRules"
@@ -1103,7 +1092,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/syncGroups/syncMembers"
@@ -1145,7 +1133,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/encryptionProtector"
@@ -1199,7 +1186,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/failoverGroups"
@@ -1238,7 +1224,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/firewallRules"
@@ -1281,7 +1266,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/keys"
@@ -1320,7 +1304,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/syncAgents"
@@ -1359,7 +1342,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/virtualNetworkRules"

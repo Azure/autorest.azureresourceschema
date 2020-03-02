@@ -62,7 +62,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/certificates"
@@ -138,7 +137,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/hostingEnvironments"
@@ -199,7 +197,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/hostingEnvironments/multiRolePools"
@@ -253,7 +250,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/hostingEnvironments/workerPools"
@@ -327,7 +323,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/serverfarms"
@@ -370,7 +365,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/serverfarms/virtualNetworkConnections/gateways"
@@ -413,7 +407,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/serverfarms/virtualNetworkConnections/routes"
@@ -542,7 +535,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites"
@@ -585,8 +577,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/config"
         },
@@ -621,8 +612,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/config"
         },
@@ -661,8 +651,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/config"
         },
@@ -697,8 +686,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/config"
         },
@@ -737,8 +725,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/config"
         },
@@ -773,8 +760,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/config"
         },
@@ -813,8 +799,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/config"
         },
@@ -849,8 +834,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/config"
         },
@@ -885,8 +869,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/config"
         },
@@ -921,8 +904,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/config"
         }
@@ -985,7 +967,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/deployments"
@@ -1028,7 +1009,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/domainOwnershipIdentifiers"
@@ -1078,7 +1058,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/extensions"
@@ -1130,7 +1109,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/functions"
@@ -1204,7 +1182,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/hostNameBindings"
@@ -1247,7 +1224,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/hybridconnection"
@@ -1290,7 +1266,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/hybridConnectionNamespaces/relays"
@@ -1340,7 +1315,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/instances/extensions"
@@ -1390,7 +1364,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/migrate"
@@ -1440,7 +1413,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/networkConfig"
@@ -1503,7 +1475,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/premieraddons"
@@ -1553,7 +1524,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/privateAccess"
@@ -1596,7 +1566,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/publicCertificates"
@@ -1746,7 +1715,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots"
@@ -1789,8 +1757,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/slots/config"
         },
@@ -1825,8 +1792,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/slots/config"
         },
@@ -1865,8 +1831,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/slots/config"
         },
@@ -1901,8 +1866,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/slots/config"
         },
@@ -1941,8 +1905,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/slots/config"
         },
@@ -1977,8 +1940,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/slots/config"
         },
@@ -2017,8 +1979,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/slots/config"
         },
@@ -2053,8 +2014,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/slots/config"
         },
@@ -2089,8 +2049,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/slots/config"
         }
@@ -2153,7 +2112,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/deployments"
@@ -2196,7 +2154,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/domainOwnershipIdentifiers"
@@ -2246,7 +2203,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/extensions"
@@ -2298,7 +2254,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/functions"
@@ -2372,7 +2327,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/hostNameBindings"
@@ -2415,7 +2369,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/hybridconnection"
@@ -2458,7 +2411,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/hybridConnectionNamespaces/relays"
@@ -2508,7 +2460,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/instances/extensions"
@@ -2558,7 +2509,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/networkConfig"
@@ -2621,7 +2571,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/premieraddons"
@@ -2671,7 +2620,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/privateAccess"
@@ -2714,7 +2662,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/publicCertificates"
@@ -2791,7 +2738,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/sourcecontrols"
@@ -2844,7 +2790,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/virtualNetworkConnections"
@@ -2887,7 +2832,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/virtualNetworkConnections/gateways"
@@ -2937,7 +2881,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/sourcecontrols"
@@ -2990,7 +2933,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/virtualNetworkConnections"
@@ -3033,7 +2975,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/virtualNetworkConnections/gateways"
@@ -3080,7 +3021,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/publishingUsers"
@@ -3123,7 +3063,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sourcecontrols"
@@ -4550,7 +4489,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/hostingEnvironments/multiRolePools"
@@ -4604,7 +4542,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/hostingEnvironments/workerPools"
@@ -6530,8 +6467,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/config"
         },
@@ -6561,8 +6497,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/config"
         },
@@ -6596,8 +6531,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/config"
         },
@@ -6627,8 +6561,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/config"
         },
@@ -6662,8 +6595,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/config"
         },
@@ -6693,8 +6625,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/config"
         },
@@ -6728,8 +6659,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/config"
         },
@@ -6759,8 +6689,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/config"
         },
@@ -6790,8 +6719,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/config"
         },
@@ -6821,8 +6749,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/config"
         }
@@ -6885,7 +6812,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/deployments"
@@ -6928,7 +6854,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/domainOwnershipIdentifiers"
@@ -6973,7 +6898,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/extensions"
@@ -7015,7 +6939,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/functions"
@@ -7089,7 +7012,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/hostNameBindings"
@@ -7132,7 +7054,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/hybridconnection"
@@ -7177,7 +7098,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/migrate"
@@ -7222,7 +7142,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/networkConfig"
@@ -7285,7 +7204,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/premieraddons"
@@ -7330,7 +7248,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/privateAccess"
@@ -7373,7 +7290,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/publicCertificates"
@@ -7474,7 +7390,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots"
@@ -7512,8 +7427,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/slots/config"
         },
@@ -7543,8 +7457,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/slots/config"
         },
@@ -7578,8 +7491,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/slots/config"
         },
@@ -7609,8 +7521,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/slots/config"
         },
@@ -7644,8 +7555,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/slots/config"
         },
@@ -7675,8 +7585,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/slots/config"
         },
@@ -7710,8 +7619,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/slots/config"
         },
@@ -7741,8 +7649,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/slots/config"
         },
@@ -7772,8 +7679,7 @@
             }
           },
           "required": [
-            "name",
-            "properties"
+            "name"
           ],
           "description": "Microsoft.Web/sites/slots/config"
         }
@@ -7836,7 +7742,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/deployments"
@@ -7879,7 +7784,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/domainOwnershipIdentifiers"
@@ -7924,7 +7828,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/extensions"
@@ -7966,7 +7869,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/functions"
@@ -8040,7 +7942,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/hostNameBindings"
@@ -8083,7 +7984,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/hybridconnection"
@@ -8128,7 +8028,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/networkConfig"
@@ -8191,7 +8090,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/premieraddons"
@@ -8236,7 +8134,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/privateAccess"
@@ -8279,7 +8176,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/publicCertificates"
@@ -8351,7 +8247,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/sourcecontrols"
@@ -8394,7 +8289,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/virtualNetworkConnections"
@@ -8437,7 +8331,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/slots/virtualNetworkConnections/gateways"
@@ -8482,7 +8375,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/sourcecontrols"
@@ -8525,7 +8417,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/virtualNetworkConnections"
@@ -8568,7 +8459,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Web/sites/virtualNetworkConnections/gateways"

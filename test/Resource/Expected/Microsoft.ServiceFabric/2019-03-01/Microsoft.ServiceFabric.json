@@ -71,7 +71,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceFabric/clusters"
@@ -139,7 +138,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceFabric/clusters/applications"
@@ -197,7 +195,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceFabric/clusters/applications/services"
@@ -265,7 +262,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceFabric/clusters/applicationTypes"
@@ -323,7 +319,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceFabric/clusters/applicationTypes/versions"
@@ -1171,7 +1166,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceFabric/clusters/applications"
@@ -1229,7 +1223,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceFabric/clusters/applications/services"
@@ -1287,7 +1280,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceFabric/clusters/applicationTypes"
@@ -1345,7 +1337,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceFabric/clusters/applicationTypes/versions"

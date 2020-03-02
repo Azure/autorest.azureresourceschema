@@ -140,7 +140,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforPostgreSQL/servers/Administrators"
@@ -179,7 +178,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforPostgreSQL/servers/configurations"
@@ -218,7 +216,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforPostgreSQL/servers/databases"
@@ -304,7 +301,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforPostgreSQL/servers/securityAlertPolicies"
@@ -343,7 +339,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforPostgreSQL/servers/virtualNetworkRules"
@@ -741,7 +736,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforPostgreSQL/servers/Administrators"
@@ -780,7 +774,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforPostgreSQL/servers/configurations"
@@ -819,7 +812,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforPostgreSQL/servers/databases"
@@ -900,7 +892,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforPostgreSQL/servers/securityAlertPolicies"
@@ -939,7 +930,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforPostgreSQL/servers/virtualNetworkRules"

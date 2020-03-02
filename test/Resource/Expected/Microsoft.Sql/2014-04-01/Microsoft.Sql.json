@@ -95,7 +95,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers"
@@ -142,7 +141,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/administrators"
@@ -181,7 +179,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/advisors"
@@ -228,7 +225,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/auditingPolicies"
@@ -275,7 +271,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/backupLongTermRetentionVaults"
@@ -314,7 +309,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/communicationLinks"
@@ -361,7 +355,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/connectionPolicies"
@@ -454,7 +447,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases"
@@ -493,7 +485,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/advisors"
@@ -540,7 +531,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/auditingPolicies"
@@ -587,7 +577,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies"
@@ -634,7 +623,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/connectionPolicies"
@@ -691,7 +679,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/dataMaskingPolicies"
@@ -730,7 +717,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/dataMaskingPolicies/rules"
@@ -777,7 +763,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/extensions"
@@ -875,7 +860,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/securityAlertPolicies"
@@ -922,7 +906,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/transparentDataEncryption"
@@ -1008,7 +991,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/elasticPools"
@@ -1047,7 +1029,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/firewallRules"
@@ -1981,7 +1962,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/administrators"
@@ -2020,7 +2000,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/advisors"
@@ -2062,7 +2041,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/auditingPolicies"
@@ -2104,7 +2082,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/backupLongTermRetentionVaults"
@@ -2143,7 +2120,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/communicationLinks"
@@ -2185,7 +2161,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/connectionPolicies"
@@ -2224,7 +2199,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/advisors"
@@ -2266,7 +2240,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/auditingPolicies"
@@ -2308,7 +2281,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/backupLongTermRetentionPolicies"
@@ -2367,7 +2339,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases"
@@ -2409,7 +2380,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/connectionPolicies"
@@ -2451,7 +2421,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/dataMaskingPolicies"
@@ -2490,7 +2459,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/dataMaskingPolicies/rules"
@@ -2532,7 +2500,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/extensions"
@@ -2620,7 +2587,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/securityAlertPolicies"
@@ -2662,7 +2628,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/databases/transparentDataEncryption"
@@ -2748,7 +2713,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/elasticPools"
@@ -2787,7 +2751,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.Sql/servers/firewallRules"

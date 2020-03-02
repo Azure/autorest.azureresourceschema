@@ -92,7 +92,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "sku",
         "type"
       ],
@@ -162,7 +161,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ContainerRegistry/registries/replications"
@@ -231,7 +229,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ContainerRegistry/registries/webhooks"
@@ -302,7 +299,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ContainerRegistry/registries/replications"
@@ -371,7 +367,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ContainerRegistry/registries/webhooks"

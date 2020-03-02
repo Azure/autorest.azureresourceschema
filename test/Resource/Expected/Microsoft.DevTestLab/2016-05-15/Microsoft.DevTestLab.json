@@ -94,7 +94,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DevTestLab/labs"
@@ -456,6 +455,10 @@
             "2016-05-15"
           ]
         },
+        "location": {
+          "type": "string",
+          "description": "The location of the resource."
+        },
         "name": {
           "type": "string",
           "description": "The name of the schedule."
@@ -470,6 +473,21 @@
             }
           ],
           "description": "Properties of a schedule."
+        },
+        "tags": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {}
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "The tags of the resource."
         },
         "type": {
           "type": "string",
@@ -612,7 +630,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DevTestLab/labs/users"
@@ -868,6 +885,10 @@
             "2016-05-15"
           ]
         },
+        "location": {
+          "type": "string",
+          "description": "The location of the resource."
+        },
         "name": {
           "type": "string",
           "description": "The name of the schedule."
@@ -882,6 +903,21 @@
             }
           ],
           "description": "Properties of a schedule."
+        },
+        "tags": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {}
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "The tags of the resource."
         },
         "type": {
           "type": "string",
@@ -951,7 +987,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DevTestLab/labs/virtualnetworks"
@@ -964,6 +999,10 @@
           "enum": [
             "2016-05-15"
           ]
+        },
+        "location": {
+          "type": "string",
+          "description": "The location of the resource."
         },
         "name": {
           "type": "string",
@@ -979,6 +1018,21 @@
             }
           ],
           "description": "Properties of a schedule."
+        },
+        "tags": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {}
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "The tags of the resource."
         },
         "type": {
           "type": "string",
@@ -2247,6 +2301,10 @@
             "2016-05-15"
           ]
         },
+        "location": {
+          "type": "string",
+          "description": "The location of the resource."
+        },
         "name": {
           "type": "string",
           "description": "The name of the schedule."
@@ -2261,6 +2319,21 @@
             }
           ],
           "description": "Properties of a schedule."
+        },
+        "tags": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {}
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "The tags of the resource."
         },
         "type": {
           "type": "string",
@@ -2387,7 +2460,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DevTestLab/labs/users"
@@ -2633,6 +2705,10 @@
             "2016-05-15"
           ]
         },
+        "location": {
+          "type": "string",
+          "description": "The location of the resource."
+        },
         "name": {
           "type": "string",
           "description": "The name of the schedule."
@@ -2647,6 +2723,21 @@
             }
           ],
           "description": "Properties of a schedule."
+        },
+        "tags": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "properties": {}
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "The tags of the resource."
         },
         "type": {
           "type": "string",
@@ -2716,7 +2807,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DevTestLab/labs/virtualnetworks"

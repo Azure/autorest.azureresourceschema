@@ -82,7 +82,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.CognitiveServices/accounts"

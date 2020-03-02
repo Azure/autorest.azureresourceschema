@@ -70,7 +70,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.LabServices/labaccounts"
@@ -128,7 +127,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.LabServices/labaccounts/galleryimages"
@@ -199,7 +197,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.LabServices/labaccounts/labs"
@@ -267,7 +264,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.LabServices/labaccounts/labs/environmentsettings"
@@ -325,7 +321,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.LabServices/labaccounts/labs/environmentsettings/environments"
@@ -383,7 +378,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.LabServices/labaccounts/labs/users"
@@ -591,7 +585,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.LabServices/labaccounts/galleryimages"
@@ -649,7 +642,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.LabServices/labaccounts/labs"
@@ -707,7 +699,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.LabServices/labaccounts/labs/environmentsettings"
@@ -765,7 +756,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.LabServices/labaccounts/labs/environmentsettings/environments"
@@ -823,7 +813,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.LabServices/labaccounts/labs/users"

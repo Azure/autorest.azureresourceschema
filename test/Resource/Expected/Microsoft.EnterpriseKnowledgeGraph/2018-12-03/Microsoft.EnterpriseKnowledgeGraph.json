@@ -78,7 +78,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.EnterpriseKnowledgeGraph/services"

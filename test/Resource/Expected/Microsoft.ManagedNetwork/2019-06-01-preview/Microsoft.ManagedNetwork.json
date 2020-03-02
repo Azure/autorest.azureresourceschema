@@ -70,7 +70,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ManagedNetwork/managedNetworks"
@@ -127,7 +126,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ManagedNetwork/managedNetworks/managedNetworkGroups"
@@ -170,7 +168,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ManagedNetwork/managedNetworks/managedNetworkPeeringPolicies"
@@ -215,7 +212,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ManagedNetwork/scopeAssignments"
@@ -416,7 +412,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ManagedNetwork/managedNetworks/managedNetworkGroups"
@@ -459,7 +454,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ManagedNetwork/managedNetworks/managedNetworkPeeringPolicies"

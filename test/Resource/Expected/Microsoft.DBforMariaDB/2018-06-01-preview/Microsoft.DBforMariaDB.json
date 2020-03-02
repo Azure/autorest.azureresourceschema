@@ -130,7 +130,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforMariaDB/servers/configurations"
@@ -169,7 +168,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforMariaDB/servers/databases"
@@ -255,7 +253,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforMariaDB/servers/securityAlertPolicies"
@@ -294,7 +291,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforMariaDB/servers/virtualNetworkRules"
@@ -632,7 +628,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforMariaDB/servers/configurations"
@@ -671,7 +666,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforMariaDB/servers/databases"
@@ -752,7 +746,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforMariaDB/servers/securityAlertPolicies"
@@ -791,7 +784,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.DBforMariaDB/servers/virtualNetworkRules"

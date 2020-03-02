@@ -87,7 +87,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces"
@@ -132,7 +131,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/AuthorizationRules"
@@ -188,7 +186,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/queues"
@@ -233,7 +230,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/queues/authorizationRules"
@@ -292,7 +288,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/topics"
@@ -337,7 +332,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/topics/authorizationRules"
@@ -383,7 +377,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/topics/subscriptions"
@@ -484,7 +477,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/AuthorizationRules"
@@ -529,7 +521,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/queues/authorizationRules"
@@ -575,7 +566,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/queues"
@@ -620,7 +610,6 @@
       "required": [
         "apiVersion",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/topics/authorizationRules"
@@ -666,7 +655,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/topics"
@@ -712,7 +700,6 @@
         "apiVersion",
         "location",
         "name",
-        "properties",
         "type"
       ],
       "description": "Microsoft.ServiceBus/namespaces/topics/subscriptions"
