@@ -41,6 +41,7 @@ task 'regenerate', '', (done) ->
     'mappings': {
       'Microsoft.AlertsManagement': { basePath: 'alertsmanagement/resource-manager', tags: ['multiapi'] },
       'Microsoft.Attestation': { basePath: 'attestation/resource-manager', tags: ['package-2018-09-preview'] },
+      'Microsoft.Automation': { basePath: 'automation/resource-manager', tags: ['package-2020-01-13-preview'] },
       'Microsoft.AzureData': { basePath: 'azuredata/resource-manager', tags: ['package-preview-2019-07'] },
       'Microsoft.Blockchain': { basePath: 'blockchain/resource-manager', tags: ['package-2018-06-01-preview'] },
       'Microsoft.BotService': { basePath: 'botservice/resource-manager', tags: ['package-2017-12-01', 'package-2018-07-12'] },
