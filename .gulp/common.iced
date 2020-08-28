@@ -367,7 +367,7 @@ module.exports =
     return proc
 
   autorest: (args,done,ignoreexitcode) ->
-    command = "#{basefolder}/node_modules/.bin/autorest-beta"
+    command = "#{basefolder}/node_modules/.bin/autorest"
     args2 = args.slice()
     args2.unshift("--use=#{basefolder}")
     
