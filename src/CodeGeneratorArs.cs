@@ -23,7 +23,7 @@ namespace AutoRest.AzureResourceSchema
         public override async Task Generate(CodeModel serviceClient)
         {
             var apiVersions = serviceClient.Methods
-                .Select(method => method.Parameters.FirstOrDefault(p => p.SerializedName == "api-version")?.DefaultValue.Value)
+                .SelectMany(method => method.XMsMetadata.apiVersions)
                 .Concat(new [] { serviceClient.ApiVersion })
                 .Where(each => each != null)
                 .Distinct().ToArray();

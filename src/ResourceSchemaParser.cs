@@ -55,13 +55,7 @@ namespace AutoRest.AzureResourceSchema
                 return false;
             }
 
-            var methodApiVersion = method.Parameters.FirstOrDefault(p => p.SerializedName == "api-version")?.DefaultValue.Value;
-            if (methodApiVersion != apiVersion && codeModel.ApiVersion != apiVersion)
-            {
-                return false;
-            }
-
-            return true;
+            return Array.Exists(method.XMsMetadata.apiVersions, v => v.Equals(apiVersion));
         }
 
         private static (bool success, string failureReason, IEnumerable<ResourceDescriptor> resourceDescriptors) ParseMethod(Method method, string apiVersion)
