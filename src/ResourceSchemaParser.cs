@@ -639,11 +639,8 @@ namespace AutoRest.AzureResourceSchema
                     break;
 
                 case KnownPrimaryType.ByteArray:
-                    result.JsonType = "array";
-                    result.Items =  new JsonSchema()
-                    {
-                        JsonType = "integer"
-                    };
+                    result.JsonType = "string";
+                    result.Pattern = @"^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$";
                     break;
 
                 case KnownPrimaryType.Base64Url:
