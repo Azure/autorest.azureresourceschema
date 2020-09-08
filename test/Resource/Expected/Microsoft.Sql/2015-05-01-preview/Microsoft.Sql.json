@@ -135,9 +135,6 @@
                 "$ref": "#/definitions/servers_failoverGroups_childResource"
               },
               {
-                "$ref": "#/definitions/servers_firewallRules_childResource"
-              },
-              {
                 "$ref": "#/definitions/servers_keys_childResource"
               },
               {
@@ -145,6 +142,9 @@
               },
               {
                 "$ref": "#/definitions/servers_virtualNetworkRules_childResource"
+              },
+              {
+                "$ref": "#/definitions/servers_firewallRules_childResource"
               }
             ]
           }

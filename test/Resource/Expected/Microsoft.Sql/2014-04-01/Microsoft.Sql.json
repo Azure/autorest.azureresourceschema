@@ -37,28 +37,28 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/servers_advisors_childResource"
-              },
-              {
                 "$ref": "#/definitions/servers_connectionPolicies_childResource"
-              },
-              {
-                "$ref": "#/definitions/servers_databases_childResource"
-              },
-              {
-                "$ref": "#/definitions/servers_disasterRecoveryConfiguration_childResource"
-              },
-              {
-                "$ref": "#/definitions/servers_elasticPools_childResource"
               },
               {
                 "$ref": "#/definitions/servers_firewallRules_childResource"
               },
               {
-                "$ref": "#/definitions/servers_administrators_childResource"
+                "$ref": "#/definitions/servers_databases_childResource"
+              },
+              {
+                "$ref": "#/definitions/servers_elasticPools_childResource"
               },
               {
                 "$ref": "#/definitions/servers_communicationLinks_childResource"
+              },
+              {
+                "$ref": "#/definitions/servers_administrators_childResource"
+              },
+              {
+                "$ref": "#/definitions/servers_advisors_childResource"
+              },
+              {
+                "$ref": "#/definitions/servers_disasterRecoveryConfiguration_childResource"
               },
               {
                 "$ref": "#/definitions/servers_auditingPolicies_childResource"
@@ -349,12 +349,6 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/definitions/servers_databases_advisors_childResource"
-              },
-              {
-                "$ref": "#/definitions/servers_databases_extensions_childResource"
-              },
-              {
                 "$ref": "#/definitions/servers_databases_securityAlertPolicies_childResource"
               },
               {
@@ -364,7 +358,13 @@
                 "$ref": "#/definitions/servers_databases_geoBackupPolicies_childResource"
               },
               {
+                "$ref": "#/definitions/servers_databases_extensions_childResource"
+              },
+              {
                 "$ref": "#/definitions/servers_databases_transparentDataEncryption_childResource"
+              },
+              {
+                "$ref": "#/definitions/servers_databases_advisors_childResource"
               },
               {
                 "$ref": "#/definitions/servers_databases_auditingPolicies_childResource"
