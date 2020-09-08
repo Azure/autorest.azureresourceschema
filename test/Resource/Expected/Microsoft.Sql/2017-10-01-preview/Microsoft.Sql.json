@@ -251,7 +251,8 @@
             {
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
-          ]
+          ],
+          "description": "The database's properties."
         },
         "resources": {
           "type": "array",
@@ -479,17 +480,16 @@
             {
               "type": "string",
               "enum": [
-                "Copy",
                 "Default",
-                "NonReadableSecondary",
-                "OnlineSecondary",
-                "PointInTimeRestore",
-                "Recovery",
-                "Restore",
-                "RestoreLongTermRetentionBackup",
+                "Copy",
                 "Secondary",
+                "PointInTimeRestore",
+                "Restore",
+                "Recovery",
                 "RestoreExternalBackup",
-                "RestoreExternalBackupSecondary"
+                "RestoreExternalBackupSecondary",
+                "RestoreLongTermRetentionBackup",
+                "OnlineSecondary"
               ]
             },
             {
@@ -515,7 +515,7 @@
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
           ],
-          "description": "The license type to apply for this database."
+          "description": "The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit."
         },
         "longTermRetentionBackupResourceId": {
           "type": "string",
@@ -622,7 +622,8 @@
           ],
           "description": "Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones."
         }
-      }
+      },
+      "description": "The database's properties."
     },
     "DatabaseVulnerabilityAssessmentProperties": {
       "type": "object",
