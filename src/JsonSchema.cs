@@ -252,7 +252,8 @@ namespace AutoRest.AzureResourceSchema
             
             if (Properties == null)
             {
-                Properties = new Dictionary<string, JsonSchema>();
+                // Making insensitive dictionary to capture duplicate property keys.
+                Properties = new Dictionary<string, JsonSchema>(StringComparer.OrdinalIgnoreCase);
             }
 
             if (Properties.ContainsKey(propertyName))
