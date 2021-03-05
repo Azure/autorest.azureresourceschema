@@ -3,6 +3,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Xunit;
 
 namespace AutoRest.AzureResourceSchema.Tests
@@ -72,6 +73,22 @@ namespace AutoRest.AzureResourceSchema.Tests
         {
             JsonSchema lhs = new JsonSchema();
             Assert.False(lhs.Equals("Not Equal"));
+        }
+
+        [Fact]
+        public void AddPropertyOverwriteWithSamePropertyNameButDifferentCasing()
+        {
+            JsonSchema jsonSchema = new JsonSchema();
+            jsonSchema.AddProperty("Type", new JsonSchema().AddProperty("foo1", new JsonSchema()));
+            jsonSchema.AddProperty("Name", new JsonSchema().AddProperty("foo2", new JsonSchema()));
+
+            jsonSchema.AddPropertyWithOverwrite("type", new JsonSchema().AddProperty("bar", new JsonSchema()), true);
+            jsonSchema.AddPropertyWithOverwrite("name", new JsonSchema().AddProperty("baz", new JsonSchema()), true);
+
+            var expectedPropertyNames = new string[] { "type", "name" };
+
+            Assert.True(jsonSchema.Properties.Count == 2);
+            Assert.True(expectedPropertyNames.All(jsonSchema.Properties.Select(property => property.Key).Contains));
         }
     }
 }
