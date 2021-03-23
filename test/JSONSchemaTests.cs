@@ -85,10 +85,8 @@ namespace AutoRest.AzureResourceSchema.Tests
             jsonSchema.AddPropertyWithOverwrite("type", new JsonSchema().AddProperty("bar", new JsonSchema()), true);
             jsonSchema.AddPropertyWithOverwrite("name", new JsonSchema().AddProperty("baz", new JsonSchema()), true);
 
-            var expectedPropertyNames = new string[] { "type", "name" };
-
             Assert.True(jsonSchema.Properties.Count == 2);
-            Assert.True(expectedPropertyNames.All(jsonSchema.Properties.Select(property => property.Key).Contains));
+            Assert.Equal(new List<string>() { "type", "name" }, jsonSchema.Properties.Keys);
         }
     }
 }
