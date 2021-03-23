@@ -12,6 +12,8 @@ steps:
 
 - script: |
     npm install
+
+    dotnet --version
     
     # get patch version 
     PATCH=`git rev-list --parents HEAD --count --full-history`
