@@ -29,7 +29,7 @@
   "bugs": {
     "url": "https://github.com/Azure/autorest/issues"
   },
-  "homepage": "https://github.com/Azure/autorest.azureresourceschema/blob/master/README.md",
+  "homepage": "https://github.com/Azure/autorest.azureresourceschema/blob/main/README.md",
   "devDependencies": {
     "autorest": "^3.0.6187",
     "coffee-script": "^1.11.1",
