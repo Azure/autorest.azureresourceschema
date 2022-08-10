@@ -99,7 +99,7 @@ namespace AutoRest.AzureResourceSchema
             }
             else if (subscriptionPrefix.IsMatch(parentScope))
             {
-                scopeType = ScopeType.Subcription;
+                scopeType = ScopeType.Subscription;
             }
             else if (parentScopePrefix.IsMatch(parentScope))
             {
@@ -237,7 +237,7 @@ namespace AutoRest.AzureResourceSchema
         /// <param name="serviceClient"></param>
         /// <returns></returns>
         public static IDictionary<string, ResourceSchema> Parse(CodeModel serviceClient, string apiVersion)
-        {            
+        {
             if (serviceClient == null)
             {
                 throw new ArgumentNullException(nameof(serviceClient));
@@ -315,8 +315,8 @@ namespace AutoRest.AzureResourceSchema
             }
 
             return providerDefinitions.ToDictionary(
-                kvp => kvp.Key, 
-                kvp => CreateSchema(kvp.Value), 
+                kvp => kvp.Key,
+                kvp => CreateSchema(kvp.Value),
                 StringComparer.OrdinalIgnoreCase);
         }
 
@@ -450,7 +450,10 @@ namespace AutoRest.AzureResourceSchema
                     }
 
                     var childDefinitionName = ResourceSchema.FormatResourceSchemaKey(descriptor.ResourceTypeSegments) + "_childResource";
-                    providerDefinition.SchemaDefinitions.Add(childDefinitionName, childSchema);
+                    if (!providerDefinition.SchemaDefinitions.ContainsKey(childDefinitionName))
+                    {
+                        providerDefinition.SchemaDefinitions.Add(childDefinitionName, childSchema);
+                    }
 
                     parentSchema.Properties["resources"].Items.AddOneOf(new JsonSchema
                     {
