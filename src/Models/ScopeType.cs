@@ -7,7 +7,7 @@ namespace AutoRest.AzureResourceSchema.Models
     {
         Unknown = 0,
         Tenant,
-        Subcription,
+        Subscription,
         ResourceGroup,
         ManagementGroup,
         Extension,
