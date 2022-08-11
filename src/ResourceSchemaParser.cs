@@ -298,7 +298,7 @@ namespace AutoRest.AzureResourceSchema
                             var propertyDefinition = ParseType(property, property.ModelType, providerDefinition.SchemaDefinitions, serviceClient.ModelTypes);
                             if (propertyDefinition != null)
                             {
-                                baseSchema.AddProperty(property.SerializedName, propertyDefinition, property.IsRequired || property.SerializedName == "properties");
+                                baseSchema.AddProperty(property.SerializedName, propertyDefinition, property.IsRequired);
                             }
                         }
 
