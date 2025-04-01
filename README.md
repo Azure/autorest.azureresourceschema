@@ -1,3 +1,5 @@
+> [!WARNING]
+> ## This project is no longer active. Schema generation capabilities have been migrated to [bicep-types-az](https://github.com/Azure/bicep-types-az/tree/main).
 
 # Contributing
 
